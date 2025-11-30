@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT支援員総合ポータルサイト - プレゼンテーションスライド</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: #1a1a1a;
+            overflow: hidden;
+        }
+
+        /* スライドコンテナ */
+        .slide-wrapper {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide-container {
+            width: 100%;
+            height: 100%;
+            max-width: 1920px;
+            max-height: 1080px;
+            aspect-ratio: 16 / 9;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .slide-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* ヘッダー部分 */
+        .slide-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5% 4%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .slide-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .slide-header h1 {
+            font-size: clamp(1.2rem, 2.5vw, 2rem);
+            font-weight: 900;
+            margin-bottom: 0.2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .slide-header h1 i {
+            margin-right: 0.4rem;
+        }
+
+        .slide-header p {
+            font-size: clamp(0.7rem, 1.3vw, 0.95rem);
+            font-weight: 500;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* メインコンテンツ */
+        .slide-main {
+            flex: 1;
+            padding: 2.5% 4% 3% 4%;
+            display: grid;
+            grid-template-columns: 1.3fr 0.9fr;
+            gap: 2.5%;
+            background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+            overflow: hidden;
+        }
+
+        /* 左側: コンテンツ紹介 */
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+
+        .content-section h2 {
+            color: #667eea;
+            font-size: clamp(1rem, 1.6vw, 1.3rem);
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            flex-shrink: 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.9rem;
+            overflow: visible;
+        }
+
+        .content-item {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+
+        .content-item h3 {
+            color: #2d3748;
+            font-size: clamp(0.8rem, 1.25vw, 1rem);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            flex-shrink: 0;
+        }
+
+        .content-item h3 i {
+            color: #667eea;
+            font-size: 1.1em;
+            flex-shrink: 0;
+        }
+
+        .content-item p {
+            color: #718096;
+            font-size: clamp(0.68rem, 1.05vw, 0.8rem);
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        /* 右側: 統計・特徴 */
+        .stats-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            min-height: 0;
+        }
+
+        .stats-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+            flex-shrink: 0;
+        }
+
+        .stats-box h2 {
+            font-size: clamp(0.85rem, 1.35vw, 1.05rem);
+            font-weight: 600;
+            margin-bottom: 0.7rem;
+            opacity: 0.95;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.6rem;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            padding: 0.6rem 0.4rem;
+        }
+
+        .stat-number {
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            font-weight: 900;
+            display: block;
+            margin-bottom: 0.2rem;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: clamp(0.58rem, 0.92vw, 0.72rem);
+            opacity: 0.9;
+            line-height: 1.2;
+        }
+
+        .features-list {
+            background: white;
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .features-list h3 {
+            color: #667eea;
+            font-size: clamp(0.85rem, 1.35vw, 1.05rem);
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            flex-shrink: 0;
+        }
+
+        .features-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            align-content: flex-start;
+        }
+
+        .feature-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 0.4rem 0.75rem;
+            border-radius: 20px;
+            font-size: clamp(0.62rem, 0.98vw, 0.75rem);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .feature-tag i {
+            font-size: 0.85em;
+        }
+
+        /* アクセス情報（右下） */
+        .access-info {
+            position: absolute;
+            bottom: 1.5%;
+            right: 2%;
+            display: flex;
+            align-items: flex-end;
+            gap: 1rem;
+            z-index: 10;
+        }
+
+        .qr-placeholder {
+            background: white;
+            width: clamp(70px, 10vw, 95px);
+            height: clamp(70px, 10vw, 95px);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            flex-shrink: 0;
+        }
+
+        .qr-placeholder i {
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            color: #667eea;
+        }
+
+        .qr-placeholder-text {
+            font-size: clamp(0.6rem, 0.95vw, 0.75rem);
+            color: #667eea;
+            font-weight: 600;
+            margin-top: 0.3rem;
+        }
+
+        .access-text {
+            background: white;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            border: 2px solid #e2e8f0;
+        }
+
+        .access-text h3 {
+            font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .access-text p {
+            font-size: clamp(0.68rem, 1.05vw, 0.8rem);
+            color: #2d3748;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .access-text .url-text {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .access-text .date-text {
+            font-size: clamp(0.62rem, 0.98vw, 0.75rem);
+            color: #718096;
+        }
+
+        /* 装飾要素 */
+        .decoration-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+
+        .circle-1 {
+            width: 250px;
+            height: 250px;
+            background: #667eea;
+            top: -80px;
+            right: -80px;
+        }
+
+        .circle-2 {
+            width: 180px;
+            height: 180px;
+            background: #764ba2;
+            bottom: -70px;
+            left: -70px;
+        }
+
+        /* スライド番号 */
+        .slide-number {
+            position: absolute;
+            bottom: 1%;
+            left: 2%;
+            font-size: clamp(0.7rem, 1.1vw, 0.85rem);
+            color: #718096;
+            font-weight: 500;
+            z-index: 10;
+        }
+
+        /* キーボードナビゲーション表示 */
+        .keyboard-hint {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .keyboard-hint.show {
+            opacity: 1;
+        }
+
+        /* 印刷・PDF用スタイル */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .slide-wrapper {
+                width: 1920px;
+                height: 1080px;
+            }
+
+            .slide-container {
+                max-width: none;
+                max-height: none;
+                width: 1920px;
+                height: 1080px;
+                box-shadow: none;
+            }
+
+            .keyboard-hint {
+                display: none;
+            }
+        }
+
+        /* フルスクリーン時の最適化 */
+        .slide-wrapper:fullscreen,
+        .slide-wrapper:-webkit-full-screen,
+        .slide-wrapper:-moz-full-screen {
+            background: #000;
+        }
+
+        .slide-wrapper:fullscreen .slide-container,
+        .slide-wrapper:-webkit-full-screen .slide-container,
+        .slide-wrapper:-moz-full-screen .slide-container {
+            max-width: 100vw;
+            max-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-wrapper" id="slideWrapper">
+        <div class="slide-container">
+            <div class="slide-content">
+                <!-- ヘッダー -->
+                <div class="slide-header">
+                    <h1><i class="fas fa-book-open"></i>ICT支援員総合ポータルサイト</h1>
+                    <p>教育現場のICT活用を支援する総合情報サイト</p>
+                </div>
+
+                <!-- メインコンテンツ -->
+                <div class="slide-main">
+                    <!-- 左側: コンテンツ紹介 -->
+                    <div class="content-section">
+                        <h2><i class="fas fa-list-check"></i>充実のコンテンツ</h2>
+                        <div class="content-grid">
+                            <div class="content-item">
+                                <h3><i class="fas fa-book"></i>基礎・入門</h3>
+                                <p>ICT支援員の役割、教育入門講座（全8回）、100語以上の用語集、日常業務ガイド</p>
+                            </div>
+                            <div class="content-item">
+                                <h3><i class="fas fa-hands-helping"></i>支援・指導</h3>
+                                <p>支援ガイドライン、授業提案、必要なスキル、心理学、授業づくりのポイント</p>
+                            </div>
+                            <div class="content-item">
+                                <h3><i class="fas fa-rocket"></i>GIGA・最新動向</h3>
+                                <p>GIGAスクール構想、NEXT GIGA、生成AI教育、全国の活用事例</p>
+                            </div>
+                            <div class="content-item">
+                                <h3><i class="fas fa-laptop"></i>機器・ツール</h3>
+                                <p>ICT機器一覧、100以上のQ&A形式トラブルシューティング</p>
+                            </div>
+                            <div class="content-item">
+                                <h3><i class="fas fa-chart-bar"></i>配置・統計</h3>
+                                <p>全国配置状況（7,172人）、5年間の推移、MEXT公式データ</p>
+                            </div>
+                            <div class="content-item">
+                                <h3><i class="fas fa-certificate"></i>資格・検定</h3>
+                                <p>ICT支援員認定試験、ITCE検定、Microsoft/Google/Apple認定</p>
+                            </div>
+                            <div class="content-item">
+                                <h3><i class="fas fa-building"></i>教育委員会</h3>
+                                <p>組織構成、権限関係、連携方法、雇用形態別ガイド</p>
+                            </div>
+                            <div class="content-item">
+                                <h3><i class="fas fa-link"></i>リンク集</h3>
+                                <p>100以上の厳選リンク、検索機能付き、12カテゴリで整理</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右側: 統計・特徴 -->
+                    <div class="stats-section">
+                        <div class="stats-box">
+                            <h2><i class="fas fa-chart-line"></i> サイト統計</h2>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <span class="stat-number">18</span>
+                                    <span class="stat-label">ページ</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">100+</span>
+                                    <span class="stat-label">用語・Q&A</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">100+</span>
+                                    <span class="stat-label">外部リンク</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">9.86</span>
+                                    <span class="stat-label">平均品質/10</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="features-list">
+                            <h3><i class="fas fa-star"></i>主な特徴</h3>
+                            <div class="features-tags">
+                                <span class="feature-tag"><i class="fas fa-check"></i>未経験者対応</span>
+                                <span class="feature-tag"><i class="fas fa-check"></i>実践的な内容</span>
+                                <span class="feature-tag"><i class="fas fa-check"></i>最新情報反映</span>
+                                <span class="feature-tag"><i class="fas fa-check"></i>検索機能</span>
+                                <span class="feature-tag"><i class="fas fa-check"></i>豊富な事例</span>
+                                <span class="feature-tag"><i class="fas fa-check"></i>公式データ</span>
+                                <span class="feature-tag"><i class="fas fa-check"></i>全国対応</span>
+                                <span class="feature-tag"><i class="fas fa-check"></i>無料</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- アクセス情報（右下） -->
+                <div class="access-info">
+                    <div class="qr-placeholder">
+                        <div style="text-align: center;">
+                            <i class="fas fa-qrcode"></i>
+                            <div class="qr-placeholder-text">QRコード</div>
+                        </div>
+                    </div>
+                    <div class="access-text">
+                        <h3><i class="fas fa-globe"></i> アクセス方法</h3>
+                        <p class="url-text">
+                            <i class="fas fa-link"></i>
+                            <span>サイトURLをここに記載</span>
+                        </p>
+                        <p class="date-text">
+                            <i class="fas fa-calendar-alt"></i> 最終更新: 2025年11月
+                        </p>
+                    </div>
+                </div>
+
+                <!-- スライド番号 -->
+                <div class="slide-number">1 / 1</div>
+
+                <!-- 装飾 -->
+                <div class="decoration-circle circle-1"></div>
+                <div class="decoration-circle circle-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- キーボードナビゲーションヒント -->
+    <div class="keyboard-hint" id="keyboardHint">
+        F11: フルスクリーン | ESC: 終了 | Ctrl+P: 印刷
+    </div>
+
+    <script>
+        // フルスクリーン切り替え
+        document.addEventListener('keydown', function(e) {
+            // F11キーでフルスクリーン（ブラウザのデフォルト動作を利用）
+            if (e.key === 'F11') {
+                e.preventDefault();
+                toggleFullscreen();
+            }
+            
+            // F5キーでフルスクリーンモード
+            if (e.key === 'F5') {
+                e.preventDefault();
+                toggleFullscreen();
+            }
+            
+            // ESCキーでフルスクリーン解除
+            if (e.key === 'Escape' && isFullscreen()) {
+                exitFullscreen();
+            }
+            
+            // キーボードヒント表示
+            showKeyboardHint();
+        });
+
+        function toggleFullscreen() {
+            const wrapper = document.getElementById('slideWrapper');
+            
+            if (!document.fullscreenElement && 
+                !document.webkitFullscreenElement && 
+                !document.mozFullScreenElement) {
+                // フルスクリーンに入る
+                if (wrapper.requestFullscreen) {
+                    wrapper.requestFullscreen();
+                } else if (wrapper.webkitRequestFullscreen) {
+                    wrapper.webkitRequestFullscreen();
+                } else if (wrapper.mozRequestFullScreen) {
+                    wrapper.mozRequestFullScreen();
+                }
+            } else {
+                // フルスクリーンから出る
+                exitFullscreen();
+            }
+        }
+
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            }
+        }
+
+        function isFullscreen() {
+            return !!(document.fullscreenElement || 
+                     document.webkitFullscreenElement || 
+                     document.mozFullScreenElement);
+        }
+
+        function showKeyboardHint() {
+            const hint = document.getElementById('keyboardHint');
+            hint.classList.add('show');
+            
+            setTimeout(() => {
+                hint.classList.remove('show');
+            }, 2000);
+        }
+
+        // ページ読み込み時にヒント表示
+        window.addEventListener('load', function() {
+            setTimeout(showKeyboardHint, 500);
+        });
+
+        // フルスクリーン状態の変更を監視
+        document.addEventListener('fullscreenchange', handleFullscreenChange);
+        document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+        document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+
+        function handleFullscreenChange() {
+            if (isFullscreen()) {
+                console.log('フルスクリーンモードに入りました');
+            } else {
+                console.log('フルスクリーンモードを終了しました');
+            }
+        }
+
+        // 印刷用ショートカット（Ctrl+P）は標準動作をそのまま利用
+    </script>
+</body>
+</html>

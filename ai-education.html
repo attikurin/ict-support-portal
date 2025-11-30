@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学校でのAI利用 - ICT支援員・講師のための教育ポータル</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1><i class="fas fa-graduation-cap"></i> ICT支援員・講師のための教育ポータル</h1>
+            <p class="tagline">学校現場でのICT活用を支援する総合情報サイト</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html" class="active"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-robot"></i> 学校でのAI利用</h1>
+            <p class="lead">生成AIを教育現場で安全かつ効果的に活用するための包括的ガイド</p>
+        </div>
+
+        <!-- 重要な注意喚起 -->
+        <div style="background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <h3 style="color: white; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fas fa-exclamation-triangle" style="font-size: 1.5rem;"></i>
+                <strong>最重要：必ず所属自治体のルールを確認してください</strong>
+            </h3>
+            <div style="background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem;"><i class="fas fa-check-circle"></i> AI利用のルールは<strong>自治体・学校ごとに大きく異なります</strong></p>
+                <ul style="margin-left: 1.5rem; line-height: 2;">
+                    <li>使用可能なAIツールの種類（Gemini、Copilot、ChatGPTなど）</li>
+                    <li>学校アカウントでの利用可否</li>
+                    <li>個人情報・機密情報の入力制限</li>
+                    <li>生徒が利用する際の年齢制限や保護者同意</li>
+                    <li>AI生成コンテンツの著作権の扱い</li>
+                    <li>教育委員会への報告義務の有無</li>
+                </ul>
+            </div>
+            <div style="background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 8px;">
+                <p style="font-size: 1.05rem; font-weight: 500;"><i class="fas fa-users"></i> <strong>確認すべき相談先</strong></p>
+                <ol style="margin-left: 1.5rem; line-height: 2; margin-top: 0.5rem;">
+                    <li>所属する<strong>教育委員会の情報教育担当部署</strong></li>
+                    <li>学校の<strong>管理職（校長・副校長・教頭）</strong></li>
+                    <li>学校の<strong>情報セキュリティ担当者・ICT担当教員</strong></li>
+                </ol>
+            </div>
+            <p style="margin-top: 1rem; font-size: 1rem; font-weight: 600; text-align: center;">
+                <i class="fas fa-shield-alt"></i> 本ページの内容は一般的なガイドラインです。実際の運用は必ず所属組織のルールに従ってください。
+            </p>
+        </div>
+
+        <!-- 導入セクション -->
+        <section class="content-section">
+            <div class="info-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <h2 style="color: white; border: none; margin-bottom: 1.5rem; font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);"><i class="fas fa-info-circle"></i> はじめに：教育現場におけるAI革命</h2>
+                <p style="font-size: 1.15rem; line-height: 1.9; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">生成AI技術は、教育の在り方を根本から変える可能性を秘めています。Google Gemini、Microsoft Copilotなど、教育現場で活用できるAIツールが次々と登場し、教員の働き方改革や生徒の個別最適化学習を実現する新しい手段として注目されています。</p>
+                <p style="font-size: 1.15rem; line-height: 1.9; margin-top: 1rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">本ページでは、<strong>文部科学省、Google、Microsoft、総務省、各自治体など信頼できる公的機関が提供する資料</strong>を基に、学校でのAI利用について包括的に解説します。</p>
+            </div>
+        </section>
+
+        <!-- 文部科学省ガイドライン -->
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-university"></i> 文部科学省の生成AIガイドライン</h2>
+            
+            <div class="info-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                <h3 style="color: white; margin-bottom: 1rem;"><i class="fas fa-file-alt"></i> 文部科学省「初等中等教育段階における生成AIの利用に関する暫定的なガイドライン」</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8;">2023年7月4日に公表され、2024年にはver2.0に更新された<strong>全国共通の基本方針</strong>です。すべての自治体・学校はこのガイドラインをベースにしています。</p>
+                <div style="background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+                    <h4 style="color: white; margin-bottom: 0.75rem;"><i class="fas fa-key"></i> ガイドラインの主要ポイント</h4>
+                    <ul style="line-height: 2; margin-left: 1.5rem;">
+                        <li><strong>適切な活用の推進</strong>：教育活動におけるAI利用の可能性を探る</li>
+                        <li><strong>情報活用能力の育成</strong>：AIリテラシーを含む資質・能力の育成</li>
+                        <li><strong>適切な利用条件</strong>：個人情報保護、著作権配慮、ファクトチェック</li>
+                        <li><strong>限定的な利用が適切な場面</strong>：定期考査、コンクールへの応募等</li>
+                        <li><strong>活用が不適切な場面</strong>：児童生徒の思考力・判断力・表現力を育成する場面</li>
+                    </ul>
+                </div>
+                <p style="margin-top: 1rem; text-align: center;">
+                    <a href="https://www.mext.go.jp/zyoukatsu/ai/" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline; font-weight: 600; font-size: 1.1rem;">
+                        <i class="fas fa-external-link-alt"></i> 文部科学省公式ページで詳細を確認
+                    </a>
+                </p>
+            </div>
+
+            <div class="feature-grid" style="margin-top: 2rem;">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>活用が期待される場面</h3>
+                    <ul style="text-align: left; padding-left: 1.5rem; line-height: 1.8;">
+                        <li>教材研究・授業準備</li>
+                        <li>校務の効率化</li>
+                        <li>情報モラル教育の教材</li>
+                        <li>探究学習のアイデア出し</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>限定的利用が適切な場面</h3>
+                    <ul style="text-align: left; padding-left: 1.5rem; line-height: 1.8;">
+                        <li>定期考査や模擬試験</li>
+                        <li>コンクールへの応募作品</li>
+                        <li>入学者選抜</li>
+                        <li>成績評価に直結する課題</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h3>活用が不適切な場面</h3>
+                    <ul style="text-align: left; padding-left: 1.5rem; line-height: 1.8;">
+                        <li>思考力を育成すべき場面</li>
+                        <li>記述式の考査</li>
+                        <li>読解力・文章力育成の場面</li>
+                        <li>個別の学習到達度確認</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 各自治体の取り組み事例 -->
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-map-marked-alt"></i> 各自治体の生成AI活用事例</h2>
+            
+            <div style="background: #e8f4fd; border-left: 5px solid #2196F3; padding: 1.5rem; margin-bottom: 2rem; border-radius: 4px;">
+                <p><i class="fas fa-info-circle"></i> <strong>重要</strong>：以下は参考事例です。<strong>各自治体でルールが大きく異なります</strong>ので、必ず所属自治体の最新ガイドラインを確認してください。</p>
+            </div>
+
+            <div class="feature-grid" style="margin-top: 2rem;">
+                <!-- 東京都 -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>東京都教育委員会</h3>
+                    <p><strong>「生成AI利用ガイドライン」</strong>を策定</p>
+                    <ul style="text-align: left; padding-left: 1.5rem; line-height: 1.8; font-size: 0.95rem;">
+                        <li>教員向け活用研修の実施</li>
+                        <li>モデル校での先行実践</li>
+                        <li>情報モラル教育での活用</li>
+                        <li>校務効率化での活用推進</li>
+                    </ul>
+                    <a href="https://www.kyoiku.metro.tokyo.lg.jp/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top: 1rem; display: inline-block;">
+                        <i class="fas fa-external-link-alt"></i> 公式サイト
+                    </a>
+                </div>
+
+                <!-- 大阪府 -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3>大阪府教育庁</h3>
+                    <p><strong>「生成AI活用ガイドライン」</strong>を公表</p>
+                    <ul style="text-align: left; padding-left: 1.5rem; line-height: 1.8; font-size: 0.95rem;">
+                        <li>授業での適切な利用例を提示</li>
+                        <li>教員研修プログラムの開発</li>
+                        <li>保護者向け説明資料の提供</li>
+                        <li>実践事例の収集と共有</li>
+                    </ul>
+                    <a href="http://www.pref.osaka.lg.jp/kyoikusomu/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top: 1rem; display: inline-block;">
+                        <i class="fas fa-external-link-alt"></i> 公式サイト
+                    </a>
+                </div>
+
+                <!-- 神奈川県 -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>神奈川県教育委員会</h3>
+                    <p><strong>「生成AIパイロット校」</strong>での実証研究</p>
+                    <ul style="text-align: left; padding-left: 1.5rem; line-height: 1.8; font-size: 0.95rem;">
+                        <li>県立高校でのパイロット実施</li>
+                        <li>教科別活用事例の開発</li>
+                        <li>生徒の情報活用能力の育成</li>
+                        <li>効果検証と改善サイクル</li>
+                    </ul>
+                    <a href="https://www.pref.kanagawa.jp/docs/v3p/index.html" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top: 1rem; display: inline-block;">
+                        <i class="fas fa-external-link-alt"></i> 公式サイト
+                    </a>
+                </div>
+
+                <!-- 福岡市 -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>福岡市教育委員会</h3>
+                    <p><strong>「AI活用推進プロジェクト」</strong>を展開</p>
+                    <ul style="text-align: left; padding-left: 1.5rem; line-height: 1.8; font-size: 0.95rem;">
+                        <li>全校でのAI活用研修</li>
+                        <li>ICT支援員との連携強化</li>
+                        <li>教員コミュニティでの知見共有</li>
+                        <li>保護者向け説明会の実施</li>
+                    </ul>
+                    <a href="https://www.city.fukuoka.lg.jp/kyoiku-iinkai/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top: 1rem; display: inline-block;">
+                        <i class="fas fa-external-link-alt"></i> 公式サイト
+                    </a>
+                </div>
+
+                <!-- さいたま市 -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>さいたま市教育委員会</h3>
+                    <p><strong>「GIGAスクール×AI」</strong>の推進</p>
+                    <ul style="text-align: left; padding-left: 1.5rem; line-height: 1.8; font-size: 0.95rem;">
+                        <li>1人1台端末とAIの連携</li>
+                        <li>個別最適な学びの実現</li>
+                        <li>教員のICT活用力向上</li>
+                        <li>デジタルシティズンシップ教育</li>
+                    </ul>
+                    <a href="https://www.city.saitama.jp/002/001/008/index.html" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top: 1rem; display: inline-block;">
+                        <i class="fas fa-external-link-alt"></i> 公式サイト
+                    </a>
+                </div>
+
+                <!-- 岐阜県 -->
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>岐阜県教育委員会</h3>
+                    <p><strong>「AI利活用ガイドライン」</strong>を策定</p>
+                    <ul style="text-align: left; padding-left: 1.5rem; line-height: 1.8; font-size: 0.95rem;">
+                        <li>段階的な導入計画</li>
+                        <li>教員向け研修動画の配信</li>
+                        <li>Q&A集の整備</li>
+                        <li>先進校の取組事例共有</li>
+                    </ul>
+                    <a href="https://www.pref.gifu.lg.jp/site/edu/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top: 1rem; display: inline-block;">
+                        <i class="fas fa-external-link-alt"></i> 公式サイト
+                    </a>
+                </div>
+            </div>
+
+            <div style="background: #fff3cd; border-left: 5px solid #ffc107; padding: 1.5rem; margin-top: 2rem; border-radius: 4px;">
+                <h4><i class="fas fa-exclamation-circle"></i> 自治体によるルールの違いの例</h4>
+                <table style="width: 100%; margin-top: 1rem; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background: #f8f9fa; border-bottom: 2px solid #dee2e6;">
+                            <th style="padding: 0.75rem; text-align: left; border: 1px solid #dee2e6;">項目</th>
+                            <th style="padding: 0.75rem; text-align: left; border: 1px solid #dee2e6;">A自治体の例</th>
+                            <th style="padding: 0.75rem; text-align: left; border: 1px solid #dee2e6;">B自治体の例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #dee2e6;">
+                            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><strong>使用可能ツール</strong></td>
+                            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">学校アカウントでのCopilotのみ</td>
+                            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">Gemini、ChatGPT（無料版）も可</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dee2e6;">
+                            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><strong>生徒の利用</strong></td>
+                            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">中学生以上、保護者同意必須</td>
+                            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">小学校高学年から可、教員監督下のみ</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dee2e6;">
+                            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><strong>個人情報入力</strong></td>
+                            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">一切禁止</td>
+                            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">匿名化すれば可</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem; border: 1px solid #dee2e6;"><strong>報告義務</strong></td>
+                            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">毎月の利用状況報告が必要</td>
+                            <td style="padding: 0.75rem; border: 1px solid #dee2e6;">報告不要、記録のみ</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 1rem; font-weight: 600; color: #856404;">
+                    <i class="fas fa-arrow-right"></i> このように、自治体によってルールが大きく異なります。必ず所属自治体の最新ガイドラインを確認してください。
+                </p>
+            </div>
+        </section>
+
+        <!-- 参考資料一覧 -->
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> 本ページの参考資料</h2>
+            <p>本ページは以下の公式資料に基づいて作成されています：</p>
+            
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 1.5rem;">
+                <h3 style="color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 0.5rem; margin-bottom: 1rem;"><i class="fab fa-google"></i> Google公式教材（7点）</h3>
+                <p style="margin-bottom: 1rem; color: #555;"><i class="fas fa-info-circle"></i> 詳細は<a href="resources-links.html" style="color: #667eea; text-decoration: underline;">リンク集</a>を参照してください。</p>
+                
+                <div style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 4px;">
+                    <h4 style="color: #667eea; margin-bottom: 0.5rem;">📚 教育者向け生成AIの用語集</h4>
+                    <p style="margin-left: 1rem; color: #555; line-height: 1.8;">AI、機械学習（ML）、大規模言語モデル（LLM）、生成AI、ハルシネーション、プロンプトなど、教育現場で知っておくべき重要な用語を網羅。各用語の定義と教育での活用方法を明確に解説しています。</p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 4px;">
+                    <h4 style="color: #667eea; margin-bottom: 0.5rem;">✅ 責任に関するチェックリスト</h4>
+                    <p style="margin-left: 1rem; color: #555; line-height: 1.8;">AIを正確かつ倫理的に使用するための4つの重要ポイント：①出力結果の確認とファクトチェック、②AI利用の公表、③プライバシー・セキュリティへの配慮、④AIの慎重な利用。実践的なチェック項目を提供しています。</p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 4px;">
+                    <h4 style="color: #667eea; margin-bottom: 0.5rem;">✏️ プロンプトの書き方</h4>
+                    <p style="margin-left: 1rem; color: #555; line-height: 1.8;">効果的なプロンプト作成のための「PARTS方式」を詳細解説。Persona（ペルソナ）、Aim（目的）、Recipients（受け手）、Theme（テーマ）、Structure（構成）の5要素を使って、より正確で有用な回答を得る方法を学べます。</p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 4px;">
+                    <h4 style="color: #667eea; margin-bottom: 0.5rem;">🏫 教育現場でのAI活用ガイド</h4>
+                    <p style="margin-left: 1rem; color: #555; line-height: 1.8;">GoogleのAIに対するアプローチ（大胆さと責任感のバランス）、Geminiの特徴、教育現場での具体的な活用方法、データ保護とプライバシー対策について包括的に解説。教育者が安心してAIを活用できるガイドです。</p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 4px;">
+                    <h4 style="color: #667eea; margin-bottom: 0.5rem;">👨‍👩‍👧 AIに関する保護者向けガイド</h4>
+                    <p style="margin-left: 1rem; color: #555; line-height: 1.8;">保護者に向けて、生成AIとは何か、学校でどのように使われるか、データの安全性、子どもに必要な能力などを分かりやすく説明。保護者との対話や説明会で活用できる資料です。</p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 4px;">
+                    <h4 style="color: #667eea; margin-bottom: 0.5rem;">💡 学校のためのプロンプトライブラリ</h4>
+                    <p style="margin-left: 1rem; color: #555; line-height: 1.8;">教育現場で即座に使える実践的なプロンプト例を豊富に掲載。授業準備、評価基準作成、教材作成、個別指導など、様々な場面で活用できるプロンプトをカスタマイズして使えます。明日からすぐに役立つ実践ガイドです。</p>
+                </div>
+
+                <div style="margin-bottom: 0; padding: 1rem; background: white; border-radius: 4px;">
+                    <h4 style="color: #667eea; margin-bottom: 0.5rem;">🚀 教育の未来（トレンド予測レポート）</h4>
+                    <p style="margin-left: 1rem; color: #555; line-height: 1.8;">24か国を対象とした国際調査に基づく、AI時代における教育の5つのテーマ：①パーソナライズされた学習、②生涯学習の重要性、③創造性とイノベーション、④協働とコミュニケーション、⑤デジタルシティズンシップ。教育の未来像を描きます。</p>
+                </div>
+            </div>
+
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 1.5rem;">
+                <h3 style="color: #00a4ef; border-bottom: 2px solid #00a4ef; padding-bottom: 0.5rem; margin-bottom: 1rem;"><i class="fab fa-microsoft"></i> Microsoft公式教材（2点）</h3>
+                <p style="margin-bottom: 1rem; color: #555;"><i class="fas fa-info-circle"></i> 詳細は<a href="resources-links.html" style="color: #00a4ef; text-decoration: underline;">リンク集</a>を参照してください。</p>
+                
+                <div style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 4px;">
+                    <h4 style="color: #00a4ef; margin-bottom: 0.5rem;">🤖 Microsoft Copilotとは：使用AIモデルの詳細分析と教育現場への応用</h4>
+                    <p style="margin-left: 1rem; color: #555; line-height: 1.8;">Copilotエコシステムの全体像、OpenAIとのパートナーシップ、Microsoft独自の技術スタック、ChatGPTやGeminiとの性能比較を詳細に解説。教員の働き方改革と生徒の学びを変える具体的な活用事例、導入ステップ、ライセンス体系まで包括的にカバーしています。</p>
+                </div>
+
+                <div style="margin-bottom: 0; padding: 1rem; background: white; border-radius: 4px;">
+                    <h4 style="color: #00a4ef; margin-bottom: 0.5rem;">⏰ AIで先生の創造的な時間を生み出す！教育機関で誰でも使える Microsoft Copilot 10</h4>
+                    <p style="margin-left: 1rem; color: #555; line-height: 1.8;">文部科学省ガイドラインver2.0対応の実践ガイド。日本マイクロソフト教育戦略本部が提供する「明日から使えるプロンプト依頼文」集。授業準備の効率化、評価業務の軽減、事務作業の削減、保護者対応など、具体的な10の活用シーンを紹介。Copilot活用のコツと注意点も掲載。</p>
+                </div>
+            </div>
+
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 1.5rem;">
+                <h3 style="color: #e74c3c; border-bottom: 2px solid #e74c3c; padding-bottom: 0.5rem; margin-bottom: 1rem;"><i class="fas fa-university"></i> 日本政府公式教材（1点）</h3>
+                
+                <div style="margin-bottom: 0; padding: 1rem; background: white; border-radius: 4px;">
+                    <h4 style="color: #e74c3c; margin-bottom: 0.5rem;">🏛️ 生成AIはじめの一歩～生成AIの入門的な使い方と注意点～</h4>
+                    <p style="margin-left: 1rem; color: #555; line-height: 1.8;">総務省が提供する国民向け生成AIリテラシー教材。生成AIとは何か、どのように使うか、活用時の4つの注意点（①情報の正確性、②情報流出、③知的財産権の侵害、④活用者としてのモラル）を分かりやすく解説。IT関連の専門職だけでなく、すべての国民が生成AIを自身で利活用できるリテラシーを身につけることを目的としています。理解度チェック問題付き。</p>
+                </div>
+            </div>
+
+            <div style="background: #fff3e0; border-left: 5px solid #ff9800; padding: 1.5rem; margin-top: 2rem; border-radius: 4px;">
+                <p><i class="fas fa-info-circle"></i> <strong>重要</strong>：本ページの内容は2024年度末～2025年度初頭の情報に基づいています。AI技術は急速に進化しているため、最新情報は各公式サイトをご確認ください。</p>
+            </div>
+        </section>
+
+        <!-- 関連リソース -->
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-link"></i> 関連リソースとリンク集</h2>
+            
+            <h3>公式サイト・ガイドライン</h3>
+            
+            <div style="margin-top: 1.5rem;">
+                <h4><i class="fab fa-google"></i> Google関連</h4>
+                <ul style="line-height: 2;">
+                    <li><a href="https://edu.google.com/intl/ALL_jp/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Google for Education（公式サイト）</a></li>
+                    <li><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Gemini（公式サイト）</a></li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+                <h4><i class="fab fa-microsoft"></i> Microsoft関連</h4>
+                <ul style="line-height: 2;">
+                    <li><a href="https://www.microsoft.com/ja-jp/education" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Microsoft Education（公式サイト）</a></li>
+                    <li><a href="https://www.microsoft.com/ja-jp/microsoft-copilot" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Microsoft Copilot（公式サイト）</a></li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+                <h4><i class="fas fa-university"></i> 日本政府・省庁関連</h4>
+                <ul style="line-height: 2;">
+                    <li><a href="https://www.mext.go.jp/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> 文部科学省（公式サイト）</a></li>
+                    <li><a href="https://www.mext.go.jp/a_menu/other/index_00006.htm" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> 文部科学省 生成AIに関する情報</a></li>
+                    <li><a href="https://www.soumu.go.jp/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> 総務省（公式サイト）</a></li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+                <p><strong>より詳しく学ぶために</strong>、本サイトの他のページも合わせてご参照ください：</p>
+                <ul style="line-height: 2;">
+                    <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a> - ICT教育の基本を学ぶ</li>
+                    <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a> - ICT支援の実践方法</li>
+                    <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a> - ICT・AI関連用語の解説</li>
+                    <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a> - 関連サイトへのリンク集</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- まとめ -->
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-check-circle"></i> まとめ</h2>
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 12px;">
+                <h3 style="color: white; margin-bottom: 1rem;">学校でのAI利用：重要ポイント</h3>
+                <ol style="line-height: 2; margin-left: 1.5rem;">
+                    <li><strong>AIは教育を支援するツール</strong>：教員や生徒を置き換えるものではなく、サポートするもの</li>
+                    <li><strong>自治体ルールの確認が最優先</strong>：利用可能なツール、条件、報告義務は自治体ごとに異なる</li>
+                    <li><strong>文部科学省ガイドラインが基本</strong>：全国共通の基本方針を理解する</li>
+                    <li><strong>責任ある利用が不可欠</strong>：出力の確認、プライバシー保護、倫理的配慮を忘れずに</li>
+                    <li><strong>段階的な導入を推奨</strong>：小規模から始めて、徐々に拡大する</li>
+                    <li><strong>人間の判断が最終決定</strong>：AIの出力を鵜呑みにせず、必ず人間が確認・判断する</li>
+                    <li><strong>継続的な学習が必要</strong>：AI技術は急速に進化しており、最新情報をキャッチアップ</li>
+                </ol>
+                
+                <div style="background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem;">
+                    <p style="font-size: 1.05rem; line-height: 1.8;"><i class="fas fa-star"></i> <strong>最後に</strong></p>
+                    <p style="line-height: 1.8;">生成AIは、教育現場に大きな変革をもたらす可能性を秘めています。しかし、その成功の鍵は<strong>技術そのものではなく、それをどう使うか</strong>にあります。</p>
+                    <p style="line-height: 1.8; margin-top: 1rem;">本ページで紹介した文部科学省、Google、Microsoft、総務省、各自治体の公式資料を参考に、あなたの学校や教室に最適なAI活用方法を見つけてください。ICT支援員として、教員の皆様がAIを効果的に活用できるよう、サポートを続けていきましょう。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 更新情報 -->
+        <section class="content-section">
+            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+                <p><i class="fas fa-calendar-alt"></i> <strong>最終更新日</strong>：2025年11月</p>
+                <p><i class="fas fa-info-circle"></i> 本ページは、文部科学省、Google、Microsoft、総務省が提供する公式資料（2024年度末～2025年度初頭時点）および各自治体の公開情報に基づいて作成されています。AI技術は急速に進化しているため、最新情報は各公式サイトをご確認ください。</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員・講師のための教育ポータル. All rights reserved.</p>
+            <p>学校現場でのICT活用を支援する総合情報サイト</p>
+        </div>
+    </footer>
+    
+    <script src="js/menu.js"></script>
+</body>
+</html>

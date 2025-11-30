@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資格・検定情報 - ICT支援員・講師のための教育ポータル</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1><i class="fas fa-graduation-cap"></i> ICT支援員・講師のための教育ポータル</h1>
+            <p class="tagline">学校現場でのICT活用を支援する総合情報サイト</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html" class="active"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-certificate"></i> 資格・検定情報</h1>
+            <p class="lead">ICT支援員のキャリアアップに役立つ資格と検定試験の総合ガイド</p>
+        </div>
+
+        <!-- 導入セクション -->
+        <section class="content-section">
+            <div class="info-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <h2 style="color: white; border: none; margin-bottom: 1.5rem; font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);"><i class="fas fa-info-circle"></i> 資格取得のメリット</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div style="background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 8px;">
+                        <h3 style="color: white; margin-bottom: 0.75rem; font-size: 1.2rem;"><i class="fas fa-check-circle"></i> スキルの証明</h3>
+                        <p style="line-height: 1.8; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">専門知識と技能を客観的に証明でき、信頼性が向上します</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 8px;">
+                        <h3 style="color: white; margin-bottom: 0.75rem; font-size: 1.2rem;"><i class="fas fa-briefcase"></i> 就職・転職に有利</h3>
+                        <p style="line-height: 1.8; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">採用選考で優遇され、キャリアの選択肢が広がります</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 8px;">
+                        <h3 style="color: white; margin-bottom: 0.75rem; font-size: 1.2rem;"><i class="fas fa-chart-line"></i> 継続的な成長</h3>
+                        <p style="line-height: 1.8; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">最新の教育情報化動向を学び、専門性を高められます</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ICT支援員認定試験 -->
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-award"></i> ICT支援員認定試験</h2>
+            
+            <div class="info-card" style="border-left: 5px solid #2563eb;">
+                <h3 style="color: #2563eb; margin-bottom: 1rem; font-size: 1.5rem;"><i class="fas fa-medal"></i> 試験概要</h3>
+                <p style="margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.05rem;">
+                    ICT支援員として必要な知識と技能を総合的に評価する認定試験です。教育現場で実際に活用できる実践的なスキルを測定します。
+                </p>
+                
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin-top: 1.5rem;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr style="border-bottom: 2px solid #dee2e6;">
+                            <th style="padding: 1rem; text-align: left; background: #e9ecef; width: 30%;">項目</th>
+                            <th style="padding: 1rem; text-align: left; background: #e9ecef;">内容</th>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dee2e6;">
+                            <td style="padding: 1rem; font-weight: 600;">受験資格</td>
+                            <td style="padding: 1rem;">原則20歳以上（学歴・経験不問）</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dee2e6;">
+                            <td style="padding: 1rem; font-weight: 600;">試験方式</td>
+                            <td style="padding: 1rem;">CBT方式（コンピュータ試験）+ 別方式</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dee2e6;">
+                            <td style="padding: 1rem; font-weight: 600;">試験構成</td>
+                            <td style="padding: 1rem;">A領域（実践的知識）+ B領域（問題分析・説明力）</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dee2e6;">
+                            <td style="padding: 1rem; font-weight: 600;">合格率</td>
+                            <td style="padding: 1rem;">約60～70%</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #dee2e6;">
+                            <td style="padding: 1rem; font-weight: 600;">有効期限</td>
+                            <td style="padding: 1rem;">なし（ただし上級試験受験には4年以内の条件あり）</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem; font-weight: 600;">受験料</td>
+                            <td style="padding: 1rem;">公式サイトをご確認ください</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <h3 style="color: #2563eb; margin-bottom: 1.5rem; font-size: 1.4rem;"><i class="fas fa-clipboard-list"></i> 試験内容詳細</h3>
+                
+                <div class="feature-grid" style="margin-top: 1.5rem;">
+                    <!-- A領域 -->
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>A領域：実践的知識</h3>
+                        <p style="margin-bottom: 1rem; color: #6b7280;">CBT方式で実施される筆記試験</p>
+                        <ul style="text-align: left; padding-left: 1.5rem; line-height: 2;">
+                            <li>教育の情報化に関する政策・施策</li>
+                            <li>ICTを活用した授業方法</li>
+                            <li>教材準備の知識</li>
+                            <li>情報モラル・セキュリティ</li>
+                            <li>ネットワークに関する知識</li>
+                            <li>ICT機器操作スキル</li>
+                        </ul>
+                    </div>
+
+                    <!-- B領域 -->
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>B領域：問題分析・説明力</h3>
+                        <p style="margin-bottom: 1rem; color: #6b7280;">実践的な課題解決能力を評価</p>
+                        <ul style="text-align: left; padding-left: 1.5rem; line-height: 2;">
+                            <li>コミュニケーション能力</li>
+                            <li>問題解決能力</li>
+                            <li>状況分析力</li>
+                            <li>説明・提案力</li>
+                            <li>現場での対応力</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #dbeafe; border-left: 4px solid #2563eb; padding: 1.5rem; margin-top: 2rem; border-radius: 4px;">
+                <h4 style="color: #1e40af; margin-bottom: 1rem;"><i class="fas fa-external-link-alt"></i> 公式サイト・申し込み</h4>
+                <p style="line-height: 1.8; margin-bottom: 1rem;">詳細な試験情報、受験料、試験日程、申し込み方法については公式サイトをご確認ください。</p>
+                <a href="https://cbt-s.com/examinee/examination/ict.html" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: inline-block; margin-top: 0.5rem;">
+                    <i class="fas fa-link"></i> ICT支援員認定試験 公式サイト
+                </a>
+            </div>
+        </section>
+
+        <!-- ICT支援員上級認定試験 -->
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-star"></i> ICT支援員上級認定試験</h2>
+            
+            <div class="info-card" style="border-left: 5px solid #f59e0b;">
+                <h3 style="color: #f59e0b; margin-bottom: 1rem; font-size: 1.5rem;"><i class="fas fa-crown"></i> 試験概要</h3>
+                <p style="margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.05rem;">
+                    ICT支援員認定試験の上位資格として、より高度な専門性と実務経験を評価する試験です。リーダー的役割を担う支援員を対象としています。
+                </p>
+                
+                <div style="background: #fff7ed; padding: 2rem; border-radius: 8px; margin-top: 1.5rem;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr style="border-bottom: 2px solid #fed7aa;">
+                            <th style="padding: 1rem; text-align: left; background: #ffedd5; width: 30%;">項目</th>
+                            <th style="padding: 1rem; text-align: left; background: #ffedd5;">内容</th>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #fed7aa;">
+                            <td style="padding: 1rem; font-weight: 600;">受験資格</td>
+                            <td style="padding: 1rem;">
+                                <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                                    <li>ICT支援員認定試験A・B領域で高得点合格</li>
+                                    <li>2年以上の実務経験</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #fed7aa;">
+                            <td style="padding: 1rem; font-weight: 600;">試験内容</td>
+                            <td style="padding: 1rem;">C領域（問題解決・コミュニケーション能力）</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem; font-weight: 600;">対象者</td>
+                            <td style="padding: 1rem;">リーダー、マネージャー、指導的立場の支援員</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div style="background: #fff7ed; border-left: 4px solid #f59e0b; padding: 1.5rem; margin-top: 2rem; border-radius: 4px;">
+                    <h4 style="color: #92400e; margin-bottom: 1rem;"><i class="fas fa-lightbulb"></i> こんな方におすすめ</h4>
+                    <ul style="line-height: 2; margin-left: 1.5rem;">
+                        <li>ICT支援員として2年以上の経験がある方</li>
+                        <li>チームリーダーや統括マネージャーを目指す方</li>
+                        <li>より高度な専門性を証明したい方</li>
+                        <li>教育情報化コーディネータへのステップアップを考えている方</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 教育情報化コーディネータ（ITCE）検定 -->
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-user-tie"></i> 教育情報化コーディネータ（ITCE）検定</h2>
+            
+            <div class="info-card" style="border-left: 5px solid #10b981;">
+                <h3 style="color: #10b981; margin-bottom: 1rem; font-size: 1.5rem;"><i class="fas fa-graduation-cap"></i> 検定概要</h3>
+                <p style="margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.05rem;">
+                    学校や自治体レベルで教育情報化を推進・コーディネートする専門家を認定する検定試験です。ICT支援員からのキャリアアップに最適です。
+                </p>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <h3 style="color: #10b981; margin-bottom: 1.5rem; font-size: 1.4rem;"><i class="fas fa-layer-group"></i> 級別詳細</h3>
+                
+                <div class="feature-grid" style="margin-top: 1.5rem;">
+                    <!-- 3級 -->
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>ITCE 3級（入門レベル）</h3>
+                        <div style="text-align: left; margin-top: 1rem;">
+                            <h4 style="color: #10b981; margin-bottom: 0.75rem; font-size: 1.1rem;">対象者</h4>
+                            <p style="margin-bottom: 1rem; line-height: 1.8;">教育情報化の基本的な知識・技能を持つ方</p>
+                            
+                            <h4 style="color: #10b981; margin-bottom: 0.75rem; font-size: 1.1rem;">受験資格</h4>
+                            <p style="margin-bottom: 1rem; line-height: 1.8;">原則20歳以上</p>
+                            
+                            <h4 style="color: #10b981; margin-bottom: 0.75rem; font-size: 1.1rem;">受験料</h4>
+                            <p style="margin-bottom: 1rem; line-height: 1.8; font-weight: 600; color: #10b981;">9,800円（税込）</p>
+                            
+                            <h4 style="color: #10b981; margin-bottom: 0.75rem; font-size: 1.1rem;">試験形式</h4>
+                            <p style="line-height: 1.8;">CBT方式（筆記試験）</p>
+                        </div>
+                    </div>
+
+                    <!-- 2級 -->
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>ITCE 2級（中級レベル）</h3>
+                        <div style="text-align: left; margin-top: 1rem;">
+                            <h4 style="color: #667eea; margin-bottom: 0.75rem; font-size: 1.1rem;">対象者</h4>
+                            <p style="margin-bottom: 1rem; line-height: 1.8;">市町村単位での計画設計・助言ができる方</p>
+                            
+                            <h4 style="color: #667eea; margin-bottom: 0.75rem; font-size: 1.1rem;">受験資格</h4>
+                            <p style="margin-bottom: 1rem; line-height: 1.8;">ITCE 3級取得者</p>
+                            
+                            <h4 style="color: #667eea; margin-bottom: 0.75rem; font-size: 1.1rem;">受験料</h4>
+                            <p style="margin-bottom: 1rem; line-height: 1.8;">
+                                <span style="font-weight: 600; color: #667eea;">1次試験：12,800円（税込）</span><br>
+                                <span style="font-weight: 600; color: #667eea;">2次試験：13,800円（税込）</span>
+                            </p>
+                            
+                            <h4 style="color: #667eea; margin-bottom: 0.75rem; font-size: 1.1rem;">試験形式</h4>
+                            <p style="line-height: 1.8;">1次：CBT方式、2次：実技・面接</p>
+                        </div>
+                    </div>
+
+                    <!-- 1級 -->
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>ITCE 1級（上級レベル）</h3>
+                        <div style="text-align: left; margin-top: 1rem;">
+                            <h4 style="color: #ec4899; margin-bottom: 0.75rem; font-size: 1.1rem;">対象者</h4>
+                            <p style="margin-bottom: 1rem; line-height: 1.8;">都道府県レベルのコーディネートができる方</p>
+                            
+                            <h4 style="color: #ec4899; margin-bottom: 0.75rem; font-size: 1.1rem;">受験資格</h4>
+                            <p style="margin-bottom: 1rem; line-height: 1.8;">ITCE 2級取得者</p>
+                            
+                            <h4 style="color: #ec4899; margin-bottom: 0.75rem; font-size: 1.1rem;">レベル</h4>
+                            <p style="line-height: 1.8;">高度な専門知識と豊富な実務経験が必要</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #d1fae5; border-left: 4px solid #10b981; padding: 1.5rem; margin-top: 2rem; border-radius: 4px;">
+                <h4 style="color: #065f46; margin-bottom: 1rem;"><i class="fas fa-external-link-alt"></i> 公式サイト・申し込み</h4>
+                <p style="line-height: 1.8; margin-bottom: 1rem;">詳細な検定情報、最新の試験日程、申し込み方法については公式サイトをご確認ください。</p>
+                <a href="https://jnk4.info/itce/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: inline-block; margin-top: 0.5rem;">
+                    <i class="fas fa-link"></i> ITCE教育情報化コーディネータ検定 公式サイト
+                </a>
+            </div>
+        </section>
+
+        <!-- その他関連資格 -->
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-plus-circle"></i> その他の関連資格</h2>
+            
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 12px;">
+                <p style="margin-bottom: 2rem; line-height: 1.8; font-size: 1.05rem;">
+                    ICT支援員としてのスキルアップや専門性の向上に役立つ、その他の関連資格をご紹介します。
+                </p>
+
+                <div class="feature-grid">
+                    <!-- 情報処理技術者試験 -->
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>情報処理技術者試験</h3>
+                        <p style="margin-bottom: 1rem; line-height: 1.8;">国家資格として認知度が高く、IT全般の知識を証明</p>
+                        <ul style="text-align: left; padding-left: 1.5rem; line-height: 2; font-size: 0.95rem;">
+                            <li><strong>ITパスポート</strong>：IT基礎知識</li>
+                            <li><strong>基本情報技術者</strong>：プログラミング基礎</li>
+                            <li><strong>応用情報技術者</strong>：高度なIT知識</li>
+                        </ul>
+                        <a href="https://www.ipa.go.jp/shiken/index.html" target="_blank" rel="noopener noreferrer" style="color: #2563eb; text-decoration: none; font-weight: 500; margin-top: 1rem; display: inline-block;">
+                            <i class="fas fa-external-link-alt"></i> 公式サイト
+                        </a>
+                    </div>
+
+                    <!-- Microsoft認定資格 -->
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #00a4ef 0%, #0078d4 100%);">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <h3>Microsoft認定資格</h3>
+                        <p style="margin-bottom: 1rem; line-height: 1.8;">Microsoft製品の専門知識を証明する世界共通資格</p>
+                        <ul style="text-align: left; padding-left: 1.5rem; line-height: 2; font-size: 0.95rem;">
+                            <li><strong>MOS</strong>：Office操作スキル</li>
+                            <li><strong>Microsoft 365 Certified</strong>：クラウドサービス</li>
+                            <li><strong>Azure認定資格</strong>：クラウド基盤</li>
+                        </ul>
+                        <a href="https://learn.microsoft.com/ja-jp/certifications/" target="_blank" rel="noopener noreferrer" style="color: #00a4ef; text-decoration: none; font-weight: 500; margin-top: 1rem; display: inline-block;">
+                            <i class="fas fa-external-link-alt"></i> 公式サイト
+                        </a>
+                    </div>
+
+                    <!-- Google認定教育者資格 -->
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h3>Google認定教育者資格</h3>
+                        <p style="margin-bottom: 1rem; line-height: 1.8;">Google for Educationの活用スキルを証明</p>
+                        <ul style="text-align: left; padding-left: 1.5rem; line-height: 2; font-size: 0.95rem;">
+                            <li><strong>Level 1</strong>：基本的な活用スキル</li>
+                            <li><strong>Level 2</strong>：高度な活用スキル</li>
+                            <li><strong>トレーナー</strong>：指導者レベル</li>
+                        </ul>
+                        <a href="https://edu.google.com/intl/ALL_jp/teacher-center/certifications/" target="_blank" rel="noopener noreferrer" style="color: #4285f4; text-decoration: none; font-weight: 500; margin-top: 1rem; display: inline-block;">
+                            <i class="fas fa-external-link-alt"></i> 公式サイト
+                        </a>
+                    </div>
+
+                    <!-- Apple Teacher認定 -->
+                    <div class="feature-card">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #555555 0%, #000000 100%);">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <h3>Apple Teacher認定</h3>
+                        <p style="margin-bottom: 1rem; line-height: 1.8;">iPadやMacを教育で活用するスキルを証明</p>
+                        <ul style="text-align: left; padding-left: 1.5rem; line-height: 2; font-size: 0.95rem;">
+                            <li><strong>Apple Teacher</strong>：iPad・Mac活用</li>
+                            <li><strong>Swift Playgrounds</strong>：プログラミング教育</li>
+                            <li>無料で取得可能</li>
+                        </ul>
+                        <a href="https://appleteacher.apple.com/" target="_blank" rel="noopener noreferrer" style="color: #000000; text-decoration: none; font-weight: 500; margin-top: 1rem; display: inline-block;">
+                            <i class="fas fa-external-link-alt"></i> 公式サイト
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 資格取得の進め方 -->
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-route"></i> 資格取得のステップ</h2>
+            
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2.5rem; border-radius: 12px;">
+                <h3 style="color: white; margin-bottom: 2rem; font-size: 1.5rem; text-align: center;"><i class="fas fa-map-marked-alt"></i> おすすめのキャリアパス</h3>
+                
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <!-- ステップ1 -->
+                    <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 8px; border-left: 5px solid white;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
+                            <div style="background: white; color: #667eea; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">1</div>
+                            <h4 style="color: white; margin: 0; font-size: 1.3rem;">入門レベル（未経験～1年目）</h4>
+                        </div>
+                        <p style="margin-left: 3rem; line-height: 1.8; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+                            <strong>→ ICT支援員認定試験</strong> または <strong>ITCE 3級</strong><br>
+                            まずは基礎知識と基本スキルを証明する資格を取得しましょう。
+                        </p>
+                    </div>
+
+                    <!-- ステップ2 -->
+                    <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 8px; border-left: 5px solid white;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
+                            <div style="background: white; color: #667eea; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">2</div>
+                            <h4 style="color: white; margin: 0; font-size: 1.3rem;">実務経験を積む（1～2年目）</h4>
+                        </div>
+                        <p style="margin-left: 3rem; line-height: 1.8; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+                            <strong>→ Google認定教育者、Apple Teacher、MOS</strong>など<br>
+                            現場で使うツールの専門資格を追加取得し、実践力を高めましょう。
+                        </p>
+                    </div>
+
+                    <!-- ステップ3 -->
+                    <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 8px; border-left: 5px solid white;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
+                            <div style="background: white; color: #667eea; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">3</div>
+                            <h4 style="color: white; margin: 0; font-size: 1.3rem;">中級レベル（2年目以降）</h4>
+                        </div>
+                        <p style="margin-left: 3rem; line-height: 1.8; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+                            <strong>→ ICT支援員上級認定試験</strong> または <strong>ITCE 2級</strong><br>
+                            リーダーシップやコーディネート能力を証明する上位資格に挑戦しましょう。
+                        </p>
+                    </div>
+
+                    <!-- ステップ4 -->
+                    <div style="background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 8px; border-left: 5px solid white;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
+                            <div style="background: white; color: #667eea; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">4</div>
+                            <h4 style="color: white; margin: 0; font-size: 1.3rem;">上級レベル（5年目以降）</h4>
+                        </div>
+                        <p style="margin-left: 3rem; line-height: 1.8; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+                            <strong>→ ITCE 1級</strong> または <strong>情報処理技術者試験（応用）</strong><br>
+                            教育情報化のエキスパートとして、より高度な専門性を証明しましょう。
+                        </p>
+                    </div>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.2); padding: 1.5rem; border-radius: 8px; margin-top: 2rem; text-align: center;">
+                    <p style="font-size: 1.1rem; font-weight: 600; line-height: 1.8; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+                        <i class="fas fa-lightbulb"></i> ポイント：必ずしもすべての資格が必要なわけではありません。<br>
+                        自分のキャリア目標や現場のニーズに合わせて、必要な資格を選択しましょう。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 関連リソース -->
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-book-open"></i> 学習・準備リソース</h2>
+            
+            <div class="info-card">
+                <h3 style="color: #2563eb; margin-bottom: 1.5rem;"><i class="fas fa-graduation-cap"></i> 試験対策・学習方法</h3>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 1rem;">公式学習教材</h4>
+                    <ul style="line-height: 2; margin-left: 1.5rem;">
+                        <li><strong>ICT支援員ハンドブック</strong>：ICT支援員業務の基本を網羅</li>
+                        <li><strong>文部科学省研修プログラム</strong>：教育情報化の最新動向</li>
+                        <li><strong>JNK4 eラーニング</strong>：ICT支援員自己研修コース（全32回、7,900円）</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="color: #1e40af; margin-bottom: 1rem;">オンライン学習</h4>
+                    <ul style="line-height: 2; margin-left: 1.5rem;">
+                        <li>各資格の公式サイトに掲載されている模擬試験・練習問題</li>
+                        <li>教育情報化関連のウェビナー・オンラインセミナー</li>
+                        <li>YouTube教育チャンネル（Google for Education、Microsoft Education等）</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color: #1e40af; margin-bottom: 1rem;">本サイトの関連ページ</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <a href="basics.html" style="background: #f0f9ff; padding: 1rem; border-radius: 8px; text-decoration: none; color: #1e40af; border-left: 4px solid #2563eb; transition: all 0.3s ease;" onmouseover="this.style.background='#dbeafe'" onmouseout="this.style.background='#f0f9ff'">
+                            <i class="fas fa-info-circle"></i> 基礎知識
+                        </a>
+                        <a href="skills.html" style="background: #f0f9ff; padding: 1rem; border-radius: 8px; text-decoration: none; color: #1e40af; border-left: 4px solid #2563eb; transition: all 0.3s ease;" onmouseover="this.style.background='#dbeafe'" onmouseout="this.style.background='#f0f9ff'">
+                            <i class="fas fa-user-cog"></i> 必要なスキル
+                        </a>
+                        <a href="resources-links.html" style="background: #f0f9ff; padding: 1rem; border-radius: 8px; text-decoration: none; color: #1e40af; border-left: 4px solid #2563eb; transition: all 0.3s ease;" onmouseover="this.style.background='#dbeafe'" onmouseout="this.style.background='#f0f9ff'">
+                            <i class="fas fa-link"></i> リンク集
+                        </a>
+                        <a href="glossary.html" style="background: #f0f9ff; padding: 1rem; border-radius: 8px; text-decoration: none; color: #1e40af; border-left: 4px solid #2563eb; transition: all 0.3s ease;" onmouseover="this.style.background='#dbeafe'" onmouseout="this.style.background='#f0f9ff'">
+                            <i class="fas fa-book-medical"></i> 用語集
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 更新情報 -->
+        <section class="content-section">
+            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+                <p><i class="fas fa-calendar-alt"></i> <strong>最終更新日</strong>：2025年11月</p>
+                <p><i class="fas fa-info-circle"></i> 本ページの情報は各資格・検定の公式サイトおよび文部科学省の公開資料に基づいて作成されています。最新の試験情報、受験料、試験日程については、必ず各公式サイトをご確認ください。</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員・講師のための教育ポータル. All rights reserved.</p>
+            <p>学校現場でのICT活用を支援する総合情報サイト</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

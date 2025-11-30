@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT支援員のための教育入門講座 - ICT支援員総合ポータルサイト</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html" class="active"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-graduation-cap"></i> ICT支援員のための教育入門講座</h1>
+            <p>教育未経験者のための学校現場の基礎知識（全8回）</p>
+        </div>
+
+        <section class="content-section">
+            <div class="info-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem;">
+                <h2 style="color: white; border: none; margin-bottom: 1rem;"><i class="fas fa-star"></i> 講座の全体概要</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px;">
+                        <h4 style="color: white; margin-bottom: 0.5rem;"><i class="fas fa-users"></i> 対象</h4>
+                        <p style="margin: 0;">教育未経験のICT支援員</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px;">
+                        <h4 style="color: white; margin-bottom: 0.5rem;"><i class="fas fa-clock"></i> 形式</h4>
+                        <p style="margin: 0;">講義形式（各回30〜45分目安）</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 8px;">
+                        <h4 style="color: white; margin-bottom: 0.5rem;"><i class="fas fa-bullseye"></i> 目的</h4>
+                        <p style="margin: 0;">学校現場の基礎知識と支援業務への理解を深める</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-grid" style="margin-top: 3rem;">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>第1回: 教育って何？</h3>
+                    <p>今の学校が抱える課題とは</p>
+                    <a href="#lesson1" class="btn-primary">詳しく見る</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3>第2回: 学校はどう動いている？</h3>
+                    <p>小中学校のしくみ</p>
+                    <a href="#lesson2" class="btn-primary">詳しく見る</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>第3回: 子どもってどんなふうに育つの？</h3>
+                    <p>発達と関わり方の基本</p>
+                    <a href="#lesson3" class="btn-primary">詳しく見る</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>第4回: 授業の流れとつくり方</h3>
+                    <p>ICTが入り込む場面とは？</p>
+                    <a href="#lesson4" class="btn-primary">詳しく見る</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>第5回: カリキュラムと学習指導要領</h3>
+                    <p>ざっくり理解する</p>
+                    <a href="#lesson5" class="btn-primary">詳しく見る</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>第6回: GIGAスクールとICTの現在地</h3>
+                    <p>1人1台端末時代の学び</p>
+                    <a href="#lesson6" class="btn-primary">詳しく見る</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>第7回: 学びを「見える化」する評価</h3>
+                    <p>評価の考え方</p>
+                    <a href="#lesson7" class="btn-primary">詳しく見る</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>第8回: 学校は地域とつながっている</h3>
+                    <p>支援員としての連携の心得</p>
+                    <a href="#lesson8" class="btn-primary">詳しく見る</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第1回 -->
+        <section id="lesson1" class="content-section">
+            <h2 class="section-title"><i class="fas fa-book"></i> 第1回: 教育って何？今の学校が抱える課題とは</h2>
+            
+            <h3 class="subsection-title">1. 教育の意味と目的</h3>
+            <div class="info-card">
+                <p><strong>教育とは、「人が社会の一員として生きる力を育てること」です。</strong></p>
+                <p>日本国憲法第26条および学校教育法に基づき、すべての子どもに教育を受ける権利が保障されています。<a href="https://www.mext.go.jp/" target="_blank">（文部科学省）<i class="fas fa-external-link-alt"></i></a></p>
+                
+                <h4>教育は以下の三者によって行われます:</h4>
+                <div class="feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin-top: 1rem;">
+                    <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0284c7;">
+                        <h4 style="color: #0284c7; margin-bottom: 0.5rem;"><i class="fas fa-home"></i> 家庭教育</h4>
+                        <p style="margin: 0;">親から子へのしつけや生活習慣の指導</p>
+                    </div>
+                    <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #16a34a;">
+                        <h4 style="color: #16a34a; margin-bottom: 0.5rem;"><i class="fas fa-school"></i> 学校教育</h4>
+                        <p style="margin: 0;">公的制度として整備された教科学習・集団生活・道徳教育</p>
+                    </div>
+                    <div style="background: #fefce8; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ca8a04;">
+                        <h4 style="color: #ca8a04; margin-bottom: 0.5rem;"><i class="fas fa-city"></i> 社会教育</h4>
+                        <p style="margin: 0;">地域・社会全体による学び（図書館、公民館など）</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">2. 戦後日本の教育制度の変遷</h3>
+            
+            <div class="info-card">
+                <h4><i class="fas fa-flag"></i> 戦後教育改革（1947年〜）</h4>
+                <p>1947年の学校教育法制定により、現在の<strong>6・3・3制（小学校6年・中学校3年・高校3年）</strong>が確立しました。小学校と中学校の9年間が義務教育とされ、すべての子どもに学ぶ権利が保障されました。</p>
+                <p><a href="https://www.mext.go.jp/" target="_blank">文部科学省<i class="fas fa-external-link-alt"></i></a>「学制百年史」</p>
+            </div>
+
+            <div class="info-card">
+                <h4><i class="fas fa-history"></i> 教育改革の流れ</h4>
+                
+                <div class="alert alert-info">
+                    <h5>📚 ゆとり教育（1980〜90年代）</h5>
+                    <ul>
+                        <li>子どもの自主性・多様性重視</li>
+                        <li>詰め込み型教育からの脱却</li>
+                        <li>→ 学力低下の指摘により見直しへ</li>
+                    </ul>
+                </div>
+
+                <div class="alert alert-warning">
+                    <h5>📝 脱ゆとり（2008年〜）</h5>
+                    <ul>
+                        <li>基礎・基本の重視、授業時間の増加</li>
+                        <li>ICT導入の下地が整い始める</li>
+                    </ul>
+                </div>
+
+                <div class="alert alert-success">
+                    <h5>💻 GIGAスクール構想（2019年〜現在）</h5>
+                    <ul>
+                        <li>1人1台端末・高速ネットワーク・クラウド活用</li>
+                        <li>「個別最適な学び」と「協働的な学び」の実現</li>
+                    </ul>
+                    <p><a href="https://www.mext.go.jp/content/20200625-mxt_syoto01-000003278_1.pdf" target="_blank">文部科学省 GIGAスクール構想パンフレット<i class="fas fa-external-link-alt"></i></a></p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">3. 現代の学校が抱える課題</h3>
+            
+            <div class="info-card">
+                <h4>(1) 少子化と地域格差</h4>
+                <ul>
+                    <li>子どもの数が減少し、小規模校の統廃合が進行</li>
+                    <li>都市と地方でICT環境や指導内容に差が発生</li>
+                </ul>
+                <p><a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/index.htm" target="_blank">文部科学省 教育の情報化<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+
+            <div class="info-card">
+                <h4>(2) 学力格差・教育格差</h4>
+                <ul>
+                    <li>家庭の経済状況による学習機会の差</li>
+                    <li>特別な支援を必要とする児童生徒の増加</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h4>(3) いじめ・不登校の増加</h4>
+                <ul>
+                    <li>2022年度の不登校児童生徒数は約30万人で過去最多</li>
+                    <li>小学校からの不登校も増加傾向</li>
+                </ul>
+                <p><a href="https://www.mext.go.jp/a_menu/shotou/seitoshidou/1302902.htm" target="_blank">文部科学省 児童生徒の問題行動・不登校等生徒指導上の諸課題に関する調査<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+
+            <div class="info-card">
+                <h4>(4) 教員不足と働き方改革</h4>
+                <ul>
+                    <li>約2割の学校で教員不足が発生（2024年度）</li>
+                    <li>教員の時間外勤務を月45時間以内に削減する目標（文部科学省「学校における働き方改革」）</li>
+                </ul>
+                <p><a href="https://www.mext.go.jp/a_menu/shotou/hatarakikata/index.htm" target="_blank">文部科学省 学校における働き方改革<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+
+            <div class="info-card">
+                <h4>(5) ICT化の光と影</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>光（メリット）</th>
+                            <th>影（課題）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>学習の個別最適化</td>
+                            <td>デジタルデバイド</td>
+                        </tr>
+                        <tr>
+                            <td>情報アクセスの向上</td>
+                            <td>情報モラルの課題</td>
+                        </tr>
+                        <tr>
+                            <td>協働学習の促進</td>
+                            <td>教員のICTリテラシー不足</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="alert alert-success">
+                <h4>★ ICT支援員へのポイント</h4>
+                <p>ICT化は課題解決の手段であると同時に、新たな課題も生み出します。支援員は技術支援だけでなく、<strong>教員や児童生徒が安心してICTを活用できる環境づくり</strong>を担います。</p>
+            </div>
+        </section>
+
+        <!-- 第2回 -->
+        <section id="lesson2" class="content-section">
+            <h2 class="section-title"><i class="fas fa-school"></i> 第2回: 学校はどう動いている？小中学校のしくみ</h2>
+            
+            <h3 class="subsection-title">1. 義務教育の基本構造</h3>
+            <div class="info-card">
+                <p><strong>義務教育は 小学校6年+中学校3年=計9年間</strong> です。</p>
+                <p>親には子どもに教育を受けさせる義務（就学義務）、国・自治体には学校を提供する責任があります。<a href="https://www.mext.go.jp/a_menu/shotou/gimukyoiku/index.htm" target="_blank">（文部科学省）<i class="fas fa-external-link-alt"></i></a></p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>小学校</th>
+                            <th>中学校</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>教員体制</strong></td>
+                            <td>原則担任1人制</td>
+                            <td>教科担任制</td>
+                        </tr>
+                        <tr>
+                            <td><strong>評価方法</strong></td>
+                            <td>観点別記述（3段階）</td>
+                            <td>5段階評価含む</td>
+                        </tr>
+                        <tr>
+                            <td><strong>教育内容</strong></td>
+                            <td>生活科・道徳重視</td>
+                            <td>専門的教科の増加</td>
+                        </tr>
+                        <tr>
+                            <td><strong>学校生活</strong></td>
+                            <td>基本的生活習慣の習得</td>
+                            <td>自立・社会性の育成</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="subsection-title">2. 学校組織と役職</h3>
+            <div class="info-card">
+                <p>学校はチームで運営されています。ICT支援員が連携する主な役職:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>役職</th>
+                            <th>主な役割</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>校長</strong></td>
+                            <td>学校の最高責任者、方針・ビジョンの提示</td>
+                        </tr>
+                        <tr>
+                            <td><strong>教頭・副校長</strong></td>
+                            <td>校長補佐、校務整理、日常運営</td>
+                        </tr>
+                        <tr>
+                            <td><strong>主幹教諭</strong></td>
+                            <td>特定分野の統括（教務・生徒指導など）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>教務主任</strong></td>
+                            <td>教育課程編成、時間割作成、授業調整</td>
+                        </tr>
+                        <tr>
+                            <td><strong>学年主任</strong></td>
+                            <td>学年の取りまとめ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ICT担当教員</strong></td>
+                            <td>校内ICT環境の管理、教員研修企画</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><a href="https://www.mext.go.jp/" target="_blank">文部科学省 校務分掌資料<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+
+            <h3 class="subsection-title">3. 校務分掌とは</h3>
+            <div class="info-card">
+                <p>校長が学校運営のための業務を組織的に分担する仕組みです。主な分掌:</p>
+                
+                <div class="feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 1rem;">
+                    <div style="background: #eff6ff; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                        <i class="fas fa-book" style="font-size: 2rem; color: #2563eb; margin-bottom: 0.5rem;"></i>
+                        <h4 style="color: #2563eb; margin-bottom: 0.5rem;">教務部</h4>
+                        <p style="margin: 0; font-size: 0.9rem;">教育課程、時間割、教材管理</p>
+                    </div>
+                    <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                        <i class="fas fa-user-shield" style="font-size: 2rem; color: #16a34a; margin-bottom: 0.5rem;"></i>
+                        <h4 style="color: #16a34a; margin-bottom: 0.5rem;">生活指導部</h4>
+                        <p style="margin: 0; font-size: 0.9rem;">生徒指導、保健・安全</p>
+                    </div>
+                    <div style="background: #fef3c7; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                        <i class="fas fa-microscope" style="font-size: 2rem; color: #ca8a04; margin-bottom: 0.5rem;"></i>
+                        <h4 style="color: #ca8a04; margin-bottom: 0.5rem;">研究部</h4>
+                        <p style="margin: 0; font-size: 0.9rem;">校内研修、授業改善</p>
+                    </div>
+                    <div style="background: #fce7f3; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                        <i class="fas fa-briefcase" style="font-size: 2rem; color: #be185d; margin-bottom: 0.5rem;"></i>
+                        <h4 style="color: #be185d; margin-bottom: 0.5rem;">総務部</h4>
+                        <p style="margin: 0; font-size: 0.9rem;">施設管理、予算、渉外</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-success">
+                <h4>★ ICT支援員へのポイント</h4>
+                <p>ICT関連の依頼は<strong>「ICT担当教員」を通すのが基本</strong>ですが、緊急時は教頭や管理職への報告も必要です。組織図を把握し、適切なコミュニケーションルートを理解しましょう。</p>
+            </div>
+        </section>
+
+        <!-- 第3回 -->
+        <section id="lesson3" class="content-section">
+            <h2 class="section-title"><i class="fas fa-child"></i> 第3回: 子どもってどんなふうに育つの？発達と関わり方の基本</h2>
+            
+            <h3 class="subsection-title">1. なぜ発達理解が必要か</h3>
+            <div class="info-card">
+                <p>ICT支援員は子どもと直接接する機会があります。発達段階を理解することで:</p>
+                <ul>
+                    <li><i class="fas fa-check-circle" style="color: #10b981;"></i> 年齢に適した言葉かけができる</li>
+                    <li><i class="fas fa-check-circle" style="color: #10b981;"></i> 適切な距離感で関われる</li>
+                    <li><i class="fas fa-check-circle" style="color: #10b981;"></i> トラブル時に冷静に対応できる</li>
+                </ul>
+            </div>
+
+            <h3 class="subsection-title">2. 子どもの発達段階</h3>
+            
+            <div class="info-card">
+                <h4><i class="fas fa-brain"></i> ピアジェの認知発達理論</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>段階</th>
+                            <th>年齢</th>
+                            <th>特徴</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>感覚運動期</strong></td>
+                            <td>0〜2歳</td>
+                            <td>感覚と運動で世界を理解</td>
+                        </tr>
+                        <tr>
+                            <td><strong>前操作期</strong></td>
+                            <td>2〜7歳</td>
+                            <td>象徴的思考の発達、自己中心性</td>
+                        </tr>
+                        <tr>
+                            <td><strong>具体的操作期</strong></td>
+                            <td>7〜11歳（小学生）</td>
+                            <td>論理的思考の芽生え、具体物での理解</td>
+                        </tr>
+                        <tr>
+                            <td><strong>形式的操作期</strong></td>
+                            <td>11歳〜（中学生以降）</td>
+                            <td>抽象的思考、仮説演繹的推論</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><a href="https://www.hoikushibank.com/column/post_2145" target="_blank">ピアジェの発達段階（保育士バンク）<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+
+            <div class="info-card">
+                <h4><i class="fas fa-user-graduate"></i> エリクソンの心理社会的発達理論</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>段階</th>
+                            <th>年齢</th>
+                            <th>発達課題</th>
+                            <th>獲得する力</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>学童期</strong></td>
+                            <td>6〜12歳</td>
+                            <td>勤勉性 vs 劣等感</td>
+                            <td>「できた！」という達成感</td>
+                        </tr>
+                        <tr>
+                            <td><strong>青年期</strong></td>
+                            <td>12〜20歳</td>
+                            <td>同一性 vs 役割混乱</td>
+                            <td>自分らしさの確立</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><a href="https://www.stemon.net/blog/eriksons-theory-of-development/" target="_blank">エリクソンの発達理論（STEMON）<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+
+            <h3 class="subsection-title">3. ICT支援員に求められる関わり方</h3>
+            
+            <div class="info-card">
+                <h4>基本姿勢</h4>
+                <div class="feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div style="background: #dbeafe; padding: 1.5rem; border-radius: 8px;">
+                        <h5 style="color: #1e40af;"><i class="fas fa-eye"></i> 観察</h5>
+                        <p style="margin: 0;">子どもの様子を見守り、困っている様子に気づく</p>
+                    </div>
+                    <div style="background: #dcfce7; padding: 1.5rem; border-radius: 8px;">
+                        <h5 style="color: #166534;"><i class="fas fa-heart"></i> 尊重</h5>
+                        <p style="margin: 0;">子どものペースや考えを尊重する</p>
+                    </div>
+                    <div style="background: #fef3c7; padding: 1.5rem; border-radius: 8px;">
+                        <h5 style="color: #92400e;"><i class="fas fa-ear-listen"></i> 傾聴</h5>
+                        <p style="margin: 0;">まず話を聞き、否定しない</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h4>声かけのポイント</h4>
+                
+                <div class="alert alert-info">
+                    <h5>小学生: 具体的・シンプルな説明を心がける</h5>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td style="background: #d1fae5;"><strong>✅ 良い例</strong></td>
+                                <td>「この青いボタンを押してね」</td>
+                            </tr>
+                            <tr>
+                                <td style="background: #fee2e2;"><strong>❌ 悪い例</strong></td>
+                                <td>「デバイスを起動して認証してね」</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert alert-warning">
+                    <h5>中学生: 自己決定を促す言葉かけ</h5>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td style="background: #d1fae5;"><strong>✅ 良い例</strong></td>
+                                <td>「どうしたらいいと思う？」</td>
+                            </tr>
+                            <tr>
+                                <td style="background: #fee2e2;"><strong>❌ 悪い例</strong></td>
+                                <td>「これはこうするものです」</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="alert alert-success">
+                <h4>★ ICT支援員へのポイント</h4>
+                <p>子どもに「教える」のではなく、<strong>「一緒に考える」姿勢</strong>が大切です。困ったときは担任や管理職に報告・相談しましょう。</p>
+            </div>
+        </section>
+
+        <!-- 第4回 -->
+        <section id="lesson4" class="content-section">
+            <h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i> 第4回: 授業の流れとつくり方〜ICTが入り込む場面とは?〜</h2>
+            
+            <h3 class="subsection-title">1. 授業設計の基本</h3>
+            <div class="info-card">
+                <h4>1時間の授業構成</h4>
+                <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+                    <div style="display: flex; align-items: center; padding: 1rem; background: #f0f9ff; border-left: 4px solid #0284c7; border-radius: 4px;">
+                        <div style="background: #0284c7; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 1rem;">1</div>
+                        <div>
+                            <strong style="color: #0284c7;">目標の提示</strong>
+                            <p style="margin: 0.25rem 0 0 0;">「今日は何を学ぶか」を明確化</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; padding: 1rem; background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 4px;">
+                        <div style="background: #16a34a; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 1rem;">2</div>
+                        <div>
+                            <strong style="color: #16a34a;">導入</strong>
+                            <p style="margin: 0.25rem 0 0 0;">興味を引く（問題提起、動画、実物提示）</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; padding: 1rem; background: #fefce8; border-left: 4px solid #ca8a04; border-radius: 4px;">
+                        <div style="background: #ca8a04; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 1rem;">3</div>
+                        <div>
+                            <strong style="color: #ca8a04;">展開</strong>
+                            <p style="margin: 0.25rem 0 0 0;">学習の中心部分（調べる、話し合う、考える）</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; padding: 1rem; background: #fce7f3; border-left: 4px solid #be185d; border-radius: 4px;">
+                        <div style="background: #be185d; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 1rem;">4</div>
+                        <div>
+                            <strong style="color: #be185d;">まとめ・振り返り</strong>
+                            <p style="margin: 0.25rem 0 0 0;">学んだことの整理</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; padding: 1rem; background: #ede9fe; border-left: 4px solid #7c3aed; border-radius: 4px;">
+                        <div style="background: #7c3aed; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 1rem;">5</div>
+                        <div>
+                            <strong style="color: #7c3aed;">次時への接続</strong>
+                            <p style="margin: 0.25rem 0 0 0;">宿題、予告</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top: 1rem;"><a href="https://www.mext.go.jp/" target="_blank">文部科学省 指導案作成<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+
+            <div class="info-card">
+                <h4>指導案と単元計画</h4>
+                <ul>
+                    <li><strong>指導案:</strong> 1時間の授業の詳細設計図</li>
+                    <li><strong>単元計画:</strong> 複数時間にわたる学習のまとまり</li>
+                </ul>
+            </div>
+
+            <h3 class="subsection-title">2. 「主体的・対話的で深い学び」とICT</h3>
+            <div class="info-card">
+                <p>新学習指導要領で重視される3つの視点 <a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1383986.htm" target="_blank">（文部科学省）<i class="fas fa-external-link-alt"></i></a>:</p>
+                
+                <div class="feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px; text-align: center;">
+                        <i class="fas fa-user-check" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <h4 style="color: white; margin-bottom: 0.5rem;">主体的</h4>
+                        <p style="margin: 0;">自分の考えをもって学ぶ</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 1.5rem; border-radius: 12px; text-align: center;">
+                        <i class="fas fa-comments" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <h4 style="color: white; margin-bottom: 0.5rem;">対話的</h4>
+                        <p style="margin: 0;">友達との意見交換で学びを深める</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 1.5rem; border-radius: 12px; text-align: center;">
+                        <i class="fas fa-lightbulb" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <h4 style="color: white; margin-bottom: 0.5rem;">深い学び</h4>
+                        <p style="margin: 0;">「なぜ？」まで考える</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h4><i class="fas fa-laptop"></i> ICTの活用場面</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>授業の段階</th>
+                            <th>ICT活用例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>導入</strong></td>
+                            <td>動画・画像で関心を喚起</td>
+                        </tr>
+                        <tr>
+                            <td><strong>展開</strong></td>
+                            <td>共有ホワイトボードツール、ロイロノートでの意見共有</td>
+                        </tr>
+                        <tr>
+                            <td><strong>まとめ</strong></td>
+                            <td>Googleフォームでの振り返り</td>
+                        </tr>
+                        <tr>
+                            <td><strong>個別学習</strong></td>
+                            <td>ドリル系アプリでの自分のペース学習</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="alert alert-success">
+                <h4>★ ICT支援員へのポイント</h4>
+                <p>支援員は「正しい答えを教える」のではなく、<strong>「考える手助けをする」</strong>存在です。機器トラブルの対応、操作サポート、効果的なICT活用のアドバイスが主な役割です。</p>
+            </div>
+        </section>
+
+        <!-- 第5回 -->
+        <section id="lesson5" class="content-section">
+            <h2 class="section-title"><i class="fas fa-file-alt"></i> 第5回: カリキュラムと学習指導要領をざっくり理解する</h2>
+            
+            <h3 class="subsection-title">1. カリキュラムとは</h3>
+            <div class="info-card">
+                <p><strong>カリキュラムとは、学校で「何を」「どうやって」学ぶかの全体計画です。</strong></p>
+                <p>最近では「カリキュラム・マネジメント」という考え方が重視され、学校全体で計画的に教育内容を組み立てます。</p>
+            </div>
+
+            <h3 class="subsection-title">2. 学習指導要領</h3>
+            <div class="info-card">
+                <p>学習指導要領は文部科学省が定める<strong>「全国共通の授業ガイドライン」</strong>です。</p>
+                <p><a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1383986.htm" target="_blank">文部科学省 学習指導要領<i class="fas fa-external-link-alt"></i></a></p>
+                
+                <h4>改訂の歴史</h4>
+                <ul>
+                    <li>約10年ごとに改訂</li>
+                    <li><strong>現行:</strong>
+                        <ul>
+                            <li>小学校: 2020年度〜</li>
+                            <li>中学校: 2021年度〜</li>
+                            <li>高等学校: 2022年度〜</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h4>重視される内容</h4>
+                
+                <div class="alert alert-info">
+                    <h5><i class="fas fa-trophy"></i> 資質・能力の三つの柱</h5>
+                    <div class="feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 1rem;">
+                        <div style="background: white; padding: 1rem; border-radius: 8px; border: 2px solid #3b82f6;">
+                            <strong style="color: #3b82f6;">知識・技能</strong>
+                            <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem;">事実や用語の理解</p>
+                        </div>
+                        <div style="background: white; padding: 1rem; border-radius: 8px; border: 2px solid #10b981;">
+                            <strong style="color: #10b981;">思考・判断・表現</strong>
+                            <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem;">問題解決する力</p>
+                        </div>
+                        <div style="background: white; padding: 1rem; border-radius: 8px; border: 2px solid #f59e0b;">
+                            <strong style="color: #f59e0b;">学びに向かう力</strong>
+                            <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem;">人間性や態度</p>
+                        </div>
+                    </div>
+                </div>
+
+                <ul style="margin-top: 1rem;">
+                    <li><i class="fas fa-laptop-code"></i> 情報活用能力の育成</li>
+                    <li><i class="fas fa-code"></i> プログラミング教育（小学校）</li>
+                    <li><i class="fas fa-language"></i> 外国語教育の充実</li>
+                </ul>
+            </div>
+
+            <div class="alert alert-success">
+                <h4>★ ICT支援員へのポイント</h4>
+                <p>学習指導要領で<strong>「情報活用能力」は学習の基盤となる資質・能力</strong>と位置づけられています。ICT支援員の役割は、この能力育成を技術面から支えることです。</p>
+                <p><a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/1416746.htm" target="_blank">文部科学省 情報活用能力<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+        </section>
+
+        <!-- 第6回 -->
+        <section id="lesson6" class="content-section">
+            <h2 class="section-title"><i class="fas fa-laptop"></i> 第6回: GIGAスクールとICTの現在地</h2>
+            
+            <h3 class="subsection-title">1. GIGAスクール構想とは</h3>
+            <div class="info-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem;">
+                <h4 style="color: white; border: none;"><i class="fas fa-rocket"></i> GIGA: Global and Innovation Gateway for All</h4>
+                <p>2019年末に国が打ち出した構想で、2020年度から本格スタート</p>
+                <p><a href="https://www.mext.go.jp/content/20200625-mxt_syoto01-000003278_1.pdf" target="_blank" style="color: white; text-decoration: underline;">文部科学省 GIGAスクール構想<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+
+            <div class="info-card">
+                <h4>目的</h4>
+                <ul>
+                    <li><i class="fas fa-tablet-alt"></i> 全国の児童生徒に<strong>「1人1台端末」</strong>と<strong>「高速ネットワーク」</strong>を整備</li>
+                    <li><i class="fas fa-user-graduate"></i> 個別最適な学びと協働的な学びを支える</li>
+                </ul>
+
+                <h4>背景</h4>
+                <ul>
+                    <li>少子化・多様化・地域間格差</li>
+                    <li>コロナ禍によるオンライン学習対応</li>
+                    <li>世界のデジタル教育とのギャップ</li>
+                </ul>
+            </div>
+
+            <h3 class="subsection-title">2. ICTで広がった学びの形</h3>
+            
+            <div class="info-card">
+                <h4>実現したこと</h4>
+                <div class="feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div style="background: #dbeafe; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                        <i class="fas fa-eye" style="font-size: 2rem; color: #2563eb; margin-bottom: 0.5rem;"></i>
+                        <h5 style="color: #2563eb;">思考の可視化</h5>
+                        <p style="margin: 0; font-size: 0.9rem;">共有ホワイトボード、ロイロノートなど</p>
+                    </div>
+                    <div style="background: #dcfce7; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                        <i class="fas fa-running" style="font-size: 2rem; color: #16a34a; margin-bottom: 0.5rem;"></i>
+                        <h5 style="color: #16a34a;">自分のペースでの学習</h5>
+                        <p style="margin: 0; font-size: 0.9rem;">ドリル系アプリ</p>
+                    </div>
+                    <div style="background: #fef3c7; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                        <i class="fas fa-video" style="font-size: 2rem; color: #ca8a04; margin-bottom: 0.5rem;"></i>
+                        <h5 style="color: #ca8a04;">「わかる」授業</h5>
+                        <p style="margin: 0; font-size: 0.9rem;">資料や動画の活用</p>
+                    </div>
+                    <div style="background: #fce7f3; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                        <i class="fas fa-users" style="font-size: 2rem; color: #be185d; margin-bottom: 0.5rem;"></i>
+                        <h5 style="color: #be185d;">協働学習</h5>
+                        <p style="margin: 0; font-size: 0.9rem;">クラス全体での共有</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h4>児童生徒の反応（令和6年度全国学力・学習状況調査）</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="background: #d1fae5; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #10b981;">
+                        <strong style="color: #065f46; font-size: 1.5rem;">約89%</strong>
+                        <p style="margin: 0.5rem 0 0 0;">「画像や動画で学習内容がよく分かる」</p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #2563eb;">
+                        <strong style="color: #1e40af; font-size: 1.5rem;">約86%</strong>
+                        <p style="margin: 0.5rem 0 0 0;">「友達と考えを共有しやすい」</p>
+                    </div>
+                </div>
+                <p style="margin-top: 1rem;"><a href="https://www.nier.go.jp/24chousakekkahoukoku/" target="_blank">文部科学省 全国学力・学習状況調査結果<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+
+            <h3 class="subsection-title">3. 現場の課題</h3>
+            
+            <div class="info-card">
+                <h4>(1) ネットワーク環境</h4>
+                <ul>
+                    <li>「当面の推奨帯域」を満たす学校は約2割（2024年4月時点）</li>
+                    <li>2025年度末までに100%を目標</li>
+                </ul>
+                <p><a href="https://www.sky-school-ict.net/trending/detail/1110/" target="_blank">SKYMENU GIGAスクール構想の課題<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+
+            <div class="info-card">
+                <h4>(2) 教員のICT活用力の格差</h4>
+                <ul>
+                    <li>ICT活用に積極的な教員とそうでない教員の差</li>
+                    <li>研修機会の不足</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h4>(3) 端末更新</h4>
+                <ul>
+                    <li>2025年度にかけて約8割の端末が更新時期</li>
+                </ul>
+                <p><a href="https://project.nikkeibp.co.jp/pc/atcl/19/06/21/00003/011500434/" target="_blank">日経BP 次期GIGA構想<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+
+            <div class="alert alert-success">
+                <h4>★ ICT支援員へのポイント</h4>
+                <p>GIGAスクール構想により、ICT支援員の役割は<strong>「機器管理」から「学びの支援」へと拡大</strong>しています。文部科学省は週2〜3回以上の支援頻度を推奨しています。</p>
+                <p><a href="https://www.mext.go.jp/content/1398432_2.pdf" target="_blank">文部科学省 ICT支援員業務整理<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+        </section>
+
+        <!-- 第7回 -->
+        <section id="lesson7" class="content-section">
+            <h2 class="section-title"><i class="fas fa-chart-line"></i> 第7回: 学びを「見える化」する評価の考え方</h2>
+            
+            <h3 class="subsection-title">1. 学習評価の3つの観点</h3>
+            <div class="info-card">
+                <p>新学習指導要領では、以下の3観点で評価します <a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1383986.htm" target="_blank">（文部科学省）<i class="fas fa-external-link-alt"></i></a>:</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+                    <div style="background: #eff6ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #2563eb;">
+                        <h4 style="color: #2563eb; margin-bottom: 0.5rem;"><i class="fas fa-book"></i> 知識・技能</h4>
+                        <p style="margin: 0;">事実や用語、やり方を理解・活用できるか</p>
+                    </div>
+                    <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #16a34a;">
+                        <h4 style="color: #16a34a; margin-bottom: 0.5rem;"><i class="fas fa-brain"></i> 思考・判断・表現</h4>
+                        <p style="margin: 0;">自分で考え、選び、表現できるか</p>
+                    </div>
+                    <div style="background: #fef3c7; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ca8a04;">
+                        <h4 style="color: #ca8a04; margin-bottom: 0.5rem;"><i class="fas fa-heart"></i> 主体的に学習に取り組む態度</h4>
+                        <p style="margin: 0;">継続的に学びに向き合えているか</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">2. 学びの「見える化」とは</h3>
+            <div class="info-card">
+                <p>子どもがどのように考え、成長しているかを記録・共有することです。</p>
+                
+                <h4><i class="fas fa-laptop"></i> ICTで見える化する方法</h4>
+                <ul>
+                    <li>Googleフォーム・共有ホワイトボードでの思考記録</li>
+                    <li>Googleスライドでのまとめ・発表</li>
+                    <li>ロイロノート・ポートフォリオでの学習ログ蓄積</li>
+                </ul>
+            </div>
+
+            <h3 class="subsection-title">3. ルーブリックとポートフォリオ</h3>
+            
+            <div class="info-card">
+                <h4><i class="fas fa-table"></i> ルーブリック評価</h4>
+                <p>評価基準を明確化した表</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>観点</th>
+                            <th>A（優れている）</th>
+                            <th>B（標準）</th>
+                            <th>C（要努力）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>内容</strong></td>
+                            <td>調べた情報が豊富</td>
+                            <td>必要な情報がある</td>
+                            <td>情報が不足</td>
+                        </tr>
+                        <tr>
+                            <td><strong>表現</strong></td>
+                            <td>説得力がある</td>
+                            <td>伝わる</td>
+                            <td>わかりにくい</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><a href="https://www.tsukuba.ac.jp/education/pdf/rubric.pdf" target="_blank">筑波大学 ルーブリック評価資料<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+
+            <div class="info-card">
+                <h4><i class="fas fa-folder-open"></i> ポートフォリオ評価</h4>
+                <p>学習の過程や成果を蓄積し、成長を振り返る方法</p>
+                <p><a href="https://studyvalley.jp/articles/130" target="_blank">STUDY VALLEY 探究学習ポートフォリオ<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+
+            <div class="alert alert-success">
+                <h4>★ ICT支援員へのポイント</h4>
+                <p>評価ツール（Googleフォーム、ポートフォリオアプリなど）の<strong>操作支援、データ集計の補助</strong>が求められます。<strong>評価の判断は教員が行います。</strong></p>
+            </div>
+        </section>
+
+        <!-- 第8回 -->
+        <section id="lesson8" class="content-section">
+            <h2 class="section-title"><i class="fas fa-users"></i> 第8回: 学校は地域とつながっている〜支援員としての連携の心得〜</h2>
+            
+            <h3 class="subsection-title">1. 地域と共にある学校づくり</h3>
+            
+            <div class="info-card">
+                <h4>背景</h4>
+                <ul>
+                    <li>少子化・地域コミュニティの弱体化</li>
+                    <li>学校が地域の核になる役割の増加</li>
+                </ul>
+
+                <h4>地域連携の例</h4>
+                <div class="feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div style="background: #dbeafe; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                        <i class="fas fa-briefcase" style="font-size: 2rem; color: #2563eb; margin-bottom: 0.5rem;"></i>
+                        <p style="margin: 0; font-weight: bold; color: #2563eb;">地元企業による職場体験</p>
+                    </div>
+                    <div style="background: #dcfce7; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                        <i class="fas fa-user-friends" style="font-size: 2rem; color: #16a34a; margin-bottom: 0.5rem;"></i>
+                        <p style="margin: 0; font-weight: bold; color: #16a34a;">地域高齢者との協働学習</p>
+                    </div>
+                    <div style="background: #fef3c7; padding: 1.5rem; border-radius: 8px; text-align: center;">
+                        <i class="fas fa-shield-alt" style="font-size: 2rem; color: #ca8a04; margin-bottom: 0.5rem;"></i>
+                        <p style="margin: 0; font-weight: bold; color: #ca8a04;">災害時の避難拠点</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">2. コミュニティ・スクール（学校運営協議会制度）</h3>
+            <div class="info-card">
+                <p>保護者・地域住民が学校運営に参画する仕組み</p>
+                <p><a href="https://manabi-mirai.mext.go.jp/torikumi/chiiki-gakko/cs.html" target="_blank">文部科学省 コミュニティ・スクール<i class="fas fa-external-link-alt"></i></a></p>
+                
+                <h4>メリット:</h4>
+                <ul>
+                    <li><i class="fas fa-check-circle" style="color: #10b981;"></i> 多様な視点での学校づくり</li>
+                    <li><i class="fas fa-check-circle" style="color: #10b981;"></i> 地域資源の活用</li>
+                    <li><i class="fas fa-check-circle" style="color: #10b981;"></i> 教員の負担軽減</li>
+                </ul>
+            </div>
+
+            <h3 class="subsection-title">3. 保護者対応の基本</h3>
+            
+            <div class="info-card">
+                <h4>ICTに関する保護者の不安</h4>
+                <div class="alert alert-warning">
+                    <ul>
+                        <li><i class="fas fa-question-circle"></i> 「端末の使い方がわからない」</li>
+                        <li><i class="fas fa-exclamation-triangle"></i> 「家庭での使いすぎが心配」</li>
+                        <li><i class="fas fa-shield-alt"></i> 「不適切なサイトへのアクセス」</li>
+                    </ul>
+                </div>
+
+                <h4>ICT支援員ができる配慮</h4>
+                <div class="feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 8px;">
+                        <i class="fas fa-file-alt" style="font-size: 2rem; color: #2563eb; margin-bottom: 0.5rem;"></i>
+                        <p style="margin: 0;">保護者向け資料作成サポート</p>
+                    </div>
+                    <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 8px;">
+                        <i class="fas fa-question" style="font-size: 2rem; color: #16a34a; margin-bottom: 0.5rem;"></i>
+                        <p style="margin: 0;">操作Q&A集の用意</p>
+                    </div>
+                    <div style="background: #fefce8; padding: 1.5rem; border-radius: 8px;">
+                        <i class="fas fa-presentation" style="font-size: 2rem; color: #ca8a04; margin-bottom: 0.5rem;"></i>
+                        <p style="margin: 0;">保護者説明会での機材操作支援</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-success">
+                <h4>★ ICT支援員へのポイント</h4>
+                <p>保護者からの直接の問い合わせは<strong>担任・管理職を通すのが基本</strong>です。ただし、ICTに関する技術的な質問については、教員と連携して対応することもあります。</p>
+            </div>
+        </section>
+
+        <!-- まとめ -->
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> まとめ: ICT支援員として知っておきたいこと</h2>
+            
+            <div class="info-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem;">
+                <h3 style="color: white; border: none; margin-bottom: 1.5rem;"><i class="fas fa-briefcase"></i> ICT支援員の業務領域（文部科学省定義）</h3>
+                <p><a href="https://www.mext.go.jp/content/1398432_2.pdf" target="_blank" style="color: white; text-decoration: underline;">文部科学省 ICT支援員業務<i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+
+            <div class="feature-grid" style="margin-top: 2rem;">
+                <div class="info-card">
+                    <h4><i class="fas fa-chalkboard-teacher" style="color: #2563eb;"></i> 授業関連</h4>
+                    <ul>
+                        <li>授業計画作成支援、教材作成補助</li>
+                        <li>授業中の機器操作支援、トラブル対応</li>
+                        <li>児童生徒の操作支援</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h4><i class="fas fa-clipboard" style="color: #16a34a;"></i> 校務関連</h4>
+                    <ul>
+                        <li>校務支援システムの操作支援</li>
+                        <li>ホームページ更新支援</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h4><i class="fas fa-tools" style="color: #ca8a04;"></i> 環境整備関連</h4>
+                    <ul>
+                        <li>日常メンテナンス</li>
+                        <li>障害トラブルの一次切り分け</li>
+                        <li>ICT機器の動作確認</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h4><i class="fas fa-user-graduate" style="color: #be185d;"></i> 校内研修関連</h4>
+                    <ul>
+                        <li>研修計画作成支援</li>
+                        <li>研修実施支援</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-card" style="margin-top: 2rem;">
+                <h3><i class="fas fa-star"></i> 求められる姿勢</h3>
+                <div class="feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin-top: 1rem;">
+                    <div style="background: #dbeafe; padding: 1.5rem; border-radius: 8px;">
+                        <h4 style="color: #2563eb;"><i class="fas fa-handshake"></i> 教員との連携</h4>
+                        <p style="margin: 0;">教育の専門家は教員、技術の専門家はICT支援員</p>
+                    </div>
+                    <div style="background: #dcfce7; padding: 1.5rem; border-radius: 8px;">
+                        <h4 style="color: #16a34a;"><i class="fas fa-child"></i> 子ども理解</h4>
+                        <p style="margin: 0;">発達段階に応じた関わり</p>
+                    </div>
+                    <div style="background: #fef3c7; padding: 1.5rem; border-radius: 8px;">
+                        <h4 style="color: #ca8a04;"><i class="fas fa-book-reader"></i> 継続的学習</h4>
+                        <p style="margin: 0;">新しい技術・教育動向のキャッチアップ</p>
+                    </div>
+                    <div style="background: #fce7f3; padding: 1.5rem; border-radius: 8px;">
+                        <h4 style="color: #be185d;"><i class="fas fa-lock"></i> 守秘義務</h4>
+                        <p style="margin: 0;">個人情報保護の徹底</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 参考文献 -->
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-book-open"></i> 主要参考文献・リンク集</h2>
+            
+            <div class="reference-list">
+                <h3 class="subsection-title">文部科学省公式資料</h3>
+                
+                <div class="reference-item">
+                    <h4>GIGAスクール構想について</h4>
+                    <p>1人1台端末と高速ネットワーク環境の整備</p>
+                    <a href="https://www.mext.go.jp/content/20200625-mxt_syoto01-000003278_1.pdf" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+
+                <div class="reference-item">
+                    <h4>ICT支援員の業務整理</h4>
+                    <p>ICT支援員の役割と業務内容の定義</p>
+                    <a href="https://www.mext.go.jp/content/1398432_2.pdf" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+
+                <div class="reference-item">
+                    <h4>学習指導要領</h4>
+                    <p>全国共通の教育課程の基準</p>
+                    <a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1383986.htm" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+
+                <div class="reference-item">
+                    <h4>学校における働き方改革</h4>
+                    <p>教員の業務負担軽減の取り組み</p>
+                    <a href="https://www.mext.go.jp/a_menu/shotou/hatarakikata/index.htm" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+
+                <div class="reference-item">
+                    <h4>情報活用能力の育成</h4>
+                    <p>学習の基盤となる資質・能力の育成</p>
+                    <a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/1416746.htm" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+
+                <h3 class="subsection-title">発達理論</h3>
+
+                <div class="reference-item">
+                    <h4>ピアジェの発達段階（保育士バンク）</h4>
+                    <p>認知発達理論の4つの段階</p>
+                    <a href="https://www.hoikushibank.com/column/post_2145" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+
+                <div class="reference-item">
+                    <h4>エリクソンの発達理論（STEMON）</h4>
+                    <p>心理社会的発達の8つの段階</p>
+                    <a href="https://www.stemon.net/blog/eriksons-theory-of-development/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+
+                <h3 class="subsection-title">GIGAスクール現状</h3>
+
+                <div class="reference-item">
+                    <h4>GIGAスクール構想の課題（SKYMENU）</h4>
+                    <p>ネットワーク環境や教員支援の現状</p>
+                    <a href="https://www.sky-school-ict.net/trending/detail/1110/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+
+                <div class="reference-item">
+                    <h4>次期GIGA構想（日経BP）</h4>
+                    <p>端末更新と今後の展開</p>
+                    <a href="https://project.nikkeibp.co.jp/pc/atcl/19/06/21/00003/011500434/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+
+                <h3 class="subsection-title">評価手法</h3>
+
+                <div class="reference-item">
+                    <h4>ポートフォリオ評価（STUDY VALLEY）</h4>
+                    <p>学習過程の記録と評価方法</p>
+                    <a href="https://studyvalley.jp/articles/130" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+
+                <div class="reference-item">
+                    <h4>ルーブリック評価（筑波大学）</h4>
+                    <p>評価基準の明確化手法</p>
+                    <a href="https://www.tsukuba.ac.jp/education/pdf/rubric.pdf" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+
+                <h3 class="subsection-title">地域連携</h3>
+
+                <div class="reference-item">
+                    <h4>コミュニティ・スクール（文部科学省）</h4>
+                    <p>学校運営協議会制度の仕組み</p>
+                    <a href="https://manabi-mirai.mext.go.jp/torikumi/chiiki-gakko/cs.html" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-to-top">
+            <a href="#" id="backToTopBtn"><i class="fas fa-chevron-up"></i></a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2024年11月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

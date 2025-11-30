@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>授業づくりマニュアル - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="小中学校教員のための授業設計完全ガイド。学習指導要領に基づく効果的な授業づくりの手法を解説します。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html" class="active"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-pencil-ruler"></i> 小中学校教員のための授業づくり完全マニュアル</h1>
+            <p>学習指導要領に基づく効果的な授業設計とICT活用</p>
+        </div>
+
+        <section class="content-section">
+            <div class="alert alert-info">
+                <strong><i class="fas fa-info-circle"></i> このマニュアルについて</strong><br>
+                ICT支援員が教員の授業づくりを支援する際に理解しておくべき、授業設計の基本から評価まで、一連のプロセスを解説します。
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> 学習指導要領の理解</h2>
+            
+            <h3 class="subsection-title"><i class="fas fa-bullseye"></i> 資質・能力の三つの柱</h3>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>知識及び技能</h4>
+                    <p>何を理解しているか、何ができるか</p>
+                    <ul>
+                        <li>各教科等の特質に応じた知識</li>
+                        <li>技能の習得</li>
+                        <li>既習事項との関連づけ</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h4>思考力、判断力、表現力等</h4>
+                    <p>理解していること・できることをどう使うか</p>
+                    <ul>
+                        <li>問題発見・解決能力</li>
+                        <li>情報を精査して考えを形成</li>
+                        <li>考えを基に創造する力</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h4>学びに向かう力、人間性等</h4>
+                    <p>どのように社会・世界と関わり、よりよい人生を送るか</p>
+                    <ul>
+                        <li>主体的に学習に取り組む態度</li>
+                        <li>自己調整しながら学ぶ力</li>
+                        <li>多様性を尊重する態度</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="subsection-title"><i class="fas fa-comments"></i> 「主体的・対話的で深い学び」の実現</h3>
+            
+            <div class="info-card">
+                <h4>主体的な学び</h4>
+                <ul>
+                    <li>学ぶことに興味や関心を持つ</li>
+                    <li>見通しを持って粘り強く取り組む</li>
+                    <li>自己の学習活動を振り返る</li>
+                    <li>次につなげる</li>
+                </ul>
+                <strong>ICT活用例:</strong>
+                <ul>
+                    <li>学習履歴の蓄積・振り返り</li>
+                    <li>個別の学習ペースに応じた課題</li>
+                    <li>興味に応じた調べ学習</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h4>対話的な学び</h4>
+                <ul>
+                    <li>子ども同士の協働</li>
+                    <li>教職員や地域の人との対話</li>
+                    <li>先哲の考え方を手がかりに考える</li>
+                </ul>
+                <strong>ICT活用例:</strong>
+                <ul>
+                    <li>クラウドでの意見共有・協働編集</li>
+                    <li>オンラインでの外部との交流</li>
+                    <li>思考の可視化ツール</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h4>深い学び</h4>
+                <ul>
+                    <li>習得・活用・探究の学習過程</li>
+                    <li>各教科等の特質に応じた「見方・考え方」</li>
+                    <li>問いを見いだして解決</li>
+                </ul>
+                <strong>ICT活用例:</strong>
+                <ul>
+                    <li>シミュレーションでの試行錯誤</li>
+                    <li>データ分析ツールでの深い考察</li>
+                    <li>多様な情報へのアクセス</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-clipboard-list"></i> 授業設計の基本プロセス</h2>
+            
+            <div class="info-card">
+                <h4>1. 単元・題材の設定</h4>
+                <ul>
+                    <li>学習指導要領の内容確認</li>
+                    <li>教科書の単元構成把握</li>
+                    <li>年間指導計画との整合性</li>
+                    <li>配当時間の確認</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h4>2. 児童生徒の実態把握</h4>
+                <ul>
+                    <li>既習事項の確認</li>
+                    <li>興味・関心の把握</li>
+                    <li>つまずきやすいポイントの予想</li>
+                    <li>個別の配慮事項</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h4>3. 単元の目標設定</h4>
+                <ul>
+                    <li>知識・技能の目標</li>
+                    <li>思考・判断・表現の目標</li>
+                    <li>主体的に学習に取り組む態度の目標</li>
+                </ul>
+                <div class="alert alert-success">
+                    <strong>ポイント:</strong> 「〜できる」「〜している」など、具体的な児童生徒の姿で記述
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h4>4. 評価規準の設定</h4>
+                <ul>
+                    <li>目標に対応した評価規準</li>
+                    <li>観点別評価の明確化</li>
+                    <li>評価方法の決定</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h4>5. 指導計画の作成</h4>
+                <ul>
+                    <li>単元の流れ（導入→展開→まとめ）</li>
+                    <li>各時間のねらいと活動</li>
+                    <li>ICT活用の位置づけ</li>
+                    <li>教材・教具の準備</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h4>6. 本時の展開作成</h4>
+                <ul>
+                    <li>導入・展開・まとめの構成</li>
+                    <li>発問・指示の計画</li>
+                    <li>板書計画</li>
+                    <li>時間配分</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i> 授業展開の基本パターン</h2>
+            
+            <h3 class="subsection-title"><i class="fas fa-th-list"></i> 問題解決型授業の流れ</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>段階</th>
+                        <th>時間</th>
+                        <th>学習活動</th>
+                        <th>ICT活用例</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>導入</strong></td>
+                        <td>5-10分</td>
+                        <td>
+                            ・前時の振り返り<br>
+                            ・課題の提示<br>
+                            ・見通しを持つ
+                        </td>
+                        <td>
+                            ・デジタル教科書の提示<br>
+                            ・動画で興味喚起<br>
+                            ・前回の学習履歴確認
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>展開①<br>（個別思考）</strong></td>
+                        <td>10-15分</td>
+                        <td>
+                            ・自分で考える<br>
+                            ・試行錯誤<br>
+                            ・予想を立てる
+                        </td>
+                        <td>
+                            ・端末で調べる<br>
+                            ・シミュレーション<br>
+                            ・デジタルノート
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>展開②<br>（協働学習）</strong></td>
+                        <td>15-20分</td>
+                        <td>
+                            ・グループで話し合い<br>
+                            ・考えを共有<br>
+                            ・多様な見方に触れる
+                        </td>
+                        <td>
+                            ・クラウドで意見共有<br>
+                            ・思考ツールで整理<br>
+                            ・画面共有で発表
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>まとめ</strong></td>
+                        <td>5-10分</td>
+                        <td>
+                            ・学習内容の整理<br>
+                            ・振り返り<br>
+                            ・次時への見通し
+                        </td>
+                        <td>
+                            ・振り返りフォーム<br>
+                            ・学習履歴の保存<br>
+                            ・成果物の蓄積
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-clipboard-check"></i> 評価の基本</h2>
+            
+            <h3 class="subsection-title"><i class="fas fa-eye"></i> 観点別評価</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>観点</th>
+                        <th>評価内容</th>
+                        <th>評価方法例</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>知識・技能</strong></td>
+                        <td>
+                            ・知識の習得状況<br>
+                            ・技能の習熟度
+                        </td>
+                        <td>
+                            ・ペーパーテスト<br>
+                            ・実技テスト<br>
+                            ・CBT（MEXCBT等）
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>思考・判断・表現</strong></td>
+                        <td>
+                            ・思考の過程<br>
+                            ・判断の妥当性<br>
+                            ・表現の工夫
+                        </td>
+                        <td>
+                            ・ノート・ワークシート<br>
+                            ・発表・プレゼン<br>
+                            ・レポート・作品
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>主体的に学習に<br>取り組む態度</strong></td>
+                        <td>
+                            ・粘り強く取り組む<br>
+                            ・自己調整する
+                        </td>
+                        <td>
+                            ・振り返りシート<br>
+                            ・行動観察<br>
+                            ・学習履歴
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="subsection-title"><i class="fas fa-chart-pie"></i> ICTを活用した評価</h3>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>形成的評価</h4>
+                    <ul>
+                        <li>リアルタイムアンケート</li>
+                        <li>デジタルワークシートの確認</li>
+                        <li>クラウド上の進捗確認</li>
+                        <li>即時フィードバック</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h4>総括的評価</h4>
+                    <ul>
+                        <li>CBTによるテスト</li>
+                        <li>デジタルポートフォリオ</li>
+                        <li>プレゼンテーション資料</li>
+                        <li>制作物のデジタル保存</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h4>データ活用</h4>
+                    <ul>
+                        <li>学習履歴の分析</li>
+                        <li>つまずきの早期発見</li>
+                        <li>個別支援への活用</li>
+                        <li>指導改善への反映</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-tools"></i> ICT支援員ができる授業づくり支援</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>1. 教材作成支援</h4>
+                    <ul>
+                        <li>デジタル教材の作成</li>
+                        <li>画像・動画の編集</li>
+                        <li>プレゼン資料の作成</li>
+                        <li>ワークシートのデジタル化</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h4>2. 活用場面の提案</h4>
+                    <ul>
+                        <li>単元のどこでICTを使うか</li>
+                        <li>効果的なツールの紹介</li>
+                        <li>他校の事例提供</li>
+                        <li>実現可能性の検討</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h4>3. 環境整備</h4>
+                    <ul>
+                        <li>端末・ネットワークの準備</li>
+                        <li>アプリ・アカウント設定</li>
+                        <li>教室環境のチェック</li>
+                        <li>トラブル予防</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h4>4. 授業中のサポート</h4>
+                    <ul>
+                        <li>同行して技術面を支援</li>
+                        <li>児童生徒への声かけ</li>
+                        <li>トラブル対応</li>
+                        <li>記録・撮影</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h4>5. 振り返り支援</h4>
+                    <ul>
+                        <li>授業後の対話</li>
+                        <li>成果と課題の整理</li>
+                        <li>改善案の提示</li>
+                        <li>記録の保存・共有</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-book-open"></i> 参考文献・引用元</h2>
+            
+            <div class="info-card">
+                <h4>本ページの主要参考資料</h4>
+                <ul>
+                    <li><strong><a href="https://docs.google.com/document/d/1zbWcXEkiro3jMJNoj-De1VVDvtUDjw3LOJbmZ8V8cr4/edit?usp=sharing" target="_blank">「小中学校教員のための授業づくり完全マニュアル」<i class="fas fa-external-link-alt"></i></a></strong>（内部資料）- 新学習指導要領に基づく授業設計の実践的ガイド</li>
+                </ul>
+            </div>
+            
+            <div class="reference-list">
+                <div class="reference-item">
+                    <h4>文部科学省 - 学習指導要領（平成29・30年改訂）</h4>
+                    <p>「主体的・対話的で深い学び」の実現に向けた授業改善</p>
+                    <a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1383986.htm" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+                
+                <div class="reference-item">
+                    <h4>文部科学省 - 学習評価の在り方について</h4>
+                    <p>観点別評価と評価規準の設定</p>
+                    <a href="https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/004/gaiyou/1416169.htm" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+                
+                <div class="reference-item">
+                    <h4>文部科学省 - StuDX Style</h4>
+                    <p>ICTを活用した授業実践事例</p>
+                    <a href="https://www.mext.go.jp/studxstyle/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+                
+                <div class="reference-item">
+                    <h4>国立教育政策研究所</h4>
+                    <p>学習評価に関する参考資料</p>
+                    <a href="https://www.nier.go.jp/kaihatsu/index.html" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+            </div>
+            
+            <div class="alert alert-info">
+                <strong><i class="fas fa-info-circle"></i> 注記</strong><br>
+                本ページは、新学習指導要領と「令和の日本型学校教育」答申を踏まえた授業づくりの指針を提供しています。
+            </div>
+        </section>
+
+        <div class="back-to-top">
+            <a href="#" id="backToTopBtn"><i class="fas fa-chevron-up"></i></a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年10月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

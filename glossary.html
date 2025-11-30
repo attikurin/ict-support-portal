@@ -1,0 +1,2177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT支援員のための用語集 - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="学校現場で活動するICT支援員が必要とする全用語を網羅した包括的な用語集。100語以上の専門用語を詳細に解説。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .glossary-nav {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .glossary-nav h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .category-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .category-link {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .category-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .term-card {
+            background: white;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .term-title {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .term-reading {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .term-definition {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .term-details {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        
+        .term-details h5 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .term-source {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .search-box {
+            margin-bottom: 30px;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 25px;
+            outline: none;
+        }
+        
+        .category-section {
+            scroll-margin-top: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html" class="active"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-book-medical"></i> ICT支援員のための用語集</h1>
+            <p>学校現場で必要とされる100語以上の専門用語を網羅</p>
+        </div>
+
+        <section class="content-section">
+            <div class="alert alert-info">
+                <strong><i class="fas fa-info-circle"></i> 本用語集について</strong><br>
+                本用語集は、学校現場で活動するICT支援員が必要とする全用語を網羅し、最新の調査に基づいて詳細に解説しています。
+                <br><strong>作成日:</strong> 2024年10月30日
+            </div>
+
+            <!-- 検索ボックス -->
+            <div class="search-box">
+                <input type="text" id="searchBox" placeholder="🔍 用語を検索...（例：GIGA、Chromebook、MDM）">
+            </div>
+
+            <!-- カテゴリナビゲーション -->
+            <div class="glossary-nav">
+                <h3><i class="fas fa-list"></i> カテゴリから探す（全13カテゴリー・100語以上）</h3>
+                <div class="category-links">
+                    <a href="#category-a" class="category-link">A. ICT支援員関連</a>
+                    <a href="#category-b" class="category-link">B. 学校組織・管理職</a>
+                    <a href="#category-c" class="category-link">C. 教員・支援スタッフ</a>
+                    <a href="#category-d" class="category-link">D. 学校運営</a>
+                    <a href="#category-e" class="category-link">E. 教育課程・指導</a>
+                    <a href="#category-f" class="category-link">F. 特別支援教育</a>
+                    <a href="#category-g" class="category-link">G. GIGAスクール構想</a>
+                    <a href="#category-h" class="category-link">H. ICT機器・ソフト</a>
+                    <a href="#category-i" class="category-link">I. ネットワーク・セキュリティ</a>
+                    <a href="#category-j" class="category-link">J. 学習支援ツール</a>
+                    <a href="#category-k" class="category-link">K. 評価・記録</a>
+                    <a href="#category-l" class="category-link">L. 学校安全</a>
+                    <a href="#category-m" class="category-link">M. 家庭・地域連携</a>
+                </div>
+            </div>
+
+            <!-- A. ICT支援員関連用語 -->
+            <section id="category-a" class="category-section">
+                <h2 class="section-title"><i class="fas fa-user-tie"></i> A. ICT支援員関連用語</h2>
+
+                <div class="term-card">
+                    <div class="term-title">ICT支援員</div>
+                    <div class="term-reading">アイシーティーしえんいん / ICT Support Staff</div>
+                    <div class="term-definition">
+                        学校におけるICT活用を支援する外部人材。授業支援、校内研修関連、環境整備関連、校務支援といった4つの分野で教員の業務を支援する専門スタッフ。学校によっては「情報化支援員」「デジタル支援員」等の名称で呼ばれることもある。
+                    </div>
+                    <div class="term-details">
+                        <h5>4つの主要業務分野</h5>
+                        <ul>
+                            <li><strong>授業支援:</strong> ICT機器を活用した授業の機器操作補助、授業前の動作確認、トラブル対応</li>
+                            <li><strong>校内研修支援:</strong> ICT授業で使用するハードウェア・ソフトウェアの操作指導、教材作成へのアドバイス</li>
+                            <li><strong>環境整備支援:</strong> 端末・ネットワーク等の調達方法助言、セキュリティ対策支援、機器のメンテナンス</li>
+                            <li><strong>校務支援:</strong> ホームページ更新支援、アンケート集計作業などの校務に関する支援</li>
+                        </ul>
+                        <h5>配置状況（2024年度）</h5>
+                        <ul>
+                            <li>令和4年度末：全国で7,144人配置（約4.6校に1人）</li>
+                            <li>約3割の自治体で未配置という課題が残る</li>
+                            <li>配置済み自治体では授業支援、校内研修支援、環境整備支援、校務支援などで高い効果を実感</li>
+                        </ul>
+                        <h5>標準化の動き</h5>
+                        <p>2025年2月28日、JIS規格「学校におけるICT活用支援サービスに関する規格」が改正され、GIGAスクール構想に対応した業務内容が明確化された。</p>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「ICT支援員の適正配置を」、先端教育機構「文科省、ICT支援員に関する啓蒙パンフレットを発行」(2025年3月24日)、マイナビニュース「GIGAスクール構想を支える『ICT支援員』」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">ICT活用教育アドバイザー</div>
+                    <div class="term-reading">アイシーティーかつようきょういくアドバイザー</div>
+                    <div class="term-definition">
+                        文部科学省が実施する事業で、ICT活用に関する高い知見や豊富な実践事例を有する専門家を、希望する自治体等に派遣し、ICT環境の整備や活用方法について助言を行う制度。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な支援内容</h5>
+                        <ul>
+                            <li>ICT環境整備計画の策定支援</li>
+                            <li>ICT活用の推進体制構築</li>
+                            <li>教員研修の企画・実施支援</li>
+                            <li>先進事例の紹介と導入支援</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「ICT活用教育アドバイザー事業」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">情報活用能力</div>
+                    <div class="term-reading">じょうほうかつようのうりょく</div>
+                    <div class="term-definition">
+                        学習指導要領で「学習の基盤となる資質・能力」と位置づけられた能力。情報を主体的に収集・判断・表現・処理・創造し、受け手の状況などを踏まえて発信・伝達できる能力のこと。
+                    </div>
+                    <div class="term-details">
+                        <h5>3つの観点</h5>
+                        <ul>
+                            <li><strong>知識及び技能:</strong> 情報と情報技術を適切に活用するための知識と技能</li>
+                            <li><strong>思考力、判断力、表現力等:</strong> 問題解決・探究における情報活用の力</li>
+                            <li><strong>学びに向かう力、人間性等:</strong> 情報モラル、情報社会に参画する態度</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「学習指導要領」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">ICT支援員ルーブリック</div>
+                    <div class="term-reading">アイシーティーしえんいんルーブリック</div>
+                    <div class="term-definition">
+                        ICT支援員に期待される資質・能力を体系化した評価指標。能力の段階的な成長を可視化し、養成と研修を推進するためのツール。ルーブリックとは、評価規準と学習者が到達しているレベルを示す具体的な評価基準をマトリクス形式で示す評価指標のこと。
+                    </div>
+                    <div class="term-details">
+                        <h5>3段階の評価基準</h5>
+                        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                            <tr style="background: #f0f0f0;">
+                                <th style="padding: 10px; border: 1px solid #ddd;">ステージ</th>
+                                <th style="padding: 10px; border: 1px solid #ddd;">定義</th>
+                                <th style="padding: 10px; border: 1px solid #ddd;">求められる能力レベル</th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>First Stage</strong></td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">教職員の依頼に応じて業務ができる</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">基本的な資質能力</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Second Stage</strong></td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">教職員と連携して業務ができる</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">必要な資質能力</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Third Stage</strong></td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">専門的な立場でアドバイスができる</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">専門的な資質能力</td>
+                            </tr>
+                        </table>
+                        <h5>活用方法</h5>
+                        <ul>
+                            <li>自己評価ツールとしてキャリア形成に活用</li>
+                            <li>研修プログラムの設計基準として活用</li>
+                            <li>採用・配置時の能力評価基準として活用</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 一般社団法人ICT CONNECT 21「ICT支援員ハンドブック」、「ICT支援員自己評価ルーブリック」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">学校CIO</div>
+                    <div class="term-reading">がっこうシーアイオー / Chief Information Officer</div>
+                    <div class="term-definition">
+                        学校で教育の情報化を推進する総括責任者。最高情報責任者（Chief Information Officer）の略。通常、校長・副校長・教頭が担う。東京都では副校長が担当することが多い。
+                    </div>
+                    <div class="term-details">
+                        <h5>役割と責任</h5>
+                        <ul>
+                            <li>学校のICT化のビジョン構築</li>
+                            <li>ICT環境整備の計画策定・実施のマネジメント</li>
+                            <li>情報セキュリティ対策の統括</li>
+                            <li>ICT活用教育の推進</li>
+                            <li>予算執行の最終責任</li>
+                        </ul>
+                        <h5>教育CIOとの関係</h5>
+                        <ul>
+                            <li><strong>教育CIO:</strong> 教育委員会・自治体レベルで地域の「教育の情報化」のビジョンを定め実現を推進</li>
+                            <li><strong>学校CIO:</strong> 各学校単位でICT化の取組をマネジメントし実行</li>
+                        </ul>
+                        <p>学校CIOは教育CIOが策定したビジョンを各学校で具現化する責任者。</p>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「第10章 教育委員会・学校における情報化の推進体制」、先端教育機構「新しい学びの実現へ、求められる『教育CIO』の養成」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">ICT担当教員</div>
+                    <div class="term-reading">アイシーティーたんとうきょういん</div>
+                    <div class="term-definition">
+                        学校内でICT関連業務を専門に担当する教員。「情報教育担当」「情報化推進担当」等の名称で呼ばれることもある。校務分掌として正式に位置づけられていることが多い。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な業務</h5>
+                        <ul>
+                            <li>ICT機器の管理・運用計画の立案</li>
+                            <li>教員向けICT研修の企画・実施</li>
+                            <li>ICT活用推進の校内調整役</li>
+                            <li>ICT支援員やGIGAスクールサポーターとの連携窓口</li>
+                            <li>デジタル教材の選定・導入支援</li>
+                            <li>トラブル時の一次対応・振り分け</li>
+                        </ul>
+                        <h5>学校CIOとの関係</h5>
+                        <p>学校CIOである管理職を実務面で補佐し、現場でのICT活用推進を主導する中核的存在。</p>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">GIGAスクールサポーター</div>
+                    <div class="term-reading">ギガスクールサポーター</div>
+                    <div class="term-definition">
+                        急速な学校ICT化を進める自治体等を支援するため配置される専門スタッフ。端末やネットワークの初期設定、使用マニュアルの作成、簡単な操作説明等を担当。2020年度に文部科学省が創設した専門人材配置制度。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な業務内容</h5>
+                        <ul>
+                            <li>学校におけるICT環境整備の設計</li>
+                            <li>工事・納品における事業者対応</li>
+                            <li>端末等の使用マニュアル・ルールの作成</li>
+                            <li>端末・ネットワーク等の初期設定支援</li>
+                            <li>使用方法の教職員への伝達・指導</li>
+                        </ul>
+                        <h5>配置基準</h5>
+                        <ul>
+                            <li>目安：4校に2人の配置</li>
+                            <li>補助金：公立学校情報機器整備費補助金による支援</li>
+                            <li>期間：ICT環境整備の初期対応期間（通常1~2年程度）</li>
+                        </ul>
+                        <h5>ICT支援員との違い</h5>
+                        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                            <tr style="background: #f0f0f0;">
+                                <th style="padding: 8px; border: 1px solid #ddd;">項目</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">GIGAスクールサポーター</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">ICT支援員</th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>主な役割</strong></td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">環境整備の初期対応</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">日常的な活用支援</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>配置時期</strong></td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">ICT環境導入時（時限的）</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">継続的配置</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>専門性</strong></td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">ネットワーク・システム構築</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">授業支援・教育的活用</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「公立学校情報機器整備費補助金(令和3年度GIGAスクールサポーター配置支援)」、田中電気「GIGAスクールサポーターとは？」
+                    </div>
+                </div>
+            </section>
+
+            <!-- B. 学校組織・管理職関連用語 -->
+            <section id="category-b" class="category-section">
+                <h2 class="section-title"><i class="fas fa-users-cog"></i> B. 学校組織・管理職関連用語</h2>
+
+                <div class="term-card">
+                    <div class="term-title">校長</div>
+                    <div class="term-reading">こうちょう</div>
+                    <div class="term-definition">
+                        学校教育法第37条第4項に基づく学校の最高責任者。校務をつかさどり、所属職員を監督する。学校経営方針の策定、教育課程の編成、予算執行などの責任を負う。多くの学校で学校CIOを兼任。
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「学校組織運営体制の在り方について」、e-Gov法令検索「学校教育法」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">副校長</div>
+                    <div class="term-reading">ふくこうちょう</div>
+                    <div class="term-definition">
+                        2007年（平成19年）の学校教育法改正により新設された職。「校長を助け、命を受けて校務をつかさどる」（第37条第5項）。一部の校務を自らの名で決裁できる権限を持つ。東京都をはじめ一部自治体で採用。
+                    </div>
+                    <div class="term-details">
+                        <h5>教頭との主な違い</h5>
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <tr style="background: #f0f0f0;">
+                                <th style="padding: 8px; border: 1px solid #ddd;">項目</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">副校長</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">教頭</th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>職務内容</strong></td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">校務をつかさどる</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">校務を整理する</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>決裁権</strong></td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">一部の校務を自らの名で決裁可能</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">基本的に決裁権なし</td>
+                            </tr>
+                        </table>
+                        <p><strong>配置状況:</strong> 東京都はほぼ全校で副校長を配置（教頭は置かない）。神奈川県・埼玉県などは一部で副校長制度を導入。</p>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 晶文社「『副校長』と『教頭』の違い」(2018年3月20日)
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">教頭</div>
+                    <div class="term-reading">きょうとう</div>
+                    <div class="term-definition">
+                        「校長（副校長を置く学校にあっては校長及び副校長）を助け、校務を整理し、及び必要に応じ児童（生徒）の教育をつかさどる」（学校教育法第37条第7項）。校長の補佐、校務の整理、職務代理を行う。
+                    </div>
+                    <div class="term-details">
+                        <h5>実務上の役割</h5>
+                        <ul>
+                            <li>教職員間の連絡調整</li>
+                            <li>保護者対応の窓口</li>
+                            <li>地域との渉外</li>
+                            <li>日常的な学校運営の管理</li>
+                            <li>各種会議の運営</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">主幹教諭</div>
+                    <div class="term-reading">しゅかんきょうゆ</div>
+                    <div class="term-definition">
+                        2007年の学校教育法改正で新設された職。「校長及び教頭を助け、命を受けて校務の一部を整理し、並びに児童の教育をつかさどる」。他の教職員への指導・助言および指示ができる。
+                    </div>
+                    <div class="term-details">
+                        <h5>主任との違い</h5>
+                        <ul>
+                            <li><strong>主幹教諭:</strong> 教諭と異なる「職」。任命権者（都道府県・指定都市教委）の任命が必要。他の教職員に対して指示ができる</li>
+                            <li><strong>主任:</strong> 職務命令による「校務分掌」。服務監督権者（市町村教委・校長）の任命。他の教職員に対して指導・助言を行う</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「主幹教諭の担当業務」、「管理職や主幹教諭の現状について」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">指導教諭</div>
+                    <div class="term-reading">しどうきょうゆ</div>
+                    <div class="term-definition">
+                        2007年の学校教育法改正で新設された職。「児童の教育をつかさどり、並びに教諭その他の職員に対して、教育指導の改善及び充実のために必要な指導及び助言を行う」。特に優れた指導技術を有する教員。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な職務</h5>
+                        <ul>
+                            <li>児童生徒の教育（授業担当）</li>
+                            <li>教育指導の改善・充実に関する指導助言</li>
+                            <li>校内研修の講師</li>
+                            <li>授業公開・示範授業の実施</li>
+                            <li>若手教員への指導</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">主任</div>
+                    <div class="term-reading">しゅにん</div>
+                    <div class="term-definition">
+                        特定の分野の校務を担当する教員。学校教育法施行規則により設置が定められている。「充て職」として、教諭又は指導教諭をもって充てられる。
+                    </div>
+                    <div class="term-details">
+                        <h5>主要な主任の種類</h5>
+                        <ul>
+                            <li><strong>教務主任:</strong> 教育課程の編成・実施、時間割作成等を統括</li>
+                            <li><strong>学年主任:</strong> 当該学年の教育活動全般を統括</li>
+                            <li><strong>生徒指導主任:</strong> 生徒指導全般を統括</li>
+                            <li><strong>進路指導主任:</strong> 進路指導・キャリア教育を統括</li>
+                            <li><strong>保健主事:</strong> 学校保健に関する事項を統括</li>
+                            <li><strong>図書主任:</strong> 学校図書館の運営を統括</li>
+                            <li><strong>研究主任:</strong> 校内研究・研修を統括</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「学校に置かれる担当者（一覧）」
+                    </div>
+                </div>
+            </section>
+
+            <!-- C. 教員・支援スタッフ関連用語 -->
+            <section id="category-c" class="category-section">
+                <h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i> C. 教員・支援スタッフ関連用語</h2>
+
+                <div class="term-card">
+                    <div class="term-title">養護教諭</div>
+                    <div class="term-reading">ようごきょうゆ</div>
+                    <div class="term-definition">
+                        「児童の養護をつかさどる」教諭（学校教育法第37条第12項）。児童・生徒の保健管理、保健教育、健康相談などを担当。一般的に「保健室の先生」と呼ばれる。原則必置。
+                    </div>
+                    <div class="term-details">
+                        <h5>5つの主要な役割</h5>
+                        <ul>
+                            <li><strong>保健管理:</strong> 健康診断、健康観察、救急処置等</li>
+                            <li><strong>保健教育:</strong> 保健指導、保健学習への参画</li>
+                            <li><strong>健康相談:</strong> 心身の健康問題への相談対応</li>
+                            <li><strong>保健室経営:</strong> 保健室の運営管理</li>
+                            <li><strong>保健組織活動:</strong> 学校保健委員会の運営、関係機関との連携</li>
+                        </ul>
+                        <h5>複数配置基準</h5>
+                        <ul>
+                            <li>小学校：児童851人以上</li>
+                            <li>中学校：生徒801人以上</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「養護教諭及び栄養教諭に求められる役割」(2023年1月16日)
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">栄養教諭</div>
+                    <div class="term-reading">えいようきょうゆ</div>
+                    <div class="term-definition">
+                        「児童の栄養の指導及び管理をつかさどる」教諭（学校教育法第37条第13項）。学校給食の管理と食に関する指導を行う。2005年（平成17年）に創設。任意設置。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な職務</h5>
+                        <ul>
+                            <li><strong>栄養管理:</strong> 学校給食の献立作成、栄養バランスの管理</li>
+                            <li><strong>衛生管理:</strong> 給食の衛生管理、食中毒予防</li>
+                            <li><strong>食に関する指導:</strong> 食育の推進、授業での指導</li>
+                            <li><strong>個別栄養相談:</strong> 肥満・痩身傾向児童への指導</li>
+                            <li><strong>保護者への啓発:</strong> 食に関する啓発活動</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 独立行政法人教職員支援機構「栄養教諭の職務」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">特別支援教育支援員</div>
+                    <div class="term-reading">とくべつしえんきょういくしえんいん</div>
+                    <div class="term-definition">
+                        発達障害を含む障害のある児童・生徒の学校生活での介助や学習活動の支援を行う職員。日常生活の介助、学習活動の支援、安全確保、コミュニケーション支援などを担当。
+                    </div>
+                    <div class="term-details">
+                        <h5>配置状況（2024年度）</h5>
+                        <ul>
+                            <li>73,200人分の地方財政措置</li>
+                            <li>医療的ケア看護職員：4,550人分の配置に係る補助</li>
+                            <li>配置人数は年々増加傾向</li>
+                        </ul>
+                        <p><strong>法的根拠:</strong> 障害者差別解消法に基づき、合理的配慮の一環として配置</p>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「特別支援教育の現状」、内閣府「社会参加へ向けた自立の基盤づくり」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">スクールサポートスタッフ（教員業務支援員）</div>
+                    <div class="term-reading">スクールサポートスタッフ / SSS</div>
+                    <div class="term-definition">
+                        教員の働き方改革の一環として配置される、授業準備や環境整備等の教員業務を補助する職員。プリント印刷、教材準備、データ入力、消毒作業などを担当。児童生徒への直接対応は行わない。
+                    </div>
+                    <div class="term-details">
+                        <h5>効果</h5>
+                        <ul>
+                            <li>教員の事務作業時間の削減</li>
+                            <li>授業準備の時間確保</li>
+                            <li>児童生徒と向き合う時間の増加</li>
+                            <li>9割以上の学校が「なくてはならない存在」と評価</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「教員業務支援員との協働の手引き」(令和5年12月)、北海道教育委員会「働き方改革にとって『なくてはならない存在』」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">スクールカウンセラー（SC）</div>
+                    <div class="term-reading">スクールカウンセラー</div>
+                    <div class="term-definition">
+                        児童・生徒の心の悩みや不登校、いじめ等の問題に専門的に対応する臨床心理士等の資格を持つ専門職。児童生徒へのカウンセリング、保護者への助言、教職員へのコンサルテーションなどを行う。
+                    </div>
+                    <div class="term-details">
+                        <h5>資格要件</h5>
+                        <p>臨床心理士、公認心理師、精神科医等の資格を持つ心理の専門家</p>
+                        <h5>配置状況</h5>
+                        <ul>
+                            <li>全国の高等学校：約90%以上に配置</li>
+                            <li>中学校：週4時間以上の配置が40%超</li>
+                            <li>非常勤配置が99%と極めて不安定な雇用形態が課題</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「令和6年度 スクールカウンセラー及びスクールソーシャルワーカー配置状況調査」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">スクールソーシャルワーカー（SSW）</div>
+                    <div class="term-reading">スクールソーシャルワーカー</div>
+                    <div class="term-definition">
+                        児童・生徒の問題を家庭環境や社会環境の視点から支援する社会福祉士等の資格を持つ専門職。家庭環境への働きかけ、関係機関（福祉、医療、警察等）との連携を担当。
+                    </div>
+                    <div class="term-details">
+                        <h5>SCとの違い</h5>
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <tr style="background: #f0f0f0;">
+                                <th style="padding: 8px; border: 1px solid #ddd;">項目</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">SC</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">SSW</th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>専門性</strong></td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">心理学</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">社会福祉学</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>アプローチ</strong></td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">個人の心理面に焦点</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">環境への働きかけに焦点</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">ALT（外国語指導助手）</div>
+                    <div class="term-reading">エーエルティー / Assistant Language Teacher</div>
+                    <div class="term-definition">
+                        外国語（主に英語）の授業で日本人教師をサポートする外国語指導助手。JETプログラム（語学指導等を行う外国青年招致事業）によるALTと、民間企業による派遣ALTがある。
+                    </div>
+                    <div class="term-details">
+                        <h5>JETプログラムによるALT（2024年度報酬）</h5>
+                        <ul>
+                            <li>着任年度：月額28万円（年間336万円）</li>
+                            <li>2年目：月額30万円（年間360万円）</li>
+                            <li>3年目：月額32万5千円（年間390万円）</li>
+                            <li>4年目以上：月額33万円（年間396万円）</li>
+                            <li>期間：最長5年間</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 内閣府「外国語指導助手（ALT）の現状について」(2025年3月4日)、外務省「JETプログラム」
+                    </div>
+                </div>
+            </section>
+
+            <!-- D. 学校運営関連用語 -->
+            <section id="category-d" class="category-section">
+                <h2 class="section-title"><i class="fas fa-cogs"></i> D. 学校運営関連用語</h2>
+
+                <div class="term-card">
+                    <div class="term-title">職員会議</div>
+                    <div class="term-reading">しょくいんかいぎ</div>
+                    <div class="term-definition">
+                        校長が主宰する学校運営のための会議体。学校教育法施行規則第48条により「校長の補助機関」として位置づけられている。2000年の改正により、議決機関から補助機関へと変更。意思決定権は校長にある。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な内容</h5>
+                        <ul>
+                            <li>校長からの校務に関する指示</li>
+                            <li>教育委員会からの通知等の徹底</li>
+                            <li>各分掌からの報告・協議</li>
+                            <li>学校行事の確認</li>
+                            <li>児童生徒の状況報告</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">校務分掌</div>
+                    <div class="term-reading">こうむぶんしょう</div>
+                    <div class="term-definition">
+                        学校運営に必要な業務を組織的に分担する仕組み。校長の権限に基づき、全教職員で学校運営に関する校務を分担する。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な分掌</h5>
+                        <ul>
+                            <li><strong>教務部:</strong> 教育課程、時間割、学籍管理、成績管理等</li>
+                            <li><strong>生徒指導部:</strong> 生活指導、安全指導、生徒会指導等</li>
+                            <li><strong>進路指導部:</strong> 進路・キャリア教育、進学指導等</li>
+                            <li><strong>保健部:</strong> 学校保健、給食指導、環境衛生等</li>
+                            <li><strong>庶務部:</strong> 行事運営、環境整備、渉外等</li>
+                            <li><strong>研究部:</strong> 校内研修、研究推進等</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 晶文社「校務分掌とは」、文部科学省「法令等で学校に義務付けられている業務等（一覧）」
+                    </div>
+                </div>
+            </section>
+
+            <!-- E. 教育課程・指導関連用語 -->
+            <section id="category-e" class="category-section">
+                <h2 class="section-title"><i class="fas fa-book-reader"></i> E. 教育課程・指導関連用語</h2>
+
+                <div class="term-card">
+                    <div class="term-title">観点別評価</div>
+                    <div class="term-reading">かんてんべつひょうか</div>
+                    <div class="term-definition">
+                        学習指導要領に基づく3つの観点（知識・技能、思考・判断・表現、主体的に学習に取り組む態度）で児童生徒の学習状況を評価する方法。A、B、Cの3段階で評価。
+                    </div>
+                    <div class="term-details">
+                        <h5>現行の3観点（2020年～）</h5>
+                        <ul>
+                            <li><strong>知識・技能:</strong> 各教科等の知識・技能の習得状況</li>
+                            <li><strong>思考・判断・表現:</strong> 知識・技能を活用して課題を解決する力</li>
+                            <li><strong>主体的に学習に取り組む態度:</strong> 粘り強く学習に取り組む態度と自己調整</li>
+                        </ul>
+                        <h5>次期改訂での見直し（2025年の動向）</h5>
+                        <p>文部科学省の教育課程部会で、「主体的に学習に取り組む態度」を評定に直接反映させない方向が示された。83%の高校教員が見直しに賛成。</p>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「新学習指導要領の全面実施と学習評価の改善について」、教育新聞(2025年7月4日)
+                    </div>
+                </div>
+            </section>
+
+            <!-- F. 特別支援教育関連用語 -->
+            <section id="category-f" class="category-section">
+                <h2 class="section-title"><i class="fas fa-hands-helping"></i> F. 特別支援教育関連用語</h2>
+
+                <div class="term-card">
+                    <div class="term-title">合理的配慮</div>
+                    <div class="term-reading">ごうりてきはいりょ</div>
+                    <div class="term-definition">
+                        障害のある児童・生徒が他の児童生徒と平等に「教育を受ける権利」を享有・行使することを確保するために、学校の設置者及び学校が必要かつ適当な変更・調整を行うこと。障害者差別解消法（2016年4月施行、2024年4月から事業者にも義務化）に基づく。
+                    </div>
+                    <div class="term-details">
+                        <h5>具体例</h5>
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <tr style="background: #f0f0f0;">
+                                <th style="padding: 8px; border: 1px solid #ddd;">障害種別</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">合理的配慮の例</th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>視覚障害</strong></td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">拡大教科書、座席位置の配慮、音声教材</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>聴覚障害</strong></td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">FM補聴システム、筆談、字幕、手話通訳</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>肢体不自由</strong></td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">段差解消、エレベーター、車椅子対応机、移動介助</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>発達障害</strong></td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">タブレット活用、別室受験、時間延長、視覚支援</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「障害のある子どもが十分に教育を受けられるための合理的配慮」、内閣府「教育 合理的配慮等具体例データ集」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">通級指導教室</div>
+                    <div class="term-reading">つうきゅうしどうきょうしつ</div>
+                    <div class="term-definition">
+                        通常の学級に在籍しながら、障害による困難を改善・克服するため、個別の指導を受ける教室。週1~8時間程度の取り出し指導を行う。対象は9種の障害（知的障害を除く）。
+                    </div>
+                    <div class="term-details">
+                        <h5>特別支援学級との違い</h5>
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <tr style="background: #f0f0f0;">
+                                <th style="padding: 8px; border: 1px solid #ddd;">項目</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">通級指導教室</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">特別支援学級</th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>在籍</strong></td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">通常の学級</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">特別支援学級</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>指導時間</strong></td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">週数時間</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">ほぼ全授業時間</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>知的障害</strong></td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">対象外</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">対象</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「障害に応じた通級による指導の手引 解説とQ&A（改訂第3版）」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">特別支援学級</div>
+                    <div class="term-reading">とくべつしえんがっきゅう</div>
+                    <div class="term-definition">
+                        障害のある児童・生徒のために編制される少人数学級（定員8名）。小学校・中学校に設置。対象は6種の障害（知的障害、肢体不自由、病弱・身体虚弱、弱視、難聴、自閉症・情緒障害）。
+                    </div>
+                </div>
+            </section>
+
+            <!-- G. GIGAスクール構想関連 -->
+            <section id="category-g" class="category-section">
+                <h2 class="section-title"><i class="fas fa-rocket"></i> G. GIGAスクール構想関連用語</h2>
+
+                <div class="term-card">
+                    <div class="term-title">GIGAスクール構想</div>
+                    <div class="term-reading">ギガスクールこうそう / Global and Innovation Gateway for All</div>
+                    <div class="term-definition">
+                        文部科学省が2019年に打ち出した、児童生徒1人1台の端末と高速大容量の通信ネットワークを一体的に整備する計画。「Global and Innovation Gateway for All」の略で、全ての子供たちに個別最適化された創造性を育む教育を実現することを目指す。
+                    </div>
+                    <div class="term-details">
+                        <h5>整備の3本柱</h5>
+                        <ul>
+                            <li><strong>1人1台端末:</strong> 児童生徒用の学習者用コンピュータ</li>
+                            <li><strong>高速大容量ネットワーク:</strong> 校内LAN整備</li>
+                            <li><strong>クラウド活用:</strong> クラウドサービスの積極的な活用</li>
+                        </ul>
+                        <h5>GIGA第2期（2024-2028）</h5>
+                        <p>2024年度から開始された第2期では、端末の更新、デジタル教科書の本格導入、教育DXの推進が重点施策となっている。</p>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「GIGAスクール構想の実現について」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">1人1台端末</div>
+                    <div class="term-reading">ひとりいちだいたんまつ</div>
+                    <div class="term-definition">
+                        GIGAスクール構想の中核となる取り組みで、全ての児童生徒に学習用端末（タブレットやノートPC）を1人1台配備すること。これにより個別最適な学びと協働的な学びの実現を目指す。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な端末の種類</h5>
+                        <ul>
+                            <li><strong>Chromebook:</strong> Google Chrome OSを搭載した端末（最も多く採用）</li>
+                            <li><strong>iPad:</strong> Apple社のタブレット端末</li>
+                            <li><strong>Windows PC:</strong> Microsoft Windowsを搭載した端末</li>
+                        </ul>
+                        <h5>整備状況</h5>
+                        <p>2021年度末までに、全国の小中学校で1人1台端末の整備がほぼ完了（整備率96.1%）。</p>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「端末利活用状況等の実態調査」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">BYOD</div>
+                    <div class="term-reading">ビーワイオーディー / Bring Your Own Device</div>
+                    <div class="term-definition">
+                        児童生徒が私物の端末（スマートフォン、タブレット、PC等）を学校に持ち込んで学習に活用すること。一部の高校や大学で導入が進んでいる。
+                    </div>
+                    <div class="term-details">
+                        <h5>メリット</h5>
+                        <ul>
+                            <li>端末整備費用の削減</li>
+                            <li>使い慣れた端末での学習</li>
+                            <li>家庭学習との連続性</li>
+                        </ul>
+                        <h5>課題</h5>
+                        <ul>
+                            <li>端末の性能・OS差による格差</li>
+                            <li>セキュリティ管理の複雑化</li>
+                            <li>経済的負担の家庭差</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">StuDX Style</div>
+                    <div class="term-reading">スタディーエックス スタイル</div>
+                    <div class="term-definition">
+                        文部科学省が運営する、学校におけるICT活用の優良事例を紹介するWebサイト。「Students（児童生徒）」と「DX（デジタルトランスフォーメーション）」を組み合わせた造語。
+                    </div>
+                    <div class="term-details">
+                        <h5>掲載内容</h5>
+                        <ul>
+                            <li>教科別のICT活用事例</li>
+                            <li>学校段階別の実践事例</li>
+                            <li>特別支援教育でのICT活用</li>
+                            <li>端末活用のポイント・留意点</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「StuDX Style」<br>
+                        <strong>URL:</strong> <a href="https://www.mext.go.jp/studxstyle/" target="_blank">https://www.mext.go.jp/studxstyle/</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- H. ICT機器・ソフトウェア関連用語 -->
+            <section id="category-h" class="category-section">
+                <h2 class="section-title"><i class="fas fa-laptop"></i> H. ICT機器・ソフトウェア関連用語</h2>
+                
+                <h3 class="subsection-title" style="color: var(--primary-color); margin-top: 20px; margin-bottom: 15px;">
+                    <i class="fas fa-desktop"></i> ハードウェア
+                </h3>
+
+                <div class="term-card">
+                    <div class="term-title">Chromebook</div>
+                    <div class="term-reading">クロームブック</div>
+                    <div class="term-definition">
+                        Google社のChrome OSを搭載したノートパソコン。起動が速く、自動アップデートでセキュリティが保たれ、Google Workspace for Educationとの親和性が高いことが特徴。GIGAスクール構想で最も多く採用されている端末。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な特徴</h5>
+                        <ul>
+                            <li><strong>起動速度:</strong> 10秒以内で起動</li>
+                            <li><strong>自動更新:</strong> OSとセキュリティの自動アップデート</li>
+                            <li><strong>クラウド中心:</strong> データをクラウドに保存</li>
+                            <li><strong>長時間駆動:</strong> バッテリー持続時間が長い（8〜12時間）</li>
+                            <li><strong>低価格:</strong> 比較的安価に調達可能</li>
+                        </ul>
+                        <h5>管理</h5>
+                        <p>Google Admin Consoleで一元管理が可能。</p>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">iPad</div>
+                    <div class="term-reading">アイパッド</div>
+                    <div class="term-definition">
+                        Apple社のタブレット端末。直感的な操作性、豊富な教育アプリ、Apple Pencilによる手書き入力が特徴。特に小学校低学年や特別支援教育での導入が多い。
+                    </div>
+                    <div class="term-details">
+                        <h5>教育向けモデル</h5>
+                        <ul>
+                            <li><strong>iPad（第9世代以降）:</strong> 教育機関向けの標準モデル</li>
+                            <li><strong>iPad Air:</strong> より高性能なミドルレンジモデル</li>
+                        </ul>
+                        <h5>管理</h5>
+                        <p>Apple School Manager、MDM（Mobile Device Management）で管理。</p>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">タッチパネル</div>
+                    <div class="term-reading">タッチパネル / Touch Panel</div>
+                    <div class="term-definition">
+                        画面に直接触れることで操作できるディスプレイ。タブレット端末の標準機能で、直感的な操作が可能。一部のノートPCにも搭載されている。
+                    </div>
+                    <div class="term-details">
+                        <h5>種類</h5>
+                        <ul>
+                            <li><strong>静電容量式:</strong> 指の静電気を検知（iPadなど）</li>
+                            <li><strong>抵抗膜式:</strong> 圧力を検知（古い端末で使用）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">電子黒板</div>
+                    <div class="term-reading">でんしこくばん / Interactive Whiteboard</div>
+                    <div class="term-definition">
+                        コンピュータの画面を大きく映し出し、画面上で直接操作できる大型ディスプレイ。プロジェクター一体型やフラットパネル型がある。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な種類</h5>
+                        <ul>
+                            <li><strong>プロジェクター型:</strong> 既存のホワイトボードに投影</li>
+                            <li><strong>フラットパネル型:</strong> 液晶ディスプレイ一体型（大型モニター）</li>
+                        </ul>
+                        <h5>活用例</h5>
+                        <ul>
+                            <li>デジタル教材の提示</li>
+                            <li>児童生徒の作品の共有</li>
+                            <li>動画・写真の拡大表示</li>
+                            <li>書き込み・保存</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">実物投影機</div>
+                    <div class="term-reading">じつぶつとうえいき / Document Camera</div>
+                    <div class="term-definition">
+                        教科書、ノート、立体物などをカメラで撮影し、大きく映し出す機器。「書画カメラ」とも呼ばれる。
+                    </div>
+                    <div class="term-details">
+                        <h5>活用場面</h5>
+                        <ul>
+                            <li>教科書・資料の拡大提示</li>
+                            <li>児童生徒のノートの共有</li>
+                            <li>実験器具・作品の提示</li>
+                            <li>手元作業の実演</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">充電保管庫</div>
+                    <div class="term-reading">じゅうでんほかんこ / Charging Cart</div>
+                    <div class="term-definition">
+                        複数のタブレットやノートPCを同時に充電・保管できるキャビネット。鍵付きでセキュリティも確保できる。
+                    </div>
+                    <div class="term-details">
+                        <h5>容量</h5>
+                        <ul>
+                            <li>20台用、40台用など、クラス規模に応じて選択</li>
+                            <li>移動可能なキャスター付きタイプもある</li>
+                        </ul>
+                        <h5>注意点</h5>
+                        <ul>
+                            <li>電源容量の確保（ブレーカー対策）</li>
+                            <li>充電時間の管理（8時間程度必要）</li>
+                            <li>熱対策（通気性の確保）</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+                <h3 class="subsection-title" style="color: var(--primary-color); margin-top: 30px; margin-bottom: 15px;">
+                    <i class="fas fa-code"></i> ソフトウェア・アプリケーション
+                </h3>
+
+                <div class="term-card">
+                    <div class="term-title">Google Workspace for Education</div>
+                    <div class="term-reading">グーグル ワークスペース フォー エデュケーション</div>
+                    <div class="term-definition">
+                        Google社が教育機関向けに提供する無料のクラウドサービス群。Gmail、Google ドライブ、Google Classroom、Google Meet などが含まれる。旧称「G Suite for Education」。
+                    </div>
+                    <div class="term-details">
+                        <h5>主要サービス</h5>
+                        <ul>
+                            <li><strong>Google Classroom:</strong> 課題管理・配布・提出</li>
+                            <li><strong>Google ドライブ:</strong> ファイル保存・共有</li>
+                            <li><strong>Google ドキュメント:</strong> 文書作成</li>
+                            <li><strong>Google スプレッドシート:</strong> 表計算</li>
+                            <li><strong>Google スライド:</strong> プレゼンテーション</li>
+                            <li><strong>Google Meet:</strong> ビデオ会議</li>
+                            <li><strong>Google フォーム:</strong> アンケート・テスト作成</li>
+                        </ul>
+                        <h5>エディション</h5>
+                        <ul>
+                            <li><strong>Education Fundamentals:</strong> 無料版</li>
+                            <li><strong>Education Standard:</strong> セキュリティ強化版</li>
+                            <li><strong>Teaching and Learning Upgrade:</strong> 授業機能強化版</li>
+                            <li><strong>Education Plus:</strong> 全機能統合版</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> Google for Education公式サイト
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">Microsoft 365 Education</div>
+                    <div class="term-reading">マイクロソフト 365 エデュケーション</div>
+                    <div class="term-definition">
+                        Microsoft社が教育機関向けに提供するクラウドサービス群。Word、Excel、PowerPoint、Teams、OneDrive などが含まれる。旧称「Office 365 Education」。
+                    </div>
+                    <div class="term-details">
+                        <h5>主要サービス</h5>
+                        <ul>
+                            <li><strong>Microsoft Teams:</strong> オンライン授業・コミュニケーション</li>
+                            <li><strong>Word Online:</strong> 文書作成</li>
+                            <li><strong>Excel Online:</strong> 表計算</li>
+                            <li><strong>PowerPoint Online:</strong> プレゼンテーション</li>
+                            <li><strong>OneDrive:</strong> ファイル保存・共有</li>
+                            <li><strong>OneNote:</strong> デジタルノート</li>
+                        </ul>
+                        <h5>エディション</h5>
+                        <ul>
+                            <li><strong>A1:</strong> 無料版（Web版のみ）</li>
+                            <li><strong>A3:</strong> デスクトップアプリ含む</li>
+                            <li><strong>A5:</strong> 最上位版（分析ツール等含む）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">ロイロノート・スクール</div>
+                    <div class="term-reading">ロイロノート・スクール / LoiLoNote School</div>
+                    <div class="term-definition">
+                        株式会社LoiLoが開発した、授業支援クラウドアプリケーション。カードを使った思考の整理、作品作成、リアルタイムの提出・共有機能が特徴。全国の小中高校で広く導入されている。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な機能</h5>
+                        <ul>
+                            <li><strong>カード機能:</strong> 写真・動画・テキスト・PDFをカードとして配置</li>
+                            <li><strong>思考ツール:</strong> カードを線でつないで思考を整理</li>
+                            <li><strong>提出箱:</strong> 課題の配布・回収・共有</li>
+                            <li><strong>リアルタイム共有:</strong> 生徒の作品を一覧表示</li>
+                            <li><strong>テスト機能:</strong> 選択式・記述式テストの作成</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> LoiLoNote School公式サイト
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">MetaMoJi ClassRoom</div>
+                    <div class="term-reading">メタモジ クラスルーム</div>
+                    <div class="term-definition">
+                        MetaMoJi株式会社が開発した、リアルタイム協働学習支援アプリ。手書き入力に強く、複数人で同時に書き込める「同時編集機能」が特徴。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な機能</h5>
+                        <ul>
+                            <li><strong>手書き入力:</strong> ペンで自由に書き込み</li>
+                            <li><strong>同時編集:</strong> 複数人で同じページを編集</li>
+                            <li><strong>モニタリング:</strong> 全員の画面をリアルタイムで確認</li>
+                            <li><strong>テンプレート:</strong> ノート、ワークシートなど豊富</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">Scratch</div>
+                    <div class="term-reading">スクラッチ</div>
+                    <div class="term-definition">
+                        MIT（マサチューセッツ工科大学）メディアラボが開発した、ビジュアルプログラミング言語。ブロックを組み合わせてプログラミングを学ぶことができ、小学校のプログラミング教育で広く使用されている。
+                    </div>
+                    <div class="term-details">
+                        <h5>特徴</h5>
+                        <ul>
+                            <li><strong>ビジュアル:</strong> ブロックを組み合わせる視覚的な操作</li>
+                            <li><strong>無料:</strong> Web版、オフライン版ともに無料</li>
+                            <li><strong>共有:</strong> 作品をオンラインで公開・共有可能</li>
+                            <li><strong>対象年齢:</strong> 8歳以上が推奨</li>
+                        </ul>
+                        <h5>活用場面</h5>
+                        <ul>
+                            <li>プログラミング的思考の育成</li>
+                            <li>アニメーション・ゲーム作成</li>
+                            <li>算数・理科での論理的思考学習</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> Scratch公式サイト<br>
+                        <strong>URL:</strong> <a href="https://scratch.mit.edu/" target="_blank">https://scratch.mit.edu/</a>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">Canva for Education</div>
+                    <div class="term-reading">キャンバ フォー エデュケーション</div>
+                    <div class="term-definition">
+                        グラフィックデザインツール「Canva」の教育機関向け無料版。ポスター、プレゼンテーション、動画などを簡単に作成できる。テンプレートが豊富で、デザインの知識がなくても美しい作品が作れる。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な機能</h5>
+                        <ul>
+                            <li>豊富なテンプレート（100万点以上）</li>
+                            <li>ドラッグ&ドロップで簡単操作</li>
+                            <li>共同編集機能</li>
+                            <li>動画編集機能</li>
+                            <li>Google Classroom連携</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- I. ネットワーク・セキュリティ関連用語 -->
+            <section id="category-i" class="category-section">
+                <h2 class="section-title"><i class="fas fa-network-wired"></i> I. ネットワーク・セキュリティ関連用語</h2>
+                
+                <h3 class="subsection-title" style="color: var(--primary-color); margin-top: 20px; margin-bottom: 15px;">
+                    <i class="fas fa-wifi"></i> ネットワーク
+                </h3>
+
+                <div class="term-card">
+                    <div class="term-title">Wi-Fi</div>
+                    <div class="term-reading">ワイファイ / Wireless Fidelity</div>
+                    <div class="term-definition">
+                        無線LAN（Wireless LAN）の規格の一つ。ケーブルを使わずに、電波を使ってインターネットに接続する技術。学校では、全教室へのWi-Fi整備がGIGAスクール構想の重要な要素。
+                    </div>
+                    <div class="term-details">
+                        <h5>Wi-Fi規格</h5>
+                        <ul>
+                            <li><strong>Wi-Fi 5（IEEE 802.11ac）:</strong> 5GHz帯、速度最大6.9Gbps</li>
+                            <li><strong>Wi-Fi 6（IEEE 802.11ax）:</strong> 5GHz/2.4GHz帯、速度最大9.6Gbps、多数接続に強い</li>
+                            <li><strong>Wi-Fi 6E:</strong> 6GHz帯も利用可能</li>
+                        </ul>
+                        <h5>学校での注意点</h5>
+                        <ul>
+                            <li>同時接続台数の上限（1APあたり30〜50台程度）</li>
+                            <li>電波干渉対策（2.4GHz帯は混雑しやすい）</li>
+                            <li>教室間の電波カバレッジ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">アクセスポイント</div>
+                    <div class="term-reading">アクセスポイント / Access Point (AP)</div>
+                    <div class="term-definition">
+                        無線LANの電波を発信する機器。複数の端末を無線でネットワークに接続する役割を持つ。学校では、教室ごとまたは複数教室に1台設置される。
+                    </div>
+                    <div class="term-details">
+                        <h5>配置の目安</h5>
+                        <ul>
+                            <li>普通教室：1〜2教室に1台</li>
+                            <li>体育館：複数台設置</li>
+                            <li>特別教室：必要に応じて設置</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">LAN</div>
+                    <div class="term-reading">ラン / Local Area Network</div>
+                    <div class="term-definition">
+                        限られた範囲内（学校、企業、家庭など）でコンピュータやプリンタなどを接続するネットワーク。有線LAN（LANケーブル使用）と無線LAN（Wi-Fi）がある。
+                    </div>
+                    <div class="term-details">
+                        <h5>校内LAN</h5>
+                        <ul>
+                            <li><strong>校務系LAN:</strong> 成績処理など教員の校務用</li>
+                            <li><strong>学習系LAN:</strong> 児童生徒の学習用（GIGAスクール端末）</li>
+                        </ul>
+                        <p><strong>重要:</strong> 校務系と学習系は論理的・物理的に分離することが推奨されている（セキュリティ対策）。</p>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">帯域幅</div>
+                    <div class="term-reading">たいいきはば / Bandwidth</div>
+                    <div class="term-definition">
+                        ネットワークでデータを送受信できる量の上限。単位は「bps（bits per second：ビット毎秒）」。帯域幅が大きいほど、多くのデータを高速に転送できる。
+                    </div>
+                    <div class="term-details">
+                        <h5>学校での推奨値（文部科学省）</h5>
+                        <ul>
+                            <li><strong>校内LAN:</strong> 1Gbps以上</li>
+                            <li><strong>インターネット接続:</strong> 100Mbps以上（児童生徒数により増強）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">クラウド</div>
+                    <div class="term-reading">クラウド / Cloud Computing</div>
+                    <div class="term-definition">
+                        インターネット経由でサーバー、ストレージ、アプリケーションなどのコンピューティングリソースを利用する形態。データを端末ではなくインターネット上のサーバーに保存する「クラウドストレージ」が代表的。
+                    </div>
+                    <div class="term-details">
+                        <h5>GIGAスクールでの活用</h5>
+                        <ul>
+                            <li><strong>Google ドライブ:</strong> Chromebookの標準ストレージ</li>
+                            <li><strong>OneDrive:</strong> Microsoft 365の標準ストレージ</li>
+                            <li><strong>iCloud:</strong> iPadのストレージ</li>
+                        </ul>
+                        <h5>メリット</h5>
+                        <ul>
+                            <li>端末故障時もデータが消えない</li>
+                            <li>どの端末からもアクセス可能</li>
+                            <li>共同編集が容易</li>
+                            <li>自動バックアップ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">SINET</div>
+                    <div class="term-reading">サイネット / Science Information NETwork</div>
+                    <div class="term-definition">
+                        国立情報学研究所（NII）が構築・運用する、日本全国の大学・研究機関を結ぶ学術情報ネットワーク。2021年度から、初等中等教育機関もSINETを利用できるようになり、安全で高速な通信環境が提供されている。
+                    </div>
+                    <div class="term-details">
+                        <h5>学校での利用</h5>
+                        <ul>
+                            <li>GIGAスクール端末からの安全なインターネット接続</li>
+                            <li>クラウドサービスへの高速アクセス</li>
+                            <li>自治体間のネットワーク分離</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 国立情報学研究所「SINET」
+                    </div>
+                </div>
+            </section>
+
+                <h3 class="subsection-title" style="color: var(--primary-color); margin-top: 30px; margin-bottom: 15px;">
+                    <i class="fas fa-shield-alt"></i> セキュリティ
+                </h3>
+
+                <div class="term-card">
+                    <div class="term-title">MDM</div>
+                    <div class="term-reading">エムディーエム / Mobile Device Management</div>
+                    <div class="term-definition">
+                        スマートフォンやタブレット等のモバイル端末を一元管理するシステム。学校では、複数のGIGA端末のアプリ配信、設定変更、セキュリティ管理などを効率的に行うために使用される。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な機能</h5>
+                        <ul>
+                            <li><strong>アプリ配信:</strong> 必要なアプリを一括インストール</li>
+                            <li><strong>設定管理:</strong> Wi-Fi設定、制限事項の一括設定</li>
+                            <li><strong>位置情報管理:</strong> 端末の位置追跡</li>
+                            <li><strong>リモートロック:</strong> 紛失時に遠隔ロック</li>
+                            <li><strong>使用状況監視:</strong> アプリ使用状況の把握</li>
+                        </ul>
+                        <h5>主なMDM製品</h5>
+                        <ul>
+                            <li><strong>Google Admin Console:</strong> Chromebook管理</li>
+                            <li><strong>Apple School Manager + MDM:</strong> iPad管理</li>
+                            <li><strong>Microsoft Intune:</strong> Windows端末管理</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">フィルタリング</div>
+                    <div class="term-reading">フィルタリング / Web Filtering</div>
+                    <div class="term-definition">
+                        インターネット上の有害・不適切なWebサイトへのアクセスを制限する機能。学校では、児童生徒が不適切なサイトにアクセスしないよう、フィルタリングの設定が必須。
+                    </div>
+                    <div class="term-details">
+                        <h5>フィルタリングの方式</h5>
+                        <ul>
+                            <li><strong>ブラックリスト方式:</strong> 有害サイトのリストを作成してブロック</li>
+                            <li><strong>ホワイトリスト方式:</strong> 許可されたサイトのみアクセス可能</li>
+                            <li><strong>カテゴリ方式:</strong> サイトをカテゴリ分けしてブロック</li>
+                        </ul>
+                        <h5>学校での設定</h5>
+                        <p>学習に必要なサイトはアクセス可能にしつつ、有害サイトはブロックする柔軟な設定が求められる。教育委員会や学校で適切なバランスを検討。</p>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">情報セキュリティポリシー</div>
+                    <div class="term-reading">じょうほうセキュリティポリシー</div>
+                    <div class="term-definition">
+                        組織（学校・教育委員会）が情報資産を守るために策定する基本方針・対策基準・実施手順の総称。個人情報保護、データ管理、端末利用ルールなどを定める。
+                    </div>
+                    <div class="term-details">
+                        <h5>構成</h5>
+                        <ul>
+                            <li><strong>基本方針:</strong> セキュリティに関する基本的な考え方</li>
+                            <li><strong>対策基準:</strong> 具体的な対策の基準</li>
+                            <li><strong>実施手順:</strong> 日常業務での具体的手順</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">情報モラル</div>
+                    <div class="term-reading">じょうほうモラル / Information Ethics</div>
+                    <div class="term-definition">
+                        情報社会で適正に活動するための基となる考え方や態度。著作権の尊重、個人情報保護、ネットいじめ防止、SNSの適切な利用などが含まれる。学習指導要領でも重視されている。
+                    </div>
+                    <div class="term-details">
+                        <h5>5つの領域</h5>
+                        <ul>
+                            <li><strong>情報社会の倫理:</strong> 他人への配慮、人権尊重</li>
+                            <li><strong>法の理解と遵守:</strong> 著作権、個人情報保護法の理解</li>
+                            <li><strong>安全への知恵:</strong> 危険回避、セキュリティ対策</li>
+                            <li><strong>情報セキュリティ:</strong> パスワード管理、ウイルス対策</li>
+                            <li><strong>公共的なネットワーク社会の構築:</strong> マナー、ルールの遵守</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">著作権</div>
+                    <div class="term-reading">ちょさくけん / Copyright</div>
+                    <div class="term-definition">
+                        創作物（文章、音楽、絵画、写真、動画など）を作った人（著作者）が持つ権利。無断で複製、改変、公開することは著作権侵害となる。ただし、教育目的での使用には一定の例外規定がある。
+                    </div>
+                    <div class="term-details">
+                        <h5>教育現場での著作権（著作権法第35条）</h5>
+                        <ul>
+                            <li><strong>授業での使用:</strong> 必要と認められる限度で著作物を複製・公衆送信できる</li>
+                            <li><strong>条件:</strong>
+                                <ul>
+                                    <li>学校の授業であること</li>
+                                    <li>必要最小限の範囲であること</li>
+                                    <li>著作権者の利益を不当に害さないこと</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h5>SARTRAS（授業目的公衆送信補償金制度）</h5>
+                        <p>2021年度から、オンライン授業等での著作物利用について、補償金を支払うことで適法に利用できる制度が運用されている。</p>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文化庁「著作権」、SARTRAS公式サイト
+                    </div>
+                </div>
+
+                <h3 class="subsection-title" style="color: var(--primary-color); margin-top: 30px; margin-bottom: 15px;">
+                    <i class="fas fa-server"></i> システム・その他
+                </h3>
+
+                <div class="term-card">
+                    <div class="term-title">統合型校務支援システム</div>
+                    <div class="term-reading">とうごうがたこうむしえんシステム</div>
+                    <div class="term-definition">
+                        教務系（成績処理、出欠管理、時数管理等）、保健系（健康診断票、保健室来室管理等）、学籍系（指導要録等）、学校事務系などを統合した機能を有しているシステム。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な機能</h5>
+                        <ul>
+                            <li><strong>成績処理:</strong> 観点別評価、評定、通知表作成</li>
+                            <li><strong>出欠管理:</strong> 日々の出欠席記録、統計</li>
+                            <li><strong>時数管理:</strong> 各教科の授業時数の記録・管理</li>
+                            <li><strong>指導要録作成:</strong> 法定文書の電子作成</li>
+                            <li><strong>健康管理:</strong> 健康診断結果の記録、保健室来室管理</li>
+                            <li><strong>情報共有:</strong> 教職員間の連絡、予定共有</li>
+                        </ul>
+                        <h5>導入状況（2023年3月時点）</h5>
+                        <p>整備率：86.8%。導入済み学校の評価：90%以上が「とても良かった」「まあ良かった」</p>
+                        <h5>期待される効果</h5>
+                        <ul>
+                            <li>教員の事務作業時間の大幅削減</li>
+                            <li>転記ミスの防止</li>
+                            <li>データの一元管理</li>
+                            <li>教育データの利活用促進</li>
+                        </ul>
+                        <h5>次世代の動き</h5>
+                        <p>文部科学省は「次世代校務DX」として、クラウドベースの新しい校務支援システムへの移行を推進。東京都は2025年10月から全国最大規模の「次世代校務支援システム」を導入開始。</p>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「統合型校務支援システムによる業務の効率化について」、「GIGAスクール構想の下での校務の情報化の現状について」、東京都教育委員会(2025年10月1日)
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">LMS（学習管理システム）</div>
+                    <div class="term-reading">エルエムエス / Learning Management System</div>
+                    <div class="term-definition">
+                        オンライン学習の配信、受講管理、進捗管理を行うシステム。教材の配信、課題の提出・管理、成績管理、出席管理、コミュニケーション機能などを持つ。
+                    </div>
+                    <div class="term-details">
+                        <h5>代表的なLMS</h5>
+                        <ul>
+                            <li>Google Classroom</li>
+                            <li>Microsoft Teams for Education</li>
+                            <li>Moodle</li>
+                            <li>Canvas</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- J. 学習支援ツール関連用語 -->
+            <section id="category-j" class="category-section">
+                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> J. 学習支援ツール関連用語</h2>
+
+                <div class="term-card">
+                    <div class="term-title">MEXCBT</div>
+                    <div class="term-reading">メクビット / MEXT CBT</div>
+                    <div class="term-definition">
+                        文部科学省が開発したCBT（Computer Based Testing）システム。児童生徒がオンラインで学習・アセスメントを行えるプラットフォーム。全国学力・学習状況調査のオンライン実施や、各種問題の配信が可能。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な機能</h5>
+                        <ul>
+                            <li><strong>問題配信:</strong> 国・自治体・学校が作成した問題を配信</li>
+                            <li><strong>自動採点:</strong> 選択式問題は自動採点</li>
+                            <li><strong>学習eポータル連携:</strong> 各社の学習eポータル経由でアクセス</li>
+                            <li><strong>問題バンク:</strong> 全国学力調査の過去問等を活用可能</li>
+                        </ul>
+                        <h5>活用場面</h5>
+                        <ul>
+                            <li>単元テスト・小テスト</li>
+                            <li>学力調査（全国学力調査は2024年度から一部CBT実施）</li>
+                            <li>宿題・家庭学習</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「MEXCBTについて」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">学習eポータル</div>
+                    <div class="term-reading">がくしゅうイーポータル</div>
+                    <div class="term-definition">
+                        複数のデジタル教材やツール（MEXCBT、デジタル教科書、ドリル教材など）に、一つのID・パスワードでアクセスできる入り口（ポータルサイト）。民間企業が提供し、学校・自治体が採用する。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な学習eポータル製品</h5>
+                        <ul>
+                            <li>L-Gate（内田洋行）</li>
+                            <li>まなびポケット（NTTコミュニケーションズ）</li>
+                            <li>Studyaid D.B. オンライン（数研出版）</li>
+                            <li>OpenGate（教育同人社）</li>
+                        </ul>
+                        <h5>役割</h5>
+                        <ul>
+                            <li>シングルサインオン（SSO）の実現</li>
+                            <li>学習履歴（スタディ・ログ）の管理</li>
+                            <li>各種デジタル教材へのアクセス</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">デジタル教科書</div>
+                    <div class="term-reading">デジタルきょうかしょ</div>
+                    <div class="term-definition">
+                        紙の教科書の内容をデジタル化し、タブレット等で使用できるようにしたもの。文字の拡大、音声読み上げ、動画・アニメーションの再生などが可能。2024年度から小学校5年生〜中学校3年生の英語で本格導入が開始された。
+                    </div>
+                    <div class="term-details">
+                        <h5>種類</h5>
+                        <ul>
+                            <li><strong>学習者用デジタル教科書:</strong> 児童生徒が使用</li>
+                            <li><strong>指導者用デジタル教科書:</strong> 教員が電子黒板等で提示</li>
+                        </ul>
+                        <h5>主な機能</h5>
+                        <ul>
+                            <li>拡大・縮小表示</li>
+                            <li>音声読み上げ（TTS: Text-to-Speech）</li>
+                            <li>書き込み・マーカー</li>
+                            <li>動画・アニメーション再生</li>
+                            <li>辞書・資料へのリンク</li>
+                        </ul>
+                        <h5>2024年度以降の展開</h5>
+                        <p>2024年度から小5〜中3の英語で先行導入。2025年度以降、他教科への展開が検討されている。</p>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「デジタル教科書の今後の在り方等に関する検討会議」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">AI ドリル</div>
+                    <div class="term-reading">エーアイ ドリル</div>
+                    <div class="term-definition">
+                        人工知能（AI）を活用した学習ドリル教材。児童生徒の学習状況に応じて、最適な問題を自動的に出題する「アダプティブラーニング」機能を持つ。
+                    </div>
+                    <div class="term-details">
+                        <h5>主なAIドリル製品</h5>
+                        <ul>
+                            <li>Qubena（キュビナ）</li>
+                            <li>すらら</li>
+                            <li>スタディサプリ</li>
+                            <li>atama+（アタマプラス）</li>
+                        </ul>
+                        <h5>特徴</h5>
+                        <ul>
+                            <li><strong>個別最適化:</strong> 一人ひとりに合った問題を出題</li>
+                            <li><strong>つまずき診断:</strong> 理解不足の箇所を自動判定</li>
+                            <li><strong>学習履歴分析:</strong> 学習状況を可視化</li>
+                            <li><strong>先取り・さかのぼり学習:</strong> 学年を超えた学習が可能</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">EdTech</div>
+                    <div class="term-reading">エドテック / Education Technology</div>
+                    <div class="term-definition">
+                        「Education（教育）」と「Technology（技術）」を組み合わせた造語。AIドリル、学習管理システム、オンライン学習プラットフォームなど、テクノロジーを活用した教育サービス・製品の総称。
+                    </div>
+                    <div class="term-details">
+                        <h5>EdTechの例</h5>
+                        <ul>
+                            <li><strong>学習管理システム（LMS）:</strong> Google Classroom、Microsoft Teams</li>
+                            <li><strong>AIドリル:</strong> Qubena、すらら</li>
+                            <li><strong>プログラミング教材:</strong> Scratch、Minecraft Education</li>
+                            <li><strong>オンライン英会話:</strong> DMM英会話、レアジョブ</li>
+                            <li><strong>探究学習支援:</strong> まなBOX、SchooMy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">スタディ・ログ</div>
+                    <div class="term-reading">スタディ・ログ / Study Log</div>
+                    <div class="term-definition">
+                        児童生徒の学習履歴データ。どの教材をいつ、どれくらい使ったか、どの問題を解いたか、正答率はどうだったかなどの記録。学習eポータルやEdTechサービスで蓄積され、個別最適な学びの実現に活用される。
+                    </div>
+                    <div class="term-details">
+                        <h5>活用方法</h5>
+                        <ul>
+                            <li>個別の学習状況把握</li>
+                            <li>つまずき箇所の特定</li>
+                            <li>学習計画の最適化</li>
+                            <li>教員の指導改善</li>
+                        </ul>
+                        <h5>課題</h5>
+                        <ul>
+                            <li>データ標準化（異なるシステム間での連携）</li>
+                            <li>プライバシー保護</li>
+                            <li>データ分析・活用のスキル</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> デジタル庁「教育データ利活用ロードマップ」
+                    </div>
+                </div>
+
+                <h3 class="subsection-title" style="color: var(--primary-color); margin-top: 30px; margin-bottom: 15px;">
+                    <i class="fas fa-landmark"></i> 教育政策・制度
+                </h3>
+                
+                <div class="term-card">
+                    <div class="term-title">学習指導要領</div>
+                    <div class="term-reading">がくしゅうしどうようりょう</div>
+                    <div class="term-definition">
+                        全国どこの学校でも一定の水準の教育を受けられるよう、文部科学省が定めた教育課程の基準。約10年ごとに改訂される。現行の学習指導要領（平成29・30年改訂）では「情報活用能力」が学習の基盤となる資質・能力として位置づけられた。
+                    </div>
+                    <div class="term-details">
+                        <h5>現行学習指導要領のポイント（ICT関連）</h5>
+                        <ul>
+                            <li><strong>情報活用能力:</strong> 学習の基盤となる資質・能力</li>
+                            <li><strong>プログラミング教育:</strong> 小学校で必修化</li>
+                            <li><strong>ICT活用:</strong> 各教科等の特質に応じて活用</li>
+                            <li><strong>情報モラル教育:</strong> 全学校段階で実施</li>
+                        </ul>
+                        <h5>実施時期</h5>
+                        <ul>
+                            <li>小学校：2020年度〜</li>
+                            <li>中学校：2021年度〜</li>
+                            <li>高等学校：2022年度〜（年次進行）</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「学習指導要領」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">個別最適な学び</div>
+                    <div class="term-reading">こべつさいてきなまなび</div>
+                    <div class="term-definition">
+                        一人ひとりの児童生徒の特性や学習進度、学習到達度等に応じた学習。「指導の個別化」と「学習の個性化」の2つの側面がある。GIGAスクール構想とICT活用により実現を目指す。
+                    </div>
+                    <div class="term-details">
+                        <h5>2つの側面</h5>
+                        <ul>
+                            <li><strong>指導の個別化:</strong> 一人ひとりの学習状況に応じて、教員が指導方法・教材等を工夫</li>
+                            <li><strong>学習の個性化:</strong> 児童生徒が自ら学習を最適化（学習テーマ、進度、方法の選択）</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 中央教育審議会答申「『令和の日本型学校教育』の構築を目指して」（2021年1月）
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">協働的な学び</div>
+                    <div class="term-reading">きょうどうてきなまなび</div>
+                    <div class="term-definition">
+                        他者と協働しながら、多様な他者の考え方を共有・吟味し、学びを深めていく学習。グループワーク、ペアワーク、発表・共有などが含まれる。ICTツールを活用することで、より効果的な協働学習が可能になる。
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">教育DX</div>
+                    <div class="term-reading">きょういくディーエックス / Education Digital Transformation</div>
+                    <div class="term-definition">
+                        デジタル技術を活用して、教育の在り方を根本から変革すること。単なるICTの導入ではなく、データ駆動型の教育、個別最適な学び、校務のデジタル化などを含む包括的な取り組み。
+                    </div>
+                    <div class="term-details">
+                        <h5>3つの柱</h5>
+                        <ul>
+                            <li><strong>学びのDX:</strong> 個別最適・協働的な学びの実現</li>
+                            <li><strong>校務のDX:</strong> 統合型校務支援システム導入、ペーパーレス化</li>
+                            <li><strong>データ連携:</strong> スタディ・ログ、校務データの連携・活用</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> デジタル庁「教育データ利活用ロードマップ」
+                    </div>
+                </div>
+            </section>
+
+            <!-- K. 評価・記録関連用語 -->
+            <section id="category-k" class="category-section">
+                <h2 class="section-title"><i class="fas fa-clipboard-list"></i> K. 評価・記録関連用語</h2>
+
+                <div class="term-card">
+                    <div class="term-title">指導要録</div>
+                    <div class="term-reading">しどうようろく</div>
+                    <div class="term-definition">
+                        児童・生徒の学籍及び指導の記録を記載した公簿。学校教育法施行規則第24条（小学校）、第28条等により、作成・保存が義務づけられている。学籍に関する記録（20年保存）と指導に関する記録（5年保存）から構成される。
+                    </div>
+                    <div class="term-details">
+                        <h5>記載内容</h5>
+                        <ul>
+                            <li><strong>学籍に関する記録（20年保存）:</strong> 氏名、生年月日、保護者氏名、住所、入学・転学・卒業等の記録</li>
+                            <li><strong>指導に関する記録（5年保存）:</strong> 各教科の学習の記録、特別の教科 道徳、総合的な学習の時間、特別活動の記録、行動の記録、総合所見、出欠の記録</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「学校教育法（抄）及び学校教育法施行規則（抄）」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">出席簿</div>
+                    <div class="term-reading">しゅっせきぼ</div>
+                    <div class="term-definition">
+                        児童・生徒の出欠を記録する公簿。学校教育法施行規則第28条により、学校に備えなければならない表簿として規定されている。保存期間は5年間。電子化が進んでいる。
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">eポートフォリオ</div>
+                    <div class="term-reading">イーポートフォリオ</div>
+                    <div class="term-definition">
+                        デジタル形式で作成・蓄積されるポートフォリオ。高等学校での学習成果や活動記録を蓄積し、大学入試（総合型選抜・学校推薦型選抜等）で活用される。クラウド上で管理されることが多い。
+                    </div>
+                </div>
+            </section>
+
+            <!-- L. 学校安全・危機管理用語 -->
+            <section id="category-l" class="category-section">
+                <h2 class="section-title"><i class="fas fa-shield-alt"></i> L. 学校安全・危機管理用語</h2>
+
+                <div class="term-card">
+                    <div class="term-title">危機管理マニュアル</div>
+                    <div class="term-reading">ききかんりマニュアル / 危険等発生時対処要領</div>
+                    <div class="term-definition">
+                        学校における様々な危機事象に対する対応手順を定めたマニュアル。危険等が発生した際に教職員が円滑かつ的確な対応を図るため、学校保健安全法第29条により、全ての学校において作成が義務付けられている。
+                    </div>
+                    <div class="term-details">
+                        <h5>想定すべき危機</h5>
+                        <ul>
+                            <li>自然災害（地震、津波、台風、豪雨、土砂災害等）</li>
+                            <li>火災</li>
+                            <li>不審者侵入</li>
+                            <li>交通事故</li>
+                            <li>食中毒</li>
+                            <li>感染症</li>
+                            <li>いじめ・自殺</li>
+                            <li>熱中症</li>
+                            <li>原子力災害</li>
+                        </ul>
+                        <h5>作成・見直しの義務</h5>
+                        <ul>
+                            <li>作成：全校必須</li>
+                            <li>教職員への周知：義務</li>
+                            <li>定期的な見直し：推奨（年1回以上）</li>
+                            <li>訓練の実施：必須</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「学校の危機管理マニュアル作成の手引」、「学校安全計画の策定及び危険等発生時対処要領の作成について」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">学校安全計画</div>
+                    <div class="term-reading">がっこうあんぜんけいかく</div>
+                    <div class="term-definition">
+                        学校における安全教育、安全管理等について計画的に実施するための年間計画。学校保健安全法第27条により、全ての学校での策定が義務付けられている。生活安全、交通安全、災害安全（防災）の3つの領域を扱う。
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">避難訓練</div>
+                    <div class="term-reading">ひなんくんれん</div>
+                    <div class="term-definition">
+                        火災、地震、不審者侵入等を想定した避難の練習。学校保健安全法、消防法により実施が義務づけられている。年間複数回の実施が求められる。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な訓練種別</h5>
+                        <ul>
+                            <li>火災避難訓練</li>
+                            <li>地震避難訓練</li>
+                            <li>津波避難訓練</li>
+                            <li>不審者対応訓練</li>
+                            <li>Jアラート対応訓練</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">メール配信システム</div>
+                    <div class="term-reading">メールはいしんシステム</div>
+                    <div class="term-definition">
+                        保護者への緊急連絡や重要な情報を一斉送信するシステム。緊急時の連絡（災害、不審者情報等）、学校行事の変更連絡、感染症情報、気象警報による対応連絡などに使用される。
+                    </div>
+                    <div class="term-details">
+                        <h5>代表的なシステム</h5>
+                        <ul>
+                            <li>さくら連絡網</li>
+                            <li>スクリレ</li>
+                            <li>Cocoo（コクー）</li>
+                            <li>まちcomiメール</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- M. 家庭・地域連携用語 -->
+            <section id="category-m" class="category-section">
+                <h2 class="section-title"><i class="fas fa-users"></i> M. 家庭・地域連携用語</h2>
+
+                <div class="term-card">
+                    <div class="term-title">PTA</div>
+                    <div class="term-reading">ピーティーエー / Parent-Teacher Association</div>
+                    <div class="term-definition">
+                        保護者と教師による任意団体。児童生徒の健全な成長を図ることを目的とする社会教育関係団体。学校行事への協力、安全パトロール、教育講演会の開催、学校施設の環境整備などを行う。任意団体であり、加入は強制ではない。
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">学校運営協議会（コミュニティ・スクール）</div>
+                    <div class="term-reading">がっこううんえいきょうぎかい</div>
+                    <div class="term-definition">
+                        コミュニティ・スクール（学校運営協議会制度）において設置される協議会。保護者や地域住民が学校運営に参画する合議制の機関。地方教育行政の組織及び運営に関する法律第47条の6（2017年改正で努力義務化）に基づく。
+                    </div>
+                    <div class="term-details">
+                        <h5>学校運営協議会の3つの権限</h5>
+                        <ul>
+                            <li><strong>承認権:</strong> 校長が作成する学校運営の基本方針の承認</li>
+                            <li><strong>意見権:</strong> 学校運営に関する意見の申し出</li>
+                            <li><strong>人事に関する意見権:</strong> 教職員の任用に関する意見具申（教育委員会に対して）</li>
+                        </ul>
+                        <h5>設置状況</h5>
+                        <p>全体設置率：約27%（2023年時点）。都道府県別で大きな差（高い地域では80%超、低い地域では10%未満）。</p>
+                        <h5>期待される効果</h5>
+                        <ul>
+                            <li>地域の教育力を活かした教育活動の充実</li>
+                            <li>学校を核とした地域づくり</li>
+                            <li>教員の負担軽減（地域の協力による）</li>
+                            <li>学校の透明性・信頼性の向上</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「第2章 これからのコミュニティ・スクールの在り方と総合的な推進方策」、SKYMENU Cloud「コミュニティ・スクールとは？」(2024年7月2日)
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">個人面談</div>
+                    <div class="term-reading">こじんめんだん</div>
+                    <div class="term-definition">
+                        教員と保護者が個別に面談し、児童・生徒の学校生活や学習状況について話し合う機会。年2回程度（学期末等）が一般的。学習状況の報告、学校生活・家庭での様子の情報交換、進路相談などを行う。
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">家庭訪問</div>
+                    <div class="term-reading">かていほうもん</div>
+                    <div class="term-definition">
+                        教員が児童・生徒の家庭を訪問し、家庭環境の把握や保護者との関係構築を図る活動。新学期の開始時期（4月～5月）に実施されることが一般的。家庭環境の把握、通学路の確認、保護者との関係構築などを目的とする。近年は、家庭訪問に代えて学校での個人面談を実施するケースも増えている。
+                    </div>
+                </div>
+            </section>
+
+                <div class="term-card">
+                    <div class="term-title">学習指導要領</div>
+                    <div class="term-reading">がくしゅうしどうようりょう</div>
+                    <div class="term-definition">
+                        全国どこの学校でも一定の水準の教育を受けられるよう、文部科学省が定めた教育課程の基準。約10年ごとに改訂される。現行の学習指導要領（平成29・30年改訂）では「情報活用能力」が学習の基盤となる資質・能力として位置づけられた。
+                    </div>
+                    <div class="term-details">
+                        <h5>現行学習指導要領のポイント（ICT関連）</h5>
+                        <ul>
+                            <li><strong>情報活用能力:</strong> 学習の基盤となる資質・能力</li>
+                            <li><strong>プログラミング教育:</strong> 小学校で必修化</li>
+                            <li><strong>ICT活用:</strong> 各教科等の特質に応じて活用</li>
+                            <li><strong>情報モラル教育:</strong> 全学校段階で実施</li>
+                        </ul>
+                        <h5>実施時期</h5>
+                        <ul>
+                            <li>小学校：2020年度〜</li>
+                            <li>中学校：2021年度〜</li>
+                            <li>高等学校：2022年度〜（年次進行）</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「学習指導要領」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">個別最適な学び</div>
+                    <div class="term-reading">こべつさいてきなまなび</div>
+                    <div class="term-definition">
+                        一人ひとりの児童生徒の特性や学習進度、学習到達度等に応じた学習。「指導の個別化」と「学習の個性化」の2つの側面がある。GIGAスクール構想とICT活用により実現を目指す。
+                    </div>
+                    <div class="term-details">
+                        <h5>2つの側面</h5>
+                        <ul>
+                            <li><strong>指導の個別化:</strong> 一人ひとりの学習状況に応じて、教員が指導方法・教材等を工夫</li>
+                            <li><strong>学習の個性化:</strong> 児童生徒が自ら学習を最適化（学習テーマ、進度、方法の選択）</li>
+                        </ul>
+                        <h5>ICT活用の例</h5>
+                        <ul>
+                            <li>AIドリルによる個別最適化された問題提供</li>
+                            <li>デジタル教科書の音声読み上げ機能</li>
+                            <li>学習eポータルでの学習履歴管理</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 中央教育審議会答申「『令和の日本型学校教育』の構築を目指して」（2021年1月）
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">協働的な学び</div>
+                    <div class="term-reading">きょうどうてきなまなび</div>
+                    <div class="term-definition">
+                        他者と協働しながら、多様な他者の考え方を共有・吟味し、学びを深めていく学習。グループワーク、ペアワーク、発表・共有などが含まれる。ICTツールを活用することで、より効果的な協働学習が可能になる。
+                    </div>
+                    <div class="term-details">
+                        <h5>ICT活用の例</h5>
+                        <ul>
+                            <li>Google ドキュメント等での共同編集</li>
+                            <li>ロイロノート・スクールでの作品共有</li>
+                            <li>オンラインホワイトボードツールでの共有</li>
+                            <li>Google Meetでの遠隔協働学習</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">主体的・対話的で深い学び</div>
+                    <div class="term-reading">しゅたいてき・たいわてきでふかいまなび / アクティブ・ラーニング</div>
+                    <div class="term-definition">
+                        現行学習指導要領が目指す授業改善の視点。単なる知識の習得ではなく、学ぶことの意義を理解し、他者と協働しながら、深く考え、問題を解決していく学び。「アクティブ・ラーニング」の視点を引き継いでいる。
+                    </div>
+                    <div class="term-details">
+                        <h5>3つの視点</h5>
+                        <ul>
+                            <li><strong>主体的な学び:</strong> 学ぶことに興味・関心を持ち、見通しを持って粘り強く取り組む</li>
+                            <li><strong>対話的な学び:</strong> 他者との協働や対話を通じて考えを広げ深める</li>
+                            <li><strong>深い学び:</strong> 各教科等の見方・考え方を働かせて思考し、知識を相互に関連付ける</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> 文部科学省「学習指導要領」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">教育DX</div>
+                    <div class="term-reading">きょういくディーエックス / Education Digital Transformation</div>
+                    <div class="term-definition">
+                        デジタル技術を活用して、教育の在り方を根本から変革すること。単なるICTの導入ではなく、データ駆動型の教育、個別最適な学び、校務のデジタル化などを含む包括的な取り組み。
+                    </div>
+                    <div class="term-details">
+                        <h5>3つの柱</h5>
+                        <ul>
+                            <li><strong>学びのDX:</strong> 個別最適・協働的な学びの実現</li>
+                            <li><strong>校務のDX:</strong> 統合型校務支援システム導入、ペーパーレス化</li>
+                            <li><strong>データ連携:</strong> スタディ・ログ、校務データの連携・活用</li>
+                        </ul>
+                    </div>
+                    <div class="term-source">
+                        <strong>引用元:</strong> デジタル庁「教育データ利活用ロードマップ」
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">校務支援システム</div>
+                    <div class="term-reading">こうむしえんシステム</div>
+                    <div class="term-definition">
+                        教員の事務作業（成績処理、出欠管理、通知表作成、指導要録作成など）を電子化し、効率化するシステム。統合型校務支援システムでは、これらの情報を一元管理できる。
+                    </div>
+                    <div class="term-details">
+                        <h5>主な機能</h5>
+                        <ul>
+                            <li>成績処理（テスト入力、評定算出）</li>
+                            <li>出欠管理</li>
+                            <li>時数管理</li>
+                            <li>通知表作成</li>
+                            <li>指導要録作成</li>
+                            <li>保健管理</li>
+                        </ul>
+                        <h5>導入状況</h5>
+                        <p>2022年3月時点で、全国の小中学校の76.0%が統合型校務支援システムを導入済み。</p>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- 参考文献・引用元 -->
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-book-open"></i> 参考文献・引用元</h2>
+            
+            <div class="info-card">
+                <h4>本用語集の主要参考資料</h4>
+                <ul>
+                    <li><strong>「ICT支援員のための用語集」</strong>（提供資料）- 作成日: 2024年10月30日</li>
+                    <li>学校現場で活動するICT支援員が必要とする全用語を網羅し、最新の調査に基づいて詳細に解説</li>
+                </ul>
+            </div>
+            
+            <div class="reference-list">
+                <h3 class="subsection-title">公的機関・公式資料</h3>
+                
+                <div class="reference-item">
+                    <h4>文部科学省 - ICT支援員関連資料</h4>
+                    <p>ICT支援員の適正配置、業務内容、活用事例</p>
+                    <a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/mext_00001.html" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+                
+                <div class="reference-item">
+                    <h4>文部科学省 - GIGAスクール構想</h4>
+                    <p>1人1台端末、高速ネットワーク整備に関する公式情報</p>
+                    <a href="https://www.mext.go.jp/a_menu/other/index_00001.htm" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+                
+                <div class="reference-item">
+                    <h4>文部科学省 - 学習指導要領</h4>
+                    <p>情報活用能力、プログラミング教育、ICT活用の基準</p>
+                    <a href="https://www.mext.go.jp/a_menu/shotou/new-cs/index.htm" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+                
+                <div class="reference-item">
+                    <h4>デジタル庁 - 教育データ利活用ロードマップ</h4>
+                    <p>教育DX、スタディ・ログ活用に関する政策</p>
+                    <a href="https://www.digital.go.jp/policies/education_data/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+                
+                <div class="reference-item">
+                    <h4>国立情報学研究所 - SINET</h4>
+                    <p>学術情報ネットワークの学校での活用</p>
+                    <a href="https://www.sinet.ad.jp/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+                
+                <div class="reference-item">
+                    <h4>文化庁 - 著作権</h4>
+                    <p>教育現場での著作権、著作権法第35条</p>
+                    <a href="https://www.bunka.go.jp/seisaku/chosakuken/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+                
+                <h3 class="subsection-title">企業・団体</h3>
+                
+                <div class="reference-item">
+                    <h4>一般社団法人 ICT支援員普及促進協会</h4>
+                    <p>ICT支援員能力認定試験、業務ガイドライン</p>
+                    <a href="https://www.ict-support.or.jp/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+                
+                <div class="reference-item">
+                    <h4>SARTRAS（授業目的公衆送信補償金等管理協会）</h4>
+                    <p>授業での著作物利用、補償金制度</p>
+                    <a href="https://sartras.or.jp/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> サイトを見る
+                    </a>
+                </div>
+            </div>
+            
+            <div class="alert alert-info">
+                <strong><i class="fas fa-info-circle"></i> 注記</strong><br>
+                本用語集は、提供された専門資料および公的機関の最新情報を基に作成されています。用語の定義、引用元、関連情報は2024年10月時点のものです。最新の情報については、各リンク先の公式サイトをご確認ください。
+            </div>
+        </section>
+
+        <div class="back-to-top">
+            <a href="#" id="backToTopBtn"><i class="fas fa-chevron-up"></i></a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2024年11月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // 検索機能
+        document.getElementById('searchBox').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const termCards = document.querySelectorAll('.term-card');
+            let visibleCount = 0;
+            
+            termCards.forEach(card => {
+                const title = card.querySelector('.term-title').textContent.toLowerCase();
+                const reading = card.querySelector('.term-reading').textContent.toLowerCase();
+                const definition = card.querySelector('.term-definition').textContent.toLowerCase();
+                const details = card.querySelector('.term-details') ? card.querySelector('.term-details').textContent.toLowerCase() : '';
+                
+                if (title.includes(searchTerm) || reading.includes(searchTerm) || 
+                    definition.includes(searchTerm) || details.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // カテゴリセクションの表示/非表示
+            const categorySections = document.querySelectorAll('.category-section');
+            categorySections.forEach(section => {
+                const visibleCards = section.querySelectorAll('.term-card[style="display: block;"]');
+                if (searchTerm && visibleCards.length === 0) {
+                    section.style.display = 'none';
+                } else {
+                    section.style.display = 'block';
+                }
+            });
+        });
+    </script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

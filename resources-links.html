@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教育ICTリンク集 - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="教育ICTに関する政府機関、Microsoft Education、Google for Education、各種資格制度、実践事例集などの包括的なリンク集です。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .search-container {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 600px;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-box:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .category-nav {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-nav h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .category-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .category-tag {
+            background: var(--bg-light);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            font-size: 0.9rem;
+        }
+
+        .category-tag:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .links-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .section-header i {
+            color: var(--primary-color);
+        }
+
+        .subsection {
+            margin-bottom: 2.5rem;
+        }
+
+        .subsection-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .link-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .link-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -2px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary-color);
+        }
+
+        .link-card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .link-card-title a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: start;
+            gap: 0.5rem;
+        }
+
+        .link-card-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .link-card-title i {
+            color: var(--primary-color);
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        .link-card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .link-card-url {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            word-break: break-all;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .link-card-url:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                font-size: 1.5rem;
+            }
+
+            .subsection-title {
+                font-size: 1.2rem;
+            }
+
+            .category-tags {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html" class="active"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-link"></i> 教育ICTリンク集</h1>
+            <p>教育情報化に関する政府機関・企業・団体・資格制度・事例集の総合ポータル</p>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="searchBox" class="search-box" placeholder="🔍 リンクを検索... (例: GIGA, Microsoft, 資格, 文部科学省)">
+        </div>
+
+        <div class="category-nav">
+            <h3><i class="fas fa-compass"></i> カテゴリから探す</h3>
+            <div class="category-tags">
+                <a href="#government" class="category-tag"><i class="fas fa-building"></i> 政府機関</a>
+                <a href="#microsoft" class="category-tag"><i class="fab fa-microsoft"></i> Microsoft</a>
+                <a href="#google" class="category-tag"><i class="fab fa-google"></i> Google</a>
+                <a href="#apple" class="category-tag"><i class="fab fa-apple"></i> Apple</a>
+                <a href="#organizations" class="category-tag"><i class="fas fa-users"></i> 学会・団体</a>
+                <a href="#certifications" class="category-tag"><i class="fas fa-certificate"></i> 資格制度</a>
+                <a href="#prefectures" class="category-tag"><i class="fas fa-map-marked-alt"></i> 都道府県</a>
+                <a href="#special-needs" class="category-tag"><i class="fas fa-hands-helping"></i> 特別支援</a>
+                <a href="#security" class="category-tag"><i class="fas fa-shield-virus"></i> セキュリティ</a>
+                <a href="#platforms" class="category-tag"><i class="fas fa-network-wired"></i> プラットフォーム</a>
+                <a href="#media" class="category-tag"><i class="fas fa-newspaper"></i> メディア</a>
+                <a href="#community" class="category-tag"><i class="fas fa-users"></i> コミュニティ</a>
+            </div>
+        </div>
+
+        <!-- 政府機関 -->
+        <section id="government" class="links-section">
+            <h2 class="section-header">
+                <i class="fas fa-building"></i>
+                文部科学省・政府関連
+            </h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-laptop"></i>
+                    GIGAスクール構想関連
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/index.htm" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>教育の情報化・GIGAスクール構想の推進</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">文部科学省の教育情報化メインページ。GIGAスクール構想の最新情報、施策、ガイドライン</div>
+                        <a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/index.htm" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.mext.go.jp/a_menu/shotou/zyouhou/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.mext.go.jp/a_menu/other/index_00001.htm" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>GIGAスクール構想</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">GIGAスクール構想の公式情報。整備状況、活用事例、自治体向け情報</div>
+                        <a href="https://www.mext.go.jp/a_menu/other/index_00001.htm" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.mext.go.jp/a_menu/other/index_00001.htm
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.mext.go.jp/studxstyle/index2.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>StuDX Style（スタディーエックス スタイル）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">1人1台端末の活用事例集。全国の優良事例、ポータルサイト紹介</div>
+                        <a href="https://www.mext.go.jp/studxstyle/index2.html" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.mext.go.jp/studxstyle/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/1407916.htm" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>教育ICT活用実践事例</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">ICT活用事例の映像集。授業での具体的な活用場面を動画で紹介</div>
+                        <a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/1407916.htm" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.mext.go.jp/.../1407916.htm
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://leadingdxschool.mext.go.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>リーディングDXスクール</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教育DX先進校の取り組み紹介。先進的な事例とノウハウ</div>
+                        <a href="https://leadingdxschool.mext.go.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> leadingdxschool.mext.go.jp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-computer"></i>
+                    MEXCBT・学習eポータル
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/mext_00001.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>文部科学省CBTシステム（MEXCBT）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">MEXCBTと学習eポータルの概要、活用事例、自治体向け情報</div>
+                        <a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/mext_00001.html" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.mext.go.jp/.../mext_00001.html
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-robot"></i>
+                    生成AI・AI教育
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.mext.go.jp/a_menu/other/mext_02412.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>生成AIの利活用について</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">学校現場における生成AI利活用指針とガイドライン</div>
+                        <a href="https://www.mext.go.jp/a_menu/other/mext_02412.html" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.mext.go.jp/.../mext_02412.html
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.mext.go.jp/zyoukatsu/ai/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>学校現場における生成AIの利活用について</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">生成AI活用に関する詳細ガイドと事例集</div>
+                        <a href="https://www.mext.go.jp/zyoukatsu/ai/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.mext.go.jp/zyoukatsu/ai/
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-shield-alt"></i>
+                    情報モラル・プログラミング教育
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.mext.go.jp/zyoukatsu/moral/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>情報モラル教育ポータルサイト</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">情報モラル教育に特化したポータルサイト。児童生徒向け動画教材21本と教員向け指導手引き、保護者向け資料</div>
+                        <a href="https://www.mext.go.jp/zyoukatsu/moral/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.mext.go.jp/zyoukatsu/moral/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.mext.go.jp/miraino_manabi/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>小学校プログラミング教育ポータル（未来の学び）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">プログラミング教育に関する研修教材、実践事例、指導案、企業・団体による教材を集約。小学校プログラミング教育の手引や各教科での実践例</div>
+                        <a href="https://www.mext.go.jp/miraino_manabi/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.mext.go.jp/miraino_manabi/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.mext.go.jp/studxstyle/special/85.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>校務DXポータルサイト</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">校務のデジタル化に関する情報を集約。校務支援システムの活用事例や導入手順、効果検証などを紹介</div>
+                        <a href="https://www.mext.go.jp/studxstyle/special/85.html" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.mext.go.jp/studxstyle/special/85.html
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-rocket"></i>
+                    EdTech・未来の教室
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.learning-innovation.go.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>未来の教室</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">EdTech活用実証事業とSTEAM教育推進の情報</div>
+                        <a href="https://www.learning-innovation.go.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.learning-innovation.go.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.learning-innovation.go.jp/verify-list/?v=flat" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>未来の教室実証事業</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">実証事業の採択事例一覧とレポート</div>
+                        <a href="https://www.learning-innovation.go.jp/verify-list/?v=flat" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.learning-innovation.go.jp/verify-list/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.learning-innovation.go.jp/db/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>EdTechデータベース</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">国内で利用可能なEdTechサービスの総合データベース</div>
+                        <a href="https://www.learning-innovation.go.jp/db/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.learning-innovation.go.jp/db/
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-digital-tachograph"></i>
+                    デジタル庁
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.digital.go.jp/news/511df327-5ba3-456e-a5cd-2ebeddd8c960" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>教育DXロードマップ</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教育分野のデジタル化推進計画とロードマップ</div>
+                        <a href="https://www.digital.go.jp/news/511df327-5ba3-456e-a5cd-2ebeddd8c960" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.digital.go.jp/news/511df327...
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://ppp-education-dx.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>教育DXサービスマップ</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教育ICTサービス総合カタログ（実証ベータ版）</div>
+                        <a href="https://ppp-education-dx.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> ppp-education-dx.jp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-broadcast-tower"></i>
+                    総務省
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.soumu.go.jp/use_the_internet_wisely/special/generativeai/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>生成AIはじめの一歩</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">生成AIの入門的な使い方と注意点</div>
+                        <a href="https://www.soumu.go.jp/use_the_internet_wisely/special/generativeai/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.soumu.go.jp/.../generativeai/
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-shield-alt"></i>
+                    情報処理推進機構（IPA）
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www3.jitec.ipa.go.jp/JitesCbt/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>ITパスポート試験</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">IT基礎知識を証明する国家資格。ICT支援員にも推奨</div>
+                        <a href="https://www3.jitec.ipa.go.jp/JitesCbt/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www3.jitec.ipa.go.jp/JitesCbt/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.ipa.go.jp/shiken/kubun/list.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>情報処理技術者試験区分一覧</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">各種情報処理技術者試験の概要と区分</div>
+                        <a href="https://www.ipa.go.jp/shiken/kubun/list.html" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.ipa.go.jp/shiken/kubun/list.html
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Microsoft Education -->
+        <section id="microsoft" class="links-section">
+            <h2 class="section-header">
+                <i class="fab fa-microsoft"></i>
+                Microsoft Education
+            </h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-home"></i>
+                    Microsoft Education総合
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.microsoft.com/ja-jp/education/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Microsoft Education</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">Microsoft Education日本版公式サイト</div>
+                        <a href="https://www.microsoft.com/ja-jp/education/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.microsoft.com/ja-jp/education/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.microsoft.com/ja-jp/biz/education/la-giga" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>GIGA対応 Microsoft Education</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">GIGAスクール構想対応特設サイト。導入事例と活用方法</div>
+                        <a href="https://www.microsoft.com/ja-jp/biz/education/la-giga" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.microsoft.com/.../la-giga
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    教員向けリソース・研修
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://learn.microsoft.com/ja-jp/training/educator-center/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>教師センター</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教育関係者向け総合ラーニングセンター。無料研修コース多数</div>
+                        <a href="https://learn.microsoft.com/ja-jp/training/educator-center/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> learn.microsoft.com/.../educator-center/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://learn.microsoft.com/ja-jp/training/educator-center/programs/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>教育プログラム</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">Microsoft Learn教育プログラム一覧</div>
+                        <a href="https://learn.microsoft.com/ja-jp/training/educator-center/programs/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> learn.microsoft.com/.../programs/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://learn.microsoft.com/ja-jp/training/educator-center/topics/ai-for-education" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>教育のためのAIリソース</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">AI活用教育に関するトレーニングとリソース</div>
+                        <a href="https://learn.microsoft.com/ja-jp/training/educator-center/topics/ai-for-education" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> learn.microsoft.com/.../ai-for-education
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://learn.microsoft.com/ja-jp/training/paths/ai-education/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>教育者向けAIトレーニングモジュール</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">AI教育実践のための学習パスと実践ガイド</div>
+                        <a href="https://learn.microsoft.com/ja-jp/training/paths/ai-education/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> learn.microsoft.com/.../ai-education/
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-certificate"></i>
+                    Microsoft認定プログラム
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.microsoft.com/ja-jp/biz/education/gigaschool-miee" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Microsoft認定教育イノベーター（MIEE）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">Microsoft教育分野認定プログラム。教育イノベーターの育成</div>
+                        <a href="https://www.microsoft.com/ja-jp/biz/education/gigaschool-miee" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.microsoft.com/.../gigaschool-miee
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google for Education -->
+        <section id="google" class="links-section">
+            <h2 class="section-header">
+                <i class="fab fa-google"></i>
+                Google for Education
+            </h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-home"></i>
+                    Google for Education総合
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://edu.google.com/intl/ALL_jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Google for Education</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">Google for Education日本版公式サイト</div>
+                        <a href="https://edu.google.com/intl/ALL_jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> edu.google.com/intl/ALL_jp/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://giga.withgoogle.com/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Google for Education GIGA School</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">GIGAスクール構想対応特設サイト。Chromebook活用ガイド</div>
+                        <a href="https://giga.withgoogle.com/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> giga.withgoogle.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    教員向けリソース・研修
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://edu.google.com/intl/ALL_jp/learning-center/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Teacher Center</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教育関係者向け総合ラーニングセンター。無料トレーニング</div>
+                        <a href="https://edu.google.com/intl/ALL_jp/learning-center/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> edu.google.com/.../learning-center/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://giga.withgoogle.com/classroom-resources/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>活用アイディア集</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">GIGA対応教材・リソース集。授業での具体的な活用方法</div>
+                        <a href="https://giga.withgoogle.com/classroom-resources/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> giga.withgoogle.com/classroom-resources/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://edu.exceedlms.com/student/path/1722778" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>生成AIオンライントレーニング</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">Grow with Google生成AI学習コース。無料で受講可能</div>
+                        <a href="https://edu.exceedlms.com/student/path/1722778" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> edu.exceedlms.com/student/path/1722778
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-certificate"></i>
+                    Google認定プログラム
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://edu.google.com/intl/ALL_jp/learning-center/certifications/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Google認定教育者プログラム</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">Google教育分野認定プログラム。レベル1・レベル2認定</div>
+                        <a href="https://edu.google.com/intl/ALL_jp/learning-center/certifications/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> edu.google.com/.../certifications/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://edu.google.com/for-educators/communities/geg/?modal_active=none" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Google Educator Groups（GEG）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教育者コミュニティプログラム。地域のGEG活動</div>
+                        <a href="https://edu.google.com/for-educators/communities/geg/?modal_active=none" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> edu.google.com/.../geg/
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apple Education -->
+        <section id="apple" class="links-section">
+            <h2 class="section-header">
+                <i class="fab fa-apple"></i>
+                Apple Education
+            </h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-home"></i>
+                    Apple Education総合
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.apple.com/jp/education/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Apple Education</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">Apple Education日本版公式サイト。iPadとMacの教育現場での活用</div>
+                        <a href="https://www.apple.com/jp/education/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.apple.com/jp/education/
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    教員向けリソース・研修
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.apple.com/jp/education/k12/teacher-resources/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Apple Teacher</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">Appleの教育者向け無料学習プログラム。iPadやMacの教育現場での活用スキルを学び、Apple Teacher認定を取得可能。無料のオンライン学習とバッジ取得型システム</div>
+                        <a href="https://www.apple.com/jp/education/k12/teacher-resources/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.apple.com/jp/education/k12/teacher-resources/
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 学会・研究機関 -->
+        <section id="organizations" class="links-section">
+            <h2 class="section-header">
+                <i class="fas fa-university"></i>
+                学会・研究機関
+            </h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-flask"></i>
+                    学会組織
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://jaet.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>日本教育工学協会（JAET）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">学校教育における教育工学研究。全国大会、学校情報化認定</div>
+                        <a href="https://jaet.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> jaet.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.jset.gr.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>日本教育工学会（JSET）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教育工学の学術研究。論文誌、全国大会情報</div>
+                        <a href="https://www.jset.gr.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.jset.gr.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.japet.or.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>日本教育情報化振興会（JAPET&CEC）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教育の情報化推進。ICT教育環境整備ハンドブック、調査研究</div>
+                        <a href="https://www.japet.or.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.japet.or.jp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    教職員研修・支援
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.nits.go.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>独立行政法人教職員支援機構（NITS）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">ICT活用に関する調査研究。教職員向け研修動画多数</div>
+                        <a href="https://www.nits.go.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.nits.go.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.nits.go.jp/materials/intramural/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>NITS 校内研修シリーズ</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">校内研修用の動画教材集。ICT活用、情報モラル、特別支援教育など185本以上の研修動画を無料公開。各動画は20分程度で演習シート付き</div>
+                        <a href="https://www.nits.go.jp/materials/intramural/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.nits.go.jp/materials/intramural/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.nits.go.jp/training/102/018.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>学校教育の情報化指導者養成研修（NITS）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">GIGAスクール構想を踏まえた1人1台端末環境でのICT効果的活用を促進する指導者養成研修。情報活用能力の育成、プログラミング教育、情報モラル教育など体系的に学べる</div>
+                        <a href="https://www.nits.go.jp/training/102/018.html" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.nits.go.jp/training/102/018.html
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://ictconnect21.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>ICT CONNECT 21</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">学習eポータルに関する情報。教育ICTの標準化推進</div>
+                        <a href="https://ictconnect21.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> ictconnect21.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://giga.ictconnect21.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>GIGA HUB WEB</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">ICT CONNECT 21が運営するGIGAスクール構想の総合情報サイト。全国の自治体・学校の導入事例、計画・体制情報、研修・セミナー情報、省庁の最新施策など一元的に収集可能</div>
+                        <a href="https://giga.ictconnect21.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> giga.ictconnect21.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.ict-supporters.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>一般社団法人日本ICT支援員協会</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">ICT支援員の専門団体。ICT支援員認定試験、初任者向けWeb講習会（年2回無料）、研修プログラムなどキャリア支援を総合的に実施</div>
+                        <a href="https://www.ict-supporters.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.ict-supporters.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.japet.or.jp/national-semi/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>情報教育対応教員研修全国セミナー（JAPET&CEC）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">JAPET&CECが主催する全国規模の教員研修セミナー。授業でのICT活用、情報活用能力育成、校務の情報化など多様なテーマで開催。文部科学省後援、参加費無料</div>
+                        <a href="https://www.japet.or.jp/national-semi/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.japet.or.jp/national-semi/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://giga.ictconnect21.jp/training-seminar/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>GIGA HUB WEB 研修セミナー情報検索</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">全国の教育ICT関連研修・セミナー情報を集約。校種別（小中高特別支援）、対象者別（教員・教育委員会・ICT支援員）に検索可能</div>
+                        <a href="https://giga.ictconnect21.jp/training-seminar/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> giga.ictconnect21.jp/training-seminar/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.jeipo.or.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>教育ICT政策支援機構（JEIPO）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教育ICT政策の支援。次世代の担い手育成</div>
+                        <a href="https://www.jeipo.or.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.jeipo.or.jp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 資格・認定制度 -->
+        <section id="certifications" class="links-section">
+            <h2 class="section-header">
+                <i class="fas fa-certificate"></i>
+                各種資格・認定制度
+            </h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-user-graduate"></i>
+                    教育ICT関連資格
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://jnk4.info/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>ICT支援員能力認定試験</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">一般社団法人日本教育情報化振興会認定。ICT支援員の専門資格</div>
+                        <a href="https://jnk4.info/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> jnk4.info
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.microsoft.com/ja-jp/biz/education/gigaschool-miee" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Microsoft認定教育イノベーター（MIEE）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">Microsoft Education認定プログラム</div>
+                        <a href="https://www.microsoft.com/ja-jp/biz/education/gigaschool-miee" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.microsoft.com/.../gigaschool-miee
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://edu.google.com/intl/ALL_jp/learning-center/certifications/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Google認定教育者プログラム</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">Google for Education認定プログラム</div>
+                        <a href="https://edu.google.com/intl/ALL_jp/learning-center/certifications/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> edu.google.com/.../certifications/
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-desktop"></i>
+                    情報処理技術者試験（IPA）
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www3.jitec.ipa.go.jp/JitesCbt/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>ITパスポート試験</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">IT基礎知識を証明する国家資格。ICT支援員にも推奨</div>
+                        <a href="https://www3.jitec.ipa.go.jp/JitesCbt/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www3.jitec.ipa.go.jp/JitesCbt/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.ipa.go.jp/shiken/kubun/sg.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>情報セキュリティマネジメント試験</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">情報セキュリティ管理に関する国家資格</div>
+                        <a href="https://www.ipa.go.jp/shiken/kubun/sg.html" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.ipa.go.jp/shiken/kubun/sg.html
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.ipa.go.jp/shiken/kubun/fe.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>基本情報技術者試験</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">ITエンジニアの登竜門となる国家資格</div>
+                        <a href="https://www.ipa.go.jp/shiken/kubun/fe.html" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.ipa.go.jp/shiken/kubun/fe.html
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-school"></i>
+                    学校認定制度
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://jaet.jp/nintei/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>学校情報化認定</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">日本教育工学協会（JAET）による学校認定制度</div>
+                        <a href="https://jaet.jp/nintei/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> jaet.jp/nintei/
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 都道府県・自治体 -->
+        <section id="prefectures" class="links-section">
+            <h2 class="section-header">
+                <i class="fas fa-map-marked-alt"></i>
+                都道府県・自治体ポータル
+            </h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-building-flag"></i>
+                    主要自治体のICT活用ポータル
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.kyoiku.metro.tokyo.lg.jp/pickup/seisaku/kyozai/jouhouka.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>東京都 - とうきょうの情報教育</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">プログラミング教育、情報モラル教育、ICT活用事例</div>
+                        <a href="https://www.kyoiku.metro.tokyo.lg.jp/pickup/seisaku/kyozai/jouhouka.html" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.kyoiku.metro.tokyo.lg.jp/.../jouhouka.html
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.kyoiku.metro.tokyo.lg.jp/information/press/2025/05/2025051201" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>東京都 - 全都立学校で生成AIを活用した学習が始まります！</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">都立学校における生成AI活用の取り組みとガイドライン</div>
+                        <a href="https://www.kyoiku.metro.tokyo.lg.jp/information/press/2025/05/2025051201" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.kyoiku.metro.tokyo.lg.jp/.../2025051201
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.dokyoi.pref.hokkaido.lg.jp/hk/ict/ict-link.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>北海道 - ICT活用ポータルサイト</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">小中高校・特別支援学校のICT活用情報</div>
+                        <a href="https://www.dokyoi.pref.hokkaido.lg.jp/hk/ict/ict-link.html" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.dokyoi.pref.hokkaido.lg.jp/.../ict-link.html
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.pref.oita.jp/site/kyoiku/ict-tankyu.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>大分県 - ICT活用授業&探究ライブラリ</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">県内のICT活用授業、探究学習の優良事例</div>
+                        <a href="https://www.pref.oita.jp/site/kyoiku/ict-tankyu.html" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.pref.oita.jp/site/kyoiku/ict-tankyu.html
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.pref.kumamoto.jp/soshiki/162/139656.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>熊本県 - ICT活用サイト</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">県内のICT活用事例とポータル情報</div>
+                        <a href="https://www.pref.kumamoto.jp/soshiki/162/139656.html" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.pref.kumamoto.jp/.../139656.html
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.pref.gifu.lg.jp/site/edu/359269.html" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>岐阜県 - 教育の情報化</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">岐阜県の教育情報化推進サイト</div>
+                        <a href="https://www.pref.gifu.lg.jp/site/edu/359269.html" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.pref.gifu.lg.jp/.../359269.html
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://infoedu.metro.tokyo.lg.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>東京都 - とうきょうの情報教育（新ポータル）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">東京都教育委員会のプログラミング教育、情報モラル教育、ICT利活用に関する情報発信サイト。都内の先進事例や指導資料を豊富に掲載</div>
+                        <a href="https://infoedu.metro.tokyo.lg.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> infoedu.metro.tokyo.lg.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://sites.google.com/g.nagano-c.ed.jp/nagano-tokubetsushien-ict" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>長野県 - ICT活用支援サイト（特別支援教育）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">特別支援教育におけるICT活用に特化したサイト。実践事例データベース、教材教具データベース、アプリ情報など、特別支援のICT活用に必要な情報を網羅</div>
+                        <a href="https://sites.google.com/g.nagano-c.ed.jp/nagano-tokubetsushien-ict" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> sites.google.com/.../nagano-tokubetsushien-ict
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.tochigi-edu.ed.jp/educenter/ICTPortal/example" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>栃木県 - ICT活用実践事例データベース</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">栃木県総合教育センターが提供する実践事例集。全教科、特別支援学校での実践を掲載。具体的な授業展開と使用アプリが明記</div>
+                        <a href="https://www.tochigi-edu.ed.jp/educenter/ICTPortal/example" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.tochigi-edu.ed.jp/.../example
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 特別支援教育 -->
+        <section id="special-needs" class="links-section">
+            <h2 class="section-header">
+                <i class="fas fa-hands-helping"></i>
+                特別支援教育
+            </h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-universal-access"></i>
+                    特別支援教育ICT活用
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://kyozai.nise.go.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>特別支援教育教材ポータルサイト（NISE）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">国立特別支援教育総合研究所が運営。特別支援教育での教材・支援機器、実践事例、指導方法を網羅的に掲載。障害種別の教材データベースとICT機器の活用事例が豊富</div>
+                        <a href="https://kyozai.nise.go.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> kyozai.nise.go.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.ictschool.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>特別支援 × ICT（東京大学先端研）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">東京大学先端科学技術研究センターによる特別支援教育分野のICT活用実践研究サイト。多様な困りごとに対応するツールやアプリを紹介。キーワード検索で実践例を探せる</div>
+                        <a href="https://www.ictschool.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.ictschool.jp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 情報セキュリティ・情報モラル -->
+        <section id="security" class="links-section">
+            <h2 class="section-header">
+                <i class="fas fa-shield-virus"></i>
+                情報セキュリティ・情報モラル
+            </h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-lock"></i>
+                    情報セキュリティ教材
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.ipa.go.jp/security/sec-tools/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>IPA 情報セキュリティ教材・ツール</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">情報処理推進機構が情報セキュリティに関する教材・ツールを無償提供。インターネット安全教室教材、一般初心者向けスライド教材など、学校での情報モラル教育に活用可能</div>
+                        <a href="https://www.ipa.go.jp/security/sec-tools/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.ipa.go.jp/security/sec-tools/
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 学習プラットフォーム -->
+        <section id="platforms" class="links-section">
+            <h2 class="section-header">
+                <i class="fas fa-network-wired"></i>
+                学習プラットフォーム・ツール
+            </h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-laptop-code"></i>
+                    学習支援プラットフォーム
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.eboard.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>eboard（イーボード）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">NPO法人運営の無料学習動画プラットフォーム。小中高の全科目対応</div>
+                        <a href="https://www.eboard.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.eboard.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://studysapuri.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>スタディサプリ</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">リクルート提供のオンライン学習サービス</div>
+                        <a href="https://studysapuri.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> studysapuri.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://classi.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Classi（クラッシー）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">学校教育プラットフォーム。学習記録・コミュニケーション</div>
+                        <a href="https://classi.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> classi.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://n.loilo.tv/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>ロイロノート・スクール</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">シンキングツール搭載の授業支援アプリ</div>
+                        <a href="https://n.loilo.tv/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> n.loilo.tv
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.kokugo.ne.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>デジタル教科書・教材</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">光村図書のデジタル教科書プラットフォーム</div>
+                        <a href="https://www.kokugo.ne.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.kokugo.ne.jp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-code"></i>
+                    プログラミング教育ツール
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://scratch.mit.edu/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Scratch（スクラッチ）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">MIT開発のビジュアルプログラミング言語。無料で利用可能</div>
+                        <a href="https://scratch.mit.edu/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> scratch.mit.edu
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://microbit.org/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>micro:bit（マイクロビット）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">小型プログラマブルコンピューター。STEAM教育に最適</div>
+                        <a href="https://microbit.org/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> microbit.org
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://life-is-tech.com/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Life is Tech!（ライフイズテック）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">中高生向けプログラミング教育サービス</div>
+                        <a href="https://life-is-tech.com/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> life-is-tech.com
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.viscuit.com/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Viscuit（ビスケット）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">幼児から使える日本発のビジュアルプログラミング言語</div>
+                        <a href="https://www.viscuit.com/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.viscuit.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- メディア・情報サイト -->
+        <section id="media" class="links-section">
+            <h2 class="section-header">
+                <i class="fas fa-newspaper"></i>
+                メディア・情報サイト
+            </h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-rss"></i>
+                    教育ICTニュースサイト
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://edtechzine.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>EdTechZine（エドテックジン）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教育ICT・EdTech専門ニュースサイト。最新事例とトレンド</div>
+                        <a href="https://edtechzine.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> edtechzine.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.kyobun.co.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>教育新聞</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教育専門ニュースサイト。政策・現場の最新情報</div>
+                        <a href="https://www.kyobun.co.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.kyobun.co.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://project.nikkeibp.co.jp/pc/atcl/19/06/21/00003/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>教育とICT Online</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">日経BP発行の教育ICT情報サイト</div>
+                        <a href="https://project.nikkeibp.co.jp/pc/atcl/19/06/21/00003/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> project.nikkeibp.co.jp/.../00003/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://ict-enews.net/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>ICT教育ニュース</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教育ICT専門ニュースサイト。導入事例・製品情報</div>
+                        <a href="https://ict-enews.net/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> ict-enews.net
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://reseed.resemom.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>リシード（ReSeed）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教育ICT情報サイト。教育者向け最新ニュースと事例</div>
+                        <a href="https://reseed.resemom.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> reseed.resemom.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.kknews.co.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>教育家庭新聞（教育マルチメディア）</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教育専門紙。ICT教育、GIGAスクール構想、教育委員会向けセミナー情報など、教育ICTの最新動向を継続的に報道。週2回発行、無料メールマガジン</div>
+                        <a href="https://www.kknews.co.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.kknews.co.jp
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://edu.watch.impress.co.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>こどもとIT</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">インプレスが運営する教育ICTメディア。小中高大学生と教員向けに、ICT活用の実践例、製品レビュー、イベントレポートを発信。実践者インタビューが充実</div>
+                        <a href="https://edu.watch.impress.co.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> edu.watch.impress.co.jp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 授業共有・専門サイト -->
+        <section id="community" class="links-section">
+            <h2 class="section-header">
+                <i class="fas fa-users"></i>
+                授業共有・コミュニティ・専門サイト
+            </h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-share-alt"></i>
+                    授業実践共有プラットフォーム
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.h-b.co.jp/solutions/smilehub/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>SmileHub</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">光文書院が提供する授業実践事例の共有プラットフォーム。同じICT環境を使う教員同士でノウハウを共有し、業務改善や働き方改革につなげる。実践事例の投稿・閲覧とコミュニティ機能</div>
+                        <a href="https://www.h-b.co.jp/solutions/smilehub/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.h-b.co.jp/solutions/smilehub/
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://senseinote.com/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>SENSEIノート</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教員向けの実践共有コミュニティサイト。ICT活用、授業アイデア、学級経営など、教員同士が情報交換できる場を提供。質問・相談機能とトピック別のカテゴリー</div>
+                        <a href="https://senseinote.com/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> senseinote.com
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://kyouzai.jp/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>授業・校務活用素材ポータル</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">会員登録不要で利用できる教材・指導案データサイト。すぐに使える素材を手軽に活用できる。素材・テンプレートが豊富でカテゴリー別検索可能</div>
+                        <a href="https://kyouzai.jp/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> kyouzai.jp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">
+                    <i class="fas fa-lightbulb"></i>
+                    専門サイト・TIPS集
+                </h3>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://sites.google.com/g.torikyo.ed.jp/gigatips" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>GIGATIPS - ICT教育指導員の小部屋</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">鳥取県のICT教育指導員が運営する実践的なTIPS集。学校現場での困りごと対応、基本的な考え方、ツール紹介など、現場目線の情報が充実。トラブルシューティング情報と実務に直結するTIPS</div>
+                        <a href="https://sites.google.com/g.torikyo.ed.jp/gigatips" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> sites.google.com/.../gigatips
+                        </a>
+                    </div>
+
+                    <div class="link-card">
+                        <div class="link-card-title">
+                            <a href="https://www.manabinoba.com/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>学びの場.com</span>
+                            </a>
+                        </div>
+                        <div class="link-card-desc">教育情報総合サイト。ICT支援員の解説記事、教育トレンド、実践事例など幅広い教育情報を提供。教育ウォッチコーナーとインタビュー記事充実</div>
+                        <a href="https://www.manabinoba.com/" class="link-card-url" target="_blank">
+                            <i class="fas fa-link"></i> www.manabinoba.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="back-to-top">
+            <a href="#" id="backToTopBtn"><i class="fas fa-chevron-up"></i></a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年11月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // リンク検索機能
+        document.getElementById('searchBox').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const linkCards = document.querySelectorAll('.link-card');
+            const sections = document.querySelectorAll('.links-section');
+
+            linkCards.forEach(card => {
+                const title = card.querySelector('.link-card-title').textContent.toLowerCase();
+                const desc = card.querySelector('.link-card-desc').textContent.toLowerCase();
+                const url = card.querySelector('.link-card-url').textContent.toLowerCase();
+
+                if (title.includes(searchTerm) || desc.includes(searchTerm) || url.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // セクションの表示/非表示
+            sections.forEach(section => {
+                const visibleCards = section.querySelectorAll('.link-card:not([style*="display: none"])');
+                if (visibleCards.length === 0) {
+                    section.style.display = 'none';
+                } else {
+                    section.style.display = 'block';
+                }
+            });
+        });
+
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
