@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研修・育成 - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="教職員のICT研修計画と実施方法を解説。レベル別研修プログラム、効果的な研修手法、研修資料の作成方法、効果測定とフォローアップまで、ICT支援員が知るべき研修・育成の全てを網羅。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html" class="active"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-chalkboard-teacher"></i> 研修・育成</h1>
+            <p>教職員のICT活用力を高める研修計画と実施方法</p>
+        </div>
+        
+        <section class="intro">
+            <p>ICT支援員の重要な役割の一つが、<strong>教職員のICT活用力を高めるための研修・育成</strong>です。効果的な研修により、教職員が自信を持ってICTを活用できるようになり、授業の質が向上します。</p>
+            
+            <div class="critical-box">
+                <p><strong>文部科学省「教員のICT活用指導力」調査（令和4年度）</strong></p>
+                <ul>
+                    <li>「授業にICTを活用して指導する能力」：72.9%（前年度69.8%）</li>
+                    <li>「児童生徒のICT活用を指導する能力」：75.0%（前年度71.3%）</li>
+                    <li>まだ約25～30%の教員がICT活用に不安を感じている</li>
+                </ul>
+            </div>
+            
+            <div class="checklist">
+                <h4>📋 このページで学べること</h4>
+                <ul>
+                    <li>効果的な研修計画の立て方</li>
+                    <li>レベル別研修プログラムの設計</li>
+                    <li>様々な研修手法（集合研修、OJT、eラーニング）</li>
+                    <li>研修資料の作成方法</li>
+                    <li>効果測定とフォローアップ</li>
+                    <li>学年別・教科別研修のポイント</li>
+                    <li>外部研修の活用方法</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 1. 研修計画の立て方 -->
+        <div class="category-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <h2>1. 研修計画の立て方</h2>
+        </div>
+
+        <section>
+            <h3>1.1 現状把握とニーズ分析</h3>
+            <div class="content-box">
+                <h4>研修計画の基本ステップ</h4>
+                
+                <div class="incident-step">
+                    <h5>ステップ1：現状のスキルレベル把握</h5>
+                    <ul>
+                        <li><strong>アンケート調査</strong>：ICT活用の頻度、得意・苦手分野</li>
+                        <li><strong>ヒアリング</strong>：学年主任や管理職から情報収集</li>
+                        <li><strong>授業観察</strong>：実際のICT活用状況を確認</li>
+                        <li><strong>チェックリスト</strong>：文部科学省「教員のICT活用指導力チェックリスト」を活用</li>
+                    </ul>
+                </div>
+
+                <div class="incident-step">
+                    <h5>ステップ2：課題の抽出</h5>
+                    <ul>
+                        <li>操作スキルの不足</li>
+                        <li>授業での活用方法が分からない</li>
+                        <li>トラブル対応に不安がある</li>
+                        <li>時間がなくて学べない</li>
+                    </ul>
+                </div>
+
+                <div class="incident-step">
+                    <h5>ステップ3：研修目標の設定</h5>
+                    <ul>
+                        <li><strong>短期目標（3ヶ月）</strong>：基本操作の習得</li>
+                        <li><strong>中期目標（6ヶ月）</strong>：授業での活用開始</li>
+                        <li><strong>長期目標（1年）</strong>：自律的なICT活用</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <p><strong>SMARTな目標設定</strong></p>
+                    <ul>
+                        <li><strong>S</strong>pecific（具体的）：「Google Classroomで課題配信ができる」</li>
+                        <li><strong>M</strong>easurable（測定可能）：「全教員の80%が実施」</li>
+                        <li><strong>A</strong>chievable（達成可能）：現実的な目標</li>
+                        <li><strong>R</strong>elevant（関連性）：学校の教育目標と整合</li>
+                        <li><strong>T</strong>ime-bound（期限）：「6月末まで」</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>1.2 年間研修計画の作成</h3>
+            <div class="content-box">
+                <h4>年間スケジュール例（小学校）</h4>
+                <table>
+                    <tr>
+                        <th>時期</th>
+                        <th>研修内容</th>
+                        <th>形式</th>
+                        <th>対象</th>
+                    </tr>
+                    <tr>
+                        <td>4月</td>
+                        <td>新年度システム操作（基本）</td>
+                        <td>集合研修</td>
+                        <td>全教職員</td>
+                    </tr>
+                    <tr>
+                        <td>5月</td>
+                        <td>Google Classroom基礎</td>
+                        <td>集合研修</td>
+                        <td>全教職員</td>
+                    </tr>
+                    <tr>
+                        <td>6月</td>
+                        <td>学年別実践研修</td>
+                        <td>グループ研修</td>
+                        <td>学年別</td>
+                    </tr>
+                    <tr>
+                        <td>7月</td>
+                        <td>夏季集中研修（応用）</td>
+                        <td>集合研修</td>
+                        <td>希望者</td>
+                    </tr>
+                    <tr>
+                        <td>9月</td>
+                        <td>2学期活用事例共有</td>
+                        <td>校内研修</td>
+                        <td>全教職員</td>
+                    </tr>
+                    <tr>
+                        <td>10月</td>
+                        <td>プログラミング教育研修</td>
+                        <td>集合研修</td>
+                        <td>該当学年</td>
+                    </tr>
+                    <tr>
+                        <td>11月</td>
+                        <td>評価へのICT活用</td>
+                        <td>集合研修</td>
+                        <td>全教職員</td>
+                    </tr>
+                    <tr>
+                        <td>12月</td>
+                        <td>トラブル対応とQ&A</td>
+                        <td>集合研修</td>
+                        <td>全教職員</td>
+                    </tr>
+                    <tr>
+                        <td>1月</td>
+                        <td>教科別活用研修</td>
+                        <td>グループ研修</td>
+                        <td>教科別</td>
+                    </tr>
+                    <tr>
+                        <td>2月</td>
+                        <td>データ活用とまとめ</td>
+                        <td>集合研修</td>
+                        <td>全教職員</td>
+                    </tr>
+                    <tr>
+                        <td>3月</td>
+                        <td>次年度に向けて</td>
+                        <td>集合研修</td>
+                        <td>全教職員</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>1.3 研修計画のポイント</h3>
+            <div class="content-box">
+                <h4>効果的な研修計画の要素</h4>
+                <ul>
+                    <li><strong>段階的な内容</strong>：基礎→応用→実践の順序</li>
+                    <li><strong>繰り返し学習</strong>：同じ内容を異なる形式で複数回</li>
+                    <li><strong>実践との連動</strong>：すぐに授業で使える内容</li>
+                    <li><strong>個別対応</strong>：スキルレベルに応じた支援</li>
+                    <li><strong>時間的配慮</strong>：教職員の負担にならない時間設定</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>避けるべき研修計画</strong></p>
+                    <ul>
+                        <li>難易度が高すぎる内容から始める</li>
+                        <li>長時間の一方的な講義</li>
+                        <li>実践と乖離した理論中心の内容</li>
+                        <li>フォローアップがない単発の研修</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. レベル別研修プログラム -->
+        <div class="category-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+            <h2>2. レベル別研修プログラム</h2>
+        </div>
+
+        <section>
+            <h3>2.1 初級レベル（ICT初心者向け）</h3>
+            <div class="content-box">
+                <h4>対象者</h4>
+                <ul>
+                    <li>ICTに不慣れな教員</li>
+                    <li>基本操作に不安がある教員</li>
+                    <li>新任教員</li>
+                </ul>
+
+                <h4>研修内容</h4>
+                <table>
+                    <tr>
+                        <th>テーマ</th>
+                        <th>内容</th>
+                        <th>時間</th>
+                    </tr>
+                    <tr>
+                        <td><strong>端末の基本操作</strong></td>
+                        <td>電源ON/OFF、ログイン、基本設定</td>
+                        <td>30分</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ファイル操作</strong></td>
+                        <td>保存、フォルダ管理、検索</td>
+                        <td>30分</td>
+                    </tr>
+                    <tr>
+                        <td><strong>インターネット活用</strong></td>
+                        <td>検索、Webサイト閲覧、ブックマーク</td>
+                        <td>30分</td>
+                    </tr>
+                    <tr>
+                        <td><strong>メール・カレンダー</strong></td>
+                        <td>送受信、予定管理</td>
+                        <td>30分</td>
+                    </tr>
+                    <tr>
+                        <td><strong>デジタル教材の利用</strong></td>
+                        <td>デジタル教科書、NHK for School等</td>
+                        <td>30分</td>
+                    </tr>
+                    <tr>
+                        <td><strong>プロジェクター投影</strong></td>
+                        <td>接続方法、画面共有</td>
+                        <td>30分</td>
+                    </tr>
+                </table>
+
+                <div class="example-good">
+                    <strong>初級研修のポイント</strong>
+                    <ul>
+                        <li>ゆっくりと丁寧に進める</li>
+                        <li>必ず実機を使った実習を含める</li>
+                        <li>質問しやすい雰囲気づくり</li>
+                        <li>「できた！」という成功体験を提供</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>2.2 中級レベル（基本操作習得者向け）</h3>
+            <div class="content-box">
+                <h4>対象者</h4>
+                <ul>
+                    <li>基本操作はできる教員</li>
+                    <li>授業での活用を始めたい教員</li>
+                    <li>効率的な使い方を学びたい教員</li>
+                </ul>
+
+                <h4>研修内容</h4>
+                <table>
+                    <tr>
+                        <th>テーマ</th>
+                        <th>内容</th>
+                        <th>時間</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Classroom</strong></td>
+                        <td>クラス作成、課題配信、採点</td>
+                        <td>60分</td>
+                    </tr>
+                    <tr>
+                        <td><strong>授業での活用</strong></td>
+                        <td>プレゼンテーション、動画活用</td>
+                        <td>60分</td>
+                    </tr>
+                    <tr>
+                        <td><strong>共同編集</strong></td>
+                        <td>Google Docs/Slides共同作業</td>
+                        <td>45分</td>
+                    </tr>
+                    <tr>
+                        <td><strong>オンライン授業</strong></td>
+                        <td>Google Meet/Zoomの使い方</td>
+                        <td>60分</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Formsアンケート</strong></td>
+                        <td>アンケート作成、集計</td>
+                        <td>45分</td>
+                    </tr>
+                    <tr>
+                        <td><strong>情報モラル指導</strong></td>
+                        <td>SNS、著作権、個人情報</td>
+                        <td>45分</td>
+                    </tr>
+                </table>
+
+                <div class="example-good">
+                    <strong>中級研修のポイント</strong>
+                    <ul>
+                        <li>実際の授業場面を想定した実習</li>
+                        <li>教科別の活用事例を紹介</li>
+                        <li>グループワークで相互学習</li>
+                        <li>「明日から使える」内容</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>2.3 上級レベル（活用推進者向け）</h3>
+            <div class="content-box">
+                <h4>対象者</h4>
+                <ul>
+                    <li>ICT活用に積極的な教員</li>
+                    <li>校内のICT推進リーダー</li>
+                    <li>他の教員をサポートできる教員</li>
+                </ul>
+
+                <h4>研修内容</h4>
+                <table>
+                    <tr>
+                        <th>テーマ</th>
+                        <th>内容</th>
+                        <th>時間</th>
+                    </tr>
+                    <tr>
+                        <td><strong>高度な活用方法</strong></td>
+                        <td>拡張機能、アドオン、連携ツール</td>
+                        <td>60分</td>
+                    </tr>
+                    <tr>
+                        <td><strong>プログラミング教育</strong></td>
+                        <td>Scratch、micro:bit等の指導法</td>
+                        <td>90分</td>
+                    </tr>
+                    <tr>
+                        <td><strong>データ活用</strong></td>
+                        <td>学習ログ分析、可視化</td>
+                        <td>60分</td>
+                    </tr>
+                    <tr>
+                        <td><strong>協働学習デザイン</strong></td>
+                        <td>ICTを活用した授業設計</td>
+                        <td>90分</td>
+                    </tr>
+                    <tr>
+                        <td><strong>校内研修講師養成</strong></td>
+                        <td>研修の進め方、資料作成</td>
+                        <td>60分</td>
+                    </tr>
+                    <tr>
+                        <td><strong>最新技術動向</strong></td>
+                        <td>AI、VR/AR等の教育活用</td>
+                        <td>60分</td>
+                    </tr>
+                </table>
+
+                <div class="tip-box">
+                    <p><strong>上級者の役割</strong></p>
+                    <p>上級レベルの教員は、校内のICT活用推進のキーパーソンです。ICT支援員と連携して、他の教員へのサポート役を担ってもらいましょう。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 研修手法 -->
+        <div class="category-header" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+            <h2>3. 研修手法</h2>
+        </div>
+
+        <section>
+            <h3>3.1 集合研修</h3>
+            <div class="content-box">
+                <h4>メリット</h4>
+                <ul>
+                    <li>一度に多くの教職員に伝えられる</li>
+                    <li>質疑応答で疑問を解消できる</li>
+                    <li>教職員同士の交流・情報交換の場</li>
+                </ul>
+
+                <h4>効果的な進め方</h4>
+                <div class="incident-step">
+                    <h5>1. 導入（10分）</h5>
+                    <ul>
+                        <li>研修の目的と流れの説明</li>
+                        <li>アイスブレイク</li>
+                        <li>事前アンケート結果の共有</li>
+                    </ul>
+                </div>
+
+                <div class="incident-step">
+                    <h5>2. 講義（20分）</h5>
+                    <ul>
+                        <li>理論や背景の説明（最小限に）</li>
+                        <li>実際の活用事例の紹介</li>
+                        <li>デモンストレーション</li>
+                    </ul>
+                </div>
+
+                <div class="incident-step">
+                    <h5>3. 実習（40分）</h5>
+                    <ul>
+                        <li>ハンズオン形式で実際に操作</li>
+                        <li>段階的なタスク設定</li>
+                        <li>個別サポート</li>
+                    </ul>
+                </div>
+
+                <div class="incident-step">
+                    <h5>4. まとめ・質疑応答（20分）</h5>
+                    <ul>
+                        <li>重要ポイントの復習</li>
+                        <li>Q&Aセッション</li>
+                        <li>次回の予告</li>
+                        <li>アンケート記入</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <p><strong>集合研修の黄金比率</strong></p>
+                    <p>講義：実習 = 3：7 が理想的です。「聞く」よりも「やってみる」時間を多く取りましょう。</p>
+                </div>
+            </div>
+
+            <h3>3.2 OJT（On-the-Job Training）</h3>
+            <div class="content-box">
+                <h4>OJTとは</h4>
+                <p>実際の業務や授業の中で、個別に指導・支援する方法です。</p>
+
+                <h4>効果的なOJTの進め方</h4>
+                <table>
+                    <tr>
+                        <th>段階</th>
+                        <th>内容</th>
+                        <th>ICT支援員の役割</th>
+                    </tr>
+                    <tr>
+                        <td><strong>やってみせる</strong></td>
+                        <td>実際の操作を見せる</td>
+                        <td>モデルを示す、ポイントを説明</td>
+                    </tr>
+                    <tr>
+                        <td><strong>説明する</strong></td>
+                        <td>手順や理由を解説</td>
+                        <td>なぜその操作が必要か説明</td>
+                    </tr>
+                    <tr>
+                        <td><strong>やらせてみる</strong></td>
+                        <td>教員に実際にやってもらう</td>
+                        <td>横で見守り、必要に応じてサポート</td>
+                    </tr>
+                    <tr>
+                        <td><strong>フィードバック</strong></td>
+                        <td>良かった点・改善点を伝える</td>
+                        <td>具体的な助言、励まし</td>
+                    </tr>
+                </table>
+
+                <h4>OJTの場面例</h4>
+                <ul>
+                    <li><strong>授業中の支援</strong>：授業でICTを使う際にTT（ティーム・ティーチング）</li>
+                    <li><strong>授業準備の支援</strong>：デジタル教材作成を一緒に行う</li>
+                    <li><strong>個別相談</strong>：空き時間に個別質問に対応</li>
+                    <li><strong>トラブル対応</strong>：トラブル時に一緒に原因究明</li>
+                </ul>
+
+                <div class="example-good">
+                    <strong>OJTの成功事例</strong><br>
+                    A先生は授業でプレゼンテーションを使いたいが、操作に不安がありました。ICT支援員が授業前日に一緒に資料を作成し、当日も教室でサポート。無事に授業が成功し、A先生は次の授業でも自信を持って使えるようになりました。
+                </div>
+            </div>
+
+            <h3>3.3 eラーニング</h3>
+            <div class="content-box">
+                <h4>eラーニングのメリット</h4>
+                <ul>
+                    <li><strong>時間の柔軟性</strong>：好きな時間に学習できる</li>
+                    <li><strong>場所を選ばない</strong>：自宅でも学習可能</li>
+                    <li><strong>繰り返し学習</strong>：何度でも見返せる</li>
+                    <li><strong>個人のペース</strong>：自分のペースで進められる</li>
+                </ul>
+
+                <h4>eラーニング教材の種類</h4>
+                <table>
+                    <tr>
+                        <th>種類</th>
+                        <th>内容</th>
+                        <th>活用例</th>
+                    </tr>
+                    <tr>
+                        <td><strong>動画教材</strong></td>
+                        <td>操作手順を録画した動画</td>
+                        <td>YouTubeチャンネル、Googleドライブ共有</td>
+                    </tr>
+                    <tr>
+                        <td><strong>マニュアル</strong></td>
+                        <td>PDF、Webページ形式の手順書</td>
+                        <td>校内ポータル、Google Sites</td>
+                    </tr>
+                    <tr>
+                        <td><strong>クイズ・テスト</strong></td>
+                        <td>理解度チェック</td>
+                        <td>Google Forms</td>
+                    </tr>
+                    <tr>
+                        <td><strong>外部コンテンツ</strong></td>
+                        <td>教育委員会、企業提供の教材</td>
+                        <td>文部科学省「StuDX Style」等</td>
+                    </tr>
+                </table>
+
+                <div class="tip-box">
+                    <p><strong>効果的な動画教材の作り方</strong></p>
+                    <ul>
+                        <li>1本5～10分以内に収める</li>
+                        <li>テーマを絞る（1つの操作＝1本の動画）</li>
+                        <li>画面録画 + ナレーション</li>
+                        <li>目次・チャプターを入れる</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>3.4 ピアラーニング（相互学習）</h3>
+            <div class="content-box">
+                <h4>ピアラーニングとは</h4>
+                <p>教職員同士が教え合い、学び合う方法です。</p>
+
+                <h4>実施方法</h4>
+                <ul>
+                    <li><strong>実践報告会</strong>：ICT活用事例を共有</li>
+                    <li><strong>授業公開</strong>：ICT活用授業を見学</li>
+                    <li><strong>ペア学習</strong>：2人1組で互いに教え合う</li>
+                    <li><strong>グループ研修</strong>：学年・教科ごとに研修</li>
+                    <li><strong>オンラインコミュニティ</strong>：チャットで情報交換</li>
+                </ul>
+
+                <div class="example-good">
+                    <strong>ピアラーニングの効果</strong>
+                    <ul>
+                        <li>教える側も学びが深まる</li>
+                        <li>同僚からのアドバイスは受け入れやすい</li>
+                        <li>学校全体の雰囲気が良くなる</li>
+                        <li>ICT支援員の負担軽減</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 研修資料の作成方法 -->
+        <div class="category-header" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+            <h2>4. 研修資料の作成方法</h2>
+        </div>
+
+        <section>
+            <h3>4.1 分かりやすい資料のポイント</h3>
+            <div class="content-box">
+                <h4>資料作成の7原則</h4>
+                <table>
+                    <tr>
+                        <th>原則</th>
+                        <th>内容</th>
+                        <th>具体例</th>
+                    </tr>
+                    <tr>
+                        <td><strong>1. シンプル</strong></td>
+                        <td>1ページ1テーマ</td>
+                        <td>詰め込みすぎない、余白を確保</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. ビジュアル</strong></td>
+                        <td>図・画像を活用</td>
+                        <td>スクリーンショット、矢印、枠線</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. 段階的</strong></td>
+                        <td>ステップバイステップ</td>
+                        <td>①→②→③と番号を振る</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. 具体的</strong></td>
+                        <td>実際の画面で説明</td>
+                        <td>「設定を開く」→「設定ボタン（⚙）をクリック」</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5. 統一</strong></td>
+                        <td>書式・用語を統一</td>
+                        <td>フォント、色使い、用語の統一</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6. 強調</strong></td>
+                        <td>重要箇所を目立たせる</td>
+                        <td>色、太字、マーカー、枠線</td>
+                    </tr>
+                    <tr>
+                        <td><strong>7. 補足</strong></td>
+                        <td>注意点やヒントを追加</td>
+                        <td>「ポイント」「注意」のボックス</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>4.2 資料の種類と用途</h3>
+            <div class="content-box">
+                <h4>1. プレゼンテーション資料（投影用）</h4>
+                <ul>
+                    <li><strong>用途</strong>：集合研修での説明</li>
+                    <li><strong>ツール</strong>：Google Slides、PowerPoint</li>
+                    <li><strong>ポイント</strong>：
+                        <ul>
+                            <li>文字は大きく（24pt以上）</li>
+                            <li>箇条書きで簡潔に</li>
+                            <li>アニメーションは最小限に</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>2. ハンドアウト（配布用）</h4>
+                <ul>
+                    <li><strong>用途</strong>：研修後の復習、個別学習</li>
+                    <li><strong>ツール</strong>：Google Docs、Word、PDF</li>
+                    <li><strong>ポイント</strong>：
+                        <ul>
+                            <li>詳細な手順を記載</li>
+                            <li>スクリーンショットを多用</li>
+                            <li>メモ欄を設ける</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>3. クイックリファレンス（早見表）</h4>
+                <ul>
+                    <li><strong>用途</strong>：日常的な参照</li>
+                    <li><strong>ツール</strong>：A4 1枚、両面</li>
+                    <li><strong>ポイント</strong>：
+                        <ul>
+                            <li>よく使う操作だけを厳選</li>
+                            <li>カテゴリ別に整理</li>
+                            <li>デスクに貼れるサイズ</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>4. 動画マニュアル</h4>
+                <ul>
+                    <li><strong>用途</strong>：eラーニング、復習</li>
+                    <li><strong>ツール</strong>：画面録画（OBS Studio、Loom等）</li>
+                    <li><strong>ポイント</strong>：
+                        <ul>
+                            <li>実際の操作を録画</li>
+                            <li>ナレーションで説明</li>
+                            <li>5～10分以内に収める</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>4.3 資料作成のツール</h3>
+            <div class="content-box">
+                <table>
+                    <tr>
+                        <th>ツール</th>
+                        <th>用途</th>
+                        <th>特徴</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Slides</strong></td>
+                        <td>プレゼン資料</td>
+                        <td>共同編集可、クラウド保存</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Docs</strong></td>
+                        <td>ハンドアウト</td>
+                        <td>テキスト中心、印刷しやすい</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Canva</strong></td>
+                        <td>デザイン資料</td>
+                        <td>テンプレート豊富、視覚的</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Snagit / Screenpresso</strong></td>
+                        <td>スクリーンショット</td>
+                        <td>矢印・注釈追加が簡単</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OBS Studio / Loom</strong></td>
+                        <td>画面録画</td>
+                        <td>無料で高品質、編集機能</td>
+                    </tr>
+                </table>
+
+                <div class="tip-box">
+                    <p><strong>資料のバージョン管理</strong></p>
+                    <p>研修資料は定期的に更新が必要です。ファイル名に日付を入れる（例：「Classroom研修_20251206.pdf」）か、Googleドライブのバージョン履歴機能を活用しましょう。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 効果測定とフォローアップ -->
+        <div class="category-header" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+            <h2>5. 効果測定とフォローアップ</h2>
+        </div>
+
+        <section>
+            <h3>5.1 効果測定の方法</h3>
+            <div class="content-box">
+                <h4>カークパトリックの4段階評価モデル</h4>
+                <table>
+                    <tr>
+                        <th>レベル</th>
+                        <th>評価項目</th>
+                        <th>測定方法</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Level 1: 反応</strong></td>
+                        <td>研修への満足度</td>
+                        <td>研修後アンケート</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Level 2: 学習</strong></td>
+                        <td>知識・スキルの習得</td>
+                        <td>テスト、実技確認</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Level 3: 行動</strong></td>
+                        <td>実際の行動変容</td>
+                        <td>授業観察、利用状況調査</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Level 4: 結果</strong></td>
+                        <td>組織への貢献</td>
+                        <td>業務効率化、生徒の学力向上</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>5.2 研修後アンケートの設計</h3>
+            <div class="content-box">
+                <h4>効果的なアンケート項目</h4>
+                
+                <div class="content-box">
+                    <h5>1. 満足度（5段階評価）</h5>
+                    <ul>
+                        <li>研修内容は分かりやすかったか</li>
+                        <li>時間配分は適切だったか</li>
+                        <li>資料は役立ちそうか</li>
+                        <li>総合的な満足度</li>
+                    </ul>
+                </div>
+
+                <div class="content-box">
+                    <h5>2. 理解度（自己評価）</h5>
+                    <ul>
+                        <li>研修内容を理解できたか</li>
+                        <li>実際に使えそうか</li>
+                        <li>不明な点はないか</li>
+                    </ul>
+                </div>
+
+                <div class="content-box">
+                    <h5>3. 自由記述</h5>
+                    <ul>
+                        <li>良かった点</li>
+                        <li>改善してほしい点</li>
+                        <li>今後学びたい内容</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <p><strong>アンケートのタイミング</strong></p>
+                    <ul>
+                        <li><strong>直後</strong>：研修終了直後（満足度、理解度）</li>
+                        <li><strong>1週間後</strong>：実践状況の確認</li>
+                        <li><strong>1ヶ月後</strong>：定着度の確認</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>5.3 フォローアップの重要性</h3>
+            <div class="content-box">
+                <p>研修は「やって終わり」ではありません。<strong>継続的なフォローアップ</strong>が効果を左右します。</p>
+
+                <h4>効果的なフォローアップ方法</h4>
+                <table>
+                    <tr>
+                        <th>方法</th>
+                        <th>タイミング</th>
+                        <th>内容</th>
+                    </tr>
+                    <tr>
+                        <td><strong>個別サポート</strong></td>
+                        <td>随時</td>
+                        <td>質問対応、授業支援</td>
+                    </tr>
+                    <tr>
+                        <td><strong>実践報告会</strong></td>
+                        <td>1ヶ月後</td>
+                        <td>活用事例の共有</td>
+                    </tr>
+                    <tr>
+                        <td><strong>リマインドメール</strong></td>
+                        <td>週1回</td>
+                        <td>Tips、FAQ、励まし</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ミニ研修</strong></td>
+                        <td>2週間後</td>
+                        <td>復習と応用</td>
+                    </tr>
+                    <tr>
+                        <td><strong>オフィスアワー</strong></td>
+                        <td>定期的</td>
+                        <td>質問受付時間の設定</td>
+                    </tr>
+                </table>
+
+                <div class="example-good">
+                    <strong>フォローアップの成功事例</strong><br>
+                    B中学校では、研修後に「ICT質問タイム」を毎週水曜日の放課後に設定。気軽に質問できる雰囲気を作ったことで、ICT活用率が3ヶ月で2倍に増加しました。
+                </div>
+            </div>
+
+            <h3>5.4 継続的な改善</h3>
+            <div class="content-box">
+                <h4>PDCAサイクルの活用</h4>
+                
+                <div class="incident-step">
+                    <h5>Plan（計画）</h5>
+                    <ul>
+                        <li>前回のアンケート結果を分析</li>
+                        <li>課題を洗い出し</li>
+                        <li>改善案を立案</li>
+                    </ul>
+                </div>
+
+                <div class="incident-step">
+                    <h5>Do（実行）</h5>
+                    <ul>
+                        <li>改善した内容で研修実施</li>
+                        <li>新しい手法を試す</li>
+                    </ul>
+                </div>
+
+                <div class="incident-step">
+                    <h5>Check（評価）</h5>
+                    <ul>
+                        <li>アンケート実施</li>
+                        <li>効果測定</li>
+                        <li>課題の抽出</li>
+                    </ul>
+                </div>
+
+                <div class="incident-step">
+                    <h5>Act（改善）</h5>
+                    <ul>
+                        <li>良かった点は継続</li>
+                        <li>課題は次回改善</li>
+                        <li>ノウハウの蓄積</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 学年別・教科別研修 -->
+        <div class="category-header" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);">
+            <h2>6. 学年別・教科別研修</h2>
+        </div>
+
+        <section>
+            <h3>6.1 学年別研修のポイント</h3>
+            <div class="content-box">
+                <table>
+                    <tr>
+                        <th>学年</th>
+                        <th>重点項目</th>
+                        <th>研修内容例</th>
+                    </tr>
+                    <tr>
+                        <td><strong>低学年（1～2年）</strong></td>
+                        <td>基本操作の指導</td>
+                        <td>タブレットの使い方、写真撮影、お絵描きアプリ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>中学年（3～4年）</strong></td>
+                        <td>調べ学習・まとめ</td>
+                        <td>検索方法、プレゼン作成、情報モラル</td>
+                    </tr>
+                    <tr>
+                        <td><strong>高学年（5～6年）</strong></td>
+                        <td>協働学習・発信</td>
+                        <td>共同編集、プログラミング、情報発信</td>
+                    </tr>
+                    <tr>
+                        <td><strong>中学校</strong></td>
+                        <td>教科横断・探究</td>
+                        <td>データ活用、情報整理、探究学習支援</td>
+                    </tr>
+                    <tr>
+                        <td><strong>高校</strong></td>
+                        <td>情報活用能力育成</td>
+                        <td>高度な情報活用、進路学習、オンライン授業</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>6.2 教科別研修のポイント</h3>
+            <div class="content-box">
+                <h4>国語科</h4>
+                <ul>
+                    <li>デジタル教科書の活用</li>
+                    <li>作文支援ツール（Google Docs音声入力等）</li>
+                    <li>デジタルポートフォリオ</li>
+                </ul>
+
+                <h4>算数・数学科</h4>
+                <ul>
+                    <li>図形ソフト（GeoGebra等）</li>
+                    <li>計算ドリルアプリ</li>
+                    <li>グラフ作成ツール</li>
+                </ul>
+
+                <h4>理科</h4>
+                <ul>
+                    <li>観察記録（写真・動画撮影）</li>
+                    <li>シミュレーションソフト</li>
+                    <li>データ測定・記録アプリ</li>
+                </ul>
+
+                <h4>社会科</h4>
+                <ul>
+                    <li>Google Earth活用</li>
+                    <li>デジタル資料の検索</li>
+                    <li>年表・マップ作成ツール</li>
+                </ul>
+
+                <h4>英語科</h4>
+                <ul>
+                    <li>発音練習アプリ</li>
+                    <li>翻訳ツールの適切な使い方</li>
+                    <li>オンライン英会話</li>
+                </ul>
+
+                <div class="tip-box">
+                    <p><strong>教科別研修の効果</strong></p>
+                    <p>全体研修よりも教科別研修の方が「すぐ使える」感が強く、参加者の満足度が高い傾向があります。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. 外部研修の活用 -->
+        <div class="category-header" style="background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);">
+            <h2>7. 外部研修の活用</h2>
+        </div>
+
+        <section>
+            <h3>7.1 外部研修のメリット</h3>
+            <div class="content-box">
+                <ul>
+                    <li><strong>専門的な知識</strong>：最新情報や高度な内容</li>
+                    <li><strong>客観的な視点</strong>：外部講師による新鮮な視点</li>
+                    <li><strong>ネットワーク構築</strong>：他校の教員との交流</li>
+                    <li><strong>刺激・モチベーション</strong>：外部の成功事例を知る</li>
+                </ul>
+            </div>
+
+            <h3>7.2 外部研修の種類</h3>
+            <div class="content-box">
+                <table>
+                    <tr>
+                        <th>種類</th>
+                        <th>主催</th>
+                        <th>内容例</th>
+                    </tr>
+                    <tr>
+                        <td><strong>教育委員会主催</strong></td>
+                        <td>都道府県・市区町村教委</td>
+                        <td>地域の課題に応じた研修</td>
+                    </tr>
+                    <tr>
+                        <td><strong>教育センター研修</strong></td>
+                        <td>教育センター</td>
+                        <td>体系的な研修プログラム</td>
+                    </tr>
+                    <tr>
+                        <td><strong>企業主催セミナー</strong></td>
+                        <td>Google、Microsoft等</td>
+                        <td>製品活用、認定資格取得</td>
+                    </tr>
+                    <tr>
+                        <td><strong>学会・研究会</strong></td>
+                        <td>日本教育工学会等</td>
+                        <td>最新研究、実践事例発表</td>
+                    </tr>
+                    <tr>
+                        <td><strong>オンライン研修</strong></td>
+                        <td>各種団体</td>
+                        <td>YouTubeライブ、Zoom研修</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>7.3 外部研修の活用方法</h3>
+            <div class="content-box">
+                <h4>参加前</h4>
+                <ul>
+                    <li>参加目的を明確にする</li>
+                    <li>学びたいことをリストアップ</li>
+                    <li>質問を事前に準備</li>
+                </ul>
+
+                <h4>参加中</h4>
+                <ul>
+                    <li>積極的に質問・交流</li>
+                    <li>資料・名刺を集める</li>
+                    <li>実践アイデアをメモ</li>
+                </ul>
+
+                <h4>参加後</h4>
+                <ul>
+                    <li><strong>校内共有</strong>：職員会議等で報告</li>
+                    <li><strong>資料配布</strong>：許可を得て資料を共有</li>
+                    <li><strong>実践</strong>：学んだことをすぐ実践</li>
+                    <li><strong>フォローアップ</strong>：講師や参加者との継続的交流</li>
+                </ul>
+
+                <div class="example-good">
+                    <strong>外部研修の活用事例</strong><br>
+                    C小学校のD先生は、Googleの認定教育者資格を取得。その知識を活かして校内で「Google活用ミニ講座」を毎月開催し、他の教員のスキルアップに貢献しています。
+                </div>
+            </div>
+
+            <h3>7.4 おすすめの研修・資格</h3>
+            <div class="content-box">
+                <h4>認定資格</h4>
+                <ul>
+                    <li><strong>Google 認定教育者 レベル1・2</strong>：Google for Education製品の活用</li>
+                    <li><strong>Microsoft 認定教育者</strong>：Microsoft製品の活用</li>
+                    <li><strong>Apple Teacher</strong>：iPad/Mac活用</li>
+                    <li><strong>教育情報化コーディネータ（ITCE）</strong>：日本教育情報化振興会認定</li>
+                </ul>
+
+                <h4>オンライン学習プラットフォーム</h4>
+                <ul>
+                    <li><strong>Google Teacher Center</strong>：無料、自分のペースで学習</li>
+                    <li><strong>Microsoft Education Center</strong>：無料、豊富なコース</li>
+                    <li><strong>Coursera</strong>：大学レベルの講座</li>
+                    <li><strong>Udemy</strong>：実践的なスキル講座</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- まとめ -->
+        <section class="summary">
+            <h2>📚 まとめ</h2>
+            <div class="content-box">
+                <p>効果的な研修・育成は、<strong>教職員のICT活用力を高め、授業の質を向上させる</strong>ための重要な取り組みです。ICT支援員は、研修の企画・実施だけでなく、日常的なサポートを通じて教職員の成長を支援します。</p>
+                
+                <h4>効果的な研修・育成の3つのポイント</h4>
+                <ol>
+                    <li><strong>段階的</strong>：スキルレベルに応じた内容</li>
+                    <li><strong>実践的</strong>：すぐに使える内容</li>
+                    <li><strong>継続的</strong>：フォローアップの充実</li>
+                </ol>
+
+                <p>研修は「やって終わり」ではありません。継続的なサポートにより、教職員が自信を持ってICTを活用できる環境を作りましょう。</p>
+            </div>
+        </section>
+
+        <!-- 関連ページへのリンク -->
+        <section class="related-links">
+            <h2>🔗 関連ページ</h2>
+            <ul>
+                <li><a href="school-dx.html">校務DX</a> - 学校のデジタル化推進</li>
+                <li><a href="communication-skills.html">コミュニケーションスキル</a> - 効果的な指導方法</li>
+                <li><a href="project-management.html">プロジェクトマネジメント</a> - 研修プロジェクトの管理</li>
+                <li><a href="skills.html">支援スキル</a> - ICT支援の基本スキル</li>
+                <li><a href="lesson-proposal.html">授業提案</a> - ICT活用授業の提案方法</li>
+            </ul>
+        </section>
+
+        <!-- 参考資料 -->
+        <section class="references">
+            <h2>📖 参考資料</h2>
+            <ul>
+                <li><a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/1416800.htm" target="_blank" rel="noopener">教員のICT活用指導力チェックリスト（文部科学省）</a></li>
+                <li><a href="https://www.mext.go.jp/studxstyle/" target="_blank" rel="noopener">StuDX Style - 学びの変化を支援（文部科学省）</a></li>
+                <li><a href="https://edu.google.com/intl/ALL_jp/teacher-center/" target="_blank" rel="noopener">Google Teacher Center</a></li>
+                <li><a href="https://education.microsoft.com/ja-jp" target="_blank" rel="noopener">Microsoft Education Center</a></li>
+                <li><a href="https://www.apple.com/jp/education/k12/apple-teacher/" target="_blank" rel="noopener">Apple Teacher</a></li>
+                <li><a href="https://www.japet.or.jp/itce/" target="_blank" rel="noopener">教育情報化コーディネータ（ITCE）</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学校行事でのICT活用 - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="学校行事でのICT活用方法。運動会、文化祭、修学旅行、卒業式などでの撮影・配信・記録・プレゼンテーション支援を網羅。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-newspaper"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-tools"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-landmark"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-calendar-alt"></i> 学校行事でのICT活用</h1>
+                <p class="lead">学校行事でのICT活用方法。運動会、文化祭、修学旅行、卒業式などでの撮影・配信・記録・プレゼンテーション支援を網羅</p>
+            </div>
+
+            <!-- 1. 学校行事ICT活用の意義 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-info-circle"></i> 学校行事ICT活用の意義</h2>
+                </div>
+                <div class="info-box bg-gradient-primary">
+                    <h4><i class="fas fa-graduation-cap"></i> 行事でのICT活用がもたらす効果</h4>
+                    <p>学校行事にICTを活用することで、記録の質が向上し、保護者への情報共有がスムーズになり、児童生徒の表現力・情報活用能力が育成されます。運動会のライブ配信、文化祭でのデジタルコンテンツ制作、修学旅行の記録作成など、多様な場面でICTが活躍します。</p>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h4>記録・配信</h4>
+                        <p>写真・動画での記録、ライブ配信により、保護者が行事の様子をリアルタイムで見られる</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>表現の幅が広がる</h4>
+                        <p>動画制作、デジタルポスター、プレゼンテーションなど、多様な表現方法が可能に</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>協働学習の促進</h4>
+                        <p>クラウドでの共同編集、役割分担、チームでのコンテンツ制作を通じて協働性を育成</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>効率化</h4>
+                        <p>デジタル掲示、オンライン投票、アンケート集計の自動化で業務効率化</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. 主要行事別のICT活用例 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-calendar-check"></i> 主要行事別のICT活用例</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 行事ごとのICT活用方法</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>行事名</th>
+                                <th>ICT活用例</th>
+                                <th>活用機器・ツール</th>
+                                <th>ICT支援員の役割</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>運動会</strong></td>
+                                <td>ライブ配信、写真・動画撮影、得点集計、BGM再生</td>
+                                <td>ビデオカメラ、スマホ、タブレット、スピーカー、配信用PC</td>
+                                <td>配信機材のセットアップ、撮影サポート、トラブル対応</td>
+                            </tr>
+                            <tr>
+                                <td><strong>文化祭・学習発表会</strong></td>
+                                <td>デジタルポスター、プレゼンテーション、動画作品、デジタルサイネージ</td>
+                                <td>タブレット、プロジェクター、電子黒板、動画編集アプリ</td>
+                                <td>作品制作支援、プレゼン機材準備、上映サポート</td>
+                            </tr>
+                            <tr>
+                                <td><strong>修学旅行</strong></td>
+                                <td>旅のしおりデジタル化、写真・動画記録、クラウド共有、事後レポート作成</td>
+                                <td>タブレット、スマホ、Googleスライド、Padlet</td>
+                                <td>事前研修、クラウド設定、記録方法の指導</td>
+                            </tr>
+                            <tr>
+                                <td><strong>卒業式</strong></td>
+                                <td>思い出動画上映、デジタルアルバム、ライブ配信、スライドショー</td>
+                                <td>プロジェクター、配信機材、動画編集ソフト、BGM音源</td>
+                                <td>動画編集指導、上映機材準備、配信サポート</td>
+                            </tr>
+                            <tr>
+                                <td><strong>入学式</strong></td>
+                                <td>式次第スライド、学校紹介動画、保護者向け資料のデジタル配信</td>
+                                <td>プロジェクター、スクリーン、スライド資料</td>
+                                <td>スライド作成支援、上映機材準備</td>
+                            </tr>
+                            <tr>
+                                <td><strong>授業参観</strong></td>
+                                <td>ICT活用授業の公開、保護者向けオンライン参観</td>
+                                <td>タブレット、電子黒板、Zoom/Teams</td>
+                                <td>授業ICT機器の準備、オンライン配信サポート</td>
+                            </tr>
+                            <tr>
+                                <td><strong>保護者会</strong></td>
+                                <td>スライド資料提示、オンライン参加、アンケート集計</td>
+                                <td>プロジェクター、Zoom、Google Forms</td>
+                                <td>資料作成支援、オンライン会議セットアップ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 3. 運動会・体育祭でのICT活用 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-running"></i> 運動会・体育祭でのICT活用</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-danger">
+                            <i class="fas fa-broadcast-tower"></i>
+                        </div>
+                        <h4>ライブ配信</h4>
+                        <p><strong>目的：</strong> 保護者が来校できない場合でも観覧可能に</p>
+                        <ul class="compact-list">
+                            <li><strong>ツール：</strong> YouTube Live、Zoom、Microsoft Teams</li>
+                            <li><strong>機材：</strong> カメラ、三脚、配信用PC、モバイルルーター</li>
+                            <li><strong>注意点：</strong> 通信環境の確認、著作権（BGM）、個人情報保護</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h4>写真・動画撮影</h4>
+                        <p><strong>目的：</strong> 記録、思い出作り、振り返り</p>
+                        <ul class="compact-list">
+                            <li><strong>機材：</strong> デジカメ、スマホ、タブレット、ドローン（許可要）</li>
+                            <li><strong>撮影ポイント：</strong> 各競技、児童生徒の表情、全体の様子</li>
+                            <li><strong>保存：</strong> Googleフォト、OneDriveで共有</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h4>得点集計</h4>
+                        <p><strong>目的：</strong> リアルタイム集計、ミス防止</p>
+                        <ul class="compact-list">
+                            <li><strong>ツール：</strong> Googleスプレッドシート、Excel</li>
+                            <li><strong>方法：</strong> タブレットで入力→自動集計→電光掲示板に表示</li>
+                            <li><strong>メリット：</strong> 手計算より早く正確</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h4>BGM・アナウンス</h4>
+                        <p><strong>目的：</strong> 雰囲気作り、進行のスムーズ化</p>
+                        <ul class="compact-list">
+                            <li><strong>機材：</strong> PC、スピーカー、マイク</li>
+                            <li><strong>音源：</strong> 著作権フリーBGM、学校独自の音源</li>
+                            <li><strong>事前準備：</strong> プレイリスト作成、音量調整</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-clipboard-list"></i> 運動会ライブ配信チェックリスト</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>事前準備：</strong> 配信URL作成、保護者への通知、リハーサル</li>
+                        <li><i class="fas fa-check"></i> <strong>機材確認：</strong> カメラ、三脚、PC、ケーブル、予備バッテリー</li>
+                        <li><i class="fas fa-check"></i> <strong>通信環境：</strong> Wi-Fi/モバイル回線の速度確認、予備回線準備</li>
+                        <li><i class="fas fa-check"></i> <strong>著作権対策：</strong> BGMは著作権フリーを使用、または音声オフ</li>
+                        <li><i class="fas fa-check"></i> <strong>個人情報保護：</strong> 限定公開設定、視聴パスワード設定</li>
+                        <li><i class="fas fa-check"></i> <strong>当日：</strong> 早めに会場入り、配信開始テスト、トラブル対応準備</li>
+                    </ul>
+                    <p class="note" style="margin-top: 1rem; font-size: 0.9rem; color: #666;"><i class="fas fa-info-circle"></i> <strong>※機材の仕様・型番は変更される可能性があります。</strong>最新の製品情報は各メーカー公式サイトをご確認ください。</p>
+                </div>
+            </section>
+
+            <!-- 4. 文化祭・学習発表会でのICT活用 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-palette"></i> 文化祭・学習発表会でのICT活用</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-presentation"></i>
+                        </div>
+                        <h4>プレゼンテーション発表</h4>
+                        <ul class="compact-list">
+                            <li><strong>ツール：</strong> Googleスライド、PowerPoint、Canva</li>
+                            <li><strong>内容：</strong> 調べ学習の発表、地域探究、SDGs学習</li>
+                            <li><strong>機材：</strong> プロジェクター、タブレット、ポインター</li>
+                            <li><strong>支援：</strong> スライド作成指導、発表リハーサル</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h4>動画作品制作</h4>
+                        <ul class="compact-list">
+                            <li><strong>ツール：</strong> iMovie、Clipchamp、Canva Video</li>
+                            <li><strong>内容：</strong> ドキュメンタリー、劇、ニュース番組風</li>
+                            <li><strong>学び：</strong> 企画、撮影、編集、著作権</li>
+                            <li><strong>上映：</strong> プロジェクター、スピーカー、暗幕</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h4>デジタルポスター</h4>
+                        <ul class="compact-list">
+                            <li><strong>ツール：</strong> Canva、PowerPoint、Google Drawing</li>
+                            <li><strong>表示：</strong> 大型ディスプレイ、タブレット、電子黒板</li>
+                            <li><strong>メリット：</strong> 動画・音声も入れられる、修正が簡単</li>
+                            <li><strong>共有：</strong> QRコードで詳細情報へのアクセス</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <h4>デジタルサイネージ</h4>
+                        <ul class="compact-list">
+                            <li><strong>用途：</strong> 来場者案内、タイムテーブル、作品紹介</li>
+                            <li><strong>ツール：</strong> Googleスライド（自動再生）</li>
+                            <li><strong>機材：</strong> 大型ディスプレイ、タブレット、PC</li>
+                            <li><strong>内容：</strong> プログラム、地図、注意事項</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-gradient-success">
+                    <h4><i class="fas fa-lightbulb"></i> 文化祭でのICT活用アイデア</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>デジタル展示：</strong> タブレットでインタラクティブな展示、QRコードで詳細説明</li>
+                        <li><i class="fas fa-check"></i> <strong>オンライン投票：</strong> 来場者がスマホで作品投票、リアルタイム集計</li>
+                        <li><i class="fas fa-check"></i> <strong>VR/AR体験：</strong> Googleマップでのバーチャル旅行、ARアプリでの体験</li>
+                        <li><i class="fas fa-check"></i> <strong>プログラミング作品展示：</strong> Scratch、micro:bitの作品実演</li>
+                        <li><i class="fas fa-check"></i> <strong>ライブ配信：</strong> 舞台発表をオンライン配信、遠隔地の保護者も視聴可能</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 5. 修学旅行でのICT活用 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-plane"></i> 修学旅行でのICT活用</h2>
+                </div>
+
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>事前学習</h4>
+                            <ul>
+                                <li><strong>調べ学習：</strong> 訪問先の歴史、文化、見どころをタブレットで調査</li>
+                                <li><strong>Googleマップ：</strong> 訪問先の地理的位置、ストリートビューで疑似体験</li>
+                                <li><strong>デジタルしおり：</strong> Googleスライドで作成、全員が編集可能</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>旅行中の記録</h4>
+                            <ul>
+                                <li><strong>写真・動画撮影：</strong> タブレット、スマホで記録</li>
+                                <li><strong>クラウド共有：</strong> Googleフォト、Padletで即座に共有</li>
+                                <li><strong>リアルタイム報告：</strong> 学校Webサイト、SNSで保護者に報告</li>
+                                <li><strong>日記：</strong> Googleドキュメントで日々の記録</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>事後学習</h4>
+                            <ul>
+                                <li><strong>プレゼン作成：</strong> 体験をスライドにまとめて発表</li>
+                                <li><strong>動画編集：</strong> 思い出動画の制作</li>
+                                <li><strong>デジタルアルバム：</strong> Canva、Googleスライドで作成</li>
+                                <li><strong>振り返り：</strong> オンラインアンケートで感想共有</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-exclamation-triangle"></i> 修学旅行ICT活用の注意点</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>紛失・破損対策：</strong> 保護ケース使用、予備機準備、保険加入</li>
+                        <li><i class="fas fa-check"></i> <strong>充電対策：</strong> モバイルバッテリー携帯、宿泊先での充電管理</li>
+                        <li><i class="fas fa-check"></i> <strong>通信環境：</strong> Wi-Fiスポット確認、モバイルルーター携帯</li>
+                        <li><i class="fas fa-check"></i> <strong>情報モラル：</strong> SNS投稿ルール、個人情報保護の徹底</li>
+                        <li><i class="fas fa-check"></i> <strong>利用時間管理：</strong> 夜間は使用禁止、集合時間の厳守</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 6. 卒業式・入学式でのICT活用 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-graduation-cap"></i> 卒業式・入学式でのICT活用</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h4>思い出動画上映</h4>
+                        <ul class="compact-list">
+                            <li><strong>内容：</strong> 6年間/3年間の写真スライドショー、児童生徒インタビュー</li>
+                            <li><strong>編集：</strong> iMovie、PowerPoint、Canva Video</li>
+                            <li><strong>BGM：</strong> 著作権フリー音楽、または許諾を得た楽曲</li>
+                            <li><strong>上映：</strong> プロジェクター、スクリーン、スピーカー</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4>デジタルアルバム</h4>
+                        <ul class="compact-list">
+                            <li><strong>作成：</strong> Googleスライド、Canva</li>
+                            <li><strong>内容：</strong> クラス写真、個人写真、メッセージ</li>
+                            <li><strong>配布：</strong> QRコードでアクセス、または印刷</li>
+                            <li><strong>メリット：</strong> 費用削減、全員に同じ写真を共有</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-broadcast-tower"></i>
+                        </div>
+                        <h4>ライブ配信</h4>
+                        <ul class="compact-list">
+                            <li><strong>理由：</strong> 座席数制限、遠方の親族、体調不良</li>
+                            <li><strong>ツール：</strong> YouTube Live、Zoom</li>
+                            <li><strong>設定：</strong> 限定公開、パスワード保護</li>
+                            <li><strong>注意：</strong> 個人情報保護、通信環境確認</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-presentation"></i>
+                        </div>
+                        <h4>式次第スライド</h4>
+                        <ul class="compact-list">
+                            <li><strong>表示内容：</strong> 式次第、国歌・校歌歌詞、卒業証書授与者名</li>
+                            <li><strong>メリット：</strong> 見やすい、進行のスムーズ化</li>
+                            <li><strong>準備：</strong> フォントサイズ大きめ、シンプルなデザイン</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. ICT支援員の行事サポートチェックリスト -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-clipboard-check"></i> ICT支援員の行事サポートチェックリスト</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 行事前・当日・事後のチェック項目</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>フェーズ</th>
+                                <th>チェック項目</th>
+                                <th>ポイント</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1週間前</strong></td>
+                                <td>
+                                    ・必要機材のリストアップ<br>
+                                    ・機材の動作確認<br>
+                                    ・教員との打ち合わせ<br>
+                                    ・リハーサル日程調整
+                                </td>
+                                <td>早めの準備で余裕を持つ</td>
+                            </tr>
+                            <tr>
+                                <td><strong>前日</strong></td>
+                                <td>
+                                    ・機材の最終チェック<br>
+                                    ・予備機器の準備<br>
+                                    ・ケーブル、バッテリーの確認<br>
+                                    ・会場下見、配置確認
+                                </td>
+                                <td>「予備」を必ず用意</td>
+                            </tr>
+                            <tr>
+                                <td><strong>当日朝</strong></td>
+                                <td>
+                                    ・早めに会場入り<br>
+                                    ・機材セットアップ<br>
+                                    ・通信環境テスト<br>
+                                    ・教員との最終確認
+                                </td>
+                                <td>開始1時間前には準備完了を</td>
+                            </tr>
+                            <tr>
+                                <td><strong>当日中</strong></td>
+                                <td>
+                                    ・トラブル対応<br>
+                                    ・機材操作サポート<br>
+                                    ・撮影・配信の管理<br>
+                                    ・記録・メモ
+                                </td>
+                                <td>常に待機、迅速な対応</td>
+                            </tr>
+                            <tr>
+                                <td><strong>当日後</strong></td>
+                                <td>
+                                    ・機材の片付け・返却<br>
+                                    ・データのバックアップ<br>
+                                    ・トラブルの記録<br>
+                                    ・改善点のメモ
+                                </td>
+                                <td>次回に活かす記録を残す</td>
+                            </tr>
+                            <tr>
+                                <td><strong>数日後</strong></td>
+                                <td>
+                                    ・写真・動画の整理<br>
+                                    ・保護者への公開<br>
+                                    ・教員へのフィードバック<br>
+                                    ・報告書作成
+                                </td>
+                                <td>タイムリーな情報共有</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box bg-gradient-warning">
+                    <h4><i class="fas fa-tools"></i> 行事で必須の持ち物リスト</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>機材：</strong> PC、タブレット、カメラ、プロジェクター、ケーブル類</li>
+                        <li><i class="fas fa-check"></i> <strong>予備：</strong> 予備バッテリー、予備ケーブル、予備端末</li>
+                        <li><i class="fas fa-check"></i> <strong>通信：</strong> モバイルルーター、延長コード、電源タップ</li>
+                        <li><i class="fas fa-check"></i> <strong>工具：</strong> ドライバー、テープ、結束バンド</li>
+                        <li><i class="fas fa-check"></i> <strong>資料：</strong> マニュアル、連絡先リスト、トラブル対応フロー</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

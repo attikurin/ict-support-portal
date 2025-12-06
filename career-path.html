@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キャリアパス・キャリア開発 - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="ICT支援員のキャリアパスとキャリア開発。スキルアップ、資格取得、キャリアステップ、転職・昇進、将来展望を網羅。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-newspaper"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-tools"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-landmark"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-road"></i> キャリアパス・キャリア開発</h1>
+                <p class="lead">ICT支援員のキャリアパスとキャリア開発。スキルアップ、資格取得、キャリアステップ、転職・昇進、将来展望を網羅</p>
+            </div>
+
+            <!-- 1. ICT支援員のキャリアパス概要 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-map"></i> ICT支援員のキャリアパス概要</h2>
+                </div>
+                <div class="info-box bg-gradient-primary">
+                    <h4><i class="fas fa-info-circle"></i> キャリアパスとは</h4>
+                    <p>キャリアパスとは、職業人生における成長・昇進の道筋のことです。ICT支援員は、経験を積むことで、より専門性の高い業務や管理職、関連分野への転職など、多様なキャリアの選択肢があります。</p>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-stairs"></i> ICT支援員のキャリアステップ</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>ステップ</th>
+                                <th>経験年数</th>
+                                <th>役割・業務内容</th>
+                                <th>必要なスキル</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>初級<br>（エントリー）</strong></td>
+                                <td>0〜1年</td>
+                                <td>授業支援、基本的なトラブル対応、機器管理、教員サポート</td>
+                                <td>基本的なICTスキル、コミュニケーション力、学ぶ姿勢</td>
+                            </tr>
+                            <tr>
+                                <td><strong>中級<br>（スタンダード）</strong></td>
+                                <td>1〜3年</td>
+                                <td>複数校の巡回、研修講師、マニュアル作成、複雑なトラブル対応</td>
+                                <td>専門的なICT知識、授業設計支援、プレゼン力、問題解決力</td>
+                            </tr>
+                            <tr>
+                                <td><strong>上級<br>（エキスパート）</strong></td>
+                                <td>3〜5年</td>
+                                <td>ICT活用推進リーダー、研修プログラム開発、プロジェクト管理、新人育成</td>
+                                <td>高度な専門知識、企画力、マネジメント力、指導力</td>
+                            </tr>
+                            <tr>
+                                <td><strong>管理職<br>（スーパーバイザー）</strong></td>
+                                <td>5年以上</td>
+                                <td>複数校の統括管理、予算管理、人材育成、教育委員会との連携、戦略立案</td>
+                                <td>マネジメント力、戦略思考、リーダーシップ、交渉力</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 2. キャリアの選択肢 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-sitemap"></i> キャリアの選択肢</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>① スーパーバイザー</h4>
+                        <p><strong>役割：</strong> 複数のICT支援員を統括・管理</p>
+                        <ul class="compact-list">
+                            <li>支援員の育成・指導</li>
+                            <li>学校との調整、教育委員会との連携</li>
+                            <li>ICT活用推進の戦略立案</li>
+                            <li>予算管理、業務効率化</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h4>② 研修講師・コンサルタント</h4>
+                        <p><strong>役割：</strong> ICT活用研修の専門講師</p>
+                        <ul class="compact-list">
+                            <li>教員向け研修プログラム開発</li>
+                            <li>各地での研修講師</li>
+                            <li>学校・自治体へのコンサルティング</li>
+                            <li>オンライン研修の企画・実施</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>③ 教育委員会職員</h4>
+                        <p><strong>役割：</strong> 自治体のICT教育推進担当</p>
+                        <ul class="compact-list">
+                            <li>地域全体のICT活用推進</li>
+                            <li>予算編成、機器調達</li>
+                            <li>政策立案、計画策定</li>
+                            <li>学校支援体制の構築</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4>④ EdTech企業</h4>
+                        <p><strong>役割：</strong> 教育テクノロジー企業での活躍</p>
+                        <ul class="compact-list">
+                            <li>製品開発（現場の声を反映）</li>
+                            <li>カスタマーサクセス</li>
+                            <li>営業・マーケティング</li>
+                            <li>導入支援、トレーニング</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-danger">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>⑤ 教員への転身</h4>
+                        <p><strong>役割：</strong> ICTに強い教員として活躍</p>
+                        <ul class="compact-list">
+                            <li>教員免許取得（通信制大学等）</li>
+                            <li>情報科教員、ICT担当教員</li>
+                            <li>授業でのICT活用実践</li>
+                            <li>校内研修リーダー</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-secondary">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <h4>⑥ フリーランス</h4>
+                        <p><strong>役割：</strong> 独立して複数の案件を担当</p>
+                        <ul class="compact-list">
+                            <li>複数の自治体・学校と契約</li>
+                            <li>研修講師、執筆活動</li>
+                            <li>オンライン講座の開催</li>
+                            <li>コンサルティング業務</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. スキルアップの方法 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-line"></i> スキルアップの方法</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>資格取得</h4>
+                        <ul class="compact-list">
+                            <li><strong>ICT支援員能力認定試験：</strong> 基礎・上級</li>
+                            <li><strong>ITパスポート：</strong> IT基礎知識</li>
+                            <li><strong>MOS：</strong> Microsoft Office Specialist</li>
+                            <li><strong>Google認定教育者：</strong> Level 1・2</li>
+                            <li><strong>情報処理技術者試験：</strong> 基本情報・応用情報</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-book-reader"></i>
+                        </div>
+                        <h4>自己学習</h4>
+                        <ul class="compact-list">
+                            <li><strong>オンライン講座：</strong> Udemy、Coursera、YouTube</li>
+                            <li><strong>書籍：</strong> ICT教育、EdTech関連</li>
+                            <li><strong>公式ドキュメント：</strong> Google、Microsoft</li>
+                            <li><strong>ブログ・SNS：</strong> 実践事例の収集</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>コミュニティ参加</h4>
+                        <ul class="compact-list">
+                            <li><strong>ICT支援員の会：</strong> 地域の勉強会</li>
+                            <li><strong>オンラインコミュニティ：</strong> Facebookグループ、Slack</li>
+                            <li><strong>学会・研究会：</strong> 日本教育工学会など</li>
+                            <li><strong>イベント参加：</strong> EdTech関連イベント</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h4>実践・経験</h4>
+                        <ul class="compact-list">
+                            <li><strong>多様な授業支援：</strong> 様々な教科・学年</li>
+                            <li><strong>研修講師：</strong> 校内研修でのプレゼン</li>
+                            <li><strong>マニュアル作成：</strong> ドキュメント作成力</li>
+                            <li><strong>プロジェクト参加：</strong> 機器導入、システム構築</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-target"></i> スキルマップ：身につけるべきスキル</h4>
+                    <div class="comparison-table">
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>スキル分野</th>
+                                    <th>初級</th>
+                                    <th>中級</th>
+                                    <th>上級</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>ICT技術</strong></td>
+                                    <td>基本操作、トラブル対応</td>
+                                    <td>ネットワーク、セキュリティ</td>
+                                    <td>システム設計、プログラミング</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>教育知識</strong></td>
+                                    <td>学習指導要領の理解</td>
+                                    <td>授業設計、評価方法</td>
+                                    <td>カリキュラム開発、教育理論</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>コミュニケーション</strong></td>
+                                    <td>基本的な対応、報告</td>
+                                    <td>プレゼン、研修講師</td>
+                                    <td>交渉、ファシリテーション</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>マネジメント</strong></td>
+                                    <td>自己管理、時間管理</td>
+                                    <td>プロジェクト管理</td>
+                                    <td>組織管理、戦略立案</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 主要資格の紹介 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-award"></i> 主要資格の紹介</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> ICT支援員に役立つ資格一覧</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>資格名</th>
+                                <th>難易度</th>
+                                <th>費用</th>
+                                <th>特徴・メリット</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>ICT支援員能力認定試験</strong></td>
+                                <td>初級：★☆☆<br>上級：★★☆</td>
+                                <td>5,500円〜</td>
+                                <td>ICT支援員専用の資格。業界標準として認知度が高い。実務に直結した内容。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ITパスポート</strong></td>
+                                <td>★☆☆</td>
+                                <td>7,500円</td>
+                                <td>IT基礎知識の国家資格。就職・転職に有利。オンライン受験可能。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>MOS（Microsoft Office Specialist）</strong></td>
+                                <td>★☆☆</td>
+                                <td>10,780円</td>
+                                <td>Word、Excel、PowerPointのスキル証明。実務で即戦力。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Google認定教育者 Level 1</strong></td>
+                                <td>★★☆</td>
+                                <td>約10ドル</td>
+                                <td>Google Workspaceの活用スキル。GIGAスクールで需要高。オンライン受験。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Google認定教育者 Level 2</strong></td>
+                                <td>★★★</td>
+                                <td>約25ドル</td>
+                                <td>Level 1の上位資格。高度なGoogle活用スキル証明。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>基本情報技術者</strong></td>
+                                <td>★★★</td>
+                                <td>7,500円</td>
+                                <td>IT技術の国家資格。技術的な深い理解。キャリアアップに有利。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>情報セキュリティマネジメント</strong></td>
+                                <td>★★☆</td>
+                                <td>7,500円</td>
+                                <td>セキュリティ専門の国家資格。学校のセキュリティ管理に役立つ。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>教員免許（情報）</strong></td>
+                                <td>★★★★</td>
+                                <td>大学による</td>
+                                <td>教員への転身に必須。通信制大学で取得可能。キャリアの幅が広がる。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box bg-gradient-success">
+                    <h4><i class="fas fa-route"></i> 推奨資格取得ロードマップ</h4>
+                    <div class="step-list">
+                        <div class="step-item">
+                            <div class="step-number">1年目</div>
+                            <div class="step-content">
+                                <h4>基礎固め</h4>
+                                <p><strong>目標資格：</strong> ICT支援員能力認定試験（初級）、ITパスポート、MOS</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2-3年目</div>
+                            <div class="step-content">
+                                <h4>専門性強化</h4>
+                                <p><strong>目標資格：</strong> ICT支援員能力認定試験（上級）、Google認定教育者 Level 1</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4-5年目</div>
+                            <div class="step-content">
+                                <h4>高度な専門性</h4>
+                                <p><strong>目標資格：</strong> Google認定教育者 Level 2、基本情報技術者、情報セキュリティマネジメント</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. 転職・キャリアチェンジ -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-exchange-alt"></i> 転職・キャリアチェンジ</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4>転職先候補</h4>
+                        <ul class="compact-list">
+                            <li><strong>教育委員会：</strong> ICT教育推進担当</li>
+                            <li><strong>EdTech企業：</strong> サポート、営業、開発</li>
+                            <li><strong>IT企業：</strong> 教育事業部門</li>
+                            <li><strong>学習塾：</strong> ICT活用推進担当</li>
+                            <li><strong>研修会社：</strong> 講師、教材開発</li>
+                            <li><strong>学校（教員）：</strong> 情報科教員、ICT担当</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>ICT支援員の強み</h4>
+                        <ul class="compact-list">
+                            <li><strong>現場経験：</strong> 学校現場の実態を熟知</li>
+                            <li><strong>実践知：</strong> 実際の授業でのICT活用ノウハウ</li>
+                            <li><strong>コミュニケーション力：</strong> 教員・児童生徒との関係構築</li>
+                            <li><strong>問題解決力：</strong> トラブル対応の豊富な経験</li>
+                            <li><strong>幅広い知識：</strong> 機器、ソフト、ネットワーク</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h4>転職準備</h4>
+                        <ul class="compact-list">
+                            <li><strong>実績の記録：</strong> 支援校数、研修実施回数</li>
+                            <li><strong>ポートフォリオ：</strong> マニュアル、資料、動画</li>
+                            <li><strong>ネットワーク構築：</strong> 業界の人脈</li>
+                            <li><strong>情報収集：</strong> 求人、業界動向</li>
+                            <li><strong>スキルアップ：</strong> 資格取得、専門性向上</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <h4>応募書類のポイント</h4>
+                        <ul class="compact-list">
+                            <li><strong>具体的な実績：</strong> 数字で成果を示す</li>
+                            <li><strong>課題解決事例：</strong> 問題→対応→結果</li>
+                            <li><strong>自己学習姿勢：</strong> 資格、研修参加</li>
+                            <li><strong>熱意：</strong> なぜその企業・職種か</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-clipboard-list"></i> 職務経歴書の書き方例</h4>
+                    <p><strong>【職務概要】</strong><br>
+                    〇〇市立小中学校のICT支援員として、20校・約5,000名の児童生徒のICT活用を支援。授業支援、教員研修、トラブル対応、機器管理を担当。</p>
+                    
+                    <p><strong>【主な実績】</strong></p>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> 年間500回以上の授業支援実施、教員のICT活用率を60%→85%に向上</li>
+                        <li><i class="fas fa-check"></i> 教員向け研修を年20回実施、延べ300名が参加</li>
+                        <li><i class="fas fa-check"></i> トラブル対応マニュアル作成、対応時間を平均30分→15分に短縮</li>
+                        <li><i class="fas fa-check"></i> Google認定教育者Level 2、ICT支援員能力認定試験上級取得</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 6. 年収・待遇の実態 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-yen-sign"></i> 年収・待遇の実態</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 職種・経験別の年収目安</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>職種・ポジション</th>
+                                <th>経験年数</th>
+                                <th>年収目安</th>
+                                <th>備考</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ICT支援員（初級）</td>
+                                <td>0〜1年</td>
+                                <td>200〜250万円</td>
+                                <td>時給1,200〜1,500円、週5日勤務想定</td>
+                            </tr>
+                            <tr>
+                                <td>ICT支援員（中級）</td>
+                                <td>1〜3年</td>
+                                <td>250〜300万円</td>
+                                <td>時給1,500〜1,800円、複数校担当</td>
+                            </tr>
+                            <tr>
+                                <td>ICT支援員（上級）</td>
+                                <td>3〜5年</td>
+                                <td>300〜350万円</td>
+                                <td>時給1,800〜2,200円、研修講師兼務</td>
+                            </tr>
+                            <tr>
+                                <td>スーパーバイザー</td>
+                                <td>5年以上</td>
+                                <td>350〜450万円</td>
+                                <td>正社員、月給25〜35万円</td>
+                            </tr>
+                            <tr>
+                                <td>教育委員会職員</td>
+                                <td>経験による</td>
+                                <td>400〜600万円</td>
+                                <td>公務員給与体系、福利厚生充実</td>
+                            </tr>
+                            <tr>
+                                <td>EdTech企業</td>
+                                <td>経験による</td>
+                                <td>350〜550万円</td>
+                                <td>職種（営業、サポート、開発）により幅あり</td>
+                            </tr>
+                            <tr>
+                                <td>フリーランス</td>
+                                <td>経験による</td>
+                                <td>300〜600万円</td>
+                                <td>契約内容、営業力により大きく変動</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="note" style="margin-top: 1rem; font-size: 0.9rem; color: #666;"><i class="fas fa-info-circle"></i> <strong>※年収は地域・企業・雇用形態により大きく異なります。</strong>上記は全国的な目安であり、実際の金額は勤務地（都市部・地方）、企業規模、勤務時間、経験・スキルにより変動します。最新の求人情報をご確認ください。</p>
+                </div>
+
+                <div class="info-box bg-gradient-warning">
+                    <h4><i class="fas fa-exclamation-circle"></i> 待遇改善に向けて</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>スキル向上：</strong> 資格取得、専門性向上で時給アップを交渉</li>
+                        <li><i class="fas fa-check"></i> <strong>正社員化：</strong> 派遣・パートから正社員への転換を目指す</li>
+                        <li><i class="fas fa-check"></i> <strong>兼業・複業：</strong> 研修講師、執筆活動で収入増</li>
+                        <li><i class="fas fa-check"></i> <strong>キャリアアップ：</strong> スーパーバイザー、管理職を目指す</li>
+                        <li><i class="fas fa-check"></i> <strong>転職：</strong> より好条件の職場・企業へ</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 7. キャリア開発アクションプラン -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-clipboard-check"></i> キャリア開発アクションプラン</h2>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-target"></i> 自分のキャリアプランを立てよう</h4>
+                    <p>以下のワークシートを使って、自分のキャリアプランを明確にしましょう。</p>
+                </div>
+
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>現状の棚卸し</h4>
+                            <ul>
+                                <li>今のスキルレベルは？（初級・中級・上級）</li>
+                                <li>持っている資格は？</li>
+                                <li>得意なこと、苦手なことは？</li>
+                                <li>仕事で評価されていることは？</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>5年後のゴール設定</h4>
+                            <ul>
+                                <li>どんな仕事をしていたい？（支援員継続、管理職、転職など）</li>
+                                <li>どんなスキルを身につけたい？</li>
+                                <li>年収はいくらを目指す？</li>
+                                <li>どんな働き方をしたい？（正社員、フリーランスなど）</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>ギャップ分析</h4>
+                            <ul>
+                                <li>ゴールと現状の差は？</li>
+                                <li>足りないスキル・資格は？</li>
+                                <li>必要な経験は？</li>
+                                <li>克服すべき課題は？</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>アクションプラン</h4>
+                            <ul>
+                                <li><strong>今年やること：</strong> 資格取得、研修参加、実践経験</li>
+                                <li><strong>2年目：</strong> 専門性向上、ネットワーク構築</li>
+                                <li><strong>3年目：</strong> マネジメント経験、転職準備</li>
+                                <li><strong>具体的な行動：</strong> 月1回の勉強会参加、月1冊の読書など</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>定期的な振り返り</h4>
+                            <ul>
+                                <li>半年ごとに進捗確認</li>
+                                <li>計画の修正（状況変化に応じて）</li>
+                                <li>新たな目標設定</li>
+                                <li>成功体験の記録</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box bg-gradient-primary">
+                    <h4><i class="fas fa-quote-left"></i> 先輩ICT支援員からのメッセージ</h4>
+                    <p><strong>Aさん（スーパーバイザー、経験7年）</strong><br>
+                    「最初は不安だらけでしたが、日々の業務で学びながら、資格も取得し、今では10名の支援員を統括しています。大切なのは、目の前の仕事に誠実に取り組むことと、常に学び続ける姿勢です。」</p>
+                    
+                    <p><strong>Bさん（EdTech企業、経験5年）</strong><br>
+                    「ICT支援員で得た現場経験は、EdTech企業でも大いに役立っています。学校の実態を知っているからこそ、現場に寄り添った製品開発やサポートができます。」</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

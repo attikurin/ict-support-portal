@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ダウンロード資料 - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="ICT支援員の業務に役立つチェックリスト、テンプレート、ワークシートをダウンロードできます。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI利用</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-star"></i> 成功事例</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-heart"></i> 特別支援ICT</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop-code"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> セキュリティ</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-building"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-bar"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-money-bill-wave"></i> 予算・調達</a></li>
+                        <li><a href="online-learning.html"><i class="fas fa-video"></i> オンライン授業</a></li>
+                        <li><a href="edtech-comparison.html"><i class="fas fa-balance-scale"></i> EdTech比較</a></li>
+                        <li><a href="edtech-tools.html"><i class="fas fa-laptop-code"></i> EdTechツール</a></li>
+                        <li><a href="time-task-management.html"><i class="fas fa-clock"></i> 時間・タスク管理</a></li>
+                        <li><a href="crisis-management.html"><i class="fas fa-exclamation-triangle"></i> 危機管理</a></li>
+                        <li><a href="parent-communication.html"><i class="fas fa-users"></i> 保護者連携</a></li>
+                        <li><a href="school-events-ict.html"><i class="fas fa-calendar-check"></i> 学校行事ICT</a></li>
+                        <li><a href="career-path.html"><i class="fas fa-route"></i> キャリアパス</a></li>
+                        <li><a href="self-learning.html"><i class="fas fa-book-reader"></i> 自己学習</a></li>
+                        <li><a href="business-improvement.html"><i class="fas fa-chart-line"></i> 業務改善</a></li>
+                        <li><a href="mental-health.html"><i class="fas fa-spa"></i> メンタルヘルス</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-pie"></i> 配置・統計データ</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定情報</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-school"></i> 教育委員会制度</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                        <li><a href="downloads.html" class="active"><i class="fas fa-download"></i> ダウンロード</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-download"></i> ダウンロード資料</h1>
+            <p>ICT支援員の業務に役立つチェックリスト、テンプレート、ワークシートを無料でダウンロードできます。印刷してご活用ください。</p>
+        </div>
+
+            <!-- お知らせ -->
+            <div class="alert alert-info" style="margin-bottom: 30px;">
+                <strong><i class="fas fa-info-circle"></i> ご利用について:</strong>
+                各資料は教育現場での使用を目的として提供しています。商用利用はご遠慮ください。
+                印刷またはPDF保存は、ブラウザの印刷機能（Ctrl+P / Cmd+P）をご利用ください。
+            </div>
+
+            <!-- チェックリスト -->
+            <section class="content-section">
+                <h2 class="section-header">
+                    <i class="fas fa-check-square"></i> チェックリスト
+                </h2>
+                <div class="card-grid">
+                    <div class="feature-card">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #dc2626, #991b1b);">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>セキュリティチェックリスト</h3>
+                        <p>学校ICTセキュリティの定期点検用チェックリスト。アクセス管理、端末管理、ネットワーク、データ管理、教育、インシデント対応の6カテゴリー・30項目以上を網羅。</p>
+                        <ul class="feature-list">
+                            <li>✓ 優先度別（高・中・低）の項目分類</li>
+                            <li>✓ チェック状態と備考欄付き</li>
+                            <li>✓ 総合評価セクション</li>
+                        </ul>
+                        <a href="downloads/security-checklist.html" class="btn btn-download" target="_blank">
+                            <i class="fas fa-download"></i> 開く・ダウンロード
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- テンプレート・シート -->
+            <section class="content-section">
+                <h2 class="section-header">
+                    <i class="fas fa-file-alt"></i> テンプレート・ワークシート
+                </h2>
+                <div class="card-grid">
+                    <div class="feature-card">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>授業支援計画シート</h3>
+                        <p>効果的な授業サポートのための事前計画シート。授業概要、使用機器、支援内容、トラブル対応策、振り返りを一元管理。</p>
+                        <ul class="feature-list">
+                            <li>✓ 授業前・中・後の支援内容記入欄</li>
+                            <li>✓ 想定トラブルと対応策</li>
+                            <li>✓ 配慮が必要な児童生徒情報</li>
+                        </ul>
+                        <a href="downloads/lesson-support-plan.html" class="btn btn-download" target="_blank">
+                            <i class="fas fa-download"></i> 開く・ダウンロード
+                        </a>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>研修設計テンプレート</h3>
+                        <p>教職員向けICT研修の企画・実施用テンプレート。研修概要、対象者分析、プログラム設計、評価方法まで体系的に整理。</p>
+                        <ul class="feature-list">
+                            <li>✓ 時間配分とプログラム詳細</li>
+                            <li>✓ 準備物・資料リスト</li>
+                            <li>✓ フォローアップ計画</li>
+                        </ul>
+                        <a href="downloads/training-design-template.html" class="btn btn-download" target="_blank">
+                            <i class="fas fa-download"></i> 開く・ダウンロード
+                        </a>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="card-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>自己評価シート</h3>
+                        <p>ICT支援員のスキルアップと成長のための振り返りツール。技術、授業支援、コミュニケーション、専門知識、業務遂行力の5領域・20項目以上。</p>
+                        <ul class="feature-list">
+                            <li>✓ 5段階評価（1-5）</li>
+                            <li>✓ 領域別スキル評価</li>
+                            <li>✓ 成長記録と目標設定欄</li>
+                        </ul>
+                        <a href="downloads/self-evaluation-sheet.html" class="btn btn-download" target="_blank">
+                            <i class="fas fa-download"></i> 開く・ダウンロード
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 活用ガイド -->
+            <section class="content-section">
+                <h2 class="section-header">
+                    <i class="fas fa-lightbulb"></i> 活用のポイント
+                </h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-print"></i> 印刷・PDF保存方法</h3>
+                        <ol>
+                            <li>各資料のリンクをクリックして新しいタブで開く</li>
+                            <li>ブラウザの印刷機能を使用（Ctrl+P / Cmd+P）</li>
+                            <li>「送信先」でプリンターまたは「PDFに保存」を選択</li>
+                            <li>必要に応じて印刷設定を調整して保存・印刷</li>
+                        </ol>
+                    </div>
+
+                    <div class="info-card">
+                        <h3><i class="fas fa-edit"></i> 活用のコツ</h3>
+                        <ul>
+                            <li><strong>定期的な活用:</strong> チェックリストは月1回など定期的に実施</li>
+                            <li><strong>チーム共有:</strong> 計画シートやテンプレートをチームで共有</li>
+                            <li><strong>カスタマイズ:</strong> 学校の実情に合わせて項目を追加・修正</li>
+                            <li><strong>記録保存:</strong> 記入済みシートは業務記録として保管</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3><i class="fas fa-question-circle"></i> よくある質問</h3>
+                        <dl>
+                            <dt>Q: 商用利用は可能ですか？</dt>
+                            <dd>A: 教育現場での使用に限ります。商用利用はご遠慮ください。</dd>
+                            <dt>Q: 内容を編集できますか？</dt>
+                            <dd>A: 印刷後に手書きで追記いただけます。PDF編集ソフトでも編集可能です。</dd>
+                            <dt>Q: 更新予定はありますか？</dt>
+                            <dd>A: 定期的に内容を見直し、必要に応じて更新します。</dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+
+            <!-- フィードバック -->
+            <section class="content-section">
+                <div class="alert alert-success">
+                    <h3><i class="fas fa-comment-dots"></i> フィードバックをお寄せください</h3>
+                    <p>ダウンロード資料の改善にご協力ください。「こんな資料が欲しい」「この項目を追加してほしい」などのご意見・ご要望がありましたら、各学校のICT支援担当者、または教育委員会を通じてお知らせください。</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

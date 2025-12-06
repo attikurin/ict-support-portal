@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ネットワーク技術基礎 - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="ICT支援員に必要なネットワーク基礎知識を解説。IPアドレス、DNS、DHCP、Wi-Fi設定、ネットワークコマンドなど、トラブル対応に役立つ情報を網羅。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html" class="active"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-network-wired"></i> ネットワーク技術基礎</h1>
+            <p>ICT支揶員に必要なネットワークの基礎知識とトラブル対応</p>
+        </div>
+        
+        <section class="intro">
+            <p>ICT支援員にとって、ネットワークの基礎知識は必須です。「インターネットに繋がらない」「Wi-Fiが遅い」といったトラブルに対応するためには、ネットワークの仕組みを理解することが重要です。</p>
+            
+            <div class="checklist">
+                <h4>📋 このページで学べること</h4>
+                <ul>
+                    <li>ネットワークの基本概念（LAN/WAN、プロトコル）</li>
+                    <li>IPアドレス、サブネットマスク、ゲートウェイ</li>
+                    <li>DNS、DHCPの仕組み</li>
+                    <li>ネットワーク機器（ルーター、スイッチ、ハブ）</li>
+                    <li>無線LAN（Wi-Fi）の規格と設定</li>
+                    <li>ネットワークトラブルシューティングの基本</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 1. ネットワークの基本概念 -->
+        <div class="network-category">
+            <h2>1. ネットワークの基本概念</h2>
+        </div>
+
+        <section>
+            <h3>1.1 ネットワークとは</h3>
+            <div class="concept-box">
+                <h4>ネットワーク（Network）</h4>
+                <p>複数のコンピュータや機器を接続し、<strong>データをやり取りできるようにした仕組み</strong>です。</p>
+            </div>
+
+            <div class="network-item">
+                <h4>ネットワークの種類</h4>
+                <table>
+                    <tr>
+                        <th>種類</th>
+                        <th>範囲</th>
+                        <th>説明</th>
+                        <th>学校での例</th>
+                    </tr>
+                    <tr>
+                        <td><strong>LAN<br>（Local Area Network）</strong></td>
+                        <td>狭い範囲<br>（建物内）</td>
+                        <td>同じ建物や敷地内のネットワーク</td>
+                        <td>校内ネットワーク、職員室LAN</td>
+                    </tr>
+                    <tr>
+                        <td><strong>WAN<br>（Wide Area Network）</strong></td>
+                        <td>広い範囲<br>（都市～国）</td>
+                        <td>離れた場所をつなぐネットワーク</td>
+                        <td>教育委員会と各学校を接続</td>
+                    </tr>
+                    <tr>
+                        <td><strong>インターネット</strong></td>
+                        <td>世界中</td>
+                        <td>世界中のネットワークを接続した巨大なネットワーク</td>
+                        <td>Webサイト閲覧、メール、クラウドサービス</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="diagram">
+                <h4>学校ネットワークの構成図</h4>
+                <pre style="text-align: left; font-family: monospace;">
+インターネット
+    |
+[ファイアウォール]
+    |
+[ルーター] ──── [教育委員会（WAN）]
+    |
+[メインスイッチ]
+    |
+    ├─ [職員室スイッチ] ── 教員PC、プリンター
+    |
+    ├─ [普通教室1スイッチ] ── 電子黒板、教師用PC
+    |                          無線LANアクセスポイント
+    |                              ↓ Wi-Fi
+    |                          児童生徒用タブレット
+    |
+    └─ [普通教室2スイッチ] ── （同上）
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>1.2 プロトコル</h3>
+            <div class="concept-box">
+                <h4>プロトコル（Protocol）</h4>
+                <p>ネットワーク上でデータをやり取りするための<strong>「通信の規約・ルール」</strong>です。人間が会話をするときに日本語や英語を使うように、コンピュータ同士も共通のルール（プロトコル）を使います。</p>
+            </div>
+
+            <div class="network-item">
+                <h4>主要なプロトコル</h4>
+                <table>
+                    <tr>
+                        <th>プロトコル</th>
+                        <th>用途</th>
+                        <th>説明</th>
+                    </tr>
+                    <tr>
+                        <td><strong>TCP/IP</strong></td>
+                        <td>データ通信の基盤</td>
+                        <td>インターネットの標準プロトコル。確実にデータを届ける</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HTTP/HTTPS</strong></td>
+                        <td>Webページ閲覧</td>
+                        <td>ブラウザとWebサーバー間の通信。HTTPSは暗号化版</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SMTP</strong></td>
+                        <td>メール送信</td>
+                        <td>メールを送るためのプロトコル</td>
+                    </tr>
+                    <tr>
+                        <td><strong>POP3/IMAP</strong></td>
+                        <td>メール受信</td>
+                        <td>メールを受け取るためのプロトコル</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DNS</strong></td>
+                        <td>名前解決</td>
+                        <td>ドメイン名をIPアドレスに変換</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DHCP</strong></td>
+                        <td>IP自動割り当て</td>
+                        <td>端末に自動でIPアドレスを割り当てる</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tip-box">
+                HTTPSの「S」は「Secure（安全）」の意味。個人情報を入力するサイトは必ずHTTPSを確認しましょう（URLが https:// で始まる）。
+            </div>
+        </section>
+
+        <!-- 2. IPアドレス -->
+        <div class="network-category">
+            <h2>2. IPアドレス</h2>
+        </div>
+
+        <section>
+            <h3>2.1 IPアドレスとは</h3>
+            <div class="concept-box">
+                <h4>IPアドレス（Internet Protocol Address）</h4>
+                <p>ネットワーク上の機器を識別するための<strong>「住所」</strong>のようなものです。郵便を送るときに住所が必要なように、データを届けるにはIPアドレスが必要です。</p>
+            </div>
+
+            <div class="network-item">
+                <h4>IPv4アドレス</h4>
+                <p>現在最も一般的なIPアドレスの形式です。</p>
+                <ul>
+                    <li><strong>形式</strong>：<code>192.168.1.10</code> のように、<strong>0～255の数字を「.（ドット）」で4つ区切った形</strong></li>
+                    <li><strong>例</strong>：
+                        <ul>
+                            <li><code>192.168.1.1</code> （ルーターのアドレス）</li>
+                            <li><code>192.168.1.100</code> （PCのアドレス）</li>
+                            <li><code>8.8.8.8</code> （GoogleのDNSサーバー）</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="network-item">
+                <h4>グローバルIPアドレスとプライベートIPアドレス</h4>
+                <table>
+                    <tr>
+                        <th>種類</th>
+                        <th>範囲</th>
+                        <th>説明</th>
+                    </tr>
+                    <tr>
+                        <td><strong>グローバルIP</strong></td>
+                        <td>インターネット全体</td>
+                        <td>インターネット上で一意（世界に1つ）のアドレス。ISP（プロバイダー）から割り当てられる</td>
+                    </tr>
+                    <tr>
+                        <td><strong>プライベートIP</strong></td>
+                        <td>組織内（LAN内）</td>
+                        <td>組織内でのみ使えるアドレス。外部とはルーターが変換（NAT）して通信</td>
+                    </tr>
+                </table>
+
+                <h5>プライベートIPアドレスの範囲</h5>
+                <ul>
+                    <li><code>10.0.0.0 ～ 10.255.255.255</code></li>
+                    <li><code>172.16.0.0 ～ 172.31.255.255</code></li>
+                    <li><code>192.168.0.0 ～ 192.168.255.255</code> ★学校でよく使われる</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                学校のPC（<code>192.168.1.100</code>）がWebサイト（<code>203.0.113.50</code>）にアクセスする場合：
+                <ol>
+                    <li>PCはルーター（<code>192.168.1.1</code>）にデータを送る</li>
+                    <li>ルーターがプライベートIP（<code>192.168.1.100</code>）をグローバルIP（<code>203.0.113.1</code>）に変換（NAT）</li>
+                    <li>インターネットを経由してWebサーバーに届く</li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h3>2.2 サブネットマスク</h3>
+            <div class="concept-box">
+                <h4>サブネットマスク</h4>
+                <p>IPアドレスを<strong>「ネットワーク部」と「ホスト部」に分ける</strong>ためのマスク（境界線）です。</p>
+            </div>
+
+            <div class="network-item">
+                <h4>サブネットマスクの表記</h4>
+                <ul>
+                    <li><strong>一般的な形式</strong>：<code>255.255.255.0</code></li>
+                    <li><strong>CIDR表記</strong>：<code>/24</code> （「255.255.255.0」と同じ意味）</li>
+                </ul>
+
+                <h5>よく使われるサブネットマスク</h5>
+                <table>
+                    <tr>
+                        <th>サブネットマスク</th>
+                        <th>CIDR</th>
+                        <th>使用可能なホスト数</th>
+                        <th>用途</th>
+                    </tr>
+                    <tr>
+                        <td>255.255.255.0</td>
+                        <td>/24</td>
+                        <td>254台</td>
+                        <td>小規模ネットワーク（学校の1フロア等）</td>
+                    </tr>
+                    <tr>
+                        <td>255.255.0.0</td>
+                        <td>/16</td>
+                        <td>65,534台</td>
+                        <td>大規模ネットワーク（学校全体等）</td>
+                    </tr>
+                    <tr>
+                        <td>255.255.255.128</td>
+                        <td>/25</td>
+                        <td>126台</td>
+                        <td>より細かく分割したい場合</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="example-box">
+                IPアドレス：<code>192.168.1.100</code><br>
+                サブネットマスク：<code>255.255.255.0</code><br>
+                →ネットワーク部：<code>192.168.1</code>（どのネットワークか）<br>
+                →ホスト部：<code>100</code>（ネットワーク内のどの機器か）
+            </div>
+        </section>
+
+        <section>
+            <h3>2.3 デフォルトゲートウェイ</h3>
+            <div class="concept-box">
+                <h4>デフォルトゲートウェイ</h4>
+                <p>他のネットワークやインターネットに出るための<strong>「出口」</strong>です。通常はルーターのIPアドレスを指定します。</p>
+            </div>
+
+            <div class="network-item">
+                <h4>設定例</h4>
+                <ul>
+                    <li>IPアドレス：<code>192.168.1.100</code></li>
+                    <li>サブネットマスク：<code>255.255.255.0</code></li>
+                    <li>デフォルトゲートウェイ：<code>192.168.1.1</code> （ルーター）</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                PCがインターネット上のWebサイトにアクセスしたい場合、まずデフォルトゲートウェイ（ルーター）にデータを送り、ルーターがインターネットに転送します。
+            </div>
+        </section>
+
+        <!-- 3. DNS -->
+        <div class="network-category">
+            <h2>3. DNS（Domain Name System）</h2>
+        </div>
+
+        <section>
+            <h3>3.1 DNSとは</h3>
+            <div class="concept-box">
+                <h4>DNS</h4>
+                <p><strong>ドメイン名（例：www.example.com）をIPアドレス（例：203.0.113.50）に変換する</strong>仕組みです。人間が覚えやすい名前と、コンピュータが使う数字を対応付ける「電話帳」のようなものです。</p>
+            </div>
+
+            <div class="network-item">
+                <h4>DNSの仕組み</h4>
+                <ol>
+                    <li>ユーザーがブラウザに「www.mext.go.jp」と入力</li>
+                    <li>PCがDNSサーバーに「www.mext.go.jpのIPアドレスは？」と問い合わせ</li>
+                    <li>DNSサーバーが「210.224.205.60」と回答</li>
+                    <li>PCがそのIPアドレスにアクセス</li>
+                </ol>
+            </div>
+
+            <div class="diagram">
+                <h4>DNS名前解決の流れ</h4>
+                <pre style="text-align: left; font-family: monospace;">
+[PC]
+  ↓ ① 「www.mext.go.jp のIPアドレスは？」
+[DNSサーバー（例：8.8.8.8）]
+  ↓ ② 「210.224.205.60 です」
+[PC]
+  ↓ ③ IPアドレス 210.224.205.60 にアクセス
+[Webサーバー（文部科学省）]
+                </pre>
+            </div>
+
+            <div class="network-item">
+                <h4>よく使われるDNSサーバー</h4>
+                <table>
+                    <tr>
+                        <th>提供元</th>
+                        <th>プライマリDNS</th>
+                        <th>セカンダリDNS</th>
+                    </tr>
+                    <tr>
+                        <td>Google Public DNS</td>
+                        <td><code>8.8.8.8</code></td>
+                        <td><code>8.8.4.4</code></td>
+                    </tr>
+                    <tr>
+                        <td>Cloudflare</td>
+                        <td><code>1.1.1.1</code></td>
+                        <td><code>1.0.0.1</code></td>
+                    </tr>
+                    <tr>
+                        <td>OpenDNS</td>
+                        <td><code>208.67.222.222</code></td>
+                        <td><code>208.67.220.220</code></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="troubleshooting-box">
+                「Webサイトが表示されない」トラブルの原因がDNSの場合、DNSサーバーを変更すると解決することがあります。Google Public DNS（8.8.8.8）に変更して試してみましょう。
+            </div>
+        </section>
+
+        <section>
+            <h3>3.2 DNSキャッシュ</h3>
+            <div class="concept-box">
+                <h4>DNSキャッシュ</h4>
+                <p>一度調べたドメイン名とIPアドレスの対応を<strong>一時的に保存</strong>しておく仕組みです。毎回DNSサーバーに問い合わせる手間を省き、高速化します。</p>
+            </div>
+
+            <div class="network-item">
+                <h4>DNSキャッシュのクリア方法</h4>
+                <p>DNSキャッシュが古い情報のままだと、正しいIPアドレスにアクセスできません。その場合はキャッシュをクリアします。</p>
+
+                <h5>Windows</h5>
+                <div class="command-box">
+                    ipconfig /flushdns
+                </div>
+
+                <h5>macOS</h5>
+                <div class="command-box">
+                    sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+                </div>
+
+                <h5>Chrome（ブラウザのDNSキャッシュ）</h5>
+                <div class="command-box">
+                    chrome://net-internals/#dns
+                    → 「Clear host cache」をクリック
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. DHCP -->
+        <div class="network-category">
+            <h2>4. DHCP（Dynamic Host Configuration Protocol）</h2>
+        </div>
+
+        <section>
+            <h3>4.1 DHCPとは</h3>
+            <div class="concept-box">
+                <h4>DHCP</h4>
+                <p>ネットワークに接続した機器に対して、<strong>自動的にIPアドレスを割り当てる</strong>仕組みです。手動で設定する手間が省け、IPアドレスの重複を防げます。</p>
+            </div>
+
+            <div class="network-item">
+                <h4>DHCPの仕組み</h4>
+                <ol>
+                    <li><strong>DHCP Discover</strong>：PCが「DHCPサーバーはいませんか？」とネットワーク全体に問い合わせ</li>
+                    <li><strong>DHCP Offer</strong>：DHCPサーバーが「私がいます。このIPアドレスを使ってください」と提案</li>
+                    <li><strong>DHCP Request</strong>：PCが「そのIPアドレスを使います」と要求</li>
+                    <li><strong>DHCP Ack</strong>：DHCPサーバーが「OK、割り当てました」と確認</li>
+                </ol>
+            </div>
+
+            <div class="network-item">
+                <h4>DHCPで自動設定される項目</h4>
+                <ul>
+                    <li>IPアドレス（例：<code>192.168.1.100</code>）</li>
+                    <li>サブネットマスク（例：<code>255.255.255.0</code>）</li>
+                    <li>デフォルトゲートウェイ（例：<code>192.168.1.1</code>）</li>
+                    <li>DNSサーバー（例：<code>8.8.8.8</code>）</li>
+                    <li>リース期間（IPアドレスを使える期間）</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                学校の児童生徒用タブレットは、ほぼ全てDHCPで自動設定されています。手動設定（固定IP）は、サーバーやネットワークプリンターなど、IPアドレスが変わると困る機器のみに使います。
+            </div>
+        </section>
+
+        <section>
+            <h3>4.2 固定IPアドレス（手動設定）</h3>
+            <div class="network-item">
+                <h4>固定IPが必要な機器</h4>
+                <ul>
+                    <li>ネットワークプリンター（常に同じIPでアクセスできるように）</li>
+                    <li>サーバー（ファイルサーバー、Webサーバー等）</li>
+                    <li>ネットワークカメラ</li>
+                    <li>電子黒板（一部の機種）</li>
+                </ul>
+
+                <h4>固定IP設定時の注意点</h4>
+                <ul>
+                    <li><strong>DHCPの範囲外に設定</strong>：DHCPが <code>192.168.1.100～200</code> を割り当てる場合、固定IPは <code>192.168.1.10</code> など範囲外にする</li>
+                    <li><strong>重複を避ける</strong>：既に使われているIPアドレスは設定しない</li>
+                    <li><strong>台帳管理</strong>：どの機器にどのIPを割り当てたか記録する</li>
+                </ul>
+            </div>
+
+            <div class="troubleshooting-box">
+                「IPアドレスの競合」エラーが出た場合、同じIPアドレスを持つ機器が2台存在しています。一方のIPアドレスを変更しましょう。
+            </div>
+        </section>
+
+        <!-- 5. ネットワーク機器 -->
+        <div class="network-category">
+            <h2>5. ネットワーク機器</h2>
+        </div>
+
+        <section>
+            <h3>5.1 ルーター（Router）</h3>
+            <div class="concept-box">
+                <h4>ルーター</h4>
+                <p>異なるネットワーク同士を接続し、<strong>データを適切な経路に転送する</strong>機器です。家庭や学校では、LANとインターネットを繋ぐ役割を果たします。</p>
+            </div>
+
+            <div class="network-item">
+                <h4>ルーターの機能</h4>
+                <ul>
+                    <li><strong>ルーティング</strong>：データを適切な経路に転送</li>
+                    <li><strong>NAT/NAPT</strong>：プライベートIPとグローバルIPを変換</li>
+                    <li><strong>DHCP機能</strong>：IPアドレスの自動割り当て</li>
+                    <li><strong>ファイアウォール</strong>：不正アクセスを防ぐ</li>
+                    <li><strong>無線LANアクセスポイント</strong>：Wi-Fi機能（Wi-Fiルーターの場合）</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                学校のルーターは、職員室や教室（LAN）とインターネット（WAN）を繋ぎ、外部からの不正アクセスを防ぎながら、内部のPCやタブレットがインターネットにアクセスできるようにします。
+            </div>
+        </section>
+
+        <section>
+            <h3>5.2 スイッチ（Switch）</h3>
+            <div class="concept-box">
+                <h4>スイッチ（スイッチングハブ）</h4>
+                <p>複数の機器を接続し、<strong>データを適切な宛先にのみ送る</strong>機器です。MACアドレスを学習し、効率的にデータを転送します。</p>
+            </div>
+
+            <div class="network-item">
+                <h4>スイッチの特徴</h4>
+                <ul>
+                    <li>MACアドレスを見て、宛先にのみデータを送る（無駄な通信を減らす）</li>
+                    <li>全二重通信（送信と受信を同時に行える）</li>
+                    <li>ポート数が多い（8ポート、16ポート、24ポート等）</li>
+                    <li>管理機能付き（VLAN、QoS等）と管理機能なしがある</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>スイッチの接続例</h4>
+                <pre style="text-align: left; font-family: monospace;">
+        [ルーター]
+            |
+        [スイッチ]
+     /    |    |    \
+   PC1  PC2  PC3  プリンター
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>5.3 ハブ（Hub）</h3>
+            <div class="concept-box">
+                <h4>ハブ（リピータハブ）</h4>
+                <p>複数の機器を接続する機器ですが、スイッチと違い、<strong>全てのポートにデータを送信</strong>します（ブロードキャスト）。現在はほとんど使われていません。</p>
+            </div>
+
+            <div class="network-item">
+                <h4>ハブとスイッチの違い</h4>
+                <table>
+                    <tr>
+                        <th>項目</th>
+                        <th>ハブ</th>
+                        <th>スイッチ</th>
+                    </tr>
+                    <tr>
+                        <td>データの送り方</td>
+                        <td>全ポートに送信（ブロードキャスト）</td>
+                        <td>宛先にのみ送信</td>
+                    </tr>
+                    <tr>
+                        <td>効率</td>
+                        <td>低い（無駄な通信が多い）</td>
+                        <td>高い</td>
+                    </tr>
+                    <tr>
+                        <td>価格</td>
+                        <td>安い</td>
+                        <td>やや高い</td>
+                    </tr>
+                    <tr>
+                        <td>現在の使用状況</td>
+                        <td>ほぼ使われない</td>
+                        <td>主流</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tip-box">
+                「ハブ」という言葉は今でも使われますが、実際にはスイッチを指していることがほとんどです。購入する際は「スイッチングハブ」または「スイッチ」を選びましょう。
+            </div>
+        </section>
+
+        <section>
+            <h3>5.4 アクセスポイント（Access Point）</h3>
+            <div class="concept-box">
+                <h4>無線LANアクセスポイント</h4>
+                <p>有線LANと無線LAN（Wi-Fi）を<strong>橋渡しする</strong>機器です。タブレットやスマートフォンを無線でネットワークに接続できるようにします。</p>
+            </div>
+
+            <div class="network-item">
+                <h4>アクセスポイントの役割</h4>
+                <ul>
+                    <li>有線LANを無線LANに変換</li>
+                    <li>複数の無線端末を同時接続</li>
+                    <li>SSIDとパスワードで接続管理</li>
+                    <li>暗号化（WPA2/WPA3）</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <h4>アクセスポイントの構成</h4>
+                <pre style="text-align: left; font-family: monospace;">
+[ルーター] ─ [スイッチ] ─ [アクセスポイント]
+                              ↓ Wi-Fi
+                          タブレット（無線接続）
+                </pre>
+            </div>
+
+            <div class="tip-box">
+                家庭用の「Wi-Fiルーター」は、ルーター + スイッチ + アクセスポイントが一体になった製品です。学校では、これらを別々の機器で構成することが多いです。
+            </div>
+        </section>
+
+        <!-- 6. 無線LAN（Wi-Fi） -->
+        <div class="network-category">
+            <h2>6. 無線LAN（Wi-Fi）</h2>
+        </div>
+
+        <section>
+            <h3>6.1 Wi-Fi規格</h3>
+            <div class="network-item">
+                <h4>Wi-Fi規格の種類</h4>
+                <table>
+                    <tr>
+                        <th>規格</th>
+                        <th>周波数帯</th>
+                        <th>最大速度（理論値）</th>
+                        <th>特徴</th>
+                    </tr>
+                    <tr>
+                        <td>Wi-Fi 4<br>(IEEE 802.11n)</td>
+                        <td>2.4GHz / 5GHz</td>
+                        <td>600Mbps</td>
+                        <td>古い規格だが広く普及</td>
+                    </tr>
+                    <tr>
+                        <td>Wi-Fi 5<br>(IEEE 802.11ac)</td>
+                        <td>5GHz</td>
+                        <td>6.9Gbps</td>
+                        <td>現在の主流</td>
+                    </tr>
+                    <tr>
+                        <td>Wi-Fi 6<br>(IEEE 802.11ax)</td>
+                        <td>2.4GHz / 5GHz</td>
+                        <td>9.6Gbps</td>
+                        <td>最新規格。多数同時接続に強い</td>
+                    </tr>
+                    <tr>
+                        <td>Wi-Fi 6E<br>(IEEE 802.11ax)</td>
+                        <td>2.4GHz / 5GHz / 6GHz</td>
+                        <td>9.6Gbps</td>
+                        <td>6GHz帯追加。混雑回避</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tip-box">
+                学校で児童生徒が40台のタブレットを同時に使う場合、Wi-Fi 6（802.11ax）以上の対応が推奨されます。
+            </div>
+        </section>
+
+        <section>
+            <h3>6.2 2.4GHz帯と5GHz帯</h3>
+            <div class="network-item">
+                <table>
+                    <tr>
+                        <th>項目</th>
+                        <th>2.4GHz帯</th>
+                        <th>5GHz帯</th>
+                    </tr>
+                    <tr>
+                        <td>速度</td>
+                        <td>△ 遅い</td>
+                        <td>◎ 速い</td>
+                    </tr>
+                    <tr>
+                        <td>障害物に対する強さ</td>
+                        <td>◎ 強い（壁を越えやすい）</td>
+                        <td>△ 弱い</td>
+                    </tr>
+                    <tr>
+                        <td>到達距離</td>
+                        <td>◎ 長い</td>
+                        <td>○ やや短い</td>
+                    </tr>
+                    <tr>
+                        <td>混雑</td>
+                        <td>✗ 混雑しやすい（Bluetooth、電子レンジと干渉）</td>
+                        <td>○ 比較的空いている</td>
+                    </tr>
+                    <tr>
+                        <td>推奨用途</td>
+                        <td>遠い場所、障害物が多い場所</td>
+                        <td>高速通信が必要な場所</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="example-box">
+                <strong>学校での使い分け</strong>
+                <ul>
+                    <li><strong>5GHz帯</strong>：教室内でタブレット授業（高速・安定重視）</li>
+                    <li><strong>2.4GHz帯</strong>：体育館や校庭など遠い場所（到達距離重視）</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>6.3 SSIDとパスワード</h3>
+            <div class="concept-box">
+                <h4>SSID（Service Set Identifier）</h4>
+                <p>無線LANネットワークの<strong>名前</strong>です。Wi-Fi接続時に選択する「○○-WiFi」などの表示がSSIDです。</p>
+            </div>
+
+            <div class="network-item">
+                <h4>SSIDの設定</h4>
+                <ul>
+                    <li><strong>わかりやすい名前</strong>：「SchoolWiFi-Staff」「SchoolWiFi-Student」など</li>
+                    <li><strong>学校名を直接入れない</strong>：セキュリティのため</li>
+                    <li><strong>用途別に分ける</strong>：
+                        <ul>
+                            <li>教職員用</li>
+                            <li>児童生徒用</li>
+                            <li>来客用（ゲストネットワーク）</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="network-item">
+                <h4>パスワード（暗号化キー）</h4>
+                <p>Wi-Fiに接続するためのパスワードです。<strong>WPA2/WPA3</strong>による暗号化が必須です。</p>
+                <ul>
+                    <li><strong>強固なパスワード</strong>：12文字以上、英数字+記号の組み合わせ</li>
+                    <li><strong>適切なタイミングでの変更</strong>：
+                        <ul>
+                            <li>漏洩の疑いがある場合</li>
+                            <li>外部の人が接続していた可能性がある場合</li>
+                            <li>※定期的な変更よりも、WPA3など強力な暗号化方式の採用が重要です</li>
+                        </ul>
+                    </li>
+                    <li><strong>安易なパスワードは禁止</strong>：「password」「12345678」等</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                WEP暗号化は数分で解読可能なため、絶対に使用しないでください。必ずWPA2以上を使用しましょう。
+            </div>
+        </section>
+
+        <section>
+            <h3>6.4 Wi-Fiトラブルシューティング</h3>
+            <div class="troubleshooting-box">
+                <h4>よくあるWi-Fiトラブルと対処法</h4>
+                
+                <h5>1. 「Wi-Fiに繋がらない」</h5>
+                <ul>
+                    <li>✓ SSIDとパスワードが正しいか確認</li>
+                    <li>✓ 機内モードになっていないか確認</li>
+                    <li>✓ アクセスポイントの電源が入っているか</li>
+                    <li>✓ 端末を再起動</li>
+                    <li>✓ Wi-Fi設定を削除して再登録</li>
+                </ul>
+
+                <h5>2. 「Wi-Fiは繋がるがインターネットに繋がらない」</h5>
+                <ul>
+                    <li>✓ ルーターの電源が入っているか</li>
+                    <li>✓ LANケーブルが抜けていないか</li>
+                    <li>✓ DNSサーバーの設定を確認（8.8.8.8に変更して試す）</li>
+                    <li>✓ ルーターを再起動</li>
+                </ul>
+
+                <h5>3. 「Wi-Fiが遅い」</h5>
+                <ul>
+                    <li>✓ 接続台数が多すぎないか
+                        <ul>
+                            <li>Wi-Fi 4 (802.11n): 15～20台が目安</li>
+                            <li>Wi-Fi 5 (802.11ac): 20～30台が目安</li>
+                            <li>Wi-Fi 6 (802.11ax): 50台以上も可能</li>
+                            <li>※実際の接続可能台数は、帯域幅の使用状況により変動します</li>
+                        </ul>
+                    </li>
+                    <li>✓ 2.4GHz帯の混雑（5GHz帯に切り替え）</li>
+                    <li>✓ 電子レンジやBluetoothとの干渉</li>
+                    <li>✓ アクセスポイントとの距離が遠い</li>
+                    <li>✓ チャンネルの重複（チャンネル変更）</li>
+                </ul>
+
+                <h5>4. 「特定の場所だけ繋がらない」</h5>
+                <ul>
+                    <li>✓ 電波が届いていない（アクセスポイントの追加が必要）</li>
+                    <li>✓ 鉄筋コンクリートの壁で遮断されている</li>
+                    <li>✓ 金属製のロッカーや棚が電波を遮っている</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 7. ネットワークコマンド -->
+        <div class="network-category">
+            <h2>7. 基本的なネットワークコマンド</h2>
+        </div>
+
+        <section>
+            <h3>7.1 ipconfig / ifconfig</h3>
+            <div class="network-item">
+                <h4>自分のIPアドレスを確認する</h4>
+                
+                <h5>Windows</h5>
+                <div class="command-box">
+                    ipconfig
+                </div>
+                <p>詳細情報を表示：</p>
+                <div class="command-box">
+                    ipconfig /all
+                </div>
+
+                <h5>macOS / Linux</h5>
+                <div class="command-box">
+                    ifconfig
+                </div>
+                <p>または</p>
+                <div class="command-box">
+                    ip addr
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>7.2 ping</h3>
+            <div class="network-item">
+                <h4>相手との通信を確認する</h4>
+                <p><strong>ping</strong>コマンドは、指定したIPアドレスやドメイン名に対して通信が可能かを確認します。</p>
+
+                <h5>使い方</h5>
+                <div class="command-box">
+                    ping 8.8.8.8
+                </div>
+                <p>または</p>
+                <div class="command-box">
+                    ping www.google.com
+                </div>
+
+                <h5>結果の見方</h5>
+                <ul>
+                    <li><strong>応答がある</strong>：通信OK（「Reply from...」と表示）</li>
+                    <li><strong>応答がない</strong>：通信NG（「Request timed out」と表示）</li>
+                    <li><strong>time=○○ms</strong>：応答時間（小さいほど速い）
+                        <ul>
+                            <li>1～30ms：非常に速い</li>
+                            <li>30～100ms：普通</li>
+                            <li>100ms以上：遅い</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="troubleshooting-box">
+                <strong>pingを使ったトラブル診断</strong>
+                <ol>
+                    <li><code>ping 127.0.0.1</code> → 自分のPCのネットワーク機能が正常か確認</li>
+                    <li><code>ping 192.168.1.1</code> → ルーターまで通信できるか確認</li>
+                    <li><code>ping 8.8.8.8</code> → インターネットに通信できるか確認</li>
+                    <li><code>ping www.google.com</code> → DNSが正常に動作しているか確認</li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h3>7.3 traceroute / tracert</h3>
+            <div class="network-item">
+                <h4>通信経路を調べる</h4>
+                <p>データが目的地に到達するまでに、どのルーターを経由しているかを表示します。</p>
+
+                <h5>Windows</h5>
+                <div class="command-box">
+                    tracert www.google.com
+                </div>
+
+                <h5>macOS / Linux</h5>
+                <div class="command-box">
+                    traceroute www.google.com
+                </div>
+
+                <h5>使い道</h5>
+                <ul>
+                    <li>通信が遅い原因の特定</li>
+                    <li>どこで通信が止まっているか確認</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>7.4 nslookup</h3>
+            <div class="network-item">
+                <h4>DNSの名前解決を確認する</h4>
+                <p>ドメイン名がどのIPアドレスに変換されているかを確認します。</p>
+
+                <div class="command-box">
+                    nslookup www.mext.go.jp
+                </div>
+
+                <h5>使い道</h5>
+                <ul>
+                    <li>DNSが正しく動作しているか確認</li>
+                    <li>特定のドメインのIPアドレスを調べる</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- まとめ -->
+        <section class="summary">
+            <h2>📚 まとめ</h2>
+            <div class="network-item">
+                <p>ネットワークの基礎知識は、ICT支援員として<strong>トラブルシューティングの第一歩</strong>です。全てを完璧に理解する必要はありませんが、基本的な用語と仕組みを知っておくことで、問題の切り分けや業者への説明がスムーズになります。</p>
+                
+                <h4>最低限押さえておくべきポイント</h4>
+                <ol>
+                    <li><strong>IPアドレス</strong>：ネットワーク上の住所</li>
+                    <li><strong>DNS</strong>：ドメイン名をIPアドレスに変換</li>
+                    <li><strong>DHCP</strong>：IPアドレスを自動割り当て</li>
+                    <li><strong>ルーター</strong>：異なるネットワークを繋ぐ</li>
+                    <li><strong>スイッチ</strong>：同じネットワーク内の機器を繋ぐ</li>
+                    <li><strong>Wi-Fi</strong>：無線LAN。5GHz帯推奨、WPA2/WPA3必須</li>
+                    <li><strong>ping</strong>：通信確認の基本コマンド</li>
+                </ol>
+
+                <p>実際のトラブル対応では、これらの知識を組み合わせて原因を特定していきます。わからないことがあれば、遠慮せず専門業者やベテランのICT支援員に相談しましょう。</p>
+            </div>
+        </section>
+
+        <!-- 関連ページへのリンク -->
+        <section class="related-links">
+            <h2>🔗 関連ページ</h2>
+            <ul>
+                <li><a href="security.html">情報セキュリティ</a> - ネットワークセキュリティの詳細</li>
+                <li><a href="troubleshooting.html">トラブルシューティング</a> - ネットワーク関連Q&A</li>
+                <li><a href="tools.html">ICT機器・ツール</a> - ネットワーク機器の詳細</li>
+                <li><a href="basics.html">ICT支援員の基礎知識</a> - 業務全般の基礎</li>
+            </ul>
+        </section>
+
+        <!-- 参考資料 -->
+        <section class="references">
+            <h2>📖 参考資料</h2>
+            <ul>
+                <li><a href="https://www.ipa.go.jp/" target="_blank" rel="noopener">IPA 情報処理推進機構</a> - IT用語辞典</li>
+                <li><a href="https://www.soumu.go.jp/main_sosiki/joho_tsusin/top/local_support/ict/" target="_blank" rel="noopener">総務省 - ICT利活用</a></li>
+                <li><a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/index.htm" target="_blank" rel="noopener">文部科学省 - 教育の情報化</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

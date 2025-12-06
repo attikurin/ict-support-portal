@@ -1,0 +1,15 @@
+共通ヘッダー修正作業
+
+残りのページ:
+1. security.html
+2. network-basics.html
+3. special-needs-ict.html
+4. communication-skills.html
+
+各ページで修正が必要な箇所:
+- Font Awesome と Google Fonts の追加
+- meta description の追加
+- header-banner + main-nav への変更
+- page-header の追加
+- site-footer への変更
+- JavaScript ファイルの追加

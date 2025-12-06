@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オンライン授業支援 - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="オンライン授業の技術支援とトラブル対応。Zoom、Microsoft Teams、Google Meetの活用方法、配信トラブル解決、ハイブリッド授業の実践ガイド。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-video"></i> オンライン授業支援</h1>
+            <p>Zoom・Teams・Google Meetを活用したオンライン授業の技術支援とトラブル対応</p>
+        </div>
+
+        <div class="intro-box">
+            <h2><i class="fas fa-info-circle"></i> このページで学べること</h2>
+            <p>COVID-19パンデミック以降、オンライン授業は教育現場の重要なツールとなりました。本ページでは、ICT支援員がオンライン授業をスムーズに支援するための技術知識とトラブル対応方法を解説します。</p>
+        </div>
+
+        <div class="checklist-box">
+            <h3><i class="fas fa-check-circle"></i> 学習目標チェックリスト</h3>
+            <ul class="checklist">
+                <li>主要なWeb会議システムの特徴と使い分けを理解する</li>
+                <li>オンライン授業の事前準備と環境設定ができる</li>
+                <li>配信中のトラブルに迅速に対応できる</li>
+                <li>ハイブリッド授業（対面＋オンライン）の支援ができる</li>
+                <li>録画・アーカイブの運用方法を理解する</li>
+                <li>著作権とプライバシーに配慮した運用ができる</li>
+                <li>質の高いオンライン授業の支援ポイントを理解する</li>
+            </ul>
+        </div>
+
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-desktop"></i> 1. 主要Web会議システムの特徴</h2>
+            
+            <h3>1.1 Zoom</h3>
+            <div class="concept-box">
+                <h4>特徴と強み</h4>
+                <ul>
+                    <li><strong>接続の安定性:</strong> 低帯域でも比較的安定した接続を維持</li>
+                    <li><strong>大規模対応:</strong> 無料版でも100人まで同時接続可能（40分制限あり）</li>
+                    <li><strong>ブレイクアウトルーム:</strong> グループワークに最適な機能</li>
+                    <li><strong>録画機能:</strong> ローカルまたはクラウドに保存可能</li>
+                    <li><strong>画面共有:</strong> アプリケーション単位での共有が可能</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h4><i class="fas fa-lightbulb"></i> Zoom活用シーン</h4>
+                <ul>
+                    <li><strong>オンライン授業:</strong> 安定性が高く、多人数での利用に適している</li>
+                    <li><strong>グループワーク:</strong> ブレイクアウトルームで小グループ討議</li>
+                    <li><strong>保護者会:</strong> 大人数での説明会・質疑応答</li>
+                    <li><strong>研修会:</strong> 外部講師を招いたオンライン研修</li>
+                </ul>
+            </div>
+
+            <h3>1.2 Microsoft Teams</h3>
+            <div class="concept-box">
+                <h4>特徴と強み</h4>
+                <ul>
+                    <li><strong>Microsoft 365統合:</strong> Word、Excel、PowerPointとシームレスに連携</li>
+                    <li><strong>チーム機能:</strong> クラスごとのチャンネル管理が可能</li>
+                    <li><strong>課題管理:</strong> 課題の配布・回収・採点が一元管理できる</li>
+                    <li><strong>セキュリティ:</strong> 企業向けセキュリティ基準に準拠</li>
+                    <li><strong>背景効果:</strong> 背景ぼかし・仮想背景が利用可能</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h4><i class="fas fa-lightbulb"></i> Teams活用シーン</h4>
+                <ul>
+                    <li><strong>クラス運営:</strong> チーム内でのファイル共有・課題管理</li>
+                    <li><strong>ハイブリッド授業:</strong> 教室からの配信に対応</li>
+                    <li><strong>職員会議:</strong> 記録や資料共有が容易</li>
+                    <li><strong>個別指導:</strong> 1対1での学習支援</li>
+                </ul>
+            </div>
+
+            <h3>1.3 Google Meet</h3>
+            <div class="concept-box">
+                <h4>特徴と強み</h4>
+                <ul>
+                    <li><strong>Google Workspace統合:</strong> Classroom、ドライブと連携</li>
+                    <li><strong>シンプルな操作:</strong> 直感的なインターフェース</li>
+                    <li><strong>ブラウザ利用:</strong> アプリインストール不要で参加可能</li>
+                    <li><strong>自動字幕:</strong> リアルタイムでの字幕表示（英語・日本語対応）</li>
+                    <li><strong>低遅延:</strong> Googleインフラによる高速通信</li>
+                </ul>
+            </div>
+
+            <div class="comparison-table">
+                <h4><i class="fas fa-balance-scale"></i> 3システムの比較表</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>Zoom</th>
+                            <th>Microsoft Teams</th>
+                            <th>Google Meet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>無料版参加人数</td>
+                            <td>100人（40分制限）※</td>
+                            <td>100人（60分制限）※</td>
+                            <td>100人（60分制限）※</td>
+                        </tr>
+                        <tr>
+                            <td>ブレイクアウトルーム</td>
+                            <td>◎ 自由に設定可</td>
+                            <td>○ チャンネル利用</td>
+                            <td>× 非対応</td>
+                        </tr>
+                        <tr>
+                            <td>画面共有</td>
+                            <td>◎ アプリ単位可</td>
+                            <td>◎ アプリ単位可</td>
+                            <td>○ 画面全体のみ</td>
+                        </tr>
+                        <tr>
+                            <td>録画機能</td>
+                            <td>◎ ローカル/クラウド</td>
+                            <td>◎ クラウドのみ</td>
+                            <td>○ クラウドのみ</td>
+                        </tr>
+                        <tr>
+                            <td>チャット保存</td>
+                            <td>○ 会議中のみ</td>
+                            <td>◎ 永続的に保存</td>
+                            <td>× 会議後消失</td>
+                        </tr>
+                        <tr>
+                            <td>操作の簡単さ</td>
+                            <td>◎</td>
+                            <td>○</td>
+                            <td>◎</td>
+                        </tr>
+                        <tr>
+                            <td>安定性</td>
+                            <td>◎</td>
+                            <td>○</td>
+                            <td>◎</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="note" style="margin-top: 1rem; font-size: 0.9rem; color: #666;"><i class="fas fa-info-circle"></i> <strong>※2024年時点の情報です。</strong>各システムの仕様（時間制限、参加人数等）は変更される可能性があります。最新情報は各公式サイトをご確認ください。</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-cog"></i> 2. オンライン授業の事前準備</h2>
+            
+            <h3>2.1 環境チェックリスト</h3>
+            <div class="checklist-box">
+                <h4><i class="fas fa-check-square"></i> 配信側（教員）の確認事項</h4>
+                <ul class="checklist">
+                    <li><strong>インターネット接続:</strong> 有線LAN推奨（最低10Mbps以上）</li>
+                    <li><strong>カメラ:</strong> 内蔵または外付けWebカメラの動作確認</li>
+                    <li><strong>マイク:</strong> ヘッドセットまたは外付けマイク推奨</li>
+                    <li><strong>スピーカー/イヤホン:</strong> ハウリング防止のため</li>
+                    <li><strong>照明:</strong> 顔が明るく映るよう環境光または照明を調整</li>
+                    <li><strong>背景:</strong> プライバシーに配慮した背景設定</li>
+                    <li><strong>ソフトウェア:</strong> 最新バージョンへの更新</li>
+                    <li><strong>テスト接続:</strong> 事前に映像・音声のテスト実施</li>
+                </ul>
+            </div>
+
+            <div class="checklist-box">
+                <h4><i class="fas fa-check-square"></i> 受信側（児童生徒）の確認事項</h4>
+                <ul class="checklist">
+                    <li><strong>デバイス:</strong> タブレットまたはPCの動作確認</li>
+                    <li><strong>充電:</strong> バッテリー残量の確認（授業時間分）</li>
+                    <li><strong>アプリ/ブラウザ:</strong> 必要なアプリのインストール</li>
+                    <li><strong>アカウント:</strong> ログイン情報の確認</li>
+                    <li><strong>静かな環境:</strong> 授業に集中できる場所の確保</li>
+                    <li><strong>保護者への説明:</strong> オンライン授業の実施について連絡</li>
+                </ul>
+            </div>
+
+            <h3>2.2 ネットワーク帯域の確保</h3>
+            <div class="data-box">
+                <h4>推奨帯域幅</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>用途</th>
+                            <th>推奨速度（下り）</th>
+                            <th>推奨速度（上り）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ビデオ視聴のみ</td>
+                            <td>3 Mbps以上</td>
+                            <td>1 Mbps以上</td>
+                        </tr>
+                        <tr>
+                            <td>ビデオ送信あり</td>
+                            <td>5 Mbps以上</td>
+                            <td>3 Mbps以上</td>
+                        </tr>
+                        <tr>
+                            <td>画面共有あり</td>
+                            <td>10 Mbps以上</td>
+                            <td>5 Mbps以上</td>
+                        </tr>
+                        <tr>
+                            <td>HD画質配信</td>
+                            <td>15 Mbps以上</td>
+                            <td>10 Mbps以上</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tip-box">
+                <h4><i class="fas fa-lightbulb"></i> 帯域確保のポイント</h4>
+                <ul>
+                    <li><strong>有線LAN接続:</strong> Wi-Fiより安定した通信が可能</li>
+                    <li><strong>同時接続の制限:</strong> 他のデバイスの利用を控える</li>
+                    <li><strong>アップロード制限:</strong> クラウド同期を一時停止</li>
+                    <li><strong>画質の調整:</strong> 必要に応じてSD画質に変更</li>
+                    <li><strong>時間帯の考慮:</strong> 混雑時間を避ける</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> 3. よくあるトラブルと対処法</h2>
+            
+            <h3>3.1 音声トラブル</h3>
+            <div class="trouble-box">
+                <h4><i class="fas fa-volume-mute"></i> 「音が聞こえない」</h4>
+                <div class="troubleshooting">
+                    <p><strong>原因:</strong></p>
+                    <ul>
+                        <li>スピーカー/イヤホンの接続不良</li>
+                        <li>デバイスの音量がミュート</li>
+                        <li>アプリ側でスピーカーが選択されていない</li>
+                        <li>オーディオドライバの問題</li>
+                    </ul>
+                    <p><strong>対処法:</strong></p>
+                    <ol>
+                        <li>デバイスの音量を確認（タスクバー/コントロールセンター）</li>
+                        <li>イヤホン/スピーカーの接続を確認</li>
+                        <li>アプリの「オーディオ設定」でスピーカーを選択</li>
+                        <li>「テストスピーカー」機能で音声確認</li>
+                        <li>他のアプリ（YouTube等）で音が出るか確認</li>
+                        <li>デバイスを再起動</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="trouble-box">
+                <h4><i class="fas fa-microphone-slash"></i> 「マイクが認識されない」</h4>
+                <div class="troubleshooting">
+                    <p><strong>原因:</strong></p>
+                    <ul>
+                        <li>マイクの物理的な接続不良</li>
+                        <li>OSのマイク許可設定</li>
+                        <li>アプリ側でマイクが選択されていない</li>
+                        <li>他のアプリがマイクを使用中</li>
+                    </ul>
+                    <p><strong>対処法:</strong></p>
+                    <ol>
+                        <li>マイクの接続を確認（USB/イヤホンジャック）</li>
+                        <li>OS設定でマイク許可を確認
+                            <ul>
+                                <li>Windows: 設定 → プライバシー → マイク</li>
+                                <li>Mac: システム環境設定 → セキュリティとプライバシー → マイク</li>
+                                <li>iPad/Chromebook: 設定 → プライバシー</li>
+                            </ul>
+                        </li>
+                        <li>アプリの「オーディオ設定」でマイクを選択</li>
+                        <li>「テストマイク」機能で動作確認</li>
+                        <li>他のアプリを終了してマイクを解放</li>
+                    </ol>
+                </div>
+            </div>
+
+            <h3>3.2 映像トラブル</h3>
+            <div class="trouble-box">
+                <h4><i class="fas fa-video-slash"></i> 「カメラが映らない」</h4>
+                <div class="troubleshooting">
+                    <p><strong>原因:</strong></p>
+                    <ul>
+                        <li>カメラの物理的なカバーがかかっている</li>
+                        <li>OSのカメラ許可設定</li>
+                        <li>他のアプリがカメラを使用中</li>
+                        <li>カメラドライバの問題</li>
+                    </ul>
+                    <p><strong>対処法:</strong></p>
+                    <ol>
+                        <li>カメラのプライバシーシャッターを開ける</li>
+                        <li>OS設定でカメラ許可を確認</li>
+                        <li>ビデオ設定で正しいカメラを選択</li>
+                        <li>他のアプリ（カメラアプリ）でカメラが動作するか確認</li>
+                        <li>アプリを再起動</li>
+                        <li>デバイスを再起動</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="trouble-box">
+                <h4><i class="fas fa-wifi"></i> 「映像が途切れる・カクカクする」</h4>
+                <div class="troubleshooting">
+                    <p><strong>原因:</strong></p>
+                    <ul>
+                        <li>ネットワーク帯域不足</li>
+                        <li>Wi-Fi電波が弱い</li>
+                        <li>同時接続デバイスが多い</li>
+                        <li>PCのスペック不足</li>
+                    </ul>
+                    <p><strong>対処法:</strong></p>
+                    <ol>
+                        <li>Wi-Fiルーターに近づく、または有線LAN接続</li>
+                        <li>ビデオ画質を「SD」に変更</li>
+                        <li>他の参加者にビデオオフを依頼</li>
+                        <li>不要なアプリを終了してCPU/メモリを解放</li>
+                        <li>ブラウザのタブを閉じる</li>
+                        <li>他の家族がネット利用を控える</li>
+                        <li>時間帯をずらす（混雑緩和）</li>
+                    </ol>
+                </div>
+            </div>
+
+            <h3>3.3 接続トラブル</h3>
+            <div class="trouble-box">
+                <h4><i class="fas fa-plug"></i> 「会議に参加できない」</h4>
+                <div class="troubleshooting">
+                    <p><strong>原因:</strong></p>
+                    <ul>
+                        <li>URLの間違い・期限切れ</li>
+                        <li>アカウント未ログイン</li>
+                        <li>待機室で承認待ち</li>
+                        <li>ファイアウォールによるブロック</li>
+                    </ul>
+                    <p><strong>対処法:</strong></p>
+                    <ol>
+                        <li>会議URLを再確認（コピペミスに注意）</li>
+                        <li>Google/Microsoft アカウントでログイン</li>
+                        <li>ホストが承認するまで待機</li>
+                        <li>ブラウザ版で試す（アプリ版が不具合の場合）</li>
+                        <li>別のネットワーク（モバイル回線等）で試す</li>
+                        <li>アプリを最新版に更新</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-users-cog"></i> 4. ハイブリッド授業の支援</h2>
+            
+            <div class="concept-box">
+                <h4>ハイブリッド授業とは</h4>
+                <p>教室での対面授業とオンライン配信を同時に行う授業形態。病気・怪我で登校できない児童生徒や、不登校児童生徒への学習機会提供に有効です。</p>
+            </div>
+
+            <h3>4.1 ハイブリッド授業の機材構成</h3>
+            <div class="example-box">
+                <h4><i class="fas fa-video"></i> 基本セット</h4>
+                <ul>
+                    <li><strong>教室用PC/タブレット:</strong> 配信用デバイス（有線LAN接続推奨）</li>
+                    <li><strong>Webカメラ:</strong> 広角レンズで教室全体を撮影（ロジクールC920等）</li>
+                    <li><strong>外付けマイク:</strong> 教員の声を明瞭に集音（ピンマイクまたはスタンドマイク）</li>
+                    <li><strong>スピーカー:</strong> オンライン参加者の声を教室に届ける</li>
+                    <li><strong>大型モニター/電子黒板:</strong> オンライン参加者の顔を表示</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h4><i class="fas fa-plus"></i> 推奨追加機材</h4>
+                <ul>
+                    <li><strong>書画カメラ:</strong> ノート・プリントの提示</li>
+                    <li><strong>三脚:</strong> カメラ位置の固定・調整</li>
+                    <li><strong>照明:</strong> 教員の顔を明るく照らす</li>
+                    <li><strong>ホワイトボード:</strong> 板書内容をカメラで捉える</li>
+                </ul>
+            </div>
+
+            <h3>4.2 ハイブリッド授業の注意点</h3>
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-circle"></i> よくある課題と対策</h4>
+                <ul>
+                    <li><strong>音声トラブル:</strong> ハウリング防止のためスピーカーとマイクの距離を離す</li>
+                    <li><strong>映像の死角:</strong> カメラ位置を工夫し、黒板と教員の両方が映るように</li>
+                    <li><strong>オンライン参加者への配慮不足:</strong> 定期的に声をかけ、質問機会を提供</li>
+                    <li><strong>教室の児童生徒の声が届かない:</strong> 発言時にマイクを近づける</li>
+                    <li><strong>ネットワーク不安定:</strong> 事前に通信テストを実施</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-video"></i> 5. 録画・アーカイブの運用</h2>
+            
+            <h3>5.1 録画のメリットと活用法</h3>
+            <div class="example-box">
+                <h4><i class="fas fa-thumbs-up"></i> 録画のメリット</h4>
+                <ul>
+                    <li><strong>欠席者への対応:</strong> 後から視聴して学習内容を補完</li>
+                    <li><strong>復習:</strong> 理解不足の内容を繰り返し視聴</li>
+                    <li><strong>反転学習:</strong> 事前学習用の動画として活用</li>
+                    <li><strong>教員研修:</strong> 授業の振り返りと改善</li>
+                    <li><strong>保護者への共有:</strong> 授業内容の可視化</li>
+                </ul>
+            </div>
+
+            <h3>5.2 録画時の注意事項</h3>
+            <div class="warning-box">
+                <h4><i class="fas fa-shield-alt"></i> プライバシーと著作権</h4>
+                <ul>
+                    <li><strong>事前同意:</strong> 保護者・児童生徒から録画の同意を取得</li>
+                    <li><strong>顔・名前の保護:</strong> 映り込みに配慮（必要に応じてカメラオフ）</li>
+                    <li><strong>著作権教材:</strong> 教科書・市販教材の映り込みに注意（著作権法35条の範囲）</li>
+                    <li><strong>アクセス制限:</strong> 限定公開（URLを知る人のみ、またはパスワード設定）</li>
+                    <li><strong>保存期間:</strong> 不要になったら速やかに削除</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h4><i class="fas fa-lightbulb"></i> 録画データの管理</h4>
+                <ul>
+                    <li><strong>クラウド保存:</strong> Google Drive、OneDrive等に整理して保存</li>
+                    <li><strong>命名規則:</strong> 「2025-01-10_3年国語_物語の読解」等、わかりやすい名前</li>
+                    <li><strong>フォルダ分類:</strong> 学年・教科・単元ごとに整理</li>
+                    <li><strong>共有範囲:</strong> 必要最小限の人にのみ共有</li>
+                    <li><strong>定期的な見直し:</strong> 学期ごとに不要なデータを削除</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-star"></i> 6. 質の高いオンライン授業の支援ポイント</h2>
+            
+            <h3>6.1 教員への技術サポート</h3>
+            <div class="example-box">
+                <h4><i class="fas fa-chalkboard-teacher"></i> 授業前のサポート</h4>
+                <ul>
+                    <li><strong>リハーサル:</strong> 事前に音声・映像のテスト実施</li>
+                    <li><strong>操作マニュアル:</strong> 簡潔な手順書の作成・配布</li>
+                    <li><strong>トラブル対応ガイド:</strong> よくある問題と解決策の一覧</li>
+                    <li><strong>バックアップ準備:</strong> 接続不良時の代替手段（電話連絡等）</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h4><i class="fas fa-headset"></i> 授業中のサポート</h4>
+                <ul>
+                    <li><strong>技術的トラブル対応:</strong> 音声・映像の問題を即座に解決</li>
+                    <li><strong>チャット監視:</strong> 児童生徒からの質問・トラブル報告に対応</li>
+                    <li><strong>録画管理:</strong> 録画の開始・停止を確認</li>
+                    <li><strong>参加者管理:</strong> 遅刻者の入室許可、退出確認</li>
+                </ul>
+            </div>
+
+            <h3>6.2 児童生徒への支援</h3>
+            <div class="tip-box">
+                <h4><i class="fas fa-users"></i> オンライン授業のルール作り</h4>
+                <ul>
+                    <li><strong>ビデオオン/オフ:</strong> 原則オンだが、プライバシーに配慮して柔軟に</li>
+                    <li><strong>ミュート管理:</strong> 発言時以外はミュート（雑音防止）</li>
+                    <li><strong>挙手機能:</strong> 質問・発言時は「手を挙げる」ボタンを使用</li>
+                    <li><strong>チャット利用:</strong> 質問・感想の共有に活用</li>
+                    <li><strong>背景設定:</strong> バーチャル背景の使用を許可（プライバシー保護）</li>
+                    <li><strong>ネチケット:</strong> 不適切な発言・行動の禁止</li>
+                </ul>
+            </div>
+
+            <h3>6.3 授業の工夫</h3>
+            <div class="example-box">
+                <h4><i class="fas fa-magic"></i> エンゲージメントを高める工夫</h4>
+                <ul>
+                    <li><strong>画面共有:</strong> スライド・動画を効果的に活用</li>
+                    <li><strong>投票機能:</strong> リアルタイムでアンケートや理解度チェック</li>
+                    <li><strong>ブレイクアウトルーム:</strong> 小グループでのディスカッション</li>
+                    <li><strong>ホワイトボード機能:</strong> 共同作業・図解</li>
+                    <li><strong>リアクション機能:</strong> 絵文字で簡単にフィードバック</li>
+                    <li><strong>短時間区切り:</strong> 10-15分ごとに活動を変える（集中力維持）</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-clipboard-check"></i> 7. ICT支援員のチェックリスト</h2>
+            
+            <div class="checklist-box">
+                <h3><i class="fas fa-calendar-day"></i> 授業開始前（前日まで）</h3>
+                <ul class="checklist">
+                    <li>教員との打ち合わせ（授業内容・使用機能の確認）</li>
+                    <li>機材の動作確認（カメラ・マイク・スピーカー）</li>
+                    <li>ネットワーク接続テスト</li>
+                    <li>アプリ・ブラウザの最新版確認</li>
+                    <li>会議URL・パスワードの共有</li>
+                    <li>児童生徒への接続マニュアル配布</li>
+                    <li>録画設定の確認（必要な場合）</li>
+                </ul>
+            </div>
+
+            <div class="checklist-box">
+                <h3><i class="fas fa-clock"></i> 授業開始直前（10分前）</h3>
+                <ul class="checklist">
+                    <li>教員の接続確認</li>
+                    <li>音声・映像の最終チェック</li>
+                    <li>画面共有のテスト</li>
+                    <li>待機室の設定確認</li>
+                    <li>緊急連絡先の確認</li>
+                </ul>
+            </div>
+
+            <div class="checklist-box">
+                <h3><i class="fas fa-video"></i> 授業中</h3>
+                <ul class="checklist">
+                    <li>音声・映像品質のモニタリング</li>
+                    <li>チャット・質問への対応</li>
+                    <li>遅刻者の入室対応</li>
+                    <li>技術的トラブルの即座解決</li>
+                    <li>録画状況の確認（該当する場合）</li>
+                    <li>タイムキーピング（時間配分の補助）</li>
+                </ul>
+            </div>
+
+            <div class="checklist-box">
+                <h3><i class="fas fa-tasks"></i> 授業終了後</h3>
+                <ul class="checklist">
+                    <li>録画データの保存・共有（該当する場合）</li>
+                    <li>トラブル・改善点の記録</li>
+                    <li>教員へのフィードバック</li>
+                    <li>次回授業の準備確認</li>
+                    <li>機材の片付け・充電</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title"><i class="fas fa-book-open"></i> 8. 参考資料</h2>
+            
+            <div class="reference-box">
+                <h4><i class="fas fa-link"></i> 公的機関</h4>
+                <ul>
+                    <li><a href="https://www.mext.go.jp/a_menu/ictconnect/index.htm" target="_blank">文部科学省「学校のICT活用」<i class="fas fa-external-link-alt"></i></a></li>
+                    <li><a href="https://www.mext.go.jp/content/20200911-mxt_jogai01-000009772_18.pdf" target="_blank">「新型コロナウイルス感染症対策のための臨時休業等に伴うオンライン学習に関するガイドライン」<i class="fas fa-external-link-alt"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="reference-box">
+                <h4><i class="fas fa-video"></i> Web会議システム公式</h4>
+                <ul>
+                    <li><a href="https://support.zoom.us/hc/ja" target="_blank">Zoom ヘルプセンター<i class="fas fa-external-link-alt"></i></a></li>
+                    <li><a href="https://support.microsoft.com/ja-jp/teams" target="_blank">Microsoft Teams サポート<i class="fas fa-external-link-alt"></i></a></li>
+                    <li><a href="https://support.google.com/meet/" target="_blank">Google Meet ヘルプ<i class="fas fa-external-link-alt"></i></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <a href="budget-procurement.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> 前のページ: 予算・調達</a>
+            <a href="edtech-comparison.html" class="btn-primary">次のページ: EdTechツール比較 <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

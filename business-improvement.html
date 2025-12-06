@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>業務改善提案 - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="ICT支援員のための業務改善提案。効率化、自動化、デジタルツール活用、プロセス改善、事例紹介を網羅。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-newspaper"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-tools"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-landmark"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-lightbulb"></i> 業務改善提案</h1>
+                <p class="lead">ICT支援員のための業務改善提案。効率化、自動化、デジタルツール活用、プロセス改善、成功事例を網羅</p>
+            </div>
+
+            <!-- 1. 業務改善の重要性 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-info-circle"></i> 業務改善の重要性</h2>
+                </div>
+                <div class="info-box bg-gradient-primary">
+                    <h4><i class="fas fa-chart-line"></i> なぜ業務改善が必要か</h4>
+                    <p>ICT支援員は複数校の巡回、多様な業務、突発的な対応など、常に時間に追われがちです。業務改善により、ムダを削減し、より付加価値の高い業務（授業支援、研修、教員との対話）に時間を使えるようになります。また、業務改善の提案・実行能力は、キャリアアップにも直結します。</p>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>時間の有効活用</h4>
+                        <p>定型業務を効率化し、授業支援や教員との対話など、本来の重要業務に時間を割ける</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <h4>ストレス軽減</h4>
+                        <p>ムダな作業が減ることで、心理的負担が軽減。余裕を持って業務に取り組める</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>質の向上</h4>
+                        <p>効率化で生まれた時間を、質の高い支援に投資。教員・児童生徒の満足度向上</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>キャリアアップ</h4>
+                        <p>業務改善の提案・実行は評価につながる。マネジメント能力の証明にも</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. 業務改善の基本フレームワーク -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-toolbox"></i> 業務改善の基本フレームワーク</h2>
+                </div>
+
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>現状把握（見える化）</h4>
+                            <ul>
+                                <li><strong>業務の棚卸し：</strong> すべての業務をリストアップ</li>
+                                <li><strong>時間測定：</strong> 各業務にかかる時間を記録</li>
+                                <li><strong>頻度確認：</strong> 毎日/毎週/毎月の業務を分類</li>
+                                <li><strong>問題点の洗い出し：</strong> 「時間がかかる」「ミスが多い」「ムダ」など</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>課題の優先順位付け</h4>
+                            <ul>
+                                <li><strong>影響度×改善容易性マトリクス：</strong> 効果が大きく、すぐできるものから着手</li>
+                                <li><strong>クイックウィン：</strong> 小さな成功体験を積み重ねる</li>
+                                <li><strong>教員の声：</strong> 教員から要望の多い課題を優先</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>改善策の立案</h4>
+                            <ul>
+                                <li><strong>ECRS（イクルス）の原則：</strong>
+                                    <ul>
+                                        <li><strong>E（Eliminate：排除）：</strong> やめられないか？</li>
+                                        <li><strong>C（Combine：結合）：</strong> まとめてできないか？</li>
+                                        <li><strong>R（Rearrange：順序変更）：</strong> 順番を変えられないか？</li>
+                                        <li><strong>S（Simplify：簡素化）：</strong> もっとシンプルにできないか？</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>実行</h4>
+                            <ul>
+                                <li><strong>小規模テスト：</strong> まず1校で試験導入</li>
+                                <li><strong>関係者への説明：</strong> なぜ改善するのか、どう変わるのか</li>
+                                <li><strong>フィードバック収集：</strong> 実施後の意見を聞く</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>効果測定・標準化</h4>
+                            <ul>
+                                <li><strong>Before/After比較：</strong> 時間削減、ミス削減など定量的に評価</li>
+                                <li><strong>成功したら標準化：</strong> 全校展開、マニュアル化</li>
+                                <li><strong>継続的改善：</strong> PDCAサイクルを回す</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. 業務別改善アイデア -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-magic"></i> 業務別改善アイデア</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 定型業務の改善策</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>業務</th>
+                                <th>従来の方法</th>
+                                <th>改善策</th>
+                                <th>効果</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>月次報告書作成</strong></td>
+                                <td>月末に手作業で集計</td>
+                                <td>日次で簡易記録（スマホメモ）→月末にコピペ、テンプレート活用</td>
+                                <td>作成時間が2時間→30分に短縮</td>
+                            </tr>
+                            <tr>
+                                <td><strong>トラブル対応記録</strong></td>
+                                <td>ノートに手書き→後でExcel入力</td>
+                                <td>スマホで音声入力→Google Formsに記録→自動集計</td>
+                                <td>記録時間が15分→5分に、集計作業も不要</td>
+                            </tr>
+                            <tr>
+                                <td><strong>教員への操作案内</strong></td>
+                                <td>個別にメール or 電話で説明</td>
+                                <td>FAQ Webページ作成、操作動画（1〜2分）作成、URLを共有</td>
+                                <td>同じ質問対応が激減、1件10分→3分</td>
+                            </tr>
+                            <tr>
+                                <td><strong>研修資料作成</strong></td>
+                                <td>毎回ゼロから作成</td>
+                                <td>テンプレート化、モジュール化（組み合わせるだけ）</td>
+                                <td>4時間→1.5時間に短縮</td>
+                            </tr>
+                            <tr>
+                                <td><strong>機器点検</strong></td>
+                                <td>紙のチェックリスト→後でExcel入力</td>
+                                <td>Google Formsでチェックリスト→その場で記録、自動集計</td>
+                                <td>点検時間が30分→15分、後処理不要</td>
+                            </tr>
+                            <tr>
+                                <td><strong>巡回スケジュール管理</strong></td>
+                                <td>紙の手帳、Excelで管理</td>
+                                <td>Googleカレンダーで全体共有、リマインダー設定</td>
+                                <td>スケジュール調整が楽、リマインド漏れ防止</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>メール対応の効率化</h4>
+                        <ul class="compact-list">
+                            <li><strong>テンプレート作成：</strong> よくある問い合わせの定型文</li>
+                            <li><strong>バッチ処理：</strong> 1日2〜3回にまとめて対応</li>
+                            <li><strong>自動振り分け：</strong> ラベル・フォルダで整理</li>
+                            <li><strong>署名活用：</strong> 連絡先、FAQリンクを署名に</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4>スケジュール管理の効率化</h4>
+                        <ul class="compact-list">
+                            <li><strong>タイムブロッキング：</strong> 1日をブロックで管理</li>
+                            <li><strong>移動時間確保：</strong> 余裕を持ったスケジュール</li>
+                            <li><strong>定例化：</strong> 毎週水曜午後は事務作業、など固定</li>
+                            <li><strong>カレンダー共有：</strong> 教員・同僚と予定共有</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h4>ドキュメント管理の効率化</h4>
+                        <ul class="compact-list">
+                            <li><strong>クラウドストレージ：</strong> Google Drive、OneDriveで一元管理</li>
+                            <li><strong>フォルダ構造統一：</strong> 学校別/年度別/業務別</li>
+                            <li><strong>命名規則：</strong> 「YYYYMMDD_学校名_内容」で統一</li>
+                            <li><strong>検索活用：</strong> タグ付け、検索で素早く見つける</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <h4>コミュニケーションの効率化</h4>
+                        <ul class="compact-list">
+                            <li><strong>チャットツール：</strong> Slack、Teamsで即座に情報共有</li>
+                            <li><strong>定例ミーティング：</strong> 週1回、30分で情報共有</li>
+                            <li><strong>議事録テンプレート：</strong> 決定事項、ToDoを明確に</li>
+                            <li><strong>非同期コミュニケーション：</strong> 即レス不要、まとめて対応</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. デジタルツール活用 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-toolbox"></i> デジタルツール活用</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 業務改善に役立つツール</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>用途</th>
+                                <th>おすすめツール</th>
+                                <th>活用方法</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>タスク管理</strong></td>
+                                <td>Todoist、Trello、Notion</td>
+                                <td>ToDoリスト、進捗管理、優先順位付け</td>
+                            </tr>
+                            <tr>
+                                <td><strong>時間記録</strong></td>
+                                <td>Toggl、Clockify</td>
+                                <td>各業務の所要時間を記録、分析</td>
+                            </tr>
+                            <tr>
+                                <td><strong>アンケート・フォーム</strong></td>
+                                <td>Google Forms、Microsoft Forms</td>
+                                <td>チェックリスト、アンケート、自動集計</td>
+                            </tr>
+                            <tr>
+                                <td><strong>マニュアル作成</strong></td>
+                                <td>Notion、Googleドキュメント</td>
+                                <td>操作マニュアル、FAQ、ナレッジベース</td>
+                            </tr>
+                            <tr>
+                                <td><strong>動画マニュアル</strong></td>
+                                <td>Loom、OBS Studio</td>
+                                <td>画面録画、操作説明動画作成</td>
+                            </tr>
+                            <tr>
+                                <td><strong>自動化</strong></td>
+                                <td>Google Apps Script、Zapier</td>
+                                <td>定型業務の自動化、データ連携</td>
+                            </tr>
+                            <tr>
+                                <td><strong>テンプレート管理</strong></td>
+                                <td>Canva、Googleスライド</td>
+                                <td>研修資料、報告書のテンプレート</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box bg-gradient-success">
+                    <h4><i class="fas fa-robot"></i> 自動化できる業務</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>Google Apps Script：</strong> スプレッドシートの自動集計、メール自動送信</li>
+                        <li><i class="fas fa-check"></i> <strong>Forms→スプレッドシート連携：</strong> アンケート回答の自動集計・グラフ化</li>
+                        <li><i class="fas fa-check"></i> <strong>カレンダー→リマインダー：</strong> 訪問前日に自動通知</li>
+                        <li><i class="fas fa-check"></i> <strong>Zapier：</strong> 異なるツール間のデータ連携（例：Trello→Slack通知）</li>
+                        <li><i class="fas fa-check"></i> <strong>定型メールの自動化：</strong> 特定のトリガーで自動送信</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 5. 改善提案の進め方 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-comments"></i> 改善提案の進め方</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>① 現状の問題点を明確化</h4>
+                        <ul class="compact-list">
+                            <li>「〇〇の業務に毎週2時間かかっている」</li>
+                            <li>「同じ質問対応を月20回している」</li>
+                            <li>定量的なデータで問題を示す</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>② 改善策の具体的提示</h4>
+                        <ul class="compact-list">
+                            <li>「FAQページを作成し、URLを共有」</li>
+                            <li>「Google Formsでチェックリスト化」</li>
+                            <li>実行可能な具体策を示す</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>③ 期待効果を数値化</h4>
+                        <ul class="compact-list">
+                            <li>「週2時間→30分に短縮（年間78時間削減）」</li>
+                            <li>「質問対応が月20回→5回に減少」</li>
+                            <li>費用対効果を明示</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>④ 関係者の巻き込み</h4>
+                        <ul class="compact-list">
+                            <li>教員、管理職、同僚の意見を聞く</li>
+                            <li>「一緒に改善しましょう」の姿勢</li>
+                            <li>抵抗勢力への配慮と説得</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-file-powerpoint"></i> 改善提案書のテンプレート</h4>
+                    <p><strong>【提案タイトル】</strong> 〇〇業務の効率化提案</p>
+                    <p><strong>【現状の問題点】</strong><br>
+                    ・〇〇の業務に毎週2時間かかっている<br>
+                    ・同じ内容の質問対応が月20回発生<br>
+                    ・手作業のため、ミスが月5件発生</p>
+                    
+                    <p><strong>【改善策】</strong><br>
+                    ・Google Formsでチェックリストを作成<br>
+                    ・FAQページを作成し、URLを共有<br>
+                    ・テンプレート化して再利用可能に</p>
+                    
+                    <p><strong>【期待効果】</strong><br>
+                    ・業務時間：週2時間→30分（年間78時間削減）<br>
+                    ・質問対応：月20回→5回（75%削減）<br>
+                    ・ミス：月5件→1件（80%削減）</p>
+                    
+                    <p><strong>【実施スケジュール】</strong><br>
+                    ・第1週：ツール準備<br>
+                    ・第2週：1校でテスト導入<br>
+                    ・第3週：フィードバック反映<br>
+                    ・第4週：全校展開</p>
+                </div>
+            </section>
+
+            <!-- 6. 改善事例集 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-star"></i> 改善事例集</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h4>事例1：機器点検の効率化</h4>
+                        <p><strong>課題：</strong> 紙チェックリスト→後でExcel入力（30分/校）<br>
+                        <strong>改善：</strong> Google Formsでチェックリスト作成、その場で記録<br>
+                        <strong>効果：</strong> 15分/校に短縮、データ集計も自動化</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h4>事例2：操作マニュアルの動画化</h4>
+                        <p><strong>課題：</strong> 同じ操作質問が月30回、1件10分の対応<br>
+                        <strong>改善：</strong> Loomで1〜2分の操作動画作成、URL共有<br>
+                        <strong>効果：</strong> 質問が月5回に減少、年間300時間削減</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>事例3：報告書の自動集計</h4>
+                        <p><strong>課題：</strong> 月次報告書の作成に2時間<br>
+                        <strong>改善：</strong> 日次で簡易記録→Google Apps Scriptで自動集計<br>
+                        <strong>効果：</strong> 30分に短縮、グラフも自動生成</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h4>事例4：スケジュール共有の改善</h4>
+                        <p><strong>課題：</strong> メール・電話でスケジュール調整（往復10分）<br>
+                        <strong>改善：</strong> Googleカレンダーで予定公開、自動リマインダー<br>
+                        <strong>効果：</strong> 調整時間が3分に、ダブルブッキング防止</p>
+                    </div>
+                </div>
+
+                <div class="info-box bg-gradient-primary">
+                    <h4><i class="fas fa-trophy"></i> 改善活動の成功ポイント</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>小さく始める：</strong> いきなり大改革ではなく、まず1つから</li>
+                        <li><i class="fas fa-check"></i> <strong>データで示す：</strong> 感覚ではなく、数字で効果を証明</li>
+                        <li><i class="fas fa-check"></i> <strong>巻き込む：</strong> 一人で抱え込まず、チーム全体で取り組む</li>
+                        <li><i class="fas fa-check"></i> <strong>継続する：</strong> PDCAサイクルを回し、常に改善</li>
+                        <li><i class="fas fa-check"></i> <strong>成功を共有：</strong> 良い事例は積極的に発信・共有</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 7. 業務改善チェックリスト -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-clipboard-list"></i> 業務改善チェックリスト</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 月次・年次のチェック項目</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>頻度</th>
+                                <th>チェック項目</th>
+                                <th>アクション</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>週次</strong></td>
+                                <td>今週の業務で「時間がかかった」「ムダだった」ことは？</td>
+                                <td>気づきをメモ、小さな改善を実施</td>
+                            </tr>
+                            <tr>
+                                <td><strong>月次</strong></td>
+                                <td>・今月の業務時間の内訳は？<br>・同じ質問対応は何回？<br>・改善アイデアは？</td>
+                                <td>業務時間を記録・分析、改善策を1つ実行</td>
+                            </tr>
+                            <tr>
+                                <td><strong>半年</strong></td>
+                                <td>・テンプレート化できる業務は？<br>・自動化できる業務は？<br>・やめられる業務は？</td>
+                                <td>中期的な改善計画を立案</td>
+                            </tr>
+                            <tr>
+                                <td><strong>年次</strong></td>
+                                <td>・今年の改善実績は？<br>・どれだけ時間削減できた？<br>・来年の改善目標は？</td>
+                                <td>年間振り返り、次年度の改善計画策定</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-question-circle"></i> 業務改善の自己診断</h4>
+                    <p>以下の質問に答えて、自分の業務改善度をチェックしましょう。</p>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> 自分の業務時間の内訳を把握していますか？</li>
+                        <li><i class="fas fa-check"></i> 定型業務をテンプレート化していますか？</li>
+                        <li><i class="fas fa-check"></i> デジタルツールを積極的に活用していますか？</li>
+                        <li><i class="fas fa-check"></i> 業務の「ムダ」を定期的に見直していますか？</li>
+                        <li><i class="fas fa-check"></i> 改善アイデアを提案・実行していますか？</li>
+                        <li><i class="fas fa-check"></i> 自動化できる業務を探していますか？</li>
+                        <li><i class="fas fa-check"></i> 改善の成果を数値で測定していますか？</li>
+                    </ul>
+                    <p><strong>5個以上YES：</strong> 素晴らしい！継続してください<br>
+                    <strong>3〜4個YES：</strong> 良いスタート。さらなる改善を<br>
+                    <strong>2個以下YES：</strong> まずは小さな改善から始めましょう</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

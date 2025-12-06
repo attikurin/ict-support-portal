@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己学習リソース - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="ICT支援員のための自己学習リソース。オンライン講座、書籍、動画、コミュニティ、最新情報源を網羅。継続的な学びをサポート。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-newspaper"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-tools"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-landmark"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-book-reader"></i> 自己学習リソース</h1>
+                <p class="lead">ICT支援員のための自己学習リソース。オンライン講座、書籍、動画、コミュニティ、最新情報源を網羅。継続的な学びをサポート</p>
+            </div>
+
+            <!-- 1. 自己学習の重要性 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-lightbulb"></i> 自己学習の重要性</h2>
+                </div>
+                <div class="info-box bg-gradient-primary">
+                    <h4><i class="fas fa-quote-left"></i> なぜ継続的な学びが必要か</h4>
+                    <p>ICT技術は日進月歩で進化し、教育現場のニーズも変化し続けます。ICT支援員として価値を提供し続けるためには、継続的な自己学習が不可欠です。新しいツール、最新の教育理論、授業実践事例などを学び続けることで、より質の高い支援が可能になります。</p>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>技術の進化に対応</h4>
+                        <p>新しいアプリ、クラウドサービス、AI技術など、教育ICTは常に進化。最新情報をキャッチアップ</p>
+                        </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>専門性の向上</h4>
+                        <p>深い知識と幅広いスキルを身につけることで、より高度な支援が可能に。キャリアアップにもつながる</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>教員からの信頼獲得</h4>
+                        <p>豊富な知識と最新情報を持つことで、教員から頼られる存在に。相談しやすいICT支援員へ</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>自己成長の実感</h4>
+                        <p>学び続けることで成長を実感。モチベーション維持、仕事へのやりがいにつながる</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. オンライン学習プラットフォーム -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-laptop"></i> オンライン学習プラットフォーム</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 主要オンライン学習サービスの比較</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>サービス名</th>
+                                <th>費用</th>
+                                <th>特徴</th>
+                                <th>おすすめコース</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Udemy</strong></td>
+                                <td>買い切り（1,200円〜、セール時安い）</td>
+                                <td>世界最大級、日本語講座も豊富、買い切りで何度でも視聴可能</td>
+                                <td>Google Workspace、Microsoft 365、動画編集、プログラミング入門</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Schoo</strong></td>
+                                <td>無料（録画は有料月額980円）</td>
+                                <td>生放送授業、ビジネス・IT・教育と幅広い、日本語のみ</td>
+                                <td>ICT教育、EdTech、プレゼンテーション、コミュニケーション</td>
+                            </tr>
+                            <tr>
+                                <td><strong>gacco</strong></td>
+                                <td>無料（一部有料）</td>
+                                <td>大学・企業の講座、JMOOC（日本オープンオンライン教育推進協議会）</td>
+                                <td>教育工学、情報セキュリティ、AI入門</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Coursera</strong></td>
+                                <td>一部無料、有料プラン（月額$49〜）</td>
+                                <td>世界の名門大学の講座、英語中心、修了証発行</td>
+                                <td>教育工学、データサイエンス、プロジェクトマネジメント</td>
+                            </tr>
+                            <tr>
+                                <td><strong>YouTube</strong></td>
+                                <td>無料</td>
+                                <td>膨大な動画、実践的なチュートリアル、最新情報が早い</td>
+                                <td>ツールの使い方、トラブル解決、授業実践事例</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Google for Education<br>トレーニングセンター</strong></td>
+                                <td>無料</td>
+                                <td>Googleの公式トレーニング、Google Workspace活用</td>
+                                <td>Classroom、Meet、スプレッドシート、Forms</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Microsoft Learn</strong></td>
+                                <td>無料</td>
+                                <td>Microsoftの公式学習プラットフォーム、実践的</td>
+                                <td>Teams、PowerPoint、Excel、セキュリティ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-star"></i> おすすめオンライン講座（分野別）</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>Google Workspace：</strong> Udemy「Google Workspace完全マスター」、Google公式トレーニング</li>
+                        <li><i class="fas fa-check"></i> <strong>動画編集：</strong> Udemy「iMovie使い方講座」「Premiere Pro入門」</li>
+                        <li><i class="fas fa-check"></i> <strong>プレゼン：</strong> Schoo「伝わるプレゼンテーション」、Udemy「PowerPoint実践」</li>
+                        <li><i class="fas fa-check"></i> <strong>情報セキュリティ：</strong> gacco「情報セキュリティ入門」、IPA（情報処理推進機構）教材</li>
+                        <li><i class="fas fa-check"></i> <strong>プログラミング：</strong> Progate、paizaラーニング、Udemy「Scratch入門」</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. 推薦書籍 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-book"></i> 推薦書籍</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h4>ICT教育・EdTech</h4>
+                        <ul class="compact-list">
+                            <li>「学校を変える新しい力 - GIGAスクール構想で変わる教育」</li>
+                            <li>「EdTechが変える教育の未来」</li>
+                            <li>「GIGAスクール構想 実践ガイドブック」</li>
+                            <li>「ICTを活用した授業デザイン」</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4>IT技術・デジタルスキル</h4>
+                        <ul class="compact-list">
+                            <li>「いちばんやさしいITパスポート」</li>
+                            <li>「ゼロからはじめるネットワーク超入門」</li>
+                            <li>「図解でわかる情報セキュリティ」</li>
+                            <li>「Google Workspace完全ガイド」</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>コミュニケーション・対人スキル</h4>
+                        <ul class="compact-list">
+                            <li>「アサーション入門 - 自分も相手も大切にする自己表現法」</li>
+                            <li>「人を動かす」（デール・カーネギー）</li>
+                            <li>「伝え方が9割」</li>
+                            <li>「ファシリテーションの教科書」</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>教育心理学・学習理論</h4>
+                        <ul class="compact-list">
+                            <li>「学びを結果に変えるアウトプット大全」</li>
+                            <li>「認知心理学から見た学習と教育」</li>
+                            <li>「学習科学ハンドブック」</li>
+                            <li>「動機づけ研究の最前線」</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-gradient-success">
+                    <h4><i class="fas fa-book-open"></i> 読書習慣の作り方</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>月1冊を目標に：</strong> まずは無理のないペースで。通勤時間を活用</li>
+                        <li><i class="fas fa-check"></i> <strong>電子書籍も活用：</strong> Kindle、楽天Koboなどでいつでも読める</li>
+                        <li><i class="fas fa-check"></i> <strong>読書メモ：</strong> 気づきや実践したいことをメモ。Notionなどに記録</li>
+                        <li><i class="fas fa-check"></i> <strong>アウトプット：</strong> 学んだことを同僚に話す、SNSでシェア</li>
+                        <li><i class="fas fa-check"></i> <strong>図書館活用：</strong> 購入前に図書館で試し読み</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 4. YouTubeチャンネル・動画コンテンツ -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-youtube"></i> YouTubeチャンネル・動画コンテンツ</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-danger">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h4>教育ICT・EdTech系</h4>
+                        <ul class="compact-list">
+                            <li><strong>Google for Education Japan：</strong> 公式チャンネル、活用事例</li>
+                            <li><strong>Microsoft Education Japan：</strong> Teams、OneNote活用</li>
+                            <li><strong>EdTech Media：</strong> 最新EdTech情報</li>
+                            <li><strong>ICT教育ニュース：</strong> 教育ICTの最新動向</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>ツール・アプリの使い方</h4>
+                        <ul class="compact-list">
+                            <li><strong>パソコン教室わかるとできる：</strong> Office、Googleツール</li>
+                            <li><strong>金子晃之：</strong> Google、Microsoft製品の解説</li>
+                            <li><strong>Udemy公式：</strong> 無料プレビュー動画</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>授業実践・事例</h4>
+                        <ul class="compact-list">
+                            <li><strong>文部科学省mextchannel：</strong> 公式情報、事例紹介</li>
+                            <li><strong>各自治体教育委員会：</strong> 地域の実践事例</li>
+                            <li><strong>先進校の公式チャンネル：</strong> 授業風景、取り組み</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>セキュリティ・リテラシー</h4>
+                        <ul class="compact-list">
+                            <li><strong>IPA（情報処理推進機構）：</strong> セキュリティ対策</li>
+                            <li><strong>総務省：</strong> 情報セキュリティ啓発動画</li>
+                            <li><strong>警察庁：</strong> サイバー犯罪対策</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-play-circle"></i> 効果的な動画学習のコツ</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>倍速再生：</strong> 1.5倍速で時間効率アップ（慣れたら2倍速も）</li>
+                        <li><i class="fas fa-check"></i> <strong>字幕表示：</strong> 自動字幕で聞き逃し防止、復習しやすい</li>
+                        <li><i class="fas fa-check"></i> <strong>プレイリスト作成：</strong> 「後で見る」「学習済み」で管理</li>
+                        <li><i class="fas fa-check"></i> <strong>実際に手を動かす：</strong> 見るだけでなく、実際に操作しながら学ぶ</li>
+                        <li><i class="fas fa-check"></i> <strong>通知設定：</strong> お気に入りチャンネルの新着通知をオン</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 5. コミュニティ・勉強会 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-users"></i> コミュニティ・勉強会</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h4>ICT支援員コミュニティ</h4>
+                        <ul class="compact-list">
+                            <li><strong>ICT支援員の会：</strong> 全国各地の支援員が情報交換</li>
+                            <li><strong>Facebookグループ：</strong> 「ICT支援員情報交換」など</li>
+                            <li><strong>X（Twitter）：</strong> #ICT支援員 ハッシュタグ</li>
+                            <li><strong>Slack/Discord：</strong> オンラインコミュニティ</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h4>勉強会・イベント</h4>
+                        <ul class="compact-list">
+                            <li><strong>connpass：</strong> IT勉強会検索プラットフォーム</li>
+                            <li><strong>SENSEI よのなか学：</strong> 教育関係者向けイベント</li>
+                            <li><strong>EdTech Meetup：</strong> EdTech業界の交流会</li>
+                            <li><strong>各地域の支援員勉強会：</strong> 自治体主催・有志開催</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h4>学会・研究会</h4>
+                        <ul class="compact-list">
+                            <li><strong>日本教育工学会（JSET）：</strong> 研究大会、論文誌</li>
+                            <li><strong>日本教育工学協会（JAET）：</strong> 実践研究</li>
+                            <li><strong>情報処理学会：</strong> 教育とコンピュータ研究会</li>
+                            <li><strong>日本STEM教育学会：</strong> STEM・プログラミング教育</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>コミュニティ参加のメリット</h4>
+                        <ul class="compact-list">
+                            <li>最新情報・実践事例の共有</li>
+                            <li>悩み相談、問題解決のヒント</li>
+                            <li>人脈形成、キャリアの可能性拡大</li>
+                            <li>モチベーション維持、孤独感の解消</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-gradient-primary">
+                    <h4><i class="fas fa-lightbulb"></i> コミュニティ活動のはじめ方</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>まずはオンラインから：</strong> SNS、Slackで情報収集、質問投稿</li>
+                        <li><i class="fas fa-check"></i> <strong>勉強会に参加：</strong> オンライン開催も多く、参加しやすい</li>
+                        <li><i class="fas fa-check"></i> <strong>発信する：</strong> 自分の実践を投稿、ブログ執筆</li>
+                        <li><i class="fas fa-check"></i> <strong>地域の会を探す：</strong> 近隣の支援員と交流</li>
+                        <li><i class="fas fa-check"></i> <strong>主催側に回る：</strong> 勉強会の企画・運営で成長</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 6. 情報収集の情報源 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-newspaper"></i> 情報収集の情報源</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 主要な情報源</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>カテゴリ</th>
+                                <th>情報源</th>
+                                <th>特徴</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>公的機関</strong></td>
+                                <td>
+                                    ・文部科学省Webサイト<br>
+                                    ・教育の情報化の手引<br>
+                                    ・各自治体教育委員会
+                                </td>
+                                <td>政策、ガイドライン、統計データ</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ニュースサイト</strong></td>
+                                <td>
+                                    ・ICT教育ニュース<br>
+                                    ・EdTechZine<br>
+                                    ・リセマム
+                                </td>
+                                <td>最新ニュース、事例、インタビュー</td>
+                            </tr>
+                            <tr>
+                                <td><strong>X（Twitter）</strong></td>
+                                <td>
+                                    ・#ICT支援員<br>
+                                    ・#GIGA<br>
+                                    ・教育関係者アカウント
+                                </td>
+                                <td>リアルタイム情報、実践者の声</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ブログ・note</strong></td>
+                                <td>
+                                    ・先輩ICT支援員のブログ<br>
+                                    ・教員のICT活用ブログ<br>
+                                    ・企業公式ブログ
+                                </td>
+                                <td>実践的ノウハウ、具体的な事例</td>
+                            </tr>
+                            <tr>
+                                <td><strong>メールマガジン</strong></td>
+                                <td>
+                                    ・ICT教育ニュース<br>
+                                    ・EdTechZine<br>
+                                    ・企業メルマガ
+                                </td>
+                                <td>定期的な情報配信、まとめ</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Podcast</strong></td>
+                                <td>
+                                    ・教育系Podcast<br>
+                                    ・IT系Podcast<br>
+                                    ・EdTech関連
+                                </td>
+                                <td>移動中の学習、音声で気軽に</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-rss"></i> 効率的な情報収集術</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>RSSリーダー：</strong> Feedly、Inoreaderで複数サイトを一括チェック</li>
+                        <li><i class="fas fa-check"></i> <strong>Googleアラート：</strong> 「ICT支援員」「GIGAスクール」などのキーワード登録</li>
+                        <li><i class="fas fa-check"></i> <strong>X（Twitter）リスト：</strong> 教育ICT関係者をリスト化</li>
+                        <li><i class="fas fa-check"></i> <strong>ブックマーク整理：</strong> よく見るサイトをフォルダ分け</li>
+                        <li><i class="fas fa-check"></i> <strong>毎朝15分の情報収集タイム：</strong> 習慣化することが重要</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 7. 学習習慣の作り方 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-calendar-alt"></i> 学習習慣の作り方</h2>
+                </div>
+
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>学習時間の確保</h4>
+                            <ul>
+                                <li><strong>朝活：</strong> 始業前30分の学習タイム</li>
+                                <li><strong>通勤時間：</strong> 電車・バスでの移動時間を活用</li>
+                                <li><strong>昼休み：</strong> 15分の読書・動画視聴</li>
+                                <li><strong>夜：</strong> 寝る前30分の振り返り・学習</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>小さな目標設定</h4>
+                            <ul>
+                                <li>「1日10分」など、無理のない目標から</li>
+                                <li>「今月は○○を学ぶ」とテーマを決める</li>
+                                <li>資格試験などの具体的な目標を設定</li>
+                                <li>達成したら自分にご褒美</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>学習記録をつける</h4>
+                            <ul>
+                                <li>手帳やアプリで学習時間を記録</li>
+                                <li>Notionで学習ログを作成</li>
+                                <li>SNSで「今日の学び」を投稿</li>
+                                <li>振り返りで成長を実感</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>アウトプットする</h4>
+                            <ul>
+                                <li>学んだことを同僚に話す</li>
+                                <li>ブログ、noteで発信</li>
+                                <li>校内研修で実践発表</li>
+                                <li>勉強会で登壇</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>仲間を作る</h4>
+                            <ul>
+                                <li>同僚と勉強会を開催</li>
+                                <li>オンラインコミュニティに参加</li>
+                                <li>学習仲間とSNSで報告し合う</li>
+                                <li>一緒に資格試験に挑戦</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box bg-gradient-warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> 学習継続の落とし穴と対策</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>よくある失敗</th>
+                                <th>原因</th>
+                                <th>対策</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>三日坊主</td>
+                                <td>目標が高すぎる、時間がない</td>
+                                <td>1日5分から始める、習慣化アプリを使う</td>
+                            </tr>
+                            <tr>
+                                <td>何を学べばいいかわからない</td>
+                                <td>目標が不明確</td>
+                                <td>資格取得など具体的な目標設定、キャリアプランを立てる</td>
+                            </tr>
+                            <tr>
+                                <td>学んだことを忘れる</td>
+                                <td>アウトプット不足</td>
+                                <td>学習メモ、実践で使う、人に教える</td>
+                            </tr>
+                            <tr>
+                                <td>モチベーションが続かない</td>
+                                <td>孤独、成果が見えない</td>
+                                <td>コミュニティ参加、学習記録で成長を可視化</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

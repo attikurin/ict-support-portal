@@ -1,0 +1,298 @@
+{
+  "pages": [
+    {
+      "title": "トップページ",
+      "url": "index.html",
+      "description": "ICT支援員のための総合ポータルサイト",
+      "category": "トップ",
+      "keywords": ["ホーム", "トップ", "ポータル"]
+    },
+    {
+      "title": "ICT支援員の基礎知識",
+      "url": "basics.html",
+      "description": "役割、法的位置づけ、業務内容、100語以上の専門用語集",
+      "category": "基礎・入門",
+      "keywords": ["基礎", "役割", "業務内容", "法的位置づけ"]
+    },
+    {
+      "title": "教育入門講座（全8回）",
+      "url": "education-basics.html",
+      "description": "教育未経験者のための学校現場の基礎知識",
+      "category": "基礎・入門",
+      "keywords": ["教育", "入門", "学校", "基礎知識"]
+    },
+    {
+      "title": "ICT支援員のための用語集",
+      "url": "glossary.html",
+      "description": "100語以上の教育ICT専門用語を網羅",
+      "category": "基礎・入門",
+      "keywords": ["用語集", "専門用語", "辞書"]
+    },
+    {
+      "title": "日常業務ガイド",
+      "url": "daily-work.html",
+      "description": "ICT支援員の1日の業務フロー",
+      "category": "基礎・入門",
+      "keywords": ["日常業務", "業務フロー", "1日"]
+    },
+    {
+      "title": "企画員(SV)ガイド",
+      "url": "planner.html",
+      "description": "スーパーバイザーの役割と業務",
+      "category": "基礎・入門",
+      "keywords": ["企画員", "SV", "スーパーバイザー", "管理"]
+    },
+    {
+      "title": "ビジネスマナー",
+      "url": "business-manners.html",
+      "description": "学校現場での基本マナーと守秘義務",
+      "category": "基礎・入門",
+      "keywords": ["マナー", "守秘義務", "ビジネス", "学校"]
+    },
+    {
+      "title": "支援ガイドライン",
+      "url": "guidelines.html",
+      "description": "ICT活用が低い教員への支援方法",
+      "category": "支援・指導",
+      "keywords": ["支援", "ガイドライン", "教員支援"]
+    },
+    {
+      "title": "授業提案ガイド",
+      "url": "lesson-proposal.html",
+      "description": "効果的な授業提案の完全マニュアル",
+      "category": "支援・指導",
+      "keywords": ["授業提案", "提案", "授業"]
+    },
+    {
+      "title": "能動的支援のスキル",
+      "url": "skills.html",
+      "description": "積極的な支援に必要な知識とスキル",
+      "category": "支援・指導",
+      "keywords": ["スキル", "能動的", "支援"]
+    },
+    {
+      "title": "心理学的アプローチ",
+      "url": "psychology.html",
+      "description": "行動変容理論と心理学的支援方法",
+      "category": "支援・指導",
+      "keywords": ["心理学", "行動変容", "アプローチ"]
+    },
+    {
+      "title": "授業づくり",
+      "url": "lesson-design.html",
+      "description": "ICTを活用した授業設計の基礎",
+      "category": "支援・指導",
+      "keywords": ["授業づくり", "授業設計", "設計"]
+    },
+    {
+      "title": "コミュニケーションスキル",
+      "url": "communication-skills.html",
+      "description": "傾聴、質問、フィードバックの実践テクニック",
+      "category": "支援・指導",
+      "keywords": ["コミュニケーション", "傾聴", "質問", "フィードバック"]
+    },
+    {
+      "title": "特別支援ICT活用",
+      "url": "special-needs-ict.html",
+      "description": "障害種別ごとの支援技術と30以上のアプリ・ツール",
+      "category": "支援・指導",
+      "keywords": ["特別支援", "障害", "アプリ", "支援技術"]
+    },
+    {
+      "title": "GIGA最新動向",
+      "url": "giga-update.html",
+      "description": "GIGAスクール構想の最新情報と動向",
+      "category": "GIGA・最新動向",
+      "keywords": ["GIGA", "最新動向", "GIGAスクール"]
+    },
+    {
+      "title": "AI利用ガイド",
+      "url": "ai-education.html",
+      "description": "文部科学省ガイドライン、Google Gemini、Microsoft Copilot等のAI活用ガイド",
+      "category": "GIGA・最新動向",
+      "keywords": ["AI", "ChatGPT", "Gemini", "Copilot", "文部科学省", "生成AI"]
+    },
+    {
+      "title": "AI搭載教育アプリ・ツール総合ガイド",
+      "url": "ai-apps-education.html",
+      "description": "Qubena、すらら、Monoxer等のAIドリル、生成AI、学習支援AIを網羅的に紹介",
+      "category": "GIGA・最新動向",
+      "keywords": ["AIドリル", "Qubena", "すらら", "AI教育アプリ", "学習支援AI", "語学AI"]
+    },
+    {
+      "title": "成功事例",
+      "url": "case-studies.html",
+      "description": "実践的なICT活用事例集",
+      "category": "GIGA・最新動向",
+      "keywords": ["事例", "活用事例", "実践"]
+    },
+    {
+      "title": "ICT機器一覧",
+      "url": "tools.html",
+      "description": "Chromebook、iPad、Windowsの比較と周辺機器",
+      "category": "機器・ツール",
+      "keywords": ["ICT機器", "Chromebook", "iPad", "Windows", "周辺機器"]
+    },
+    {
+      "title": "トラブルシューティング",
+      "url": "troubleshooting.html",
+      "description": "よくあるトラブルと解決方法",
+      "category": "機器・ツール",
+      "keywords": ["トラブル", "不具合", "解決", "対処法"]
+    },
+    {
+      "title": "ネットワーク基礎",
+      "url": "network-basics.html",
+      "description": "Wi-Fi、LAN、インターネットの基礎知識",
+      "category": "機器・ツール",
+      "keywords": ["ネットワーク", "Wi-Fi", "LAN", "インターネット"]
+    },
+    {
+      "title": "情報セキュリティ",
+      "url": "security.html",
+      "description": "個人情報保護、著作権、パスワード管理",
+      "category": "機器・ツール",
+      "keywords": ["セキュリティ", "個人情報", "著作権", "パスワード"]
+    },
+    {
+      "title": "校務DX",
+      "url": "school-dx.html",
+      "description": "学校のデジタル化推進とICT支援員の役割",
+      "category": "運用・管理",
+      "keywords": ["校務DX", "DX", "デジタル化", "校務"]
+    },
+    {
+      "title": "研修・育成",
+      "url": "training.html",
+      "description": "教職員のICT活用能力向上のための研修計画",
+      "category": "運用・管理",
+      "keywords": ["研修", "育成", "教職員研修", "能力向上"]
+    },
+    {
+      "title": "データ分析・活用",
+      "url": "data-analytics.html",
+      "description": "学習ログ分析、EBPM、データドリブン意思決定",
+      "category": "運用・管理",
+      "keywords": ["データ分析", "学習ログ", "EBPM", "データドリブン"]
+    },
+    {
+      "title": "プロジェクトマネジメント",
+      "url": "project-management.html",
+      "description": "ICT環境整備の企画・計画・実行・評価",
+      "category": "運用・管理",
+      "keywords": ["プロジェクト管理", "PM", "企画", "計画"]
+    },
+    {
+      "title": "予算・調達",
+      "url": "budget-procurement.html",
+      "description": "ICT機器の予算編成、補助金活用、ライセンス管理",
+      "category": "運用・管理",
+      "keywords": ["予算", "調達", "補助金", "ライセンス"]
+    },
+    {
+      "title": "オンライン授業支援",
+      "url": "online-learning.html",
+      "description": "Zoom・Teams・Google Meetを活用した技術支援",
+      "category": "実践応用",
+      "keywords": ["オンライン授業", "Zoom", "Teams", "Google Meet", "配信"]
+    },
+    {
+      "title": "EdTechツール比較",
+      "url": "edtech-tools.html",
+      "description": "LMS、協働学習、評価ツールの特徴比較",
+      "category": "実践応用",
+      "keywords": ["EdTech", "ツール", "LMS", "協働学習", "評価"]
+    },
+    {
+      "title": "時間・タスク管理",
+      "url": "time-task-management.html",
+      "description": "複数校巡回のスケジュール最適化とタスク管理",
+      "category": "実践応用",
+      "keywords": ["時間管理", "タスク管理", "スケジュール", "巡回"]
+    },
+    {
+      "title": "危機・リスク管理",
+      "url": "crisis-management.html",
+      "description": "個人情報漏洩、システム障害、BCP策定",
+      "category": "実践応用",
+      "keywords": ["危機管理", "リスク管理", "BCP", "個人情報漏洩", "システム障害"]
+    },
+    {
+      "title": "保護者連携・理解促進",
+      "url": "parent-communication.html",
+      "description": "保護者向け説明会とICT活用理解促進",
+      "category": "実践応用",
+      "keywords": ["保護者", "連携", "説明会", "理解促進"]
+    },
+    {
+      "title": "学校行事ICT活用",
+      "url": "school-events-ict.html",
+      "description": "入学式・運動会・文化祭等の配信・記録",
+      "category": "実践応用",
+      "keywords": ["学校行事", "行事", "配信", "記録", "運動会", "文化祭"]
+    },
+    {
+      "title": "キャリアパス・スキルアップ",
+      "url": "career-path.html",
+      "description": "ICT支援員のキャリア形成と資格取得",
+      "category": "実践応用",
+      "keywords": ["キャリア", "スキルアップ", "資格", "転職"]
+    },
+    {
+      "title": "自己学習リソース",
+      "url": "self-learning.html",
+      "description": "オンライン講座、YouTube、書籍、コミュニティ",
+      "category": "実践応用",
+      "keywords": ["自己学習", "オンライン講座", "YouTube", "書籍"]
+    },
+    {
+      "title": "業務改善提案",
+      "url": "business-improvement.html",
+      "description": "ボトムアップ提案と費用対効果の算出",
+      "category": "実践応用",
+      "keywords": ["業務改善", "提案", "費用対効果", "ボトムアップ"]
+    },
+    {
+      "title": "メンタルヘルス",
+      "url": "mental-health.html",
+      "description": "ストレス管理、バーンアウト予防、ワークライフバランス",
+      "category": "実践応用",
+      "keywords": ["メンタルヘルス", "ストレス", "バーンアウト", "ワークライフバランス"]
+    },
+    {
+      "title": "ICT支援員配置・統計",
+      "url": "statistics.html",
+      "description": "配置状況、自治体データ、統計情報",
+      "category": "データ・資料",
+      "keywords": ["配置", "統計", "データ", "自治体"]
+    },
+    {
+      "title": "資格・検定",
+      "url": "certifications.html",
+      "description": "ICT支援員能力認定試験等の資格情報",
+      "category": "データ・資料",
+      "keywords": ["資格", "検定", "認定試験", "能力認定"]
+    },
+    {
+      "title": "教育委員会について",
+      "url": "board-education.html",
+      "description": "教育委員会制度の仕組みと役割",
+      "category": "データ・資料",
+      "keywords": ["教育委員会", "制度", "仕組み"]
+    },
+    {
+      "title": "リンク集",
+      "url": "resources-links.html",
+      "description": "100以上の厳選リンク、12カテゴリで整理",
+      "category": "データ・資料",
+      "keywords": ["リンク集", "リソース", "参考サイト"]
+    },
+    {
+      "title": "EdTech比較（詳細版）",
+      "url": "edtech-comparison.html",
+      "description": "教育プラットフォーム・ツールの詳細比較",
+      "category": "実践応用",
+      "keywords": ["EdTech", "比較", "プラットフォーム"]
+    }
+  ]
+}

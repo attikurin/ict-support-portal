@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>危機管理・リスク対応 - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="学校現場での危機管理とリスク対応。情報漏洩、サイバー攻撃、機器故障、災害時のICT対応、BCP策定を網羅。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-newspaper"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-tools"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-landmark"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-exclamation-triangle"></i> 危機管理・リスク対応</h1>
+                <p class="lead">学校現場での危機管理とリスク対応。情報漏洩、サイバー攻撃、機器故障、災害時のICT対応、BCP（事業継続計画）策定を網羅</p>
+            </div>
+
+            <!-- 1. 学校ICTにおける危機管理の重要性 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-info-circle"></i> 学校ICTにおける危機管理の重要性</h2>
+                </div>
+                <div class="info-box bg-gradient-danger">
+                    <h4><i class="fas fa-exclamation-circle"></i> なぜ学校ICTに危機管理が必要か</h4>
+                    <p>GIGAスクール構想により、全国の小中学校で1人1台端末環境が整備され、学校業務のデジタル化が進みました。一方で、個人情報漏洩、サイバー攻撃、システム障害などのリスクも増大しています。児童生徒の学びを止めないため、ICT支援員には危機管理とリスク対応の知識が不可欠です。</p>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-danger">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <h4>情報セキュリティリスク</h4>
+                        <p>個人情報漏洩、不正アクセス、ランサムウェア、フィッシング詐欺など、学校を狙ったサイバー攻撃が増加</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h4>システム障害リスク</h4>
+                        <p>ネットワークダウン、クラウドサービス障害、機器の大規模故障による授業・校務への影響</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-house-damage"></i>
+                        </div>
+                        <h4>災害リスク</h4>
+                        <p>地震、台風、水害などの自然災害による機器損傷、通信断絶、データ消失</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-user-times"></i>
+                        </div>
+                        <h4>人的リスク</h4>
+                        <p>教職員・児童生徒の誤操作、情報リテラシー不足、内部不正、SNSトラブル</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. 情報セキュリティインシデント対応 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-shield-alt"></i> 情報セキュリティインシデント対応</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 主要なセキュリティインシデントと対応</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>インシデント種類</th>
+                                <th>具体例</th>
+                                <th>初動対応</th>
+                                <th>再発防止策</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>個人情報漏洩</strong></td>
+                                <td>USBメモリ紛失、メール誤送信、クラウドの公開設定ミス</td>
+                                <td>即座に管理職・教育委員会へ報告、影響範囲の特定、該当者への連絡</td>
+                                <td>USBメモリ使用禁止、メール送信時のダブルチェック、クラウド権限設定の定期確認</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ランサムウェア感染</strong></td>
+                                <td>メール添付ファイルからマルウェア感染、ファイル暗号化</td>
+                                <td>感染端末をネットワークから即座に隔離、教育委員会・警察へ報告、復旧作業開始</td>
+                                <td>アンチウイルスソフト導入、OS・ソフトウェアの定期更新、バックアップの自動化</td>
+                            </tr>
+                            <tr>
+                                <td><strong>不正アクセス</strong></td>
+                                <td>外部からの校務システムへの不正ログイン、Webサイト改ざん</td>
+                                <td>該当アカウントの停止、パスワード変更、アクセスログの確認</td>
+                                <td>多要素認証の導入、強固なパスワードポリシー、定期的なセキュリティ監査</td>
+                            </tr>
+                            <tr>
+                                <td><strong>フィッシング詐欺</strong></td>
+                                <td>偽メールによるID/パスワード詐取、偽サイトへの誘導</td>
+                                <td>該当アカウントのパスワード即座変更、全教職員への注意喚起</td>
+                                <td>フィッシングメール識別研修、セキュリティ意識向上教育</td>
+                            </tr>
+                            <tr>
+                                <td><strong>児童生徒のSNSトラブル</strong></td>
+                                <td>個人情報の無断公開、誹謗中傷、不適切画像の投稿</td>
+                                <td>保護者への連絡、投稿削除依頼、必要に応じて警察・法務局へ相談</td>
+                                <td>情報モラル教育の充実、利用ルールの明確化、保護者との連携強化</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-clipboard-list"></i> インシデント発生時の対応フロー</h4>
+                    <div class="step-list">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>検知・報告</h4>
+                                <p>異常を発見したら即座に管理職・ICT担当者に報告。「大したことない」と自己判断しない</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>初動対応</h4>
+                                <p>被害拡大防止（端末隔離、アカウント停止、ネットワーク遮断など）</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>影響範囲の特定</h4>
+                                <p>どの情報が漏洩したか、何台の端末が感染したか、誰が影響を受けたか</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>関係機関への報告</h4>
+                                <p>教育委員会、警察（犯罪の場合）、個人情報保護委員会（重大な漏洩の場合※）</p>
+                                <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">※2022年4月施行の改正個人情報保護法に基づく（2024年時点）</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>復旧作業</h4>
+                                <p>バックアップからのデータ復元、システムの再構築、パスワード変更</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h4>再発防止策の実施</h4>
+                                <p>原因分析、ルール見直し、研修実施、システム改善</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. システム障害・機器故障対応 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-tools"></i> システム障害・機器故障対応</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-danger">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h4>ネットワーク障害</h4>
+                        <p><strong>症状：</strong> インターネット接続不可、校内LAN不通</p>
+                        <ul class="compact-list">
+                            <li><strong>初動：</strong> ルーター・スイッチの再起動、ケーブル接続確認</li>
+                            <li><strong>代替手段：</strong> モバイルルーター、テザリング</li>
+                            <li><strong>連絡先：</strong> 教育委員会、プロバイダ、ネットワーク業者</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h4>クラウドサービス障害</h4>
+                        <p><strong>症状：</strong> Google Classroom、Microsoft 365にアクセス不可</p>
+                        <ul class="compact-list">
+                            <li><strong>初動：</strong> サービス状態ページで障害情報確認</li>
+                            <li><strong>代替手段：</strong> 紙ベースの授業、別のLMS、オフライン作業</li>
+                            <li><strong>情報共有：</strong> 全教員への迅速な周知</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-laptop-medical"></i>
+                        </div>
+                        <h4>大規模機器故障</h4>
+                        <p><strong>症状：</strong> 端末が大量に起動しない、充電できない</p>
+                        <ul class="compact-list">
+                            <li><strong>初動：</strong> 故障台数・症状の記録、原因の特定（バッテリー、充電器、本体）</li>
+                            <li><strong>代替手段：</strong> 予備機の配備、グループ学習への切り替え</li>
+                            <li><strong>報告：</strong> 教育委員会へ迅速な報告、修理・交換の依頼</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <h4>電子黒板・プロジェクター故障</h4>
+                        <p><strong>症状：</strong> 映らない、タッチ操作不可、接続エラー</p>
+                        <ul class="compact-list">
+                            <li><strong>初動：</strong> ケーブル確認、再起動、入力切替確認</li>
+                            <li><strong>代替手段：</strong> 別の教室の機器を借用、ホワイトボード使用</li>
+                            <li><strong>修理依頼：</strong> 業者への連絡、保守契約の確認</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-gradient-warning">
+                    <h4><i class="fas fa-first-aid"></i> 障害対応の基本原則</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>授業への影響を最小化</strong>：代替手段を迅速に提示し、学びを止めない</li>
+                        <li><i class="fas fa-check"></i> <strong>迅速な情報共有</strong>：全教員に障害状況と対応方法を周知</li>
+                        <li><i class="fas fa-check"></i> <strong>記録を残す</strong>：障害発生日時、症状、対応内容を詳細に記録</li>
+                        <li><i class="fas fa-check"></i> <strong>エスカレーション基準の明確化</strong>：どのレベルで教育委員会・業者に連絡するか事前に決定</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 4. 災害時のICT対応 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-house-damage"></i> 災害時のICT対応</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 災害種類別のICT対応</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>災害種類</th>
+                                <th>想定される被害</th>
+                                <th>事前準備</th>
+                                <th>発災時の対応</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>地震</strong></td>
+                                <td>機器の転倒・落下、ケーブル断線、停電</td>
+                                <td>機器の固定、耐震マット設置、UPS導入</td>
+                                <td>安全確認後に機器点検、通信手段の確保、安否確認システム稼働</td>
+                            </tr>
+                            <tr>
+                                <td><strong>水害・台風</strong></td>
+                                <td>浸水による機器損傷、停電、通信断絶</td>
+                                <td>1階への機器配置回避、防水対策、クラウドバックアップ</td>
+                                <td>機器の避難、浸水機器の乾燥・修理、代替通信手段の確保</td>
+                            </tr>
+                            <tr>
+                                <td><strong>火災</strong></td>
+                                <td>機器の焼損、煙による故障、データ消失</td>
+                                <td>火災報知器・消火器の設置、クラウドバックアップ</td>
+                                <td>避難優先、鎮火後の機器損傷確認、バックアップからの復旧</td>
+                            </tr>
+                            <tr>
+                                <td><strong>停電</strong></td>
+                                <td>授業中断、データ消失、サーバーダウン</td>
+                                <td>UPS（無停電電源装置）導入、自動保存設定、モバイルバッテリー常備</td>
+                                <td>UPSで安全シャットダウン、復電後のシステム確認</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-danger">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>データバックアップ体制</h4>
+                        <ul class="compact-list">
+                            <li><strong>3-2-1ルール：</strong> 3つのコピー、2種類の媒体、1つはオフサイト保管</li>
+                            <li><strong>クラウドバックアップ：</strong> Google Drive、OneDriveの活用</li>
+                            <li><strong>定期的なバックアップテスト：</strong> 復元可能か確認</li>
+                            <li><strong>重要データの優先順位付け：</strong> 児童生徒名簿、成績データなど</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h4>通信手段の確保</h4>
+                        <ul class="compact-list">
+                            <li><strong>複数の通信手段：</strong> 固定電話、携帯電話、衛星電話</li>
+                            <li><strong>連絡網の整備：</strong> 緊急連絡先リストの作成・更新</li>
+                            <li><strong>安否確認システム：</strong> メール・SMS一斉配信</li>
+                            <li><strong>モバイルルーター常備：</strong> 固定回線断絶時の代替手段</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>電源確保対策</h4>
+                        <ul class="compact-list">
+                            <li><strong>UPS（無停電電源装置）：</strong> サーバー・重要機器に設置</li>
+                            <li><strong>モバイルバッテリー：</strong> 教職員用の常備</li>
+                            <li><strong>発電機：</strong> 長期停電時の備え</li>
+                            <li><strong>ソーラーパネル：</strong> 再生可能エネルギーの活用</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h4>端末の保護</h4>
+                        <ul class="compact-list">
+                            <li><strong>保護ケース：</strong> 耐衝撃ケースの使用</li>
+                            <li><strong>保管場所：</strong> 落下・転倒リスクの低い場所</li>
+                            <li><strong>持ち帰り対応：</strong> 災害予測時の事前持ち帰り</li>
+                            <li><strong>予備機の確保：</strong> 一定数の予備端末を別拠点に保管</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. BCP（事業継続計画）の策定 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-file-alt"></i> BCP（事業継続計画）の策定</h2>
+                </div>
+
+                <div class="info-box bg-gradient-primary">
+                    <h4><i class="fas fa-info-circle"></i> BCPとは</h4>
+                    <p>BCP（Business Continuity Plan：事業継続計画）とは、災害や事故などの緊急事態が発生した際に、重要業務を継続または早期復旧するための計画です。学校においては「児童生徒の学びを止めない」ことが最優先目標となります。</p>
+                </div>
+
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>重要業務の特定</h4>
+                            <ul>
+                                <li>授業の実施（最優先）</li>
+                                <li>児童生徒の安全確認</li>
+                                <li>保護者との連絡</li>
+                                <li>成績・出席管理</li>
+                                <li>給食・保健業務</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>リスク分析</h4>
+                            <ul>
+                                <li>発生可能性の評価（地震、水害、感染症、システム障害など）</li>
+                                <li>影響度の評価（授業停止日数、データ消失リスクなど）</li>
+                                <li>優先順位の決定（リスクマトリクスの作成）</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>代替手段の準備</h4>
+                            <ul>
+                                <li><strong>ICTが使えない場合：</strong> 紙教材、板書中心の授業</li>
+                                <li><strong>教室が使えない場合：</strong> オンライン授業、分散登校</li>
+                                <li><strong>教員が不足する場合：</strong> オンデマンド動画、自習課題</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>体制・役割分担の明確化</h4>
+                            <ul>
+                                <li>災害対策本部の設置（本部長、連絡係、ICT担当など）</li>
+                                <li>ICT支援員の役割（機器点検、通信手段確保、復旧作業）</li>
+                                <li>外部業者との連絡体制</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>訓練・見直し</h4>
+                            <ul>
+                                <li>年1〜2回のBCP訓練実施</li>
+                                <li>訓練後の課題抽出と改善</li>
+                                <li>年度ごとのBCP見直し</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-clipboard-list"></i> 学校ICT-BCPチェックリスト</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>データバックアップ：</strong> 重要データの定期的なクラウドバックアップ</li>
+                        <li><i class="fas fa-check"></i> <strong>通信手段の多重化：</strong> 固定回線+モバイル回線</li>
+                        <li><i class="fas fa-check"></i> <strong>電源対策：</strong> UPS、モバイルバッテリー、発電機</li>
+                        <li><i class="fas fa-check"></i> <strong>機器の固定・保護：</strong> 耐震マット、保護ケース</li>
+                        <li><i class="fas fa-check"></i> <strong>予備機の確保：</strong> 一定数の予備端末</li>
+                        <li><i class="fas fa-check"></i> <strong>オンライン授業体制：</strong> Zoom/Teamsアカウント、マニュアル整備</li>
+                        <li><i class="fas fa-check"></i> <strong>緊急連絡網：</strong> 教職員・保護者の連絡先リスト最新化</li>
+                        <li><i class="fas fa-check"></i> <strong>業者連絡先リスト：</strong> プロバイダ、機器業者、保守業者</li>
+                        <li><i class="fas fa-check"></i> <strong>復旧優先順位：</strong> どのシステムから復旧するか明確化</li>
+                        <li><i class="fas fa-check"></i> <strong>定期訓練：</strong> 年1回以上のBCP訓練実施</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 6. リスクコミュニケーション -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-comments"></i> リスクコミュニケーション</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h4>教職員への情報共有</h4>
+                        <ul class="compact-list">
+                            <li>定期的なセキュリティ研修（年2回以上）</li>
+                            <li>インシデント発生時の迅速な全体周知</li>
+                            <li>ヒヤリハット事例の共有</li>
+                            <li>ICT利用ルールの周知徹底</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h4>児童生徒への教育</h4>
+                        <ul class="compact-list">
+                            <li>情報モラル教育の充実</li>
+                            <li>パスワード管理の重要性</li>
+                            <li>SNSトラブル防止</li>
+                            <li>フィッシング詐欺の見分け方</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>保護者との連携</h4>
+                        <ul class="compact-list">
+                            <li>ICT利用方針の説明会</li>
+                            <li>家庭でのルール作り支援</li>
+                            <li>トラブル時の相談窓口の明示</li>
+                            <li>個人情報保護の取り組み説明</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <h4>教育委員会・業者との連携</h4>
+                        <ul class="compact-list">
+                            <li>定期的な情報交換会</li>
+                            <li>インシデント報告の迅速化</li>
+                            <li>セキュリティポリシーの共有</li>
+                            <li>サポート体制の確認</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. ICT支援員の危機管理チェックリスト -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-clipboard-check"></i> ICT支援員の危機管理チェックリスト</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 日常・月次・年次のチェック項目</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>頻度</th>
+                                <th>チェック項目</th>
+                                <th>目的</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>日常</strong></td>
+                                <td>
+                                    ・ネットワーク接続状態の確認<br>
+                                    ・セキュリティアラートのチェック<br>
+                                    ・バックアップ実行状況の確認<br>
+                                    ・端末の動作確認
+                                </td>
+                                <td>早期発見・早期対応</td>
+                            </tr>
+                            <tr>
+                                <td><strong>週次</strong></td>
+                                <td>
+                                    ・アクセスログの確認<br>
+                                    ・不審なアクセスの有無<br>
+                                    ・ソフトウェア更新の確認<br>
+                                    ・予備機の動作確認
+                                </td>
+                                <td>異常の早期検知</td>
+                            </tr>
+                            <tr>
+                                <td><strong>月次</strong></td>
+                                <td>
+                                    ・バックアップデータの復元テスト<br>
+                                    ・セキュリティポリシーの遵守状況確認<br>
+                                    ・機器の定期メンテナンス<br>
+                                    ・緊急連絡先リストの更新
+                                </td>
+                                <td>システムの健全性維持</td>
+                            </tr>
+                            <tr>
+                                <td><strong>年次</strong></td>
+                                <td>
+                                    ・BCP訓練の実施<br>
+                                    ・リスクアセスメントの見直し<br>
+                                    ・セキュリティ監査<br>
+                                    ・教職員向けセキュリティ研修
+                                </td>
+                                <td>危機管理体制の強化</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box bg-gradient-success">
+                    <h4><i class="fas fa-lightbulb"></i> 危機管理のポイント</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>予防が最優先：</strong> インシデントが起きてから対応するより、事前の予防策が重要</li>
+                        <li><i class="fas fa-check"></i> <strong>迅速な初動対応：</strong> 被害拡大を防ぐため、発見後すぐに行動</li>
+                        <li><i class="fas fa-check"></i> <strong>記録を残す：</strong> インシデント対応の記録は今後の改善に不可欠</li>
+                        <li><i class="fas fa-check"></i> <strong>定期的な見直し：</strong> リスクは変化するため、定期的な見直しが必要</li>
+                        <li><i class="fas fa-check"></i> <strong>組織全体で取り組む：</strong> ICT支援員だけでなく、全教職員の協力が不可欠</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情報セキュリティ - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="学校現場での情報セキュリティ対策を総合解説。個人情報保護法、著作権法、パスワード管理、ネットワークセキュリティ、インシデント対応まで網羅。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html" class="active"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-shield-alt"></i> 情報セキュリティ</h1>
+            <p>学校現場での情報セキュリティ対策とインシデント対応</p>
+        </div>
+        
+        <section class="intro">
+            <p>学校のICT環境には、児童生徒の個人情報や学習データ、教職員の情報など、多くの機密情報が含まれています。ICT支援員は、これらの情報を守り、安全なICT環境を維持する重要な役割を担っています。</p>
+            
+            <div class="critical-box">
+                <p><strong>情報漏洩は、児童生徒・保護者・学校に重大な被害をもたらします。</strong></p>
+                <ul>
+                    <li>個人情報の不正利用</li>
+                    <li>なりすまし被害</li>
+                    <li>学校・自治体の信頼失墜</li>
+                    <li>損害賠償請求</li>
+                    <li>刑事罰（懲役・罰金）</li>
+                </ul>
+            </div>
+            
+            <div class="checklist">
+                <h4>📋 このページで学べること</h4>
+                <ul>
+                    <li>情報セキュリティの基本原則（CIA）</li>
+                    <li>個人情報保護法・著作権法の実践知識</li>
+                    <li>パスワード管理・アカウント管理</li>
+                    <li>ネットワークセキュリティ対策</li>
+                    <li>MDM・フィルタリング</li>
+                    <li>セキュリティインシデント対応</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 1. 情報セキュリティの基礎 -->
+        <div class="security-category">
+            <h2>1. 情報セキュリティの基礎</h2>
+        </div>
+
+        <section>
+            <h3>1.1 情報セキュリティの3要素（CIA）</h3>
+            <div class="security-item">
+                <p>情報セキュリティは、<strong>Confidentiality（機密性）、Integrity（完全性）、Availability（可用性）</strong>の3要素で構成されます。</p>
+                
+                <table>
+                    <tr>
+                        <th>要素</th>
+                        <th>意味</th>
+                        <th>学校での具体例</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Confidentiality<br>（機密性）</strong></td>
+                        <td>許可された人だけが情報にアクセスできる</td>
+                        <td>・児童生徒の成績は担任のみ閲覧可能<br>・パスワードで保護されたファイル<br>・鍵付きキャビネットでの書類管理</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Integrity<br>（完全性）</strong></td>
+                        <td>情報が正確で改ざんされていない</td>
+                        <td>・成績データの不正変更を防ぐ<br>・バックアップの定期的な取得<br>・変更履歴の記録</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Availability<br>（可用性）</strong></td>
+                        <td>必要な時に情報にアクセスできる</td>
+                        <td>・授業時にシステムが使える<br>・ネットワーク障害への備え<br>・冗長化（予備機の準備）</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h3>1.2 セキュリティの脅威</h3>
+            <div class="security-item">
+                <h4>外部からの脅威</h4>
+                <ul>
+                    <li><strong>サイバー攻撃</strong>：
+                        <ul>
+                            <li>不正アクセス（ハッキング）</li>
+                            <li>マルウェア（ウイルス、ランサムウェア）</li>
+                            <li>フィッシング詐欺</li>
+                            <li>DDoS攻撃（サービス妨害）</li>
+                        </ul>
+                    </li>
+                    <li><strong>物理的な脅威</strong>：
+                        <ul>
+                            <li>機器の盗難</li>
+                            <li>不審者の侵入</li>
+                            <li>災害（火災、水害、地震）</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>内部からの脅威</h4>
+                <ul>
+                    <li><strong>人的ミス</strong>：
+                        <ul>
+                            <li>メール誤送信</li>
+                            <li>USBメモリの紛失</li>
+                            <li>パスワードの使い回し</li>
+                            <li>不適切な情報公開</li>
+                        </ul>
+                    </li>
+                    <li><strong>内部不正</strong>：
+                        <ul>
+                            <li>情報の持ち出し</li>
+                            <li>データの改ざん</li>
+                            <li>権限の不正利用</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                情報漏洩の多くは「人的ミス」が原因とされています（IPA「情報セキュリティ10大脅威」、JNSA「情報セキュリティインシデント調査」等）。技術的対策だけでなく、教職員・ICT支援員の意識向上が最も重要です。
+            </div>
+        </section>
+
+        <!-- 2. 個人情報保護 -->
+        <div class="security-category">
+            <h2>2. 個人情報保護</h2>
+        </div>
+
+        <section>
+            <h3>2.1 個人情報保護法の基礎</h3>
+            <div class="law-box">
+                <h4>個人情報保護法とは</h4>
+                <p><strong>個人情報の保護に関する法律（個人情報保護法）</strong>は、個人情報の適切な取り扱いを定めた法律です。2022年4月に改正法が施行され、学校を含む全ての事業者に適用されます。</p>
+            </div>
+
+            <div class="security-item">
+                <h4>個人情報とは</h4>
+                <p><strong>「生存する個人に関する情報」で、特定の個人を識別できるもの</strong></p>
+                
+                <ul>
+                    <li>✅ 氏名</li>
+                    <li>✅ 生年月日</li>
+                    <li>✅ 住所・電話番号</li>
+                    <li>✅ メールアドレス</li>
+                    <li>✅ 顔写真・映像</li>
+                    <li>✅ 学籍番号・出席番号</li>
+                    <li>✅ 成績・評価</li>
+                    <li>✅ 健康情報</li>
+                    <li>✅ 家庭環境に関する情報</li>
+                </ul>
+            </div>
+
+            <div class="security-item">
+                <h4>要配慮個人情報</h4>
+                <p><strong>特に慎重な取り扱いが必要な個人情報</strong></p>
+                
+                <ul>
+                    <li>✅ 人種・民族</li>
+                    <li>✅ 信条（思想・宗教）</li>
+                    <li>✅ 社会的身分</li>
+                    <li>✅ 病歴・障害</li>
+                    <li>✅ 犯罪歴・非行歴</li>
+                    <li>✅ 犯罪被害</li>
+                </ul>
+
+                <p><strong>これらの情報は、本人の同意なく取得・利用してはいけません。</strong></p>
+            </div>
+        </section>
+
+        <section>
+            <h3>2.2 学校における個人情報の取り扱い</h3>
+            <div class="security-item">
+                <h4>個人情報保護の5原則</h4>
+                <ol>
+                    <li><strong>利用目的の特定</strong>：何のために個人情報を使うのか明確にする</li>
+                    <li><strong>適正な取得</strong>：偽りなく、正当な方法で取得する</li>
+                    <li><strong>正確性の確保</strong>：最新の正確な情報を保つ</li>
+                    <li><strong>安全管理措置</strong>：漏洩・紛失を防ぐ対策をとる</li>
+                    <li><strong>第三者提供の制限</strong>：本人の同意なく他人に渡さない</li>
+                </ol>
+            </div>
+
+            <div class="security-item">
+                <h4>ICT支援員が守るべきルール</h4>
+                <ul>
+                    <li><strong>アクセス制限</strong>：
+                        <ul>
+                            <li>必要最小限の情報のみ閲覧</li>
+                            <li>業務に関係ない情報は見ない</li>
+                            <li>他の教員の権限で勝手にログインしない</li>
+                        </ul>
+                    </li>
+                    <li><strong>持ち出し禁止</strong>：
+                        <ul>
+                            <li>個人情報を校外に持ち出さない</li>
+                            <li>私物のUSBメモリ・PCに保存しない</li>
+                            <li>スマートフォンで撮影しない</li>
+                        </ul>
+                    </li>
+                    <li><strong>廃棄の徹底</strong>：
+                        <ul>
+                            <li>不要になった書類はシュレッダーで裁断</li>
+                            <li>デジタルデータは完全消去</li>
+                            <li>ゴミ箱に捨てるだけはNG</li>
+                        </ul>
+                    </li>
+                    <li><strong>守秘義務</strong>：
+                        <ul>
+                            <li>業務上知り得た情報を外部に漏らさない</li>
+                            <li>家族や友人にも話さない</li>
+                            <li>SNSへの投稿禁止</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="good-practice">
+                個人情報が記載された名簿を印刷する際、必要部数のみ印刷し、使用後はシュレッダーで裁断する。
+            </div>
+
+            <div class="bad-practice">
+                「後で使うかもしれない」と、個人情報入りの書類を机の引き出しに保管し続ける。
+            </div>
+        </section>
+
+        <section>
+            <h3>2.3 個人情報漏洩の事例と対策</h3>
+            <div class="security-item">
+                <h4>よくある情報漏洩パターン</h4>
+                <table>
+                    <tr>
+                        <th>漏洩パターン</th>
+                        <th>具体例</th>
+                        <th>対策</th>
+                    </tr>
+                    <tr>
+                        <td>メール誤送信</td>
+                        <td>保護者への一斉メールで、全員のアドレスがTo/CCで見えてしまった</td>
+                        <td>BCCを使用する<br>送信前に宛先を再確認</td>
+                    </tr>
+                    <tr>
+                        <td>USBメモリ紛失</td>
+                        <td>児童名簿入りUSBを電車に置き忘れた</td>
+                        <td>USBメモリは暗号化<br>個人情報の持ち出し禁止</td>
+                    </tr>
+                    <tr>
+                        <td>PCの盗難</td>
+                        <td>職員室のPCが盗まれ、成績データが流出</td>
+                        <td>PC画面ロック（離席時）<br>ハードディスク暗号化</td>
+                    </tr>
+                    <tr>
+                        <td>SNS投稿</td>
+                        <td>授業風景の写真をSNSに投稿し、児童の顔が写っていた</td>
+                        <td>学校関連の写真は一切投稿しない</td>
+                    </tr>
+                    <tr>
+                        <td>のぞき見</td>
+                        <td>電車内でPCを開き、個人情報が他人に見られた</td>
+                        <td>公共の場でPC作業をしない<br>覗き見防止フィルター</td>
+                    </tr>
+                    <tr>
+                        <td>書類の廃棄ミス</td>
+                        <td>名簿をそのままゴミ箱に捨て、外部に流出</td>
+                        <td>シュレッダーで裁断<br>溶解処理</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- 3. 著作権 -->
+        <div class="security-category">
+            <h2>3. 著作権</h2>
+        </div>
+
+        <section>
+            <h3>3.1 著作権法の基礎</h3>
+            <div class="law-box">
+                <h4>著作権とは</h4>
+                <p><strong>著作権法</strong>は、創作物（著作物）を保護し、著作者の権利を守る法律です。</p>
+                
+                <h5>著作物の例</h5>
+                <ul>
+                    <li>文章（小説、論文、記事）</li>
+                    <li>音楽（楽曲、歌詞）</li>
+                    <li>美術（絵画、イラスト、写真）</li>
+                    <li>映像（映画、動画、アニメ）</li>
+                    <li>プログラム（ソフトウェア）</li>
+                </ul>
+            </div>
+
+            <div class="security-item">
+                <h4>著作権者の権利</h4>
+                <ul>
+                    <li><strong>複製権</strong>：コピーする権利</li>
+                    <li><strong>公衆送信権</strong>：インターネットで配信する権利</li>
+                    <li><strong>上映権・演奏権</strong>：公の場で上映・演奏する権利</li>
+                    <li><strong>翻案権</strong>：改変・翻訳する権利</li>
+                </ul>
+                <p><strong>これらの権利は著作権者が持っており、無断で使うと著作権侵害になります。</strong></p>
+            </div>
+        </section>
+
+        <section>
+            <h3>3.2 教育における著作権の例外（35条）</h3>
+            <div class="law-box">
+                <h4>著作権法35条（教育の例外規定）</h4>
+                <p>学校その他の教育機関では、<strong>一定の条件下で著作物を無許諾・無償で利用できます</strong>。</p>
+                
+                <h5>利用できる条件</h5>
+                <ol>
+                    <li><strong>授業の過程で使用する</strong>（教育目的）</li>
+                    <li><strong>必要と認められる限度</strong>（必要最小限）</li>
+                    <li><strong>著作権者の利益を不当に害さない</strong></li>
+                    <li><strong>出所を明示する</strong>（引用元を示す）</li>
+                </ol>
+            </div>
+
+            <div class="security-item">
+                <h4>35条で可能なこと</h4>
+                <ul>
+                    <li>✅ 教科書や参考書のページをコピーして配布</li>
+                    <li>✅ 新聞記事を授業で使用</li>
+                    <li>✅ 動画を授業で上映</li>
+                    <li>✅ オンライン授業での教材配信（SARTRAS補償金制度）</li>
+                </ul>
+
+                <h4>35条でも許されないこと</h4>
+                <ul>
+                    <li>✗ ドリルやワークブックの全ページをコピー（著作権者の利益を害する）</li>
+                    <li>✗ 市販のCDを学校サーバーにアップロード（必要限度を超える）</li>
+                    <li>✗ 動画配信サービス（Netflix等）の画面を録画して配信</li>
+                    <li>✗ 授業と関係ない娯楽目的の利用</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                2020年の法改正により、オンライン授業でも著作物を利用できるようになりましたが、<strong>SARTRAS（授業目的公衆送信補償金等管理協会）</strong>への補償金支払いが必要です（学校設置者が支払い）。
+            </div>
+        </section>
+
+        <section>
+            <h3>3.3 ICT支援員が注意すべき著作権</h3>
+            <div class="security-item">
+                <h4>教材作成時の注意点</h4>
+                <ul>
+                    <li><strong>画像検索でヒットした画像</strong>：
+                        <ul>
+                            <li>✗ 無断で使用してはいけない</li>
+                            <li>✅ 著作権フリー素材（いらすとや、Pixabay等）を使う</li>
+                            <li>✅ Creative Commons（CC）ライセンスを確認</li>
+                        </ul>
+                    </li>
+                    <li><strong>YouTube動画</strong>：
+                        <ul>
+                            <li>✅ 授業で見せるのはOK（35条）</li>
+                            <li>✗ ダウンロードして保存・配布はNG
+                                <ul>
+                                    <li>YouTubeの利用規約違反</li>
+                                    <li>著作権法違反の可能性もあり</li>
+                                    <li>授業で使う場合は、オンラインで直接再生しましょう</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>音楽・BGM</strong>：
+                        <ul>
+                            <li>✗ 市販CDを勝手に使えない</li>
+                            <li>✅ 著作権フリー音楽（DOVA-SYNDROME、魔王魂等）を使う</li>
+                        </ul>
+                    </li>
+                    <li><strong>フォント</strong>：
+                        <ul>
+                            <li>商用フォントは使用許諾を確認</li>
+                            <li>Google Fontsなどフリーフォントを活用</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="security-item">
+                <h4>引用のルール</h4>
+                <p>著作物を<strong>「引用」</strong>として使う場合は、以下の条件を満たせば無許諾で利用できます。</p>
+                <ol>
+                    <li><strong>引用の必然性</strong>：引用する理由がある</li>
+                    <li><strong>主従関係</strong>：自分の文章が「主」、引用が「従」</li>
+                    <li><strong>明瞭区別性</strong>：引用部分を「」やカギカッコで明示</li>
+                    <li><strong>出所明示</strong>：著者名、書籍名、URLなどを記載</li>
+                    <li><strong>改変禁止</strong>：原文のまま引用（要約はNG）</li>
+                </ol>
+            </div>
+
+            <div class="good-practice">
+                「文部科学省（2023）『教育の情報化に関する手引』によると、『ICT支援員は、学校におけるICTを活用した授業等に関して、教員をサポートする』とされています。（出典：https://...）」
+            </div>
+        </section>
+
+        <!-- 4. パスワード・アカウント管理 -->
+        <div class="security-category">
+            <h2>4. パスワード・アカウント管理</h2>
+        </div>
+
+        <section>
+            <h3>4.1 強固なパスワード</h3>
+            <div class="security-item">
+                <h4>パスワードの条件</h4>
+                <ul>
+                    <li><strong>12文字以上</strong>（推奨は15文字以上）</li>
+                    <li><strong>英大文字・小文字・数字・記号を組み合わせる</strong></li>
+                    <li><strong>辞書に載っている単語を避ける</strong></li>
+                    <li><strong>個人情報を含めない</strong>（誕生日、電話番号等）</li>
+                    <li><strong>推測されやすいパスワードは避ける</strong>：
+                        <ul>
+                            <li>✗ password、123456、qwerty</li>
+                            <li>✗ 学校名、自分の名前</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>強いパスワードの例</h4>
+                <ul>
+                    <li>✅ <code>Ky0-iK!9Tu&amp;Moz2#Rp</code>（ランダム文字列）</li>
+                    <li>✅ <code>W@t@sh1-wa-ICT-S13n-2025!</code>（フレーズ型）</li>
+                </ul>
+
+                <h4>弱いパスワードの例</h4>
+                <ul>
+                    <li>✗ <code>password</code></li>
+                    <li>✗ <code>12345678</code></li>
+                    <li>✗ <code>tanaka2000</code>（名前+誕生年）</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                パスワード生成ツールやパスワードマネージャー（1Password、Bitwarden等）を活用しましょう。
+            </div>
+        </section>
+
+        <section>
+            <h3>4.2 パスワード管理のルール</h3>
+            <div class="security-item">
+                <ul>
+                    <li><strong>使い回し厳禁</strong>：
+                        <ul>
+                            <li>サービスごとに異なるパスワードを設定</li>
+                            <li>1つ漏れたら全部危険になる</li>
+                        </ul>
+                    </li>
+                    <li><strong>適切なタイミングでの変更</strong>：
+                        <ul>
+                            <li><strong>漏洩の疑いがある場合は即座に変更</strong></li>
+                            <li>アカウント侵害の通知を受けた場合</li>
+                            <li>第三者にパスワードを知られた可能性がある場合</li>
+                            <li>※定期的な変更（3～6ヶ月ごと）は、現在のセキュリティベストプラクティスでは推奨されていません（NIST SP 800-63B）。強固なパスワードと多要素認証の併用が重要です</li>
+                        </ul>
+                    </li>
+                    <li><strong>他人と共有しない</strong>：
+                        <ul>
+                            <li>教員にも教えない（共有アカウントは別管理）</li>
+                            <li>電話・メールでパスワードを聞かれたら詐欺を疑う</li>
+                        </ul>
+                    </li>
+                    <li><strong>メモの保管に注意</strong>：
+                        <ul>
+                            <li>PCモニターに付箋で貼らない</li>
+                            <li>紙に書く場合は鍵付きキャビネットに保管</li>
+                            <li>パスワードマネージャーで管理推奨</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bad-practice">
+                全てのアカウントで「tanaka1234」を使い回し、PCのモニターに付箋でパスワードを貼っている。
+            </div>
+        </section>
+
+        <section>
+            <h3>4.3 多要素認証（MFA）</h3>
+            <div class="security-item">
+                <h4>多要素認証とは</h4>
+                <p>パスワード（知識要素）に加えて、<strong>別の認証要素を組み合わせる</strong>ことで、セキュリティを大幅に強化します。</p>
+                
+                <h5>認証の3要素</h5>
+                <ol>
+                    <li><strong>知識要素</strong>：パスワード、PIN</li>
+                    <li><strong>所持要素</strong>：スマートフォン、ICカード、セキュリティキー</li>
+                    <li><strong>生体要素</strong>：指紋、顔認証、虹彩認証</li>
+                </ol>
+
+                <h5>多要素認証の例</h5>
+                <ul>
+                    <li>パスワード + SMS認証コード</li>
+                    <li>パスワード + 認証アプリ（Google Authenticator、Microsoft Authenticator）</li>
+                    <li>パスワード + 指紋認証</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                Google Workspace、Microsoft 365などの学校アカウントでは、<strong>多要素認証を必ず有効化</strong>しましょう。
+            </div>
+        </section>
+
+        <section>
+            <h3>4.4 アカウント管理</h3>
+            <div class="security-item">
+                <h4>児童生徒アカウントの管理</h4>
+                <ul>
+                    <li><strong>初期パスワードの変更</strong>：
+                        <ul>
+                            <li>初回ログイン時に必ず変更させる</li>
+                            <li>「123456」などの簡単なパスワードは禁止</li>
+                        </ul>
+                    </li>
+                    <li><strong>パスワードの記録</strong>：
+                        <ul>
+                            <li>児童生徒が忘れた場合に備え、学校で記録を保管</li>
+                            <li>紙の場合は鍵付きキャビネット</li>
+                            <li>デジタルの場合はパスワード保護</li>
+                        </ul>
+                    </li>
+                    <li><strong>卒業生のアカウント削除</strong>：
+                        <ul>
+                            <li>卒業後は速やかに削除</li>
+                            <li>不正利用を防ぐ</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="security-item">
+                <h4>教職員アカウントの管理</h4>
+                <ul>
+                    <li><strong>権限の最小化</strong>：
+                        <ul>
+                            <li>必要な権限のみ付与</li>
+                            <li>管理者権限は最小限の人数に</li>
+                        </ul>
+                    </li>
+                    <li><strong>異動・退職時の処理</strong>：
+                        <ul>
+                            <li>異動日・退職日にアカウント停止</li>
+                            <li>データの引き継ぎを完了してから削除</li>
+                        </ul>
+                    </li>
+                    <li><strong>共有アカウントの禁止</strong>：
+                        <ul>
+                            <li>個人ごとにアカウントを発行</li>
+                            <li>「職員室PC」などの共有アカウントはリスク大</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 5. ネットワークセキュリティ -->
+        <div class="security-category">
+            <h2>5. ネットワークセキュリティ</h2>
+        </div>
+
+        <section>
+            <h3>5.1 ファイアウォール</h3>
+            <div class="security-item">
+                <h4>ファイアウォールとは</h4>
+                <p>外部ネットワークと内部ネットワークの間に設置し、<strong>不正アクセスを防ぐ「壁」</strong>の役割を果たします。</p>
+                
+                <h5>ファイアウォールの機能</h5>
+                <ul>
+                    <li>許可された通信のみ通過させる（ホワイトリスト方式）</li>
+                    <li>危険な通信をブロック（ブラックリスト方式）</li>
+                    <li>通信ログの記録</li>
+                </ul>
+
+                <h5>ICT支援員の役割</h5>
+                <ul>
+                    <li>ファイアウォールの設定変更は<strong>専門業者に依頼</strong></li>
+                    <li>教員から「このサイトにアクセスできない」と言われたら、ファイアウォールでブロックされている可能性を確認</li>
+                    <li>不要なポート開放はしない（セキュリティリスク）</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>5.2 ウイルス対策</h3>
+            <div class="security-item">
+                <h4>マルウェアの種類</h4>
+                <table>
+                    <tr>
+                        <th>種類</th>
+                        <th>説明</th>
+                        <th>被害例</th>
+                    </tr>
+                    <tr>
+                        <td>ウイルス</td>
+                        <td>自己増殖し、ファイルやシステムを破壊</td>
+                        <td>データ消失、システムダウン</td>
+                    </tr>
+                    <tr>
+                        <td>ランサムウェア</td>
+                        <td>ファイルを暗号化し、解除に身代金を要求</td>
+                        <td>学校データが全て使用不可に</td>
+                    </tr>
+                    <tr>
+                        <td>トロイの木馬</td>
+                        <td>正常なソフトを装って侵入し、情報を盗む</td>
+                        <td>パスワード流出、遠隔操作</td>
+                    </tr>
+                    <tr>
+                        <td>スパイウェア</td>
+                        <td>ユーザーの行動を監視し、情報を外部送信</td>
+                        <td>個人情報漏洩</td>
+                    </tr>
+                    <tr>
+                        <td>ワーム</td>
+                        <td>ネットワーク経由で自動拡散</td>
+                        <td>校内ネットワーク全体に感染</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="security-item">
+                <h4>ウイルス対策の基本</h4>
+                <ul>
+                    <li><strong>ウイルス対策ソフトの導入</strong>：
+                        <ul>
+                            <li>全PCに必須</li>
+                            <li>定義ファイルの自動更新</li>
+                            <li>リアルタイムスキャン有効化</li>
+                        </ul>
+                    </li>
+                    <li><strong>OSやソフトウェアの更新</strong>：
+                        <ul>
+                            <li>Windows Update、macOS更新を定期実行</li>
+                            <li>セキュリティパッチの適用</li>
+                        </ul>
+                    </li>
+                    <li><strong>怪しいファイル・リンクを開かない</strong>：
+                        <ul>
+                            <li>不審なメールの添付ファイルは開かない</li>
+                            <li>身に覚えのないUSBメモリは挿さない</li>
+                        </ul>
+                    </li>
+                    <li><strong>定期的なフルスキャン</strong>：
+                        <ul>
+                            <li>週1回程度、全ファイルをスキャン</li>
+                            <li>夜間や休日に自動実行設定</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="critical-box">
+                <p><strong>ランサムウェアに感染したら、絶対に身代金を払わないでください。</strong>払っても復旧できない場合が多く、さらなる攻撃の標的になります。すぐに専門業者と警察に相談しましょう。</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>5.3 フィッシング詐欺対策</h3>
+            <div class="security-item">
+                <h4>フィッシング詐欺とは</h4>
+                <p>偽のメールやウェブサイトで、<strong>パスワードやクレジットカード情報を盗む詐欺</strong>です。</p>
+                
+                <h5>フィッシングメールの特徴</h5>
+                <ul>
+                    <li>✗ 「アカウントが停止されます」など緊急性を煽る</li>
+                    <li>✗ 「パスワードを入力してください」とリンクを送ってくる</li>
+                    <li>✗ 送信元アドレスが公式と微妙に違う（@g00gle.com等）</li>
+                    <li>✗ 日本語が不自然</li>
+                    <li>✗ 添付ファイルがある</li>
+                </ul>
+
+                <h5>対策</h5>
+                <ul>
+                    <li>✅ 不審なメールのリンクはクリックしない</li>
+                    <li>✅ 公式サイトに直接アクセスして確認</li>
+                    <li>✅ URLをよく確認（https://、ドメイン名）</li>
+                    <li>✅ 多要素認証を有効化（万が一パスワードが漏れても安全）</li>
+                </ul>
+            </div>
+
+            <div class="good-practice">
+                「Googleからパスワードリセットのメールが来たけど、自分は申請していない」→メールは無視し、直接Googleのサイトにアクセスして確認する。
+            </div>
+        </section>
+
+        <section>
+            <h3>5.4 無線LANのセキュリティ</h3>
+            <div class="security-item">
+                <h4>Wi-Fiの暗号化方式</h4>
+                <table>
+                    <tr>
+                        <th>方式</th>
+                        <th>セキュリティ</th>
+                        <th>推奨度</th>
+                    </tr>
+                    <tr>
+                        <td>WEP</td>
+                        <td>✗ 脆弱（数分で解読可能）</td>
+                        <td>使用禁止</td>
+                    </tr>
+                    <tr>
+                        <td>WPA</td>
+                        <td>△ やや脆弱</td>
+                        <td>非推奨</td>
+                    </tr>
+                    <tr>
+                        <td>WPA2</td>
+                        <td>○ 標準的</td>
+                        <td>可（最低限）</td>
+                    </tr>
+                    <tr>
+                        <td>WPA3</td>
+                        <td>◎ 最も強固</td>
+                        <td>強く推奨</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="security-item">
+                <h4>学校Wi-Fiの管理</h4>
+                <ul>
+                    <li><strong>SSID（ネットワーク名）の設定</strong>：
+                        <ul>
+                            <li>学校名を直接入れない（「○○小学校」→「SchoolNet01」等）</li>
+                            <li>SSIDステルス機能は効果薄（完全には隠せない）</li>
+                        </ul>
+                    </li>
+                    <li><strong>パスワードの管理</strong>：
+                        <ul>
+                            <li>強固なパスワード設定</li>
+                            <li>定期的に変更（年1回程度）</li>
+                            <li>教職員用・児童生徒用でネットワークを分離</li>
+                        </ul>
+                    </li>
+                    <li><strong>MACアドレスフィルタリング</strong>：
+                        <ul>
+                            <li>登録された機器のみ接続許可</li>
+                            <li>ただし、MACアドレス偽装は可能なので過信しない</li>
+                        </ul>
+                    </li>
+                    <li><strong>ゲストWi-Fiの分離</strong>：
+                        <ul>
+                            <li>来客用のWi-Fiは校内ネットワークから隔離</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 6. MDM・フィルタリング -->
+        <div class="security-category">
+            <h2>6. MDM・フィルタリング</h2>
+        </div>
+
+        <section>
+            <h3>6.1 MDM（Mobile Device Management）</h3>
+            <div class="security-item">
+                <h4>MDMとは</h4>
+                <p><strong>タブレットやスマートフォンなどのモバイル端末を一元管理するシステム</strong>です。</p>
+                
+                <h5>MDMでできること</h5>
+                <ul>
+                    <li><strong>アプリの配信・削除</strong>：
+                        <ul>
+                            <li>全端末に一斉にアプリをインストール</li>
+                            <li>不適切なアプリを削除</li>
+                        </ul>
+                    </li>
+                    <li><strong>設定の統一管理</strong>：
+                        <ul>
+                            <li>Wi-Fi設定、メール設定を一括配信</li>
+                            <li>壁紙、ホーム画面のカスタマイズ</li>
+                        </ul>
+                    </li>
+                    <li><strong>機能制限</strong>：
+                        <ul>
+                            <li>カメラ、スクリーンショット、アプリストアを無効化</li>
+                            <li>特定のウェブサイトへのアクセス制限</li>
+                        </ul>
+                    </li>
+                    <li><strong>位置情報の追跡</strong>：
+                        <ul>
+                            <li>紛失時に端末の位置を特定</li>
+                        </ul>
+                    </li>
+                    <li><strong>リモートロック・ワイプ</strong>：
+                        <ul>
+                            <li>盗難時に遠隔でロック</li>
+                            <li>データを遠隔で消去</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="security-item">
+                <h4>主なMDM製品</h4>
+                <ul>
+                    <li><strong>Google Workspace（Chrome Education Upgrade）</strong>：Chromebook管理</li>
+                    <li><strong>Microsoft Intune</strong>：Windows、iOS、Android管理</li>
+                    <li><strong>Apple School Manager + MDM</strong>：iPad管理</li>
+                    <li><strong>KDDI Smart Mobile Safety Manager</strong></li>
+                    <li><strong>MobiConnect</strong></li>
+                    <li><strong>LANSCOPE</strong></li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                MDMの設定変更は、<strong>全端末に即座に反映</strong>されます。誤った設定をすると全端末が使えなくなる可能性があるため、必ずテスト端末で確認してから本番適用しましょう。
+            </div>
+        </section>
+
+        <section>
+            <h3>6.2 フィルタリング</h3>
+            <div class="security-item">
+                <h4>フィルタリングとは</h4>
+                <p>児童生徒が<strong>有害なウェブサイトにアクセスできないようにする仕組み</strong>です。</p>
+                
+                <h5>フィルタリングの方式</h5>
+                <ol>
+                    <li><strong>ブラックリスト方式</strong>：
+                        <ul>
+                            <li>有害サイトのリストを用意し、該当するサイトをブロック</li>
+                            <li>新しい有害サイトには対応が遅れる</li>
+                        </ul>
+                    </li>
+                    <li><strong>ホワイトリスト方式</strong>：
+                        <ul>
+                            <li>許可されたサイトのみアクセス可能</li>
+                            <li>非常に厳格だが、教育活動の制約になる場合も</li>
+                        </ul>
+                    </li>
+                    <li><strong>カテゴリ方式</strong>：
+                        <ul>
+                            <li>「アダルト」「ギャンブル」「暴力」などカテゴリ単位でブロック</li>
+                            <li>最も一般的</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="security-item">
+                <h4>フィルタリングのカテゴリ例</h4>
+                <ul>
+                    <li>✗ アダルト・性的コンテンツ</li>
+                    <li>✗ 暴力・残虐</li>
+                    <li>✗ ギャンブル</li>
+                    <li>✗ 違法薬物</li>
+                    <li>✗ 出会い系サイト</li>
+                    <li>✗ 自殺・自傷行為</li>
+                    <li>✗ SNS（学校によって設定が異なる）</li>
+                    <li>✗ ゲーム・娯楽（学校によって設定が異なる）</li>
+                </ul>
+            </div>
+
+            <div class="security-item">
+                <h4>ICT支援員の役割</h4>
+                <ul>
+                    <li><strong>過剰フィルタリングの解除申請</strong>：
+                        <ul>
+                            <li>授業で使いたいサイトがブロックされている場合</li>
+                            <li>教育的に問題ないと判断されれば、ホワイトリスト登録</li>
+                        </ul>
+                    </li>
+                    <li><strong>フィルタリングログの確認</strong>：
+                        <ul>
+                            <li>児童生徒がどのようなサイトにアクセスしようとしたか</li>
+                            <li>不適切な利用があれば教員に報告</li>
+                        </ul>
+                    </li>
+                    <li><strong>保護者への説明</strong>：
+                        <ul>
+                            <li>家庭でのフィルタリング設定方法の案内</li>
+                            <li>保護者向け資料の作成</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                フィルタリングは「完璧ではない」ことを理解しましょう。技術的対策だけでなく、情報モラル教育が重要です。
+            </div>
+        </section>
+
+        <!-- 7. セキュリティインシデント対応 -->
+        <div class="security-category">
+            <h2>7. セキュリティインシデント対応</h2>
+        </div>
+
+        <section>
+            <h3>7.1 インシデントとは</h3>
+            <div class="security-item">
+                <p><strong>セキュリティインシデント</strong>とは、情報セキュリティに関する事件・事故のことです。</p>
+                
+                <h4>インシデントの例</h4>
+                <ul>
+                    <li>個人情報の漏洩</li>
+                    <li>ウイルス感染</li>
+                    <li>不正アクセス</li>
+                    <li>サービス停止（DDoS攻撃等）</li>
+                    <li>データの改ざん・削除</li>
+                    <li>機器の紛失・盗難</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>7.2 インシデント発生時の対応フロー</h3>
+            <div class="incident-flow">
+                <h4>🚨 緊急対応フロー</h4>
+                
+                <div class="incident-step">
+                    <h5>ステップ1：初動対応（直ちに）</h5>
+                    <ul>
+                        <li><strong>被害の拡大を防ぐ</strong>：
+                            <ul>
+                                <li>感染したPCをネットワークから切断</li>
+                                <li>該当アカウントのパスワード変更</li>
+                                <li>サービスの一時停止</li>
+                            </ul>
+                        </li>
+                        <li><strong>証拠を保全する</strong>：
+                            <ul>
+                                <li>ログファイルのバックアップ</li>
+                                <li>画面のスクリーンショット</li>
+                                <li>関連メールの保存</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="incident-step">
+                    <h5>ステップ2：報告（速やかに）</h5>
+                    <ul>
+                        <li><strong>上司・管理職に報告</strong>：
+                            <ul>
+                                <li>いつ、どこで、何が、どのように発生したか</li>
+                                <li>現在の状況と対応済みの内容</li>
+                                <li>被害の範囲（推定）</li>
+                            </ul>
+                        </li>
+                        <li><strong>関係者への連絡</strong>：
+                            <ul>
+                                <li>教育委員会</li>
+                                <li>システム管理者</li>
+                                <li>ベンダー・サポート</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="incident-step">
+                    <h5>ステップ3：調査（詳細に）</h5>
+                    <ul>
+                        <li><strong>原因の特定</strong>：
+                            <ul>
+                                <li>いつから発生していたか</li>
+                                <li>どのような経路で侵入したか</li>
+                                <li>被害の範囲はどこまでか</li>
+                            </ul>
+                        </li>
+                        <li><strong>影響範囲の確定</strong>：
+                            <ul>
+                                <li>漏洩した情報の種類と件数</li>
+                                <li>影響を受けた人数</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="incident-step">
+                    <h5>ステップ4：復旧（確実に）</h5>
+                    <ul>
+                        <li><strong>脆弱性の修正</strong>：
+                            <ul>
+                                <li>セキュリティパッチの適用</li>
+                                <li>パスワードの変更</li>
+                                <li>ファイアウォール設定の見直し</li>
+                            </ul>
+                        </li>
+                        <li><strong>サービスの再開</strong>：
+                            <ul>
+                                <li>安全性を確認してから再開</li>
+                                <li>段階的に復旧（いきなり全面再開しない）</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="incident-step">
+                    <h5>ステップ5：再発防止（恒久対策）</h5>
+                    <ul>
+                        <li><strong>対策の実施</strong>：
+                            <ul>
+                                <li>セキュリティポリシーの見直し</li>
+                                <li>技術的対策の強化</li>
+                                <li>教職員への研修</li>
+                            </ul>
+                        </li>
+                        <li><strong>公表・通知</strong>：
+                            <ul>
+                                <li>個人情報が漏洩した場合は、本人への通知義務</li>
+                                <li>保護者・地域への説明</li>
+                                <li>必要に応じて警察への届出</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>7.3 インシデント対応の心得</h3>
+            <div class="security-item">
+                <ul>
+                    <li><strong>隠さない</strong>：
+                        <ul>
+                            <li>隠蔽は事態を悪化させる</li>
+                            <li>早期発見・早期報告が被害を最小化</li>
+                        </ul>
+                    </li>
+                    <li><strong>独断で判断しない</strong>：
+                        <ul>
+                            <li>専門家・上司の判断を仰ぐ</li>
+                            <li>「たぶん大丈夫」は通用しない</li>
+                        </ul>
+                    </li>
+                    <li><strong>記録を残す</strong>：
+                        <ul>
+                            <li>対応の経緯を時系列で記録</li>
+                            <li>後の調査や訴訟で重要な証拠になる</li>
+                        </ul>
+                    </li>
+                    <li><strong>冷静に対応</strong>：
+                        <ul>
+                            <li>パニックにならない</li>
+                            <li>チェックリストに従って確実に対応</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="critical-box">
+                <p><strong>個人情報漏洩が発生した場合、個人情報保護委員会への報告義務があります（個人情報保護法第26条）。</strong></p>
+                
+                <h5>報告が必要なケース（以下のいずれかに該当する場合）</h5>
+                <ol>
+                    <li><strong>1,000人を超える</strong>個人情報の漏洩・滅失・毀損</li>
+                    <li><strong>要配慮個人情報</strong>の漏洩・滅失・毀損（件数に関わらず）</li>
+                    <li><strong>不正アクセス等</strong>による個人情報の漏洩</li>
+                    <li><strong>財産的被害が発生する恐れ</strong>のある個人情報の漏洩</li>
+                </ol>
+                
+                <h5>報告・通知の義務</h5>
+                <ul>
+                    <li><strong>個人情報保護委員会への報告</strong>：速やかに（原則として知った日から3～5日以内）</li>
+                    <li><strong>本人への通知</strong>：影響を受ける本人に対しても通知が必要</li>
+                </ul>
+                
+                <p><small>※2022年4月施行の改正個人情報保護法による。詳細は個人情報保護委員会のガイドラインを参照してください。</small></p>
+            </div>
+        </section>
+
+        <!-- 8. セキュリティチェックリスト -->
+        <div class="security-category">
+            <h2>8. 日常的なセキュリティチェックリスト</h2>
+        </div>
+
+        <section>
+            <div class="checklist">
+                <h4>📋 毎日のチェック項目</h4>
+                <ul>
+                    <li>□ PCのログイン時、パスワードを正しく入力したか</li>
+                    <li>□ 離席時にPC画面をロックしたか（Windows: Win+L、Mac: Command+Control+Q）</li>
+                    <li>□ 個人情報を含む書類を机の上に放置していないか</li>
+                    <li>□ USBメモリやスマートフォンを置き忘れていないか</li>
+                    <li>□ 不審なメールを開いていないか</li>
+                </ul>
+            </div>
+
+            <div class="checklist">
+                <h4>📋 毎週のチェック項目</h4>
+                <ul>
+                    <li>□ ウイルス対策ソフトの定義ファイルが最新か</li>
+                    <li>□ Windows Update / macOS更新を実行したか</li>
+                    <li>□ バックアップが正常に取れているか</li>
+                    <li>□ 不要なファイルを削除したか</li>
+                </ul>
+            </div>
+
+            <div class="checklist">
+                <h4>📋 毎月のチェック項目</h4>
+                <ul>
+                    <li>□ アカウントの棚卸し（不要なアカウントを削除）</li>
+                    <li>□ フィルタリングログの確認</li>
+                    <li>□ セキュリティ研修の実施</li>
+                    <li>□ 機器の棚卸し（紛失・盗難がないか）</li>
+                </ul>
+            </div>
+
+            <div class="checklist">
+                <h4>📋 年次のチェック項目</h4>
+                <ul>
+                    <li>□ 重要なアカウントのパスワード変更</li>
+                    <li>□ セキュリティポリシーの見直し</li>
+                    <li>□ 災害対策訓練（バックアップからの復旧テスト）</li>
+                    <li>□ 外部セキュリティ診断の実施</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- まとめ -->
+        <section class="summary">
+            <h2>📚 まとめ</h2>
+            <div class="security-item">
+                <p>情報セキュリティは、<strong>技術だけでなく、人の意識が最も重要</strong>です。ICT支援員は、学校のICT環境を守る「セキュリティの番人」として、常に高い意識を持って業務に取り組みましょう。</p>
+                
+                <h4>セキュリティの5原則</h4>
+                <ol>
+                    <li><strong>疑う</strong>：「これは本当に安全か？」と常に疑問を持つ</li>
+                    <li><strong>守る</strong>：個人情報を厳重に管理する</li>
+                    <li><strong>更新する</strong>：ソフトウェアを最新に保つ</li>
+                    <li><strong>報告する</strong>：異常があればすぐに報告</li>
+                    <li><strong>学ぶ</strong>：最新の脅威と対策を学び続ける</li>
+                </ol>
+
+                <p><strong>「うちの学校は大丈夫」は禁物です。</strong>サイバー攻撃は日々進化しており、どの学校も標的になり得ます。日々の小さな注意の積み重ねが、児童生徒と学校を守ります。</p>
+            </div>
+        </section>
+
+        <!-- 関連ページへのリンク -->
+        <section class="related-links">
+            <h2>🔗 関連ページ</h2>
+            <ul>
+                <li><a href="business-manners.html">ビジネスマナー・社会人基礎力</a> - 守秘義務の詳細</li>
+                <li><a href="network-basics.html">ネットワーク技術基礎</a> - ネットワークの仕組み（Coming Soon）</li>
+                <li><a href="tools.html">ICT機器・ツール</a> - 機器の管理方法</li>
+                <li><a href="troubleshooting.html">トラブルシューティング</a> - セキュリティ関連Q&A</li>
+                <li><a href="board-education.html">教育委員会制度</a> - 学校情報セキュリティポリシー</li>
+            </ul>
+        </section>
+
+        <!-- 参考資料 -->
+        <section class="references">
+            <h2>📖 参考資料</h2>
+            <ul>
+                <li><a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/1397369.htm" target="_blank" rel="noopener">教育情報セキュリティポリシーに関するガイドライン（文部科学省）</a></li>
+                <li><a href="https://www.ipa.go.jp/security/index.html" target="_blank" rel="noopener">情報セキュリティ（IPA 情報処理推進機構）</a></li>
+                <li><a href="https://www.ppc.go.jp/" target="_blank" rel="noopener">個人情報保護委員会</a></li>
+                <li><a href="https://elaws.e-gov.go.jp/document?lawid=415AC0000000057" target="_blank" rel="noopener">個人情報の保護に関する法律（e-Gov法令検索）</a></li>
+                <li><a href="https://www.bunka.go.jp/seisaku/chosakuken/" target="_blank" rel="noopener">著作権（文化庁）</a></li>
+                <li><a href="https://sartras.or.jp/" target="_blank" rel="noopener">SARTRAS（授業目的公衆送信補償金等管理協会）</a></li>
+                <li><a href="https://www.jpcert.or.jp/" target="_blank" rel="noopener">JPCERT コーディネーションセンター</a> - セキュリティインシデント情報</li>
+                <li><a href="https://www.nisc.go.jp/" target="_blank" rel="noopener">内閣サイバーセキュリティセンター（NISC）</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

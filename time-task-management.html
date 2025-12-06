@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間・タスク管理 - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="ICT支援員のための効率的な時間管理とタスク管理の実践手法。優先順位付け、スケジューリング、生産性向上、ツール活用を網羅。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-newspaper"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-tools"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-landmark"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-clock"></i> 時間・タスク管理</h1>
+                <p class="lead">ICT支援員のための効率的な時間管理とタスク管理の実践手法。優先順位付け、スケジューリング、生産性向上、ツール活用を網羅</p>
+            </div>
+
+            <!-- 1. ICT支援員の時間管理の重要性 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-info-circle"></i> ICT支援員の時間管理の重要性</h2>
+                </div>
+                <div class="info-box bg-gradient-primary">
+                    <h4><i class="fas fa-exclamation-circle"></i> なぜICT支援員に時間管理が必要か</h4>
+                    <p>ICT支援員は複数の学校を巡回し、多様なタスク（授業支援、トラブル対応、研修、機器管理など）を同時並行で進める必要があります。計画的な時間管理がなければ、緊急対応に追われ、重要な業務が後回しになるリスクがあります。</p>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h4>複数校の巡回</h4>
+                        <p>1日に2〜4校を訪問するケースもあり、移動時間の考慮と各校での業務の優先順位付けが不可欠</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h4>多様なタスク</h4>
+                        <p>授業支援、トラブル対応、研修、機器管理、マニュアル作成など、性質の異なる業務を並行処理</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-danger">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h4>突発的な対応</h4>
+                        <p>授業中のトラブル、緊急の問い合わせなど、予定外の業務が頻繁に発生</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h4>限られた時間</h4>
+                        <p>1校あたりの滞在時間が限られ、その中で最大の成果を上げる必要がある</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. 優先順位付けの原則 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-sort-amount-down"></i> 優先順位付けの原則</h2>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-th"></i> アイゼンハワー・マトリクス（緊急度×重要度）</h4>
+                    <p>タスクを「緊急度」と「重要度」の2軸で分類し、優先順位を決定する手法です。</p>
+                </div>
+
+                <div class="comparison-table">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>分類</th>
+                                <th>説明</th>
+                                <th>ICT支援員の具体例</th>
+                                <th>対応方法</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>第1領域<br>（緊急×重要）</strong></td>
+                                <td>すぐに対応が必要で、重要な業務</td>
+                                <td>授業中のシステムダウン、大規模なネットワーク障害、公開授業の直前サポート</td>
+                                <td><span class="badge bg-danger">即座に対応</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>第2領域<br>（重要×緊急でない）</strong></td>
+                                <td>重要だが期限に余裕がある業務</td>
+                                <td>研修計画の立案、マニュアル作成、機器更新の準備、長期プロジェクト</td>
+                                <td><span class="badge bg-success">計画的に時間を確保</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>第3領域<br>（緊急×重要でない）</strong></td>
+                                <td>急ぎだが重要度は低い業務</td>
+                                <td>些細な問い合わせ、ルーチンワーク、定型的なメール対応</td>
+                                <td><span class="badge bg-warning">効率化・委譲・短時間処理</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>第4領域<br>（緊急でも重要でもない）</strong></td>
+                                <td>優先度が低い業務</td>
+                                <td>過度な情報収集、無駄な会議、惰性での作業</td>
+                                <td><span class="badge bg-secondary">削減・排除</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box bg-gradient-success">
+                    <h4><i class="fas fa-lightbulb"></i> 優先順位付けの実践ポイント</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>第2領域に時間を確保</strong>：長期的な成果につながる重要業務（研修計画、システム改善）に意識的に時間を割く</li>
+                        <li><i class="fas fa-check"></i> <strong>第3領域を効率化</strong>：定型業務はテンプレート化、FAQの整備で時間短縮</li>
+                        <li><i class="fas fa-check"></i> <strong>第4領域を削減</strong>：「やらないことリスト」を作り、不要な業務を見直す</li>
+                        <li><i class="fas fa-check"></i> <strong>朝一番に優先順位を確認</strong>：1日の始まりに今日の重要タスクを3つ決める</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. 効果的なスケジューリング -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-calendar-alt"></i> 効果的なスケジューリング</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>タイムブロッキング</h4>
+                        <p>1日のスケジュールを「ブロック」に分割し、各ブロックに特定のタスクを割り当てる手法。</p>
+                        <ul class="compact-list">
+                            <li>9:00-10:30：A校訪問（授業支援）</li>
+                            <li>10:30-11:00：移動+メール確認</li>
+                            <li>11:00-12:30：B校訪問（トラブル対応）</li>
+                            <li>13:30-15:00：事務作業（マニュアル作成）</li>
+                            <li>15:00-16:30：C校訪問（研修準備）</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-battery-three-quarters"></i>
+                        </div>
+                        <h4>エネルギー管理</h4>
+                        <p>自分の集中力が高い時間帯に重要なタスクを配置する。</p>
+                        <ul class="compact-list">
+                            <li><strong>午前中：</strong> 重要な授業支援、研修準備</li>
+                            <li><strong>午後前半：</strong> 事務作業、マニュアル作成</li>
+                            <li><strong>午後後半：</strong> ルーチンワーク、メール対応</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>バッファ時間の確保</h4>
+                        <p>予定外の対応に備え、スケジュールの20〜30%を余白にする。</p>
+                        <ul class="compact-list">
+                            <li>移動時間は余裕を持たせる（遅延リスク考慮）</li>
+                            <li>午後に30分〜1時間の「予備時間」を設ける</li>
+                            <li>突発的なトラブル対応枠を確保</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-stopwatch"></i>
+                        </div>
+                        <h4>ポモドーロ・テクニック</h4>
+                        <p>25分集中+5分休憩のサイクルで作業効率を最大化。</p>
+                        <ul class="compact-list">
+                            <li>事務作業、マニュアル作成に有効</li>
+                            <li>集中力を維持しやすい</li>
+                            <li>タイマーアプリ活用（Focus To-Do、Pomofocusなど）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-calendar-week"></i> 週次・月次スケジューリングのポイント</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>週の始めに週次計画</strong>：月曜朝に今週の重要タスクとゴールを設定</li>
+                        <li><i class="fas fa-check"></i> <strong>金曜に振り返り</strong>：今週の達成状況を確認し、来週の調整を行う</li>
+                        <li><i class="fas fa-check"></i> <strong>月初に月次目標</strong>：研修実施回数、マニュアル完成、機器更新計画など</li>
+                        <li><i class="fas fa-check"></i> <strong>定期業務の固定化</strong>：毎週水曜午後は事務作業、など曜日を固定</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 4. タスク管理ツールの活用 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-wrench"></i> タスク管理ツールの活用</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 主要タスク管理ツールの比較</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>ツール名</th>
+                                <th>費用</th>
+                                <th>特徴</th>
+                                <th>ICT支援員への適性</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Notion</strong></td>
+                                <td>無料プラン、有料プラン（月額$4〜）</td>
+                                <td>タスク管理、ノート、データベースを統合</td>
+                                <td>⭐⭐⭐⭐⭐ 多機能で情報を一元管理できる</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Trello</strong></td>
+                                <td>無料プラン、有料プラン（月額$5〜）</td>
+                                <td>カンバン方式、視覚的でシンプル</td>
+                                <td>⭐⭐⭐⭐ プロジェクト進捗管理に最適</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Todoist</strong></td>
+                                <td>無料プラン、有料プラン（月額$4〜）</td>
+                                <td>シンプルで使いやすいToDoリスト</td>
+                                <td>⭐⭐⭐⭐ 個人のタスク管理に最適</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Microsoft To Do</strong></td>
+                                <td>無料</td>
+                                <td>Microsoft 365連携、シンプル</td>
+                                <td>⭐⭐⭐ 学校がMicrosoft 365利用時に便利</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Google Keep</strong></td>
+                                <td>無料</td>
+                                <td>メモ・リスト・リマインダー、シンプル</td>
+                                <td>⭐⭐⭐ 簡易的なメモ・ToDoに便利</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Asana</strong></td>
+                                <td>無料プラン、有料プラン（月額$10.99〜）</td>
+                                <td>プロジェクト管理、チーム協働</td>
+                                <td>⭐⭐⭐ チームでの大規模プロジェクト向け</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h4>デイリータスクリスト</h4>
+                        <p><strong>推奨ツール：</strong> Todoist、Microsoft To Do</p>
+                        <ul class="compact-list">
+                            <li>毎朝、今日やるべきタスクを3〜5個リストアップ</li>
+                            <li>完了したらチェック（達成感が得られる）</li>
+                            <li>未完了タスクは翌日に繰り越し</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h4>プロジェクト管理</h4>
+                        <p><strong>推奨ツール：</strong> Trello、Asana</p>
+                        <ul class="compact-list">
+                            <li>研修計画、機器更新プロジェクトの進捗管理</li>
+                            <li>「To Do」「進行中」「完了」のボードで可視化</li>
+                            <li>期限設定、チェックリスト、添付ファイル機能</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4>情報の一元管理</h4>
+                        <p><strong>推奨ツール：</strong> Notion</p>
+                        <ul class="compact-list">
+                            <li>タスク、メモ、マニュアル、データベースを統合</li>
+                            <li>学校ごとのページで情報を整理</li>
+                            <li>検索機能で過去の記録をすぐに参照</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-sticky-note"></i>
+                        </div>
+                        <h4>クイックメモ</h4>
+                        <p><strong>推奨ツール：</strong> Google Keep、iPhone メモ</p>
+                        <ul class="compact-list">
+                            <li>授業中の気づき、トラブル内容をすぐにメモ</li>
+                            <li>音声入力で素早く記録</li>
+                            <li>あとでTodoistやNotionに整理</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. 生産性向上のテクニック -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-rocket"></i> 生産性向上のテクニック</h2>
+                </div>
+
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>バッチ処理（似た作業をまとめる）</h4>
+                            <ul>
+                                <li><strong>メール対応：</strong> 1日2〜3回の時間帯にまとめて処理（常時チェックしない）</li>
+                                <li><strong>電話対応：</strong> 可能なら折り返し対応にし、特定時間にまとめる</li>
+                                <li><strong>マニュアル作成：</strong> 週1回、午後2時間を確保して集中作業</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>テンプレート化・自動化</h4>
+                            <ul>
+                                <li><strong>定型メール：</strong> よくある問い合わせの回答テンプレートを作成</li>
+                                <li><strong>チェックリスト：</strong> 授業前準備、機器点検のチェックリストを標準化</li>
+                                <li><strong>報告書フォーマット：</strong> 月次報告、トラブル報告のフォーマット統一</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>2分ルール</h4>
+                            <ul>
+                                <li>2分以内に終わるタスクはすぐに片付ける</li>
+                                <li>簡単なメール返信、備品発注の確認など</li>
+                                <li>タスクリストに入れるより即対応の方が効率的</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>デジタルデトックス</h4>
+                            <ul>
+                                <li>集中作業時はスマホの通知をオフ</li>
+                                <li>メール・チャットは決まった時間にチェック</li>
+                                <li>深い思考が必要な業務は静かな環境で</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>移動時間の有効活用</h4>
+                            <ul>
+                                <li>電車・バスでの移動：メール確認、情報収集、ポッドキャスト学習</li>
+                                <li>車での移動：音声入力でメモ、教育系Podcast視聴</li>
+                                <li>待ち時間：スマホでタスク整理、簡単なメール返信</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. 定型業務の効率化 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-cogs"></i> 定型業務の効率化</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 定型業務と効率化策</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>定型業務</th>
+                                <th>時間短縮前</th>
+                                <th>効率化策</th>
+                                <th>短縮後</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>月次活動報告書の作成</td>
+                                <td>2時間</td>
+                                <td>テンプレート化、日次で記録を蓄積</td>
+                                <td>30分</td>
+                            </tr>
+                            <tr>
+                                <td>トラブル対応記録</td>
+                                <td>15分/件</td>
+                                <td>スマホで音声入力、フォーマット統一</td>
+                                <td>5分/件</td>
+                            </tr>
+                            <tr>
+                                <td>教員への操作案内メール</td>
+                                <td>10分/件</td>
+                                <td>FAQページ作成、定型文テンプレート</td>
+                                <td>3分/件</td>
+                            </tr>
+                            <tr>
+                                <td>研修資料の作成</td>
+                                <td>4時間</td>
+                                <td>既存資料の再利用、テンプレート化</td>
+                                <td>1.5時間</td>
+                            </tr>
+                            <tr>
+                                <td>機器点検チェック</td>
+                                <td>30分/校</td>
+                                <td>チェックリストアプリ化、写真記録</td>
+                                <td>15分/校</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box bg-gradient-success">
+                    <h4><i class="fas fa-lightbulb"></i> 効率化の実践ポイント</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>「これ2回目だな」と思ったらテンプレート化</strong>：同じ作業を繰り返すならフォーマット作成</li>
+                        <li><i class="fas fa-check"></i> <strong>デジタルツールを積極活用</strong>：Google Forms、スプレッドシート、クラウドストレージ</li>
+                        <li><i class="fas fa-check"></i> <strong>記録は即座に</strong>：後でまとめようとすると記憶が曖昧に。その場でメモ</li>
+                        <li><i class="fas fa-check"></i> <strong>定期的に業務プロセスを見直す</strong>：月1回、無駄な作業がないかチェック</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 7. 時間管理の実践チェックリスト -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-clipboard-check"></i> 時間管理の実践チェックリスト</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h4>朝のルーティン（10分）</h4>
+                        <ul class="checklist">
+                            <li><i class="fas fa-check"></i> 今日の重要タスク3つを決める</li>
+                            <li><i class="fas fa-check"></i> スケジュールを確認</li>
+                            <li><i class="fas fa-check"></i> 緊急メールのチェック</li>
+                            <li><i class="fas fa-check"></i> 各校の訪問準備確認</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-calendar-day"></i>
+                        </div>
+                        <h4>日中の実践（随時）</h4>
+                        <ul class="checklist">
+                            <li><i class="fas fa-check"></i> タイムブロッキングに従う</li>
+                            <li><i class="fas fa-check"></i> 突発対応はバッファ時間で吸収</li>
+                            <li><i class="fas fa-check"></i> 完了タスクはすぐチェック</li>
+                            <li><i class="fas fa-check"></i> トラブルは即座にメモ</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <h4>夕方のルーティン（10分）</h4>
+                        <ul class="checklist">
+                            <li><i class="fas fa-check"></i> 今日の振り返り（達成度確認）</li>
+                            <li><i class="fas fa-check"></i> 未完了タスクを翌日に繰り越し</li>
+                            <li><i class="fas fa-check"></i> 明日のスケジュール確認</li>
+                            <li><i class="fas fa-check"></i> 報告事項の整理</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-calendar-week"></i>
+                        </div>
+                        <h4>週次レビュー（30分）</h4>
+                        <ul class="checklist">
+                            <li><i class="fas fa-check"></i> 今週の成果を確認</li>
+                            <li><i class="fas fa-check"></i> 未完了タスクの見直し</li>
+                            <li><i class="fas fa-check"></i> 来週の重要予定を確認</li>
+                            <li><i class="fas fa-check"></i> 業務改善点のメモ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-exclamation-triangle"></i> 時間管理でよくある失敗と対策</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>よくある失敗</th>
+                                <th>原因</th>
+                                <th>対策</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>計画倒れ</td>
+                                <td>理想的すぎる計画、バッファ不足</td>
+                                <td>スケジュールの30%を予備時間に。現実的な計画を</td>
+                            </tr>
+                            <tr>
+                                <td>優先順位がブレる</td>
+                                <td>緊急対応に追われ、重要業務が後回し</td>
+                                <td>第2領域（重要×緊急でない）に意識的に時間確保</td>
+                            </tr>
+                            <tr>
+                                <td>ツールが続かない</td>
+                                <td>複雑すぎる、習慣化できない</td>
+                                <td>シンプルなツールから始める。21日間継続を目標に</td>
+                            </tr>
+                            <tr>
+                                <td>完璧主義</td>
+                                <td>細部にこだわりすぎて時間超過</td>
+                                <td>「80%の完成度で十分」の意識。完璧より完了を優先</td>
+                            </tr>
+                            <tr>
+                                <td>断れない</td>
+                                <td>頼まれると全て引き受けてしまう</td>
+                                <td>自分のキャパシティを把握。「今は難しい」と伝える勇気</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

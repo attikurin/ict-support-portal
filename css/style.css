@@ -70,6 +70,118 @@ body {
     opacity: 0.9;
 }
 
+/* Site-wide Search */
+.search-container,
+.site-search-container {
+    background: var(--bg-light);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.search-box {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-box i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: var(--card-shadow);
+    z-index: 1000;
+}
+
+.search-result-item {
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s ease;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background: var(--bg-light);
+}
+
+.result-title {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.result-title mark {
+    background-color: #fef08a;
+    padding: 0 2px;
+}
+
+.result-description {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+    line-height: 1.5;
+}
+
+.result-category {
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    background: rgba(37, 99, 235, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 0.25rem;
+}
+
+.search-no-results {
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.search-no-results {
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-light);
+}
+
 /* ナビゲーション */
 .main-nav {
     background: white;
@@ -384,6 +496,28 @@ body {
     background: var(--secondary-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-download:hover {
+    background: linear-gradient(135deg, #1e40af, #1e3a8a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.btn-download i {
+    margin-right: 0.5rem;
 }
 
 /* 参考資料セクション */
@@ -1105,24 +1239,102 @@ footer p {
 
 /* 印刷用スタイル */
 @media print {
+    /* 不要な要素を非表示 */
     .main-nav,
     nav,
     .back-to-top,
     .site-footer,
     footer,
-    .mobile-menu-toggle {
-        display: none;
+    .mobile-menu-toggle,
+    .menu-toggle,
+    button,
+    .no-print {
+        display: none !important;
     }
 
+    /* 基本設定 */
     body {
-        font-size: 12pt;
+        font-size: 11pt;
+        line-height: 1.5;
+        color: #000;
+        background: white;
     }
 
+    /* ヘッダー */
     .header-banner,
-    header {
-        background: none;
-        color: black;
+    header,
+    .site-header {
+        background: none !important;
+        color: black !important;
         border-bottom: 2px solid black;
+        padding: 1rem 0;
+    }
+
+    /* メインコンテンツ */
+    main {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* ページ区切り制御 */
+    h1, h2, h3 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+
+    /* リンク */
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    /* 背景色を白に統一 */
+    * {
+        background: white !important;
+        color: black !important;
+    }
+
+    /* テーブル */
+    table {
+        border: 1px solid #000;
+        page-break-inside: avoid;
+    }
+
+    table th {
+        background: #e0e0e0 !important;
+        color: #000 !important;
+        border: 1px solid #000;
+    }
+
+    table td {
+        border: 1px solid #000;
+    }
+
+    /* 画像 */
+    img {
+        max-width: 100%;
+        page-break-inside: avoid;
+    }
+
+    /* ページ番号 */
+    @page {
+        margin: 2cm;
+        @bottom-center {
+            content: "ページ " counter(page);
+        }
+    }
+
+    /* セクション区切り */
+    section {
+        page-break-inside: avoid;
     }
 }
 

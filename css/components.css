@@ -1,0 +1,716 @@
+/* ==============================
+   共通コンポーネント CSS
+   Phase 1 ページ用の再利用可能なコンポーネント
+   ============================== */
+
+/* カテゴリヘッダー */
+.category-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0 20px 0;
+}
+
+.category-header h2 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+/* コンテンツボックス */
+.content-box {
+    background: var(--bg-light);
+    border-left: 4px solid var(--primary-color);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+/* 良い例 / 悪い例 */
+.example-good {
+    background: #d4edda;
+    border-left: 4px solid var(--success-color);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.example-good::before {
+    content: "✓ 良い例：";
+    font-weight: bold;
+    color: var(--success-color);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.example-bad {
+    background: #f8d7da;
+    border-left: 4px solid var(--danger-color);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.example-bad::before {
+    content: "✗ 悪い例：";
+    font-weight: bold;
+    color: var(--danger-color);
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* チェックリスト */
+.checklist {
+    background: #fff3cd;
+    border: 2px solid var(--warning-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.checklist h4 {
+    color: #6d5200;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.checklist ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.checklist li {
+    margin: 8px 0;
+}
+
+/* ヒント・ポイントボックス */
+.tip-box {
+    background: #e7f3ff;
+    border-left: 4px solid #1976d2;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.tip-box::before {
+    content: "💡 ポイント：";
+    font-weight: bold;
+    color: #0d47a1;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* 警告ボックス */
+.warning-box {
+    background: #fff3e0;
+    border-left: 4px solid var(--warning-color);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.warning-box::before {
+    content: "⚠️ 注意：";
+    font-weight: bold;
+    color: var(--warning-color);
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* 重要・クリティカルボックス */
+.critical-box {
+    background: #ffe5e5;
+    border: 3px solid var(--danger-color);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.critical-box::before {
+    content: "🚨 重要：";
+    font-weight: bold;
+    color: var(--danger-color);
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* 法律・規制ボックス */
+.law-box {
+    background: #e3f2fd;
+    border-left: 4px solid #1976d2;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.law-box h4 {
+    color: #1976d2;
+    margin-top: 0;
+}
+
+.law-box h5 {
+    color: #1565c0;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+/* テーブルスタイル */
+table,
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+table th,
+.data-table th {
+    background: var(--primary-color);
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+table td,
+.data-table td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+}
+
+table tr:nth-child(even),
+.data-table tr:nth-child(even) {
+    background: var(--bg-light);
+}
+
+table tr:hover,
+.data-table tr:hover {
+    background: #f0f4f8;
+    transition: background 0.2s ease;
+}
+
+/* テーブルラッパー（スクロール対応） */
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 20px 0;
+}
+
+/* コマンドボックス */
+.command-box {
+    background: #263238;
+    color: #aed581;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Monaco, monospace;
+    margin: 15px 0;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ダイアグラム・図解ボックス */
+.diagram {
+    background: white;
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.diagram h4 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.diagram pre {
+    text-align: left;
+    font-family: monospace;
+    background: var(--bg-light);
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* 対話・シナリオボックス */
+.dialogue-box {
+    background: #f5f5f5;
+    border-left: 4px solid #9c27b0;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.dialogue-box .speaker {
+    font-weight: bold;
+    color: #7b1fa2;
+}
+
+/* ===================================
+   ページ別カテゴリヘッダー
+   =================================== */
+
+/* ビジネスマナー用 */
+.manner-category {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0 20px 0;
+}
+
+.manner-category h2 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.manner-item {
+    background: var(--bg-light);
+    border-left: 4px solid #667eea;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.good-example {
+    background: #d4edda;
+    border-left: 4px solid var(--success-color);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.good-example::before {
+    content: "✓ 良い例：";
+    font-weight: bold;
+    color: var(--success-color);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.bad-example {
+    background: #f8d7da;
+    border-left: 4px solid var(--danger-color);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.bad-example::before {
+    content: "✗ 悪い例：";
+    font-weight: bold;
+    color: var(--danger-color);
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* セキュリティ用 */
+.security-category {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0 20px 0;
+}
+
+.security-category h2 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.security-item {
+    background: var(--bg-light);
+    border-left: 4px solid #f5576c;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.good-practice {
+    background: #d4edda;
+    border-left: 4px solid var(--success-color);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.good-practice::before {
+    content: "✓ 推奨：";
+    font-weight: bold;
+    color: var(--success-color);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.bad-practice {
+    background: #f8d7da;
+    border-left: 4px solid var(--danger-color);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.bad-practice::before {
+    content: "✗ 禁止：";
+    font-weight: bold;
+    color: var(--danger-color);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.incident-flow {
+    background: #fff9e6;
+    border: 2px solid #ff9800;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.incident-step {
+    background: white;
+    border-left: 4px solid #ff9800;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* ネットワーク技術用 */
+.network-category {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0 20px 0;
+}
+
+.network-category h2 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.network-item {
+    background: var(--bg-light);
+    border-left: 4px solid #667eea;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.concept-box {
+    background: #e8eaf6;
+    border: 2px solid #5c6bc0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.concept-box h4 {
+    color: #3f51b5;
+    margin-top: 0;
+}
+
+.example-box {
+    background: #e0f7fa;
+    border-left: 4px solid #00bcd4;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.example-box::before {
+    content: "💡 具体例：";
+    font-weight: bold;
+    color: #00bcd4;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.troubleshooting-box {
+    background: #fff3e0;
+    border-left: 4px solid #ff9800;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.troubleshooting-box::before {
+    content: "🔧 トラブル対処：";
+    font-weight: bold;
+    color: #ff9800;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* 特別支援ICT用 */
+.special-category {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0 20px 0;
+}
+
+.special-category h2 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.special-item {
+    background: var(--bg-light);
+    border-left: 4px solid #fa709a;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.disability-box {
+    background: #fff8e1;
+    border: 2px solid #ffa726;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.disability-box h4 {
+    color: #e65100;
+    margin-top: 0;
+}
+
+.accommodation-box {
+    background: #e8f5e9;
+    border-left: 4px solid #66bb6a;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.accommodation-box::before {
+    content: "✓ 合理的配慮：";
+    font-weight: bold;
+    color: #2e7d32;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.tool-box {
+    background: #e1f5fe;
+    border-left: 4px solid #29b6f6;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.tool-box::before {
+    content: "🔧 支援技術：";
+    font-weight: bold;
+    color: #0277bd;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.case-box {
+    background: #f3e5f5;
+    border-left: 4px solid #ab47bc;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.case-box::before {
+    content: "📝 実践例：";
+    font-weight: bold;
+    color: #6a1b9a;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.udl-box {
+    background: #fce4ec;
+    border: 2px solid #ec407a;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.udl-box h4 {
+    color: #c2185b;
+    margin-top: 0;
+}
+
+.important-box {
+    background: #fff3e0;
+    border-left: 4px solid #ff9800;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.important-box::before {
+    content: "⚠️ 重要：";
+    font-weight: bold;
+    color: #ff9800;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* コミュニケーションスキル用 */
+.comm-category {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0 20px 0;
+}
+
+.comm-category h2 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.comm-item {
+    background: var(--bg-light);
+    border-left: 4px solid #667eea;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.skill-box {
+    background: #e8eaf6;
+    border: 2px solid #5c6bc0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.skill-box h4 {
+    color: #3f51b5;
+    margin-top: 0;
+}
+
+.technique-box {
+    background: #e0f7fa;
+    border-left: 4px solid #00bcd4;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.technique-box::before {
+    content: "🎯 テクニック：";
+    font-weight: bold;
+    color: #00838f;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.rapport-box {
+    background: #f3e5f5;
+    border: 2px solid #ab47bc;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.rapport-box h4 {
+    color: #6a1b9a;
+    margin-top: 0;
+}
+
+.scenario-box {
+    background: #fce4ec;
+    border: 2px solid #ec407a;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.scenario-box h4 {
+    color: #c2185b;
+    margin-top: 0;
+}
+
+/* フォーカス状態の統一（WCAG 2.1 基準準拠） */
+a:focus, 
+button:focus, 
+input:focus, 
+select:focus, 
+textarea:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+
+/* キーボードナビゲーション用の視覚的フィードバック強化 */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #0066cc;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.2);
+}
+
+/* ホバーエフェクト */
+.content-box:hover,
+.example-good:hover,
+.example-bad:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-box,
+.example-good,
+.example-bad,
+.tip-box,
+.warning-box {
+    animation: fadeIn 0.6s ease;
+}
+
+/* プリント用スタイル */
+@media print {
+    .category-header {
+        background: white !important;
+        color: black !important;
+        border: 2px solid black;
+        page-break-after: avoid;
+    }
+    
+    .content-box,
+    .example-good,
+    .example-bad,
+    .tip-box,
+    .warning-box,
+    .critical-box,
+    .law-box {
+        background: white !important;
+        border-left: 2px solid black !important;
+        page-break-inside: avoid;
+    }
+    
+    .command-box {
+        background: white !important;
+        color: black !important;
+        border: 1px solid black;
+    }
+    
+    .data-table th {
+        background: #e0e0e0 !important;
+        color: black !important;
+    }
+}

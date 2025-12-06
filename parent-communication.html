@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>保護者連携・コミュニケーション - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="保護者との効果的なコミュニケーション手法。ICT活用の理解促進、家庭でのルール作り支援、トラブル対応、連絡ツール活用を網羅。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-newspaper"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-tools"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-landmark"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-users"></i> 保護者連携・コミュニケーション</h1>
+                <p class="lead">保護者との効果的なコミュニケーション手法。ICT活用の理解促進、家庭でのルール作り支援、トラブル対応、連絡ツール活用を網羅</p>
+            </div>
+
+            <!-- 1. 保護者連携の重要性 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-info-circle"></i> 保護者連携の重要性</h2>
+                </div>
+                <div class="info-box bg-gradient-primary">
+                    <h4><i class="fas fa-handshake"></i> なぜ保護者との連携が重要か</h4>
+                    <p>GIGAスクール構想により1人1台端末が整備され、ICT活用が家庭にも広がりました。学校と家庭で一貫した指導を行うためには、保護者の理解と協力が不可欠です。ICT支援員は教員と保護者の橋渡し役として、わかりやすい説明と適切なサポートを提供する役割を担います。</p>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4>家庭学習の支援</h4>
+                        <p>端末の持ち帰り、オンライン宿題、家庭でのICT活用を円滑に進めるため、保護者の理解とサポートが必要</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>安全・安心の確保</h4>
+                        <p>情報モラル、フィルタリング、利用時間のルールなど、家庭と学校で一貫した指導が子どもの安全を守る</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>不安・疑問の解消</h4>
+                        <p>保護者の「よくわからない」「不安」という気持ちに寄り添い、丁寧に説明することで信頼関係を構築</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h4>トラブルの早期解決</h4>
+                        <p>SNSトラブル、端末の故障など、問題が大きくなる前に保護者と連携して対応することが重要</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. 保護者説明会の実施 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-presentation"></i> 保護者説明会の実施</h2>
+                </div>
+
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>説明会の企画</h4>
+                            <ul>
+                                <li><strong>時期：</strong> 年度初め、端末持ち帰り開始前、入学時</li>
+                                <li><strong>対象：</strong> 全保護者、希望者のみ、学年別など</li>
+                                <li><strong>形式：</strong> 対面、オンライン、ハイブリッド</li>
+                                <li><strong>時間：</strong> 30〜60分程度（質疑応答含む）</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>説明内容の構成</h4>
+                            <ul>
+                                <li><strong>導入の背景：</strong> GIGAスクール構想、社会のデジタル化</li>
+                                <li><strong>学校での活用例：</strong> 授業での使い方、学習効果</li>
+                                <li><strong>家庭でのルール：</strong> 利用時間、使用場所、禁止事項</li>
+                                <li><strong>安全対策：</strong> フィルタリング、情報モラル教育</li>
+                                <li><strong>トラブル対応：</strong> 故障時の連絡先、相談窓口</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>わかりやすい説明のコツ</h4>
+                            <ul>
+                                <li><strong>専門用語を避ける：</strong> 「クラウド」→「インターネット上の保存場所」</li>
+                                <li><strong>具体例を示す：</strong> 実際の授業動画、児童生徒の作品を見せる</li>
+                                <li><strong>ビジュアルを活用：</strong> スライド、動画、実機デモ</li>
+                                <li><strong>保護者の視点に立つ：</strong> 「なぜ必要か」「どう役立つか」を明確に</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>質疑応答のポイント</h4>
+                            <ul>
+                                <li><strong>よくある質問を事前に準備：</strong> FAQ資料を用意</li>
+                                <li><strong>否定しない：</strong> 不安や疑問を受け止め、丁寧に説明</li>
+                                <li><strong>その場で答えられない質問：</strong> 後日回答する旨を伝える</li>
+                                <li><strong>時間配分：</strong> 説明40分、質疑応答20分など</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-clipboard-list"></i> 保護者説明会の資料例</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>スライド資料：</strong> 20枚程度、イラスト・写真多め</li>
+                        <li><i class="fas fa-check"></i> <strong>配布資料：</strong> A4両面1〜2枚、持ち帰り用</li>
+                        <li><strong>内容：</strong> 利用ルール、故障時の対応、相談窓口、FAQ</li>
+                        <li><i class="fas fa-check"></i> <strong>動画：</strong> 授業風景、児童生徒のインタビュー（2〜3分）</li>
+                        <li><i class="fas fa-check"></i> <strong>デモ：</strong> 実際に端末を操作して見せる</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. 保護者からのよくある質問と回答例 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-question-circle"></i> 保護者からのよくある質問と回答例</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> FAQ：保護者からの質問と回答例</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>質問</th>
+                                <th>回答例</th>
+                                <th>補足</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>視力が悪くならないか心配</td>
+                                <td>適切な姿勢、休憩時間の確保、ブルーライト対策など、健康面に配慮した使い方を指導しています。1コマ45分の授業でずっと画面を見ているわけではありません。</td>
+                                <td>文科省「健康面への配慮事項」資料を案内</td>
+                            </tr>
+                            <tr>
+                                <td>ゲームや動画を見てしまわないか</td>
+                                <td>学校ではフィルタリングを設定し、教育目的以外のサイトへのアクセスを制限しています。家庭でも利用時間や場所のルールを決めていただくようお願いします。</td>
+                                <td>家庭用フィルタリング設定ガイドを配布</td>
+                            </tr>
+                            <tr>
+                                <td>家にWi-Fiがないが大丈夫か</td>
+                                <td>オンライン宿題は必須ではなく、オフラインでも学習できる課題を用意しています。また、モバイルルーターの貸与制度もございますのでご相談ください。</td>
+                                <td>Wi-Fi環境調査を実施し、必要な家庭に支援</td>
+                            </tr>
+                            <tr>
+                                <td>故障したらどうすればいいか</td>
+                                <td>まず学校にご連絡ください。故意の破損でなければ無償修理となります。修理期間中は代替機をお貸しします。</td>
+                                <td>故障対応フローチャートを配布</td>
+                            </tr>
+                            <tr>
+                                <td>個人情報は大丈夫か</td>
+                                <td>学校で使用するクラウドサービスは教育機関向けで、広告表示なし、個人情報保護に配慮されています。パスワード管理の指導も徹底しています。</td>
+                                <td>プライバシーポリシーを説明</td>
+                            </tr>
+                            <tr>
+                                <td>SNSトラブルが心配</td>
+                                <td>学校では情報モラル教育を行い、適切な使い方を指導しています。家庭でも使用状況を見守り、困ったことがあればすぐに学校にご相談ください。</td>
+                                <td>情報モラル教材の紹介</td>
+                            </tr>
+                            <tr>
+                                <td>親がICTに詳しくないが大丈夫か</td>
+                                <td>保護者向けのサポート資料や動画を用意しています。また、保護者向けの操作説明会も開催しますので、ぜひご参加ください。</td>
+                                <td>保護者向けマニュアル、動画の案内</td>
+                            </tr>
+                            <tr>
+                                <td>紙のノートは使わなくなるのか</td>
+                                <td>いいえ、ICTと紙のノートを併用します。手書きの良さも大切にしながら、ICTの強みを活かす使い分けを行います。</td>
+                                <td>授業での使い分け例を紹介</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 4. 家庭でのルール作り支援 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-list-check"></i> 家庭でのルール作り支援</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>利用時間のルール</h4>
+                        <ul class="compact-list">
+                            <li><strong>推奨例：</strong> 平日は宿題のみ（30分）、休日は1時間まで</li>
+                            <li>夜9時以降は使用しない（睡眠の質への配慮）</li>
+                            <li>食事中・移動中は使用しない</li>
+                            <li>タイマーやアラームでの自己管理</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>使用場所のルール</h4>
+                        <ul class="compact-list">
+                            <li><strong>推奨例：</strong> リビングなど保護者の目が届く場所で使用</li>
+                            <li>自室での使用は宿題のみ</li>
+                            <li>充電は保護者が管理できる場所で</li>
+                            <li>寝室への持ち込み禁止</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-ban"></i>
+                        </div>
+                        <h4>禁止事項のルール</h4>
+                        <ul class="compact-list">
+                            <li>個人情報（住所、電話番号、写真）の無断公開</li>
+                            <li>他人の悪口、誹謗中傷の投稿</li>
+                            <li>不適切なサイトの閲覧</li>
+                            <li>アプリの無断インストール</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>約束事のルール</h4>
+                        <ul class="compact-list">
+                            <li>困ったことがあったらすぐに保護者に相談</li>
+                            <li>ルールを破ったら一時的に使用停止</li>
+                            <li>定期的にルールを見直す（月1回など）</li>
+                            <li>家族で話し合ってルールを決める</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-gradient-success">
+                    <h4><i class="fas fa-file-contract"></i> 家庭ICT利用ルールシート（例）</h4>
+                    <p>以下のような「家庭ICT利用ルールシート」を配布し、家庭で話し合って記入してもらうことで、子どもの自己管理力を育てます。</p>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>使う時間：</strong> 平日は（　　）時から（　　）時まで</li>
+                        <li><i class="fas fa-check"></i> <strong>使う場所：</strong> （　　　　　　　）で使います</li>
+                        <li><i class="fas fa-check"></i> <strong>やってはいけないこと：</strong> （　　　　　　　　　　　　）</li>
+                        <li><i class="fas fa-check"></i> <strong>困ったときは：</strong> すぐに（　　　　）に相談します</li>
+                        <li><i class="fas fa-check"></i> <strong>約束した日：</strong> 20　年　月　日　　子ども（　　　）　保護者（　　　）</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 5. トラブル発生時の保護者対応 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-exclamation-triangle"></i> トラブル発生時の保護者対応</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> トラブル種類別の保護者対応</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>トラブル種類</th>
+                                <th>保護者への連絡内容</th>
+                                <th>対応ポイント</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>SNSトラブル</strong></td>
+                                <td>「お子さんが〇〇のトラブルに巻き込まれました。学校として〇〇の対応を行います」</td>
+                                <td>迅速な連絡、事実確認、家庭と学校で連携した対応、必要に応じて警察・法務局へ相談</td>
+                            </tr>
+                            <tr>
+                                <td><strong>端末の故障・破損</strong></td>
+                                <td>「お子さんの端末が故障しました。修理期間中は代替機をお渡しします」</td>
+                                <td>故障の経緯確認、保険適用の説明、代替機の貸与、修理期間の目安を伝える</td>
+                            </tr>
+                            <tr>
+                                <td><strong>不適切な利用</strong></td>
+                                <td>「授業中にゲームをしていました。学校でも指導しますが、ご家庭でもお声がけください」</td>
+                                <td>事実を伝える、学校の指導方針を説明、家庭での見守りをお願い</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ルール違反</strong></td>
+                                <td>「家庭で決めたルールが守られていないようです。一度話し合いの機会を設けませんか」</td>
+                                <td>批判ではなく協力依頼のトーン、一緒に解決する姿勢</td>
+                            </tr>
+                            <tr>
+                                <td><strong>健康面の懸念</strong></td>
+                                <td>「長時間の使用が気になります。利用時間の見直しをご検討ください」</td>
+                                <td>健康への配慮、適切な利用方法の提案、必要に応じて保健室との連携</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-phone"></i> トラブル対応の基本姿勢</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>迅速な連絡：</strong> 問題が大きくなる前に早めに保護者に連絡</li>
+                        <li><i class="fas fa-check"></i> <strong>事実を正確に伝える：</strong> 憶測や感情を交えず、客観的に</li>
+                        <li><i class="fas fa-check"></i> <strong>非難しない：</strong> 保護者や子どもを責めるのではなく、一緒に解決する姿勢</li>
+                        <li><i class="fas fa-check"></i> <strong>解決策を提示：</strong> 「こうしましょう」と具体的な対応を示す</li>
+                        <li><i class="fas fa-check"></i> <strong>継続的なフォロー：</strong> 対応後の経過確認、改善状況の共有</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 6. 保護者向け連絡ツールの活用 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-envelope"></i> 保護者向け連絡ツールの活用</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 主な保護者連絡ツールの比較</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>ツール名</th>
+                                <th>主な機能</th>
+                                <th>メリット</th>
+                                <th>活用場面</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>学校連絡メール</strong></td>
+                                <td>一斉メール配信、緊急連絡</td>
+                                <td>全保護者に確実に届く、緊急時に有効</td>
+                                <td>台風・地震時の休校連絡、不審者情報</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Google Classroom</strong></td>
+                                <td>課題配信、連絡事項、資料共有</td>
+                                <td>児童生徒・保護者の両方に情報共有、双方向</td>
+                                <td>宿題の連絡、行事の案内、学習資料の共有</td>
+                            </tr>
+                            <tr>
+                                <td><strong>学校ホームページ</strong></td>
+                                <td>お知らせ、行事予定、学校だより</td>
+                                <td>誰でもアクセス可能、情報の蓄積</td>
+                                <td>年間行事予定、学校だより、写真掲載</td>
+                            </tr>
+                            <tr>
+                                <td><strong>連絡帳アプリ</strong></td>
+                                <td>欠席連絡、個別連絡、アンケート</td>
+                                <td>24時間受付、紙の削減、集計自動化</td>
+                                <td>欠席連絡、保護者会出欠確認、アンケート</td>
+                            </tr>
+                            <tr>
+                                <td><strong>学校公式SNS</strong></td>
+                                <td>日常の様子発信、速報</td>
+                                <td>タイムリーな情報発信、学校の雰囲気が伝わる</td>
+                                <td>授業風景、行事の速報、児童生徒の活躍</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <h4>効果的な情報発信</h4>
+                        <ul class="compact-list">
+                            <li><strong>タイトルで内容がわかる：</strong> 「【重要】明日の持ち物について」</li>
+                            <li><strong>結論を先に：</strong> 「明日は体操服を持参してください」</li>
+                            <li><strong>簡潔に：</strong> 長文は読まれない。箇条書きを活用</li>
+                            <li><strong>視覚的に：</strong> 写真、イラスト、色分けで見やすく</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h4>定期的な情報発信</h4>
+                        <ul class="compact-list">
+                            <li><strong>週1回：</strong> 今週の予定、持ち物</li>
+                            <li><strong>月1回：</strong> 学校だより、行事報告</li>
+                            <li><strong>随時：</strong> 緊急連絡、行事の速報</li>
+                            <li><strong>学期末：</strong> 学期の振り返り、次学期の予定</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>個人情報保護</h4>
+                        <ul class="compact-list">
+                            <li>児童生徒の顔写真掲載は保護者の同意を得る</li>
+                            <li>個人が特定される情報は掲載しない</li>
+                            <li>パスワード保護されたページを活用</li>
+                            <li>SNSでの位置情報はオフに</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>双方向コミュニケーション</h4>
+                        <ul class="compact-list">
+                            <li>アンケート機能で保護者の意見を収集</li>
+                            <li>コメント欄で質問に回答</li>
+                            <li>保護者会での意見交換</li>
+                            <li>相談窓口の明示</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. ICT支援員としての保護者対応ポイント -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-user-cog"></i> ICT支援員としての保護者対応ポイント</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h4>わかりやすい言葉で説明</h4>
+                        <ul class="compact-list">
+                            <li>専門用語を使わない、使う場合は必ず説明</li>
+                            <li>具体例を交えて説明</li>
+                            <li>図解・イラストを活用</li>
+                            <li>「こう考えてください」と言い換える</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>不安に寄り添う</h4>
+                        <ul class="compact-list">
+                            <li>「よくわからない」という気持ちを受け止める</li>
+                            <li>「ご心配ですよね」と共感</li>
+                            <li>否定せず、丁寧に説明</li>
+                            <li>安心できる情報を提供</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h4>サポート体制を明示</h4>
+                        <ul class="compact-list">
+                            <li>「困ったときはいつでも相談してください」</li>
+                            <li>相談窓口（学校、教育委員会）を明確に</li>
+                            <li>マニュアル・FAQ資料の配布</li>
+                            <li>保護者向け相談会の開催</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>ポジティブな情報発信</h4>
+                        <ul class="compact-list">
+                            <li>子どもたちの成長、良い変化を伝える</li>
+                            <li>ICT活用の成功事例を共有</li>
+                            <li>「こんなことができるようになった」</li>
+                            <li>保護者の協力に感謝を伝える</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-gradient-primary">
+                    <h4><i class="fas fa-lightbulb"></i> 保護者連携の成功事例</h4>
+                    <p><strong>事例1：保護者向け操作説明会の開催</strong><br>
+                    年度初めに保護者向けの「端末操作説明会」を開催。Google ClassroomやZoomの使い方を実際に体験してもらうことで、保護者の不安が軽減され、家庭でのICT活用がスムーズに進んだ。</p>
+                    
+                    <p><strong>事例2：家庭ICT利用ルールシートの配布</strong><br>
+                    家庭で話し合ってルールを決めるシートを配布。子ども自身がルールを決めることで自己管理力が向上し、保護者からも「使いすぎが減った」との声が寄せられた。</p>
+                    
+                    <p><strong>事例3：学校公式SNSでの日常発信</strong><br>
+                    学校公式Instagramで授業風景や児童生徒の活躍を定期的に発信。保護者から「学校の様子がよくわかる」「子どもとの会話が増えた」と好評。</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

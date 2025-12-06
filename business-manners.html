@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ビジネスマナー・社会人基礎力 - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="ICT支援員として必要なビジネスマナーと社会人基礎力を解説。学校現場での適切な振る舞い、コミュニケーション、守秘義務などを網羅。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html" class="active"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-user-check"></i> ビジネスマナー・社会人基礎力</h1>
+            <p>学校現場で必要なビジネスマナーと社会人としての基礎力</p>
+        </div>
+        
+        <section class="intro">
+            <p>ICT支援員として学校現場で働く上で必要な、基本的なビジネスマナーと社会人としての基礎力を解説します。学校特有のマナーや、教職員・保護者との円滑なコミュニケーションのために押さえておくべきポイントをまとめました。</p>
+            
+            <div class="checklist">
+                <h4>📋 このページで学べること</h4>
+                <ul>
+                    <li>学校現場での基本的な振る舞い方</li>
+                    <li>教職員・保護者との適切なコミュニケーション</li>
+                    <li>報告・連絡・相談（ホウレンソウ）の実践方法</li>
+                    <li>守秘義務と情報管理の重要性</li>
+                    <li>時間管理とタスク管理のコツ</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 1. 基本的なビジネスマナー -->
+        <div class="manner-category">
+            <h2>1. 基本的なビジネスマナー</h2>
+        </div>
+
+        <section>
+            <h3>1.1 挨拶</h3>
+            <div class="manner-item">
+                <h4>挨拶の基本原則</h4>
+                <ul>
+                    <li><strong>明るく・元気に・笑顔で</strong>：第一印象の8割は挨拶で決まります</li>
+                    <li><strong>相手より先に</strong>：自分から積極的に挨拶をする</li>
+                    <li><strong>相手の目を見て</strong>：アイコンタクトで誠意を示す</li>
+                    <li><strong>お辞儀を添えて</strong>：会釈（15度）、敬礼（30度）、最敬礼（45度）</li>
+                </ul>
+            </div>
+
+            <div class="manner-item">
+                <h4>時間帯別の挨拶</h4>
+                <table>
+                    <tr>
+                        <th>時間帯</th>
+                        <th>挨拶</th>
+                        <th>使用場面</th>
+                    </tr>
+                    <tr>
+                        <td>朝（～10:00頃）</td>
+                        <td>おはようございます</td>
+                        <td>出勤時、朝の職員室</td>
+                    </tr>
+                    <tr>
+                        <td>日中（10:00～17:00頃）</td>
+                        <td>こんにちは</td>
+                        <td>授業中の教室訪問、来客対応</td>
+                    </tr>
+                    <tr>
+                        <td>夕方以降（17:00～）</td>
+                        <td>こんばんは</td>
+                        <td>残業時、夜間行事</td>
+                    </tr>
+                    <tr>
+                        <td>退勤時</td>
+                        <td>お疲れ様でした / お先に失礼します</td>
+                        <td>帰宅時</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="good-example">
+                出勤時に職員室に入る際、「おはようございます！」と明るく挨拶し、会釈をする。
+            </div>
+
+            <div class="bad-example">
+                小声で「おはよう…」とつぶやくだけで、下を向いたまま自分の席に向かう。
+            </div>
+        </section>
+
+        <section>
+            <h3>1.2 身だしなみ</h3>
+            <div class="manner-item">
+                <h4>身だしなみの基本</h4>
+                <p><strong>「清潔感」「機能性」「TPO」</strong>の3つが重要です。</p>
+                
+                <h5>服装</h5>
+                <ul>
+                    <li><strong>基本はビジネスカジュアル</strong>：スーツまでは不要だが、襟付きシャツやブラウス推奨</li>
+                    <li><strong>動きやすさ重視</strong>：教室間の移動、機器の設置作業があるため動きやすい服装</li>
+                    <li><strong>避けるべき服装</strong>：
+                        <ul>
+                            <li>ジーンズ（カジュアルすぎる）</li>
+                            <li>極端に短いスカート・パンツ</li>
+                            <li>露出の多い服</li>
+                            <li>派手な色・柄</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h5>髪型・メイク</h5>
+                <ul>
+                    <li><strong>清潔感が第一</strong>：整髪、清潔な髪</li>
+                    <li><strong>長い髪は束ねる</strong>：作業時に邪魔にならないように</li>
+                    <li><strong>過度な染髪は避ける</strong>：自然な色合いが望ましい</li>
+                    <li><strong>メイクはナチュラルに</strong>：派手すぎないメイク</li>
+                </ul>
+
+                <h5>アクセサリー・香水</h5>
+                <ul>
+                    <li><strong>最小限に</strong>：作業の妨げになるものは避ける</li>
+                    <li><strong>香水は控えめに</strong>：強い香りは避ける（児童生徒への配慮）</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                学校によって服装規定が異なる場合があります。初日に確認し、周囲の教職員の服装を参考にしましょう。
+            </div>
+        </section>
+
+        <section>
+            <h3>1.3 言葉遣い</h3>
+            <div class="manner-item">
+                <h4>敬語の種類と使い分け</h4>
+                <table>
+                    <tr>
+                        <th>種類</th>
+                        <th>用途</th>
+                        <th>例</th>
+                    </tr>
+                    <tr>
+                        <td>尊敬語</td>
+                        <td>相手の動作を高める</td>
+                        <td>おっしゃる、いらっしゃる、ご覧になる</td>
+                    </tr>
+                    <tr>
+                        <td>謙譲語</td>
+                        <td>自分の動作をへりくだる</td>
+                        <td>申し上げる、伺う、拝見する</td>
+                    </tr>
+                    <tr>
+                        <td>丁寧語</td>
+                        <td>丁寧に表現する</td>
+                        <td>です、ます、ございます</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="manner-item">
+                <h4>よく使う敬語表現</h4>
+                <table>
+                    <tr>
+                        <th>普通の言い方</th>
+                        <th>尊敬語</th>
+                        <th>謙譲語</th>
+                    </tr>
+                    <tr>
+                        <td>言う</td>
+                        <td>おっしゃる</td>
+                        <td>申し上げる</td>
+                    </tr>
+                    <tr>
+                        <td>聞く</td>
+                        <td>お聞きになる</td>
+                        <td>伺う、お聞きする</td>
+                    </tr>
+                    <tr>
+                        <td>見る</td>
+                        <td>ご覧になる</td>
+                        <td>拝見する</td>
+                    </tr>
+                    <tr>
+                        <td>する</td>
+                        <td>なさる</td>
+                        <td>いたす</td>
+                    </tr>
+                    <tr>
+                        <td>知っている</td>
+                        <td>ご存知</td>
+                        <td>存じ上げる、承知している</td>
+                    </tr>
+                    <tr>
+                        <td>来る</td>
+                        <td>いらっしゃる、お越しになる</td>
+                        <td>参る、伺う</td>
+                    </tr>
+                    <tr>
+                        <td>行く</td>
+                        <td>いらっしゃる</td>
+                        <td>参る、伺う</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="manner-item">
+                <h4>クッション言葉</h4>
+                <p>依頼や断りの際に、柔らかい印象を与える言葉です。</p>
+                <ul>
+                    <li><strong>お願いする時</strong>：
+                        <ul>
+                            <li>「恐れ入りますが、～していただけますでしょうか」</li>
+                            <li>「お手数をおかけしますが、～」</li>
+                            <li>「差し支えなければ、～」</li>
+                        </ul>
+                    </li>
+                    <li><strong>断る時</strong>：
+                        <ul>
+                            <li>「申し訳ございませんが、～」</li>
+                            <li>「あいにくですが、～」</li>
+                            <li>「せっかくですが、～」</li>
+                        </ul>
+                    </li>
+                    <li><strong>質問する時</strong>：
+                        <ul>
+                            <li>「失礼ですが、～」</li>
+                            <li>「お尋ねしたいのですが、～」</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="good-example">
+                「恐れ入りますが、こちらのタブレットの設定を確認させていただけますでしょうか」
+            </div>
+
+            <div class="bad-example">
+                「ちょっとタブレット見せて」
+            </div>
+        </section>
+
+        <section>
+            <h3>1.4 電話対応</h3>
+            <div class="manner-item">
+                <h4>電話を受ける時</h4>
+                <ol>
+                    <li><strong>3コール以内に出る</strong>
+                        <ul>
+                            <li>3コール以上：「お待たせいたしました」</li>
+                        </ul>
+                    </li>
+                    <li><strong>明るい声で名乗る</strong>
+                        <ul>
+                            <li>「はい、○○学校でございます」</li>
+                            <li>「ICT支援員の△△が承ります」</li>
+                        </ul>
+                    </li>
+                    <li><strong>メモを取る準備をする</strong>
+                        <ul>
+                            <li>5W1H（いつ、どこで、誰が、何を、なぜ、どのように）</li>
+                        </ul>
+                    </li>
+                    <li><strong>復唱確認する</strong>
+                        <ul>
+                            <li>「～とのことですね。承知いたしました」</li>
+                        </ul>
+                    </li>
+                    <li><strong>丁寧に切る</strong>
+                        <ul>
+                            <li>「失礼いたします」と言ってから、相手が切るのを待つ</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="manner-item">
+                <h4>電話をかける時</h4>
+                <ol>
+                    <li><strong>事前準備</strong>：話す内容をメモしておく</li>
+                    <li><strong>名乗る</strong>：「○○学校のICT支援員、△△と申します」</li>
+                    <li><strong>相手の都合を確認</strong>：「今、お時間よろしいでしょうか」</li>
+                    <li><strong>要件を簡潔に伝える</strong>：結論から話す</li>
+                    <li><strong>お礼を述べる</strong>：「お忙しいところありがとうございました」</li>
+                </ol>
+            </div>
+
+            <div class="warning-box">
+                担当者が不在の場合は、戻り時間を確認し、「こちらから改めてお電話いたします」と伝えましょう。伝言を頼む場合は、メモの復唱を依頼します。
+            </div>
+        </section>
+
+        <section>
+            <h3>1.5 メール作成</h3>
+            <div class="manner-item">
+                <h4>ビジネスメールの基本構成</h4>
+                <pre style="background: #f8f9fa; padding: 15px; border-radius: 5px; border-left: 4px solid #667eea;">
+【件名】
+○○の件について（簡潔で内容がわかる件名）
+
+【本文】
+○○先生
+
+お疲れ様です。ICT支援員の△△です。
+
+（挨拶・前置き）
+いつもお世話になっております。
+
+（本題）
+先日ご相談いただきました○○の件につきまして、
+以下のとおりご報告いたします。
+
+1. ～
+2. ～
+3. ～
+
+（締めの言葉）
+ご確認のほど、よろしくお願いいたします。
+
+（署名）
+─────────────────
+○○学校 ICT支援員
+△△ □□（氏名）
+Email: xxx@xxx.jp
+Tel: 000-0000-0000
+─────────────────
+                </pre>
+            </div>
+
+            <div class="manner-item">
+                <h4>メール作成のポイント</h4>
+                <ul>
+                    <li><strong>件名は具体的に</strong>：「お疲れ様です」「よろしくお願いします」はNG</li>
+                    <li><strong>結論を先に書く</strong>：忙しい先生方への配慮</li>
+                    <li><strong>箇条書きを活用</strong>：読みやすさ重視</li>
+                    <li><strong>送信前に確認</strong>：
+                        <ul>
+                            <li>宛先は正しいか（To / CC / BCC）</li>
+                            <li>添付ファイルは付けたか</li>
+                            <li>誤字脱字はないか</li>
+                        </ul>
+                    </li>
+                    <li><strong>返信は24時間以内</strong>：すぐに回答できない場合も「承知しました。確認してご連絡します」と返信</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                CC（Carbon Copy）：関係者にも情報共有したい時<br>
+                BCC（Blind Carbon Copy）：他の受信者にアドレスを見せたくない時（一斉送信等）
+            </div>
+        </section>
+
+        <!-- 2. 学校特有のマナー -->
+        <div class="manner-category">
+            <h2>2. 学校特有のマナー</h2>
+        </div>
+
+        <section>
+            <h3>2.1 職員室での振る舞い</h3>
+            <div class="manner-item">
+                <h4>職員室に入る時</h4>
+                <ul>
+                    <li><strong>ノックして入室</strong>：職員室の扉が閉まっている場合</li>
+                    <li><strong>明るく挨拶</strong>：「おはようございます」「失礼します」</li>
+                    <li><strong>静かに移動</strong>：教職員の業務を妨げないように</li>
+                </ul>
+            </div>
+
+            <div class="manner-item">
+                <h4>教員への声かけタイミング</h4>
+                <ul>
+                    <li><strong>避けるべきタイミング</strong>：
+                        <ul>
+                            <li>授業準備で忙しそうな時</li>
+                            <li>電話中</li>
+                            <li>他の教員・保護者と話している時</li>
+                            <li>昼休み直後（給食指導後で疲れている）</li>
+                        </ul>
+                    </li>
+                    <li><strong>声をかけやすいタイミング</strong>：
+                        <ul>
+                            <li>朝の会前（余裕がある時間）</li>
+                            <li>空きコマ</li>
+                            <li>放課後（ただし会議がないか確認）</li>
+                        </ul>
+                    </li>
+                    <li><strong>声かけの仕方</strong>：
+                        <ul>
+                            <li>「○○先生、今よろしいでしょうか」</li>
+                            <li>「少しお時間いただけますか」</li>
+                            <li>忙しそうなら「また後ほど伺います」</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                職員室内での私語は慎みましょう。雑談は最小限に、業務に関する会話に集中します。
+            </div>
+        </section>
+
+        <section>
+            <h3>2.2 授業中の立ち居振る舞い</h3>
+            <div class="manner-item">
+                <h4>教室への入り方</h4>
+                <ol>
+                    <li><strong>授業前に確認</strong>：事前に教員と打ち合わせしておく</li>
+                    <li><strong>静かにノック</strong>：授業中の場合は小さくノック</li>
+                    <li><strong>会釈して入室</strong>：子どもたちに挨拶されても、授業の妨げにならないよう会釈で応じる</li>
+                    <li><strong>教室の後方へ</strong>：子どもたちの視界を遮らない位置</li>
+                </ol>
+            </div>
+
+            <div class="manner-item">
+                <h4>授業中の注意点</h4>
+                <ul>
+                    <li><strong>教員の指示を待つ</strong>：勝手に子どもに話しかけない</li>
+                    <li><strong>静かに移動</strong>：必要な時以外は動かない</li>
+                    <li><strong>子どもへの接し方</strong>：
+                        <ul>
+                            <li>敬語は不要だが、丁寧な言葉遣い</li>
+                            <li>「○○さん、これでいいかな？」など優しく声かけ</li>
+                            <li>特定の子だけでなく、全体を見る</li>
+                        </ul>
+                    </li>
+                    <li><strong>問題発見時</strong>：
+                        <ul>
+                            <li>機器トラブル→すぐに対処</li>
+                            <li>授業内容の質問→教員に確認</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="good-example">
+                授業開始前に教室後方で待機し、教員が「ICT支援員さん、お願いします」と言ったタイミングで子どもたちのサポートを開始する。
+            </div>
+
+            <div class="bad-example">
+                授業中、突然教室に入り、「先生、機器の設定変えましたよ」と大きな声で話しかける。
+            </div>
+        </section>
+
+        <section>
+            <h3>2.3 保護者対応</h3>
+            <div class="manner-item">
+                <h4>保護者と接する場面</h4>
+                <ul>
+                    <li>学校公開日・授業参観</li>
+                    <li>PTA行事</li>
+                    <li>保護者からの問い合わせ対応</li>
+                    <li>廊下や校門ですれ違う時</li>
+                </ul>
+            </div>
+
+            <div class="manner-item">
+                <h4>保護者対応の基本</h4>
+                <ul>
+                    <li><strong>丁寧な言葉遣い</strong>：教員以上に敬語を意識</li>
+                    <li><strong>笑顔で挨拶</strong>：「こんにちは」「いつもお世話になっております」</li>
+                    <li><strong>適切な距離感</strong>：
+                        <ul>
+                            <li>個人的な相談は受けない</li>
+                            <li>教育内容の質問→教員に繋ぐ</li>
+                            <li>ICT機器の使い方→答えてOK</li>
+                        </ul>
+                    </li>
+                    <li><strong>守秘義務の徹底</strong>：
+                        <ul>
+                            <li>他の児童の情報は絶対に話さない</li>
+                            <li>学校の内部情報も話さない</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                保護者からのクレームや要望は、必ず教員や管理職に報告し、自己判断で対応しないようにしましょう。
+            </div>
+        </section>
+
+        <section>
+            <h3>2.4 来客対応</h3>
+            <div class="manner-item">
+                <h4>来客があった時</h4>
+                <ol>
+                    <li><strong>すぐに対応</strong>：気づいたらすぐに立ち上がる</li>
+                    <li><strong>明るく挨拶</strong>：「いらっしゃいませ」「こんにちは」</li>
+                    <li><strong>用件を確認</strong>：
+                        <ul>
+                            <li>「どのようなご用件でしょうか」</li>
+                            <li>アポイントの有無を確認</li>
+                        </ul>
+                    </li>
+                    <li><strong>担当者に繋ぐ</strong>：
+                        <ul>
+                            <li>「少々お待ちください」</li>
+                            <li>担当者不在の場合は、戻り時間を伝える</li>
+                        </ul>
+                    </li>
+                    <li><strong>案内する</strong>：
+                        <ul>
+                            <li>応接室や会議室に案内（来客は自分の2-3歩前）</li>
+                            <li>「こちらへどうぞ」</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="tip-box">
+                業者の方が来校した場合も、丁寧に対応します。ただし、不審者対策のため、アポイントのない来訪者には注意が必要です。
+            </div>
+        </section>
+
+        <!-- 3. 報告・連絡・相談（ホウレンソウ） -->
+        <div class="manner-category">
+            <h2>3. 報告・連絡・相談（ホウレンソウ）</h2>
+        </div>
+
+        <section>
+            <h3>3.1 報告（ホウ）</h3>
+            <div class="manner-item">
+                <h4>報告の基本</h4>
+                <ul>
+                    <li><strong>タイムリーに</strong>：鮮度が大事。終わったらすぐ報告</li>
+                    <li><strong>結論から</strong>：「○○が完了しました」→詳細</li>
+                    <li><strong>事実と意見を分ける</strong>：
+                        <ul>
+                            <li>事実：「タブレット10台の設定が完了しました」</li>
+                            <li>意見：「今後は△△した方が効率的だと思います」</li>
+                        </ul>
+                    </li>
+                    <li><strong>悪い報告ほど早く</strong>：トラブルやミスは隠さずすぐに報告</li>
+                </ul>
+            </div>
+
+            <div class="manner-item">
+                <h4>報告のフレームワーク</h4>
+                <p><strong>結論→理由→具体例→結論</strong>の順で構成します。</p>
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                    <strong>例：</strong><br>
+                    <strong>結論：</strong>3年1組のタブレット設定が完了しました。<br>
+                    <strong>理由：</strong>先生からご依頼いただいたアカウント設定とアプリのインストールを行いました。<br>
+                    <strong>具体例：</strong>全40台のタブレットに、Google ClassroomとJamboardをインストールし、児童用アカウントでログインできることを確認しました。<br>
+                    <strong>結論：</strong>明日の授業からご利用いただけます。
+                </div>
+            </div>
+
+            <div class="manner-item">
+                <h4>必ず報告すべきこと</h4>
+                <ul>
+                    <li>✅ 依頼された業務の完了</li>
+                    <li>✅ トラブルやミスの発生</li>
+                    <li>✅ 期日に間に合わない可能性</li>
+                    <li>✅ 想定外の事態の発生</li>
+                    <li>✅ 他校や他部署との調整結果</li>
+                    <li>✅ 保護者や外部業者からの問い合わせ内容</li>
+                </ul>
+            </div>
+
+            <div class="good-example">
+                「○○先生、先ほどご依頼いただいたプロジェクターの設置が完了しました。動作確認も問題ありません。明日の授業でお使いいただけます」
+            </div>
+
+            <div class="bad-example">
+                「設置しといたんで、よろしくお願いします」（誰に何をしたのか不明確）
+            </div>
+        </section>
+
+        <section>
+            <h3>3.2 連絡（レン）</h3>
+            <div class="manner-item">
+                <h4>連絡の基本</h4>
+                <ul>
+                    <li><strong>正確に伝える</strong>：5W1Hを意識</li>
+                    <li><strong>確実に伝える</strong>：口頭だけでなく、メールやメモも活用</li>
+                    <li><strong>記録を残す</strong>：いつ、誰に、何を伝えたか記録</li>
+                    <li><strong>伝達漏れ防止</strong>：関係者全員に伝わっているか確認</li>
+                </ul>
+            </div>
+
+            <div class="manner-item">
+                <h4>連絡の5W1H</h4>
+                <ul>
+                    <li><strong>When（いつ）</strong>：日時、期限</li>
+                    <li><strong>Where（どこで）</strong>：場所</li>
+                    <li><strong>Who（誰が）</strong>：担当者、対象者</li>
+                    <li><strong>What（何を）</strong>：内容、目的</li>
+                    <li><strong>Why（なぜ）</strong>：理由、背景</li>
+                    <li><strong>How（どのように）</strong>：方法、手段</li>
+                </ul>
+            </div>
+
+            <div class="good-example">
+                「○○先生、明日（When）の2時間目（When）、3年1組の教室（Where）でタブレットを使った授業があるとのことでしたので、30台のタブレット（What）を充電保管庫から教室に運んでおきました（How）」
+            </div>
+        </section>
+
+        <section>
+            <h3>3.3 相談（ソウ）</h3>
+            <div class="manner-item">
+                <h4>相談の基本</h4>
+                <ul>
+                    <li><strong>早めに相談</strong>：問題が小さいうちに</li>
+                    <li><strong>自分の考えを持って相談</strong>：「どうしたらいいですか？」ではなく「○○と考えていますが、いかがでしょうか？」</li>
+                    <li><strong>複数の選択肢を提示</strong>：A案、B案など</li>
+                    <li><strong>判断に必要な情報を整理</strong>：背景、現状、課題を明確に</li>
+                </ul>
+            </div>
+
+            <div class="manner-item">
+                <h4>相談のタイミング</h4>
+                <ul>
+                    <li>✅ 自分では判断できないこと</li>
+                    <li>✅ 予算や契約に関わること</li>
+                    <li>✅ 学校のルールや方針に関わること</li>
+                    <li>✅ 他の教職員や保護者との調整が必要なこと</li>
+                    <li>✅ リスクがあること</li>
+                    <li>✅ 期限に間に合わない可能性があること</li>
+                </ul>
+            </div>
+
+            <div class="good-example">
+                「○○先生、4年生のタブレット10台が故障しているようです。修理に出すと2週間かかるそうです。予備機を使うか、修理を優先するか、どちらが良いでしょうか？私としては、授業に支障が出るため、予備機の活用を提案したいと考えています」
+            </div>
+
+            <div class="bad-example">
+                「タブレットが壊れてるんですけど、どうしたらいいですか？」（自分の考えがない、情報不足）
+            </div>
+        </section>
+
+        <section>
+            <h3>3.4 ホウレンソウの記録</h3>
+            <div class="manner-item">
+                <h4>記録の重要性</h4>
+                <p>口頭での報告・連絡・相談は、<strong>記憶に頼ると忘れたり、認識のズレが生じる</strong>ため、必ず記録を残しましょう。</p>
+                
+                <h5>記録方法</h5>
+                <ul>
+                    <li><strong>業務日報</strong>：毎日の業務内容を記録</li>
+                    <li><strong>メール</strong>：重要な報告・連絡はメールで文書化</li>
+                    <li><strong>チャットツール</strong>：Slack、Teams等での記録</li>
+                    <li><strong>連絡ノート</strong>：学校によっては紙の連絡ノートを活用</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                「言った・言わない」のトラブルを防ぐため、重要な内容は必ずメールやチャットで文書化しましょう。
+            </div>
+        </section>
+
+        <!-- 4. 守秘義務と情報管理 -->
+        <div class="manner-category">
+            <h2>4. 守秘義務と情報管理</h2>
+        </div>
+
+        <section>
+            <h3>4.1 守秘義務とは</h3>
+            <div class="manner-item">
+                <p>ICT支援員は業務上、<strong>児童生徒の個人情報、成績、家庭状況、学校の内部情報</strong>など、多くの機密情報に触れます。これらの情報を外部に漏らすことは、<strong>契約違反・法律違反</strong>であり、<strong>信頼を失う</strong>重大な問題です。</p>
+                
+                <h4>ICT支援員の守秘義務の法的根拠</h4>
+                <p>ICT支援員は通常、地方公務員ではないため、地方公務員法の守秘義務（第34条）は直接適用されません。しかし、以下の法的根拠により守秘義務が発生します：</p>
+                <ul>
+                    <li><strong>①雇用契約書・誓約書</strong>：契約時に締結する守秘義務条項</li>
+                    <li><strong>②個人情報保護法</strong>：個人情報の適切な取り扱い義務（第23条等）</li>
+                    <li><strong>③民法</strong>：不法行為責任（第709条）、使用者責任（第715条）</li>
+                    <li><strong>④委託契約</strong>：業務委託契約における機密保持条項</li>
+                </ul>
+                <p><strong>違反した場合の責任：</strong>損害賠償請求、契約解除、刑事罰（個人情報保護法違反の場合）の対象となる可能性があります。</p>
+                
+                <h4>守秘義務の対象</h4>
+                <ul>
+                    <li>✅ 児童生徒の氏名、住所、電話番号</li>
+                    <li>✅ 成績、出席状況</li>
+                    <li>✅ 家庭環境、保護者情報</li>
+                    <li>✅ 健康状態、障害の有無</li>
+                    <li>✅ 問題行動、指導内容</li>
+                    <li>✅ 教職員の個人情報</li>
+                    <li>✅ 学校の運営方針、会議内容</li>
+                    <li>✅ 予算、契約情報</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <strong>雇用形態に関わらず、守秘義務は発生します。</strong>正職員、契約社員、パート、派遣、業務委託のいずれの場合も同様です。特に業務委託の場合でも、契約書や誓約書に基づく守秘義務が発生し、違反した場合は契約解除や損害賠償請求の対象となります。
+            </div>
+        </section>
+
+        <section>
+            <h3>4.2 情報漏洩を防ぐために</h3>
+            <div class="manner-item">
+                <h4>日常業務での注意点</h4>
+                <ul>
+                    <li><strong>SNSへの投稿禁止</strong>：
+                        <ul>
+                            <li>学校名、児童生徒の情報は一切投稿しない</li>
+                            <li>授業風景の写真も投稿しない（顔が写っていなくてもNG）</li>
+                            <li>「今日はこんな授業をサポートしました」程度でも特定リスクあり</li>
+                        </ul>
+                    </li>
+                    <li><strong>家族や友人への話も禁止</strong>：
+                        <ul>
+                            <li>「うちの学校の○○ちゃんが…」は絶対NG</li>
+                            <li>「面白い授業があった」程度でも、詳細は話さない</li>
+                        </ul>
+                    </li>
+                    <li><strong>公共の場での会話に注意</strong>：
+                        <ul>
+                            <li>電車やカフェで学校の話をしない</li>
+                            <li>電話も周囲に聞かれないよう配慮</li>
+                        </ul>
+                    </li>
+                    <li><strong>書類の管理</strong>：
+                        <ul>
+                            <li>個人情報が記載された書類は、鍵付きキャビネットに保管</li>
+                            <li>不要になった書類はシュレッダーで処分</li>
+                            <li>机の上に放置しない</li>
+                        </ul>
+                    </li>
+                    <li><strong>PCやUSBメモリの管理</strong>：
+                        <ul>
+                            <li>パスワードロック必須</li>
+                            <li>紛失しないよう厳重に管理</li>
+                            <li>個人のPCに学校データを保存しない</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="good-example">
+                家族に「今日は学校でICT機器のトラブル対応をしました。タブレットの設定方法を先生に説明しました」（個人が特定されない範囲）
+            </div>
+
+            <div class="bad-example">
+                友人に「今日、○○小学校の3年1組で、△△ちゃんがタブレットを壊しちゃってさ…」（学校名、クラス、児童名を特定）
+            </div>
+        </section>
+
+        <section>
+            <h3>4.3 政治的中立性</h3>
+            <div class="manner-item">
+                <p>学校は政治的に中立でなければならず、ICT支援員もこれに準じます。</p>
+                
+                <h4>避けるべき行動</h4>
+                <ul>
+                    <li>✗ 特定の政党や政治家を支持・批判する発言</li>
+                    <li>✗ 宗教的な布教活動</li>
+                    <li>✗ 思想・信条を押し付ける行為</li>
+                    <li>✗ 選挙活動（校内での署名活動、投票依頼等）</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                教職員から政治や宗教の話題が出ても、自分の意見は控えめに。「そうですね」「いろいろな考え方がありますね」と受け流すのが無難です。
+            </div>
+        </section>
+
+        <section>
+            <h3>4.4 服務規律</h3>
+            <div class="manner-item">
+                <h4>勤務時間の管理</h4>
+                <ul>
+                    <li><strong>遅刻・早退の連絡</strong>：必ず事前に電話連絡</li>
+                    <li><strong>休暇申請</strong>：所定の手続きに従う（前日まで、緊急時は当日朝）</li>
+                    <li><strong>勤務時間厳守</strong>：始業時刻の10分前には到着</li>
+                    <li><strong>残業の事前申請</strong>：上長の許可を得る</li>
+                </ul>
+            </div>
+
+            <div class="manner-item">
+                <h4>兼業・副業</h4>
+                <p>雇用形態や契約内容によって、兼業・副業が禁止されている場合があります。</p>
+                <ul>
+                    <li><strong>契約書を確認</strong>：兼業禁止条項の有無</li>
+                    <li><strong>事前相談</strong>：副業を始める前に、雇用元に相談</li>
+                    <li><strong>利益相反の回避</strong>：学校業務に支障が出る副業はNG</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                学校によっては、教職員との飲み会や個人的な付き合いについてルールがある場合があります。初日に確認しましょう。
+            </div>
+        </section>
+
+        <!-- 5. 時間管理・タスク管理 -->
+        <div class="manner-category">
+            <h2>5. 時間管理・タスク管理</h2>
+        </div>
+
+        <section>
+            <h3>5.1 優先順位のつけ方</h3>
+            <div class="manner-item">
+                <h4>緊急度と重要度のマトリクス</h4>
+                <p>業務を4つに分類し、優先順位をつけます。</p>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>重要度：高</th>
+                        <th>重要度：低</th>
+                    </tr>
+                    <tr>
+                        <td><strong>緊急度：高</strong></td>
+                        <td style="background: #ffcccc;">
+                            <strong>第1領域：最優先</strong><br>
+                            ・授業直前の機器トラブル<br>
+                            ・ネットワーク障害<br>
+                            ・締切当日の業務
+                        </td>
+                        <td style="background: #fff4cc;">
+                            <strong>第3領域：後回し</strong><br>
+                            ・突発的な雑務<br>
+                            ・急な会議（重要でない）<br>
+                            ・他人の都合による中断
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>緊急度：低</strong></td>
+                        <td style="background: #ccf2cc;">
+                            <strong>第2領域：重要</strong><br>
+                            ・研修・自己啓発<br>
+                            ・長期計画の立案<br>
+                            ・予防保守<br>
+                            ・人間関係構築
+                        </td>
+                        <td style="background: #e6e6e6;">
+                            <strong>第4領域：不要</strong><br>
+                            ・暇つぶし<br>
+                            ・無駄な会議<br>
+                            ・単なる時間浪費
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tip-box">
+                <strong>第2領域（重要だが緊急でない）</strong>を意識的に増やすことで、第1領域（緊急かつ重要）の業務を減らせます。予防的な対応が重要です。
+            </div>
+        </section>
+
+        <section>
+            <h3>5.2 スケジュール管理</h3>
+            <div class="manner-item">
+                <h4>スケジュール管理のコツ</h4>
+                <ul>
+                    <li><strong>カレンダーツールを活用</strong>：
+                        <ul>
+                            <li>Googleカレンダー、Outlookカレンダー</li>
+                            <li>学校行事、授業予定、自分の業務を一元管理</li>
+                        </ul>
+                    </li>
+                    <li><strong>バッファ（余裕時間）を設ける</strong>：
+                        <ul>
+                            <li>予定を詰め込みすぎない</li>
+                            <li>移動時間、突発的なトラブル対応の時間を確保</li>
+                        </ul>
+                    </li>
+                    <li><strong>週次・日次で見直す</strong>：
+                        <ul>
+                            <li>月曜朝：今週の予定確認</li>
+                            <li>毎朝：今日のタスク確認</li>
+                            <li>夕方：明日の準備</li>
+                        </ul>
+                    </li>
+                    <li><strong>締切を前倒しで設定</strong>：
+                        <ul>
+                            <li>正式な締切の2-3日前を自分の締切に</li>
+                            <li>余裕を持った対応で品質向上</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>5.3 タスク管理</h3>
+            <div class="manner-item">
+                <h4>タスク管理のツール</h4>
+                <ul>
+                    <li><strong>ToDoリスト</strong>：
+                        <ul>
+                            <li>紙のメモ、Googleタスク、Trello、Notion等</li>
+                            <li>やるべきことを可視化</li>
+                        </ul>
+                    </li>
+                    <li><strong>チェックリスト</strong>：
+                        <ul>
+                            <li>定型業務はチェックリスト化</li>
+                            <li>抜け漏れ防止</li>
+                        </ul>
+                    </li>
+                    <li><strong>進捗管理表</strong>：
+                        <ul>
+                            <li>複数のタスクを並行管理</li>
+                            <li>Excelやスプレッドシートで作成</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="manner-item">
+                <h4>タスク管理のポイント</h4>
+                <ul>
+                    <li><strong>大きなタスクは分解</strong>：
+                        <ul>
+                            <li>「タブレット100台のキッティング」→「開梱」「設定」「動作確認」「配布」に分解</li>
+                        </ul>
+                    </li>
+                    <li><strong>所要時間を見積もる</strong>：
+                        <ul>
+                            <li>タスクごとに所要時間を予測</li>
+                            <li>1.5倍の時間を見込む（余裕を持つ）</li>
+                        </ul>
+                    </li>
+                    <li><strong>完了したら即チェック</strong>：
+                        <ul>
+                            <li>達成感を得られる</li>
+                            <li>進捗が可視化される</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>5.4 マルチタスクのコツ</h3>
+            <div class="manner-item">
+                <p>ICT支援員は複数の学校や教員からの依頼を同時に抱えることが多く、マルチタスク能力が求められます。</p>
+                
+                <h4>マルチタスクのコツ</h4>
+                <ul>
+                    <li><strong>並行処理できるものを見極める</strong>：
+                        <ul>
+                            <li>待ち時間を活用（インストール中に別作業）</li>
+                            <li>集中力が必要な作業は並行しない</li>
+                        </ul>
+                    </li>
+                    <li><strong>タスクの切り替えコストを意識</strong>：
+                        <ul>
+                            <li>頻繁な切り替えは効率が落ちる</li>
+                            <li>似た作業はまとめて処理（一括設定等）</li>
+                        </ul>
+                    </li>
+                    <li><strong>中断されても復帰できる仕組み</strong>：
+                        <ul>
+                            <li>「どこまでやったか」をメモ</li>
+                            <li>再開しやすいようファイルを整理</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 6. 名刺交換 -->
+        <div class="manner-category">
+            <h2>6. 名刺交換</h2>
+        </div>
+
+        <section>
+            <h3>6.1 名刺の準備</h3>
+            <div class="manner-item">
+                <p>ICT支援員も、外部の業者や他校の教職員と名刺交換をする機会があります。</p>
+                
+                <h4>名刺に記載する内容</h4>
+                <ul>
+                    <li>所属（学校名、または派遣元企業名）</li>
+                    <li>役職（ICT支援員）</li>
+                    <li>氏名</li>
+                    <li>連絡先（メールアドレス、電話番号）</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                学校によっては名刺を用意してくれる場合と、自分で準備する場合があります。事前に確認しましょう。
+            </div>
+        </section>
+
+        <section>
+            <h3>6.2 名刺交換の作法</h3>
+            <div class="manner-item">
+                <h4>名刺の渡し方</h4>
+                <ol>
+                    <li><strong>名刺入れから取り出す</strong>：ポケットや財布から出すのはNG</li>
+                    <li><strong>両手で持つ</strong>：名刺の下部を両手の親指と人差し指で持つ</li>
+                    <li><strong>相手が読める向きで</strong>：相手から見て正しい向き</li>
+                    <li><strong>名乗りながら渡す</strong>：「○○学校のICT支援員、△△と申します」</li>
+                    <li><strong>テーブル越しはNG</strong>：立ち上がって渡す</li>
+                </ol>
+            </div>
+
+            <div class="manner-item">
+                <h4>名刺の受け取り方</h4>
+                <ol>
+                    <li><strong>両手で受け取る</strong>：「ありがとうございます」とお礼を言う</li>
+                    <li><strong>名前を確認</strong>：「○○様ですね」</li>
+                    <li><strong>テーブルの上に置く</strong>：商談中は名刺入れの上に置く</li>
+                    <li><strong>大切に扱う</strong>：折らない、汚さない、メモを書かない</li>
+                    <li><strong>しまうタイミング</strong>：相手がしまってから、または席を立つ時</li>
+                </ol>
+            </div>
+
+            <div class="manner-item">
+                <h4>同時交換の場合</h4>
+                <p>お互いに名刺を差し出した場合は、<strong>右手で自分の名刺を渡し、左手で相手の名刺を受け取ります</strong>。</p>
+            </div>
+        </section>
+
+        <!-- まとめ -->
+        <section class="summary">
+            <h2>📚 まとめ</h2>
+            <div class="manner-item">
+                <p>ビジネスマナーは、<strong>相手への敬意と配慮</strong>を形にしたものです。最初は覚えることが多く大変ですが、繰り返し実践することで自然に身につきます。</p>
+                
+                <h4>初日から意識すべき3つのポイント</h4>
+                <ol>
+                    <li><strong>挨拶を徹底する</strong>：明るく、元気に、自分から</li>
+                    <li><strong>報告・連絡・相談を怠らない</strong>：こまめなコミュニケーション</li>
+                    <li><strong>守秘義務を守る</strong>：学校の情報は外部に漏らさない</li>
+                </ol>
+
+                <p>わからないことがあれば、<strong>遠慮せずに質問しましょう</strong>。「聞くは一時の恥、聞かぬは一生の恥」です。積極的に学び、成長していく姿勢が大切です。</p>
+            </div>
+        </section>
+
+        <!-- 関連ページへのリンク -->
+        <section class="related-links">
+            <h2>🔗 関連ページ</h2>
+            <ul>
+                <li><a href="basics.html">ICT支援員の基礎知識</a> - ICT支援員の役割と業務内容</li>
+                <li><a href="daily-work.html">日常業務ガイド</a> - 日々の業務の進め方</li>
+                <li><a href="skills.html">支援スキル</a> - 効果的な支援方法</li>
+                <li><a href="communication-skills.html">コミュニケーションスキル</a> - より深い対人スキル（Coming Soon）</li>
+                <li><a href="board-education.html">教育委員会制度</a> - 学校組織の理解</li>
+            </ul>
+        </section>
+
+        <!-- 参考資料 -->
+        <section class="references">
+            <h2>📖 参考資料</h2>
+            <ul>
+                <li><a href="https://www.mext.go.jp/" target="_blank" rel="noopener">文部科学省</a> - 教育関連の法令・通知</li>
+                <li><a href="https://elaws.e-gov.go.jp/document?lawid=322AC0000000173" target="_blank" rel="noopener">地方公務員法（e-Gov法令検索）</a> - 守秘義務関連</li>
+                <li><a href="https://www.ppc.go.jp/" target="_blank" rel="noopener">個人情報保護委員会</a> - 個人情報保護に関する情報</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

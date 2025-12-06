@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特別支援教育とICT活用 - ICT支揶員総合ポータルサイト</title>
+    <meta name="description" content="特別支揶教育におけるICT活用を解説。障害種別に応じた支揶技術、合理的配慮、アクセシビリティ機能、UDL（学習のユニバーサルデザイン）を網羅。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支揶員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支揶する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支揶・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支揶ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html" class="active"><i class="fas fa-universal-access"></i> 特別支揶ICT</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-universal-access"></i> 特別支揶教育とICT活用</h1>
+            <p>障害のある子どもたちの学びをICTで支える</p>
+        </div>
+        
+        <section class="intro">
+            <p>特別支援教育において、ICTは子どもたちの<strong>「できない」を「できる」に変える</strong>強力なツールです。ICT支援員は、障害のある子どもたちが自分の力を最大限に発揮できるよう、適切なICT環境の整備と活用支援を行います。</p>
+            
+            <div class="important-box">
+                <p><strong>インクルーシブ教育の推進</strong></p>
+                <p>全ての子どもが、障害の有無に関わらず、共に学ぶ環境を実現することが求められています。ICTは、その実現に不可欠な要素です。</p>
+            </div>
+            
+            <div class="checklist">
+                <h4>📋 このページで学べること</h4>
+                <ul>
+                    <li>障害種別ごとのICT活用方法</li>
+                    <li>合理的配慮とICT支援技術</li>
+                    <li>UDL（学びのユニバーサルデザイン）の実践</li>
+                    <li>支援技術の具体例（スクリーンリーダー、音声入力等）</li>
+                    <li>個別の指導計画とICT</li>
+                    <li>実践事例とトラブル対応</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 1. 特別支援教育の基礎 -->
+        <div class="special-category">
+            <h2>1. 特別支援教育の基礎</h2>
+        </div>
+
+        <section>
+            <h3>1.1 特別支援教育とは</h3>
+            <div class="special-item">
+                <p><strong>特別支援教育</strong>とは、障害のある子どもたちの<strong>自立と社会参加に向けた主体的な取組を支援</strong>する教育です。</p>
+                
+                <h4>対象となる子ども</h4>
+                <ul>
+                    <li>特別支援学校に在籍する子ども</li>
+                    <li>小中学校の特別支援学級に在籍する子ども</li>
+                    <li>通級指導教室に通う子ども</li>
+                    <li>通常学級に在籍する特別な支援が必要な子ども</li>
+                </ul>
+            </div>
+
+            <div class="special-item">
+                <h4>障害の種類</h4>
+                <table>
+                    <tr>
+                        <th>障害種別</th>
+                        <th>主な特性</th>
+                        <th>全国の児童生徒数（推定）</th>
+                    </tr>
+                    <tr>
+                        <td>視覚障害</td>
+                        <td>見えない・見えにくい</td>
+                        <td>約5,000人</td>
+                    </tr>
+                    <tr>
+                        <td>聴覚障害</td>
+                        <td>聞こえない・聞こえにくい</td>
+                        <td>約8,000人</td>
+                    </tr>
+                    <tr>
+                        <td>肢体不自由</td>
+                        <td>身体の動きに困難がある</td>
+                        <td>約30,000人</td>
+                    </tr>
+                    <tr>
+                        <td>知的障害</td>
+                        <td>認知・理解に困難がある</td>
+                        <td>約140,000人</td>
+                    </tr>
+                    <tr>
+                        <td>病弱・身体虚弱</td>
+                        <td>病気や体力低下がある</td>
+                        <td>約4,000人</td>
+                    </tr>
+                    <tr>
+                        <td>発達障害<br>（ASD, ADHD, LD等）</td>
+                        <td>コミュニケーション、注意、学習等に困難</td>
+                        <td>約80,000人（通級）<br>※通常学級にも多数在籍</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tip-box">
+                通常学級にも、発達障害等で特別な支援を必要とする子どもが約8.8%（文科省調査）在籍しています。「特別支援教育は特別支援学校だけのもの」ではありません。
+            </div>
+        </section>
+
+        <section>
+            <h3>1.2 合理的配慮とICT</h3>
+            <div class="disability-box">
+                <h4>合理的配慮とは</h4>
+                <p>障害のある子どもが、他の子どもと平等に教育を受けられるよう、<strong>個別の必要に応じて提供される調整や支援</strong>のことです。</p>
+                
+                <h5>法的根拠</h5>
+                <ul>
+                    <li>障害者差別解消法（2016年施行、2024年改正）</li>
+                    <li>学校教育法施行規則</li>
+                </ul>
+            </div>
+
+            <div class="special-item">
+                <h4>合理的配慮の3つの観点</h4>
+                <table>
+                    <tr>
+                        <th>観点</th>
+                        <th>内容</th>
+                        <th>ICTの役割</th>
+                    </tr>
+                    <tr>
+                        <td><strong>①教育内容・方法</strong></td>
+                        <td>学習内容や指導方法の調整</td>
+                        <td>デジタル教科書、読み上げ機能、拡大表示</td>
+                    </tr>
+                    <tr>
+                        <td><strong>②支援体制</strong></td>
+                        <td>人的・物的な支援</td>
+                        <td>支援員とのタブレット共有、遠隔支援</td>
+                    </tr>
+                    <tr>
+                        <td><strong>③施設・設備</strong></td>
+                        <td>バリアフリー、教材・教具</td>
+                        <td>視線入力装置、スイッチインターフェース、環境制御装置</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="accommodation-box">
+                <strong>ICTによる合理的配慮の例</strong>
+                <ul>
+                    <li>読み書きが困難な子ども → 音声読み上げ、音声入力</li>
+                    <li>集中が続かない子ども → タイマーアプリ、視覚支援アプリ</li>
+                    <li>コミュニケーションが困難な子ども → AAC（拡大・代替コミュニケーション）アプリ</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 2. 障害種別ごとのICT活用 -->
+        <div class="special-category">
+            <h2>2. 障害種別ごとのICT活用</h2>
+        </div>
+
+        <section>
+            <h3>2.1 視覚障害</h3>
+            <div class="disability-box">
+                <h4>視覚障害の特性</h4>
+                <ul>
+                    <li><strong>全盲</strong>：視力がない、または光覚のみ</li>
+                    <li><strong>弱視</strong>：見えにくい（拡大すれば見える）</li>
+                    <li><strong>視野狭窄</strong>：視野が狭い（一部しか見えない）</li>
+                </ul>
+            </div>
+
+            <div class="tool-box">
+                <strong>支援技術</strong>
+                <ul>
+                    <li><strong>スクリーンリーダー</strong>：画面の文字を音声で読み上げ
+                        <ul>
+                            <li>Windows：NVDA、PC-Talker、JAWS</li>
+                            <li>macOS：VoiceOver（標準搭載）</li>
+                            <li>iOS：VoiceOver（標準搭載）</li>
+                            <li>Android：TalkBack（標準搭載）</li>
+                        </ul>
+                    </li>
+                    <li><strong>画面拡大ソフト</strong>：画面を拡大表示
+                        <ul>
+                            <li>Windows：拡大鏡（標準搭載）、ZoomText</li>
+                            <li>macOS：ズーム機能（標準搭載）</li>
+                            <li>iPad：ズーム機能（標準搭載）</li>
+                        </ul>
+                    </li>
+                    <li><strong>音声教科書</strong>：教科書の内容を音声で提供（AccessReading等）</li>
+                    <li><strong>点字ディスプレイ</strong>：画面の内容を点字で表示</li>
+                    <li><strong>拡大読書器</strong>：紙の文字を拡大表示</li>
+                    <li><strong>OCRアプリ</strong>：カメラで撮影した文字を読み上げ（Seeing AI、Envision AI）</li>
+                </ul>
+            </div>
+
+            <div class="accommodation-box">
+                <strong>合理的配慮の例</strong>
+                <ul>
+                    <li>デジタル教科書の音声読み上げ機能を利用</li>
+                    <li>プリントをPDFで配布し、スクリーンリーダーで読めるようにする</li>
+                    <li>板書をタブレットで撮影し、拡大して見る</li>
+                    <li>テストの音声出題、音声回答を認める</li>
+                </ul>
+            </div>
+
+            <div class="case-box">
+                <strong>実践例：全盲の中学生</strong>
+                <ul>
+                    <li>iPadのVoiceOverを使い、教科書を音声で学習</li>
+                    <li>英語の授業では、音声入力でスペルを入力</li>
+                    <li>数学では、点字ディスプレイと音声を併用して図形を理解</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                スクリーンリーダーを使う子どものために、PDFや文書は「読み上げ可能な形式」で作成しましょう。画像化されたPDFは読めません。
+            </div>
+        </section>
+
+        <section>
+            <h3>2.2 聴覚障害</h3>
+            <div class="disability-box">
+                <h4>聴覚障害の特性</h4>
+                <ul>
+                    <li><strong>ろう</strong>：聴力がない、またはほとんどない</li>
+                    <li><strong>難聴</strong>：聞こえにくい（補聴器や人工内耳で聞こえる場合もある）</li>
+                </ul>
+            </div>
+
+            <div class="tool-box">
+                <strong>支援技術</strong>
+                <ul>
+                    <li><strong>音声認識・字幕表示</strong>：
+                        <ul>
+                            <li>Google Meet、Zoom等のリアルタイム字幕</li>
+                            <li>UDトーク（音声をリアルタイムで文字化）</li>
+                            <li>YouTube自動字幕</li>
+                        </ul>
+                    </li>
+                    <li><strong>手話通訳アプリ</strong>：遠隔手話通訳サービス</li>
+                    <li><strong>視覚支援ツール</strong>：
+                        <ul>
+                            <li>フラッシュライト（注意喚起）</li>
+                            <li>バイブレーション機能</li>
+                        </ul>
+                    </li>
+                    <li><strong>FM補聴システム</strong>：教員の声を直接補聴器に送る</li>
+                    <li><strong>録画・録音</strong>：授業を録画し、後で字幕付きで復習</li>
+                </ul>
+            </div>
+
+            <div class="accommodation-box">
+                <strong>合理的配慮の例</strong>
+                <ul>
+                    <li>オンライン授業では必ず字幕を表示</li>
+                    <li>動画教材には字幕を付ける</li>
+                    <li>教員の口元が見えるよう、マスクは透明マスクを使用</li>
+                    <li>重要な連絡は文字でも伝える（音声のみで伝えない）</li>
+                </ul>
+            </div>
+
+            <div class="case-box">
+                <strong>実践例：難聴の小学生</strong>
+                <ul>
+                    <li>授業中、UDトークでリアルタイム字幕表示</li>
+                    <li>グループワークでは、タブレットでテキストチャット</li>
+                    <li>音楽の授業では、振動で音を感じる装置を活用</li>
+                </ul>
+            </div>
+
+            <div class="important-box">
+                音声のみで指示を出さないようにしましょう。必ず視覚情報（文字、ジェスチャー、スライド等）と併用します。
+            </div>
+        </section>
+
+        <section>
+            <h3>2.3 肢体不自由</h3>
+            <div class="disability-box">
+                <h4>肢体不自由の特性</h4>
+                <ul>
+                    <li>上肢（手・腕）の動きに困難がある</li>
+                    <li>下肢（足）の動きに困難がある</li>
+                    <li>全身の運動機能に困難がある</li>
+                </ul>
+            </div>
+
+            <div class="tool-box">
+                <strong>支援技術</strong>
+                <ul>
+                    <li><strong>視線入力装置</strong>：視線でカーソルを操作（Tobii、EyeMoT等）</li>
+                    <li><strong>スイッチインターフェース</strong>：
+                        <ul>
+                            <li>手・足・頭などでスイッチを押して操作</li>
+                            <li>iOS：スイッチコントロール（標準搭載）</li>
+                            <li>Windows：Windows Ease of Access</li>
+                        </ul>
+                    </li>
+                    <li><strong>音声入力</strong>：
+                        <ul>
+                            <li>Google音声入力、Siri、Windows音声認識</li>
+                        </ul>
+                    </li>
+                    <li><strong>タッチパネルの補助具</strong>：
+                        <ul>
+                            <li>スタイラス、ヘッドポインター</li>
+                        </ul>
+                    </li>
+                    <li><strong>キーガード</strong>：キーボードの誤入力を防ぐ</li>
+                    <li><strong>トラックボール・ジョイスティック</strong>：マウスの代替</li>
+                </ul>
+            </div>
+
+            <div class="accommodation-box">
+                <strong>合理的配慮の例</strong>
+                <ul>
+                    <li>手書きの代わりに、タブレットで文字入力や音声入力</li>
+                    <li>ページめくりの代わりに、電子書籍やPDF</li>
+                    <li>視線入力でプレゼンテーション資料を作成</li>
+                    <li>机の高さ調整、タブレットスタンドの使用</li>
+                </ul>
+            </div>
+
+            <div class="case-box">
+                <strong>実践例：上肢に困難がある高校生</strong>
+                <ul>
+                    <li>視線入力装置でPCを操作し、レポート作成</li>
+                    <li>音声入力で英作文</li>
+                    <li>オンラインテストは、選択肢を視線で選択</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                視線入力装置の設定には専門知識が必要です。特別支援学校や専門業者と連携しましょう。
+            </div>
+        </section>
+
+        <section>
+            <h3>2.4 知的障害</h3>
+            <div class="disability-box">
+                <h4>知的障害の特性</h4>
+                <ul>
+                    <li>認知・理解に時間がかかる</li>
+                    <li>抽象的な概念の理解が難しい</li>
+                    <li>記憶の保持が難しい</li>
+                    <li>読み書きに困難がある場合がある</li>
+                </ul>
+            </div>
+
+            <div class="tool-box">
+                <strong>支援技術</strong>
+                <ul>
+                    <li><strong>視覚支援アプリ</strong>：
+                        <ul>
+                            <li>絵カード、スケジュール表（VOCA、ドロップトーク等）</li>
+                            <li>タイマーアプリ（視覚的に時間を表示）</li>
+                        </ul>
+                    </li>
+                    <li><strong>読み上げ機能</strong>：文字を音声で読み上げ</li>
+                    <li><strong>ひらがな・ルビ表示</strong>：難しい漢字をひらがなに変換</li>
+                    <li><strong>動画・アニメーション教材</strong>：具体的でわかりやすい</li>
+                    <li><strong>知育アプリ</strong>：ゲーム感覚で学習（トドさんすう、Think!Think!等）</li>
+                </ul>
+            </div>
+
+            <div class="accommodation-box">
+                <strong>合理的配慮の例</strong>
+                <ul>
+                    <li>文字教材を絵や図に置き換える</li>
+                    <li>手順を視覚的に示す（写真、イラスト）</li>
+                    <li>繰り返し学習できるデジタルドリル</li>
+                    <li>達成感を得られるアプリ（ポイント、スタンプ機能）</li>
+                </ul>
+            </div>
+
+            <div class="case-box">
+                <strong>実践例：知的障害のある小学生</strong>
+                <ul>
+                    <li>算数の学習に、具体物を動かせるアプリを使用</li>
+                    <li>1日のスケジュールを絵カードアプリで確認</li>
+                    <li>文章問題を読み上げ機能で聞き、理解を促進</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>2.5 発達障害（ASD、ADHD、LD）</h3>
+            <div class="disability-box">
+                <h4>発達障害の種類と特性</h4>
+                <table>
+                    <tr>
+                        <th>種類</th>
+                        <th>特性</th>
+                        <th>困難さ</th>
+                    </tr>
+                    <tr>
+                        <td><strong>ASD<br>（自閉スペクトラム症）</strong></td>
+                        <td>社会的コミュニケーションの困難、こだわり</td>
+                        <td>対人関係、暗黙のルール理解、感覚過敏</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ADHD<br>（注意欠如・多動症）</strong></td>
+                        <td>不注意、多動性、衝動性</td>
+                        <td>集中の持続、忘れ物、順番待ち</td>
+                    </tr>
+                    <tr>
+                        <td><strong>LD<br>（学習障害）</strong></td>
+                        <td>読み・書き・計算等の特定の学習困難</td>
+                        <td>読字（ディスレクシア）、書字、算数</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="special-item">
+                <h4>ASD（自閉スペクトラム症）へのICT支援</h4>
+                <div class="tool-box">
+                    <strong>支援技術</strong>
+                    <ul>
+                        <li><strong>AAC（拡大・代替コミュニケーション）アプリ</strong>：
+                            <ul>
+                                <li>VOCA、ドロップトーク、えこみゅ</li>
+                                <li>絵カードや音声でコミュニケーション</li>
+                            </ul>
+                        </li>
+                        <li><strong>スケジュール・タイマーアプリ</strong>：
+                            <ul>
+                                <li>1日の予定を視覚的に表示</li>
+                                <li>タイムタイマー、ルーチンタイマー</li>
+                            </ul>
+                        </li>
+                        <li><strong>感情表現支援アプリ</strong>：自分の気持ちを絵カードで表現</li>
+                        <li><strong>ソーシャルスキル学習アプリ</strong>：適切な行動を動画で学ぶ</li>
+                    </ul>
+                </div>
+
+                <div class="case-box">
+                    <strong>実践例：ASDのある小学生</strong>
+                    <ul>
+                        <li>朝の支度をスケジュールアプリで確認</li>
+                        <li>気持ちを伝えるときに、感情絵カードアプリを使用</li>
+                        <li>授業の切り替えにタイマーを使い、見通しを持つ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="special-item">
+                <h4>ADHD（注意欠如・多動症）へのICT支援</h4>
+                <div class="tool-box">
+                    <strong>支援技術</strong>
+                    <ul>
+                        <li><strong>タイマー・リマインダー</strong>：集中時間の可視化、やるべきことの通知</li>
+                        <li><strong>タスク管理アプリ</strong>：やることリスト、チェック機能</li>
+                        <li><strong>ノイズキャンセリングヘッドホン</strong>：集中力向上</li>
+                        <li><strong>録音・録画</strong>：聞き逃しや見逃しを後で確認</li>
+                        <li><strong>デジタルメモ</strong>：紙のメモを失くさない</li>
+                    </ul>
+                </div>
+
+                <div class="case-box">
+                    <strong>実践例：ADHDのある中学生</strong>
+                    <ul>
+                        <li>宿題をタスク管理アプリで管理（チェックすると達成感）</li>
+                        <li>授業を録音し、家で復習</li>
+                        <li>集中したい時はノイズキャンセリングヘッドホン</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="special-item">
+                <h4>LD（学習障害）へのICT支援</h4>
+                <div class="tool-box">
+                    <strong>支援技術</strong>
+                    <ul>
+                        <li><strong>読字障害（ディスレクシア）</strong>：
+                            <ul>
+                                <li>音声読み上げ機能（デイジー教科書、AccessReading）</li>
+                                <li>リーディングトラッカー（読む行を強調）</li>
+                                <li>フォント変更（UDフォント、OpenDyslexic）</li>
+                            </ul>
+                        </li>
+                        <li><strong>書字障害</strong>：
+                            <ul>
+                                <li>音声入力（Google音声入力、Siri）</li>
+                                <li>キーボード入力（手書きの代替）</li>
+                                <li>予測変換機能</li>
+                            </ul>
+                        </li>
+                        <li><strong>算数障害</strong>：
+                            <ul>
+                                <li>電卓、表計算ソフト</li>
+                                <li>視覚的な算数アプリ（GeoGebra等）</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="case-box">
+                    <strong>実践例：読字障害のある高校生</strong>
+                    <ul>
+                        <li>教科書をデジタル化し、音声読み上げで学習</li>
+                        <li>試験は問題文を音声で聞き、PCで回答</li>
+                        <li>レポートは音声入力で作成</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="important-box">
+                発達障害は「見えにくい障害」です。周囲の理解が得られにくいため、ICTによる合理的配慮を「ずるい」と誤解されないよう、事前に説明が必要です。
+            </div>
+        </section>
+
+        <!-- 3. UDL（学びのユニバーサルデザイン） -->
+        <div class="special-category">
+            <h2>3. UDL（学びのユニバーサルデザイン）</h2>
+        </div>
+
+        <section>
+            <h3>3.1 UDLとは</h3>
+            <div class="udl-box">
+                <h4>UDL（Universal Design for Learning）</h4>
+                <p><strong>全ての子どもが学びやすい環境をデザインする</strong>考え方です。「障害のある子どもだけ」でなく、「全ての子ども」にとってわかりやすい授業を目指します。</p>
+            </div>
+
+            <div class="special-item">
+                <h4>UDLの3つの原則</h4>
+                <table>
+                    <tr>
+                        <th>原則</th>
+                        <th>意味</th>
+                        <th>ICTの例</th>
+                    </tr>
+                    <tr>
+                        <td><strong>①提示の多様性</strong><br>（What）</td>
+                        <td>情報を複数の方法で提示する</td>
+                        <td>・文字だけでなく、音声、動画、図でも説明<br>・デジタル教科書の音声読み上げ<br>・字幕付き動画</td>
+                    </tr>
+                    <tr>
+                        <td><strong>②行動と表現の多様性</strong><br>（How）</td>
+                        <td>子どもが表現する方法を選べる</td>
+                        <td>・手書き、タイピング、音声入力から選択<br>・発表方法（口頭、スライド、動画等）の選択</td>
+                    </tr>
+                    <tr>
+                        <td><strong>③取り組みの多様性</strong><br>（Why）</td>
+                        <td>学ぶ意欲を引き出す工夫</td>
+                        <td>・ゲーム要素のある学習アプリ<br>・興味に応じた教材選択<br>・達成感を得られるフィードバック</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="case-box">
+                <strong>UDLを取り入れた授業例：小学3年生 国語</strong>
+                <ol>
+                    <li><strong>提示の多様性</strong>：物語を「教科書の文字」「音声読み上げ」「挿絵」「動画」で提示</li>
+                    <li><strong>行動と表現の多様性</strong>：感想を「作文」「絵」「動画」「プレゼン」のいずれかで表現</li>
+                    <li><strong>取り組みの多様性</strong>：好きな登場人物を選んで深掘りする（興味重視）</li>
+                </ol>
+                <p>→ 障害の有無に関わらず、全ての子どもが自分に合った方法で学べる</p>
+            </div>
+
+            <div class="tip-box">
+                UDLは「特別支援教育のため」ではなく、「全ての子どものため」の考え方です。結果的に、障害のある子どもも学びやすくなります。
+            </div>
+        </section>
+
+        <!-- 4. 個別の指導計画とICT -->
+        <div class="special-category">
+            <h2>4. 個別の指導計画とICT</h2>
+        </div>
+
+        <section>
+            <h3>4.1 個別の指導計画とは</h3>
+            <div class="special-item">
+                <p><strong>個別の指導計画</strong>とは、障害のある子ども一人ひとりの教育的ニーズに応じて作成する、<strong>具体的な指導目標と支援内容を記した計画書</strong>です。</p>
+                
+                <h4>記載内容</h4>
+                <ul>
+                    <li>子どもの実態（得意なこと、苦手なこと）</li>
+                    <li>長期目標・短期目標</li>
+                    <li>指導内容・方法</li>
+                    <li>評価方法</li>
+                    <li><strong>必要な支援（合理的配慮を含む）</strong></li>
+                </ul>
+            </div>
+
+            <div class="special-item">
+                <h4>ICT支援員の役割</h4>
+                <ul>
+                    <li><strong>ICT機器・アプリの提案</strong>：子どもに合った支援技術を提案</li>
+                    <li><strong>環境整備</strong>：必要な機器の準備、設定</li>
+                    <li><strong>教員への技術支援</strong>：使い方の説明、トラブル対応</li>
+                    <li><strong>効果の記録</strong>：ICT活用でどう変わったかを記録し、計画の見直しに貢献</li>
+                </ul>
+            </div>
+
+            <div class="case-box">
+                <strong>個別の指導計画へのICT支援の記載例</strong>
+                <p><strong>児童：A君（小3、LD：読字障害）</strong></p>
+                <ul>
+                    <li><strong>実態</strong>：文字を読むことに困難があるが、聞いて理解する力は高い</li>
+                    <li><strong>目標</strong>：教科書の内容を理解し、授業に参加できる</li>
+                    <li><strong>ICT支援</strong>：
+                        <ul>
+                            <li>デジタル教科書の音声読み上げ機能を使用</li>
+                            <li>音声入力で感想を記録</li>
+                        </ul>
+                    </li>
+                    <li><strong>効果</strong>：音声読み上げにより、授業内容の理解度が向上。発言も増えた</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 5. 実践のポイント -->
+        <div class="special-category">
+            <h2>5. 実践のポイント</h2>
+        </div>
+
+        <section>
+            <h3>5.1 アセスメント（実態把握）</h3>
+            <div class="special-item">
+                <p>適切なICT支援を行うには、<strong>子どもの実態を正確に把握する</strong>ことが第一歩です。</p>
+                
+                <h4>アセスメントの観点</h4>
+                <ul>
+                    <li><strong>何ができるか</strong>（得意なこと）</li>
+                    <li><strong>何が難しいか</strong>（苦手なこと）</li>
+                    <li><strong>どんな支援があれば「できる」か</strong></li>
+                    <li><strong>本人・保護者の希望</strong></li>
+                </ul>
+
+                <h4>ICT支援員ができること</h4>
+                <ul>
+                    <li>実際に機器を試してもらう（トライアル）</li>
+                    <li>複数の選択肢を提示する（A案、B案、C案）</li>
+                    <li>他校の事例を紹介する</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                「この子にはこれが良いはず」と決めつけず、<strong>本人に選ばせる</strong>ことが大切です。使いやすさは本人が一番わかっています。
+            </div>
+        </section>
+
+        <section>
+            <h3>5.2 段階的導入</h3>
+            <div class="special-item">
+                <p>ICT支援は、<strong>いきなり全面的に導入せず、段階的に進める</strong>ことが成功の鍵です。</p>
+                
+                <h4>導入の3ステップ</h4>
+                <ol>
+                    <li><strong>ステップ1：練習</strong>
+                        <ul>
+                            <li>個別指導の時間に、機器の使い方を練習</li>
+                            <li>簡単な課題で成功体験を積む</li>
+                        </ul>
+                    </li>
+                    <li><strong>ステップ2：一部の授業で使用</strong>
+                        <ul>
+                            <li>得意な教科、理解のある教員の授業で試す</li>
+                            <li>トラブルがあってもフォローしやすい環境</li>
+                        </ul>
+                    </li>
+                    <li><strong>ステップ3：全面的活用</strong>
+                        <ul>
+                            <li>全教科で活用</li>
+                            <li>テストでも使用を認める</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h3>5.3 周囲の理解促進</h3>
+            <div class="special-item">
+                <p>ICT支援が「特別扱い」「ずるい」と誤解されないよう、<strong>周囲の理解を得る</strong>ことが重要です。</p>
+                
+                <h4>理解促進の方法</h4>
+                <ul>
+                    <li><strong>クラス全体への説明</strong>：
+                        <ul>
+                            <li>「○○さんは、タブレットを使うと文字が読みやすくなります」</li>
+                            <li>「メガネをかけるのと同じように、必要な道具です」</li>
+                        </ul>
+                    </li>
+                    <li><strong>保護者への説明</strong>：
+                        <ul>
+                            <li>保護者会で合理的配慮について説明</li>
+                            <li>「全ての子どもが学びやすい環境づくり」を強調</li>
+                        </ul>
+                    </li>
+                    <li><strong>UDLの実践</strong>：
+                        <ul>
+                            <li>全員がタブレットを使う場面を増やす</li>
+                            <li>「特別」ではなく「当たり前」に</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="important-box">
+                「この子だけ特別」ではなく、「全ての子どもにとって学びやすい授業」を目指すことで、自然に受け入れられます。
+            </div>
+        </section>
+
+        <section>
+            <h3>5.4 トラブルシューティング</h3>
+            <div class="special-item">
+                <h4>よくあるトラブルと対処法</h4>
+                
+                <h5>1. 「機器が使いこなせない」</h5>
+                <ul>
+                    <li>→ より簡単な機器・アプリに変更</li>
+                    <li>→ 使い方の手順書（絵付き）を作成</li>
+                    <li>→ 支援員が一緒に練習</li>
+                </ul>
+
+                <h5>2. 「クラスメイトに『ずるい』と言われた」</h5>
+                <ul>
+                    <li>→ 教員から全体に再度説明</li>
+                    <li>→ 「メガネと同じ」というたとえを使う</li>
+                    <li>→ 必要な人は誰でも使えることを伝える</li>
+                </ul>
+
+                <h5>3. 「授業中に機器が故障した」</h5>
+                <ul>
+                    <li>→ 予備機を常に用意</li>
+                    <li>→ 代替手段（紙とペン等）も準備</li>
+                    <li>→ すぐに対応できる体制（ICT支援員への連絡方法）</li>
+                </ul>
+
+                <h5>4. 「本人が使いたがらない」</h5>
+                <ul>
+                    <li>→ 無理強いしない（本人の意思尊重）</li>
+                    <li>→ 成功体験を積み、自信を持たせる</li>
+                    <li>→ 「いつでも使える」安心感を与える</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 6. 参考アプリ・ツール一覧 -->
+        <div class="special-category">
+            <h2>6. 参考アプリ・ツール一覧</h2>
+        </div>
+
+        <section>
+            <div class="special-item">
+                <h4>視覚支援</h4>
+                <ul>
+                    <li><strong>VOCA</strong>：AAC、絵カード（iOS/Android、無料～有料）</li>
+                    <li><strong>ドロップトーク</strong>：AAC、スケジュール（iOS、有料）</li>
+                    <li><strong>えこみゅ</strong>：絵カードコミュニケーション（iOS/Android、無料）</li>
+                    <li><strong>タイムタイマー</strong>：視覚的タイマー（iOS/Android、有料）</li>
+                </ul>
+
+                <h4>読み書き支援</h4>
+                <ul>
+                    <li><strong>AccessReading</strong>：デジタル教科書（Web、無料）</li>
+                    <li><strong>DAISY教科書</strong>：音声付き教科書（専用アプリ、無料）</li>
+                    <li><strong>UDブラウザ</strong>：ルビ表示、読み上げ（iOS/Android、無料）</li>
+                    <li><strong>Google音声入力</strong>：音声で文字入力（標準搭載、無料）</li>
+                </ul>
+
+                <h4>視覚障害支援</h4>
+                <ul>
+                    <li><strong>VoiceOver</strong>：スクリーンリーダー（iOS標準、無料）</li>
+                    <li><strong>TalkBack</strong>：スクリーンリーダー（Android標準、無料）</li>
+                    <li><strong>Seeing AI</strong>：OCR、物体認識（iOS、無料）</li>
+                    <li><strong>Envision AI</strong>：文字認識、色識別（iOS/Android、有料）</li>
+                </ul>
+
+                <h4>聴覚障害支援</h4>
+                <ul>
+                    <li><strong>UDトーク</strong>：音声認識、字幕表示（iOS/Android、無料～有料）</li>
+                    <li><strong>Google Meet</strong>：リアルタイム字幕（Web、無料）</li>
+                    <li><strong>Zoom</strong>：自動字幕（Web、無料～有料）</li>
+                </ul>
+
+                <h4>肢体不自由支援</h4>
+                <ul>
+                    <li><strong>スイッチコントロール</strong>：スイッチ操作（iOS標準、無料）</li>
+                    <li><strong>EyeMoT</strong>：視線入力（Windows、無料）</li>
+                    <li><strong>Tobii Eye Tracker</strong>：視線入力装置（専用ハード、有料）</li>
+                </ul>
+
+                <h4>学習支援</h4>
+                <ul>
+                    <li><strong>トドさんすう</strong>：算数学習（iOS/Android、有料）</li>
+                    <li><strong>Think!Think!</strong>：思考力育成（iOS/Android、無料～有料）</li>
+                    <li><strong>Quizlet</strong>：暗記カード（Web/iOS/Android、無料～有料）</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                無料アプリでも十分に効果があるものが多いです。まずは無料版で試し、必要に応じて有料版を検討しましょう。
+            </div>
+        </section>
+
+        <!-- まとめ -->
+        <section class="summary">
+            <h2>📚 まとめ</h2>
+            <div class="special-item">
+                <p>特別支援教育におけるICT活用は、<strong>子どもたちの可能性を最大限に引き出す</strong>ツールです。ICT支援員は、障害のある子どもたちが「できない」ことを「できる」に変えるサポートをする、重要な役割を担っています。</p>
+                
+                <h4>ICT支援員として大切にしたいこと</h4>
+                <ol>
+                    <li><strong>子ども中心</strong>：子どもの「困り感」に寄り添い、本人に合った支援を</li>
+                    <li><strong>柔軟な発想</strong>：「こうあるべき」にとらわれず、様々な方法を試す</li>
+                    <li><strong>チーム連携</strong>：教員、保護者、専門家と協力して支援</li>
+                    <li><strong>継続的改善</strong>：効果を確認し、より良い方法を模索し続ける</li>
+                    <li><strong>理解促進</strong>：周囲の理解を得る努力を惜しまない</li>
+                </ol>
+
+                <p><strong>「ICTは魔法の杖ではありません」</strong>。しかし、適切に使えば、子どもたちの学びを大きく変える力を持っています。一人ひとりの子どもに向き合い、最適な支援を提供していきましょう。</p>
+            </div>
+        </section>
+
+        <!-- 関連ページへのリンク -->
+        <section class="related-links">
+            <h2>🔗 関連ページ</h2>
+            <ul>
+                <li><a href="education-basics.html">教育入門講座</a> - 特別支援教育の基礎（第4回）</li>
+                <li><a href="tools.html">ICT機器・ツール</a> - 支援技術の詳細</li>
+                <li><a href="case-studies.html">ICT活用事例集</a> - 実践事例</li>
+                <li><a href="lesson-design.html">授業デザイン</a> - UDLを取り入れた授業設計</li>
+                <li><a href="psychology.html">心理的アプローチ</a> - 子どもの心理理解</li>
+            </ul>
+        </section>
+
+        <!-- 参考資料 -->
+        <section class="references">
+            <h2>📖 参考資料</h2>
+            <ul>
+                <li><a href="https://www.mext.go.jp/a_menu/shotou/tokubetu/main.htm" target="_blank" rel="noopener">文部科学省 - 特別支援教育</a></li>
+                <li><a href="https://www.nise.go.jp/" target="_blank" rel="noopener">国立特別支援教育総合研究所（NISE）</a></li>
+                <li><a href="https://www.jsrpd.jp/" target="_blank" rel="noopener">日本障害者リハビリテーション協会</a></li>
+                <li><a href="https://www.dinf.ne.jp/" target="_blank" rel="noopener">障害保健福祉研究情報システム（DINF）</a></li>
+                <li><a href="https://www.mext.go.jp/a_menu/shotou/tokubetu/material/1340250.htm" target="_blank" rel="noopener">教育支援資料（文部科学省）</a></li>
+                <li><a href="https://www.cast.org/impact/universal-design-for-learning-udl" target="_blank" rel="noopener">CAST - Universal Design for Learning</a></li>
+                <li><a href="https://www.accessreading.org/" target="_blank" rel="noopener">AccessReading - デジタル教科書</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

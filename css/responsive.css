@@ -1,0 +1,363 @@
+/* ==============================
+   レスポンシブデザイン CSS
+   モバイル・タブレット対応
+   ============================== */
+
+/* タブレット (768px以下) */
+@media (max-width: 768px) {
+    /* カテゴリヘッダー */
+    .category-header {
+        padding: 15px;
+        margin: 20px 0 15px 0;
+    }
+    
+    .category-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* コンテンツボックス */
+    .content-box {
+        padding: 15px;
+        margin: 12px 0;
+    }
+    
+    /* 例ボックス */
+    .example-good,
+    .example-bad {
+        padding: 12px;
+        margin: 8px 0;
+    }
+    
+    /* チェックリスト */
+    .checklist {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    /* ヒント・警告ボックス */
+    .tip-box,
+    .warning-box,
+    .critical-box,
+    .law-box {
+        padding: 12px;
+        margin: 12px 0;
+    }
+    
+    /* テーブル対応 */
+    .table-wrapper {
+        margin: 15px -20px; /* 画面端まで使用 */
+        padding: 0 20px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .data-table,
+    table {
+        min-width: 100%;
+        display: table;
+        border-collapse: collapse;
+    }
+    
+    /* テーブルのスクロールヒント */
+    .table-wrapper::after {
+        content: "← スクロールできます →";
+        display: block;
+        text-align: center;
+        font-size: 0.75rem;
+        color: #999;
+        padding: 5px 0;
+        margin-top: 5px;
+    }
+    
+    .data-table th,
+    .data-table td,
+    table th,
+    table td {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+    
+    /* コマンドボックス */
+    .command-box {
+        padding: 12px;
+        font-size: 0.8rem;
+        margin: 12px -10px; /* 少し横に広げる */
+    }
+    
+    /* ダイアグラム */
+    .diagram {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    .diagram pre {
+        font-size: 0.75rem;
+        padding: 10px;
+        overflow-x: auto;
+    }
+    
+    /* フォントサイズ調整 */
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    h4 {
+        font-size: 1.1rem;
+    }
+    
+    h5 {
+        font-size: 1rem;
+    }
+    
+    p, li {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    /* ホバーエフェクトを無効化（タッチデバイス） */
+    .content-box:hover,
+    .example-good:hover,
+    .example-bad:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+/* スマートフォン (480px以下) */
+@media (max-width: 480px) {
+    /* カテゴリヘッダー */
+    .category-header {
+        padding: 12px;
+        margin: 15px 0 12px 0;
+        border-radius: 8px;
+    }
+    
+    .category-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    /* コンテンツボックス */
+    .content-box {
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 4px;
+    }
+    
+    /* 例ボックス */
+    .example-good,
+    .example-bad {
+        padding: 10px;
+        margin: 8px 0;
+    }
+    
+    .example-good::before,
+    .example-bad::before {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+    
+    /* チェックリスト */
+    .checklist {
+        padding: 12px;
+        margin: 12px 0;
+    }
+    
+    .checklist h4 {
+        font-size: 1rem;
+    }
+    
+    .checklist ul {
+        padding-left: 15px;
+    }
+    
+    .checklist li {
+        font-size: 0.9rem;
+        margin: 6px 0;
+    }
+    
+    /* ヒント・警告ボックス */
+    .tip-box,
+    .warning-box {
+        padding: 10px;
+        margin: 10px 0;
+    }
+    
+    .tip-box::before,
+    .warning-box::before {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+    
+    /* 重要ボックス */
+    .critical-box {
+        padding: 12px;
+        margin: 15px 0;
+    }
+    
+    .critical-box::before {
+        font-size: 1rem;
+    }
+    
+    /* テーブル */
+    .data-table th,
+    .data-table td,
+    table th,
+    table td {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+    
+    /* コマンドボックス */
+    .command-box {
+        padding: 10px;
+        font-size: 0.75rem;
+        margin: 10px -5px;
+    }
+    
+    /* ダイアグラム */
+    .diagram {
+        padding: 12px;
+        margin: 12px 0;
+    }
+    
+    .diagram h4 {
+        font-size: 1rem;
+    }
+    
+    .diagram pre {
+        font-size: 0.7rem;
+        padding: 8px;
+    }
+    
+    /* フォントサイズ調整 */
+    h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+        line-height: 1.3;
+    }
+    
+    h3 {
+        font-size: 1.15rem;
+        line-height: 1.3;
+    }
+    
+    h4 {
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+    
+    h5, h6 {
+        font-size: 0.95rem;
+        line-height: 1.3;
+    }
+    
+    p, li {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    /* 対話ボックス */
+    .dialogue-box {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    
+    /* マージン調整 */
+    main {
+        padding: 0 15px;
+    }
+}
+
+/* 横向きタブレット (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .category-header {
+        padding: 18px;
+    }
+    
+    .content-box {
+        padding: 18px;
+    }
+    
+    .data-table th,
+    .data-table td,
+    table th,
+    table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* 高解像度ディスプレイ対応 */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .category-header {
+        padding: 25px;
+    }
+    
+    .content-box {
+        padding: 25px;
+    }
+}
+
+/* タッチデバイス向けの調整 */
+@media (hover: none) and (pointer: coarse) {
+    /* タップしやすいサイズに */
+    a, button {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* ホバーエフェクトを無効化 */
+    *:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
+}
+
+/* ダークモード対応（将来の拡張用） */
+@media (prefers-color-scheme: dark) {
+    /* 
+    ダークモード用のスタイルを追加する場合はここに記述
+    現在は未実装
+    */
+}
+
+/* 印刷時のページ区切り制御 */
+@media print {
+    .category-header,
+    .content-box,
+    .example-good,
+    .example-bad,
+    .tip-box,
+    .warning-box,
+    .critical-box {
+        page-break-inside: avoid;
+    }
+    
+    table {
+        page-break-inside: auto;
+    }
+    
+    tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研修設計テンプレート - ICT支援員総合ポータルサイト</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans JP', sans-serif; line-height: 1.8; color: #333; background: #fff; }
+        .print-header { text-align: center; padding: 20px; border-bottom: 3px solid #f59e0b; margin-bottom: 30px; }
+        .print-header h1 { font-size: 28px; color: #f59e0b; margin-bottom: 10px; }
+        .print-header .subtitle { font-size: 14px; color: #666; }
+        .container { max-width: 210mm; margin: 0 auto; padding: 20px; }
+        .info-section { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 30px; padding: 15px; background: #fffbeb; border-radius: 8px; }
+        .info-item { display: flex; align-items: center; }
+        .info-item label { font-weight: 600; margin-right: 10px; min-width: 100px; }
+        .info-item input, .info-item select { flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; }
+        .section { margin-bottom: 30px; page-break-inside: avoid; }
+        .section-title { font-size: 18px; font-weight: 700; padding: 10px 15px; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; border-radius: 8px; margin-bottom: 15px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #374151; }
+        .form-group input[type="text"], .form-group textarea, .form-group select { width: 100%; padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: inherit; font-size: 14px; }
+        .form-group textarea { min-height: 80px; resize: vertical; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        table th { background: #f3f4f6; padding: 10px; text-align: left; font-weight: 600; border: 1px solid #d1d5db; }
+        table td { padding: 10px; border: 1px solid #d1d5db; }
+        .print-button { position: fixed; top: 20px; right: 20px; padding: 12px 24px; background: #f59e0b; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 1000; }
+        .print-button:hover { background: #d97706; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e5e7eb; text-align: center; font-size: 12px; color: #666; }
+        @media print { .no-print { display: none !important; } body { background: white; } .section { page-break-inside: avoid; } @page { margin: 20mm; } }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" onclick="window.print()">📄 印刷・PDF保存</button>
+    <div class="container">
+        <div class="print-header">
+            <h1>🎓 教職員向けICT研修設計テンプレート</h1>
+            <p class="subtitle">効果的な研修実施のための計画シート</p>
+        </div>
+
+        <div class="info-section">
+            <div class="info-item"><label>研修日:</label><input type="date" /></div>
+            <div class="info-item"><label>講師:</label><input type="text" placeholder="氏名" /></div>
+            <div class="info-item"><label>対象:</label><input type="text" placeholder="例: 全教職員" /></div>
+            <div class="info-item"><label>時間:</label><input type="text" placeholder="例: 14:00-15:30 (90分)" /></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">1. 研修概要</h2>
+            <div class="form-group"><label>研修タイトル:</label><input type="text" placeholder="例: Google Classroomの基本操作研修" /></div>
+            <div class="form-group"><label>研修の目的:</label><textarea placeholder="例: Google Classroomの基本機能を理解し、授業での活用方法を習得する"></textarea></div>
+            <div class="form-group"><label>到達目標（参加者ができるようになること）:</label><textarea placeholder="例:&#10;・クラスを作成し、児童生徒を招待できる&#10;・課題を作成・配信できる&#10;・提出された課題を評価できる"></textarea></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">2. 対象者分析</h2>
+            <div class="form-group"><label>参加予定人数:</label><input type="text" placeholder="例: 20名" /></div>
+            <div class="form-group"><label>ICTスキルレベル:</label>
+                <select><option>初級（ほとんど使ったことがない）</option><option>中級（基本操作はできる）</option><option>上級（積極的に活用している）</option><option>混在</option></select>
+            </div>
+            <div class="form-group"><label>事前に把握している課題・ニーズ:</label><textarea></textarea></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">3. 研修プログラム</h2>
+            <table>
+                <thead><tr><th style="width: 80px;">時間</th><th>内容</th><th>形式</th><th style="width: 150px;">準備物</th></tr></thead>
+                <tbody>
+                    <tr><td>0-10分</td><td><textarea style="width:100%; min-height:60px;" placeholder="例: 導入・アイスブレイク、研修の目的説明"></textarea></td><td><input type="text" placeholder="講義" /></td><td><textarea style="width:100%; min-height:60px;"></textarea></td></tr>
+                    <tr><td>10-30分</td><td><textarea style="width:100%; min-height:60px;" placeholder="例: Google Classroomの基本機能紹介"></textarea></td><td><input type="text" placeholder="デモ" /></td><td><textarea style="width:100%; min-height:60px;"></textarea></td></tr>
+                    <tr><td>30-60分</td><td><textarea style="width:100%; min-height:60px;" placeholder="例: 実際にクラスを作成してみる（ハンズオン）"></textarea></td><td><input type="text" placeholder="演習" /></td><td><textarea style="width:100%; min-height:60px;"></textarea></td></tr>
+                    <tr><td>60-80分</td><td><textarea style="width:100%; min-height:60px;" placeholder="例: 課題作成・配信の実習"></textarea></td><td><input type="text" placeholder="演習" /></td><td><textarea style="width:100%; min-height:60px;"></textarea></td></tr>
+                    <tr><td>80-90分</td><td><textarea style="width:100%; min-height:60px;" placeholder="例: 質疑応答、まとめ、アンケート"></textarea></td><td><input type="text" placeholder="質疑" /></td><td><textarea style="width:100%; min-height:60px;"></textarea></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">4. 必要な準備</h2>
+            <div class="form-group"><label>会場・設備:</label><textarea placeholder="例: PC教室、プロジェクター、スクリーン、Wi-Fi環境"></textarea></div>
+            <div class="form-group"><label>配布資料:</label><textarea placeholder="例: 操作手順書、QRコード付き参考資料"></textarea></div>
+            <div class="form-group"><label>事前準備:</label><textarea placeholder="例: 参加者用Googleアカウント確認、サンプルクラスの作成"></textarea></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">5. 評価・フォローアップ</h2>
+            <div class="form-group"><label>研修の評価方法:</label><textarea placeholder="例: アンケート実施、実技テスト"></textarea></div>
+            <div class="form-group"><label>フォローアップ計画:</label><textarea placeholder="例: 1週間後に個別相談会、活用事例の共有"></textarea></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">6. 振り返り（研修後記入）</h2>
+            <div class="form-group"><label>参加者の反応:</label><textarea></textarea></div>
+            <div class="form-group"><label>改善点:</label><textarea></textarea></div>
+        </div>
+
+        <div class="footer"><p>© 2025 ICT支援員総合ポータルサイト</p></div>
+    </div>
+</body>
+</html>

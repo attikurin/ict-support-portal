@@ -17,6 +17,17 @@
         </div>
     </div>
 
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
     <nav class="main-nav">
         <div class="container">
             <ul class="nav-menu">
@@ -30,6 +41,7 @@
                         <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
                         <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
                         <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
                     </ul>
                 </li>
                 
@@ -41,6 +53,8 @@
                         <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
                         <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
                         <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
                     </ul>
                 </li>
                 
@@ -48,8 +62,11 @@
                     <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
                     <ul class="dropdown-menu">
                         <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
-                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
-                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI利用ガイド</a></li>
+                        <li><a href="ai-apps-education.html"><i class="fas fa-brain"></i> AI教育アプリ</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-star"></i> 成功事例</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-heart"></i> 特別支援ICT</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
                     </ul>
                 </li>
                 
@@ -58,6 +75,29 @@
                     <ul class="dropdown-menu">
                         <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
                         <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                        <li><a href="online-learning.html"><i class="fas fa-video"></i> オンライン授業</a></li>
+                        <li><a href="edtech-tools.html"><i class="fas fa-laptop-code"></i> EdTechツール</a></li>
+                        <li><a href="time-task-management.html"><i class="fas fa-clock"></i> 時間・タスク管理</a></li>
+                        <li><a href="crisis-management.html"><i class="fas fa-shield-alt"></i> 危機管理</a></li>
+                        <li><a href="parent-communication.html"><i class="fas fa-users"></i> 保護者連携</a></li>
+                        <li><a href="school-events-ict.html"><i class="fas fa-calendar-check"></i> 学校行事ICT</a></li>
+                        <li><a href="career-path.html"><i class="fas fa-graduation-cap"></i> キャリアパス</a></li>
+                        <li><a href="self-learning.html"><i class="fas fa-book-reader"></i> 自己学習</a></li>
+                        <li><a href="business-improvement.html"><i class="fas fa-lightbulb"></i> 業務改善</a></li>
+                        <li><a href="mental-health.html"><i class="fas fa-heart"></i> メンタルヘルス</a></li>
                     </ul>
                 </li>
                 
@@ -68,6 +108,7 @@
                         <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
                         <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
                         <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                        <li><a href="downloads.html"><i class="fas fa-download"></i> ダウンロード</a></li>
                     </ul>
                 </li>
             </ul>
@@ -227,6 +268,15 @@
                 </div>
 
                 <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI搭載教育アプリ・ツール総合ガイド</h3>
+                    <p>Qubena、すらら、ChatGPT、Gemini等、AIドリル・生成AI・学習支援AIを網羅。最新のAI教育ツールを詳しく紹介</p>
+                    <a href="ai-apps-education.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
                     <div class="feature-icon" style="background: linear-gradient(135deg, #feca57 0%, #ff6b6b 100%);">
                         <i class="fas fa-certificate"></i>
                     </div>
@@ -251,6 +301,186 @@
                     <h3>ICT機器・ツール一覧</h3>
                     <p>Chromebook、iPad、Windows端末から、MDM、授業支援ソフトまで。GIGAスクール環境の全機器を網羅</p>
                     <a href="tools.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>ビジネスマナー</h3>
+                    <p>学校現場で必要な基本マナー、報告・連絡・相談、守秘義務、時間管理の実践ガイド</p>
+                    <a href="business-manners.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>情報セキュリティ</h3>
+                    <p>個人情報保護、著作権、パスワード管理、MDM、インシデント対応の完全ガイド</p>
+                    <a href="security.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>ネットワーク技術基礎</h3>
+                    <p>TCP/IP、DNS、DHCP、Wi-Fi、トラブルシューティングコマンドの実践的解説</p>
+                    <a href="network-basics.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <h3>特別支援ICT活用</h3>
+                    <p>障害種別ごとの支援技術、合理的配慮、UDL、30以上のアプリ・ツール紹介</p>
+                    <a href="special-needs-ict.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>コミュニケーションスキル</h3>
+                    <p>傾聴、質問、フィードバック、ラポール形成、困難事例対応の実践テクニック</p>
+                    <a href="communication-skills.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-digital-tachograph"></i>
+                    </div>
+                    <h3>校務DX</h3>
+                    <p>校務支援システム、ペーパーレス化、クラウド活用、働き方改革の推進ガイド</p>
+                    <a href="school-dx.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>研修・育成</h3>
+                    <p>教職員のICT活用能力向上のための研修計画、実施方法、効果測定の完全ガイド</p>
+                    <a href="training.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>データ分析・活用</h3>
+                    <p>学習ログ分析、EBPM、可視化ツール、個人情報保護、データドリブン意思決定</p>
+                    <a href="data-analytics.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>プロジェクトマネジメント</h3>
+                    <p>ICT環境整備の企画・計画・実行・評価、ステークホルダー管理、リスク管理</p>
+                    <a href="project-management.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #feca57 0%, #ff6b6b 100%);">
+                        <i class="fas fa-yen-sign"></i>
+                    </div>
+                    <h3>予算・調達</h3>
+                    <p>ICT機器の予算編成、補助金活用、見積比較、ライセンス管理、TCO評価</p>
+                    <a href="budget-procurement.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>オンライン授業支援</h3>
+                    <p>Zoom・Teams等の会議ツール活用、ハイブリッド授業の運営、トラブル対応、録画配信のノウハウ</p>
+                    <a href="online-learning.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>EdTechツール比較</h3>
+                    <p>LMS、協働学習、評価ツール、デジタル教材の特徴比較と選定ポイント、導入ステップ</p>
+                    <a href="edtech-tools.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>時間・タスク管理</h3>
+                    <p>複数校巡回のスケジュール最適化、優先順位付け、Trello・Notion等ツール活用、効率化テクニック</p>
+                    <a href="time-task-management.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>危機・リスク管理</h3>
+                    <p>個人情報漏洩、システム障害、炎上対応、BCP策定、予防策と初動対応のマニュアル</p>
+                    <a href="crisis-management.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #feca57 0%, #ff6b6b 100%);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>保護者連携・理解促進</h3>
+                    <p>保護者向け説明会、ICT活用理解促進、家庭学習支援、不安・疑問への対応ガイド</p>
+                    <a href="parent-communication.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>学校行事ICT活用</h3>
+                    <p>入学式・卒業式、運動会、文化祭、保護者会等の配信・記録、機材選定と運営ノウハウ</p>
+                    <a href="school-events-ict.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>キャリアパス・スキルアップ</h3>
+                    <p>ICT支援員のキャリア形成、資格取得、昇進・転職戦略、長期的な成長プラン</p>
+                    <a href="career-path.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3>自己学習リソース</h3>
+                    <p>オンライン講座、YouTube、書籍、コミュニティ、継続的な学習習慣構築のガイド</p>
+                    <a href="self-learning.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>業務改善提案</h3>
+                    <p>ボトムアップ提案、小さな改善の積み重ね、費用対効果の算出、承認獲得のテクニック</p>
+                    <a href="business-improvement.html" class="btn-primary">詳しく見る</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #feca57 0%, #ff6b6b 100%);">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>メンタルヘルス</h3>
+                    <p>ストレス管理、バーンアウト予防、ワークライフバランス、相談窓口、セルフケアの実践</p>
+                    <a href="mental-health.html" class="btn-primary">詳しく見る</a>
                 </div>
 
                 <div class="feature-card">
@@ -332,11 +562,12 @@
         <div class="container">
             <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
             <p>教育現場のICT活用を支援する総合情報サイト</p>
-            <p class="update-info">最終更新: 2025年10月</p>
+            <p class="update-info">最終更新: 2025年12月</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
 </body>
 </html>

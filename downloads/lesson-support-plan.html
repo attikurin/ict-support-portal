@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>授業支援計画シート - ICT支援員総合ポータルサイト</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #fff;
+        }
+
+        .print-header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 3px solid #10b981;
+            margin-bottom: 30px;
+        }
+
+        .print-header h1 {
+            font-size: 28px;
+            color: #10b981;
+            margin-bottom: 10px;
+        }
+
+        .print-header .subtitle {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .info-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #f0fdf4;
+            border-radius: 8px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .info-item label {
+            font-weight: 600;
+            margin-right: 10px;
+            min-width: 100px;
+        }
+
+        .info-item input, .info-item select {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #10b981;
+            padding: 10px 15px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #374151;
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th {
+            background: #f3f4f6;
+            padding: 10px;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid #d1d5db;
+        }
+
+        table td {
+            padding: 10px;
+            border: 1px solid #d1d5db;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+
+        .timeline-table td {
+            vertical-align: top;
+        }
+
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background: #10b981;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .print-button:hover {
+            background: #059669;
+        }
+
+        .tips-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .tips-box strong {
+            color: #92400e;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e5e7eb;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            
+            body {
+                background: white;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            @page {
+                margin: 20mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" onclick="window.print()">📄 印刷・PDF保存</button>
+
+    <div class="container">
+        <div class="print-header">
+            <h1>📚 授業支援計画シート</h1>
+            <p class="subtitle">ICT支援員による効果的な授業サポートのための事前計画</p>
+        </div>
+
+        <!-- 基本情報 -->
+        <div class="info-section">
+            <div class="info-item">
+                <label>実施日:</label>
+                <input type="date" />
+            </div>
+            <div class="info-item">
+                <label>作成者:</label>
+                <input type="text" placeholder="ICT支援員名" />
+            </div>
+            <div class="info-item">
+                <label>学校名:</label>
+                <input type="text" placeholder="学校名" />
+            </div>
+            <div class="info-item">
+                <label>学年・クラス:</label>
+                <input type="text" placeholder="例: 5年1組" />
+            </div>
+            <div class="info-item">
+                <label>教科:</label>
+                <input type="text" placeholder="例: 国語" />
+            </div>
+            <div class="info-item">
+                <label>授業時間:</label>
+                <input type="text" placeholder="例: 3校時 (10:45-11:30)" />
+            </div>
+        </div>
+
+        <!-- 1. 授業概要 -->
+        <div class="section">
+            <h2 class="section-title">1. 授業概要</h2>
+            
+            <div class="form-group">
+                <label>単元名・題材名:</label>
+                <input type="text" placeholder="例: 情報を集めて提案しよう" />
+            </div>
+
+            <div class="form-group">
+                <label>本時の目標（教員から聞き取り）:</label>
+                <textarea placeholder="例: タブレット端末を使って情報を収集し、グループで意見をまとめ、プレゼンテーション形式で発表できる"></textarea>
+            </div>
+
+            <div class="grid-2">
+                <div class="form-group">
+                    <label>児童生徒数:</label>
+                    <input type="text" placeholder="例: 35名" />
+                </div>
+                <div class="form-group">
+                    <label>担当教員:</label>
+                    <input type="text" placeholder="教員名" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. 使用するICT機器・アプリ -->
+        <div class="section">
+            <h2 class="section-title">2. 使用するICT機器・アプリ</h2>
+            
+            <div class="form-group">
+                <label>使用端末:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="chromebook" />
+                        <label for="chromebook">Chromebook</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ipad" />
+                        <label for="ipad">iPad</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="windows" />
+                        <label for="windows">Windows PC</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="teacher-pc" />
+                        <label for="teacher-pc">教員用PC</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>周辺機器:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="projector" />
+                        <label for="projector">プロジェクター</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="tv" />
+                        <label for="tv">大型提示装置</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="camera" />
+                        <label for="camera">書画カメラ</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="speaker" />
+                        <label for="speaker">スピーカー</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>使用アプリ・サービス:</label>
+                <textarea placeholder="例: Google スライド、ロイロノート、Kahoot!、Canva など"></textarea>
+            </div>
+        </div>
+
+        <!-- 3. 支援内容 -->
+        <div class="section">
+            <h2 class="section-title">3. ICT支援員の支援内容</h2>
+            
+            <table class="timeline-table">
+                <thead>
+                    <tr>
+                        <th style="width: 80px;">時間</th>
+                        <th>支援内容</th>
+                        <th style="width: 150px;">準備物・確認事項</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>授業前</strong><br>(15分前)</td>
+                        <td>
+                            <textarea style="width: 100%; min-height: 80px;" placeholder="例:&#10;・端末の充電状況確認&#10;・Wi-Fi接続テスト&#10;・使用アプリの動作確認&#10;・大型提示装置の接続確認"></textarea>
+                        </td>
+                        <td>
+                            <textarea style="width: 100%; min-height: 80px;" placeholder="例:&#10;・充電ケーブル&#10;・HDMIケーブル&#10;・予備端末"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>導入</strong><br>(0-10分)</td>
+                        <td>
+                            <textarea style="width: 100%; min-height: 80px;" placeholder="例:&#10;・端末の配布補助&#10;・ログイン支援&#10;・アプリ起動の説明&#10;・教員の画面共有サポート"></textarea>
+                        </td>
+                        <td>
+                            <textarea style="width: 100%; min-height: 80px;" placeholder=""></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>展開</strong><br>(10-35分)</td>
+                        <td>
+                            <textarea style="width: 100%; min-height: 100px;" placeholder="例:&#10;・児童生徒の操作支援（巡回）&#10;・トラブル対応（接続不良、アプリエラー等）&#10;・遅れている児童への個別サポート&#10;・グループ活動のファシリテート"></textarea>
+                        </td>
+                        <td>
+                            <textarea style="width: 100%; min-height: 100px;" placeholder=""></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>まとめ</strong><br>(35-45分)</td>
+                        <td>
+                            <textarea style="width: 100%; min-height: 80px;" placeholder="例:&#10;・作品の提出確認&#10;・データ保存の支援&#10;・発表時の画面共有サポート&#10;・端末の回収補助"></textarea>
+                        </td>
+                        <td>
+                            <textarea style="width: 100%; min-height: 80px;" placeholder=""></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>授業後</strong></td>
+                        <td>
+                            <textarea style="width: 100%; min-height: 80px;" placeholder="例:&#10;・端末の充電保管&#10;・機器の片付け&#10;・教員との振り返り&#10;・次回の打ち合わせ"></textarea>
+                        </td>
+                        <td>
+                            <textarea style="width: 100%; min-height: 80px;" placeholder=""></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 4. 想定されるトラブルと対応 -->
+        <div class="section">
+            <h2 class="section-title">4. 想定されるトラブルと対応策</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 200px;">想定トラブル</th>
+                        <th>対応策</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" placeholder="例: Wi-Fi接続不良" style="width: 100%;" /></td>
+                        <td><textarea style="width: 100%; min-height: 60px;" placeholder="例: 端末を再起動、別のWi-Fiに接続、有線LANで対応"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="例: ログインできない" style="width: 100%;" /></td>
+                        <td><textarea style="width: 100%; min-height: 60px;" placeholder="例: パスワードリセット、ゲストアカウントで代用"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="例: アプリが起動しない" style="width: 100%;" /></td>
+                        <td><textarea style="width: 100%; min-height: 60px;" placeholder="例: アプリの再インストール、ブラウザ版で代用"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="その他" style="width: 100%;" /></td>
+                        <td><textarea style="width: 100%; min-height: 60px;" placeholder=""></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 5. 配慮が必要な児童生徒 -->
+        <div class="section">
+            <h2 class="section-title">5. 配慮が必要な児童生徒</h2>
+            
+            <div class="form-group">
+                <label>特別な配慮が必要な児童生徒の情報:</label>
+                <textarea placeholder="例:&#10;・視覚支援が必要な児童（拡大表示機能の利用）&#10;・操作が苦手な児童（個別サポートの優先）&#10;・聴覚支援が必要な児童（字幕機能の活用）" style="min-height: 100px;"></textarea>
+            </div>
+        </div>
+
+        <!-- 6. 教員との事前打ち合わせ内容 -->
+        <div class="section">
+            <h2 class="section-title">6. 教員との事前打ち合わせ内容</h2>
+            
+            <div class="form-group">
+                <label>打ち合わせ日時:</label>
+                <input type="text" placeholder="例: ○月○日 放課後" />
+            </div>
+
+            <div class="form-group">
+                <label>確認事項・要望:</label>
+                <textarea placeholder="例:&#10;・授業の流れと支援のタイミング&#10;・児童生徒のICTスキルレベル&#10;・前回の授業での課題&#10;・教員が期待する支援内容" style="min-height: 100px;"></textarea>
+            </div>
+        </div>
+
+        <!-- 7. 振り返り（授業後記入） -->
+        <div class="section">
+            <h2 class="section-title">7. 振り返り（授業後記入）</h2>
+            
+            <div class="form-group">
+                <label>✅ うまくいった点:</label>
+                <textarea placeholder="例: 事前準備が万全で、トラブルなくスムーズに進行できた" style="min-height: 80px;"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>⚠️ 課題・改善点:</label>
+                <textarea placeholder="例: 一部の児童が操作に戸惑っていたため、次回は事前の操作練習時間を設けたい" style="min-height: 80px;"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>💡 次回への提案:</label>
+                <textarea placeholder="例: より効果的なアプリの使い方、グループ分けの工夫など" style="min-height: 80px;"></textarea>
+            </div>
+        </div>
+
+        <div class="tips-box">
+            <strong>💡 効果的な授業支援のポイント:</strong>
+            <ul style="margin-top: 10px; margin-left: 20px;">
+                <li>教員と事前に綿密な打ち合わせを行い、役割分担を明確にする</li>
+                <li>授業の15分前には準備を完了し、トラブルに備える</li>
+                <li>児童生徒の様子を観察し、困っている子を素早く見つける</li>
+                <li>教員の指導を妨げないよう、適切なタイミングで支援する</li>
+                <li>授業後は必ず振り返りを行い、次回に活かす</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 ICT支援員総合ポータルサイト</p>
+            <p>本シートを活用して、効果的な授業支援を実現しましょう</p>
+        </div>
+    </div>
+</body>
+</html>

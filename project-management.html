@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロジェクトマネジメント - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="ICT環境整備・運用プロジェクトの企画・計画・実行・評価の実践的手法。タスク管理、スケジューリング、ステークホルダー管理、リスク管理を網羅。">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                    <li class="has-dropdown">
+                        <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                            <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                            <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                            <li><a href="project-management.html" class="active"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                            <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="has-dropdown">
+                        <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                            <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                            <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                            <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-project-diagram"></i> プロジェクトマネジメント</h1>
+            <p class="page-intro">ICT環境の整備・運用をプロジェクトとして管理する手法を学びます。端末導入、ネットワーク構築、システム更新など、大規模なICTプロジェクトを成功に導くための計画立案、タスク管理、リスク管理、評価改善の実践的手法を解説します。</p>
+        </div>
+
+        <div class="tip-box">
+            <h3><i class="fas fa-lightbulb"></i> なぜプロジェクトマネジメントが必要か</h3>
+            <p>ICT環境整備は、多くの関係者（教育委員会、学校、業者、保護者など）が関わり、予算・スケジュール・品質の制約がある複雑な取り組みです。適切なプロジェクトマネジメントにより、計画的で効率的な推進が可能になります。</p>
+        </div>
+
+        <div class="checklist">
+            <h3><i class="fas fa-check-circle"></i> このページで学べること</h3>
+            <ul>
+                <li><i class="fas fa-check"></i> プロジェクトマネジメントの基本概念</li>
+                <li><i class="fas fa-check"></i> プロジェクト計画の立て方</li>
+                <li><i class="fas fa-check"></i> タスク管理とスケジューリング</li>
+                <li><i class="fas fa-check"></i> ステークホルダー管理</li>
+                <li><i class="fas fa-check"></i> リスク管理と問題解決</li>
+                <li><i class="fas fa-check"></i> コミュニケーション計画</li>
+                <li><i class="fas fa-check"></i> プロジェクトの評価と改善</li>
+            </ul>
+        </div>
+
+        <section class="content-section">
+            <h2 id="pm-basics"><i class="fas fa-book"></i> 1. プロジェクトマネジメントの基礎</h2>
+
+            <h3 id="what-is-project">1.1 プロジェクトとは</h3>
+            <p><strong>プロジェクト:</strong> 独自の成果物やサービスを創出するために実施される、期限が定められた有期性の業務</p>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-clipboard-check"></i> プロジェクトの特徴</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>特徴</th>
+                            <th>説明</th>
+                            <th>学校ICTの例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>有期性</strong></td>
+                            <td>明確な開始日と終了日がある</td>
+                            <td>端末導入プロジェクト（4月〜3月）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>独自性</strong></td>
+                            <td>ルーチン業務ではない一度限りの取り組み</td>
+                            <td>新校舎のネットワーク構築</td>
+                        </tr>
+                        <tr>
+                            <td><strong>段階的詳細化</strong></td>
+                            <td>進行に伴って計画を具体化</td>
+                            <td>段階的な端末配備と研修実施</td>
+                        </tr>
+                        <tr>
+                            <td><strong>制約条件</strong></td>
+                            <td>予算・時間・品質の制約がある</td>
+                            <td>年度予算内で期限までに導入完了</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="example-box">
+                <h4><i class="fas fa-lightbulb"></i> プロジェクトとルーチン業務の違い</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>プロジェクト</th>
+                            <th>ルーチン業務</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>期限</strong></td>
+                            <td>明確な終了日がある</td>
+                            <td>継続的に実施</td>
+                        </tr>
+                        <tr>
+                            <td><strong>内容</strong></td>
+                            <td>独自性・新規性がある</td>
+                            <td>定型的・反復的</td>
+                        </tr>
+                        <tr>
+                            <td><strong>学校ICTの例</strong></td>
+                            <td>GIGA端末の一斉導入</td>
+                            <td>日常的なトラブル対応</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="pm-framework">1.2 プロジェクトマネジメントの枠組み</h3>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-cogs"></i> プロジェクトの5つのプロセス群</h4>
+                <ol>
+                    <li><strong>立ち上げ (Initiating):</strong> プロジェクトの開始を正式に承認</li>
+                    <li><strong>計画 (Planning):</strong> 目標達成のための詳細計画を策定</li>
+                    <li><strong>実行 (Executing):</strong> 計画に基づいて作業を実施</li>
+                    <li><strong>監視・コントロール (Monitoring & Controlling):</strong> 進捗を追跡し、必要に応じて調整</li>
+                    <li><strong>終結 (Closing):</strong> プロジェクトを正式に完了し、教訓を文書化</li>
+                </ol>
+            </div>
+
+            <h3 id="pm-constraints">1.3 プロジェクトの制約条件（トリプルコンストレイント）</h3>
+            <p>プロジェクトは「スコープ（範囲）」「スケジュール（時間）」「コスト（予算）」の3つの制約のバランスを取りながら進めます。</p>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-balance-scale"></i> トリプルコンストレイント</h4>
+                <ul>
+                    <li><strong>スコープ:</strong> プロジェクトで達成すべき成果物・機能の範囲</li>
+                    <li><strong>スケジュール:</strong> プロジェクトの完了期限</li>
+                    <li><strong>コスト:</strong> プロジェクトに投入できる予算</li>
+                </ul>
+                <p><strong>重要:</strong> 1つを変更すると他の2つにも影響します。</p>
+                <div class="example-box">
+                    <h5><i class="fas fa-exclamation-circle"></i> 例</h5>
+                    <ul>
+                        <li>スコープを拡大（全学年に配備 → 全教員にも配備）→ コスト増・スケジュール遅延</li>
+                        <li>スケジュールを短縮（1年 → 半年）→ コスト増・品質低下リスク</li>
+                        <li>コストを削減 → スコープ縮小・スケジュール延長</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 id="pm-roles">1.4 プロジェクトの主要な役割</h3>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-users"></i> 主な役割分担</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>役割</th>
+                            <th>責任</th>
+                            <th>学校ICTの例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>プロジェクトオーナー（スポンサー）</strong></td>
+                            <td>プロジェクトの承認・予算確保</td>
+                            <td>教育委員会、学校長</td>
+                        </tr>
+                        <tr>
+                            <td><strong>プロジェクトマネージャー</strong></td>
+                            <td>全体の計画・実行・管理</td>
+                            <td>ICT担当教員、企画員(SV)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>プロジェクトチーム</strong></td>
+                            <td>具体的な作業の実施</td>
+                            <td>ICT支援員、システム管理者</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ステークホルダー</strong></td>
+                            <td>プロジェクトに影響を受ける/与える人</td>
+                            <td>教員、児童生徒、保護者、業者</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="planning"><i class="fas fa-clipboard-list"></i> 2. プロジェクト計画の立て方</h2>
+
+            <h3 id="project-charter">2.1 プロジェクト憲章（チャーター）</h3>
+            <p>プロジェクトの立ち上げ段階で作成する、プロジェクトの正式な承認文書です。</p>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-file-alt"></i> プロジェクト憲章に含める項目</h4>
+                <ul>
+                    <li><strong>プロジェクト名:</strong> 「○○市GIGA端末導入プロジェクト」</li>
+                    <li><strong>目的・背景:</strong> なぜこのプロジェクトを実施するのか</li>
+                    <li><strong>目標:</strong> 何を達成すれば成功とみなすか（具体的・測定可能に）</li>
+                    <li><strong>スコープ:</strong> 実施する範囲・実施しない範囲</li>
+                    <li><strong>主要な成果物:</strong> プロジェクトで作成・提供するもの</li>
+                    <li><strong>主要なステークホルダー:</strong> 関係者のリスト</li>
+                    <li><strong>予算概算:</strong> おおよその費用</li>
+                    <li><strong>スケジュール概要:</strong> 主要なマイルストーン</li>
+                    <li><strong>プロジェクトマネージャー:</strong> 責任者の氏名</li>
+                    <li><strong>承認者:</strong> 承認する人（教育長、学校長など）</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h4><i class="fas fa-file-contract"></i> プロジェクト憲章の例</h4>
+                <p><strong>プロジェクト名:</strong> A市立小学校 GIGA端末導入プロジェクト</p>
+                <p><strong>目的:</strong> GIGAスクール構想に基づき、児童1人1台のタブレット端末環境を整備し、ICTを活用した個別最適化学習を実現する。</p>
+                <p><strong>目標:</strong></p>
+                <ul>
+                    <li>市内全12校、児童3,500名に端末を配備（2024年3月末まで）</li>
+                    <li>教員の端末活用率80%以上（導入後6ヶ月時点）</li>
+                    <li>ネットワーク障害発生率5%以下</li>
+                </ul>
+                <p><strong>スコープ:</strong></p>
+                <ul>
+                    <li>実施する: 端末調達、ネットワーク整備、MDM導入、教員研修</li>
+                    <li>実施しない: 教員用端末の更新、校務システムの刷新</li>
+                </ul>
+                <p><strong>予算:</strong> 総額2億円（国庫補助金1.5億円 + 市単独予算0.5億円）</p>
+                <p><strong>スケジュール:</strong> 2024年4月開始 〜 2025年3月完了</p>
+            </div>
+
+            <h3 id="wbs">2.2 WBS（Work Breakdown Structure）の作成</h3>
+            <p>プロジェクトの作業を階層的に分解し、管理可能な単位にする手法です。</p>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-sitemap"></i> WBS作成のポイント</h4>
+                <ol>
+                    <li><strong>成果物ベースで分解:</strong> 「何をするか」ではなく「何を作るか」で分解</li>
+                    <li><strong>100%ルール:</strong> 親要素の作業は子要素の合計で100%になる</li>
+                    <li><strong>適度な粒度:</strong> 最下層のタスクは1〜2週間程度で完了できる大きさ</li>
+                    <li><strong>階層は3〜5レベル:</strong> 深すぎると管理が煩雑、浅すぎると詳細不足</li>
+                </ol>
+            </div>
+
+            <div class="example-box">
+                <h4><i class="fas fa-tasks"></i> WBSの例（端末導入プロジェクト）</h4>
+                <pre><code>1. 端末導入プロジェクト
+   1.1 調達準備
+       1.1.1 要件定義書作成
+       1.1.2 仕様書作成
+       1.1.3 予算申請
+   1.2 調達実施
+       1.2.1 入札公告
+       1.2.2 業者選定
+       1.2.3 契約締結
+   1.3 インフラ整備
+       1.3.1 ネットワーク構築
+       1.3.2 充電保管庫設置
+       1.3.3 MDM導入
+   1.4 端末配備
+       1.4.1 端末納品検収
+       1.4.2 初期設定
+       1.4.3 各校への配送
+   1.5 研修実施
+       1.5.1 研修計画策定
+       1.5.2 教員研修実施
+       1.5.3 児童向けガイダンス
+   1.6 運用開始
+       1.6.1 運用ルール策定
+       1.6.2 トラブル対応体制構築
+       1.6.3 運用開始宣言</code></pre>
+            </div>
+
+            <h3 id="milestone">2.3 マイルストーンの設定</h3>
+            <p>プロジェクトの重要な節目（成果物の完成、重要な意思決定など）をマイルストーンとして設定します。</p>
+
+            <div class="example-box">
+                <h4><i class="fas fa-flag-checkered"></i> マイルストーンの例</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>マイルストーン</th>
+                            <th>期日</th>
+                            <th>成果物・完了条件</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>プロジェクト承認</strong></td>
+                            <td>2024年4月10日</td>
+                            <td>プロジェクト憲章の承認</td>
+                        </tr>
+                        <tr>
+                            <td><strong>仕様書完成</strong></td>
+                            <td>2024年5月31日</td>
+                            <td>端末仕様書の確定</td>
+                        </tr>
+                        <tr>
+                            <td><strong>業者選定完了</strong></td>
+                            <td>2024年7月15日</td>
+                            <td>契約締結</td>
+                        </tr>
+                        <tr>
+                            <td><strong>インフラ整備完了</strong></td>
+                            <td>2024年10月31日</td>
+                            <td>全校ネットワーク稼働</td>
+                        </tr>
+                        <tr>
+                            <td><strong>端末配備完了</strong></td>
+                            <td>2024年12月20日</td>
+                            <td>全児童へ端末配布</td>
+                        </tr>
+                        <tr>
+                            <td><strong>研修完了</strong></td>
+                            <td>2025年1月31日</td>
+                            <td>全教員が基礎研修受講</td>
+                        </tr>
+                        <tr>
+                            <td><strong>運用開始</strong></td>
+                            <td>2025年2月1日</td>
+                            <td>授業での本格利用開始</td>
+                        </tr>
+                        <tr>
+                            <td><strong>プロジェクト完了</strong></td>
+                            <td>2025年3月31日</td>
+                            <td>最終報告書の提出</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="resource-plan">2.4 リソース計画</h3>
+            <p>プロジェクトに必要な人員・予算・設備を明確にします。</p>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-users-cog"></i> 人員計画の例</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>役割</th>
+                            <th>担当者</th>
+                            <th>稼働率</th>
+                            <th>期間</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>プロジェクトマネージャー</strong></td>
+                            <td>教育委員会 A氏</td>
+                            <td>50%</td>
+                            <td>全期間</td>
+                        </tr>
+                        <tr>
+                            <td><strong>調達担当</strong></td>
+                            <td>総務課 B氏</td>
+                            <td>30%</td>
+                            <td>4〜7月</td>
+                        </tr>
+                        <tr>
+                            <td><strong>インフラ担当</strong></td>
+                            <td>外部業者</td>
+                            <td>100%</td>
+                            <td>8〜10月</td>
+                        </tr>
+                        <tr>
+                            <td><strong>研修担当</strong></td>
+                            <td>企画員(SV) C氏</td>
+                            <td>40%</td>
+                            <td>11月〜1月</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ICT支援員</strong></td>
+                            <td>各校配置（12名）</td>
+                            <td>100%</td>
+                            <td>運用開始後</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="task-management"><i class="fas fa-tasks"></i> 3. タスク管理とスケジューリング</h2>
+
+            <h3 id="gantt-chart">3.1 ガントチャートの活用</h3>
+            <p>タスクの開始日・終了日・依存関係を視覚的に表現するツールです。</p>
+
+            <div class="tool-box">
+                <h4><i class="fas fa-chart-bar"></i> ガントチャート作成ツール</h4>
+                <ul>
+                    <li><strong>Microsoft Project:</strong> プロフェッショナルなプロジェクト管理ツール（有料）</li>
+                    <li><strong>Excel / Google スプレッドシート:</strong> 手軽にガントチャートを作成可能</li>
+                    <li><strong>Asana / Trello:</strong> クラウド型のタスク管理ツール（無料プランあり）</li>
+                    <li><strong>Notion / Monday.com:</strong> 柔軟なプロジェクト管理プラットフォーム</li>
+                </ul>
+            </div>
+
+            <h3 id="critical-path">3.2 クリティカルパスの特定</h3>
+            <p><strong>クリティカルパス:</strong> プロジェクト完了までの最長経路。この経路上のタスクが遅れると、プロジェクト全体が遅延します。</p>
+
+            <div class="example-box">
+                <h4><i class="fas fa-route"></i> クリティカルパスの例</h4>
+                <p><strong>端末導入プロジェクトのクリティカルパス:</strong></p>
+                <ol>
+                    <li>仕様書作成（4週間）</li>
+                    <li>入札・業者選定（8週間）</li>
+                    <li>端末製造・納品（12週間）← <strong>最も長い</strong></li>
+                    <li>初期設定（2週間）</li>
+                    <li>配送・配備（2週間）</li>
+                </ol>
+                <p><strong>合計: 28週間（約7ヶ月）</strong></p>
+                <p><strong>→ この経路上のタスクの遅延は、プロジェクト全体の遅延に直結するため、最優先で管理</strong></p>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> クリティカルパス上のリスク管理</h4>
+                <ul>
+                    <li>バッファ期間を設ける（予備日を確保）</li>
+                    <li>進捗を週次で確認</li>
+                    <li>遅延の兆候があれば即座に対策</li>
+                    <li>代替案を事前に検討</li>
+                </ul>
+            </div>
+
+            <h3 id="task-prioritization">3.3 タスクの優先順位付け</h3>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-sort-amount-down"></i> アイゼンハワーマトリクス</h4>
+                <p>タスクを「重要度」と「緊急度」の2軸で分類し、優先順位をつける手法</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>緊急</th>
+                            <th>緊急でない</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>重要</strong></td>
+                            <td><strong>第1象限: 今すぐやる</strong><br>例: クリティカルパス上のタスク、納期直前の作業</td>
+                            <td><strong>第2象限: 計画的に実施</strong><br>例: 研修計画の策定、長期的な改善活動</td>
+                        </tr>
+                        <tr>
+                            <td><strong>重要でない</strong></td>
+                            <td><strong>第3象限: 他者に委任</strong><br>例: 定型的な事務作業、ルーチン報告</td>
+                            <td><strong>第4象限: やらない</strong><br>例: 優先度の低い雑務</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="progress-tracking">3.4 進捗管理の実践</h3>
+
+            <div class="method-box">
+                <h4><i class="fas fa-clipboard-check"></i> 進捗確認の頻度</h4>
+                <ul>
+                    <li><strong>日次:</strong> 短期集中タスク（例: 端末配備作業中）</li>
+                    <li><strong>週次:</strong> 通常のプロジェクト進行中（定例会議で確認）</li>
+                    <li><strong>月次:</strong> 長期プロジェクト、管理職への報告</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h4><i class="fas fa-chart-line"></i> 進捗報告のフォーマット</h4>
+                <p><strong>週次進捗報告書の例:</strong></p>
+                <ul>
+                    <li><strong>期間:</strong> 2024年9月1日〜9月7日</li>
+                    <li><strong>完了したタスク:</strong>
+                        <ul>
+                            <li>A校ネットワーク構築完了（予定通り）</li>
+                            <li>MDM設定マニュアル作成完了</li>
+                        </ul>
+                    </li>
+                    <li><strong>進行中のタスク:</strong>
+                        <ul>
+                            <li>B校・C校ネットワーク構築（進捗80%）</li>
+                            <li>教員研修資料作成（進捗60%）</li>
+                        </ul>
+                    </li>
+                    <li><strong>課題・リスク:</strong>
+                        <ul>
+                            <li>D校で配線工事の遅延（2週間遅れ）→ 業者と調整中</li>
+                        </ul>
+                    </li>
+                    <li><strong>来週の予定:</strong>
+                        <ul>
+                            <li>B校・C校のネットワーク構築完了</li>
+                            <li>教員研修の試行実施</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="stakeholder"><i class="fas fa-users"></i> 4. ステークホルダー管理</h2>
+
+            <h3 id="stakeholder-analysis">4.1 ステークホルダー分析</h3>
+            <p>プロジェクトに影響を与える、または影響を受けるすべての個人・組織を特定し、その関心事や影響力を把握します。</p>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-users-cog"></i> 学校ICTプロジェクトの主なステークホルダー</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ステークホルダー</th>
+                            <th>関心事</th>
+                            <th>影響力</th>
+                            <th>対応方針</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>教育委員会</strong></td>
+                            <td>予算・スケジュール・効果</td>
+                            <td>高</td>
+                            <td>月次報告、重要事項は即座に相談</td>
+                        </tr>
+                        <tr>
+                            <td><strong>学校長</strong></td>
+                            <td>学校運営への影響、教員の負担</td>
+                            <td>高</td>
+                            <td>定期的な情報共有、事前相談</td>
+                        </tr>
+                        <tr>
+                            <td><strong>教員</strong></td>
+                            <td>使いやすさ、授業への活用</td>
+                            <td>中</td>
+                            <td>研修実施、マニュアル提供</td>
+                        </tr>
+                        <tr>
+                            <td><strong>児童生徒</strong></td>
+                            <td>楽しさ、学びやすさ</td>
+                            <td>中</td>
+                            <td>使い方ガイダンス、アンケート</td>
+                        </tr>
+                        <tr>
+                            <td><strong>保護者</strong></td>
+                            <td>安全性、家庭での利用ルール</td>
+                            <td>中</td>
+                            <td>保護者説明会、お便り配布</td>
+                        </tr>
+                        <tr>
+                            <td><strong>業者</strong></td>
+                            <td>契約内容、納期、支払い</td>
+                            <td>中</td>
+                            <td>契約書の明確化、定期打合せ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ICT支援員</strong></td>
+                            <td>サポート体制、運用ルール</td>
+                            <td>中</td>
+                            <td>運用マニュアル整備、連絡体制</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="stakeholder-matrix">4.2 ステークホルダーマトリクス</h3>
+            <p>ステークホルダーを「影響力」と「関心度」の2軸でマッピングし、対応の優先順位を決めます。</p>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-th"></i> ステークホルダーマトリクス</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>高い関心</th>
+                            <th>低い関心</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>高い影響力</strong></td>
+                            <td><strong>重点的に管理</strong><br>例: 教育委員会、学校長<br>→ 密にコミュニケーション</td>
+                            <td><strong>満足度維持</strong><br>例: 議会、地域代表<br>→ 重要事項のみ報告</td>
+                        </tr>
+                        <tr>
+                            <td><strong>低い影響力</strong></td>
+                            <td><strong>情報提供</strong><br>例: 教員、保護者<br>→ 定期的に情報発信</td>
+                            <td><strong>モニタリング</strong><br>例: 一般市民<br>→ 必要最低限の情報提供</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="stakeholder-communication">4.3 ステークホルダーとのコミュニケーション</h3>
+
+            <div class="example-box">
+                <h4><i class="fas fa-comments"></i> コミュニケーション計画の例</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>対象</th>
+                            <th>内容</th>
+                            <th>手段</th>
+                            <th>頻度</th>
+                            <th>担当</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>教育委員会</strong></td>
+                            <td>進捗報告、課題共有</td>
+                            <td>対面会議</td>
+                            <td>月次</td>
+                            <td>PM</td>
+                        </tr>
+                        <tr>
+                            <td><strong>学校長</strong></td>
+                            <td>導入状況、教員の反応</td>
+                            <td>訪問・電話</td>
+                            <td>週次</td>
+                            <td>PM</td>
+                        </tr>
+                        <tr>
+                            <td><strong>教員</strong></td>
+                            <td>使い方、トラブル対応</td>
+                            <td>研修・マニュアル</td>
+                            <td>随時</td>
+                            <td>ICT支援員</td>
+                        </tr>
+                        <tr>
+                            <td><strong>保護者</strong></td>
+                            <td>導入目的、家庭利用ルール</td>
+                            <td>説明会・お便り</td>
+                            <td>導入時・学期初め</td>
+                            <td>学校</td>
+                        </tr>
+                        <tr>
+                            <td><strong>業者</strong></td>
+                            <td>納期・仕様・課題</td>
+                            <td>定例会議・メール</td>
+                            <td>週次</td>
+                            <td>PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="risk-management"><i class="fas fa-exclamation-triangle"></i> 5. リスク管理と問題解決</h2>
+
+            <h3 id="risk-identification">5.1 リスクの特定</h3>
+            <p>プロジェクトの目標達成を妨げる可能性のある不確実な事象を事前に洗い出します。</p>
+
+            <div class="example-box">
+                <h4><i class="fas fa-list"></i> 学校ICTプロジェクトの典型的なリスク</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>リスクの種類</th>
+                            <th>具体例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>技術的リスク</strong></td>
+                            <td>ネットワーク速度不足、端末の不具合、システム障害</td>
+                        </tr>
+                        <tr>
+                            <td><strong>スケジュールリスク</strong></td>
+                            <td>納品遅延、工事の遅れ、研修日程の調整難航</td>
+                        </tr>
+                        <tr>
+                            <td><strong>コストリスク</strong></td>
+                            <td>予算超過、追加費用の発生、補助金の減額</td>
+                        </tr>
+                        <tr>
+                            <td><strong>人的リスク</strong></td>
+                            <td>担当者の異動、教員の抵抗、ICT支援員の確保困難</td>
+                        </tr>
+                        <tr>
+                            <td><strong>外部環境リスク</strong></td>
+                            <td>法令改正、災害、感染症の流行</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="risk-assessment">5.2 リスクの評価</h3>
+            <p>特定したリスクを「発生確率」と「影響度」で評価し、対応の優先順位を決めます。</p>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-calculator"></i> リスクマトリクス</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>影響小</th>
+                            <th>影響中</th>
+                            <th>影響大</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>確率高</strong></td>
+                            <td>中リスク</td>
+                            <td><strong>高リスク</strong></td>
+                            <td><strong>最重要リスク</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>確率中</strong></td>
+                            <td>低リスク</td>
+                            <td>中リスク</td>
+                            <td><strong>高リスク</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>確率低</strong></td>
+                            <td>無視可能</td>
+                            <td>低リスク</td>
+                            <td>中リスク</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="example-box">
+                <h4><i class="fas fa-clipboard-list"></i> リスク評価の例</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>リスク</th>
+                            <th>発生確率</th>
+                            <th>影響度</th>
+                            <th>リスクレベル</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>端末の納品遅延</td>
+                            <td>中</td>
+                            <td>大</td>
+                            <td><strong>高</strong></td>
+                        </tr>
+                        <tr>
+                            <td>ネットワーク速度不足</td>
+                            <td>高</td>
+                            <td>中</td>
+                            <td><strong>高</strong></td>
+                        </tr>
+                        <tr>
+                            <td>教員の抵抗感</td>
+                            <td>中</td>
+                            <td>中</td>
+                            <td>中</td>
+                        </tr>
+                        <tr>
+                            <td>予算超過</td>
+                            <td>低</td>
+                            <td>大</td>
+                            <td>中</td>
+                        </tr>
+                        <tr>
+                            <td>端末の初期不良</td>
+                            <td>低</td>
+                            <td>中</td>
+                            <td>低</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="risk-response">5.3 リスク対応戦略</h3>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-shield-alt"></i> 4つのリスク対応戦略</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>戦略</th>
+                            <th>説明</th>
+                            <th>例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>回避（Avoid）</strong></td>
+                            <td>リスクの原因を取り除く</td>
+                            <td>実績のない業者を避け、信頼できる業者を選定</td>
+                        </tr>
+                        <tr>
+                            <td><strong>軽減（Mitigate）</strong></td>
+                            <td>発生確率や影響を減らす</td>
+                            <td>納期に余裕を持たせる、予備機を確保</td>
+                        </tr>
+                        <tr>
+                            <td><strong>転嫁（Transfer）</strong></td>
+                            <td>リスクを第三者に移す</td>
+                            <td>保守契約を締結、保険加入</td>
+                        </tr>
+                        <tr>
+                            <td><strong>受容（Accept）</strong></td>
+                            <td>リスクを認識した上で対応しない</td>
+                            <td>小さなリスクは発生時に対処</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="example-box">
+                <h4><i class="fas fa-wrench"></i> リスク対応計画の例</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>リスク</th>
+                            <th>対応戦略</th>
+                            <th>具体的対応</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>端末納品遅延</td>
+                            <td>軽減</td>
+                            <td>契約に納期遅延ペナルティを明記、進捗を週次で確認</td>
+                        </tr>
+                        <tr>
+                            <td>ネットワーク速度不足</td>
+                            <td>軽減</td>
+                            <td>事前に負荷テスト実施、帯域増強の予算確保</td>
+                        </tr>
+                        <tr>
+                            <td>教員の抵抗感</td>
+                            <td>軽減</td>
+                            <td>段階的導入、先行事例の共有、研修の充実</td>
+                        </tr>
+                        <tr>
+                            <td>端末故障</td>
+                            <td>転嫁</td>
+                            <td>保守契約締結、予備機の確保</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="issue-management">5.4 課題（イシュー）管理</h3>
+            <p><strong>課題（イシュー）:</strong> すでに発生している問題。リスクが顕在化したものや、予期しなかった問題。</p>
+
+            <div class="method-box">
+                <h4><i class="fas fa-bug"></i> 課題管理のステップ</h4>
+                <ol>
+                    <li><strong>課題の記録:</strong> 発生した問題を漏らさず記録</li>
+                    <li><strong>影響度の評価:</strong> プロジェクトへの影響を評価</li>
+                    <li><strong>担当者の割り当て:</strong> 誰が解決するかを明確に</li>
+                    <li><strong>解決策の検討:</strong> 具体的な対応方法を決定</li>
+                    <li><strong>実行と追跡:</strong> 対応を実施し、解決まで追跡</li>
+                    <li><strong>クローズ:</strong> 解決したら正式にクローズ</li>
+                </ol>
+            </div>
+
+            <div class="example-box">
+                <h4><i class="fas fa-clipboard"></i> 課題管理台帳の例</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>課題内容</th>
+                            <th>影響度</th>
+                            <th>担当者</th>
+                            <th>対応策</th>
+                            <th>期限</th>
+                            <th>ステータス</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>A校で Wi-Fi が不安定</td>
+                            <td>高</td>
+                            <td>業者X社</td>
+                            <td>APを2台追加設置</td>
+                            <td>9/15</td>
+                            <td>対応中</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>教員研修の参加率が低い</td>
+                            <td>中</td>
+                            <td>企画員C氏</td>
+                            <td>オンライン研修を追加</td>
+                            <td>9/30</td>
+                            <td>対応中</td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>端末10台の初期不良</td>
+                            <td>低</td>
+                            <td>ICT支援員</td>
+                            <td>業者に交換依頼</td>
+                            <td>9/10</td>
+                            <td>完了</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="communication"><i class="fas fa-comments"></i> 6. コミュニケーション計画</h2>
+
+            <h3 id="communication-importance">6.1 コミュニケーション計画の重要性</h3>
+            <p>プロジェクトの成否の90%はコミュニケーションにかかっていると言われます。適切な情報を、適切な人に、適切なタイミングで伝えることが重要です。</p>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-info-circle"></i> コミュニケーションの5W1H</h4>
+                <ul>
+                    <li><strong>Who:</strong> 誰に伝えるか（ステークホルダーの特定）</li>
+                    <li><strong>What:</strong> 何を伝えるか（情報の内容）</li>
+                    <li><strong>When:</strong> いつ伝えるか（タイミング・頻度）</li>
+                    <li><strong>Where:</strong> どこで伝えるか（会議室、メール、掲示板など）</li>
+                    <li><strong>Why:</strong> なぜ伝えるか（目的）</li>
+                    <li><strong>How:</strong> どのように伝えるか（手段・方法）</li>
+                </ul>
+            </div>
+
+            <h3 id="communication-methods">6.2 コミュニケーション手段の選択</h3>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-envelope"></i> 手段別の特徴</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>手段</th>
+                            <th>適した用途</th>
+                            <th>メリット</th>
+                            <th>デメリット</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>対面会議</strong></td>
+                            <td>重要な意思決定、問題解決</td>
+                            <td>ニュアンスが伝わる、即座に質疑応答</td>
+                            <td>時間調整が必要、記録が残りにくい</td>
+                        </tr>
+                        <tr>
+                            <td><strong>オンライン会議</strong></td>
+                            <td>定例報告、遠隔地との打合せ</td>
+                            <td>移動不要、録画可能</td>
+                            <td>通信環境に依存、集中しにくい</td>
+                        </tr>
+                        <tr>
+                            <td><strong>メール</strong></td>
+                            <td>正式な連絡、記録が必要な情報</td>
+                            <td>記録が残る、一斉送信可能</td>
+                            <td>読まれない可能性、ニュアンスが伝わりにくい</td>
+                        </tr>
+                        <tr>
+                            <td><strong>チャット（Slack, Teams）</strong></td>
+                            <td>日常的な連絡、迅速な情報共有</td>
+                            <td>リアルタイム、気軽に質問</td>
+                            <td>情報が流れやすい、緊急度が伝わりにくい</td>
+                        </tr>
+                        <tr>
+                            <td><strong>掲示板・Wiki</strong></td>
+                            <td>マニュアル、FAQ、ナレッジ共有</td>
+                            <td>いつでも参照可能、蓄積される</td>
+                            <td>更新が必要、読んでもらえない可能性</td>
+                        </tr>
+                        <tr>
+                            <td><strong>報告書</strong></td>
+                            <td>正式な進捗報告、成果報告</td>
+                            <td>詳細な情報、公式記録</td>
+                            <td>作成に時間、読むのに時間</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="meeting-management">6.3 効果的な会議運営</h3>
+
+            <div class="method-box">
+                <h4><i class="fas fa-users"></i> 会議を成功させるポイント</h4>
+                <p><strong>会議前:</strong></p>
+                <ul>
+                    <li>明確な目的・ゴールを設定（情報共有 or 意思決定 or ブレスト）</li>
+                    <li>アジェンダ（議題）を事前に共有</li>
+                    <li>必要な資料を配布（事前に読んでもらう）</li>
+                    <li>参加者を必要最小限に絞る</li>
+                </ul>
+                <p><strong>会議中:</strong></p>
+                <ul>
+                    <li>時間厳守（開始・終了時刻）</li>
+                    <li>アジェンダに沿って進行</li>
+                    <li>議論が脱線したら軌道修正</li>
+                    <li>決定事項・アクションアイテムを明確に</li>
+                </ul>
+                <p><strong>会議後:</strong></p>
+                <ul>
+                    <li>議事録を速やかに共有（24時間以内）</li>
+                    <li>アクションアイテムの担当者・期限を確認</li>
+                    <li>次回会議の日程を仮押さえ</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h4><i class="fas fa-file-alt"></i> 議事録のテンプレート</h4>
+                <pre><code><strong>【議事録】端末導入プロジェクト定例会議</strong>
+
+<strong>日時:</strong> 2024年9月5日（木） 14:00-15:00
+<strong>場所:</strong> 教育委員会 会議室A
+<strong>参加者:</strong> A氏（PM）、B氏、C氏、D氏
+<strong>欠席者:</strong> E氏
+
+<strong>1. 前回のアクションアイテム確認</strong>
+   - A校ネットワーク構築 → 完了
+   - 研修資料作成 → 進行中（80%）
+
+<strong>2. 今週の進捗報告</strong>
+   - 端末納品: 予定通り
+   - B校・C校ネットワーク構築: 80%完了
+   - 課題: D校の配線工事が2週間遅延
+
+<strong>3. 決定事項</strong>
+   - D校の遅延に対し、業者と協議して工程を見直す
+   - 教員研修を10月第2週に実施決定
+
+<strong>4. アクションアイテム</strong>
+   | 担当者 | タスク | 期限 |
+   |--------|--------|------|
+   | A氏 | D校業者と工程協議 | 9/7 |
+   | C氏 | 研修資料完成 | 9/12 |
+   | D氏 | 教員へ研修案内送付 | 9/10 |
+
+<strong>5. 次回会議</strong>
+   - 日時: 9月12日（木） 14:00-15:00
+   - 場所: 同上</code></pre>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="evaluation"><i class="fas fa-chart-line"></i> 7. プロジェクトの評価と改善</h2>
+
+            <h3 id="success-criteria">7.1 成功基準の設定</h3>
+            <p>プロジェクト開始時に、何をもって「成功」とみなすかを明確に定義します。</p>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-bullseye"></i> SMARTな目標設定</h4>
+                <ul>
+                    <li><strong>S (Specific):</strong> 具体的である</li>
+                    <li><strong>M (Measurable):</strong> 測定可能である</li>
+                    <li><strong>A (Achievable):</strong> 達成可能である</li>
+                    <li><strong>R (Relevant):</strong> 関連性がある（プロジェクトの目的に沿っている）</li>
+                    <li><strong>T (Time-bound):</strong> 期限が明確である</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h4><i class="fas fa-check-double"></i> 成功基準の例</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>評価項目</th>
+                            <th>成功基準</th>
+                            <th>測定方法</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>スケジュール</strong></td>
+                            <td>2025年3月末までに運用開始</td>
+                            <td>実際の運用開始日</td>
+                        </tr>
+                        <tr>
+                            <td><strong>コスト</strong></td>
+                            <td>予算2億円以内で完了</td>
+                            <td>最終支出額</td>
+                        </tr>
+                        <tr>
+                            <td><strong>スコープ</strong></td>
+                            <td>全児童3,500名に端末配備</td>
+                            <td>配備台数</td>
+                        </tr>
+                        <tr>
+                            <td><strong>品質</strong></td>
+                            <td>ネットワーク稼働率95%以上</td>
+                            <td>ログデータ分析</td>
+                        </tr>
+                        <tr>
+                            <td><strong>活用度</strong></td>
+                            <td>教員の端末活用率80%以上</td>
+                            <td>MDMデータ、アンケート</td>
+                        </tr>
+                        <tr>
+                            <td><strong>満足度</strong></td>
+                            <td>教員満足度4.0以上（5段階）</td>
+                            <td>アンケート調査</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="kpi-monitoring">7.2 KPIのモニタリング</h3>
+            <p><strong>KPI（Key Performance Indicator）:</strong> プロジェクトの進捗や成果を測る重要指標</p>
+
+            <div class="example-box">
+                <h4><i class="fas fa-tachometer-alt"></i> プロジェクトKPIの例</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>KPI</th>
+                            <th>目標値</th>
+                            <th>現状</th>
+                            <th>達成率</th>
+                            <th>状況</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>進捗率</td>
+                            <td>70%（9月時点）</td>
+                            <td>65%</td>
+                            <td>93%</td>
+                            <td>⚠️ やや遅れ</td>
+                        </tr>
+                        <tr>
+                            <td>端末配備率</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                            <td>✅ 達成</td>
+                        </tr>
+                        <tr>
+                            <td>研修受講率</td>
+                            <td>90%</td>
+                            <td>75%</td>
+                            <td>83%</td>
+                            <td>⚠️ 要改善</td>
+                        </tr>
+                        <tr>
+                            <td>予算消化率</td>
+                            <td>60%（9月時点）</td>
+                            <td>58%</td>
+                            <td>97%</td>
+                            <td>✅ 順調</td>
+                        </tr>
+                        <tr>
+                            <td>トラブル件数</td>
+                            <td>50件以下/月</td>
+                            <td>32件</td>
+                            <td>-</td>
+                            <td>✅ 良好</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 id="lessons-learned">7.3 教訓の文書化</h3>
+            <p>プロジェクト終了後（または途中でも）、うまくいったこと・いかなかったことを記録し、次のプロジェクトに活かします。</p>
+
+            <div class="method-box">
+                <h4><i class="fas fa-book-open"></i> 振り返りの観点</h4>
+                <ul>
+                    <li><strong>Keep（続けること）:</strong> うまくいったので今後も継続すべきこと</li>
+                    <li><strong>Problem（問題点）:</strong> うまくいかなかったこと、課題</li>
+                    <li><strong>Try（改善策）:</strong> 次に試してみたいこと、改善アイデア</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h4><i class="fas fa-pencil-alt"></i> 教訓の文書化例</h4>
+                <p><strong>Keep（良かった点）:</strong></p>
+                <ul>
+                    <li>週次の定例会議で進捗を細かく確認できた → 課題の早期発見につながった</li>
+                    <li>教員との事前コミュニケーションを重視 → 抵抗感が少なかった</li>
+                    <li>業者選定時に保守体制を重視 → トラブル対応が迅速だった</li>
+                </ul>
+                <p><strong>Problem（課題・反省点）:</strong></p>
+                <ul>
+                    <li>一部の学校で配線工事が遅延 → スケジュールにバッファが不足していた</li>
+                    <li>研修参加率が予想より低かった → 日程調整が不十分だった</li>
+                    <li>保護者への説明が遅れた → 不安の声が上がった</li>
+                </ul>
+                <p><strong>Try（次回への改善策）:</strong></p>
+                <ul>
+                    <li>クリティカルパスには最低2週間のバッファを設ける</li>
+                    <li>研修日程は学校の行事予定と早期に調整</li>
+                    <li>保護者説明会をプロジェクト初期に実施</li>
+                    <li>リスク管理台帳を毎週更新し、先手を打つ</li>
+                </ul>
+            </div>
+
+            <h3 id="final-report">7.4 最終報告書の作成</h3>
+
+            <div class="concept-box">
+                <h4><i class="fas fa-file-pdf"></i> 最終報告書に含める内容</h4>
+                <ul>
+                    <li><strong>プロジェクト概要:</strong> 目的、スコープ、期間、予算</li>
+                    <li><strong>成果物:</strong> 配備した端末台数、構築したネットワークなど</li>
+                    <li><strong>実績:</strong> スケジュール・コスト・品質の達成状況</li>
+                    <li><strong>KPIの達成状況:</strong> 目標値と実績値の比較</li>
+                    <li><strong>課題と対応:</strong> 発生した課題とその解決策</li>
+                    <li><strong>教訓:</strong> 今後のプロジェクトへの提言</li>
+                    <li><strong>残存課題:</strong> 未解決の課題、継続監視事項</li>
+                    <li><strong>今後の運用計画:</strong> 運用フェーズへの引き継ぎ事項</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 id="summary"><i class="fas fa-check-circle"></i> まとめ</h2>
+            
+            <div class="checklist">
+                <h3><i class="fas fa-tasks"></i> プロジェクトマネジメントの重要ポイント</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> プロジェクトは「有期性」「独自性」「段階的詳細化」が特徴</li>
+                    <li><i class="fas fa-check"></i> スコープ・スケジュール・コストのトリプルコンストレイントを意識</li>
+                    <li><i class="fas fa-check"></i> WBSで作業を分解し、ガントチャートで進捗を可視化</li>
+                    <li><i class="fas fa-check"></i> クリティカルパスの遅延はプロジェクト全体の遅延に直結</li>
+                    <li><i class="fas fa-check"></i> ステークホルダーの影響力と関心度に応じたコミュニケーション</li>
+                    <li><i class="fas fa-check"></i> リスクは事前に特定・評価し、対応策を準備</li>
+                    <li><i class="fas fa-check"></i> 定例会議と進捗報告でプロジェクトを「見える化」</li>
+                    <li><i class="fas fa-check"></i> プロジェクト終了後は教訓を文書化し、次に活かす</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h3><i class="fas fa-lightbulb"></i> ICT支援員としての役割</h3>
+                <p>プロジェクトマネジメントにおいて、ICT支援員は以下の役割を担います。</p>
+                <ul>
+                    <li><strong>現場の声の収集:</strong> 教員・児童生徒の課題やニーズをPMに報告</li>
+                    <li><strong>タスクの実行:</strong> 端末設定、研修サポート、トラブル対応など</li>
+                    <li><strong>進捗の報告:</strong> 配備状況、トラブル件数などのデータ提供</li>
+                    <li><strong>課題の早期発見:</strong> 現場で発生した問題を速やかにエスカレーション</li>
+                    <li><strong>ステークホルダーとの橋渡し:</strong> 教員とPM、業者との連携</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section related-pages">
+            <h2><i class="fas fa-link"></i> 関連ページ</h2>
+            <ul>
+                <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                <li><a href="data-analytics.html"><i class="fas fa-chart-bar"></i> データ分析・活用</a></li>
+                <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達 <span class="coming-soon">(Coming Soon)</span></a></li>
+                <li><a href="troubleshooting.html"><i class="fas fa-tools"></i> トラブルシューティング</a></li>
+            </ul>
+        </section>
+
+        <section class="content-section references">
+            <h2><i class="fas fa-bookmark"></i> 参考資料</h2>
+            <ul>
+                <li><a href="https://www.mext.go.jp/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> 文部科学省</a></li>
+                <li><a href="https://www.pmi.org/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> PMI（Project Management Institute）</a></li>
+                <li><a href="https://www.ipa.go.jp/ikc/info/pm_20060904.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> IPA プロジェクトマネジメント</a></li>
+                <li><a href="https://www.soumu.go.jp/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> 総務省</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

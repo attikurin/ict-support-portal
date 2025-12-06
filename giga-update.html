@@ -17,6 +17,17 @@
         </div>
     </div>
 
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
     <nav class="main-nav">
         <div class="container">
             <ul class="nav-menu">
@@ -62,6 +73,17 @@
                 </li>
                 
                 <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
                     <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
                     <ul class="dropdown-menu">
                         <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
@@ -82,7 +104,7 @@
 
         <section class="content-section">
             <div class="alert alert-info">
-                <strong><i class="fas fa-calendar-alt"></i> 最終更新: 2025年10月</strong><br>
+                <strong><i class="fas fa-calendar-alt"></i> 最終更新: 2025年12月</strong><br>
                 GIGAスクール構想は第2期に入り、新たな展開を見せています。最新の政策動向と今後の方向性をまとめました。
             </div>
 
@@ -338,11 +360,12 @@
         <div class="container">
             <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
             <p>教育現場のICT活用を支援する総合情報サイト</p>
-            <p class="update-info">最終更新: 2025年10月</p>
+            <p class="update-info">最終更新: 2025年12月</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
 </body>
 </html>

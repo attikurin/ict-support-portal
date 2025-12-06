@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdTechツール比較・導入ガイド - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="学校現場で使える教育テクノロジー（EdTech）ツールの比較と選定方法。学習管理システム（LMS）、協働学習ツール、評価システム、コンテンツ、費用対効果を網羅。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-newspaper"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-tools"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-landmark"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-puzzle-piece"></i> EdTechツール比較・導入ガイド</h1>
+                <p class="lead">学校現場で使える教育テクノロジー（EdTech）ツールの比較と選定方法。学習管理システム（LMS）、協働学習ツール、評価システム、コンテンツ、費用対効果を網羅</p>
+            </div>
+
+            <!-- 1. EdTechツールとは -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-lightbulb"></i> EdTechツールとは</h2>
+                </div>
+                <div class="info-box bg-gradient-primary">
+                    <h4><i class="fas fa-info-circle"></i> EdTech（Education × Technology）の定義</h4>
+                    <p>EdTech（エドテック）とは、教育（Education）と技術（Technology）を組み合わせた造語で、ICTを活用して教育の質を向上させるツールやサービスのことを指します。</p>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-chalkboard"></i>
+                        </div>
+                        <h4>学習管理システム（LMS）</h4>
+                        <p>Google Classroom、Microsoft Teams for Education、Moodleなど、授業管理・課題配信・評価を統合したシステム</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>協働学習ツール</h4>
+                        <p>Padlet、Miro、Jamboard、ロイロノートなど、児童生徒が協働で学習できるデジタルホワイトボードやプラットフォーム</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>評価・アセスメント</h4>
+                        <p>Kahoot!、Quizizz、Google Forms、スタディログなど、形成的評価や学習状況の可視化ツール</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h4>デジタル教材・コンテンツ</h4>
+                        <p>NHK for School、スタディサプリ、Qubena、eboard、ドリルパークなど、学習コンテンツを提供するサービス</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-danger">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h4>動画配信・制作</h4>
+                        <p>YouTube、Flipgrid、Loom、Clipchamp、iMovieなど、動画を活用した学習支援ツール</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-secondary">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>プログラミング教育</h4>
+                        <p>Scratch、Viscuit、micro:bit、Code.org、プログラミングゼミなど、プログラミング的思考を育成するツール</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. LMS（学習管理システム）比較 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-chalkboard"></i> LMS（学習管理システム）比較</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 主要LMSの機能比較</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>システム名</th>
+                                <th>費用</th>
+                                <th>特徴</th>
+                                <th>主な機能</th>
+                                <th>対象</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Google Classroom</strong></td>
+                                <td>無料（Google Workspace for Educationに含まれる）</td>
+                                <td>シンプルで使いやすい、Googleサービスと連携</td>
+                                <td>課題配信、提出管理、採点、ストリーム機能、Google Meetとの統合</td>
+                                <td>小中高大学</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Microsoft Teams for Education</strong></td>
+                                <td>無料（Microsoft 365 Educationに含まれる）</td>
+                                <td>チャット・ビデオ会議との統合、Office連携</td>
+                                <td>課題、クイズ、チャネル、ビデオ会議、OneDrive連携、Formsとの統合</td>
+                                <td>小中高大学</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Moodle</strong></td>
+                                <td>無料（オープンソース）※サーバー運用費用は別途</td>
+                                <td>高機能、カスタマイズ性が高い、世界中で利用</td>
+                                <td>課題、小テスト、フォーラム、ワークショップ、バッジ、詳細な成績管理</td>
+                                <td>高大学、専門学校</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ロイロノート・スクール</strong></td>
+                                <td>有料（自治体・学校単位契約）</td>
+                                <td>日本の教育現場に特化、シンキングツール充実</td>
+                                <td>カード型思考ツール、提出箱、テスト機能、共有機能、シンキングツール</td>
+                                <td>小中高</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Classi</strong></td>
+                                <td>有料（学校単位契約）</td>
+                                <td>校務支援機能との統合、日本の高校向け</td>
+                                <td>学習記録、ポートフォリオ、校務支援、保護者連絡、進路指導支援</td>
+                                <td>主に高校</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="note" style="margin-top: 1rem; font-size: 0.9rem; color: #666;"><i class="fas fa-info-circle"></i> <strong>※価格・機能は変動する可能性があります。</strong>最新の料金プラン、機能詳細は各公式サイトをご確認ください。</p>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-lightbulb"></i> LMS選定のポイント</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>既存環境との互換性</strong>：すでにGoogle Workspace / Microsoft 365を導入しているか</li>
+                        <li><i class="fas fa-check"></i> <strong>教員のITスキル</strong>：複雑な機能が必要か、シンプルさを重視するか</li>
+                        <li><i class="fas fa-check"></i> <strong>費用対効果</strong>：無料ツールで十分か、有料ツールの追加機能が必要か</li>
+                        <li><i class="fas fa-check"></i> <strong>サポート体制</strong>：日本語サポート、研修、マニュアルの充実度</li>
+                        <li><i class="fas fa-check"></i> <strong>児童生徒の学齢</strong>：小学校低学年には直感的なUI、高校・大学には高機能なツール</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. 協働学習ツール比較 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-users"></i> 協働学習ツール比較</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 主要協働学習ツールの比較</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>ツール名</th>
+                                <th>費用</th>
+                                <th>特徴</th>
+                                <th>活用例</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Padlet</strong></td>
+                                <td>無料プラン（制限あり）、有料プラン（月額$8〜）</td>
+                                <td>デジタル掲示板、直感的な操作、多様な表示形式</td>
+                                <td>ブレインストーミング、意見共有、ポートフォリオ、KWLチャート</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Google Jamboard</strong></td>
+                                <td>無料（Google Workspace利用時）</td>
+                                <td>シンプルなホワイトボード、リアルタイム共同編集</td>
+                                <td>グループワーク、思考の可視化、アイデア整理</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Miro</strong></td>
+                                <td>無料プラン、有料プラン（月額$8〜）</td>
+                                <td>高機能、テンプレート豊富、大規模プロジェクト向け</td>
+                                <td>マインドマップ、プロジェクト計画、フローチャート</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ロイロノート</strong></td>
+                                <td>有料（学校契約）</td>
+                                <td>カード型思考ツール、提出箱機能、日本の教育現場向け</td>
+                                <td>思考の可視化、プレゼンテーション、協働学習、相互評価</td>
+                            </tr>
+                            <tr>
+                                <td><strong>MetaMoji ClassRoom</strong></td>
+                                <td>有料（学校契約）</td>
+                                <td>手書き対応、リアルタイム共有、教材配信</td>
+                                <td>ノート共有、協働制作、添削、個別指導</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Microsoft Whiteboard</strong></td>
+                                <td>無料（Microsoft 365利用時）</td>
+                                <td>シンプル、Teams連携、無限キャンバス</td>
+                                <td>ブレインストーミング、図解、グループディスカッション</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="note" style="margin-top: 1rem; font-size: 0.9rem; color: #666;"><i class="fas fa-info-circle"></i> <strong>※価格・機能は変動する可能性があります。</strong>最新情報は各公式サイトをご確認ください。</p>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>ブレインストーミング</h4>
+                        <p><strong>推奨：</strong> Padlet、Jamboard<br>
+                        <strong>理由：</strong> 直感的で、多数の意見を素早く集められる</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>思考の可視化</h4>
+                        <p><strong>推奨：</strong> ロイロノート、Miro<br>
+                        <strong>理由：</strong> カード型・マインドマップで思考過程を整理しやすい</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <h4>手書きノート共有</h4>
+                        <p><strong>推奨：</strong> MetaMoji ClassRoom<br>
+                        <strong>理由：</strong> 手書き対応が優れ、添削機能も充実</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 評価・アセスメントツール比較 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-line"></i> 評価・アセスメントツール比較</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 形成的評価ツールの比較</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>ツール名</th>
+                                <th>費用</th>
+                                <th>特徴</th>
+                                <th>活用場面</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Kahoot!</strong></td>
+                                <td>無料プラン、有料プラン（月額$3.99〜）</td>
+                                <td>ゲーミフィケーション、リアルタイムクイズ、盛り上がる</td>
+                                <td>授業の振り返り、導入クイズ、復習、イベント</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Quizizz</strong></td>
+                                <td>無料プラン、有料プラン（月額$4.99〜）</td>
+                                <td>自分のペースで回答、宿題にも使える、ユーモラスなミーム</td>
+                                <td>宿題、復習、個別学習、授業中の確認テスト</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Google Forms</strong></td>
+                                <td>無料</td>
+                                <td>シンプル、自動採点、スプレッドシート連携</td>
+                                <td>アンケート、小テスト、自己評価、振り返り</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Microsoft Forms</strong></td>
+                                <td>無料（Microsoft 365利用時）</td>
+                                <td>Teams連携、自動採点、分岐設定可能</td>
+                                <td>クイズ、アンケート、出欠確認、理解度チェック</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mentimeter</strong></td>
+                                <td>無料プラン（制限あり）、有料プラン（月額$11.99〜）</td>
+                                <td>リアルタイム投票、ワードクラウド、Q&A</td>
+                                <td>意見収集、リアルタイム投票、双方向授業</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plickers</strong></td>
+                                <td>無料</td>
+                                <td>紙カードでデジタル回答、端末不要、即座に結果表示</td>
+                                <td>低学年の理解度チェック、端末がない環境、素早い確認</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="note" style="margin-top: 1rem; font-size: 0.9rem; color: #666;"><i class="fas fa-info-circle"></i> <strong>※価格・機能は変動する可能性があります。</strong>最新情報は各公式サイトをご確認ください。</p>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-graduation-cap"></i> 評価ツール選定のポイント</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>即時性</strong>：授業中にリアルタイムで結果を表示したい → Kahoot!、Mentimeter</li>
+                        <li><i class="fas fa-check"></i> <strong>個別ペース</strong>：児童生徒が自分のペースで進められる → Quizizz、Google Forms</li>
+                        <li><i class="fas fa-check"></i> <strong>端末環境</strong>：1人1台端末がない場合 → Plickers（紙カード方式）</li>
+                        <li><i class="fas fa-check"></i> <strong>データ分析</strong>：詳細な学習データを蓄積したい → Google Forms（スプレッドシート連携）</li>
+                        <li><i class="fas fa-check"></i> <strong>エンゲージメント</strong>：児童生徒の意欲を高めたい → Kahoot!（ゲーム性）</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 5. デジタル教材・コンテンツサービス -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-book-open"></i> デジタル教材・コンテンツサービス</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 主要デジタル教材の比較</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>サービス名</th>
+                                <th>費用</th>
+                                <th>対象学年</th>
+                                <th>特徴</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>NHK for School</strong></td>
+                                <td>無料</td>
+                                <td>小中高</td>
+                                <td>約2,000本の教育動画、学習指導要領に準拠、授業ですぐ使える</td>
+                            </tr>
+                            <tr>
+                                <td><strong>スタディサプリ</strong></td>
+                                <td>有料（月額1,815円〜、学校導入は別途）</td>
+                                <td>小4〜高3</td>
+                                <td>プロ講師の映像授業、確認テスト、個別学習に最適</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Qubena（キュビナ）</strong></td>
+                                <td>有料（自治体・学校契約）</td>
+                                <td>小中</td>
+                                <td>AI型ドリル教材、個別最適化学習、算数・数学に強い</td>
+                            </tr>
+                            <tr>
+                                <td><strong>eboard（イーボード）</strong></td>
+                                <td>無料（NPO運営）、学校向けプランあり</td>
+                                <td>小中高</td>
+                                <td>映像授業+問題演習、不登校・学び直し支援に強み</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ドリルパーク</strong></td>
+                                <td>有料（学校契約）</td>
+                                <td>小中</td>
+                                <td>デジタルドリル、漢字・計算の反復練習に特化</td>
+                            </tr>
+                            <tr>
+                                <td><strong>アオイゼミ</strong></td>
+                                <td>無料プラン、有料プラン（月額3,500円〜）</td>
+                                <td>中高</td>
+                                <td>ライブ授業、質問機能、定期テスト対策</td>
+                            </tr>
+                            <tr>
+                                <td><strong>学びエイド</strong></td>
+                                <td>有料（学校契約）</td>
+                                <td>高</td>
+                                <td>大学入試対策、短時間映像授業（5〜15分）、全教科対応</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <h4>授業での活用</h4>
+                        <p><strong>推奨：</strong> NHK for School、スタディサプリ<br>
+                        短時間で質の高い映像を授業に組み込める</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h4>個別最適化学習</h4>
+                        <p><strong>推奨：</strong> Qubena、eboard<br>
+                        AI・データ分析で一人一人に合った学習を提供</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h4>不登校・学び直し支援</h4>
+                        <p><strong>推奨：</strong> eboard、スタディサプリ<br>
+                        自宅で自分のペースで学習できる</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>大学入試対策</h4>
+                        <p><strong>推奨：</strong> 学びエイド、スタディサプリ<br>
+                        受験に特化した高品質な映像授業</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. ツール導入の実践ステップ -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-tasks"></i> ツール導入の実践ステップ</h2>
+                </div>
+
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>ニーズの明確化</h4>
+                            <ul>
+                                <li>何を解決したいのか（課題配信の効率化、協働学習の促進、個別最適化学習など）</li>
+                                <li>どの教科・学年で使うのか</li>
+                                <li>教員・児童生徒のICTスキルレベル</li>
+                                <li>既存の環境（Google Workspace / Microsoft 365の利用状況）</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>候補ツールの比較・検討</h4>
+                            <ul>
+                                <li>機能比較表の作成（このページの比較表を活用）</li>
+                                <li>無料トライアルの実施</li>
+                                <li>他校の導入事例調査</li>
+                                <li>費用対効果の試算</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>小規模パイロット導入</h4>
+                            <ul>
+                                <li>まず1〜2クラスでの試行</li>
+                                <li>ICTスキルの高い教員からスタート</li>
+                                <li>使用感のフィードバック収集</li>
+                                <li>トラブル・課題の洗い出し</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>教員研修の実施</h4>
+                            <ul>
+                                <li>基本操作研修（全教員対象）</li>
+                                <li>活用事例の共有</li>
+                                <li>授業での具体的な使い方のデモンストレーション</li>
+                                <li>マニュアル・ヘルプデスクの整備</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>段階的な全校展開</h4>
+                            <ul>
+                                <li>学年ごと、教科ごとなど段階的に拡大</li>
+                                <li>継続的なフォローアップ研修</li>
+                                <li>教員間の情報共有（実践事例の蓄積）</li>
+                                <li>ICT支援員による常時サポート体制</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>効果検証と改善</h4>
+                            <ul>
+                                <li>利用状況のモニタリング（使用頻度、活用パターン）</li>
+                                <li>教員・児童生徒へのアンケート</li>
+                                <li>学習効果の測定</li>
+                                <li>継続利用の判断、契約更新の検討</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. ICT支援員の役割とサポートポイント -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-user-cog"></i> ICT支援員の役割とサポートポイント</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>1. ツール調査・比較</h4>
+                        <ul class="compact-list">
+                            <li>最新EdTechツールの情報収集</li>
+                            <li>機能・費用の比較表作成</li>
+                            <li>他自治体・他校の導入事例調査</li>
+                            <li>無料トライアルの実施サポート</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h4>2. 研修・マニュアル作成</h4>
+                        <ul class="compact-list">
+                            <li>教員向け研修の企画・実施</li>
+                            <li>操作マニュアルの作成</li>
+                            <li>活用事例集の編集</li>
+                            <li>動画チュートリアルの制作</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h4>3. 日常的なサポート</h4>
+                        <ul class="compact-list">
+                            <li>教員からの操作質問への回答</li>
+                            <li>授業でのツール活用のアドバイス</li>
+                            <li>トラブルシューティング対応</li>
+                            <li>アカウント管理・権限設定のサポート</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>4. 活用促進</h4>
+                        <ul class="compact-list">
+                            <li>具体的な活用場面の提案</li>
+                            <li>先進的な実践事例の紹介</li>
+                            <li>校内研修会での実践発表のサポート</li>
+                            <li>教員コミュニティの形成支援</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-danger">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>5. 効果測定・改善提案</h4>
+                        <ul class="compact-list">
+                            <li>利用状況データの収集・分析</li>
+                            <li>教員・児童生徒へのアンケート実施</li>
+                            <li>費用対効果の評価</li>
+                            <li>継続利用・契約更新の提案</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-secondary">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>6. セキュリティ・プライバシー管理</h4>
+                        <ul class="compact-list">
+                            <li>個人情報保護の確認</li>
+                            <li>利用規約・プライバシーポリシーのチェック</li>
+                            <li>アカウント管理のルール策定</li>
+                            <li>情報セキュリティ研修の実施</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-exclamation-triangle"></i> EdTech導入でよくある失敗とその対策</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>よくある失敗</th>
+                                <th>原因</th>
+                                <th>対策</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>導入したが使われない</td>
+                                <td>教員の負担増、使い方がわからない</td>
+                                <td>段階的導入、丁寧な研修、活用事例の共有</td>
+                            </tr>
+                            <tr>
+                                <td>児童生徒が操作できない</td>
+                                <td>UI/UXの複雑さ、事前指導不足</td>
+                                <td>シンプルなツール選定、児童生徒向けチュートリアル</td>
+                            </tr>
+                            <tr>
+                                <td>費用がかさむ</td>
+                                <td>複数ツールの重複契約、利用率低迷</td>
+                                <td>無料ツールの活用、統合型LMSの検討、利用実態の把握</td>
+                            </tr>
+                            <tr>
+                                <td>セキュリティ事故</td>
+                                <td>アカウント管理の甘さ、情報リテラシー不足</td>
+                                <td>アカウント管理ルール策定、情報モラル教育の徹底</td>
+                            </tr>
+                            <tr>
+                                <td>保護者の理解不足</td>
+                                <td>説明不足、個人情報への不安</td>
+                                <td>保護者説明会の実施、プライバシーポリシーの周知</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

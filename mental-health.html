@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メンタルヘルスケア - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="ICT支援員のためのメンタルヘルスケア。ストレス管理、バーンアウト予防、セルフケア、相談窓口、ワークライフバランスを網羅。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-newspaper"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-tools"></i> ICT機器一覧</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> 情報セキュリティ</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-landmark"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-heart"></i> メンタルヘルスケア</h1>
+                <p class="lead">ICT支援員のためのメンタルヘルスケア。ストレス管理、バーンアウト予防、セルフケア、相談窓口、ワークライフバランスを網羅</p>
+            </div>
+
+            <!-- 1. メンタルヘルスの重要性 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-info-circle"></i> メンタルヘルスの重要性</h2>
+                </div>
+                <div class="info-box bg-gradient-primary">
+                    <h4><i class="fas fa-heart"></i> 心の健康を大切に</h4>
+                    <p>ICT支援員は、複数校の巡回、多様な業務、突発的なトラブル対応、人間関係の調整など、心理的な負担が大きい仕事です。心の健康を保つことは、質の高い支援を継続的に提供するために不可欠です。セルフケアは「自己中心的」ではなく、「持続可能な働き方」のための必要な投資です。</p>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-danger">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h4>ICT支援員のストレス要因</h4>
+                        <ul class="compact-list">
+                            <li>複数校巡回による移動疲労</li>
+                            <li>突発的なトラブル対応</li>
+                            <li>教員との人間関係</li>
+                            <li>時間に追われる業務</li>
+                            <li>期待と現実のギャップ</li>
+                            <li>孤独感（一人で複数校担当）</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h4>バーンアウト（燃え尽き症候群）</h4>
+                        <p>過度のストレスにより、心身ともに疲弊し、意欲を失う状態。</p>
+                        <ul class="compact-list">
+                            <li><strong>症状：</strong> 疲労感、無気力、イライラ</li>
+                            <li><strong>原因：</strong> 過労、達成感の欠如、孤立</li>
+                            <li><strong>予防：</strong> セルフケア、相談、休息</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <h4>メンタルヘルスケアの効果</h4>
+                        <ul class="compact-list">
+                            <li>業務パフォーマンスの向上</li>
+                            <li>長期的なキャリア継続</li>
+                            <li>ポジティブな人間関係</li>
+                            <li>創造性・問題解決力の向上</li>
+                            <li>充実したプライベート</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>セルフチェック</h4>
+                        <p>以下に当てはまる場合は要注意：</p>
+                        <ul class="compact-list">
+                            <li>常に疲れている</li>
+                            <li>仕事のことで頭がいっぱい</li>
+                            <li>イライラしやすい</li>
+                            <li>眠れない、食欲がない</li>
+                            <li>仕事に行きたくない</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. ストレス管理の基本 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-brain"></i> ストレス管理の基本</h2>
+                </div>
+
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>ストレスに気づく</h4>
+                            <ul>
+                                <li><strong>身体的サイン：</strong> 頭痛、肩こり、胃痛、疲労感</li>
+                                <li><strong>心理的サイン：</strong> イライラ、不安、集中力低下</li>
+                                <li><strong>行動的サイン：</strong> 食べ過ぎ/食欲不振、眠れない、引きこもり</li>
+                                <li>日記やアプリで自分の状態を記録</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>ストレス要因を特定する</h4>
+                            <ul>
+                                <li><strong>何が：</strong> どの業務・場面でストレスを感じるか</li>
+                                <li><strong>なぜ：</strong> なぜそれがストレスになるのか</li>
+                                <li><strong>頻度：</strong> どれくらいの頻度で発生するか</li>
+                                <li>書き出すことで客観的に把握</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>ストレス対処法を実践</h4>
+                            <ul>
+                                <li><strong>問題焦点型：</strong> ストレス要因そのものを解決（業務改善、相談）</li>
+                                <li><strong>情動焦点型：</strong> ストレスへの感情的反応を軽減（リラックス、気分転換）</li>
+                                <li>両方のアプローチを組み合わせる</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>定期的に振り返る</h4>
+                            <ul>
+                                <li>週1回、自分の心身の状態をチェック</li>
+                                <li>ストレス対処法の効果を確認</li>
+                                <li>必要に応じて対処法を変更</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-heartbeat"></i> ストレスレベルのセルフチェック</h4>
+                    <p>過去1ヶ月で以下の症状がどれくらいありましたか？</p>
+                    <ul class="checklist">
+                        <li><i class="fas fa-square"></i> 神経過敏に感じた</li>
+                        <li><i class="fas fa-square"></i> 絶望的だと感じた</li>
+                        <li><i class="fas fa-square"></i> そわそわ、落ち着かなく感じた</li>
+                        <li><i class="fas fa-square"></i> 気分が沈んで、何が起こっても気が晴れない</li>
+                        <li><i class="fas fa-square"></i> 何をするのも骨折りだと感じた</li>
+                        <li><i class="fas fa-square"></i> 自分は価値のない人間だと感じた</li>
+                    </ul>
+                    <p><strong>3つ以上該当：</strong> ストレスレベルが高い可能性。セルフケアを強化し、必要に応じて相談を。</p>
+                </div>
+            </section>
+
+            <!-- 3. セルフケアの実践 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-spa"></i> セルフケアの実践</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <h4>十分な睡眠</h4>
+                        <ul class="compact-list">
+                            <li><strong>7〜8時間：</strong> 毎日同じ時間に寝起き</li>
+                            <li><strong>寝る前1時間：</strong> スマホ・PCを見ない</li>
+                            <li><strong>リラックス：</strong> 軽いストレッチ、読書</li>
+                            <li><strong>環境：</strong> 暗く、静かに、適温</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4>バランスの取れた食事</h4>
+                        <ul class="compact-list">
+                            <li><strong>3食きちんと：</strong> 朝食を抜かない</li>
+                            <li><strong>栄養バランス：</strong> 野菜、タンパク質、炭水化物</li>
+                            <li><strong>水分補給：</strong> 1日1.5〜2リットル</li>
+                            <li><strong>避ける：</strong> 過度のカフェイン、糖分</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h4>適度な運動</h4>
+                        <ul class="compact-list">
+                            <li><strong>毎日30分：</strong> ウォーキング、ジョギング</li>
+                            <li><strong>ストレッチ：</strong> 朝晩10分ずつ</li>
+                            <li><strong>ヨガ：</strong> リラックス効果大</li>
+                            <li><strong>通勤：</strong> 一駅歩く、階段を使う</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-smile-beam"></i>
+                        </div>
+                        <h4>趣味・楽しみ</h4>
+                        <ul class="compact-list">
+                            <li><strong>没頭できる趣味：</strong> 読書、音楽、手芸</li>
+                            <li><strong>自然に触れる：</strong> 散歩、ハイキング</li>
+                            <li><strong>人と会う：</strong> 友人、家族との時間</li>
+                            <li><strong>笑う：</strong> お笑い、コメディ鑑賞</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-danger">
+                            <i class="fas fa-om"></i>
+                        </div>
+                        <h4>リラクゼーション</h4>
+                        <ul class="compact-list">
+                            <li><strong>深呼吸：</strong> 4秒吸って、8秒吐く</li>
+                            <li><strong>瞑想：</strong> 1日5〜10分、マインドフルネス</li>
+                            <li><strong>入浴：</strong> ぬるめのお湯にゆっくり</li>
+                            <li><strong>音楽：</strong> リラックスできる音楽</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-secondary">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <h4>日記・感情の表出</h4>
+                        <ul class="compact-list">
+                            <li><strong>感情日記：</strong> 今日の気持ちを書く</li>
+                            <li><strong>感謝日記：</strong> 良かったことを3つ書く</li>
+                            <li><strong>話す：</strong> 信頼できる人に話す</li>
+                            <li><strong>吐き出す：</strong> ため込まない</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-gradient-success">
+                    <h4><i class="fas fa-calendar-day"></i> 1日のセルフケアルーティン例</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>朝（6:30-7:30）：</strong> 起床、軽いストレッチ、朝食、深呼吸5分</li>
+                        <li><i class="fas fa-check"></i> <strong>通勤（7:30-8:30）：</strong> 音楽を聴く、Podcast、一駅歩く</li>
+                        <li><i class="fas fa-check"></i> <strong>昼休み（12:00-13:00）：</strong> 外に出て散歩10分、栄養バランスの良い食事</li>
+                        <li><i class="fas fa-check"></i> <strong>夕方（17:00-18:00）：</strong> 今日の振り返り3分、明日の予定確認</li>
+                        <li><i class="fas fa-check"></i> <strong>帰宅後（19:00-21:00）：</strong> 趣味の時間、家族との会話、入浴</li>
+                        <li><i class="fas fa-check"></i> <strong>就寝前（22:00-23:00）：</strong> 感謝日記3つ、軽いストレッチ、スマホOFF</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 4. バーンアウト予防 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-fire-extinguisher"></i> バーンアウト予防</h2>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> バーンアウトの段階と対策</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>段階</th>
+                                <th>症状</th>
+                                <th>対策</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>第1段階<br>（熱狂期）</strong></td>
+                                <td>仕事に夢中、長時間労働も苦にならない、自分の限界を認識していない</td>
+                                <td>適度な休息を意識的に取る、完璧主義を手放す、周囲に頼る</td>
+                            </tr>
+                            <tr>
+                                <td><strong>第2段階<br>（停滞期）</strong></td>
+                                <td>疲労感、やりがいの低下、イライラ、睡眠不足</td>
+                                <td>セルフケアの強化、業務の見直し、上司・同僚に相談</td>
+                            </tr>
+                            <tr>
+                                <td><strong>第3段階<br>（消耗期）</strong></td>
+                                <td>無気力、自己否定、集中力低下、身体症状（頭痛、胃痛）</td>
+                                <td>休暇取得、専門家への相談、業務量の調整</td>
+                            </tr>
+                            <tr>
+                                <td><strong>第4段階<br>（燃え尽き期）</strong></td>
+                                <td>完全な疲弊、抑うつ、離職願望、日常生活にも支障</td>
+                                <td>休職、医療機関受診、カウンセリング、環境変更の検討</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>予防策1：境界線を引く</h4>
+                        <ul class="compact-list">
+                            <li><strong>定時退勤：</strong> 残業は計画的に、ダラダラ残らない</li>
+                            <li><strong>休日は休む：</strong> 仕事のメールを見ない</li>
+                            <li><strong>断る勇気：</strong> キャパオーバーの依頼は断る</li>
+                            <li><strong>プライベート確保：</strong> 仕事とプライベートを分ける</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>予防策2：サポートネットワーク</h4>
+                        <ul class="compact-list">
+                            <li><strong>同僚との交流：</strong> 悩みや成功体験を共有</li>
+                            <li><strong>上司との定期面談：</strong> 業務負担の相談</li>
+                            <li><strong>コミュニティ参加：</strong> ICT支援員の勉強会</li>
+                            <li><strong>メンター：</strong> 相談できる先輩を見つける</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>予防策3：達成感を大切に</h4>
+                        <ul class="compact-list">
+                            <li><strong>小さな成功：</strong> 日々の小さな成功を認める</li>
+                            <li><strong>振り返り：</strong> 月1回、自分の成長を確認</li>
+                            <li><strong>感謝：</strong> 教員・児童生徒からの感謝を記録</li>
+                            <li><strong>目標設定：</strong> 達成可能な目標を設定</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-pause"></i>
+                        </div>
+                        <h4>予防策4：定期的な休息</h4>
+                        <ul class="compact-list">
+                            <li><strong>有給休暇：</strong> 計画的に取得（年間10日以上）</li>
+                            <li><strong>リフレッシュ休暇：</strong> 連休で心身をリセット</li>
+                            <li><strong>休憩：</strong> 業務の合間に小休憩</li>
+                            <li><strong>完全オフ：</strong> 月1回は完全に仕事を忘れる日</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. 相談窓口・専門家への相談 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-hands-helping"></i> 相談窓口・専門家への相談</h2>
+                </div>
+
+                <div class="info-box bg-gradient-warning">
+                    <h4><i class="fas fa-exclamation-circle"></i> 一人で抱え込まないで</h4>
+                    <p>「相談する」ことは弱さではありません。早めに相談することで、問題の深刻化を防ぐことができます。専門家のサポートを受けることは、自分自身を大切にする行動です。</p>
+                </div>
+
+                <div class="comparison-table">
+                    <h4><i class="fas fa-table"></i> 相談窓口一覧</h4>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>相談窓口</th>
+                                <th>内容</th>
+                                <th>連絡先・アクセス方法</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>職場の上司・人事</strong></td>
+                                <td>業務量、人間関係、労働環境の相談</td>
+                                <td>直接相談、定期面談</td>
+                            </tr>
+                            <tr>
+                                <td><strong>産業医・保健師</strong></td>
+                                <td>心身の健康相談、職場環境の改善提案</td>
+                                <td>会社の健康管理室</td>
+                            </tr>
+                            <tr>
+                                <td><strong>EAP（従業員支援プログラム）</strong></td>
+                                <td>匿名での心理カウンセリング</td>
+                                <td>会社が契約している場合、利用可能</td>
+                            </tr>
+                            <tr>
+                                <td><strong>心療内科・精神科</strong></td>
+                                <td>うつ、不安障害などの診断・治療</td>
+                                <td>医療機関（予約制が多い）</td>
+                            </tr>
+                            <tr>
+                                <td><strong>カウンセリングルーム</strong></td>
+                                <td>話を聴いてもらう、問題整理、対処法の相談</td>
+                                <td>民間カウンセリング、オンラインカウンセリング</td>
+                            </tr>
+                            <tr>
+                                <td><strong>こころの健康相談統一ダイヤル</strong></td>
+                                <td>電話相談（全国統一番号）</td>
+                                <td>0570-064-556</td>
+                            </tr>
+                            <tr>
+                                <td><strong>よりそいホットライン</strong></td>
+                                <td>24時間無料電話相談</td>
+                                <td>0120-279-338</td>
+                            </tr>
+                            <tr>
+                                <td><strong>SNS相談</strong></td>
+                                <td>LINEやチャットで気軽に相談</td>
+                                <td>厚生労働省「SNS相談」で検索</td>
+                            </tr>
+                            <tr>
+                                <td><strong>厚生労働省「こころの耳」</strong></td>
+                                <td>働く人のメンタルヘルス・ポータルサイト。相談窓口情報、セルフケア資料、専門家検索</td>
+                                <td><a href="https://kokoro.mhlw.go.jp/" target="_blank" rel="noopener">https://kokoro.mhlw.go.jp/</a><br>電話相談：0120-565-455（24時間無料）</td>
+                            </tr>
+                            <tr>
+                                <td><strong>いのちの電話</strong></td>
+                                <td>24時間対応の電話相談（全国統一）</td>
+                                <td>ナビダイヤル：0570-783-556<br>フリーダイヤル：0120-783-556（毎月10日のみ8:00-翌8:00）</td>
+                            </tr>
+                            <tr>
+                                <td><strong>精神保健福祉センター</strong></td>
+                                <td>各都道府県に設置。心の健康相談、専門相談（無料）</td>
+                                <td>お住まいの自治体の精神保健福祉センターへ（「○○県 精神保健福祉センター」で検索）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="note" style="margin-top: 1rem; font-size: 0.9rem; color: #666;"><i class="fas fa-info-circle"></i> <strong>※相談窓口は無料または低額で利用できます。</strong>一人で抱え込まず、早めに相談することが大切です。緊急の場合は、最寄りの救急医療機関または警察（110番）、消防（119番）に連絡してください。</p>
+                </div>
+
+                <div class="info-box bg-light">
+                    <h4><i class="fas fa-phone"></i> 相談のタイミング</h4>
+                    <p>以下の症状が2週間以上続く場合は、専門家への相談を検討してください。</p>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> 眠れない、または寝すぎる</li>
+                        <li><i class="fas fa-check"></i> 食欲がない、または過食</li>
+                        <li><i class="fas fa-check"></i> 何をしても楽しくない</li>
+                        <li><i class="fas fa-check"></i> 集中力が著しく低下</li>
+                        <li><i class="fas fa-check"></i> 自分を責める、死にたいと思う</li>
+                        <li><i class="fas fa-check"></i> 身体症状（頭痛、めまい、動悸）が続く</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 6. ワークライフバランス -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-balance-scale"></i> ワークライフバランス</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>時間管理</h4>
+                        <ul class="compact-list">
+                            <li><strong>定時退勤：</strong> 週3日以上は定時で帰る</li>
+                            <li><strong>残業の見える化：</strong> 残業時間を記録</li>
+                            <li><strong>ノー残業デー：</strong> 週1日は必ず定時退勤</li>
+                            <li><strong>休日出勤は避ける：</strong> やむを得ない場合は代休取得</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4>家族・友人との時間</h4>
+                        <ul class="compact-list">
+                            <li><strong>家族との食事：</strong> 週3回以上</li>
+                            <li><strong>友人との交流：</strong> 月2回以上</li>
+                            <li><strong>家族イベント：</strong> 誕生日、記念日を大切に</li>
+                            <li><strong>会話：</strong> 仕事の話ばかりしない</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h4>自己投資</h4>
+                        <ul class="compact-list">
+                            <li><strong>学習：</strong> 週2時間の自己学習</li>
+                            <li><strong>趣味：</strong> 週5時間以上</li>
+                            <li><strong>運動：</strong> 週150分以上</li>
+                            <li><strong>文化活動：</strong> 月1回、映画・美術館など</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-suitcase-rolling"></i>
+                        </div>
+                        <h4>休暇の活用</h4>
+                        <ul class="compact-list">
+                            <li><strong>年間有給：</strong> 最低10日は取得</li>
+                            <li><strong>連続休暇：</strong> 年1回、5日以上</li>
+                            <li><strong>リフレッシュ：</strong> 旅行、帰省など</li>
+                            <li><strong>計画的取得：</strong> 年初に休暇計画を立てる</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-gradient-primary">
+                    <h4><i class="fas fa-pie-chart"></i> 理想的な時間配分（週単位）</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> <strong>仕事：</strong> 40時間（1日8時間×5日）</li>
+                        <li><i class="fas fa-check"></i> <strong>睡眠：</strong> 49時間（1日7時間×7日）</li>
+                        <li><i class="fas fa-check"></i> <strong>家族・友人：</strong> 20時間</li>
+                        <li><i class="fas fa-check"></i> <strong>趣味・自己投資：</strong> 10時間</li>
+                        <li><i class="fas fa-check"></i> <strong>家事・その他：</strong> 15時間</li>
+                    </ul>
+                    <p>※あくまで目安。自分に合ったバランスを見つけましょう。</p>
+                </div>
+            </section>
+
+            <!-- 7. ポジティブマインドの育て方 -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-smile"></i> ポジティブマインドの育て方</h2>
+                </div>
+
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-primary">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>感謝の習慣</h4>
+                        <ul class="compact-list">
+                            <li>毎日3つ、感謝できることを書く</li>
+                            <li>小さなことでもOK（美味しい食事、晴天など）</li>
+                            <li>人への感謝を言葉で伝える</li>
+                            <li>感謝日記を続ける</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-success">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>小さな成功を認める</h4>
+                        <ul class="compact-list">
+                            <li>「今日できたこと」を振り返る</li>
+                            <li>完璧でなくても自分を褒める</li>
+                            <li>成功体験を記録する</li>
+                            <li>他人と比べない</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-info">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>ポジティブな言葉</h4>
+                        <ul class="compact-list">
+                            <li>「できない」→「どうすればできる？」</li>
+                            <li>「無理」→「やってみよう」</li>
+                            <li>「大変」→「成長のチャンス」</li>
+                            <li>自分に優しい言葉をかける</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="icon-wrapper bg-warning">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h4>楽観主義の実践</h4>
+                        <ul class="compact-list">
+                            <li>失敗は学びの機会</li>
+                            <li>問題は解決できる</li>
+                            <li>未来は良くなる</li>
+                            <li>自分には可能性がある</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box bg-gradient-success">
+                    <h4><i class="fas fa-quote-left"></i> ポジティブな言葉の例</h4>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check"></i> 「今日も1日頑張った自分、素晴らしい！」</li>
+                        <li><i class="fas fa-check"></i> 「うまくいかなかったけど、学びがあった」</li>
+                        <li><i class="fas fa-check"></i> 「明日はもっと良くなる」</li>
+                        <li><i class="fas fa-check"></i> 「私は成長している」</li>
+                        <li><i class="fas fa-check"></i> 「周りの人に支えられている、ありがとう」</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="update-info">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

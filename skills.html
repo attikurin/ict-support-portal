@@ -17,6 +17,17 @@
         </div>
     </div>
 
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
     <nav class="main-nav">
         <div class="container">
             <ul class="nav-menu">
@@ -48,8 +59,11 @@
                     <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
                     <ul class="dropdown-menu">
                         <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
-                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI教育</a></li>
-                        <li><a href="case-studies.html"><i class="fas fa-lightbulb"></i> 活用事例</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI利用ガイド</a></li>
+                        <li><a href="ai-apps-education.html"><i class="fas fa-brain"></i> AI教育アプリ</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-star"></i> 成功事例</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-heart"></i> 特別支援ICT</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
                     </ul>
                 </li>
                 
@@ -58,6 +72,17 @@
                     <ul class="dropdown-menu">
                         <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
                         <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
                     </ul>
                 </li>
                 
@@ -641,11 +666,12 @@
         <div class="container">
             <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
             <p>教育現場のICT活用を支援する総合情報サイト</p>
-            <p class="update-info">最終更新: 2025年10月</p>
+            <p class="update-info">最終更新: 2025年12月</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
 </body>
 </html>
