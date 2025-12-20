@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>端末管理・MDM運用実践ガイド - ICT支援員・講師のための教育ポータル</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                        <li><a href="rubric.html"><i class="fas fa-clipboard-check"></i> ルーブリック評価</a></li>
+                        <li><a href="learning-support-systems.html"><i class="fas fa-chalkboard"></i> 授業支援システム</a></li>
+                        <li><a href="programming-education.html"><i class="fas fa-code"></i> プログラミング教育</a></li>
+                        <li><a href="digital-citizenship.html"><i class="fas fa-shield-alt"></i> 情報モラル教育</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI利用ガイド</a></li>
+                        <li><a href="ai-apps-education.html"><i class="fas fa-brain"></i> AI教育アプリ</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-star"></i> 成功事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="device-management.html" class="active"><i class="fas fa-tablet-alt"></i> 端末管理・MDM</a></li>
+                        <li><a href="wifi-troubleshooting.html"><i class="fas fa-wifi"></i> Wi-Fiトラブル対応</a></li>
+                        <li><a href="account-management.html"><i class="fas fa-user-shield"></i> アカウント管理</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> セキュリティ</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="edtech-comparison.html"><i class="fas fa-balance-scale"></i> EdTech比較</a></li>
+                        <li><a href="edtech-tools.html"><i class="fas fa-tools"></i> EdTechツール</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                        <li><a href="downloads.html"><i class="fas fa-download"></i> ダウンロード</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-tablet-alt"></i> 端末管理・MDM運用実践ガイド</h1>
+            <p class="lead">1人1台端末環境における日常的な端末管理業務とMDM（モバイルデバイス管理）の実践的運用方法を解説します。配布・回収・故障対応・アプリ管理など、ICT支援員が直面する実務課題に即座に対応できる完全マニュアルです。</p>
+        </div>
+
+        <!-- 目次 -->
+        <section class="toc-section">
+            <h2><i class="fas fa-list"></i> 目次</h2>
+            <div class="info-grid">
+                <a href="#mdm-basics" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-question-circle"></i></div>
+                    <h3>MDMの基礎知識</h3>
+                    <p>MDMとは何か、主要ソリューション比較</p>
+                </a>
+                <a href="#device-distribution" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-box-open"></i></div>
+                    <h3>端末配布・回収業務</h3>
+                    <p>新入生への配布フロー、年度末回収手順</p>
+                </a>
+                <a href="#daily-management" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-tasks"></i></div>
+                    <h3>端末の日常管理</h3>
+                    <p>充電、清掃、点検、台帳管理</p>
+                </a>
+                <a href="#app-management" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>アプリ・ソフトウェア管理</h3>
+                    <p>一斉配信、バージョン管理、ライセンス管理</p>
+                </a>
+                <a href="#security-settings" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>セキュリティ設定と運用</h3>
+                    <p>フィルタリング、使用制限、不適切利用対応</p>
+                </a>
+                <a href="#trouble-response" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-ambulance"></i></div>
+                    <h3>トラブル対応マニュアル</h3>
+                    <p>起動不良、ログイン不可、紛失・盗難時対応</p>
+                </a>
+                <a href="#data-backup" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-database"></i></div>
+                    <h3>データ管理とバックアップ</h3>
+                    <p>クラウドストレージ活用、個人情報保護</p>
+                </a>
+                <a href="#annual-plan" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>年間運用計画</h3>
+                    <p>月別の主要業務スケジュール</p>
+                </a>
+                <a href="#role-sharing" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-users"></i></div>
+                    <h3>役割分担と協働体制</h3>
+                    <p>常駐型・巡回型の業務、教員・業者との連携</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 1. MDMの基礎知識 -->
+        <section id="mdm-basics" class="content-section">
+            <h2><i class="fas fa-question-circle"></i> 1. MDMの基礎知識</h2>
+            
+            <h3>MDMとは</h3>
+            <div class="alert alert-info">
+                <h4><i class="fas fa-info-circle"></i> MDM（モバイルデバイス管理）の定義</h4>
+                <p><strong>MDM（Mobile Device Management）</strong>とは、スマートフォン、タブレット、ノートPCなどのモバイル端末を一元的に管理・制御するためのシステムです。学校現場では、児童生徒が使用する1人1台端末を効率的かつ安全に管理するために不可欠なツールとなっています。</p>
+            </div>
+
+            <h3>MDMでできること</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h4>アプリの一斉配信</h4>
+                    <p>全端末に学習アプリを一括インストール。個別設定不要で導入が効率的。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4>設定の一斉変更</h4>
+                    <p>Wi-Fi設定、壁紙、制限事項などを遠隔から一括変更可能。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h4>紛失・盗難対応</h4>
+                    <p>端末の位置追跡、遠隔ロック、データ消去で情報漏洩を防止。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>利用状況の把握</h4>
+                    <p>端末ごとの使用時間、アプリ利用状況、バッテリー状態を可視化。</p>
+                </div>
+            </div>
+
+            <h3>主要MDMソリューション比較</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MDM名</th>
+                        <th>対応OS</th>
+                        <th>主な機能</th>
+                        <th>学校での導入状況</th>
+                        <th>参考価格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>mobiconnect for Education</strong></td>
+                        <td>iOS, Android, Windows, Chrome OS</td>
+                        <td>教育機関向け特化機能、学年別管理、授業モード切替</td>
+                        <td>学校で最も広く使われている</td>
+                        <td>要問合せ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Admin Console</strong></td>
+                        <td>Chrome OS（Chromebook専用）</td>
+                        <td>Google Workspace統合、無料、OU管理、ポリシー設定</td>
+                        <td>Chromebook導入校で標準</td>
+                        <td>無料</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Apple School Manager + MDM</strong></td>
+                        <td>iOS, iPadOS, macOS</td>
+                        <td>Apple製品専用、共有iPad、Classroom app連携</td>
+                        <td>iPad導入校で標準</td>
+                        <td>Apple School Manager無料、MDM製品は別途契約（Jamf School、Mosyle等）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Microsoft Intune</strong></td>
+                        <td>Windows, iOS, Android, macOS</td>
+                        <td>Microsoft 365統合、条件付きアクセス、自動パッチ</td>
+                        <td>Windows端末導入校で増加中</td>
+                        <td>Microsoft 365ライセンスに含む</td>
+                    </tr>
+                    <tr>
+                        <td><strong>LANSCOPE エンドポイントマネージャー</strong></td>
+                        <td>Windows, macOS, iOS, Android</td>
+                        <td>国産、IT資産管理機能充実、操作ログ取得</td>
+                        <td>自治体一括導入で採用例あり</td>
+                        <td>年額数百円/台〜</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert alert-warning">
+                <h4><i class="fas fa-lightbulb"></i> MDM選定のポイント</h4>
+                <ul>
+                    <li><strong>導入端末のOSに対応しているか</strong>：Chromebook→Google、iPad→Apple、Windows→Intuneが基本</li>
+                    <li><strong>教育機関向け機能があるか</strong>：授業モード切替、学年別管理、利用時間制限</li>
+                    <li><strong>既存システムとの連携</strong>：Google Workspace、Microsoft 365との統合度</li>
+                    <li><strong>サポート体制</strong>：日本語サポート、問い合わせ窓口の充実度</li>
+                    <li><strong>コスト</strong>：初期費用、年間ライセンス費用、運用コスト</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 2. 端末配布・回収業務 -->
+        <section id="device-distribution" class="content-section">
+            <h2><i class="fas fa-box-open"></i> 2. 端末配布・回収業務</h2>
+            
+            <h3>2.1 新入生への端末配布フロー</h3>
+            
+            <div class="alert alert-info">
+                <h4><i class="fas fa-calendar-check"></i> 配布時期と準備期間</h4>
+                <p><strong>4月上旬</strong>が配布の目標時期です。3月中旬から準備を開始し、十分な時間的余裕を持って臨みましょう。</p>
+            </div>
+
+            <h4>Step 1: 端末の準備（3月中旬〜下旬）</h4>
+            <div class="step-card">
+                <h5><span class="step-number">1</span>端末の開梱・動作確認</h5>
+                <ul>
+                    <li>納品された端末の数量確認（発注数と一致するか）</li>
+                    <li>外観チェック（傷、へこみ、画面割れがないか）</li>
+                    <li>電源ON確認（初期起動、バッテリー充電）</li>
+                    <li>不良品の早期発見・交換依頼</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h5><span class="step-number">2</span>管理番号のラベリング</h5>
+                <ul>
+                    <li>端末1台ごとにユニークな管理番号を付与（例：2024-1-01）</li>
+                    <li>ラベルシールを端末背面または側面に貼付</li>
+                    <li>管理台帳に記録（Excel/スプレッドシート）</li>
+                    <li>ポイント：剥がれにくい耐久性のあるラベルを使用</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h5><span class="step-number">3</span>MDMへの登録</h5>
+                <ul>
+                    <li>MDM管理画面にアクセス</li>
+                    <li>端末のシリアル番号またはMACアドレスを登録</li>
+                    <li>学年・クラス・番号で組織単位（OU）を設定</li>
+                    <li>初期ポリシーの適用（Wi-Fi、アプリ、制限事項）</li>
+                </ul>
+                <div class="alert alert-success">
+                    <strong>時短テクニック：</strong> CSVファイル一括登録機能を活用すれば、数百台の端末も数分で登録完了！
+                </div>
+            </div>
+
+            <div class="step-card">
+                <h5><span class="step-number">4</span>初期設定の実施</h5>
+                <ul>
+                    <li>Wi-Fi接続設定</li>
+                    <li>学習用アカウントの設定（Google/Microsoft）</li>
+                    <li>必須アプリのインストール（学習eポータル、デジタル教科書等）</li>
+                    <li>壁紙・ホーム画面の統一</li>
+                    <li>利用ルールの表示設定</li>
+                </ul>
+            </div>
+
+            <h4>Step 2: 配布当日の流れ（4月上旬）</h4>
+            <div class="checklist">
+                <h5><i class="fas fa-clipboard-check"></i> 配布当日チェックリスト</h5>
+                <label><input type="checkbox"> 端末を学年・クラスごとに仕分け</label>
+                <label><input type="checkbox"> 充電状態を確認（80%以上推奨）</label>
+                <label><input type="checkbox"> 保護者向け説明資料の準備</label>
+                <label><input type="checkbox"> 破損時の対応フロー資料</label>
+                <label><input type="checkbox"> 初回ログイン手順書（パスワード記載）</label>
+                <label><input type="checkbox"> 受領確認書（保護者署名用）</label>
+                <label><input type="checkbox"> 予備端末の準備（2-3台）</label>
+            </div>
+
+            <div class="alert alert-warning">
+                <h4><i class="fas fa-exclamation-triangle"></i> 配布時の注意点</h4>
+                <ul>
+                    <li><strong>個人情報の取り扱い</strong>：パスワード情報は封筒に入れて配布</li>
+                    <li><strong>初回ログイン支援</strong>：配布後、教室で一斉にログイン練習を実施</li>
+                    <li><strong>質問対応体制</strong>：ICT支援員が教室巡回し、個別サポート</li>
+                    <li><strong>記録の保存</strong>：誰に何番の端末を配布したか記録（台帳更新）</li>
+                </ul>
+            </div>
+
+            <h3>2.2 年度末の端末回収手順</h3>
+            
+            <div class="alert alert-info">
+                <h4><i class="fas fa-calendar-alt"></i> 回収時期</h4>
+                <p><strong>3月中旬</strong>を回収目標とします。卒業式前に確実に回収し、データ削除・点検を完了させます。</p>
+            </div>
+
+            <h4>回収の5ステップ</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ステップ</th>
+                        <th>作業内容</th>
+                        <th>所要時間（100台あたり）</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>①データバックアップ</strong></td>
+                        <td>重要データのクラウド保存を児童生徒に指導</td>
+                        <td>1授業（45分）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>②端末回収</strong></td>
+                        <td>管理番号と照合しながら回収、受領確認</td>
+                        <td>2-3時間</td>
+                    </tr>
+                    <tr>
+                        <td><strong>③外観チェック</strong></td>
+                        <td>破損、傷、動作不良の確認、写真記録</td>
+                        <td>3-4時間</td>
+                    </tr>
+                    <tr>
+                        <td><strong>④データ削除</strong></td>
+                        <td>MDMから遠隔初期化、またはローカルで初期化</td>
+                        <td>1-2時間</td>
+                    </tr>
+                    <tr>
+                        <td><strong>⑤保管・次年度準備</strong></td>
+                        <td>充電保管庫に格納、ラベル貼り替え</td>
+                        <td>2-3時間</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert alert-danger">
+                <h4><i class="fas fa-exclamation-circle"></i> 個人情報保護の徹底</h4>
+                <p>端末回収後は<strong>必ず初期化</strong>を実施してください。写真、動画、個人的なメモなどの個人情報が残っていると、次の利用者に見られてしまう重大なリスクがあります。</p>
+                <ul>
+                    <li>初期化前に個人フォルダの確認（特にローカル保存データ）</li>
+                    <li>MDMから「工場出荷状態に戻す」を実行</li>
+                    <li>初期化完了後、サンプルアカウントでログイン確認</li>
+                </ul>
+            </div>
+
+            <h3>2.3 転入・転出時の対応</h3>
+            
+            <h4>転入生への端末貸与</h4>
+            <ul>
+                <li>予備端末から貸与（管理台帳に記録）</li>
+                <li>転入元の学校でアカウント情報があれば引き継ぎ</li>
+                <li>新規アカウント発行の場合：パスワード設定支援</li>
+                <li>保護者へ説明資料配布</li>
+            </ul>
+
+            <h4>転出生からの端末回収</h4>
+            <ul>
+                <li>転出日の数日前に回収予定を通知</li>
+                <li>データのバックアップ支援（Google Drive等）</li>
+                <li>端末返却、外観チェック</li>
+                <li>初期化後、予備端末として保管</li>
+            </ul>
+
+            <h3>2.4 破損・紛失時の対応フロー</h3>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4><i class="fas fa-hammer"></i> 破損時の対応</h4>
+                    <ol>
+                        <li>破損状況の確認・写真撮影</li>
+                        <li>破損報告書の作成（児童生徒・保護者記入）</li>
+                        <li>学校の端末利用規定を確認（故意・過失の判断）</li>
+                        <li>保険適用の可否確認（GIGAスクール端末保険等）</li>
+                        <li>修理業者へ依頼 or 買い替え判断</li>
+                        <li>代替機の貸出（学習継続を優先）</li>
+                    </ol>
+                </div>
+                
+                <div class="feature-card">
+                    <h4><i class="fas fa-search"></i> 紛失時の対応</h4>
+                    <ol>
+                        <li>紛失の状況確認（いつ、どこで）</li>
+                        <li>MDMから端末の位置情報確認</li>
+                        <li>遠隔ロック実施（情報漏洩防止）</li>
+                        <li>警察への遺失物届（必要に応じて）</li>
+                        <li>発見されない場合：遠隔データ消去</li>
+                        <li>代替機の貸出、保護者への報告</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="alert alert-success">
+                <h4><i class="fas fa-shield-alt"></i> 端末保険の活用</h4>
+                <p>多くの自治体では「GIGA端末補償サービス」などの保険に加入しています。</p>
+                <ul>
+                    <li>画面割れ、水濡れ、落下による故障をカバー</li>
+                    <li>免責金額（自己負担）：3,000円〜5,000円程度</li>
+                    <li>年間補償回数：1-2回まで</li>
+                    <li>申請方法：保険会社指定フォームに記入、写真添付</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 3. 端末の日常管理 -->
+        <section id="daily-management" class="content-section">
+            <h2><i class="fas fa-tasks"></i> 3. 端末の日常管理</h2>
+            
+            <h3>3.1 充電管理</h3>
+            
+            <div class="alert alert-info">
+                <h4><i class="fas fa-battery-full"></i> 充電保管庫の運用</h4>
+                <p>1人1台端末環境では、<strong>充電保管庫（充電カート）</strong>が必須です。40台収納型が一般的で、夜間に一斉充電を行います。</p>
+            </div>
+
+            <h4>充電保管庫の管理ポイント</h4>
+            <ul>
+                <li><strong>配置場所</strong>：各教室、または学年フロアの共用スペース</li>
+                <li><strong>鍵の管理</strong>：管理職または学年主任が保管、盗難防止</li>
+                <li><strong>通電時間</strong>：タイマー設定で22:00-6:00に充電（過充電防止）</li>
+                <li><strong>ブレーカー容量</strong>：40台同時充電で約2-3kW、専用回路が望ましい</li>
+                <li><strong>定期点検</strong>：ケーブルの断線、コンセントの緩み、庫内の清掃</li>
+            </ul>
+
+            <div class="alert alert-warning">
+                <h4><i class="fas fa-exclamation-triangle"></i> バッテリー寿命対策</h4>
+                <p>リチウムイオンバッテリーは<strong>充電回数に限界</strong>があります（約500-1000回）。3-4年使用すると劣化します。</p>
+                <ul>
+                    <li>100%充電を避ける：80%程度で充電停止が理想（一部MDMで設定可能）</li>
+                    <li>高温環境を避ける：夏場の直射日光、車内放置は厳禁</li>
+                    <li>長期保管時：50%程度充電した状態で保管（0%や100%は劣化を早める）</li>
+                </ul>
+            </div>
+
+            <h3>3.2 クリーニング・メンテナンス</h3>
+            
+            <h4>日常的な清掃（週1回推奨）</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>清掃箇所</th>
+                        <th>方法</th>
+                        <th>使用道具</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>画面</strong></td>
+                        <td>柔らかい布で優しく拭く。水拭きOK（軽く湿らせる程度）</td>
+                        <td>マイクロファイバークロス</td>
+                    </tr>
+                    <tr>
+                        <td><strong>キーボード</strong></td>
+                        <td>エアダスターで隙間のゴミを除去。消毒用アルコールで拭く</td>
+                        <td>エアダスター、消毒用ウェットティッシュ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>本体外装</strong></td>
+                        <td>乾いた布で拭く。汚れがひどい場合は中性洗剤を薄めた液で拭く</td>
+                        <td>マイクロファイバークロス</td>
+                    </tr>
+                    <tr>
+                        <td><strong>充電端子</strong></td>
+                        <td>綿棒で埃を除去。接触不良の原因になる</td>
+                        <td>綿棒</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert alert-danger">
+                <h4><i class="fas fa-ban"></i> 清掃時の禁止事項</h4>
+                <ul>
+                    <li>❌ アルコール濃度70%以上の消毒液を画面に直接噴射（コーティング剥がれ）</li>
+                    <li>❌ 水をたっぷり含んだ布で拭く（内部に水が侵入）</li>
+                    <li>❌ 研磨剤入りクリーナーの使用（画面に傷）</li>
+                    <li>❌ 掃除機で吸引（静電気で故障のリスク）</li>
+                </ul>
+            </div>
+
+            <h3>3.3 故障・不具合の早期発見</h3>
+            
+            <h4>定期点検チェックリスト（月1回推奨）</h4>
+            <div class="checklist">
+                <h5><i class="fas fa-clipboard-check"></i> 端末点検項目</h5>
+                <label><input type="checkbox"> 電源が正常にON/OFFできるか</label>
+                <label><input type="checkbox"> 画面に割れ、ひび、表示不良がないか</label>
+                <label><input type="checkbox"> タッチパネルが正常に反応するか</label>
+                <label><input type="checkbox"> キーボードの全てのキーが機能するか</label>
+                <label><input type="checkbox"> カメラ・マイクが正常に動作するか</label>
+                <label><input type="checkbox"> スピーカーから音が出るか</label>
+                <label><input type="checkbox"> Wi-Fi接続が正常にできるか</label>
+                <label><input type="checkbox"> バッテリー充電ができるか、異常な発熱がないか</label>
+                <label><input type="checkbox"> ケース・カバーの破損がないか</label>
+                <label><input type="checkbox"> 管理番号ラベルが貼られているか、剥がれていないか</label>
+            </div>
+
+            <div class="alert alert-success">
+                <h4><i class="fas fa-lightbulb"></i> 点検の効率化</h4>
+                <p>Googleフォームやスプレッドシートで点検記録を作成すれば、複数人で分担作業できます。不具合端末をその場で記録し、修理依頼リストを自動生成できます。</p>
+            </div>
+
+            <h3>3.4 端末台帳管理</h3>
+            
+            <h4>台帳に記録すべき項目</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>項目</th>
+                        <th>記録内容</th>
+                        <th>更新タイミング</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>管理番号</strong></td>
+                        <td>学校独自の端末ID（例：2024-1-01）</td>
+                        <td>配布時</td>
+                    </tr>
+                    <tr>
+                        <td><strong>シリアル番号</strong></td>
+                        <td>メーカー固有の製造番号</td>
+                        <td>配布時</td>
+                    </tr>
+                    <tr>
+                        <td><strong>機種名</strong></td>
+                        <td>Chromebook、iPad、Surface等</td>
+                        <td>配布時</td>
+                    </tr>
+                    <tr>
+                        <td><strong>購入日・納品日</strong></td>
+                        <td>保証期間の起算日</td>
+                        <td>配布時</td>
+                    </tr>
+                    <tr>
+                        <td><strong>貸与者</strong></td>
+                        <td>学年・クラス・氏名</td>
+                        <td>配布時・年度初め</td>
+                    </tr>
+                    <tr>
+                        <td><strong>状態</strong></td>
+                        <td>貸与中/予備/修理中/廃棄</td>
+                        <td>随時</td>
+                    </tr>
+                    <tr>
+                        <td><strong>修理履歴</strong></td>
+                        <td>修理日、修理内容、費用</td>
+                        <td>修理の都度</td>
+                    </tr>
+                    <tr>
+                        <td><strong>備考</strong></td>
+                        <td>破損、紛失、特記事項</td>
+                        <td>随時</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert alert-info">
+                <h4><i class="fas fa-file-excel"></i> 台帳管理の推奨ツール</h4>
+                <ul>
+                    <li><strong>Googleスプレッドシート</strong>：複数人で同時編集可能、履歴管理、共有が簡単</li>
+                    <li><strong>Microsoft Excel</strong>：関数・マクロで高度な集計が可能、OneDriveで共有</li>
+                    <li><strong>専用資産管理ソフト</strong>：LANSCOPE、SS1等（大規模校向け）</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 4. アプリ・ソフトウェア管理 -->
+        <section id="app-management" class="content-section">
+            <h2><i class="fas fa-mobile-alt"></i> 4. アプリ・ソフトウェア管理</h2>
+            
+            <h3>4.1 学習アプリの一斉配信方法</h3>
+            
+            <h4>OS別の配信方法</h4>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4><i class="fab fa-chrome"></i> Chromebook（Chrome OS）</h4>
+                    <ul>
+                        <li><strong>Google Admin Console</strong>を使用</li>
+                        <li>組織単位（OU）ごとにアプリを強制インストール</li>
+                        <li>Chrome Web Store、Google Playアプリに対応</li>
+                        <li>ユーザーがログインすると自動的にインストール</li>
+                    </ul>
+                    <div class="alert alert-success">
+                        <strong>手順：</strong> Admin Console → デバイス → Chrome → アプリと拡張機能 → ユーザーとブラウザ → アプリを追加 → 「強制インストール」を選択
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <h4><i class="fab fa-apple"></i> iPad（iOS/iPadOS）</h4>
+                    <ul>
+                        <li><strong>Apple School Manager + MDM</strong>を使用</li>
+                        <li>Appとブック機能（旧称VPP）でアプリを一括購入</li>
+                        <li>MDMから端末にアプリを配信</li>
+                        <li>共有iPadでも対応可能</li>
+                    </ul>
+                    <div class="alert alert-success">
+                        <strong>手順：</strong> Apple School Manager → Appとブック → アプリを購入 → MDMで配信設定 → 端末に自動インストール
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <h4><i class="fab fa-windows"></i> Windows</h4>
+                    <ul>
+                        <li><strong>Microsoft Intune</strong>を使用</li>
+                        <li>Microsoft Store、exe/msiファイルに対応</li>
+                        <li>グループポリシーでの配信も可能</li>
+                        <li>必須アプリ、利用可能アプリの区分け</li>
+                    </ul>
+                    <div class="alert alert-success">
+                        <strong>手順：</strong> Intune管理センター → アプリ → Windowsアプリを追加 → 割り当て → グループ選択 → 展開
+                    </div>
+                </div>
+            </div>
+
+            <h3>4.2 アプリのバージョン管理とアップデート計画</h3>
+            
+            <div class="alert alert-info">
+                <h4><i class="fas fa-sync-alt"></i> アップデートの重要性</h4>
+                <p>アプリのアップデートは、<strong>新機能追加、バグ修正、セキュリティ脆弱性の解消</strong>のために不可欠です。特にセキュリティアップデートは速やかに適用しましょう。</p>
+            </div>
+
+            <h4>アップデート管理のベストプラクティス</h4>
+            <ol>
+                <li><strong>自動アップデートの設定</strong>
+                    <ul>
+                        <li>Chrome OS：自動更新が標準（約4週間ごと、セキュリティパッチはより頻繁）</li>
+                        <li>iPad：MDMで自動アップデートを有効化</li>
+                        <li>Windows：Windows Update、Microsoft Store自動更新</li>
+                    </ul>
+                </li>
+                <li><strong>テスト端末での事前確認</strong>
+                    <ul>
+                        <li>大規模アップデート前に、予備端末でテスト</li>
+                        <li>既存の学習データが消えないか確認</li>
+                        <li>動作が重くならないか確認</li>
+                    </ul>
+                </li>
+                <li><strong>アップデート時期の選定</strong>
+                    <ul>
+                        <li>長期休暇中（夏休み、冬休み、春休み）が理想</li>
+                        <li>授業期間中は避ける（ダウンロードで回線が混雑）</li>
+                        <li>夜間・早朝の自動実行を設定</li>
+                    </ul>
+                </li>
+                <li><strong>教員への事前通知</strong>
+                    <ul>
+                        <li>「○月○日にアップデート実施」を事前連絡</li>
+                        <li>画面表示やメニュー配置が変わる場合は注意喚起</li>
+                        <li>アップデート後の新機能を簡単に紹介</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>4.3 不要アプリの削除・ブロック設定</h3>
+            
+            <div class="alert alert-warning">
+                <h4><i class="fas fa-ban"></i> 不要・不適切なアプリのリスク</h4>
+                <ul>
+                    <li>学習に集中できない（ゲーム、SNS、動画視聴）</li>
+                    <li>個人情報の漏洩（怪しいアプリ、フィッシング）</li>
+                    <li>有害コンテンツへのアクセス</li>
+                    <li>端末の動作が重くなる</li>
+                </ul>
+            </div>
+
+            <h4>ブロック・制限の設定例</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>制限項目</th>
+                        <th>Chromebook</th>
+                        <th>iPad</th>
+                        <th>Windows</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>アプリのインストール制限</strong></td>
+                        <td>Admin Consoleで許可リスト設定</td>
+                        <td>MDMで「App Storeを非表示」に設定</td>
+                        <td>Intuneでアプリインストール禁止</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ゲームアプリのブロック</strong></td>
+                        <td>拡張機能でゲームサイトをブロック</td>
+                        <td>スクリーンタイムで制限</td>
+                        <td>ペアレンタルコントロール</td>
+                    </tr>
+                    <tr>
+                        <td><strong>YouTube制限</strong></td>
+                        <td>制限付きモード強制</td>
+                        <td>MDMでYouTubeアプリ削除</td>
+                        <td>ファミリーセーフティ</td>
+                    </tr>
+                    <tr>
+                        <td><strong>不適切サイトのブロック</strong></td>
+                        <td>Webフィルタリング（i-FILTER等）</td>
+                        <td>MDMでコンテンツフィルタ</td>
+                        <td>Webフィルタリングソフト</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert alert-info">
+                <h4><i class="fas fa-balance-scale"></i> 制限と学習の自由のバランス</h4>
+                <p>過度な制限は児童生徒の探究心や創造性を阻害する恐れがあります。学年が上がるにつれて段階的に制限を緩和し、<strong>情報モラル教育</strong>と併せて自律的な利用を促しましょう。</p>
+            </div>
+
+            <h3>4.4 ライセンス管理</h3>
+            
+            <h4>ライセンス管理台帳の作成</h4>
+            <p>有料アプリ・サービスのライセンス管理は、予算執行と契約更新のために重要です。</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>アプリ名</th>
+                        <th>ライセンス数</th>
+                        <th>年間費用</th>
+                        <th>契約開始日</th>
+                        <th>更新日</th>
+                        <th>担当者</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ロイロノート</td>
+                        <td>500ライセンス</td>
+                        <td>480,000円<br><small>※価格は自治体・学校規模により変動</small></td>
+                        <td>2024/4/1</td>
+                        <td>2025/3/31</td>
+                        <td>ICT支援員</td>
+                    </tr>
+                    <tr>
+                        <td>Qubena</td>
+                        <td>300ライセンス</td>
+                        <td>要問合せ</td>
+                        <td>2024/4/1</td>
+                        <td>2025/3/31</td>
+                        <td>教頭</td>
+                    </tr>
+                    <tr>
+                        <td>Canva for Education</td>
+                        <td>無制限</td>
+                        <td>無料</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>ICT支援員</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert alert-warning">
+                <h4><i class="fas fa-calendar-times"></i> 更新忘れを防ぐ</h4>
+                <ul>
+                    <li>更新日の<strong>3ヶ月前</strong>にGoogleカレンダー等でリマインダー設定</li>
+                    <li>自動更新契約か、手動更新かを明記</li>
+                    <li>利用状況を定期的にレビュー（使われていないライセンスは削減）</li>
+                    <li>年度末に次年度の予算要求書を作成</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 5. セキュリティ設定と運用 -->
+        <section id="security-settings" class="content-section">
+            <h2><i class="fas fa-shield-alt"></i> 5. セキュリティ設定と運用</h2>
+            
+            <h3>5.1 フィルタリング設定の最適化</h3>
+            
+            <div class="alert alert-danger">
+                <h4><i class="fas fa-exclamation-circle"></i> フィルタリングの法的義務</h4>
+                <p><strong>青少年インターネット環境整備法</strong>により、18歳未満が使用する端末にはフィルタリングの設定が<strong>義務</strong>とされています。学校でも必ず設定しましょう。</p>
+            </div>
+
+            <h4>フィルタリングの3つのレベル</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>レベル</th>
+                        <th>対象</th>
+                        <th>ブロック対象</th>
+                        <th>許可範囲</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>小学生モード</strong></td>
+                        <td>小学1-6年</td>
+                        <td>SNS、ゲーム、動画、掲示板、ショッピング等</td>
+                        <td>教育コンテンツ、公共機関、検索エンジン（セーフサーチ）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>中学生モード</strong></td>
+                        <td>中学1-3年</td>
+                        <td>出会い系、アダルト、ギャンブル、違法サイト</td>
+                        <td>YouTube（制限付き）、ニュースサイト、調べ学習サイト</td>
+                    </tr>
+                    <tr>
+                        <td><strong>高校生モード</strong></td>
+                        <td>高校1-3年</td>
+                        <td>違法・有害サイトのみ</td>
+                        <td>ほぼ全てのサイト（情報モラル教育と併用）</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>主要フィルタリングソフト</h4>
+            <ul>
+                <li><strong>i-FILTER</strong>（デジタルアーツ）：学校現場で最も広く使われている、97.9%の学校が導入</li>
+                <li><strong>InterSafe</strong>（アルプスシステムインテグレーション）：企業・自治体での実績豊富</li>
+                <li><strong>ネットスター</strong>：URLデータベースの精度が高い</li>
+                <li><strong>Google SafeSearch</strong>：Chromebookで標準、無料</li>
+            </ul>
+
+            <h3>5.2 使用制限ポリシーの設定</h3>
+            
+            <h4>利用時間の制限</h4>
+            <div class="alert alert-info">
+                <p>長時間の端末利用は、視力低下、姿勢悪化、睡眠不足などの健康リスクがあります。学校と家庭で協力して利用時間を管理しましょう。</p>
+            </div>
+
+            <h5>MDMでの利用時間制限設定例</h5>
+            <ul>
+                <li><strong>授業時間帯</strong>（8:30-15:30）：学習アプリのみ利用可能、ゲーム・動画はブロック</li>
+                <li><strong>放課後・家庭</strong>（16:00-21:00）：一部制限緩和、1日2時間まで（推奨）</li>
+                <li><strong>夜間</strong>（21:00-翌8:00）：利用不可、または保護者が解除可能</li>
+            </ul>
+
+            <h4>アクセス制限</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>制限項目</th>
+                        <th>設定内容</th>
+                        <th>理由</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>カメラ・マイク</strong></td>
+                        <td>授業時のみ許可</td>
+                        <td>プライバシー保護、不適切撮影防止</td>
+                    </tr>
+                    <tr>
+                        <td><strong>位置情報</strong></td>
+                        <td>MDM管理者のみ取得可能</td>
+                        <td>紛失時の追跡、プライバシー保護</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bluetooth</strong></td>
+                        <td>教員許可制</td>
+                        <td>不正なデータ送信防止</td>
+                    </tr>
+                    <tr>
+                        <td><strong>USB接続</strong></td>
+                        <td>読み取り専用</td>
+                        <td>ウイルス感染防止、データ流出防止</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>5.3 パスワード管理とアカウントセキュリティ</h3>
+            
+            <p>※詳細は「<a href="account-management.html">アカウント管理・パスワード運用実務ガイド</a>」を参照してください。ここでは概要のみ記載します。</p>
+
+            <h4>パスワードポリシーの例</h4>
+            <ul>
+                <li><strong>小学1-3年</strong>：4-6桁の数字（覚えやすさ優先）</li>
+                <li><strong>小学4-6年</strong>：8文字以上、数字+アルファベット</li>
+                <li><strong>中学生</strong>：8文字以上、英数字+記号</li>
+                <li><strong>定期変更</strong>：年1回（学年進級時）</li>
+                <li><strong>多要素認証（MFA）</strong>：教職員は必須、生徒は高校から推奨</li>
+            </ul>
+
+            <h3>5.4 不適切利用の検知と対応</h3>
+            
+            <h4>不適切利用の兆候</h4>
+            <ul>
+                <li>授業中に関係ないWebサイトを閲覧している</li>
+                <li>SNSで誹謗中傷、いじめに関する投稿</li>
+                <li>著作権侵害（無断コピー、違法ダウンロード）</li>
+                <li>個人情報の公開（住所、電話番号、写真）</li>
+                <li>長時間のゲームプレイ、動画視聴</li>
+            </ul>
+
+            <h4>対応フロー</h4>
+            <ol>
+                <li><strong>事実確認</strong>：MDMのログ、閲覧履歴、スクリーンショットを確認</li>
+                <li><strong>本人への聞き取り</strong>：事情を丁寧に聞く、一方的に叱責しない</li>
+                <li><strong>保護者への連絡</strong>：状況を説明、家庭での指導を依頼</li>
+                <li><strong>指導・教育</strong>：情報モラル教育、利用ルールの再確認</li>
+                <li><strong>再発防止策</strong>：必要に応じて利用制限強化、定期的なモニタリング</li>
+            </ol>
+
+            <div class="alert alert-warning">
+                <h4><i class="fas fa-user-shield"></i> プライバシーとのバランス</h4>
+                <p>過度な監視は児童生徒の信頼を損ない、プライバシー侵害の問題もあります。<strong>「安全のための最低限の確認」</strong>という姿勢を保ち、教育委員会・保護者の理解を得ながら運用しましょう。</p>
+            </div>
+        </section>
+
+        <!-- 6. トラブル対応マニュアル -->
+        <section id="trouble-response" class="content-section">
+            <h2><i class="fas fa-ambulance"></i> 6. トラブル対応マニュアル</h2>
+            
+            <p>※詳細は「<a href="troubleshooting.html">トラブルシューティング</a>」ページも参照してください。ここでは端末管理に特化したトラブルを扱います。</p>
+
+            <h3>6.1 端末が起動しない</h3>
+            
+            <div class="feature-card">
+                <h4><i class="fas fa-power-off"></i> 症状：電源ボタンを押しても起動しない</h4>
+                <h5>原因と対処法</h5>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>原因</th>
+                            <th>確認方法</th>
+                            <th>対処法</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>バッテリー切れ</strong></td>
+                            <td>充電ランプが点灯しない</td>
+                            <td>充電ケーブルを接続、30分以上充電してから再度起動</td>
+                        </tr>
+                        <tr>
+                            <td><strong>フリーズ</strong></td>
+                            <td>画面が真っ黒、または固まっている</td>
+                            <td>強制再起動（電源ボタン10秒長押し）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ハードウェア故障</strong></td>
+                            <td>充電してもLEDが点灯しない</td>
+                            <td>修理業者へ依頼、代替機を貸出</td>
+                        </tr>
+                        <tr>
+                            <td><strong>OSの破損</strong></td>
+                            <td>起動画面で止まる、エラーメッセージ</td>
+                            <td>リカバリー（初期化）実行、データ復旧は困難</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>6.2 ログインできない</h3>
+            
+            <div class="feature-card">
+                <h4><i class="fas fa-key"></i> 症状：パスワードを入力してもログインできない</h4>
+                <h5>原因と対処法</h5>
+                <ol>
+                    <li><strong>パスワード忘れ</strong>
+                        <ul>
+                            <li>最も頻繁な原因（特に低学年）</li>
+                            <li>対処：管理者がパスワードリセット（Google Admin Console、MDM）</li>
+                            <li>一時パスワード発行 → 児童生徒が再設定</li>
+                        </ul>
+                    </li>
+                    <li><strong>CapsLockがONになっている</strong>
+                        <ul>
+                            <li>パスワードの大文字・小文字が逆になっている</li>
+                            <li>対処：CapsLockキーを押してOFF、再入力</li>
+                        </ul>
+                    </li>
+                    <li><strong>アカウントがロックされている</strong>
+                        <ul>
+                            <li>5回以上のログイン失敗で自動ロック</li>
+                            <li>対処：管理者がアカウントロック解除</li>
+                        </ul>
+                    </li>
+                    <li><strong>ネットワークに接続していない</strong>
+                        <ul>
+                            <li>オンライン認証が必要な場合</li>
+                            <li>対処：Wi-Fi接続を確認、ゲストモードで接続設定</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <h3>6.3 アプリが動かない</h3>
+            
+            <div class="feature-card">
+                <h4><i class="fas fa-mobile-alt"></i> 症状：アプリをタップしても起動しない、クラッシュする</h4>
+                <h5>対処手順</h5>
+                <ol>
+                    <li><strong>端末の再起動</strong>（80%のトラブルはこれで解決）</li>
+                    <li><strong>アプリの再インストール</strong>
+                        <ul>
+                            <li>アプリを削除 → 再度インストール</li>
+                            <li>キャッシュクリアも有効</li>
+                        </ul>
+                    </li>
+                    <li><strong>OSのアップデート</strong>
+                        <ul>
+                            <li>古いOSバージョンが原因の場合</li>
+                            <li>設定 → システム更新を確認</li>
+                        </ul>
+                    </li>
+                    <li><strong>ストレージ容量不足</strong>
+                        <ul>
+                            <li>容量不足でアプリが正常動作しない</li>
+                            <li>不要ファイル削除、クラウドへ移行</li>
+                        </ul>
+                    </li>
+                    <li><strong>権限設定の確認</strong>
+                        <ul>
+                            <li>カメラ、マイク、位置情報の権限が必要なアプリ</li>
+                            <li>設定 → アプリ → 権限を許可</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <h3>6.4 紛失・盗難時の緊急対応</h3>
+            
+            <div class="alert alert-danger">
+                <h4><i class="fas fa-exclamation-triangle"></i> 緊急度：最優先対応</h4>
+                <p>端末紛失は<strong>個人情報漏洩のリスク</strong>があります。迅速な対応が不可欠です。</p>
+            </div>
+
+            <h4>紛失時の対応フロー（30分以内に実施）</h4>
+            <ol>
+                <li><strong>紛失の状況確認</strong>
+                    <ul>
+                        <li>いつ、どこで紛失したか</li>
+                        <li>最後に使用した場所・時間</li>
+                        <li>盗難の可能性はあるか</li>
+                    </ul>
+                </li>
+                <li><strong>MDMから位置情報確認</strong>
+                    <ul>
+                        <li>Google管理コンソール、Apple School Manager、Intuneで位置追跡</li>
+                        <li>校内にあれば探索</li>
+                    </ul>
+                </li>
+                <li><strong>遠隔ロックの実施</strong>
+                    <ul>
+                        <li>MDMから「デバイスをロック」を実行</li>
+                        <li>画面に「この端末は紛失しました。○○学校 TEL:○○」と表示</li>
+                        <li>第三者が使用できない状態にする</li>
+                    </ul>
+                </li>
+                <li><strong>管理職・保護者への報告</strong>
+                    <ul>
+                        <li>紛失の事実を速やかに報告</li>
+                        <li>対応状況を説明</li>
+                    </ul>
+                </li>
+                <li><strong>警察への遺失物届（必要に応じて）</strong>
+                    <ul>
+                        <li>盗難の可能性がある場合</li>
+                        <li>届出番号を記録</li>
+                    </ul>
+                </li>
+                <li><strong>発見されない場合：遠隔データ消去</strong>
+                    <ul>
+                        <li>紛失から1週間経過、発見の見込みがない場合</li>
+                        <li>MDMから「デバイスをワイプ」実行</li>
+                        <li>工場出荷状態に戻り、データは完全削除</li>
+                    </ul>
+                </li>
+                <li><strong>代替機の貸出</strong>
+                    <ul>
+                        <li>学習継続のため予備端末を貸与</li>
+                        <li>新たな管理番号を記録</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <!-- 7. データ管理とバックアップ -->
+        <section id="data-backup" class="content-section">
+            <h2><i class="fas fa-database"></i> 7. データ管理とバックアップ</h2>
+            
+            <h3>7.1 クラウドストレージの活用</h3>
+            
+            <div class="alert alert-info">
+                <h4><i class="fas fa-cloud"></i> クラウド優先の原則</h4>
+                <p>1人1台端末環境では、<strong>端末ローカルではなくクラウドにデータを保存</strong>することが基本です。これにより、端末故障・紛失時もデータが守られます。</p>
+            </div>
+
+            <h4>主要クラウドストレージサービス</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>サービス</th>
+                        <th>容量</th>
+                        <th>対応OS</th>
+                        <th>特徴</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Google Drive</strong></td>
+                        <td>Education版：100TB（ドメイン全体）</td>
+                        <td>全OS対応</td>
+                        <td>Google Workspace統合、自動保存、共同編集</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OneDrive</strong></td>
+                        <td>A1無料版：1TB/ユーザー</td>
+                        <td>全OS対応</td>
+                        <td>Microsoft 365統合、Officeファイルに強い</td>
+                    </tr>
+                    <tr>
+                        <td><strong>iCloud Drive</strong></td>
+                        <td>5GB無料、200GB月額400円</td>
+                        <td>Apple製品</td>
+                        <td>iPadで自動バックアップ、Apple Schoolwork連携</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>児童生徒への指導ポイント</h4>
+            <ul>
+                <li><strong>「必ずクラウドに保存」を習慣化</strong>
+                    <ul>
+                        <li>Google Docs、スライド、スプレッドシートは自動保存</li>
+                        <li>写真・動画もGoogle Drive、OneDriveにアップロード</li>
+                    </ul>
+                </li>
+                <li><strong>フォルダ整理の指導</strong>
+                    <ul>
+                        <li>教科別、学年別にフォルダ分け</li>
+                        <li>「マイドライブ」と「共有ドライブ」の使い分け</li>
+                    </ul>
+                </li>
+                <li><strong>容量管理</strong>
+                    <ul>
+                        <li>不要なファイルは定期的に削除</li>
+                        <li>大容量動画は圧縮、または外部保存</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>7.2 重要データのバックアップ方法</h3>
+            
+            <h4>バックアップが必要なデータ</h4>
+            <ul>
+                <li>作品データ（レポート、プレゼン、動画作品）</li>
+                <li>ポートフォリオ（学習の記録、振り返り）</li>
+                <li>プログラミング作品（Scratchプロジェクト等）</li>
+                <li>デジタル教科書の書き込み（可能な場合）</li>
+            </ul>
+
+            <h4>バックアップ実施のタイミング</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>タイミング</th>
+                        <th>対象</th>
+                        <th>方法</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>毎日（自動）</strong></td>
+                        <td>Google Docs、スライド等</td>
+                        <td>クラウド自動保存（手動操作不要）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>週1回</strong></td>
+                        <td>ローカル保存ファイル</td>
+                        <td>手動でGoogle Drive等にアップロード</td>
+                    </tr>
+                    <tr>
+                        <td><strong>学期末</strong></td>
+                        <td>ポートフォリオ、作品集</td>
+                        <td>フォルダごとZIP圧縮、保護者へ共有</td>
+                    </tr>
+                    <tr>
+                        <td><strong>年度末</strong></td>
+                        <td>全学習データ</td>
+                        <td>卒業・進級前に個人Googleアカウントへエクスポート</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>7.3 個人情報保護とデータ削除の徹底</h3>
+            
+            <div class="alert alert-danger">
+                <h4><i class="fas fa-user-lock"></i> 個人情報保護法への対応</h4>
+                <p>学校が保有する児童生徒の個人情報は、<strong>個人情報保護法</strong>および<strong>自治体の個人情報保護条例</strong>により厳格に保護されます。</p>
+            </div>
+
+            <h4>データ削除が必要なタイミング</h4>
+            <ul>
+                <li><strong>卒業時</strong>：学校アカウントの無効化、データ削除（保存期限は自治体ごとに異なる）</li>
+                <li><strong>転出時</strong>：端末初期化、アカウント削除</li>
+                <li><strong>端末返却時</strong>：必ず初期化（次の利用者への個人情報漏洩防止）</li>
+                <li><strong>端末廃棄時</strong>：ハードディスク物理破壊、またはデータ完全消去ソフト使用</li>
+            </ul>
+
+            <h4>データ削除の手順</h4>
+            <ol>
+                <li><strong>バックアップの確認</strong>：削除前に必要なデータがクラウド保存されているか確認</li>
+                <li><strong>MDMから初期化</strong>：管理画面から「ワイプ」実行</li>
+                <li><strong>ローカル確認</strong>：端末を起動し、初期状態になっているか確認</li>
+                <li><strong>記録</strong>：初期化日時、実施者を台帳に記録</li>
+            </ol>
+        </section>
+
+        <!-- 8. 年間運用計画 -->
+        <section id="annual-plan" class="content-section">
+            <h2><i class="fas fa-calendar-alt"></i> 8. 年間運用計画</h2>
+            
+            <p>端末管理業務を計画的に進めるための年間スケジュールです。学校の実情に合わせて調整してください。</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>月</th>
+                        <th>主要業務</th>
+                        <th>詳細作業</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>4月</strong></td>
+                        <td>新入生端末配布、初期設定</td>
+                        <td>
+                            ・端末配布式<br>
+                            ・初回ログイン支援<br>
+                            ・保護者説明会<br>
+                            ・利用ルール確認<br>
+                            ・台帳更新
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>5月</strong></td>
+                        <td>定着支援、トラブル対応</td>
+                        <td>
+                            ・パスワード忘れ対応<br>
+                            ・Wi-Fi接続トラブル対応<br>
+                            ・アプリ使い方支援<br>
+                            ・充電保管庫点検
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>6月</strong></td>
+                        <td>定期点検（第1回）</td>
+                        <td>
+                            ・端末外観チェック<br>
+                            ・動作確認<br>
+                            ・バッテリー状態確認<br>
+                            ・不具合端末の修理依頼
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>7月</strong></td>
+                        <td>夏休み前点検、持ち帰り対応</td>
+                        <td>
+                            ・全端末の充電確認<br>
+                            ・OSアップデート実施<br>
+                            ・持ち帰りルールの確認<br>
+                            ・保護者向け注意事項配布<br>
+                            ・充電器の配布（必要に応じて）
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>8月</strong></td>
+                        <td>夏季メンテナンス</td>
+                        <td>
+                            ・充電保管庫の清掃<br>
+                            ・ケーブル交換<br>
+                            ・予備端末の初期設定<br>
+                            ・教員研修（端末活用）<br>
+                            ・次期ライセンス更新準備
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>9月</strong></td>
+                        <td>2学期開始点検</td>
+                        <td>
+                            ・持ち帰り端末の回収・点検<br>
+                            ・破損・紛失の確認<br>
+                            ・アプリ追加・削除<br>
+                            ・フィルタリング設定見直し
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>10月</strong></td>
+                        <td>定期点検（第2回）</td>
+                        <td>
+                            ・端末外観チェック<br>
+                            ・ストレージ容量確認<br>
+                            ・不要ファイル削除指導<br>
+                            ・バッテリー劣化確認
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>11月</strong></td>
+                        <td>中間レビュー</td>
+                        <td>
+                            ・利用状況データ分析<br>
+                            ・トラブル傾向分析<br>
+                            ・教員アンケート実施<br>
+                            ・改善策の検討
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>12月</strong></td>
+                        <td>冬休み前点検</td>
+                        <td>
+                            ・充電確認<br>
+                            ・OSアップデート<br>
+                            ・持ち帰りルール再確認<br>
+                            ・データバックアップ指導
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>1月</strong></td>
+                        <td>3学期開始、次年度準備</td>
+                        <td>
+                            ・端末点検<br>
+                            ・次年度端末調達計画<br>
+                            ・予算要求資料作成<br>
+                            ・ライセンス更新手続き
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>2月</strong></td>
+                        <td>定期点検（第3回）、次年度準備</td>
+                        <td>
+                            ・全端末の動作確認<br>
+                            ・修理完了確認<br>
+                            ・次年度配布端末の準備開始<br>
+                            ・MDM設定の見直し
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>3月</strong></td>
+                        <td>卒業生端末回収、年度末処理</td>
+                        <td>
+                            ・卒業生からの端末回収<br>
+                            ・データバックアップ支援<br>
+                            ・端末初期化<br>
+                            ・転出生対応<br>
+                            ・年間報告書作成<br>
+                            ・次年度の準備完了
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert alert-info">
+                <h4><i class="fas fa-calendar-check"></i> スケジュール管理のコツ</h4>
+                <ul>
+                    <li>Googleカレンダーに年間予定を登録、リマインダー設定</li>
+                    <li>定期点検は学期に1回（6月、10月、2月）を基本に</li>
+                    <li>長期休暇前後は必ず端末点検を実施</li>
+                    <li>教員と連携し、授業に支障が出ない時期を選定</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 9. 役割分担と協働体制 -->
+        <section id="role-sharing" class="content-section">
+            <h2><i class="fas fa-users"></i> 9. ICT支援員の役割分担と協働体制</h2>
+            
+            <h3>9.1 常駐型支援員の日常業務</h3>
+            
+            <div class="alert alert-info">
+                <h4><i class="fas fa-building"></i> 常駐型支援員とは</h4>
+                <p>1校に専任で配置され、毎日学校に勤務するICT支援員です。<strong>大規模校、ICT先進校</strong>で採用されています。</p>
+            </div>
+
+            <h4>1日のスケジュール例</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>時間</th>
+                        <th>業務内容</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>8:00-8:30</strong></td>
+                        <td>
+                            ・出勤、メール確認<br>
+                            ・充電保管庫の確認<br>
+                            ・端末貸出（忘れ・故障対応）
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>8:30-12:00</strong></td>
+                        <td>
+                            ・授業支援（1-4時間目）<br>
+                            ・教室巡回、トラブル対応<br>
+                            ・Wi-Fi接続サポート<br>
+                            ・アプリ使い方支援
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>12:00-13:00</strong></td>
+                        <td>
+                            ・昼休憩<br>
+                            ・端末トラブル対応（予約制）
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>13:00-15:30</strong></td>
+                        <td>
+                            ・授業支援（5-6時間目）<br>
+                            ・教員との打ち合わせ<br>
+                            ・次週の授業準備支援
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>15:30-17:00</strong></td>
+                        <td>
+                            ・端末点検・修理対応<br>
+                            ・MDM設定変更<br>
+                            ・業務記録作成<br>
+                            ・教員研修資料作成
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>9.2 巡回型支援員の訪問時業務</h3>
+            
+            <div class="alert alert-info">
+                <h4><i class="fas fa-route"></i> 巡回型支援員とは</h4>
+                <p>複数校を週1-2回巡回するICT支援員です。<strong>中小規模校、自治体一括配置</strong>で一般的です。</p>
+            </div>
+
+            <h4>訪問日のスケジュール例（週1回訪問、1日6時間勤務）</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>時間</th>
+                        <th>業務内容</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>8:30-9:00</strong></td>
+                        <td>
+                            ・学校到着、職員室挨拶<br>
+                            ・今週のトラブル・依頼事項確認<br>
+                            ・訪問予定の授業クラス確認
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>9:00-12:00</strong></td>
+                        <td>
+                            ・予約授業の支援（2-3コマ）<br>
+                            ・端末トラブル対応<br>
+                            ・Wi-Fi・ネットワーク点検
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>12:00-13:00</strong></td>
+                        <td>
+                            ・昼休憩<br>
+                            ・教員からの質問対応
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>13:00-15:00</strong></td>
+                        <td>
+                            ・端末定期点検（一部のクラス）<br>
+                            ・故障端末の回収・代替機配布<br>
+                            ・MDM設定変更<br>
+                            ・アプリインストール
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>15:00-15:30</strong></td>
+                        <td>
+                            ・教員との情報共有<br>
+                            ・次回訪問時の予約受付<br>
+                            ・業務報告書作成
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert alert-warning">
+                <h4><i class="fas fa-exclamation-triangle"></i> 巡回型支援員の課題</h4>
+                <ul>
+                    <li>訪問頻度が少ないため、緊急トラブルに即応できない</li>
+                    <li>教員との信頼関係構築に時間がかかる</li>
+                    <li>毎週違う学校に行くため、各校の状況把握が困難</li>
+                </ul>
+                <p><strong>対策：</strong> オンライン相談窓口（メール、チャット）の設置、遠隔サポートツールの活用</p>
+            </div>
+
+            <h3>9.3 教員との協働体制</h3>
+            
+            <h4>役割分担の明確化</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>業務</th>
+                        <th>ICT支援員</th>
+                        <th>教員</th>
+                        <th>備考</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>端末配布・回収</strong></td>
+                        <td>◎ 主担当</td>
+                        <td>○ 協力</td>
+                        <td>配布式は教員と協働</td>
+                    </tr>
+                    <tr>
+                        <td><strong>初期設定・MDM登録</strong></td>
+                        <td>◎ 主担当</td>
+                        <td>-</td>
+                        <td>専門的知識が必要</td>
+                    </tr>
+                    <tr>
+                        <td><strong>端末トラブル対応</strong></td>
+                        <td>◎ 1次対応</td>
+                        <td>△ 簡単なトラブルのみ</td>
+                        <td>教員は再起動程度まで</td>
+                    </tr>
+                    <tr>
+                        <td><strong>授業中の操作支援</strong></td>
+                        <td>○ サポート</td>
+                        <td>◎ 主担当</td>
+                        <td>教員が教え、支援員が補助</td>
+                    </tr>
+                    <tr>
+                        <td><strong>アプリ選定</strong></td>
+                        <td>○ 提案</td>
+                        <td>◎ 決定</td>
+                        <td>教育的観点は教員が判断</td>
+                    </tr>
+                    <tr>
+                        <td><strong>情報モラル教育</strong></td>
+                        <td>△ 補助資料作成</td>
+                        <td>◎ 主担当</td>
+                        <td>教育活動は教員の責務</td>
+                    </tr>
+                    <tr>
+                        <td><strong>保護者対応</strong></td>
+                        <td>△ 技術的説明</td>
+                        <td>◎ 主担当</td>
+                        <td>教育方針は教員が説明</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>9.4 業者・ベンダーとの連携</h3>
+            
+            <h4>主な連携先</h4>
+            <ul>
+                <li><strong>端末メーカー・販売業者</strong>：故障修理、保証対応、技術サポート</li>
+                <li><strong>通信事業者</strong>：回線トラブル、Wi-Fi増強、ネットワーク設定</li>
+                <li><strong>MDMベンダー</strong>：設定サポート、バージョンアップ、障害対応</li>
+                <li><strong>学習アプリベンダー</strong>：ライセンス管理、使い方研修、不具合報告</li>
+                <li><strong>教育委員会</strong>：予算・調達、ポリシー決定、全体方針</li>
+            </ul>
+
+            <h4>業者へ問い合わせる際のポイント</h4>
+            <ol>
+                <li><strong>契約内容の確認</strong>
+                    <ul>
+                        <li>保証期間内か、サポート範囲内か</li>
+                        <li>問い合わせ窓口（電話、メール、チャット）</li>
+                        <li>対応時間（平日9-17時が一般的）</li>
+                    </ul>
+                </li>
+                <li><strong>必要な情報の準備</strong>
+                    <ul>
+                        <li>端末のシリアル番号、型番</li>
+                        <li>エラーメッセージ、スクリーンショット</li>
+                        <li>発生日時、頻度、再現手順</li>
+                        <li>契約番号、学校名、担当者名</li>
+                    </ul>
+                </li>
+                <li><strong>記録の保存</strong>
+                    <ul>
+                        <li>問い合わせ日時、対応者名を記録</li>
+                        <li>回答内容、解決方法をメモ</li>
+                        <li>次回の参考のためにナレッジベース化</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="alert alert-success">
+                <h4><i class="fas fa-handshake"></i> 良好な関係構築のコツ</h4>
+                <ul>
+                    <li>定期的な情報交換会を開催（月1回程度）</li>
+                    <li>感謝の気持ちを伝える（「いつも助かっています」）</li>
+                    <li>無理な要求をしない（契約範囲内で依頼）</li>
+                    <li>トラブル時も冷静に、事実ベースで報告</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- まとめ -->
+        <section class="content-section">
+            <h2><i class="fas fa-check-circle"></i> まとめ</h2>
+            
+            <div class="alert alert-info">
+                <h3>端末管理・MDM運用の重要ポイント</h3>
+                <ol>
+                    <li><strong>MDMは1人1台端末環境の必須ツール</strong>：一元管理で効率化、セキュリティ強化</li>
+                    <li><strong>配布・回収は計画的に</strong>：準備期間を十分に取り、チェックリストで確実に実施</li>
+                    <li><strong>日常管理の徹底</strong>：充電、清掃、点検を定期的に行い、トラブルを未然に防ぐ</li>
+                    <li><strong>セキュリティとプライバシーのバランス</strong>：過度な制限は避け、教育的観点を重視</li>
+                    <li><strong>データはクラウド優先</strong>：端末故障・紛失に備え、クラウド保存を徹底指導</li>
+                    <li><strong>年間計画で先手を打つ</strong>：長期休暇前後、学期末は必ず点検・メンテナンス</li>
+                    <li><strong>協働体制の構築</strong>：教員、業者、保護者と連携し、学校全体でICT環境を支える</li>
+                </ol>
+            </div>
+
+            <h3>関連ページ</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4><i class="fas fa-wrench"></i> トラブルシューティング</h4>
+                    <p>端末・ネットワーク・アプリの具体的なトラブル対応</p>
+                    <a href="troubleshooting.html" class="btn-primary">詳しく見る</a>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-shield-alt"></i> セキュリティ対策</h4>
+                    <p>情報セキュリティの基礎知識と実践的対策</p>
+                    <a href="security.html" class="btn-primary">詳しく見る</a>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-network-wired"></i> ネットワーク基礎</h4>
+                    <p>学校ネットワークの構成とWi-Fi設定</p>
+                    <a href="network-basics.html" class="btn-primary">詳しく見る</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p>最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/search.js"></script>
+</body>
+</html>

@@ -106,6 +106,27 @@
       "keywords": ["ルーブリック", "評価", "評価基準", "パフォーマンス評価", "形成的評価", "アセスメント"]
     },
     {
+      "title": "授業支援システム活用実践ガイド",
+      "url": "learning-support-systems.html",
+      "description": "ロイロノート、SKYMENU Cloud、MetaMoJi、Google Classroom、Microsoft Teams等の主要授業支援システムの活用法、授業シーン別・教科別実践例、トラブルシューティング",
+      "category": "支援・指導",
+      "keywords": ["授業支援システム", "ロイロノート", "SKYMENU", "MetaMoJi", "Google Classroom", "Microsoft Teams", "授業", "実践例", "教科別"]
+    },
+    {
+      "title": "プログラミング教育完全サポートガイド",
+      "url": "programming-education.html",
+      "description": "学習指導要領に基づく学年別プログラミングカリキュラム、Scratch、Viscuit、micro:bit、Code.org等の主要ツール詳解、教科別授業実践例、プログラミング的思考育成、評価基準",
+      "category": "支援・指導",
+      "keywords": ["プログラミング教育", "Scratch", "Viscuit", "micro:bit", "Code.org", "プログラミング的思考", "学年別", "教科別", "カリキュラム", "評価"]
+    },
+    {
+      "title": "情報モラル教育指導ガイド",
+      "url": "digital-citizenship.html",
+      "description": "学年別情報モラルカリキュラム、デジタルシティズンシップ、SNSトラブル対応、保護者連携、教材・ワークシート、評価方法",
+      "category": "支援・指導",
+      "keywords": ["情報モラル", "デジタルシティズンシップ", "SNS", "トラブル", "保護者連携", "学年別", "カリキュラム", "ネットいじめ", "情報セキュリティ"]
+    },
+    {
       "title": "GIGA最新動向",
       "url": "giga-update.html",
       "description": "GIGAスクール構想の最新情報と動向",
@@ -139,6 +160,27 @@
       "description": "Chromebook、iPad、Windowsの比較と周辺機器",
       "category": "機器・ツール",
       "keywords": ["ICT機器", "Chromebook", "iPad", "Windows", "周辺機器"]
+    },
+    {
+      "title": "端末管理・MDM運用実践ガイド",
+      "url": "device-management.html",
+      "description": "1人1台端末環境の配備・回収、故障対応、MDM設定、アプリ管理の実践ノウハウ",
+      "category": "機器・ツール",
+      "keywords": ["端末管理", "MDM", "配備", "回収", "故障対応", "Chromebook", "iPad", "Windows"]
+    },
+    {
+      "title": "Wi-Fi・ネットワークトラブル完全対応ガイド",
+      "url": "wifi-troubleshooting.html",
+      "description": "接続不良、速度低下、認証エラー等の診断フローチャートと即座の解決策",
+      "category": "機器・ツール",
+      "keywords": ["Wi-Fi", "ネットワーク", "接続", "トラブル", "速度低下", "認証エラー", "診断"]
+    },
+    {
+      "title": "アカウント管理・パスワード運用実務ガイド",
+      "url": "account-management.html",
+      "description": "Google/Microsoft/Apple IDの一括作成、パスワードリセット、卒業処理の実務",
+      "category": "機器・ツール",
+      "keywords": ["アカウント", "パスワード", "Google", "Microsoft", "Apple", "ID管理", "卒業処理"]
     },
     {
       "title": "トラブルシューティング",

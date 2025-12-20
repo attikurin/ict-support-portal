@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wi-Fi・ネットワークトラブル完全対応ガイド - ICT支援員・講師のための教育ポータル</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                        <li><a href="rubric.html"><i class="fas fa-clipboard-check"></i> ルーブリック評価</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI利用ガイド</a></li>
+                        <li><a href="ai-apps-education.html"><i class="fas fa-brain"></i> AI教育アプリ</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-star"></i> 成功事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="device-management.html"><i class="fas fa-tablet-alt"></i> 端末管理・MDM</a></li>
+                        <li><a href="wifi-troubleshooting.html" class="active"><i class="fas fa-wifi"></i> Wi-Fiトラブル対応</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> セキュリティ</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="edtech-comparison.html"><i class="fas fa-balance-scale"></i> EdTech比較</a></li>
+                        <li><a href="edtech-tools.html"><i class="fas fa-tools"></i> EdTechツール</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                        <li><a href="downloads.html"><i class="fas fa-download"></i> ダウンロード</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-wifi"></i> Wi-Fi・ネットワークトラブル完全対応ガイド</h1>
+            <p class="lead">学校現場で最も頻繁に発生するWi-Fi・ネットワークトラブルの診断から解決まで、即座に対応できる実践的なガイドです。授業中の緊急対応、頻出トラブルTOP10の即効対処法、診断フローチャートを完備しています。</p>
+        </div>
+
+        <div class="alert alert-warning">
+            <h3><i class="fas fa-exclamation-triangle"></i> 授業中のトラブル発生時</h3>
+            <p>このページは<strong>緊急時にすぐ使える</strong>よう設計されています。<a href="#emergency" style="color: #d9534f; font-weight: bold;">→ 授業中の緊急対応マニュアルへ</a></p>
+        </div>
+
+        <!-- 目次 -->
+        <section class="toc-section">
+            <h2><i class="fas fa-list"></i> 目次</h2>
+            <div class="info-grid">
+                <a href="#wifi-basics" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-info-circle"></i></div>
+                    <h3>学校Wi-Fiの基礎知識</h3>
+                    <p>ネットワーク構成、Wi-Fi規格、APの役割</p>
+                </a>
+                <a href="#diagnosis-flow" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-sitemap"></i></div>
+                    <h3>接続トラブル診断フロー</h3>
+                    <p>症状別の原因特定4ステップ</p>
+                </a>
+                <a href="#top10-troubles" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-list-ol"></i></div>
+                    <h3>頻出トラブルTOP10</h3>
+                    <p>最も多いトラブルと即効対処法</p>
+                </a>
+                <a href="#emergency" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-first-aid"></i></div>
+                    <h3>授業中の緊急対応</h3>
+                    <p>5分・10分以内の応急処置、代替案</p>
+                </a>
+                <a href="#bandwidth" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3>接続数・帯域管理</h3>
+                    <p>推奨接続台数、帯域不足の対策</p>
+                </a>
+                <a href="#optimization" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-cog"></i></div>
+                    <h3>Wi-Fi設定の最適化</h3>
+                    <p>自動接続、認証、フィルタリング</p>
+                </a>
+                <a href="#maintenance" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-tools"></i></div>
+                    <h3>定期メンテナンス</h3>
+                    <p>AP再起動、ファームウェア更新</p>
+                </a>
+                <a href="#vendor-support" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-phone-volume"></i></div>
+                    <h3>業者連絡時の情報収集</h3>
+                    <p>エスカレーション基準、必要な情報</p>
+                </a>
+                <a href="#myths" class="info-card">
+                    <div class="info-card-icon"><i class="fas fa-question"></i></div>
+                    <h3>よくある勘違い</h3>
+                    <p>誤った常識と正しい知識</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 1. 学校Wi-Fiの基礎知識 -->
+        <section id="wifi-basics" class="content-section">
+            <h2><i class="fas fa-info-circle"></i> 1. 学校Wi-Fiの基礎知識</h2>
+            
+            <h3>1.1 学校ネットワークの構成</h3>
+            
+            <div class="alert alert-info">
+                <h4><i class="fas fa-network-wired"></i> 学校ネットワークの全体像</h4>
+                <p>学校のインターネット接続は、複数の層で構成されています。トラブルの原因切り分けには、この構造の理解が不可欠です。</p>
+            </div>
+
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+                <h5 style="text-align: center; margin-bottom: 1.5rem;"><i class="fas fa-layer-group"></i> ネットワーク構成図</h5>
+                <pre style="font-family: monospace; line-height: 1.8; background: white; padding: 1.5rem; border-radius: 4px;">
+インターネット
+    ↓
+<span style="color: #2563eb;">【SINET（学術情報ネットワーク）】</span>
+    ↓
+<span style="color: #d97706;">【自治体・教育委員会ネットワーク】</span>
+  - ファイアウォール
+  - Webフィルタリング
+  - ウイルス対策
+    ↓
+<span style="color: #059669;">【学校内ネットワーク】</span>
+  - ルーター
+  - スイッチ
+    ↓
+<span style="color: #dc2626;">【Wi-Fiアクセスポイント（AP）】</span>
+  - 各教室、廊下、体育館等に設置
+    ↓
+<span style="color: #7c3aed;">【児童生徒の端末（Chromebook、iPad等）】</span>
+                </pre>
+            </div>
+
+            <h4>各層の役割とトラブル時の影響範囲</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>層</th>
+                        <th>役割</th>
+                        <th>トラブル時の影響</th>
+                        <th>対応可能者</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>SINET</strong></td>
+                        <td>全国の学校を高速回線で接続</td>
+                        <td>全校が影響を受ける（稀）</td>
+                        <td>文部科学省・SINET</td>
+                    </tr>
+                    <tr>
+                        <td><strong>自治体NW</strong></td>
+                        <td>セキュリティ、フィルタリング</td>
+                        <td>自治体内の全学校が影響</td>
+                        <td>教育委員会・通信事業者</td>
+                    </tr>
+                    <tr>
+                        <td><strong>学校内NW</strong></td>
+                        <td>校内のルーター・スイッチ</td>
+                        <td>その学校全体が影響</td>
+                        <td>学校管理者・ICT支援員・業者</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wi-Fi AP</strong></td>
+                        <td>無線LANの電波を発信</td>
+                        <td>特定の教室・エリアのみ影響</td>
+                        <td><strong>ICT支援員が対応可能</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>端末</strong></td>
+                        <td>児童生徒が使用</td>
+                        <td>その端末のみ影響</td>
+                        <td><strong>ICT支援員が対応可能</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert alert-success">
+                <h4><i class="fas fa-lightbulb"></i> トラブル切り分けの鉄則</h4>
+                <p><strong>「1台だけ？ 複数台？ 全部？」</strong>を最初に確認しましょう。</p>
+                <ul>
+                    <li><strong>1台だけ繋がらない</strong> → 端末側の問題（設定、故障）</li>
+                    <li><strong>特定の教室だけ</strong> → Wi-Fi APの問題</li>
+                    <li><strong>学校全体で繋がらない</strong> → ルーター・回線の問題</li>
+                </ul>
+            </div>
+
+            <h3>1.2 Wi-Fi規格の理解</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>規格名</th>
+                        <th>別名</th>
+                        <th>最大速度</th>
+                        <th>周波数帯</th>
+                        <th>学校での導入状況</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>802.11ac</strong></td>
+                        <td>Wi-Fi 5</td>
+                        <td>6.9Gbps</td>
+                        <td>5GHz</td>
+                        <td>GIGAスクール第1期の標準</td>
+                    </tr>
+                    <tr>
+                        <td><strong>802.11ax</strong></td>
+                        <td>Wi-Fi 6</td>
+                        <td>9.6Gbps</td>
+                        <td>2.4GHz / 5GHz</td>
+                        <td>GIGA第2期で導入増加中</td>
+                    </tr>
+                    <tr>
+                        <td><strong>802.11n</strong></td>
+                        <td>Wi-Fi 4</td>
+                        <td>600Mbps</td>
+                        <td>2.4GHz / 5GHz</td>
+                        <td>旧式APで残存（更新推奨）</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>2.4GHz vs 5GHz 帯域の違い</h4>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4><i class="fas fa-signal"></i> 2.4GHz帯</h4>
+                    <ul>
+                        <li><strong>メリット</strong>：電波が遠くまで届く、壁を通過しやすい</li>
+                        <li><strong>デメリット</strong>：混雑しやすい（電子レンジ、Bluetooth等と干渉）、速度が遅い</li>
+                        <li><strong>用途</strong>：校舎の端、鉄筋コンクリート建物</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-wifi"></i> 5GHz帯</h4>
+                    <ul>
+                        <li><strong>メリット</strong>：高速、干渉が少ない、同時接続に強い</li>
+                        <li><strong>デメリット</strong>：電波が届きにくい、壁に弱い</li>
+                        <li><strong>用途</strong>：教室内、動画視聴、オンライン授業</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <h4><i class="fas fa-info-circle"></i> 学校では5GHz帯を優先</h4>
+                <p>1人1台端末環境では、<strong>5GHz帯（Wi-Fi 5/6）</strong>の利用が推奨されます。高速で同時接続数が多く、動画視聴にも対応できます。</p>
+            </div>
+
+            <h3>1.3 アクセスポイント（AP）の配置と接続台数</h3>
+            
+            <h4>適切なAP配置の目安</h4>
+            <ul>
+                <li><strong>普通教室</strong>：1教室に1台（40人学級=約40台端末）</li>
+                <li><strong>体育館</strong>：広さに応じて2-4台</li>
+                <li><strong>廊下・渡り廊下</strong>：20-30mごとに1台</li>
+                <li><strong>職員室・特別教室</strong>：利用頻度に応じて1-2台</li>
+            </ul>
+
+            <h4>1つのAPあたりの推奨接続台数</h4>
+            <div class="alert alert-warning">
+                <p><strong>推奨接続台数：20-30台</strong></p>
+                <p>Wi-Fi 6対応APなら最大40-50台まで接続可能ですが、<strong>実際には20-30台以下</strong>に抑えることで安定した通信を確保できます。</p>
+                <p>40人学級で全員が同時接続する場合、<strong>教室に2台のAPを設置</strong>するのが理想です（予算の都合で1台の学校も多い）。</p>
+            </div>
+
+            <h4>電波強度の確認方法</h4>
+            <p>スマートフォンやPCで<strong>Wi-Fi電波強度測定アプリ</strong>を使用し、各教室で電波状況をチェックします。</p>
+            <ul>
+                <li><strong>iOS/Android</strong>：「WiFi Analyzer」「NetSpot」等</li>
+                <li><strong>Windows</strong>：コマンドプロンプトで「netsh wlan show networks mode=bssid」</li>
+                <li><strong>目安</strong>：-70dBm以上（-60dBm等）が快適、-80dBm以下（-90dBm等）は改善が必要</li>
+            </ul>
+        </section>
+
+        <!-- 2. 接続トラブル診断フローチャート -->
+        <section id="diagnosis-flow" class="content-section">
+            <h2><i class="fas fa-sitemap"></i> 2. 接続トラブル診断フローチャート</h2>
+            
+            <p>Wi-Fiトラブルは症状により原因が異なります。以下のフローチャートで原因を特定し、対処しましょう。</p>
+
+            <h3>診断フロー① 「Wi-Fiマークが出ない」</h3>
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+                <pre style="font-family: monospace; line-height: 1.8; background: white; padding: 1.5rem; border-radius: 4px;">
+<span style="color: #dc2626; font-weight: bold;">【症状】Wi-Fiアイコンが表示されない</span>
+
+<span style="color: #2563eb;">▼ Step 1: 機内モードの確認</span>
+  → 機内モードがONになっていないか？
+     YES → 機内モードOFF → <span style="color: #059669; font-weight: bold;">解決</span>
+     NO  → Step 2へ
+
+<span style="color: #2563eb;">▼ Step 2: Wi-FiがONか確認</span>
+  → 設定画面でWi-FiスイッチがONか？
+     YES → Step 3へ
+     NO  → Wi-FiをONにする → <span style="color: #059669; font-weight: bold;">解決</span>
+
+<span style="color: #2563eb;">▼ Step 3: SSIDが見えるか確認</span>
+  → Wi-Fi一覧に学校のSSIDが表示されるか？
+     YES → Step 4へ（接続できない問題）
+     NO  → <span style="color: #d97706;">APの電波が届いていない</span>
+           → APの電源確認、場所移動、AP増設検討
+
+<span style="color: #2563eb;">▼ Step 4: 端末の再起動</span>
+  → 端末を再起動してみる
+     → <span style="color: #059669; font-weight: bold;">80%のトラブルはこれで解決</span>
+                </pre>
+            </div>
+
+            <h3>診断フロー② 「接続できるがインターネットに繋がらない」</h3>
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+                <pre style="font-family: monospace; line-height: 1.8; background: white; padding: 1.5rem; border-radius: 4px;">
+<span style="color: #dc2626; font-weight: bold;">【症状】Wi-Fiには接続できているが、Webページが開けない</span>
+
+<span style="color: #2563eb;">▼ Step 1: 他の端末で確認</span>
+  → 他の端末でもインターネットに繋がらない？
+     YES → <span style="color: #d97706;">学校全体の回線トラブル</span>
+           → ルーター再起動、業者へ連絡
+     NO  → Step 2へ（端末固有の問題）
+
+<span style="color: #2563eb;">▼ Step 2: DNSの問題か確認</span>
+  → ブラウザで「8.8.8.8」と入力して開けるか？
+     YES → <span style="color: #d97706;">DNS設定の問題</span>
+           → DNS手動設定（8.8.8.8、8.8.4.4）
+     NO  → Step 3へ
+
+<span style="color: #2563eb;">▼ Step 3: プロキシ設定の確認</span>
+  → 設定 → ネットワーク → プロキシを確認
+     → 不要なプロキシ設定があれば削除
+     → <span style="color: #059669; font-weight: bold;">解決</span>
+
+<span style="color: #2563eb;">▼ Step 4: IPアドレスの再取得</span>
+  → ネットワーク設定をリセット
+  → Wi-Fi接続を削除 → 再接続
+     → <span style="color: #059669; font-weight: bold;">解決</span>
+                </pre>
+            </div>
+
+            <h3>診断フロー③ 「速度が遅い・動画が止まる」</h3>
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+                <pre style="font-family: monospace; line-height: 1.8; background: white; padding: 1.5rem; border-radius: 4px;">
+<span style="color: #dc2626; font-weight: bold;">【症状】Wi-Fiには繋がるが、速度が遅い、動画がカクカクする</span>
+
+<span style="color: #2563eb;">▼ Step 1: 全体的に遅いか、特定端末だけか？</span>
+  → 複数の端末で遅い？
+     YES → <span style="color: #d97706;">帯域不足・AP過負荷</span>
+           → 同時接続数を減らす、AP増設検討
+     NO  → Step 2へ（端末側の問題）
+
+<span style="color: #2563eb;">▼ Step 2: 電波強度の確認</span>
+  → Wi-Fi電波強度を確認（-70dBm以上が理想）
+     弱い → APに近づく、別のSSIDに接続
+     強い → Step 3へ
+
+<span style="color: #2563eb;">▼ Step 3: 2.4GHz vs 5GHzの確認</span>
+  → 現在2.4GHz接続か？
+     YES → 5GHz SSIDに切り替え → <span style="color: #059669; font-weight: bold;">速度改善</span>
+     NO  → Step 4へ
+
+<span style="color: #2563eb;">▼ Step 4: 端末のストレージ確認</span>
+  → 端末の空き容量が10%以下？
+     YES → 不要ファイル削除 → <span style="color: #059669; font-weight: bold;">動作改善</span>
+     NO  → <span style="color: #d97706;">回線・AP・端末の複合的問題</span>
+           → 業者へ詳細調査依頼
+                </pre>
+            </div>
+        </section>
+
+        <!-- 3. 頻出トラブルTOP10と即効対処法 -->
+        <section id="top10-troubles" class="content-section">
+            <h2><i class="fas fa-list-ol"></i> 3. 頻出トラブルTOP10と即効対処法</h2>
+            
+            <p>学校現場で最も多く発生するWi-Fiトラブルと、その場で実行できる対処法を紹介します。</p>
+
+            <div class="feature-card">
+                <h3><span style="background: #dc2626; color: white; padding: 0.3rem 0.8rem; border-radius: 4px; margin-right: 0.5rem;">1位</span> 「Wi-Fiが見つからない」</h3>
+                <h4>原因</h4>
+                <ul>
+                    <li>機内モードがON</li>
+                    <li>Wi-Fi機能がOFF</li>
+                    <li>APの電波が届いていない</li>
+                    <li>APの電源が切れている</li>
+                </ul>
+                <h4><i class="fas fa-wrench"></i> 即効対処法（1分）</h4>
+                <ol>
+                    <li><strong>機内モードOFF</strong>、<strong>Wi-Fi ON</strong>を確認</li>
+                    <li><strong>端末再起動</strong>（これで80%解決）</li>
+                    <li>APに近づいて再確認</li>
+                    <li>別の教室で接続できるか確認（AP故障の判断）</li>
+                </ol>
+                <div class="alert alert-success">
+                    <strong>時短テクニック：</strong> 児童生徒に「設定画面のスクリーンショット」を撮らせると、遠隔でも状況確認ができます。
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <h3><span style="background: #d97706; color: white; padding: 0.3rem 0.8rem; border-radius: 4px; margin-right: 0.5rem;">2位</span> 「パスワードが間違っていると表示される」</h3>
+                <h4>原因</h4>
+                <ul>
+                    <li>パスワードの入力ミス（大文字・小文字、全角・半角）</li>
+                    <li>間違ったSSIDに接続しようとしている</li>
+                    <li>過去の接続情報が残っている（パスワード変更後）</li>
+                </ul>
+                <h4><i class="fas fa-wrench"></i> 即効対処法（2分）</h4>
+                <ol>
+                    <li><strong>正しいSSID</strong>に接続しているか確認（学校名-5GHz等）</li>
+                    <li>パスワードを<strong>目で見える状態</strong>にして再入力</li>
+                    <li>大文字・小文字、「0（ゼロ）」と「O（オー）」、「1（イチ）」と「l（エル）」を確認</li>
+                    <li>保存済みのWi-Fi設定を<strong>削除</strong> → 再接続</li>
+                </ol>
+            </div>
+
+            <div class="feature-card">
+                <h3><span style="background: #d97706; color: white; padding: 0.3rem 0.8rem; border-radius: 4px; margin-right: 0.5rem;">3位</span> 「接続はできるがインターネットに繋がらない」</h3>
+                <h4>原因</h4>
+                <ul>
+                    <li>DNS設定の問題</li>
+                    <li>プロキシ設定の誤り</li>
+                    <li>学校の回線ダウン</li>
+                    <li>Webフィルタリングによるブロック</li>
+                </ul>
+                <h4><i class="fas fa-wrench"></i> 即効対処法（3分）</h4>
+                <ol>
+                    <li><strong>他の端末でも同じ</strong>か確認 → YES なら学校回線の問題</li>
+                    <li>DNSを手動設定：<strong>8.8.8.8</strong>（Google Public DNS）</li>
+                    <li>ブラウザで「chrome://net-internals/#dns」→ 「Clear host cache」</li>
+                    <li>Wi-Fi接続を削除 → 再接続（IPアドレス再取得）</li>
+                </ol>
+            </div>
+
+            <div class="feature-card">
+                <h3><span style="background: #2563eb; color: white; padding: 0.3rem 0.8rem; border-radius: 4px; margin-right: 0.5rem;">4位</span> 「教室で一斉に繋がらなくなる」</h3>
+                <h4>原因</h4>
+                <ul>
+                    <li>APの過負荷（40台以上の同時接続）</li>
+                    <li>APのフリーズ・再起動</li>
+                    <li>電源トラブル</li>
+                </ul>
+                <h4><i class="fas fa-wrench"></i> 即効対処法（5分）</h4>
+                <ol>
+                    <li>APの<strong>電源ランプ</strong>を確認（消灯していれば電源トラブル）</li>
+                    <li><strong>AP再起動</strong>（電源OFF→30秒待機→ON、またはPoE給電リセット）</li>
+                    <li>接続台数を減らす（半分の児童生徒は別のSSIDへ）</li>
+                    <li>それでも直らない → 業者へ緊急連絡</li>
+                </ol>
+            </div>
+
+            <div class="feature-card">
+                <h3><span style="background: #2563eb; color: white; padding: 0.3rem 0.8rem; border-radius: 4px; margin-right: 0.5rem;">5位</span> 「特定のサイト・アプリだけ開けない」</h3>
+                <h4>原因</h4>
+                <ul>
+                    <li>Webフィルタリングによるブロック</li>
+                    <li>サイト側のメンテナンス・障害</li>
+                    <li>MDMによるアプリ制限</li>
+                </ul>
+                <h4><i class="fas fa-wrench"></i> 即効対処法（3分）</h4>
+                <ol>
+                    <li>別の端末で同じサイトを開けるか確認</li>
+                    <li>Webフィルタリング管理画面で<strong>ブロックログ</strong>を確認</li>
+                    <li>教育目的で必要なサイト → フィルタリング<strong>ホワイトリスト</strong>に追加</li>
+                    <li>サイト側の問題の場合 → 別のサイト・サービスで代替</li>
+                </ol>
+            </div>
+
+            <div class="feature-card">
+                <h3><span style="background: #2563eb; color: white; padding: 0.3rem 0.8rem; border-radius: 4px; margin-right: 0.5rem;">6位</span> 「動画が止まる・カクカクする」</h3>
+                <h4>原因</h4>
+                <ul>
+                    <li>帯域不足（全員が同時に動画視聴）</li>
+                    <li>2.4GHz接続で速度が遅い</li>
+                    <li>APの性能不足</li>
+                </ul>
+                <h4><i class="fas fa-wrench"></i> 即効対処法（2分）</h4>
+                <ol>
+                    <li><strong>5GHz SSIDに切り替え</strong>（速度2-3倍）</li>
+                    <li>動画の画質を下げる（1080p → 720p → 480p）</li>
+                    <li>同時視聴を避ける（グループごとに時間差で視聴）</li>
+                    <li>動画を事前ダウンロードして端末内で再生</li>
+                </ol>
+            </div>
+
+            <div class="feature-card">
+                <h3><span style="background: #059669; color: white; padding: 0.3rem 0.8rem; border-radius: 4px; margin-right: 0.5rem;">7位</span> 「午後になると遅くなる」</h3>
+                <h4>原因</h4>
+                <ul>
+                    <li>全校一斉使用による輻輳（ふくそう）</li>
+                    <li>自治体ネットワークの帯域不足</li>
+                    <li>インターネット全体の混雑（昼休み等）</li>
+                </ul>
+                <h4><i class="fas fa-wrench"></i> 即効対処法（計画的対応）</h4>
+                <ol>
+                    <li>時間帯別の<strong>利用調整</strong>（1-3校時は低学年、4-6校時は高学年等）</li>
+                    <li>重い処理（動画視聴、大容量ダウンロード）は<strong>朝一番</strong>に実施</li>
+                    <li>教育委員会へ<strong>帯域増強の要望</strong>を提出</li>
+                    <li>オフライン教材の活用</li>
+                </ol>
+            </div>
+
+            <div class="feature-card">
+                <h3><span style="background: #059669; color: white; padding: 0.3rem 0.8rem; border-radius: 4px; margin-right: 0.5rem;">8位</span> 「雨の日に繋がりにくい」</h3>
+                <h4>原因</h4>
+                <ul>
+                    <li>湿気によるAP・ケーブルの不具合</li>
+                    <li>電波干渉の増加</li>
+                    <li>校舎の構造による電波減衰</li>
+                </ul>
+                <h4><i class="fas fa-wrench"></i> 即効対処法（2分）</h4>
+                <ol>
+                    <li>APの<strong>LANケーブル接続</strong>を確認（ゆるみ、結露）</li>
+                    <li>別のAPに切り替え</li>
+                    <li>窓際のAPは避ける（雨の影響を受けやすい）</li>
+                    <li>慢性的な場合 → 業者へAP移設・増設を相談</li>
+                </ol>
+            </div>
+
+            <div class="feature-card">
+                <h3><span style="background: #059669; color: white; padding: 0.3rem 0.8rem; border-radius: 4px; margin-right: 0.5rem;">9位</span> 「校舎の端で繋がらない」</h3>
+                <h4>原因</h4>
+                <ul>
+                    <li>APの電波が届かない（距離・障害物）</li>
+                    <li>ローミング（AP間の自動切り替え）がうまく機能しない</li>
+                </ul>
+                <h4><i class="fas fa-wrench"></i> 即効対処法（1分）</h4>
+                <ol>
+                    <li>手動で<strong>近くのAPのSSID</strong>に接続</li>
+                    <li>Wi-Fiを一度OFFにして、再度ONにする（ローミング再実行）</li>
+                    <li>根本的解決 → <strong>APの増設</strong>を検討</li>
+                </ol>
+            </div>
+
+            <div class="feature-card">
+                <h3><span style="background: #7c3aed; color: white; padding: 0.3rem 0.8rem; border-radius: 4px; margin-right: 0.5rem;">10位</span> 「iPadだけ繋がらない（ChromebookはOK）」</h3>
+                <h4>原因</h4>
+                <ul>
+                    <li>iOS設定の問題</li>
+                    <li>MDMプロファイルの不具合</li>
+                    <li>Wi-Fi認証方式の非対応</li>
+                </ul>
+                <h4><i class="fas fa-wrench"></i> 即効対処法（3分）</h4>
+                <ol>
+                    <li>設定 → 一般 → リセット → <strong>「ネットワーク設定をリセット」</strong></li>
+                    <li>MDMプロファイルの再インストール</li>
+                    <li>iOSのアップデート確認</li>
+                    <li>Chromebookと同じSSIDに接続できるか確認（証明書認証の問題かも）</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 4. 授業中の緊急対応マニュアル -->
+        <section id="emergency" class="content-section">
+            <h2><i class="fas fa-first-aid"></i> 4. 授業中の緊急対応マニュアル</h2>
+            
+            <div class="alert alert-danger">
+                <h3><i class="fas fa-exclamation-triangle"></i> 授業を止めないための原則</h3>
+                <p>授業中のトラブルは<strong>学習の流れを止めない</strong>ことが最優先です。完璧に直すことよりも、<strong>授業を継続できる状態</strong>にすることを目指しましょう。</p>
+            </div>
+
+            <h3>4.1 5分以内にできる応急処置</h3>
+            
+            <div class="checklist">
+                <h4><i class="fas fa-clock"></i> 児童生徒自身でできる対処法（教員が指示）</h4>
+                <label><input type="checkbox"> <strong>端末再起動</strong>（電源ボタン長押し→再起動）</label>
+                <label><input type="checkbox"> <strong>Wi-Fi OFF→ON</strong>（設定画面で切り替え）</label>
+                <label><input type="checkbox"> <strong>機内モードON→OFF</strong>（クイック設定から切り替え）</label>
+                <label><input type="checkbox"> <strong>別のSSIDに接続</strong>（5GHz/2.4GHzを切り替え）</label>
+                <label><input type="checkbox"> <strong>APに近づく</strong>（教室の前方・窓際へ移動）</label>
+            </div>
+
+            <div class="alert alert-success">
+                <h4><i class="fas fa-lightbulb"></i> 教員向け指導例</h4>
+                <p>「みなさん、Wi-Fiの調子が悪い人は、まず<strong>端末を再起動</strong>してみましょう。電源ボタンを長押しして『再起動』を選びます。これで大体直ります！」</p>
+            </div>
+
+            <h3>4.2 10分以内の対処法（ICT支援員が実施）</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>対処法</th>
+                        <th>所要時間</th>
+                        <th>効果</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ネットワーク設定のリセット</strong></td>
+                        <td>2分/台</td>
+                        <td>設定 → ネットワーク → リセットで初期状態に</td>
+                    </tr>
+                    <tr>
+                        <td><strong>固定IP → DHCPに変更</strong></td>
+                        <td>2分/台</td>
+                        <td>手動IP設定が原因の場合に有効</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DNSサーバー手動設定</strong></td>
+                        <td>2分/台</td>
+                        <td>8.8.8.8、8.8.4.4に変更</td>
+                    </tr>
+                    <tr>
+                        <td><strong>APの再起動</strong></td>
+                        <td>3-5分</td>
+                        <td>教室全体が影響を受けている場合に有効</td>
+                    </tr>
+                    <tr>
+                        <td><strong>別の教室への移動</strong></td>
+                        <td>5-10分</td>
+                        <td>APの故障が疑われる場合</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>4.3 授業を止めない代替案</h3>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4><i class="fas fa-file-alt"></i> オフライン教材への切り替え</h4>
+                    <ul>
+                        <li>事前にダウンロード済みのPDF、動画を使用</li>
+                        <li>端末内のOfficeアプリ（Word、スライド）を活用</li>
+                        <li>Scratchオフライン版でプログラミング</li>
+                        <li>デジタル教科書（オフライン対応）</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h4><i class="fas fa-mobile-alt"></i> テザリング利用（学校方針に従う）</h4>
+                    <ul>
+                        <li>教員のスマホからテザリング</li>
+                        <li>モバイルWi-Fiルーターの活用</li>
+                        <li>※個人情報保護、通信費の問題に注意</li>
+                        <li>緊急時のみ、管理職の許可を得て使用</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h4><i class="fas fa-users"></i> グループ学習への転換</h4>
+                    <ul>
+                        <li>正常な端末を共有（2-3人で1台）</li>
+                        <li>Wi-Fi不要の協働学習に変更</li>
+                        <li>紙ベースの学習活動に切り替え</li>
+                        <li>トラブルを「学びの機会」に（情報モラル教育）</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h4><i class="fas fa-door-open"></i> 別の教室への移動</h4>
+                    <ul>
+                        <li>空き教室、特別教室へ移動</li>
+                        <li>体育館、図書室のWi-Fiを利用</li>
+                        <li>次の授業時間に振替</li>
+                        <li>校内の別のAPエリアへ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>4.4 トラブル発生時の児童生徒への声かけ例</h3>
+            
+            <div class="alert alert-info">
+                <h4><i class="fas fa-comments"></i> ポジティブなコミュニケーション</h4>
+                <p>トラブルは「学びの機会」です。児童生徒が<strong>問題解決力</strong>を身につけるチャンスと捉えましょう。</p>
+            </div>
+
+            <h5>❌NG例：</h5>
+            <ul style="color: #dc2626;">
+                <li>「なんで繋がらないの？困ったな…」（不安を与える）</li>
+                <li>「あなたが何か変な操作したんじゃない？」（責める）</li>
+                <li>「Wi-Fiはいつもトラブル起こすから嫌だ」（ネガティブ）</li>
+            </ul>
+
+            <h5>⭕OK例：</h5>
+            <ul style="color: #059669;">
+                <li>「Wi-Fiの調子が悪い時は、<strong>まず再起動</strong>だね。みんなでやってみよう！」</li>
+                <li>「トラブルが起きた時こそ、<strong>冷静に対処する練習</strong>だよ。一緒に解決しよう」</li>
+                <li>「今日はWi-Fi使わない方法を考えてみよう。<strong>工夫する力</strong>が大事だね」</li>
+                <li>「今のうちに、オフラインでもできることを準備しておこう」</li>
+            </ul>
+        </section>
+
+        <!-- まとめ -->
+        <section class="content-section">
+            <h2><i class="fas fa-check-circle"></i> まとめ</h2>
+            
+            <div class="alert alert-info">
+                <h3>Wi-Fiトラブル対応の重要ポイント</h3>
+                <ol>
+                    <li><strong>まずは端末再起動</strong>：80%のトラブルはこれで解決</li>
+                    <li><strong>「1台？複数？全部？」で原因を切り分け</strong>：効率的な対処につながる</li>
+                    <li><strong>5GHz帯を優先</strong>：速度・安定性が格段に向上</li>
+                    <li><strong>APの接続台数は20-30台以下</strong>：過負荷を避ける</li>
+                    <li><strong>授業を止めない代替案を常に用意</strong>：オフライン教材、グループ学習</li>
+                    <li><strong>定期メンテナンスでトラブル予防</strong>：AP再起動、ファームウェア更新</li>
+                    <li><strong>トラブルは学びの機会</strong>：児童生徒の問題解決力を育てる</li>
+                </ol>
+            </div>
+
+            <h3>関連ページ</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4><i class="fas fa-network-wired"></i> ネットワーク基礎</h4>
+                    <p>学校ネットワークの構成とWi-Fi設定の詳細</p>
+                    <a href="network-basics.html" class="btn-primary">詳しく見る</a>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-tablet-alt"></i> 端末管理・MDM運用</h4>
+                    <p>端末側のトラブル対応と日常管理</p>
+                    <a href="device-management.html" class="btn-primary">詳しく見る</a>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-wrench"></i> トラブルシューティング</h4>
+                    <p>Wi-Fi以外のトラブル対応全般</p>
+                    <a href="troubleshooting.html" class="btn-primary">詳しく見る</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p>最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/search.js"></script>
+</body>
+</html>

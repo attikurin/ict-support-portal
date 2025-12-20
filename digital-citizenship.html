@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情報モラル教育指導ガイド - ICT支援員・講師のための教育ポータル</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                        <li><a href="rubric.html"><i class="fas fa-clipboard-check"></i> ルーブリック評価</a></li>
+                        <li><a href="learning-support-systems.html"><i class="fas fa-chalkboard"></i> 授業支援システム</a></li>
+                        <li><a href="programming-education.html"><i class="fas fa-code"></i> プログラミング教育</a></li>
+                        <li><a href="digital-citizenship.html" class="active"><i class="fas fa-shield-alt"></i> 情報モラル教育</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI利用ガイド</a></li>
+                        <li><a href="ai-apps-education.html"><i class="fas fa-brain"></i> AI教育アプリ</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-star"></i> 成功事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="device-management.html"><i class="fas fa-tablet-alt"></i> 端末管理・MDM</a></li>
+                        <li><a href="wifi-troubleshooting.html"><i class="fas fa-wifi"></i> Wi-Fiトラブル対応</a></li>
+                        <li><a href="account-management.html"><i class="fas fa-user-shield"></i> アカウント管理</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> セキュリティ</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="edtech-comparison.html"><i class="fas fa-balance-scale"></i> EdTech比較</a></li>
+                        <li><a href="edtech-tools.html"><i class="fas fa-tools"></i> EdTechツール</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                        <li><a href="downloads.html"><i class="fas fa-download"></i> ダウンロード</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-shield-alt"></i> 情報モラル教育指導ガイド</h1>
+            <p class="lead">小中学校における情報モラル・デジタルシティズンシップ教育を実践的にサポート。学年別カリキュラム、授業実践例、トラブル対応、保護者連携まで、ICT支援員が教員を支援するための完全ガイドです。</p>
+        </div>
+
+        <!-- 目次 -->
+        <section class="toc-section">
+                <h2><i class="fas fa-list"></i> 目次</h2>
+                <div class="info-grid">
+                    <a href="#moral-basics" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-book-open"></i></div>
+                        <h3>情報モラル教育とは</h3>
+                        <p>定義、3つの柱（倫理・法・安全）、重要性</p>
+                    </a>
+                    <a href="#guidelines" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-book"></i></div>
+                        <h3>学習指導要領との関連</h3>
+                        <p>小中学校での位置づけ、各教科での扱い</p>
+                    </a>
+                    <a href="#digital-citizenship" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-globe"></i></div>
+                        <h3>デジタルシティズンシップ</h3>
+                        <p>従来との違い、9つの要素、実践ポイント</p>
+                    </a>
+                    <a href="#curriculum" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>学年別カリキュラム</h3>
+                        <p>小1〜中3、発達段階に応じた指導内容</p>
+                    </a>
+                    <a href="#lesson-examples" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-chalkboard"></i></div>
+                        <h3>授業実践例</h3>
+                        <p>言葉の温度、写真OK/NG、フェイクニュース</p>
+                    </a>
+                    <a href="#materials" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-file-download"></i></div>
+                        <h3>教材・ワークシート</h3>
+                        <p>文科省教材、IPA、総務省、LINE、Google等</p>
+                    </a>
+                    <a href="#trouble-cases" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <h3>トラブル事例と対応</h3>
+                        <p>SNSいじめ、写真拡散、課金トラブル、相談窓口</p>
+                    </a>
+                    <a href="#parent-cooperation" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-users"></i></div>
+                        <h3>保護者連携</h3>
+                        <p>情報提供、家庭ルール作り、ペアレンタルコントロール</p>
+                    </a>
+                    <a href="#assessment" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <h3>評価と振り返り</h3>
+                        <p>評価の観点、ルーブリック例、振り返りシート</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 情報モラル教育の基礎 -->
+            <section id="moral-basics" class="main-section">
+                <h2><i class="fas fa-book-open"></i> 情報モラル教育とは</h2>
+                
+                <div class="definition-box">
+                    <h3><i class="fas fa-quote-left"></i> 定義</h3>
+                    <p><strong>情報モラル</strong>とは、情報社会で適正な活動を行うための基となる考え方と態度。他者への影響を考え、人権、知的財産権など自他の権利を尊重し、情報社会での行動に責任をもつこと。</p>
+                    <p class="source">（文部科学省「教育の情報化に関する手引」より）</p>
+                </div>
+
+                <div class="info-box importance">
+                    <h3><i class="fas fa-exclamation-triangle"></i> なぜ今、情報モラル教育が重要なのか</h3>
+                    <ul>
+                        <li><strong>GIGAスクール構想の進展</strong>：1人1台端末環境で児童生徒のネット利用が常態化</li>
+                        <li><strong>低年齢化するネット利用</strong>：小学校入学前からスマホ・タブレットに触れる子どもの増加</li>
+                        <li><strong>深刻化するネットトラブル</strong>：いじめ、個人情報流出、依存症、犯罪被害など</li>
+                        <li><strong>デジタル社会の到来</strong>：Society 5.0時代に必須のスキルとしての位置づけ</li>
+                    </ul>
+                </div>
+
+                <h3><i class="fas fa-chart-line"></i> 情報モラル教育の3つの柱</h3>
+                <div class="three-pillars">
+                    <div class="pillar">
+                        <div class="pillar-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h4>① 情報社会の倫理</h4>
+                        <ul>
+                            <li>他者への影響を考える</li>
+                            <li>人権、知的財産権の尊重</li>
+                            <li>ネット上のマナー・エチケット</li>
+                            <li>情報の発信と責任</li>
+                        </ul>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon"><i class="fas fa-balance-scale"></i></div>
+                        <h4>② 法の理解と遵守</h4>
+                        <ul>
+                            <li>著作権法の理解</li>
+                            <li>個人情報保護法</li>
+                            <li>不正アクセス禁止法</li>
+                            <li>刑法（名誉毀損、侮辱など）</li>
+                        </ul>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h4>③ 安全への知恵</h4>
+                        <ul>
+                            <li>危険予測と回避</li>
+                            <li>適切なセキュリティ対策</li>
+                            <li>健康への配慮（依存防止）</li>
+                            <li>トラブル発生時の対処</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 学習指導要領との関連 -->
+            <section id="guidelines" class="main-section">
+                <h2><i class="fas fa-book"></i> 学習指導要領との関連</h2>
+                
+                <div class="guideline-overview">
+                    <h3><i class="fas fa-file-alt"></i> 情報モラルに関する主な記述</h3>
+                    
+                    <div class="grade-guideline">
+                        <h4><i class="fas fa-child"></i> 小学校</h4>
+                        <div class="guideline-item">
+                            <strong>総則（第3章）</strong>
+                            <p>「情報モラルを身に付けるための学習活動を充実すること」と明記</p>
+                        </div>
+                        <div class="guideline-item">
+                            <strong>道徳科</strong>
+                            <p>「情報の扱い方や言葉遣いに気を付けて、礼儀正しく真心をもって接する」</p>
+                        </div>
+                        <div class="guideline-item">
+                            <strong>特別活動</strong>
+                            <p>「心身の健康に関する問題として、情報機器の使用に関する指導」</p>
+                        </div>
+                        <div class="guideline-item">
+                            <strong>各教科</strong>
+                            <p>国語、社会、算数、理科、生活、図工、家庭、体育、外国語など各教科で情報活用能力の育成</p>
+                        </div>
+                    </div>
+
+                    <div class="grade-guideline">
+                        <h4><i class="fas fa-user-graduate"></i> 中学校</h4>
+                        <div class="guideline-item">
+                            <strong>総則（第1章）</strong>
+                            <p>「情報モラルを身に付け、コンピュータ等を活用した学習活動を充実すること」</p>
+                        </div>
+                        <div class="guideline-item">
+                            <strong>技術・家庭科（技術分野）</strong>
+                            <p>「情報の技術」として情報モラル・セキュリティを系統的に学習</p>
+                        </div>
+                        <div class="guideline-item">
+                            <strong>道徳科</strong>
+                            <p>「礼儀の意義を理解し、時と場に応じた適切な言動をとる」</p>
+                        </div>
+                        <div class="guideline-item">
+                            <strong>特別活動</strong>
+                            <p>「心身ともに健康で安全な生活態度や習慣の形成」</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <strong>全教科・全学年で指導する</strong>
+                        <p>情報モラル教育は特定の教科だけでなく、学校教育全体を通じて体系的・継続的に指導することが求められています。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- デジタルシティズンシップ -->
+            <section id="digital-citizenship" class="main-section">
+                <h2><i class="fas fa-globe"></i> デジタルシティズンシップとは</h2>
+                
+                <div class="comparison-box">
+                    <h3><i class="fas fa-exchange-alt"></i> 従来の情報モラル教育との違い</h3>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>観点</th>
+                                <th>従来の情報モラル</th>
+                                <th>デジタルシティズンシップ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>基本姿勢</strong></td>
+                                <td>「禁止」「規制」中心<br>（○○してはいけない）</td>
+                                <td>「賢明な使用」を促進<br>（○○を考えて使おう）</td>
+                            </tr>
+                            <tr>
+                                <td><strong>学習の軸</strong></td>
+                                <td>危険回避・リスク管理</td>
+                                <td>機会・権利と責任</td>
+                            </tr>
+                            <tr>
+                                <td><strong>指導方法</strong></td>
+                                <td>一斉講話、啓発型</td>
+                                <td>対話・協働、問題解決型</td>
+                            </tr>
+                            <tr>
+                                <td><strong>評価</strong></td>
+                                <td>「守れる／守れない」</td>
+                                <td>「考え、行動できる」</td>
+                            </tr>
+                            <tr>
+                                <td><strong>到達目標</strong></td>
+                                <td>被害・加害の防止</td>
+                                <td>良き市民としての参画</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="concept-box">
+                    <h3><i class="fas fa-users"></i> デジタルシティズンシップの9つの要素</h3>
+                    <p class="note">（Common Sense Mediaによる定義を参考）</p>
+                    
+                    <div class="citizenship-grid">
+                        <div class="citizenship-item">
+                            <div class="item-number">1</div>
+                            <h4>デジタルアクセス</h4>
+                            <p>すべての人がデジタル技術にアクセスできる権利</p>
+                        </div>
+                        <div class="citizenship-item">
+                            <div class="item-number">2</div>
+                            <h4>デジタルコマース</h4>
+                            <p>オンラインでの商取引の理解と安全な利用</p>
+                        </div>
+                        <div class="citizenship-item">
+                            <div class="item-number">3</div>
+                            <h4>デジタルコミュニケーション</h4>
+                            <p>適切で効果的なデジタルツールの活用</p>
+                        </div>
+                        <div class="citizenship-item">
+                            <div class="item-number">4</div>
+                            <h4>デジタルリテラシー</h4>
+                            <p>情報を評価・活用する能力</p>
+                        </div>
+                        <div class="citizenship-item">
+                            <div class="item-number">5</div>
+                            <h4>デジタルエチケット</h4>
+                            <p>オンライン上での礼儀と行動規範</p>
+                        </div>
+                        <div class="citizenship-item">
+                            <div class="item-number">6</div>
+                            <h4>デジタル法</h4>
+                            <p>法律と責任の理解</p>
+                        </div>
+                        <div class="citizenship-item">
+                            <div class="item-number">7</div>
+                            <h4>デジタル権利と責任</h4>
+                            <p>デジタル世界での権利と義務</p>
+                        </div>
+                        <div class="citizenship-item">
+                            <div class="item-number">8</div>
+                            <h4>デジタルヘルス</h4>
+                            <p>心身の健康に配慮した利用</p>
+                        </div>
+                        <div class="citizenship-item">
+                            <div class="item-number">9</div>
+                            <h4>デジタルセキュリティ</h4>
+                            <p>自己・他者・情報の保護</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box practice">
+                    <h3><i class="fas fa-hands-helping"></i> デジタルシティズンシップ教育の実践ポイント</h3>
+                    <ol>
+                        <li><strong>実際の使用場面で学ぶ</strong>：教室での端末利用時に「考える機会」を設ける</li>
+                        <li><strong>対話を重視</strong>：正解を教えるのではなく、子ども同士の議論を促進</li>
+                        <li><strong>失敗から学ぶ</strong>：小さな失敗体験を通じて判断力を育成</li>
+                        <li><strong>権利と責任のバランス</strong>：自由と責任はセットであることを理解させる</li>
+                        <li><strong>継続的な指導</strong>：単発の授業ではなく、日常的に意識させる</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- 学年別カリキュラム -->
+            <section id="curriculum" class="main-section">
+                <h2><i class="fas fa-graduation-cap"></i> 学年別カリキュラム</h2>
+                
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <p>発達段階に応じて、段階的・系統的に情報モラルを学びます。</p>
+                    </div>
+                </div>
+
+                <!-- 小学校低学年 -->
+                <div class="curriculum-stage">
+                    <h3><i class="fas fa-child"></i> 小学校低学年（1〜2年生）</h3>
+                    <div class="stage-overview">
+                        <strong>発達段階の特徴</strong>：具体的思考、身近な経験を基に理解
+                    </div>
+                    
+                    <div class="curriculum-content">
+                        <div class="curriculum-item">
+                            <h4><i class="fas fa-hand-paper"></i> 基本的なルール・マナー</h4>
+                            <ul>
+                                <li>タブレット・PCの正しい持ち方、使い方</li>
+                                <li>約束を守って使う（使用時間、使用場所）</li>
+                                <li>勝手に写真を撮らない</li>
+                                <li>友だちの作品を大切にする</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-item">
+                            <h4><i class="fas fa-heart"></i> 心と体の健康</h4>
+                            <ul>
+                                <li>正しい姿勢で使う</li>
+                                <li>目を休める（20分使ったら遠くを見る）</li>
+                                <li>使いすぎないようにする</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-item">
+                            <h4><i class="fas fa-user-shield"></i> 個人情報の基礎</h4>
+                            <ul>
+                                <li>自分の名前、住所、電話番号は大切な情報</li>
+                                <li>知らない人には教えない</li>
+                                <li>パスワードは秘密</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="lesson-example-mini">
+                        <strong>授業例</strong>：「タブレットとなかよくなろう」（生活科・学級活動）
+                        <p>ぬいぐるみを使って「タブレットくん」に見立て、大切に扱う心を育てる</p>
+                    </div>
+                </div>
+
+                <!-- 小学校中学年 -->
+                <div class="curriculum-stage">
+                    <h3><i class="fas fa-running"></i> 小学校中学年（3〜4年生）</h3>
+                    <div class="stage-overview">
+                        <strong>発達段階の特徴</strong>：抽象的思考の芽生え、他者視点の理解
+                    </div>
+                    
+                    <div class="curriculum-content">
+                        <div class="curriculum-item">
+                            <h4><i class="fas fa-comments"></i> コミュニケーション</h4>
+                            <ul>
+                                <li>相手の気持ちを考えた言葉選び</li>
+                                <li>文字だけでは伝わりにくいことがある</li>
+                                <li>ネット上でも礼儀正しく</li>
+                                <li>悪口や嫌がらせは絶対にしない</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-item">
+                            <h4><i class="fas fa-copyright"></i> 著作権の基礎</h4>
+                            <ul>
+                                <li>作品には作った人がいる</li>
+                                <li>他人の作品を勝手に使わない</li>
+                                <li>引用するときは出典を明記</li>
+                                <li>フリー素材の活用</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-item">
+                            <h4><i class="fas fa-search"></i> 情報の信頼性</h4>
+                            <ul>
+                                <li>インターネットの情報がすべて正しいわけではない</li>
+                                <li>複数の情報源で確認する</li>
+                                <li>公式サイトと個人サイトの違い</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="lesson-example-mini">
+                        <strong>授業例</strong>：「言葉は心を運ぶ」（道徳・国語）
+                        <p>メールやチャットで誤解が生まれた事例をロールプレイで体験</p>
+                    </div>
+                </div>
+
+                <!-- 小学校高学年 -->
+                <div class="curriculum-stage">
+                    <h3><i class="fas fa-user-friends"></i> 小学校高学年（5〜6年生）</h3>
+                    <div class="stage-overview">
+                        <strong>発達段階の特徴</strong>：論理的思考、社会性の発達、SNS利用の始まり
+                    </div>
+                    
+                    <div class="curriculum-content">
+                        <div class="curriculum-item">
+                            <h4><i class="fas fa-mobile-alt"></i> SNS・コミュニケーションツール</h4>
+                            <ul>
+                                <li>SNSの仕組みと特性</li>
+                                <li>公開範囲の設定と管理</li>
+                                <li>知らない人とのやり取りの危険性</li>
+                                <li>チェーンメール、なりすまし</li>
+                                <li>ネットいじめの予防と対応</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-item">
+                            <h4><i class="fas fa-camera"></i> 肖像権・プライバシー</h4>
+                            <ul>
+                                <li>写真・動画の撮影と公開のルール</li>
+                                <li>本人の許可を得る重要性</li>
+                                <li>一度公開した情報は消せない（デジタルタトゥー）</li>
+                                <li>位置情報の取り扱い</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-item">
+                            <h4><i class="fas fa-exclamation-triangle"></i> ネット犯罪・トラブル</h4>
+                            <ul>
+                                <li>不正アクセス、ウイルス</li>
+                                <li>架空請求、詐欺サイト</li>
+                                <li>ゲーム課金トラブル</li>
+                                <li>困ったときの相談先</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-item">
+                            <h4><i class="fas fa-clock"></i> 依存症の理解</h4>
+                            <ul>
+                                <li>ゲーム・ネット依存の仕組み</li>
+                                <li>自己コントロールの重要性</li>
+                                <li>家庭でのルール作り</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="lesson-example-mini">
+                        <strong>授業例</strong>：「SNSトラブルシミュレーション」（総合的な学習の時間）
+                        <p>架空のSNSトラブル事例について、グループで対策を考え発表</p>
+                    </div>
+                </div>
+
+                <!-- 中学校 -->
+                <div class="curriculum-stage">
+                    <h3><i class="fas fa-user-graduate"></i> 中学校（1〜3年生）</h3>
+                    <div class="stage-overview">
+                        <strong>発達段階の特徴</strong>：抽象的・批判的思考の発達、SNS利用の常態化
+                    </div>
+                    
+                    <div class="curriculum-content">
+                        <div class="curriculum-item">
+                            <h4><i class="fas fa-balance-scale"></i> 法的責任</h4>
+                            <ul>
+                                <li>著作権法（引用、公衆送信権）</li>
+                                <li>肖像権・プライバシー権</li>
+                                <li>名誉毀損罪、侮辱罪、脅迫罪</li>
+                                <li>少年法と刑事責任</li>
+                                <li>民事責任（損害賠償）</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-item">
+                            <h4><i class="fas fa-bullhorn"></i> 情報発信の責任</h4>
+                            <ul>
+                                <li>発信した情報の影響力</li>
+                                <li>フェイクニュース、デマの拡散</li>
+                                <li>炎上のメカニズム</li>
+                                <li>デジタルフットプリント</li>
+                                <li>批判的思考（クリティカルシンキング）</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-item">
+                            <h4><i class="fas fa-shield-alt"></i> セキュリティと技術</h4>
+                            <ul>
+                                <li>暗号化技術の基礎</li>
+                                <li>二段階認証</li>
+                                <li>公衆Wi-Fiの危険性</li>
+                                <li>フィッシング詐欺の見分け方</li>
+                                <li>マルウェア対策</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-item">
+                            <h4><i class="fas fa-users-cog"></i> デジタル社会の参画</h4>
+                            <ul>
+                                <li>民主主義とメディア</li>
+                                <li>フィルターバブル、エコーチェンバー</li>
+                                <li>デジタルデバイド</li>
+                                <li>AI・自動化の社会的影響</li>
+                                <li>持続可能な社会とICT</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="lesson-example-mini">
+                        <strong>授業例</strong>：「デジタル社会と責任」（技術・家庭科、社会科）
+                        <p>SNS炎上事例を分析し、情報発信の責任について討論</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 授業実践例 -->
+            <section id="lesson-examples" class="main-section">
+                <h2><i class="fas fa-chalkboard"></i> 授業実践例</h2>
+                
+                <!-- 実践例1 -->
+                <div class="practice-example">
+                    <div class="practice-header">
+                        <h3><i class="fas fa-comments"></i> 実践例1: 「言葉の温度」を感じよう</h3>
+                        <div class="practice-meta">
+                            <span class="badge">小学校3年生</span>
+                            <span class="badge">道徳</span>
+                            <span class="badge">45分</span>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-content">
+                        <div class="practice-section">
+                            <h4><i class="fas fa-target"></i> 目標</h4>
+                            <p>文字によるコミュニケーションの特性を理解し、相手の気持ちを考えた言葉選びができる</p>
+                        </div>
+                        
+                        <div class="practice-section">
+                            <h4><i class="fas fa-list-ol"></i> 展開</h4>
+                            <ol class="lesson-flow">
+                                <li>
+                                    <strong>導入（10分）</strong>
+                                    <ul>
+                                        <li>「ありがとう」を様々なトーンで言ってみる（嬉しい、イヤイヤ、怒って）</li>
+                                        <li>同じ言葉でも表情・声のトーンで意味が変わることを実感</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>展開1（15分）</strong>
+                                    <ul>
+                                        <li>メッセージカードを使ったワーク：「遅れてごめん」というメッセージを受け取る</li>
+                                        <li>文字だけだと、どんな気持ちか分からないことを体験</li>
+                                        <li>誤解が生まれやすい例を提示（「へー」「そうなんだ」「わかった」）</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>展開2（15分）</strong>
+                                    <ul>
+                                        <li>グループで「嬉しい気持ちが伝わるメッセージ」を考える</li>
+                                        <li>絵文字、句読点、言葉の選び方を工夫</li>
+                                        <li>各グループの発表と相互評価</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>まとめ（5分）</strong>
+                                    <ul>
+                                        <li>「文字だけでは伝わりにくいこともある」</li>
+                                        <li>「相手の気持ちを想像して、丁寧な言葉を選ぼう」</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="practice-section">
+                            <h4><i class="fas fa-lightbulb"></i> 指導のポイント</h4>
+                            <ul>
+                                <li>「ダメ」と禁止するのではなく、「どうすればいいか」を考えさせる</li>
+                                <li>実際の体験を通じて「気づき」を促す</li>
+                                <li>日常のタブレット使用時に振り返りができるようにする</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 実践例2 -->
+                <div class="practice-example">
+                    <div class="practice-header">
+                        <h3><i class="fas fa-camera"></i> 実践例2: 写真の「OK」「NG」を考えよう</h3>
+                        <div class="practice-meta">
+                            <span class="badge">小学校5年生</span>
+                            <span class="badge">総合的な学習の時間</span>
+                            <span class="badge">90分（2時間扱い）</span>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-content">
+                        <div class="practice-section">
+                            <h4><i class="fas fa-target"></i> 目標</h4>
+                            <p>肖像権・プライバシーを理解し、写真撮影・公開のルールを自ら考えることができる</p>
+                        </div>
+                        
+                        <div class="practice-section">
+                            <h4><i class="fas fa-list-ol"></i> 展開</h4>
+                            <ol class="lesson-flow">
+                                <li>
+                                    <strong>第1時：写真の「OK」「NG」判定ゲーム（45分）</strong>
+                                    <ul>
+                                        <li>様々な写真の撮影・公開シーンを提示（例：運動会、給食、友だちの顔、学校の外観など）</li>
+                                        <li>グループで「OK」「NG」「条件付きOK」に分類</li>
+                                        <li>分類の理由を発表・議論</li>
+                                        <li>肖像権、個人情報、デジタルタトゥーの解説</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>第2時：学校独自ルールを作ろう（45分）</strong>
+                                    <ul>
+                                        <li>前時の学びを踏まえ、学級の写真ルールを作成</li>
+                                        <li>「○○するときは必ず許可を取る」など具体的に</li>
+                                        <li>ルールをポスターにまとめて掲示</li>
+                                        <li>日常の活用場面で実践</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="practice-section">
+                            <h4><i class="fas fa-lightbulb"></i> 指導のポイント</h4>
+                            <ul>
+                                <li>「禁止」ではなく「どう使えば良いか」を自分たちで考える</li>
+                                <li>多様な意見を尊重し、対話を通じて合意形成</li>
+                                <li>作ったルールを実際の学校生活で運用し、定期的に見直す</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 実践例3 -->
+                <div class="practice-example">
+                    <div class="practice-header">
+                        <h3><i class="fas fa-search"></i> 実践例3: フェイクニュースを見抜け！</h3>
+                        <div class="practice-meta">
+                            <span class="badge">中学校2年生</span>
+                            <span class="badge">社会科・技術</span>
+                            <span class="badge">50分×2</span>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-content">
+                        <div class="practice-section">
+                            <h4><i class="fas fa-target"></i> 目標</h4>
+                            <p>情報の真偽を見極める力（メディアリテラシー）を身につけ、批判的に情報を評価できる</p>
+                        </div>
+                        
+                        <div class="practice-section">
+                            <h4><i class="fas fa-list-ol"></i> 展開</h4>
+                            <ol class="lesson-flow">
+                                <li>
+                                    <strong>第1時：フェイクニュース体験（50分）</strong>
+                                    <ul>
+                                        <li>架空のニュース記事（教師が作成）を提示</li>
+                                        <li>「本当かどうか」を個人→グループで調査</li>
+                                        <li>情報源の確認方法、ファクトチェックの手法を学ぶ</li>
+                                        <li>実際のフェイクニュース事例の紹介</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>第2時：真偽判定チェックリスト作成（50分）</strong>
+                                    <ul>
+                                        <li>信頼できる情報の条件をグループで議論</li>
+                                        <li>「情報の真偽を見抜く7つのチェックポイント」を作成</li>
+                                        <li>実際のネットニュースで実践</li>
+                                        <li>情報発信者としての責任についても考える</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="practice-section">
+                            <h4><i class="fas fa-clipboard-check"></i> チェックポイント例</h4>
+                            <ol>
+                                <li>情報源は明記されているか？</li>
+                                <li>公式サイト・信頼できる機関の情報か？</li>
+                                <li>複数の情報源で確認できるか？</li>
+                                <li>日付は最新か？</li>
+                                <li>感情的な表現に偏っていないか？</li>
+                                <li>写真や動画は本物か？（加工されていないか）</li>
+                                <li>URLは正規のものか？（なりすましサイトではないか）</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 教材・ワークシート -->
+            <section id="materials" class="main-section">
+                <h2><i class="fas fa-file-download"></i> 教材・ワークシート</h2>
+                
+                <div class="info-box resource">
+                    <h3><i class="fas fa-info-circle"></i> 活用できる外部教材（無料）</h3>
+                    
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <h4><i class="fas fa-book"></i> 文部科学省「情報モラル教育指導資料」</h4>
+                            <p>学年別・テーマ別の指導事例、ワークシート、動画教材を提供</p>
+                            <a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/1416322.htm" target="_blank" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> 文部科学省サイトへ
+                            </a>
+                        </div>
+
+                        <div class="resource-item">
+                            <h4><i class="fas fa-shield-alt"></i> IPA（情報処理推進機構）「ネット社会の歩き方」</h4>
+                            <p>アニメーション教材、クイズ、指導案を豊富に掲載</p>
+                            <a href="https://www.ipa.go.jp/security/net-anzen/index.html" target="_blank" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> IPAサイトへ
+                            </a>
+                        </div>
+
+                        <div class="resource-item">
+                            <h4><i class="fas fa-mobile-alt"></i> 総務省「インターネットトラブル事例集」</h4>
+                            <p>最新のトラブル事例と対策をまとめた冊子（毎年更新）</p>
+                            <a href="https://www.soumu.go.jp/main_sosiki/joho_tsusin/kyouiku_joho-ka/jireishu.html" target="_blank" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> 総務省サイトへ
+                            </a>
+                        </div>
+
+                        <div class="resource-item">
+                            <h4><i class="fas fa-hands-helping"></i> LINE「情報モラル教材」</h4>
+                            <p>SNSコミュニケーションに特化した教材とワークショップ</p>
+                            <a href="https://line.me/ja/safety/education/" target="_blank" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> LINEみらい財団サイトへ
+                            </a>
+                        </div>
+
+                        <div class="resource-item">
+                            <h4><i class="fas fa-graduation-cap"></i> Google「Be Internet Awesome」</h4>
+                            <p>デジタルシティズンシップ教育向け教材（ゲーム形式）</p>
+                            <a href="https://beinternetawesome.withgoogle.com/ja/" target="_blank" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> Googleサイトへ
+                            </a>
+                        </div>
+
+                        <div class="resource-item">
+                            <h4><i class="fas fa-book-reader"></i> 一般社団法人セーファーインターネット協会（SIA）</h4>
+                            <p>年齢別・テーマ別の教材、啓発動画、保護者向け資料</p>
+                            <a href="https://www.saferinternet.or.jp/" target="_blank" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> SIAサイトへ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="worksheet-guide">
+                    <h3><i class="fas fa-edit"></i> ワークシート作成のポイント</h3>
+                    
+                    <div class="point-list">
+                        <div class="point-item">
+                            <div class="point-icon"><i class="fas fa-check-circle"></i></div>
+                            <div>
+                                <h4>発達段階に応じた表現</h4>
+                                <p>低学年：イラスト中心、ひらがな多用<br>高学年以降：文章での思考整理</p>
+                            </div>
+                        </div>
+                        <div class="point-item">
+                            <div class="point-icon"><i class="fas fa-check-circle"></i></div>
+                            <div>
+                                <h4>具体的な場面設定</h4>
+                                <p>「もし○○だったら」と児童生徒が自分事として考えられる事例</p>
+                            </div>
+                        </div>
+                        <div class="point-item">
+                            <div class="point-icon"><i class="fas fa-check-circle"></i></div>
+                            <div>
+                                <h4>対話を促す問い</h4>
+                                <p>「○×」ではなく「なぜそう思うか」を問う</p>
+                            </div>
+                        </div>
+                        <div class="point-item">
+                            <div class="point-icon"><i class="fas fa-check-circle"></i></div>
+                            <div>
+                                <h4>振り返りの欄</h4>
+                                <p>学んだこと、今後実践したいことを記入</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- トラブル事例と対応 -->
+            <section id="trouble-cases" class="main-section">
+                <h2><i class="fas fa-exclamation-triangle"></i> トラブル事例と対応</h2>
+                
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <strong>トラブル発生時の基本姿勢</strong>
+                        <p>迅速な初動対応、事実確認、関係者への適切な情報提供、再発防止策の検討が重要です。</p>
+                    </div>
+                </div>
+
+                <!-- トラブル事例1 -->
+                <div class="trouble-case">
+                    <div class="case-header">
+                        <h3><i class="fas fa-comments"></i> 事例1: SNSグループでの悪口・仲間はずれ</h3>
+                        <span class="case-level level-high">重要度: 高</span>
+                    </div>
+                    
+                    <div class="case-content">
+                        <div class="case-situation">
+                            <h4><i class="fas fa-file-alt"></i> 状況</h4>
+                            <p>クラスのSNSグループで特定の児童生徒を除外したり、陰口を書き込んだりする事案が発覚</p>
+                        </div>
+                        
+                        <div class="case-response">
+                            <h4><i class="fas fa-tasks"></i> 対応手順</h4>
+                            <ol class="response-steps">
+                                <li>
+                                    <strong>【即時】被害児童生徒の保護と心のケア</strong>
+                                    <ul>
+                                        <li>担任・養護教諭・SC（スクールカウンセラー）が連携</li>
+                                        <li>安心できる場所の確保</li>
+                                        <li>「あなたは悪くない」と伝える</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>【即日〜翌日】事実確認</strong>
+                                    <ul>
+                                        <li>関係児童生徒から個別に聞き取り</li>
+                                        <li>証拠（スクリーンショット等）の保全</li>
+                                        <li>管理職・学年主任への報告</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>【2〜3日】保護者への連絡と対応</strong>
+                                    <ul>
+                                        <li>被害者保護者：状況説明と学校の対応方針を伝える</li>
+                                        <li>加害者保護者：事実を伝え、家庭での指導を依頼</li>
+                                        <li>場合によっては三者面談</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>【1週間以内】指導と学級全体への働きかけ</strong>
+                                    <ul>
+                                        <li>加害児童生徒への個別指導（反省と謝罪）</li>
+                                        <li>学級全体での情報モラル指導</li>
+                                        <li>「傍観者」も考えさせる</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>【継続的】経過観察と再発防止</strong>
+                                    <ul>
+                                        <li>被害児童生徒の見守り</li>
+                                        <li>学級の雰囲気改善</li>
+                                        <li>定期的な振り返り</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="case-prevention">
+                            <h4><i class="fas fa-shield-alt"></i> 予防策</h4>
+                            <ul>
+                                <li>日常的に「ネットも現実も同じ」と指導</li>
+                                <li>匿名性の錯覚について理解させる</li>
+                                <li>困ったときの相談窓口を周知</li>
+                                <li>学級の人間関係づくり</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- トラブル事例2 -->
+                <div class="trouble-case">
+                    <div class="case-header">
+                        <h3><i class="fas fa-image"></i> 事例2: 不適切な写真・動画の撮影・拡散</h3>
+                        <span class="case-level level-high">重要度: 高</span>
+                    </div>
+                    
+                    <div class="case-content">
+                        <div class="case-situation">
+                            <h4><i class="fas fa-file-alt"></i> 状況</h4>
+                            <p>友だちの恥ずかしい写真を無断で撮影・SNSに投稿、または教室内の様子を撮影して拡散</p>
+                        </div>
+                        
+                        <div class="case-response">
+                            <h4><i class="fas fa-tasks"></i> 対応手順</h4>
+                            <ol class="response-steps">
+                                <li>
+                                    <strong>【緊急】拡散の防止</strong>
+                                    <ul>
+                                        <li>投稿者に即時削除を指示</li>
+                                        <li>拡散した可能性のある児童生徒に削除を依頼</li>
+                                        <li>必要に応じてSNS事業者に削除依頼</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>【即日】被害者へのケアと事実確認</strong>
+                                    <ul>
+                                        <li>精神的ショックへの対応</li>
+                                        <li>どこまで拡散したか確認</li>
+                                        <li>保護者への連絡</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>【数日以内】加害者・保護者への対応</strong>
+                                    <ul>
+                                        <li>肖像権・プライバシー権の侵害であることを説明</li>
+                                        <li>「デジタルタトゥー」として残る可能性</li>
+                                        <li>法的責任（民事・刑事）の可能性</li>
+                                        <li>謝罪と今後の約束</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>【継続】学校全体への周知</strong>
+                                    <ul>
+                                        <li>学年・全校集会での情報モラル指導</li>
+                                        <li>学校のルールの再確認</li>
+                                        <li>保護者向けの啓発文書配布</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="case-prevention">
+                            <h4><i class="fas fa-shield-alt"></i> 予防策</h4>
+                            <ul>
+                                <li>年度初めに撮影ルールを明確化</li>
+                                <li>「許可なく撮影・公開しない」を徹底</li>
+                                <li>授業での適切な使用例の提示</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- トラブル事例3 -->
+                <div class="trouble-case">
+                    <div class="case-header">
+                        <h3><i class="fas fa-gamepad"></i> 事例3: オンラインゲーム課金トラブル</h3>
+                        <span class="case-level level-medium">重要度: 中</span>
+                    </div>
+                    
+                    <div class="case-content">
+                        <div class="case-situation">
+                            <h4><i class="fas fa-file-alt"></i> 状況</h4>
+                            <p>保護者のクレジットカードを無断使用し、オンラインゲームで高額課金</p>
+                        </div>
+                        
+                        <div class="case-response">
+                            <h4><i class="fas fa-tasks"></i> 対応手順</h4>
+                            <ol class="response-steps">
+                                <li>
+                                    <strong>【保護者対応】冷静な話し合い</strong>
+                                    <ul>
+                                        <li>責めずに、なぜそうなったか理解する</li>
+                                        <li>課金の仕組みを子どもが理解していたか確認</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>【事業者への問い合わせ】</strong>
+                                    <ul>
+                                        <li>未成年者の無断課金の場合、返金交渉の可能性</li>
+                                        <li>消費生活センターへの相談</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>【学校での指導】</strong>
+                                    <ul>
+                                        <li>金銭感覚、課金の仕組みについて学ぶ</li>
+                                        <li>お金は保護者が働いて得たものであることを理解</li>
+                                        <li>自己コントロールの大切さ</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>【家庭でのルール作り】</strong>
+                                    <ul>
+                                        <li>ゲーム時間の制限</li>
+                                        <li>課金は保護者の許可制</li>
+                                        <li>ペアレンタルコントロールの活用</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="case-prevention">
+                            <h4><i class="fas fa-shield-alt"></i> 予防策</h4>
+                            <ul>
+                                <li>授業で「課金の仕組み」を学ぶ</li>
+                                <li>保護者会で注意喚起</li>
+                                <li>ペアレンタルコントロール設定の周知</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 相談窓口 -->
+                <div class="info-box helpline">
+                    <h3><i class="fas fa-phone-volume"></i> 困ったときの相談窓口</h3>
+                    
+                    <div class="helpline-list">
+                        <div class="helpline-item">
+                            <h4>24時間子供SOSダイヤル</h4>
+                            <p class="phone"><i class="fas fa-phone"></i> <strong>0120-0-78310</strong>（なやみ言おう）</p>
+                            <p>いじめ・不登校など、子どもの困りごと全般</p>
+                        </div>
+
+                        <div class="helpline-item">
+                            <h4>こどもの人権110番</h4>
+                            <p class="phone"><i class="fas fa-phone"></i> <strong>0120-007-110</strong></p>
+                            <p>法務局が運営。いじめ、虐待など</p>
+                        </div>
+
+                        <div class="helpline-item">
+                            <h4>インターネット違法・有害情報相談センター</h4>
+                            <p class="web"><i class="fas fa-globe"></i> <a href="https://www.ihaho.jp/" target="_blank">https://www.ihaho.jp/</a></p>
+                            <p>ネット上の誹謗中傷、名誉毀損、プライバシー侵害</p>
+                        </div>
+
+                        <div class="helpline-item">
+                            <h4>消費者ホットライン</h4>
+                            <p class="phone"><i class="fas fa-phone"></i> <strong>188</strong>（いやや）</p>
+                            <p>課金トラブル、ネット詐欺など</p>
+                        </div>
+
+                        <div class="helpline-item">
+                            <h4>セーフライン</h4>
+                            <p class="web"><i class="fas fa-globe"></i> <a href="https://www.safe-line.jp/" target="_blank">https://www.safe-line.jp/</a></p>
+                            <p>違法・有害情報の通報窓口</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 保護者連携 -->
+            <section id="parent-cooperation" class="main-section">
+                <h2><i class="fas fa-users"></i> 保護者連携</h2>
+                
+                <div class="info-box importance">
+                    <h3><i class="fas fa-handshake"></i> 学校と家庭の連携が不可欠</h3>
+                    <p>情報モラル教育は、学校だけでは完結しません。家庭での端末・スマホ利用が大部分を占めるため、保護者の理解と協力が必須です。</p>
+                </div>
+
+                <h3><i class="fas fa-bullhorn"></i> 保護者への情報提供</h3>
+                
+                <div class="parent-communication">
+                    <div class="communication-method">
+                        <h4><i class="fas fa-clipboard-list"></i> 保護者会・懇談会での啓発</h4>
+                        <ul>
+                            <li><strong>年度初めの保護者会</strong>：学校のICT活用方針、情報モラル教育の年間計画を説明</li>
+                            <li><strong>学年別懇談会</strong>：発達段階に応じた注意点、家庭でのルール作りを提案</li>
+                            <li><strong>参観授業</strong>：情報モラルの授業を公開し、保護者にも考えてもらう</li>
+                        </ul>
+                    </div>
+
+                    <div class="communication-method">
+                        <h4><i class="fas fa-file-alt"></i> たよりや文書での発信</h4>
+                        <ul>
+                            <li><strong>学校だより・学年だより</strong>：最新のトラブル事例と対策を定期的に掲載</li>
+                            <li><strong>ICT活用だより</strong>（月1回程度）：授業での活用例、家庭での注意点</li>
+                            <li><strong>長期休業前の注意喚起</strong>：夏休み・冬休み前に利用時間・ルールを確認</li>
+                        </ul>
+                    </div>
+
+                    <div class="communication-method">
+                        <h4><i class="fas fa-chalkboard-teacher"></i> 保護者向け講座・研修会</h4>
+                        <ul>
+                            <li><strong>ペアレンタルコントロール設定会</strong>：実機を使った設定サポート</li>
+                            <li><strong>外部講師を招いた講演会</strong>：警察、通信事業者、NPO団体など</li>
+                            <li><strong>事例共有会</strong>：保護者同士で悩みや対策を共有</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-home"></i> 家庭でのルール作り支援</h3>
+                
+                <div class="rule-making-guide">
+                    <h4><i class="fas fa-check-square"></i> 推奨する家庭ルールの例</h4>
+                    
+                    <div class="rule-category">
+                        <h5><i class="fas fa-clock"></i> 時間のルール</h5>
+                        <ul>
+                            <li>使用時間の上限（例：平日1時間、休日2時間）</li>
+                            <li>使用可能時間帯（例：夜9時まで）</li>
+                            <li>寝る30分前は使わない</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-category">
+                        <h5><i class="fas fa-map-marker-alt"></i> 場所のルール</h5>
+                        <ul>
+                            <li>リビングなど家族の目が届く場所で使う</li>
+                            <li>自室での使用は禁止（または扉を開けて）</li>
+                            <li>食事中・勉強中は使わない</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-category">
+                        <h5><i class="fas fa-book-open"></i> 内容のルール</h5>
+                        <ul>
+                            <li>使用するアプリ・サイトは保護者が把握</li>
+                            <li>新しいアプリは保護者の許可を得る</li>
+                            <li>SNS・メッセージアプリの利用は学年を考慮</li>
+                            <li>課金は保護者の許可制</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-category">
+                        <h5><i class="fas fa-comments"></i> マナーのルール</h5>
+                        <ul>
+                            <li>人の嫌がることは書かない・送らない</li>
+                            <li>知らない人とやり取りしない</li>
+                            <li>個人情報を書き込まない</li>
+                            <li>困ったことがあったらすぐ相談する</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="alert alert-success">
+                    <i class="fas fa-lightbulb"></i>
+                    <div>
+                        <strong>ルール作りのポイント</strong>
+                        <ul>
+                            <li>子どもと一緒に考え、納得して決める</li>
+                            <li>守れる現実的なルールにする</li>
+                            <li>定期的に見直す（成長に応じて）</li>
+                            <li>保護者自身もルールを守る（手本を見せる）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-tools"></i> ペアレンタルコントロールの活用</h3>
+                
+                <div class="parental-control-guide">
+                    <div class="control-item">
+                        <h4><i class="fab fa-apple"></i> iOS（iPhone・iPad）</h4>
+                        <ul>
+                            <li><strong>スクリーンタイム</strong>：使用時間制限、アプリ制限、コンテンツ制限</li>
+                            <li><strong>ファミリー共有</strong>：子どものApple IDを管理、アプリ購入の承認</li>
+                        </ul>
+                    </div>
+
+                    <div class="control-item">
+                        <h4><i class="fab fa-android"></i> Android</h4>
+                        <ul>
+                            <li><strong>Googleファミリーリンク</strong>：使用時間管理、位置情報確認、アプリ管理</li>
+                            <li><strong>Playプロテクト</strong>：有害アプリのブロック</li>
+                        </ul>
+                    </div>
+
+                    <div class="control-item">
+                        <h4><i class="fab fa-windows"></i> Windows</h4>
+                        <ul>
+                            <li><strong>Microsoftファミリー</strong>：使用時間、Webフィルタリング、アプリ制限</li>
+                            <li><strong>アクティビティレポート</strong>：利用状況の確認</li>
+                        </ul>
+                    </div>
+
+                    <div class="control-item">
+                        <h4><i class="fab fa-chrome"></i> Chromebook</h4>
+                        <ul>
+                            <li><strong>Googleファミリーリンク</strong>：利用時間制限、Webフィルタリング</li>
+                            <li><strong>学校管理</strong>：Google管理コンソールでの一括管理</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box practice">
+                    <h3><i class="fas fa-file-pdf"></i> 配布資料の例</h3>
+                    <p>保護者向けに以下のような資料を作成・配布すると効果的です：</p>
+                    <ul>
+                        <li>「我が家のICTルール」テンプレート（記入式）</li>
+                        <li>ペアレンタルコントロール設定マニュアル（OS別・図解入り）</li>
+                        <li>最新トラブル事例集（学期ごと更新）</li>
+                        <li>相談窓口一覧カード（財布に入れられるサイズ）</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 評価と振り返り -->
+            <section id="assessment" class="main-section">
+                <h2><i class="fas fa-clipboard-check"></i> 評価と振り返り</h2>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-info-circle"></i> 情報モラルの評価は難しい？</h3>
+                    <p>情報モラルは「態度・判断」の領域であり、ペーパーテストだけでは測れません。日常の行動観察、自己評価、相互評価などを組み合わせた多面的評価が必要です。</p>
+                </div>
+
+                <h3><i class="fas fa-chart-line"></i> 評価の観点</h3>
+                
+                <div class="evaluation-aspects">
+                    <div class="aspect-item">
+                        <h4><i class="fas fa-brain"></i> 知識・理解</h4>
+                        <ul>
+                            <li>情報モラルに関する基本的知識の理解</li>
+                            <li>法律・ルールの理解</li>
+                            <li>リスクと対策の理解</li>
+                        </ul>
+                        <p class="evaluation-method"><strong>評価方法</strong>：ワークシート、小テスト、発表内容</p>
+                    </div>
+
+                    <div class="aspect-item">
+                        <h4><i class="fas fa-lightbulb"></i> 思考・判断</h4>
+                        <ul>
+                            <li>状況に応じた適切な判断</li>
+                            <li>多角的な視点での考察</li>
+                            <li>問題解決策の提案</li>
+                        </ul>
+                        <p class="evaluation-method"><strong>評価方法</strong>：グループ討議、レポート、ロールプレイ</p>
+                    </div>
+
+                    <div class="aspect-item">
+                        <h4><i class="fas fa-walking"></i> 実践・行動</h4>
+                        <ul>
+                            <li>学んだことの日常での実践</li>
+                            <li>ルールの遵守</li>
+                            <li>トラブル時の適切な対応</li>
+                        </ul>
+                        <p class="evaluation-method"><strong>評価方法</strong>：行動観察、自己評価、相互評価</p>
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-check-double"></i> ルーブリック例（小学校高学年）</h3>
+                
+                <div class="rubric-table-wrapper">
+                    <table class="rubric-table">
+                        <thead>
+                            <tr>
+                                <th>観点</th>
+                                <th>A（十分）</th>
+                                <th>B（おおむね十分）</th>
+                                <th>C（努力を要する）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>コミュニケーション</strong></td>
+                                <td>相手の気持ちを考え、丁寧な言葉で伝えることができる。誤解が生じないよう工夫している。</td>
+                                <td>相手の気持ちを考えて言葉を選ぼうとしている。</td>
+                                <td>相手の気持ちを考えずに発信してしまうことがある。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>個人情報保護</strong></td>
+                                <td>自他の個人情報を適切に管理し、許可なく公開しない。リスクを理解している。</td>
+                                <td>個人情報の重要性を理解し、基本的なルールを守っている。</td>
+                                <td>個人情報の扱いに注意が必要。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>著作権の理解</strong></td>
+                                <td>著作権を理解し、適切に引用・出典を示している。フリー素材を活用できる。</td>
+                                <td>著作権の基本を理解し、無断使用を避けている。</td>
+                                <td>著作権への理解が不十分。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>トラブル対応</strong></td>
+                                <td>困ったことがあったときに、すぐに大人に相談できる。適切な行動がとれる。</td>
+                                <td>トラブル時に相談する必要性を理解している。</td>
+                                <td>トラブルを一人で抱え込んでしまう傾向がある。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>自己管理</strong></td>
+                                <td>使用時間を自分で管理し、健康に配慮した使い方ができる。</td>
+                                <td>使用時間のルールをおおむね守っている。</td>
+                                <td>使いすぎてしまうことがある。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3><i class="fas fa-edit"></i> 振り返りシートの活用</h3>
+                
+                <div class="reflection-sheet-guide">
+                    <h4>学期ごとの振り返り項目例</h4>
+                    
+                    <div class="reflection-items">
+                        <div class="reflection-category">
+                            <h5><i class="fas fa-check-circle"></i> 自己評価（4段階）</h5>
+                            <ul>
+                                <li>相手の気持ちを考えて、やさしい言葉で伝えることができた</li>
+                                <li>写真を撮るときは、許可を取ることができた</li>
+                                <li>使用時間のルールを守ることができた</li>
+                                <li>困ったことがあったとき、すぐに相談することができた</li>
+                                <li>インターネットの情報が正しいか、確かめることができた</li>
+                            </ul>
+                        </div>
+
+                        <div class="reflection-category">
+                            <h5><i class="fas fa-pen"></i> 記述式</h5>
+                            <ul>
+                                <li>この学期に学んだ中で、一番大切だと思ったことは何ですか？</li>
+                                <li>実際に生活の中で気をつけたことはありますか？</li>
+                                <li>これから気をつけたいことは何ですか？</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-info">
+                    <i class="fas fa-lightbulb"></i>
+                    <div>
+                        <strong>継続的な振り返りが重要</strong>
+                        <p>単発の授業後だけでなく、学期ごと、学年末に振り返りを行い、自分の成長を実感させることが大切です。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- まとめ -->
+            <section class="summary-section">
+                <h2><i class="fas fa-flag-checkered"></i> まとめ</h2>
+                
+                <div class="key-points">
+                    <h3><i class="fas fa-key"></i> 情報モラル教育成功のカギ</h3>
+                    
+                    <div class="key-point-grid">
+                        <div class="key-point-item">
+                            <div class="key-icon"><i class="fas fa-seedling"></i></div>
+                            <h4>1. 発達段階に応じた指導</h4>
+                            <p>低学年から系統的・継続的に</p>
+                        </div>
+                        <div class="key-point-item">
+                            <div class="key-icon"><i class="fas fa-comments"></i></div>
+                            <h4>2. 対話と体験を重視</h4>
+                            <p>一方的な講話ではなく、考えさせる</p>
+                        </div>
+                        <div class="key-point-item">
+                            <div class="key-icon"><i class="fas fa-hands-helping"></i></div>
+                            <h4>3. 学校と家庭の連携</h4>
+                            <p>保護者の理解と協力が不可欠</p>
+                        </div>
+                        <div class="key-point-item">
+                            <div class="key-icon"><i class="fas fa-redo"></i></div>
+                            <h4>4. 日常的な指導と振り返り</h4>
+                            <p>特別な授業だけでなく、日々の中で</p>
+                        </div>
+                        <div class="key-point-item">
+                            <div class="key-icon"><i class="fas fa-balance-scale"></i></div>
+                            <h4>5. 「禁止」より「賢明な使用」</h4>
+                            <p>デジタルシティズンシップの視点</p>
+                        </div>
+                        <div class="key-point-item">
+                            <div class="key-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h4>6. 迅速なトラブル対応</h4>
+                            <p>初動の早さと組織的対応</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="closing-message">
+                    <p><i class="fas fa-heart"></i> 情報モラル教育は、子どもたちが安全で豊かなデジタル社会を生きるための「心の教育」です。ICT支援員として、教員・保護者と連携しながら、子どもたちの成長を支えていきましょう。</p>
+                </div>
+            </section>
+
+            <!-- 参考文献・引用元 -->
+            <section class="references-section">
+                <h2><i class="fas fa-book"></i> 参考文献・引用元</h2>
+                <ul class="reference-list">
+                    <li>
+                        <i class="fas fa-external-link-alt"></i>
+                        <a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/mext_00117.html" target="_blank">
+                            文部科学省「教育の情報化に関する手引」（令和元年12月）
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-external-link-alt"></i>
+                        <a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/1416322.htm" target="_blank">
+                            文部科学省「情報モラル教育指導資料」
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-external-link-alt"></i>
+                        <a href="https://www.soumu.go.jp/main_sosiki/joho_tsusin/kyouiku_joho-ka/index.html" target="_blank">
+                            総務省「ICTメディアリテラシー」
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-external-link-alt"></i>
+                        <a href="https://www.ipa.go.jp/security/net-anzen/index.html" target="_blank">
+                            IPA（情報処理推進機構）「情報セキュリティ」
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-external-link-alt"></i>
+                        <a href="https://www.saferinternet.or.jp/" target="_blank">
+                            一般社団法人セーファーインターネット協会
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="last-updated">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

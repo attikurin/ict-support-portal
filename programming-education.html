@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プログラミング教育完全サポートガイド - ICT支援員・講師のための教育ポータル</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                        <li><a href="rubric.html"><i class="fas fa-clipboard-check"></i> ルーブリック評価</a></li>
+                        <li><a href="learning-support-systems.html"><i class="fas fa-chalkboard"></i> 授業支援システム</a></li>
+                        <li><a href="programming-education.html" class="active"><i class="fas fa-code"></i> プログラミング教育</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI利用ガイド</a></li>
+                        <li><a href="ai-apps-education.html"><i class="fas fa-brain"></i> AI教育アプリ</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-star"></i> 成功事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="device-management.html"><i class="fas fa-tablet-alt"></i> 端末管理・MDM</a></li>
+                        <li><a href="wifi-troubleshooting.html"><i class="fas fa-wifi"></i> Wi-Fiトラブル対応</a></li>
+                        <li><a href="account-management.html"><i class="fas fa-user-shield"></i> アカウント管理</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> セキュリティ</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="edtech-comparison.html"><i class="fas fa-balance-scale"></i> EdTech比較</a></li>
+                        <li><a href="edtech-tools.html"><i class="fas fa-tools"></i> EdTechツール</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                        <li><a href="downloads.html"><i class="fas fa-download"></i> ダウンロード</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-code"></i> プログラミング教育完全サポートガイド</h1>
+            <p class="lead">小学校・中学校の必修化に対応する実践的な支援ノウハウ</p>
+        </div>
+
+        <!-- 目次 -->
+        <section class="toc-section">
+                <h2><i class="fas fa-list"></i> 目次</h2>
+                <div class="info-grid">
+                    <a href="#overview" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-info-circle"></i></div>
+                        <h3>プログラミング教育の基礎知識</h3>
+                        <p>学習指導要領、必修化の背景、3つの目標</p>
+                    </a>
+                    <a href="#computational-thinking" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-brain"></i></div>
+                        <h3>プログラミング的思考とは</h3>
+                        <p>定義、3つの基本構造、思考プロセス</p>
+                    </a>
+                    <a href="#grade-materials" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-layer-group"></i></div>
+                        <h3>学年別プログラミング教材</h3>
+                        <p>小1〜中3まで、発達段階に応じたツール紹介</p>
+                    </a>
+                    <a href="#scratch" class="info-card">
+                        <div class="info-card-icon"><i class="fab fa-scratch"></i></div>
+                        <h3>Scratch完全活用ガイド</h3>
+                        <p>基本操作、ブロック解説、作品例、指導のコツ</p>
+                    </a>
+                    <a href="#microbit" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-microchip"></i></div>
+                        <h3>micro:bit活用実践</h3>
+                        <p>MakeCode、計測・制御、実践プロジェクト</p>
+                    </a>
+                    <a href="#unplugged" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-plug"></i></div>
+                        <h3>アンプラグドプログラミング</h3>
+                        <p>コンピュータを使わない思考トレーニング</p>
+                    </a>
+                    <a href="#lesson-plans" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-clipboard-list"></i></div>
+                        <h3>授業計画テンプレート</h3>
+                        <p>教科別指導案、時間配分、評価基準</p>
+                    </a>
+                    <a href="#assessment" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <h3>評価の観点</h3>
+                        <p>知識・技能、思考・判断・表現、ルーブリック</p>
+                    </a>
+                    <a href="#teacher-support" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-hands-helping"></i></div>
+                        <h3>教員支援のポイント</h3>
+                        <p>ICT支援員の役割、研修プラン、よくある質問</p>
+                    </a>
+                    <a href="#parent-materials" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-home"></i></div>
+                        <h3>保護者向け説明資料</h3>
+                        <p>プログラミング教育のねらい、家庭でできること</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 1. プログラミング教育の基礎知識 -->
+            <section id="overview">
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> 1. プログラミング教育の基礎知識</h2>
+                
+                <div class="info-card">
+                    <h3>プログラミング教育必修化の背景</h3>
+                    <p>2020年度から小学校、2021年度から中学校でプログラミング教育が必修化されました。これは、AI・IoT時代を生きる子どもたちに必要な「プログラミング的思考」を育成するためです。</p>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-book"></i> 学習指導要領における位置づけ</h3>
+                    
+                    <h4>小学校（2020年度〜）</h4>
+                    <div class="info-box">
+                        <p><strong>各教科での実施</strong></p>
+                        <ul class="feature-list">
+                            <li><strong>算数</strong>: 正多角形の作図（5年生）</li>
+                            <li><strong>理科</strong>: 電気の利用（6年生）</li>
+                            <li><strong>総合的な学習の時間</strong>: 情報活用、探究活動</li>
+                            <li><strong>その他教科</strong>: 音楽、図工、特別活動など、各学校の判断で実施</li>
+                        </ul>
+                        <p class="note"><strong>重要</strong>: 「プログラミング」という独立した教科ではなく、既存教科の中で実施します。</p>
+                    </div>
+
+                    <h4>中学校（2021年度〜）</h4>
+                    <div class="info-box">
+                        <p><strong>技術・家庭科（技術分野）で必修</strong></p>
+                        <ul class="feature-list">
+                            <li><strong>「D 情報の技術」</strong>で実施（年間約20時間）</li>
+                            <li>ネットワーク利用した双方向性コンテンツのプログラミング</li>
+                            <li>計測・制御のプログラミング（センサー、モーター制御）</li>
+                            <li>問題解決とプログラムの評価・改善</li>
+                        </ul>
+                    </div>
+
+                    <h4>高校（2022年度〜）</h4>
+                    <div class="info-box">
+                        <p><strong>「情報Ⅰ」必修化</strong></p>
+                        <ul class="feature-list">
+                            <li>全生徒が履修する共通必履修科目</li>
+                            <li>プログラミング、データサイエンス、情報デザイン、情報社会</li>
+                            <li>Python、JavaScriptなどの実用言語も扱う</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-bullseye"></i> プログラミング教育の目標</h3>
+                    
+                    <div class="important-box">
+                        <h4>誤解されやすいポイント</h4>
+                        <p>❌ <strong>コーディング技術の習得が目的ではありません</strong></p>
+                        <p>✅ <strong>「プログラミング的思考」の育成が目的です</strong></p>
+                    </div>
+
+                    <h4>文部科学省が示す3つの目標</h4>
+                    <ol class="instruction-list">
+                        <li><strong>「プログラミング的思考」を育む</strong>
+                            <ul>
+                                <li>論理的に考える力</li>
+                                <li>問題を分解して整理する力</li>
+                                <li>試行錯誤しながら改善する力</li>
+                            </ul>
+                        </li>
+                        <li><strong>コンピュータの働きを理解する</strong>
+                            <ul>
+                                <li>コンピュータは人が命令したことしかできない</li>
+                                <li>身の回りの多くのものにコンピュータが活用されている</li>
+                                <li>問題解決にコンピュータを活用できる</li>
+                            </ul>
+                        </li>
+                        <li><strong>各教科の学びをより確実にする</strong>
+                            <ul>
+                                <li>算数の図形理解を深める</li>
+                                <li>理科の実験・観察を効率化する</li>
+                                <li>教科の目標達成を支援する</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- 2. プログラミング的思考とは -->
+            <section id="computational-thinking">
+                <h2 class="section-title"><i class="fas fa-brain"></i> 2. プログラミング的思考とは</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-lightbulb"></i> 定義</h3>
+                    <div class="definition-box">
+                        <p>「プログラミング的思考」とは、<strong>自分が意図する一連の活動を実現するために、どのような動きの組み合わせが必要で、一つ一つの動きに対応した記号をどのように組み合わせたらいいのか、記号の組み合わせをどのように改善していけば、より意図した活動に近づくのか、といったことを論理的に考えていく力</strong>です。</p>
+                        <p class="citation">（文部科学省「小学校プログラミング教育の手引」より）</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-cogs"></i> プログラミング的思考の4つの要素</h3>
+                    
+                    <div class="thinking-grid">
+                        <div class="thinking-card">
+                            <h4><i class="fas fa-puzzle-piece"></i> 1. 分解（Decomposition）</h4>
+                            <p><strong>意味</strong>: 大きな問題を小さな問題に分ける</p>
+                            <p><strong>例</strong>: 「カレーを作る」→「材料を切る」「炒める」「煮込む」に分解</p>
+                            <p><strong>プログラミング</strong>: 複雑な処理を単純な命令の組み合わせに分解</p>
+                        </div>
+
+                        <div class="thinking-card">
+                            <h4><i class="fas fa-clone"></i> 2. パターン認識（Pattern Recognition）</h4>
+                            <p><strong>意味</strong>: 繰り返しや共通点を見つける</p>
+                            <p><strong>例</strong>: 「毎朝の準備」→起きる、顔を洗う、着替える、朝食…（毎日同じパターン）</p>
+                            <p><strong>プログラミング</strong>: 繰り返し処理（ループ）で効率化</p>
+                        </div>
+
+                        <div class="thinking-card">
+                            <h4><i class="fas fa-filter"></i> 3. 抽象化（Abstraction）</h4>
+                            <p><strong>意味</strong>: 重要な情報だけを取り出し、不要な情報を捨てる</p>
+                            <p><strong>例</strong>: 地図は実際の風景から重要な情報（道、建物）だけを抽象化したもの</p>
+                            <p><strong>プログラミング</strong>: 本質的な処理に集中、汎用化</p>
+                        </div>
+
+                        <div class="thinking-card">
+                            <h4><i class="fas fa-project-diagram"></i> 4. アルゴリズム（Algorithm）</h4>
+                            <p><strong>意味</strong>: 問題解決の手順を明確にする</p>
+                            <p><strong>例</strong>: レシピは料理を作るアルゴリズム</p>
+                            <p><strong>プログラミング</strong>: 効率的な手順を設計、順次・分岐・反復</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-bug"></i> 5. デバッグ（Debug）</h3>
+                    <p>プログラミング的思考には、もう1つ重要な要素があります。それが「デバッグ」です。</p>
+                    
+                    <div class="info-box">
+                        <h4>デバッグとは</h4>
+                        <p>プログラムの誤り（バグ）を見つけて修正すること。試行錯誤しながら改善していく力。</p>
+                        
+                        <h4>教育的意義</h4>
+                        <ul class="benefit-list">
+                            <li>失敗を恐れず挑戦する態度</li>
+                            <li>原因を分析する力</li>
+                            <li>粘り強く取り組む力</li>
+                            <li>「うまくいかない」は学びのチャンス</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-graduation-cap"></i> 日常生活でのプログラミング的思考</h3>
+                    <p>プログラミング的思考は、コンピュータがなくても日常生活で実践できます。</p>
+
+                    <div class="example-grid">
+                        <div class="example-card">
+                            <h4>朝の準備</h4>
+                            <ul>
+                                <li><strong>分解</strong>: 着替え、歯磨き、朝食に分ける</li>
+                                <li><strong>順序</strong>: どの順番が効率的か考える</li>
+                                <li><strong>改善</strong>: 遅刻しないように時間配分を見直す</li>
+                            </ul>
+                        </div>
+
+                        <div class="example-card">
+                            <h4>料理</h4>
+                            <ul>
+                                <li><strong>アルゴリズム</strong>: レシピ（手順）に従う</li>
+                                <li><strong>条件分岐</strong>: 「煮立ったら」火を弱める</li>
+                                <li><strong>反復</strong>: 「10分間」かき混ぜ続ける</li>
+                            </ul>
+                        </div>
+
+                        <div class="example-card">
+                            <h4>掃除</h4>
+                            <ul>
+                                <li><strong>分解</strong>: 部屋ごとに分ける</li>
+                                <li><strong>パターン</strong>: 上から下へ、奥から手前への共通パターン</li>
+                                <li><strong>最適化</strong>: 効率的な順序を考える</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. 学年別プログラミング教材 -->
+            <section id="grade-materials">
+                <h2 class="section-title"><i class="fas fa-layer-group"></i> 3. 学年別プログラミング教材</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-child"></i> 小学校1-2年生</h3>
+                    <p><strong>発達段階</strong>: 具体的操作期、直感的な理解</p>
+                    
+                    <div class="materials-grid">
+                        <div class="material-card">
+                            <h4>Viscuit（ビスケット）</h4>
+                            <p><strong>特徴</strong>: お絵かき感覚でプログラミング</p>
+                            <ul class="feature-list">
+                                <li>文字が読めなくても使える</li>
+                                <li>絵を描いて動かす</li>
+                                <li>「メガネ」で変化のルールを作る</li>
+                                <li>海の生き物、花火、アニメーションなど</li>
+                            </ul>
+                            <p><strong>価格</strong>: 無料</p>
+                            <p><strong>URL</strong>: <a href="https://www.viscuit.com/" target="_blank">https://www.viscuit.com/</a></p>
+                        </div>
+
+                        <div class="material-card">
+                            <h4>ScratchJr</h4>
+                            <p><strong>特徴</strong>: Scratchの幼児版</p>
+                            <ul class="feature-list">
+                                <li>5-7歳向け</li>
+                                <li>ブロックをつなげてプログラミング</li>
+                                <li>物語やゲームを作成</li>
+                                <li>iPadやAndroidタブレットで動作</li>
+                            </ul>
+                            <p><strong>価格</strong>: 無料</p>
+                            <p><strong>URL</strong>: <a href="https://www.scratchjr.org/" target="_blank">https://www.scratchjr.org/</a></p>
+                        </div>
+
+                        <div class="material-card">
+                            <h4>Code.org（アナと雪の女王）</h4>
+                            <p><strong>特徴</strong>: キャラクターを動かすゲーム形式</p>
+                            <ul class="feature-list">
+                                <li>人気キャラクターで学習意欲UP</li>
+                                <li>ブロックプログラミング</li>
+                                <li>段階的に難易度が上がる</li>
+                                <li>日本語対応</li>
+                            </ul>
+                            <p><strong>価格</strong>: 無料</p>
+                            <p><strong>URL</strong>: <a href="https://code.org/" target="_blank">https://code.org/</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-child"></i> 小学校3-4年生</h3>
+                    <p><strong>発達段階</strong>: 具体的操作期、論理的思考の芽生え</p>
+                    
+                    <div class="materials-grid">
+                        <div class="material-card">
+                            <h4>Scratch（スクラッチ）</h4>
+                            <p><strong>特徴</strong>: 世界で最も使われる教育用プログラミング言語</p>
+                            <ul class="feature-list">
+                                <li>MITメディアラボが開発</li>
+                                <li>ブロックを組み合わせてプログラミング</li>
+                                <li>ゲーム、アニメーション、音楽作品など</li>
+                                <li>世界中の作品を見たり、リミックスできる</li>
+                            </ul>
+                            <p><strong>価格</strong>: 無料</p>
+                            <p><strong>URL</strong>: <a href="https://scratch.mit.edu/" target="_blank">https://scratch.mit.edu/</a></p>
+                        </div>
+
+                        <div class="material-card">
+                            <h4>プログラミングゼミ</h4>
+                            <p><strong>特徴</strong>: DeNAが開発した日本製ツール</p>
+                            <ul class="feature-list">
+                                <li>小学校低学年から使える</li>
+                                <li>キャラクターを動かす</li>
+                                <li>オフラインでも使用可能</li>
+                                <li>授業事例が豊富</li>
+                            </ul>
+                            <p><strong>価格</strong>: 無料</p>
+                            <p><strong>URL</strong>: <a href="https://programmingzemi.com/" target="_blank">https://programmingzemi.com/</a></p>
+                        </div>
+
+                        <div class="material-card">
+                            <h4>Hour of Code</h4>
+                            <p><strong>特徴</strong>: 1時間でプログラミング体験</p>
+                            <ul class="feature-list">
+                                <li>マインクラフト、スターウォーズなど人気コンテンツ</li>
+                                <li>ゲーム感覚で楽しく学べる</li>
+                                <li>達成証明書が発行される</li>
+                                <li>導入授業に最適</li>
+                            </ul>
+                            <p><strong>価格</strong>: 無料</p>
+                            <p><strong>URL</strong>: <a href="https://hourofcode.com/jp" target="_blank">https://hourofcode.com/jp</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-user-graduate"></i> 小学校5-6年生</h3>
+                    <p><strong>発達段階</strong>: 抽象的思考の発達、複雑な問題解決</p>
+                    
+                    <div class="materials-grid">
+                        <div class="material-card">
+                            <h4>Scratch（応用編）</h4>
+                            <p><strong>活用例</strong></p>
+                            <ul class="feature-list">
+                                <li><strong>算数</strong>: 正多角形の作図（5年必修）</li>
+                                <li>変数、リスト、関数を活用</li>
+                                <li>複雑なゲーム、シミュレーション</li>
+                                <li>クローン機能で大量のオブジェクト制御</li>
+                            </ul>
+                        </div>
+
+                        <div class="material-card">
+                            <h4>micro:bit（マイクロビット）</h4>
+                            <p><strong>特徴</strong>: イギリスBBC開発の小型コンピュータ</p>
+                            <ul class="feature-list">
+                                <li>LEDディスプレイ、ボタン、加速度センサー搭載</li>
+                                <li>MakeCodeでビジュアルプログラミング</li>
+                                <li>実世界と連動（センサー、モーター制御）</li>
+                                <li>理科「電気の利用」（6年必修）に最適</li>
+                            </ul>
+                            <p><strong>価格</strong>: 約2,000円/台</p>
+                        </div>
+
+                        <div class="material-card">
+                            <h4>ロボット教材</h4>
+                            <p><strong>LEGO® Education</strong></p>
+                            <ul class="feature-list">
+                                <li>レゴ® WeDo 2.0（小学校低〜中学年）</li>
+                                <li>レゴ® マインドストーム（小学校高学年〜中学校）</li>
+                                <li>組み立て+プログラミング</li>
+                            </ul>
+                            <p><strong>価格</strong>: WeDo 2.0 約27,000円、マインドストーム 約65,000円</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-school"></i> 中学校</h3>
+                    <p><strong>技術・家庭科「D 情報の技術」</strong></p>
+                    
+                    <div class="materials-grid">
+                        <div class="material-card">
+                            <h4>Scratch（中学校版）</h4>
+                            <p><strong>活用例</strong></p>
+                            <ul class="feature-list">
+                                <li>双方向性コンテンツ（チャットボット、クイズ）</li>
+                                <li>データ処理（リスト、ファイル入出力）</li>
+                                <li>アルゴリズムの最適化</li>
+                            </ul>
+                        </div>
+
+                        <div class="material-card">
+                            <h4>micro:bit（計測・制御）</h4>
+                            <p><strong>中学校での活用</strong></p>
+                            <ul class="feature-list">
+                                <li>温度センサーで環境計測</li>
+                                <li>光センサーで自動点灯システム</li>
+                                <li>加速度センサーで傾き検知</li>
+                                <li>無線通信で複数台連携</li>
+                            </ul>
+                        </div>
+
+                        <div class="material-card">
+                            <h4>Python入門</h4>
+                            <p><strong>特徴</strong>: 実用プログラミング言語</p>
+                            <ul class="feature-list">
+                                <li>AI・データサイエンスで広く使われる</li>
+                                <li>文法がシンプル</li>
+                                <li>Google Colaboratoryで環境構築不要</li>
+                                <li>高校「情報Ⅰ」への接続</li>
+                            </ul>
+                        </div>
+
+                        <div class="material-card">
+                            <h4>HTML/CSS/JavaScript</h4>
+                            <p><strong>Webページ制作</strong></p>
+                            <ul class="feature-list">
+                                <li>双方向性コンテンツの作成</li>
+                                <li>情報デザインの実践</li>
+                                <li>Google Sitesなどで簡単に公開</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Scratch完全活用ガイド -->
+            <section id="scratch">
+                <h2 class="section-title"><i class="fas fa-cat"></i> 4. Scratch完全活用ガイド</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-star"></i> Scratchとは</h3>
+                    <p>Scratch（スクラッチ）は、MIT（マサチューセッツ工科大学）メディアラボが開発した、世界で最も使われている教育用ビジュアルプログラミング言語です。</p>
+
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4><i class="fas fa-puzzle-piece"></i> ブロックプログラミング</h4>
+                            <p>命令が書かれたブロックを組み合わせるだけで、プログラムが作れる</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-globe"></i> ブラウザで動作</h4>
+                            <p>インストール不要、どの端末でもアクセス可能</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-users"></i> コミュニティ</h4>
+                            <p>世界中の作品を見たり、リミックス（改造）できる</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-yen-sign"></i> 完全無料</h4>
+                            <p>アカウント作成も使用も無料</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-play-circle"></i> Scratchの基本操作</h3>
+                    
+                    <h4>1. アカウント作成</h4>
+                    <ol class="instruction-list">
+                        <li>Scratch公式サイト（<a href="https://scratch.mit.edu/" target="_blank">https://scratch.mit.edu/</a>）にアクセス</li>
+                        <li>「Scratchに参加しよう」をクリック</li>
+                        <li>ユーザー名、パスワード、メールアドレスを登録</li>
+                        <li>メール認証（後日でも可）</li>
+                    </ol>
+
+                    <div class="tip-box">
+                        <h4><i class="fas fa-lightbulb"></i> 学校での運用Tips</h4>
+                        <ul>
+                            <li>教員が一括でアカウントを作成することも可能</li>
+                            <li>クラス全体を管理する「教師用アカウント」機能あり</li>
+                            <li>アカウントなしでも作品作成は可能（保存はダウンロードのみ）</li>
+                        </ul>
+                    </div>
+
+                    <h4>2. 画面構成</h4>
+                    <ul class="feature-list">
+                        <li><strong>ステージ</strong>: 作品が表示される画面（480×360ピクセル）</li>
+                        <li><strong>スプライト</strong>: 動かすキャラクターやオブジェクト</li>
+                        <li><strong>ブロックパレット</strong>: 命令ブロックが並ぶエリア</li>
+                        <li><strong>スクリプトエリア</strong>: ブロックを組み合わせてプログラムを作る場所</li>
+                        <li><strong>コスチューム</strong>: スプライトの見た目を変更</li>
+                        <li><strong>音</strong>: 音声や音楽を追加</li>
+                    </ul>
+
+                    <h4>3. ブロックの種類</h4>
+                    <div class="blocks-grid">
+                        <div class="block-card" style="border-left: 4px solid #4C97FF;">
+                            <h5>動き（青色）</h5>
+                            <p>スプライトを動かす</p>
+                            <ul><li>「10歩動かす」「90度回す」「x座標を〜にする」</li></ul>
+                        </div>
+                        <div class="block-card" style="border-left: 4px solid #9966FF;">
+                            <h5>見た目（紫色）</h5>
+                            <p>表示を変える</p>
+                            <ul><li>「〜と言う」「コスチュームを〜にする」「大きさを〜％にする」</li></ul>
+                        </div>
+                        <div class="block-card" style="border-left: 4px solid #CF63CF;">
+                            <h5>音（ピンク色）</h5>
+                            <p>音を鳴らす</p>
+                            <ul><li>「〜の音を鳴らす」「ドラムを〜拍鳴らす」</li></ul>
+                        </div>
+                        <div class="block-card" style="border-left: 4px solid #FFAB19;">
+                            <h5>イベント（黄色）</h5>
+                            <p>プログラムの開始</p>
+                            <ul><li>「🏴が押されたとき」「このスプライトがクリックされたとき」</li></ul>
+                        </div>
+                        <div class="block-card" style="border-left: 4px solid #FFBF00;">
+                            <h5>制御（橙色）</h5>
+                            <p>繰り返しや条件分岐</p>
+                            <ul><li>「〜回繰り返す」「もし〜なら」「ずっと」</li></ul>
+                        </div>
+                        <div class="block-card" style="border-left: 4px solid #5CB1D6;">
+                            <h5>調べる（水色）</h5>
+                            <p>条件を判定</p>
+                            <ul><li>「〜に触れた」「マウスが押された」「〜と聞いて待つ」</li></ul>
+                        </div>
+                        <div class="block-card" style="border-left: 4px solid #FF8C1A;">
+                            <h5>演算（緑色）</h5>
+                            <p>計算や比較</p>
+                            <ul><li>「〜+〜」「〜＜〜」「〜かつ〜」</li></ul>
+                        </div>
+                        <div class="block-card" style="border-left: 4px solid #FF8C1A;">
+                            <h5>変数（橙色）</h5>
+                            <p>データを保存</p>
+                            <ul><li>「変数を作る」「変数を〜にする」「変数を〜ずつ変える」</li></ul>
+                        </div>
+                        <div class="block-card" style="border-left: 4px solid #FF6680;">
+                            <h5>ブロック定義（赤色）</h5>
+                            <p>自分でブロックを作る</p>
+                            <ul><li>繰り返し使う処理をまとめる（関数）</li></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-graduation-cap"></i> 教科別活用例</h3>
+                    
+                    <h4>算数：正多角形の作図（5年生必修）</h4>
+                    <div class="lesson-example">
+                        <p><strong>学習内容</strong>: 正多角形の性質（内角の和、1つの内角の大きさ）を理解する</p>
+                        
+                        <p><strong>Scratchでの実装例（正三角形）</strong></p>
+                        <div class="code-box">
+                            <pre>
+🏴が押されたとき
+ペンを下ろす
+3回繰り返す
+    100歩動かす
+    120度回す
+</pre>
+                        </div>
+
+                        <p><strong>発展課題</strong></p>
+                        <ul class="activity-list">
+                            <li>正方形、正五角形、正六角形を描く</li>
+                            <li>角の数と回転角度の関係を発見（360÷辺の数）</li>
+                            <li>変数を使って、多角形の辺の数を入力できるようにする</li>
+                        </ul>
+
+                        <p><strong>評価のポイント</strong></p>
+                        <ul class="evaluation-list">
+                            <li>繰り返しの必要性に気づいているか</li>
+                            <li>回転角度の規則性を発見できたか</li>
+                            <li>試行錯誤しながらプログラムを改善できたか</li>
+                        </ul>
+                    </div>
+
+                    <h4>理科：電気回路シミュレーション</h4>
+                    <div class="lesson-example">
+                        <p><strong>学習内容</strong>: 電気回路の仕組みを理解する</p>
+                        
+                        <p><strong>Scratchでの実装</strong></p>
+                        <ul class="activity-list">
+                            <li>スイッチ（スプライト）をクリックすると電球が光る</li>
+                            <li>直列回路・並列回路のシミュレーション</li>
+                            <li>条件分岐（もしスイッチがONなら）を学習</li>
+                        </ul>
+                    </div>
+
+                    <h4>音楽：リズムとプログラミング</h4>
+                    <div class="lesson-example">
+                        <p><strong>学習内容</strong>: 音階、リズムパターンの理解</p>
+                        
+                        <p><strong>Scratchでの実装</strong></p>
+                        <ul class="activity-list">
+                            <li>ドラムの音を組み合わせてリズムパターンを作成</li>
+                            <li>「〜拍鳴らす」「〜秒待つ」でタイミング制御</li>
+                            <li>繰り返しでリズムの反復を表現</li>
+                        </ul>
+                    </div>
+
+                    <h4>社会：47都道府県クイズ</h4>
+                    <div class="lesson-example">
+                        <p><strong>学習内容</strong>: 都道府県名、位置、特産品の学習</p>
+                        
+                        <p><strong>Scratchでの実装</strong></p>
+                        <ul class="activity-list">
+                            <li>ランダムに都道府県の形を表示</li>
+                            <li>「〜と聞いて待つ」で答えを入力</li>
+                            <li>正解・不正解を判定、得点を記録</li>
+                            <li>リストで47都道府県のデータを管理</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-users-cog"></i> アカウント管理（教師用アカウント）</h3>
+                    <p>Scratchには「教師用アカウント」機能があり、クラス全体を管理できます。</p>
+
+                    <h4>教師用アカウントでできること</h4>
+                    <ul class="feature-list">
+                        <li><strong>クラス作成</strong>: 複数のクラスを管理</li>
+                        <li><strong>生徒アカウント一括作成</strong>: CSVファイルで一括登録</li>
+                        <li><strong>作品の一覧表示</strong>: 生徒の作品を一箇所で確認</li>
+                        <li><strong>コメント管理</strong>: 不適切なコメントを削除</li>
+                        <li><strong>活動状況の確認</strong>: ログイン履歴、作品数</li>
+                    </ul>
+
+                    <h4>教師用アカウントの作成</h4>
+                    <ol class="instruction-list">
+                        <li>通常のアカウントを作成</li>
+                        <li>「教育者」として登録申請</li>
+                        <li>学校情報、授業での利用目的を記入</li>
+                        <li>承認後、教師用機能が利用可能に（通常1-2日）</li>
+                    </ol>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-save"></i> 作品の保存・共有・リミックス</h3>
+                    
+                    <h4>保存方法</h4>
+                    <ul class="step-list">
+                        <li><strong>オンライン保存</strong>: アカウントにログイン後、「保存」で自動保存</li>
+                        <li><strong>ローカル保存</strong>: 「ファイル」→「コンピューターに保存する」で.sb3ファイルをダウンロード</li>
+                    </ul>
+
+                    <h4>共有（公開）</h4>
+                    <ol class="instruction-list">
+                        <li>作品ページで「共有する」ボタンをクリック</li>
+                        <li>世界中の人が作品を見られるようになる</li>
+                        <li>コメント欄で感想やアドバイスをもらえる</li>
+                    </ol>
+
+                    <div class="warning-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> 共有時の注意点</h4>
+                        <ul>
+                            <li>個人情報（名前、学校名など）を含めない</li>
+                            <li>他人の著作物を無断使用しない</li>
+                            <li>保護者の同意を得る</li>
+                        </ul>
+                    </div>
+
+                    <h4>リミックス</h4>
+                    <p>他の人の作品を改造して、自分の作品として公開できます。</p>
+                    <ol class="instruction-list">
+                        <li>気に入った作品を開く</li>
+                        <li>「中を見る」をクリック</li>
+                        <li>「リミックス」をクリック</li>
+                        <li>自分なりに改造して保存</li>
+                    </ol>
+
+                    <p class="note">リミックス元の作品名が自動で表示され、クレジット（出典）が明記されます。</p>
+                </div>
+            </section>
+
+            <!-- 5. micro:bit活用実践 -->
+            <section id="microbit">
+                <h2 class="section-title"><i class="fas fa-microchip"></i> 5. micro:bit活用実践</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-star"></i> micro:bitとは</h3>
+                    <p>micro:bit（マイクロビット）は、イギリスBBCが開発した教育用小型コンピュータです。手のひらサイズで、LEDディスプレイ、ボタン、各種センサーを搭載し、実世界と連動したプログラミング学習ができます。</p>
+
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4><i class="fas fa-lightbulb"></i> LEDディスプレイ</h4>
+                            <p>5×5の25個のLEDで文字や図形を表示</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-hand-pointer"></i> ボタン</h4>
+                            <p>AボタンとBボタンで入力</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-thermometer-half"></i> センサー</h4>
+                            <p>温度、明るさ、加速度、磁気センサー搭載</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-wifi"></i> 無線通信</h4>
+                            <p>複数のmicro:bit同士で通信可能</p>
+                        </div>
+                    </div>
+
+                    <h4>micro:bit v2の新機能</h4>
+                    <ul class="feature-list">
+                        <li><strong>スピーカー内蔵</strong>: 音を鳴らせる</li>
+                        <li><strong>マイク搭載</strong>: 音の大きさを検知</li>
+                        <li><strong>タッチセンサー</strong>: ロゴ部分がタッチ入力に対応</li>
+                        <li><strong>高性能CPU</strong>: 処理速度が向上</li>
+                    </ul>
+
+                    <h4>価格と購入先</h4>
+                    <p><strong>価格</strong>: micro:bit v2 本体 約2,200円（2024年現在）</p>
+                    <p><strong>購入先</strong>: スイッチエデュケーション、Amazon、学校教材販売店</p>
+                    <p class="note">学校でまとめ買いの場合、割引あり。クラス分（40台）で約88,000円程度。</p>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-laptop-code"></i> MakeCodeエディタの使い方</h3>
+                    <p>MakeCodeは、Microsoftが開発したmicro:bit用のビジュアルプログラミングエディタです。</p>
+
+                    <h4>アクセス方法</h4>
+                    <ol class="instruction-list">
+                        <li>MakeCode公式サイト（<a href="https://makecode.microbit.org/" target="_blank">https://makecode.microbit.org/</a>）にアクセス</li>
+                        <li>「新しいプロジェクト」をクリック</li>
+                        <li>ブロックを組み合わせてプログラミング</li>
+                        <li>シミュレーターで動作確認</li>
+                        <li>micro:bitに転送</li>
+                    </ol>
+
+                    <h4>画面構成</h4>
+                    <ul class="feature-list">
+                        <li><strong>シミュレーター</strong>: 画面上のmicro:bitで動作確認</li>
+                        <li><strong>ブロックパレット</strong>: 命令ブロック一覧</li>
+                        <li><strong>プログラミングエリア</strong>: ブロックを組み合わせる</li>
+                        <li><strong>ダウンロードボタン</strong>: .hexファイルをダウンロード</li>
+                    </ul>
+
+                    <h4>micro:bitへの転送方法</h4>
+                    <ol class="instruction-list">
+                        <li>micro:bitをUSBケーブルでPCに接続</li>
+                        <li>「ダウンロード」ボタンをクリック</li>
+                        <li>.hexファイルがダウンロードされる</li>
+                        <li>ファイルをmicro:bitドライブにコピー</li>
+                        <li>自動的にプログラムが実行される</li>
+                    </ol>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-project-diagram"></i> 実践例</h3>
+                    
+                    <h4>例1: LEDで図形表示</h4>
+                    <div class="example-box">
+                        <p><strong>学習内容</strong>: 座標、パターン、繰り返し</p>
+                        <p><strong>プログラム例</strong></p>
+                        <div class="code-box">
+                            <pre>
+最初だけ
+    ずっと
+        LED画面に表示
+            # # # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # # #
+        一時停止(ミリ秒) 1000
+        LED画面に表示
+            . . # . .
+            . # # # .
+            # # # # #
+            . # # # .
+            . . # . .
+        一時停止(ミリ秒) 1000
+</pre>
+                        </div>
+                        <p><strong>発展</strong>: アニメーションを作る、自分の名前を表示</p>
+                    </div>
+
+                    <h4>例2: ボタンで音楽再生</h4>
+                    <div class="example-box">
+                        <p><strong>学習内容</strong>: イベント、条件分岐、音階</p>
+                        <p><strong>プログラム例</strong></p>
+                        <div class="code-box">
+                            <pre>
+ボタンAが押されたとき
+    メロディ「ド」を鳴らす
+    LED画面に表示「A」
+
+ボタンBが押されたとき
+    メロディ「レ」を鳴らす
+    LED画面に表示「B」
+
+ボタンA+Bが押されたとき
+    メロディ「ミ」を鳴らす
+    LED画面に表示「AB」
+</pre>
+                        </div>
+                        <p><strong>発展</strong>: 簡単な楽器を作る、ゲームの効果音</p>
+                    </div>
+
+                    <h4>例3: 傾きセンサーでゲーム</h4>
+                    <div class="example-box">
+                        <p><strong>学習内容</strong>: センサー入力、変数、座標制御</p>
+                        <p><strong>プログラム例（迷路ゲーム）</strong></p>
+                        <div class="code-box">
+                            <pre>
+変数 x を 2 にする
+変数 y を 2 にする
+
+ずっと
+    もし 加速度(x方向) < -200 なら
+        x を -1 ずつ変える
+    
+    もし 加速度(x方向) > 200 なら
+        x を 1 ずつ変える
+    
+    LED画面の x: x y: y を点灯
+    一時停止(ミリ秒) 100
+    LED画面を消去
+</pre>
+                        </div>
+                        <p><strong>発展</strong>: ゴールやアイテムを配置、スコア機能</p>
+                    </div>
+
+                    <h4>例4: 無線通信で連携</h4>
+                    <div class="example-box">
+                        <p><strong>学習内容</strong>: 無線通信、データ送受信</p>
+                        <p><strong>プログラム例（チャット）</strong></p>
+                        <div class="code-box">
+                            <pre>
+最初だけ
+    無線グループを 1 にする
+
+ボタンAが押されたとき
+    無線で文字列を送信「こんにちは」
+
+無線で受信したとき
+    LED画面に表示（受信した文字列）
+</pre>
+                        </div>
+                        <p><strong>発展</strong>: じゃんけんゲーム、遠隔スイッチ</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-flask"></i> 理科「電気の利用」（6年生必修）での活用</h3>
+                    <p>小学校6年生の理科「電気の利用」では、micro:bitを使った学習が推奨されています。</p>
+
+                    <h4>単元の目標</h4>
+                    <ul class="objective-list">
+                        <li>電気は、つくったり蓄えたりすることができること</li>
+                        <li>電気は、光、音、熱、運動などに変換できること</li>
+                        <li>身の回りには電気の性質を利用した道具があること</li>
+                        <li><strong>電気の効率的な利用を考える</strong></li>
+                    </ul>
+
+                    <h4>micro:bitを使った学習例</h4>
+                    <div class="activity-box">
+                        <h5>テーマ: 「節電システムを作ろう」</h5>
+                        <ol class="instruction-list">
+                            <li><strong>明るさセンサー活用</strong>: 暗くなったら自動点灯する街灯</li>
+                            <li><strong>温度センサー活用</strong>: 一定温度以上でアラームを鳴らすシステム</li>
+                            <li><strong>タイマー機能</strong>: 一定時間後に自動でOFFになるスイッチ</li>
+                            <li><strong>データ記録</strong>: 電力使用量をグラフ化</li>
+                        </ol>
+
+                        <p><strong>評価規準</strong></p>
+                        <ul class="evaluation-list">
+                            <li><strong>知識・技能</strong>: センサーの仕組みを理解し、プログラムできる</li>
+                            <li><strong>思考・判断・表現</strong>: 節電のアイデアを考え、実装できる</li>
+                            <li><strong>主体的に学習に取り組む態度</strong>: 試行錯誤しながら改善できる</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-shopping-cart"></i> 購入・準備のポイント</h3>
+                    
+                    <h4>必要な機材</h4>
+                    <ul class="checklist">
+                        <li><input type="checkbox"> micro:bit本体（v2推奨）</li>
+                        <li><input type="checkbox"> USBケーブル（micro USB）</li>
+                        <li><input type="checkbox"> 電池ボックス（単4電池×2本）※PCから外して使う場合</li>
+                        <li><input type="checkbox"> （オプション）拡張パーツ（モーター、センサー、スピーカーなど）</li>
+                    </ul>
+
+                    <h4>おすすめスターターキット</h4>
+                    <ul class="product-list">
+                        <li><strong>micro:bit はじめてセット</strong>: 本体+USB+電池ボックス 約3,000円</li>
+                        <li><strong>micro:bit アドバンスセット</strong>: 本体+拡張ボード+各種センサー 約8,000円</li>
+                    </ul>
+
+                    <h4>クラス全体での導入</h4>
+                    <p><strong>推奨台数</strong>: 2人に1台（20台/40人クラス）</p>
+                    <p><strong>予算</strong>: 約44,000円（micro:bit本体×20台）</p>
+                    <p class="note">まとめ買い割引、教育機関向け割引を活用すると、さらに安くなる場合があります。</p>
+                </div>
+            </section>
+
+            <!-- 6. アンプラグドプログラミング -->
+            <section id="unplugged">
+                <h2 class="section-title"><i class="fas fa-plug"></i> 6. アンプラグドプログラミング</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-info-circle"></i> アンプラグドプログラミングとは</h3>
+                    <p>アンプラグド（Unplugged）とは「電源につながない」という意味で、<strong>コンピュータを使わずに、体験活動やカードゲームなどでプログラミングの考え方を学ぶ方法</strong>です。</p>
+
+                    <h4>メリット</h4>
+                    <ul class="benefit-list">
+                        <li><strong>端末不要</strong>: タブレットやPCがなくても実施できる</li>
+                        <li><strong>操作スキル不要</strong>: タイピングやマウス操作が苦手でも参加できる</li>
+                        <li><strong>低学年向き</strong>: 小学1-2年生でも理解しやすい</li>
+                        <li><strong>体を動かす</strong>: 身体を使った学びで記憶に残りやすい</li>
+                        <li><strong>協働学習</strong>: グループで相談しながら進められる</li>
+                    </ul>
+
+                    <h4>導入に最適</h4>
+                    <p>プログラミング教育の最初の1時間目に、アンプラグド活動でプログラミング的思考の基礎を体験させると、その後のコンピュータを使った学習がスムーズになります。</p>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-running"></i> 実践例1: ロボット役体験</h3>
+                    
+                    <h4>活動内容</h4>
+                    <p>1人が「ロボット役」、1人が「プログラマー役」になり、プログラマーの命令通りにロボットが動くゲームです。</p>
+
+                    <h4>準備物</h4>
+                    <ul class="materials-list">
+                        <li>命令カード（前進、後退、右を向く、左を向く、ジャンプなど）</li>
+                        <li>目隠し（ロボット役用、オプション）</li>
+                        <li>ゴール地点の目印</li>
+                    </ul>
+
+                    <h4>進め方</h4>
+                    <ol class="instruction-list">
+                        <li>教室内にスタート地点とゴール地点を設定</li>
+                        <li>ロボット役はスタート地点に立つ（目を閉じるか目隠し）</li>
+                        <li>プログラマー役は命令カードを並べて「プログラム」を作成</li>
+                        <li>「実行」の合図で、ロボット役が命令通りに動く</li>
+                        <li>ゴールにたどり着けるか確認</li>
+                        <li>うまくいかなかったら「デバッグ」（修正）</li>
+                    </ol>
+
+                    <h4>学べること</h4>
+                    <ul class="learning-points">
+                        <li><strong>順次処理</strong>: 命令は順番に実行される</li>
+                        <li><strong>正確な指示</strong>: 曖昧な指示では動けない</li>
+                        <li><strong>デバッグ</strong>: 失敗から学び、改善する</li>
+                    </ul>
+
+                    <div class="tip-box">
+                        <h4><i class="fas fa-lightbulb"></i> 応用編</h4>
+                        <ul>
+                            <li>障害物を置いて複雑なコースにする</li>
+                            <li>「繰り返し」カードを導入（「3回繰り返す」など）</li>
+                            <li>「もし〜なら」カードで条件分岐を体験</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-copy"></i> 実践例2: アルゴリズム体験（並べ替え）</h3>
+                    
+                    <h4>活動内容</h4>
+                    <p>バラバラの数字カードを小さい順に並べ替える「アルゴリズム」を考える活動です。</p>
+
+                    <h4>準備物</h4>
+                    <ul class="materials-list">
+                        <li>数字カード（1〜10など）</li>
+                        <li>ワークシート（手順を書く）</li>
+                    </ul>
+
+                    <h4>進め方</h4>
+                    <ol class="instruction-list">
+                        <li>数字カードをランダムに並べる</li>
+                        <li>「どうやったら効率よく並べ替えられるか」をグループで話し合い</li>
+                        <li>考えた手順（アルゴリズム）をワークシートに記入</li>
+                        <li>他のグループの方法と比較</li>
+                        <li>「どの方法が速いか」「確実か」を議論</li>
+                    </ol>
+
+                    <h4>学べること</h4>
+                    <ul class="learning-points">
+                        <li><strong>アルゴリズムの多様性</strong>: 同じ問題でも複数の解き方がある</li>
+                        <li><strong>効率性</strong>: 手順の良し悪しで時間が変わる</li>
+                        <li><strong>論理的思考</strong>: 手順を明確に説明する力</li>
+                    </ul>
+
+                    <div class="note-box">
+                        <p><strong>発展</strong>: 「バブルソート」「選択ソート」など、実際のソートアルゴリズムを体験させることも可能です。</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-gamepad"></i> 実践例3: カードゲーム型教材</h3>
+                    
+                    <h4>市販のプログラミングカードゲーム</h4>
+                    <ul class="product-list">
+                        <li><strong>「アルゴロジック」</strong>（アルゴリズム体験ゲーム）- 無料ダウンロード可能</li>
+                        <li><strong>「コードモンキー」</strong>（カードゲーム版）</li>
+                        <li><strong>「ロボットタートルズ」</strong>（4歳から遊べる）</li>
+                    </ul>
+
+                    <h4>自作カードゲームのアイデア</h4>
+                    <ul class="activity-list">
+                        <li>命令カードを組み合わせて目的地にたどり着くゲーム</li>
+                        <li>繰り返しカードを使って効率化するパズル</li>
+                        <li>条件分岐カードで迷路を脱出するゲーム</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-clipboard-list"></i> アンプラグド活動の授業計画</h3>
+                    
+                    <h4>45分授業の例</h4>
+                    <ol class="lesson-structure">
+                        <li><strong>導入（5分）</strong>
+                            <ul><li>「プログラミングって何？」身近な例（信号機、ゲーム）を紹介</li></ul>
+                        </li>
+                        <li><strong>説明・デモ（10分）</strong>
+                            <ul><li>ロボット役体験ゲームのルール説明、教員がデモ</li></ul>
+                        </li>
+                        <li><strong>グループ活動（20分）</strong>
+                            <ul><li>ペアでロボット役・プログラマー役を交代しながら体験</li></ul>
+                        </li>
+                        <li><strong>振り返り・共有（10分）</strong>
+                            <ul>
+                                <li>「難しかったこと」「気づいたこと」を発表</li>
+                                <li>プログラミングの大切なポイント（順序、正確さ、デバッグ）を整理</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- 7. 授業計画テンプレート -->
+            <section id="lesson-plans">
+                <h2 class="section-title"><i class="fas fa-file-alt"></i> 7. 授業計画テンプレート</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-shapes"></i> 小5算数「正多角形の作図」（45分×2コマ）</h3>
+                    
+                    <div class="lesson-plan">
+                        <h4>単元名</h4>
+                        <p>正多角形と円周の長さ</p>
+
+                        <h4>本時の目標</h4>
+                        <ul class="objectives">
+                            <li>プログラミングを通して、正多角形の性質（辺の長さ、角の大きさ）を理解する</li>
+                            <li>繰り返しの処理を使って、効率的にプログラムを作成できる</li>
+                            <li>試行錯誤しながら、プログラムを改善できる</li>
+                        </ul>
+
+                        <h4>準備物</h4>
+                        <ul class="materials">
+                            <li>タブレット（1人1台）</li>
+                            <li>Scratchアカウント</li>
+                            <li>ワークシート（プログラムの設計図を書く）</li>
+                            <li>大型提示装置</li>
+                        </ul>
+
+                        <h4>授業の流れ（1時間目）</h4>
+                        <table class="lesson-table">
+                            <thead>
+                                <tr>
+                                    <th>時間</th>
+                                    <th>学習活動</th>
+                                    <th>指導上の留意点</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>5分</td>
+                                    <td><strong>導入</strong><br>正三角形の性質を復習</td>
+                                    <td>前時の学習を想起させる</td>
+                                </tr>
+                                <tr>
+                                    <td>5分</td>
+                                    <td><strong>課題提示</strong><br>「Scratchで正三角形を描くプログラムを作ろう」</td>
+                                    <td>デモンストレーションで完成イメージを見せる</td>
+                                </tr>
+                                <tr>
+                                    <td>10分</td>
+                                    <td><strong>プログラム設計</strong><br>ワークシートに必要な命令を考える</td>
+                                    <td>「どんな動きが必要か」を分解して考えさせる</td>
+                                </tr>
+                                <tr>
+                                    <td>20分</td>
+                                    <td><strong>プログラミング</strong><br>Scratchでプログラムを作成、実行、修正</td>
+                                    <td>つまずいている児童には個別支援<br>「繰り返し」ブロックの使用を促す</td>
+                                </tr>
+                                <tr>
+                                    <td>5分</td>
+                                    <td><strong>振り返り</strong><br>うまくいったこと、難しかったことを共有</td>
+                                    <td>試行錯誤の過程を価値付ける</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4>授業の流れ（2時間目）</h4>
+                        <table class="lesson-table">
+                            <thead>
+                                <tr>
+                                    <th>時間</th>
+                                    <th>学習活動</th>
+                                    <th>指導上の留意点</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>5分</td>
+                                    <td><strong>前時の振り返り</strong><br>正三角形プログラムの確認</td>
+                                    <td>回転角度が120°になる理由を確認</td>
+                                </tr>
+                                <tr>
+                                    <td>5分</td>
+                                    <td><strong>課題提示</strong><br>「正方形、正五角形、正六角形も描こう」</td>
+                                    <td>発展課題として提示</td>
+                                </tr>
+                                <tr>
+                                    <td>25分</td>
+                                    <td><strong>プログラミング</strong><br>様々な正多角形を描く<br>規則性を発見する</td>
+                                    <td>「辺の数」と「回転角度」の関係に気づかせる<br>360÷辺の数 = 回転角度</td>
+                                </tr>
+                                <tr>
+                                    <td>10分</td>
+                                    <td><strong>発表・共有</strong><br>作品を見せ合い、発見した規則性を共有</td>
+                                    <td>優れたプログラムを全体で共有<br>変数を使った汎用プログラムを紹介</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4>評価規準</h4>
+                        <ul class="evaluation">
+                            <li><strong>知識・技能</strong>: 正多角形の性質を理解し、Scratchで描くことができる</li>
+                            <li><strong>思考・判断・表現</strong>: 繰り返しや変数を使って効率的なプログラムを作成できる</li>
+                            <li><strong>主体的に学習に取り組む態度</strong>: 試行錯誤しながら、プログラムを改善しようとしている</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-bolt"></i> 小6理科「電気の利用」（45分×4コマ）</h3>
+                    
+                    <div class="lesson-plan">
+                        <h4>単元名</h4>
+                        <p>電気の利用（プログラミング）</p>
+
+                        <h4>本時の目標</h4>
+                        <ul class="objectives">
+                            <li>身の回りには、電気の性質や働きを利用した道具があることを理解する</li>
+                            <li>センサーを使って、効率的に電気を利用するプログラムを作成できる</li>
+                            <li>プログラミングを通して、問題解決の方法を考えることができる</li>
+                        </ul>
+
+                        <h4>準備物</h4>
+                        <ul class="materials">
+                            <li>micro:bit（2人に1台）</li>
+                            <li>PC またはタブレット</li>
+                            <li>電池ボックス</li>
+                            <li>（オプション）LED、モーター、拡張ボード</li>
+                        </ul>
+
+                        <h4>4時間の流れ</h4>
+                        
+                        <h5>1時間目: micro:bit基本操作</h5>
+                        <ul class="lesson-steps">
+                            <li>micro:bitの紹介、基本操作</li>
+                            <li>LEDに文字や図形を表示</li>
+                            <li>ボタンで入力、音を鳴らす</li>
+                        </ul>
+
+                        <h5>2時間目: センサーを使ってみよう</h5>
+                        <ul class="lesson-steps">
+                            <li>温度センサー、明るさセンサーの体験</li>
+                            <li>「暗くなったら光る街灯」を作る</li>
+                            <li>条件分岐（もし〜なら）の理解</li>
+                        </ul>
+
+                        <h5>3時間目: 節電システムを作ろう</h5>
+                        <ul class="lesson-steps">
+                            <li>課題: 電気を効率的に使うシステムを考える</li>
+                            <li>グループでアイデア出し、設計</li>
+                            <li>プログラム作成、動作確認</li>
+                        </ul>
+
+                        <h5>4時間目: 発表会・まとめ</h5>
+                        <ul class="lesson-steps">
+                            <li>作品発表、デモンストレーション</li>
+                            <li>相互評価、良いアイデアの共有</li>
+                            <li>単元の振り返り、学んだことの整理</li>
+                        </ul>
+
+                        <h4>評価規準</h4>
+                        <ul class="evaluation">
+                            <li><strong>知識・技能</strong>: センサーの仕組みを理解し、プログラムで制御できる</li>
+                            <li><strong>思考・判断・表現</strong>: 電気の効率的な利用方法を考え、プログラムで実現できる</li>
+                            <li><strong>主体的に学習に取り組む態度</strong>: グループで協力し、試行錯誤しながら問題解決に取り組んでいる</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-laptop-code"></i> 中1技術「計測・制御プログラミング」（50分×6コマ）</h3>
+                    
+                    <div class="lesson-plan">
+                        <h4>題材名</h4>
+                        <p>センサーとアクチュエーターを使った計測・制御</p>
+
+                        <h4>題材の目標</h4>
+                        <ul class="objectives">
+                            <li>計測・制御システムの仕組みを理解する</li>
+                            <li>センサーとアクチュエーターをプログラムで制御できる</li>
+                            <li>安全で快適な生活を実現する技術を設計・製作できる</li>
+                        </ul>
+
+                        <h4>6時間の流れ</h4>
+                        
+                        <h5>1時間目: 計測・制御システムの理解</h5>
+                        <ul class="lesson-steps">
+                            <li>身の回りの計測・制御システム（エアコン、自動ドアなど）</li>
+                            <li>入力（センサー）→処理（プログラム）→出力（アクチュエーター）</li>
+                            <li>フローチャートの読み方</li>
+                        </ul>
+
+                        <h5>2-3時間目: プログラミング基礎</h5>
+                        <ul class="lesson-steps">
+                            <li>micro:bitでセンサー値の取得</li>
+                            <li>LED、モーターの制御</li>
+                            <li>条件分岐、繰り返し、変数の活用</li>
+                        </ul>
+
+                        <h5>4-5時間目: 問題解決型制作</h5>
+                        <ul class="lesson-steps">
+                            <li>課題: 「安全・快適・省エネ」をテーマにシステムを設計</li>
+                            <li>設計図作成（フローチャート、回路図）</li>
+                            <li>プログラム作成、動作確認、改善</li>
+                        </ul>
+
+                        <h5>6時間目: 発表・評価</h5>
+                        <ul class="lesson-steps">
+                            <li>作品発表、工夫点の説明</li>
+                            <li>相互評価、技術の社会への影響を考える</li>
+                            <li>題材の振り返り</li>
+                        </ul>
+
+                        <h4>評価規準</h4>
+                        <ul class="evaluation">
+                            <li><strong>知識・技能</strong>: 計測・制御システムの仕組みを理解し、プログラムで実現できる</li>
+                            <li><strong>思考・判断・表現</strong>: 問題を発見し、最適な解決策を設計できる</li>
+                            <li><strong>主体的に学習に取り組む態度</strong>: よりよい生活を実現するために粘り強く取り組んでいる</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. 評価の観点 -->
+            <section id="assessment">
+                <h2 class="section-title"><i class="fas fa-clipboard-check"></i> 8. 評価の観点</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-info-circle"></i> プログラミング教育における評価の考え方</h3>
+                    
+                    <div class="important-box">
+                        <p><strong>重要なポイント</strong></p>
+                        <p>プログラミング教育では、<strong>「プログラミング言語の技能」そのものを評価するのではなく</strong>、各教科の目標達成や「プログラミング的思考」の育成を評価します。</p>
+                    </div>
+
+                    <h4>学習評価の3観点</h4>
+                    <ol class="evaluation-points">
+                        <li><strong>知識・技能</strong></li>
+                        <li><strong>思考・判断・表現</strong></li>
+                        <li><strong>主体的に学習に取り組む態度</strong></li>
+                    </ol>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-check-square"></i> 観点別評価規準の例</h3>
+                    
+                    <h4>小5算数「正多角形」の場合</h4>
+                    <table class="evaluation-table">
+                        <thead>
+                            <tr>
+                                <th>観点</th>
+                                <th>評価規準</th>
+                                <th>評価方法</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>知識・技能</strong></td>
+                                <td>正多角形の性質を理解し、プログラミングを通して作図できる</td>
+                                <td>ワークシート、プログラムの確認</td>
+                            </tr>
+                            <tr>
+                                <td><strong>思考・判断・表現</strong></td>
+                                <td>繰り返しの処理を使い、効率的なプログラムを作成している<br>回転角度の規則性を発見し、説明できる</td>
+                                <td>プログラムの工夫、発表内容</td>
+                            </tr>
+                            <tr>
+                                <td><strong>主体的に学習に取り組む態度</strong></td>
+                                <td>試行錯誤しながら、プログラムを改善しようとしている<br>他の児童の作品から学ぼうとしている</td>
+                                <td>観察、振り返りシート</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>小6理科「電気の利用」の場合</h4>
+                    <table class="evaluation-table">
+                        <thead>
+                            <tr>
+                                <th>観点</th>
+                                <th>評価規準</th>
+                                <th>評価方法</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>知識・技能</strong></td>
+                                <td>センサーの仕組みを理解し、プログラムで制御できる<br>電気の性質を利用した道具の仕組みを説明できる</td>
+                                <td>ワークシート、実技確認</td>
+                            </tr>
+                            <tr>
+                                <td><strong>思考・判断・表現</strong></td>
+                                <td>電気を効率的に利用する方法を考え、プログラムで実現している<br>実験結果を分析し、改善策を提案できる</td>
+                                <td>レポート、発表</td>
+                            </tr>
+                            <tr>
+                                <td><strong>主体的に学習に取り組む態度</strong></td>
+                                <td>グループで協力し、問題解決に粘り強く取り組んでいる<br>より良いシステムを目指して改善を続けている</td>
+                                <td>観察、自己評価</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-star"></i> プログラミング的思考の評価</h3>
+                    <p>プログラミング的思考は、以下の要素で評価します。</p>
+
+                    <div class="thinking-evaluation">
+                        <h4>1. 分解</h4>
+                        <ul class="criteria">
+                            <li>問題を小さな部分に分けて考えているか</li>
+                            <li>複雑な処理を単純な命令の組み合わせで表現できているか</li>
+                        </ul>
+
+                        <h4>2. パターン認識</h4>
+                        <ul class="criteria">
+                            <li>繰り返しの処理に気づいているか</li>
+                            <li>共通のパターンを見つけて効率化できているか</li>
+                        </ul>
+
+                        <h4>3. 抽象化</h4>
+                        <ul class="criteria">
+                            <li>本質的な部分に注目できているか</li>
+                            <li>汎用性のあるプログラムを作成できているか</li>
+                        </ul>
+
+                        <h4>4. アルゴリズム</h4>
+                        <ul class="criteria">
+                            <li>問題解決の手順を論理的に考えているか</li>
+                            <li>効率的な手順を工夫できているか</li>
+                        </ul>
+
+                        <h4>5. デバッグ</h4>
+                        <ul class="criteria">
+                            <li>エラーの原因を分析できているか</li>
+                            <li>試行錯誤しながら改善しているか</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-clipboard-list"></i> 評価ツール例</h3>
+                    
+                    <h4>観察チェックリスト</h4>
+                    <table class="checklist-table">
+                        <thead>
+                            <tr>
+                                <th>評価項目</th>
+                                <th>A</th>
+                                <th>B</th>
+                                <th>C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>問題を分解して考えている</td>
+                                <td>◯</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>繰り返しを活用している</td>
+                                <td>◯</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>エラーを自分で修正している</td>
+                                <td></td>
+                                <td>◯</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>グループで協力している</td>
+                                <td>◯</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>振り返りシート（児童用）</h4>
+                    <div class="reflection-sheet">
+                        <p><strong>今日の授業で学んだこと</strong></p>
+                        <ul class="questions">
+                            <li>どんなプログラムを作りましたか？</li>
+                            <li>うまくいかなかったところは？ どう直しましたか？</li>
+                            <li>プログラミングで大切だと思ったことは？</li>
+                            <li>次にやってみたいことは？</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. 教員支援のポイント -->
+            <section id="teacher-support">
+                <h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i> 9. 教員支援のポイント</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-heart"></i> プログラミング未経験教員への寄り添い方</h3>
+                    
+                    <div class="support-grid">
+                        <div class="support-card">
+                            <h4>1. 不安を受け止める</h4>
+                            <p>「プログラミングは難しそう」「自分にできるか不安」という気持ちを否定せず、共感する。</p>
+                            <ul class="tips">
+                                <li>「最初はみんな不安です」と伝える</li>
+                                <li>「完璧にできなくても大丈夫」と安心させる</li>
+                                <li>「一緒に学びましょう」というスタンス</li>
+                            </ul>
+                        </div>
+
+                        <div class="support-card">
+                            <h4>2. ハードルを下げる</h4>
+                            <p>最初から高度なことを求めず、小さな成功体験を積み重ねる。</p>
+                            <ul class="tips">
+                                <li>まずはアンプラグド活動から</li>
+                                <li>「10分だけScratchを触ってみませんか？」</li>
+                                <li>簡単な教材から始める（正三角形だけでOK）</li>
+                            </ul>
+                        </div>
+
+                        <div class="support-card">
+                            <h4>3. 具体的な支援を提案</h4>
+                            <p>「何でも聞いてください」ではなく、具体的なサポート内容を示す。</p>
+                            <ul class="tips">
+                                <li>「授業案を一緒に作りましょう」</li>
+                                <li>「教材を準備します」</li>
+                                <li>「授業中にサポートに入ります」</li>
+                            </ul>
+                        </div>
+
+                        <div class="support-card">
+                            <h4>4. 教員の強みを活かす</h4>
+                            <p>教員は「教えるプロ」。ICTはツールに過ぎない。</p>
+                            <ul class="tips">
+                                <li>「授業デザインは先生が得意ですよね」</li>
+                                <li>「児童への声かけは先生にお願いします」</li>
+                                <li>「ICT操作は私がサポートします」</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-tools"></i> 授業前の動作確認</h3>
+                    <p>トラブルを未然に防ぐため、授業前に必ずチェックします。</p>
+
+                    <h4>チェックリスト</h4>
+                    <ul class="checklist">
+                        <li><input type="checkbox"> Wi-Fi接続確認（全端末）</li>
+                        <li><input type="checkbox"> Scratchへのアクセス確認</li>
+                        <li><input type="checkbox"> アカウントログイン確認</li>
+                        <li><input type="checkbox"> サンプルプログラムの動作確認</li>
+                        <li><input type="checkbox"> 大型提示装置との接続確認</li>
+                        <li><input type="checkbox"> micro:bitのバッテリー確認（使用する場合）</li>
+                        <li><input type="checkbox"> 予備端末の準備</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-hands-helping"></i> 授業中のトラブル対応</h3>
+                    
+                    <h4>よくあるトラブルと対処法</h4>
+                    <div class="trouble-solutions">
+                        <div class="trouble-item">
+                            <h5>「ログインできない」</h5>
+                            <ul class="solutions">
+                                <li>パスワードを確認、リセット</li>
+                                <li>アカウントなしモードで作業（保存はローカル）</li>
+                            </ul>
+                        </div>
+
+                        <div class="trouble-item">
+                            <h5>「ブロックの組み合わせがわからない」</h5>
+                            <ul class="solutions">
+                                <li>サンプルプログラムを提示</li>
+                                <li>隣の児童に教えてもらう（ペアサポート）</li>
+                                <li>ヒントカードを渡す</li>
+                            </ul>
+                        </div>
+
+                        <div class="trouble-item">
+                            <h5>「プログラムが動かない」</h5>
+                            <ul class="solutions">
+                                <li>「🏴が押されたとき」ブロックがあるか確認</li>
+                                <li>ブロックが正しくつながっているか確認</li>
+                                <li>一緒にデバッグする（原因を探す）</li>
+                            </ul>
+                        </div>
+
+                        <div class="trouble-item">
+                            <h5>「進度に差がある」</h5>
+                            <ul class="solutions">
+                                <li>早く終わった児童には発展課題を用意</li>
+                                <li>遅れている児童には基本課題に絞る</li>
+                                <li>「できた児童が教える」システムを作る</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-gift"></i> 簡単なサンプルプログラムの提供</h3>
+                    <p>教員が授業で使いやすいサンプルプログラムを用意しておくと喜ばれます。</p>
+
+                    <h4>提供すべきサンプル</h4>
+                    <ul class="sample-list">
+                        <li><strong>正三角形</strong>: 基本形、コピーして改造できる</li>
+                        <li><strong>正方形</strong>: 比較用</li>
+                        <li><strong>変数を使った汎用版</strong>: 発展課題用</li>
+                        <li><strong>間違い例</strong>: デバッグ練習用</li>
+                    </ul>
+
+                    <h4>共有方法</h4>
+                    <ul class="share-methods">
+                        <li>Scratchスタジオにまとめて公開</li>
+                        <li>QRコードで配布</li>
+                        <li>Google ClassroomやTeamsで共有</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 10. 保護者向け説明資料 -->
+            <section id="parent-materials">
+                <h2 class="section-title"><i class="fas fa-users"></i> 10. 保護者向け説明資料</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-question-circle"></i> 保護者からよくある質問</h3>
+                    
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h4>Q1. プログラミング教育は、プログラマーを育てるのですか？</h4>
+                            <div class="faq-answer">
+                                <p><strong>A.</strong> いいえ、違います。プログラミング教育の目的は「プログラミング的思考」を育てることです。これは、問題を分解して考えたり、効率的な解決策を見つけたりする力で、どんな職業にも必要な力です。</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>Q2. パソコンが得意でない子は大丈夫ですか？</h4>
+                            <div class="faq-answer">
+                                <p><strong>A.</strong> 大丈夫です。プログラミング教育では、タイピングやマウス操作のスキルは求められていません。ブロックを組み合わせる簡単な操作でプログラムが作れるツールを使います。また、コンピュータを使わない「アンプラグド」活動も行います。</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>Q3. 何年生から始まりますか？</h4>
+                            <div class="faq-answer">
+                                <p><strong>A.</strong> 小学校では2020年度から全学年で実施されています。ただし、「プログラミング」という教科があるわけではなく、算数や理科など既存の教科の中で学びます。中学校では技術・家庭科で必修、高校では「情報Ⅰ」で必修です。</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>Q4. 家でもプログラミングをさせた方がいいですか？</h4>
+                            <div class="faq-answer">
+                                <p><strong>A.</strong> 興味があれば、家でも楽しく学べます。Scratch（スクラッチ）など無料のツールがたくさんあります。ただし、無理に勉強させる必要はありません。学校での学習だけで十分です。</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>Q5. プログラミング教室に通わせるべきですか？</h4>
+                            <div class="faq-answer">
+                                <p><strong>A.</strong> 必須ではありません。学校の授業で基礎は学べます。もし子どもが興味を持ち、もっと深く学びたいと言ったら、通わせるのも良いでしょう。ただし、教室選びは慎重に（体験授業で子どもに合うか確認）。</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>Q6. ゲームばかりしているが、それでもプログラミングは学べますか？</h4>
+                            <div class="faq-answer">
+                                <p><strong>A.</strong> ゲームをする側からゲームを作る側に興味が移ると、プログラミング学習の良いきっかけになります。「自分でゲームを作ってみない？」と声をかけてみてください。Scratchでは簡単なゲームが作れます。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-home"></i> 家庭でできるプログラミング学習</h3>
+                    
+                    <h4>無料で使える教材</h4>
+                    <ul class="resource-list">
+                        <li><strong>Scratch</strong>（スクラッチ）
+                            <ul>
+                                <li>対象: 小学3年生〜</li>
+                                <li>URL: <a href="https://scratch.mit.edu/" target="_blank">https://scratch.mit.edu/</a></li>
+                                <li>特徴: ブロックを組み合わせてゲームやアニメを作成</li>
+                            </ul>
+                        </li>
+                        <li><strong>Viscuit</strong>（ビスケット）
+                            <ul>
+                                <li>対象: 幼児〜小学校低学年</li>
+                                <li>URL: <a href="https://www.viscuit.com/" target="_blank">https://www.viscuit.com/</a></li>
+                                <li>特徴: お絵かき感覚でプログラミング</li>
+                            </ul>
+                        </li>
+                        <li><strong>Hour of Code</strong>
+                            <ul>
+                                <li>対象: 全年齢</li>
+                                <li>URL: <a href="https://hourofcode.com/jp" target="_blank">https://hourofcode.com/jp</a></li>
+                                <li>特徴: マインクラフト、アナ雪など人気キャラクターで学べる</li>
+                            </ul>
+                        </li>
+                        <li><strong>プログラミングゼミ</strong>
+                            <ul>
+                                <li>対象: 小学校低学年〜</li>
+                                <li>URL: <a href="https://programmingzemi.com/" target="_blank">https://programmingzemi.com/</a></li>
+                                <li>特徴: 日本製、授業での使用実績多数</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4>保護者向けサポート情報</h4>
+                    <ul class="support-info">
+                        <li><strong>文部科学省「小学校プログラミング教育の手引」</strong>
+                            <ul><li>URL: <a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/1403162.htm" target="_blank">https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/1403162.htm</a></li></ul>
+                        </li>
+                        <li><strong>未来の学びコンソーシアム</strong>
+                            <ul><li>URL: <a href="https://miraino-manabi.jp/" target="_blank">https://miraino-manabi.jp/</a></li></ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-school"></i> プログラミング教室の選び方</h3>
+                    <p>もし通わせる場合、以下のポイントをチェックしてください。</p>
+
+                    <h4>チェックポイント</h4>
+                    <ul class="checklist">
+                        <li><input type="checkbox"> <strong>体験授業</strong>: 必ず体験してから決める</li>
+                        <li><input type="checkbox"> <strong>子どもが楽しんでいるか</strong>: 本人の意思を尊重</li>
+                        <li><input type="checkbox"> <strong>カリキュラム</strong>: 何を何年で学ぶのか明確か</li>
+                        <li><input type="checkbox"> <strong>講師の質</strong>: 教育経験、プログラミング経験があるか</li>
+                        <li><input type="checkbox"> <strong>料金</strong>: 月謝、教材費、入会金などの総額を確認</li>
+                        <li><input type="checkbox"> <strong>通いやすさ</strong>: 場所、時間、振替制度</li>
+                        <li><input type="checkbox"> <strong>成果発表の機会</strong>: 作品発表会、コンテスト参加など</li>
+                    </ul>
+
+                    <h4>注意点</h4>
+                    <div class="warning-box">
+                        <ul>
+                            <li>「〇〇検定取得を目指す」だけのカリキュラムは要注意（資格より思考力）</li>
+                            <li>高額な教材の購入を求められる場合は慎重に</li>
+                            <li>「将来プログラマーになれる」など過度な宣伝文句に注意</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 参考文献 -->
+            <section class="references">
+                <h2 class="section-title"><i class="fas fa-book-open"></i> 参考文献・引用元</h2>
+                
+                <div class="reference-list">
+                    <div class="reference-item">
+                        <h4>文部科学省 - 小学校プログラミング教育の手引</h4>
+                        <p>プログラミング教育の目標、指導例、評価方法</p>
+                        <a href="https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/1403162.htm" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> サイトを見る
+                        </a>
+                    </div>
+                    
+                    <div class="reference-item">
+                        <h4>文部科学省 - 中学校学習指導要領（技術・家庭）</h4>
+                        <p>中学校技術科「D 情報の技術」の内容</p>
+                        <a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1384661.htm" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> サイトを見る
+                        </a>
+                    </div>
+                    
+                    <div class="reference-item">
+                        <h4>未来の学びコンソーシアム</h4>
+                        <p>小学校プログラミング教育の実践事例、指導案</p>
+                        <a href="https://miraino-manabi.jp/" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> サイトを見る
+                        </a>
+                    </div>
+                    
+                    <div class="reference-item">
+                        <h4>Scratch公式サイト</h4>
+                        <p>Scratchの使い方、チュートリアル、コミュニティ</p>
+                        <a href="https://scratch.mit.edu/" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> サイトを見る
+                        </a>
+                    </div>
+                    
+                    <div class="reference-item">
+                        <h4>micro:bit教育財団</h4>
+                        <p>micro:bitの活用事例、教材、MakeCode</p>
+                        <a href="https://microbit.org/" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> サイトを見る
+                        </a>
+                    </div>
+                    
+                    <div class="reference-item">
+                        <h4>Code.org</h4>
+                        <p>Hour of Code、プログラミング教育リソース</p>
+                        <a href="https://code.org/" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> サイトを見る
+                        </a>
+                    </div>
+                </div>
+
+                <div class="disclaimer">
+                    <h3><i class="fas fa-info-circle"></i> 免責事項</h3>
+                    <p>本ガイドは、文部科学省の学習指導要領、公式資料、および学校現場での実践経験をもとに作成しています。教材やツールの情報は2024年12月時点のものであり、変更される場合があります。導入時は各ツールの最新情報をご確認ください。</p>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="last-updated">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

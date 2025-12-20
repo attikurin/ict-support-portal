@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>授業支援システム活用実践ガイド - ICT支援員・講師のための教育ポータル</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                        <li><a href="rubric.html"><i class="fas fa-clipboard-check"></i> ルーブリック評価</a></li>
+                        <li><a href="learning-support-systems.html" class="active"><i class="fas fa-chalkboard"></i> 授業支援システム</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI利用ガイド</a></li>
+                        <li><a href="ai-apps-education.html"><i class="fas fa-brain"></i> AI教育アプリ</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-star"></i> 成功事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="device-management.html"><i class="fas fa-tablet-alt"></i> 端末管理・MDM</a></li>
+                        <li><a href="wifi-troubleshooting.html"><i class="fas fa-wifi"></i> Wi-Fiトラブル対応</a></li>
+                        <li><a href="account-management.html"><i class="fas fa-user-shield"></i> アカウント管理</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> セキュリティ</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="edtech-comparison.html"><i class="fas fa-balance-scale"></i> EdTech比較</a></li>
+                        <li><a href="edtech-tools.html"><i class="fas fa-tools"></i> EdTechツール</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                        <li><a href="downloads.html"><i class="fas fa-download"></i> ダウンロード</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1><i class="fas fa-chalkboard"></i> 授業支援システム活用実践ガイド</h1>
+            <p class="lead">ロイロノート・SKYMENU・MetaMoJi・Google Classroom・Microsoft Teamsの5大授業支援システムの機能比較、活用法、初期設定サポート、トラブルシューティングを網羅した実践的ガイドです。</p>
+        </div>
+
+        <!-- 目次 -->
+        <section class="toc-section">
+                <h2><i class="fas fa-list"></i> 目次</h2>
+                <div class="info-grid">
+                    <a href="#overview" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-info-circle"></i></div>
+                        <h3>授業支援システムとは</h3>
+                        <p>定義、主な機能、GIGAスクールでの役割</p>
+                    </a>
+                    <a href="#comparison" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-balance-scale"></i></div>
+                        <h3>主要システム比較表</h3>
+                        <p>5大システムの機能・価格・対応OS比較</p>
+                    </a>
+                    <a href="#loilonote" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-shapes"></i></div>
+                        <h3>ロイロノート完全活用ガイド</h3>
+                        <p>カード機能、思考ツール、提出箱、共有ノート</p>
+                    </a>
+                    <a href="#skymenu" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-desktop"></i></div>
+                        <h3>SKYMENU Cloud実践活用</h3>
+                        <p>画面配信、発表ノート、グループワーク支援</p>
+                    </a>
+                    <a href="#metamoji" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-pen"></i></div>
+                        <h3>MetaMoJi ClassRoom活用法</h3>
+                        <p>手書き入力、リアルタイム協働編集、PDF注釈</p>
+                    </a>
+                    <a href="#google-classroom" class="info-card">
+                        <div class="info-card-icon"><i class="fab fa-google"></i></div>
+                        <h3>Google Classroom運用術</h3>
+                        <p>課題管理、採点、フィードバック、保護者連携</p>
+                    </a>
+                    <a href="#teams" class="info-card">
+                        <div class="info-card-icon"><i class="fab fa-microsoft"></i></div>
+                        <h3>Microsoft Teams活用</h3>
+                        <p>チャネル運用、会議、課題、Microsoft 365連携</p>
+                    </a>
+                    <a href="#lesson-scenes" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h3>授業シーン別活用例</h3>
+                        <p>導入、展開、まとめ、グループワーク、個別最適化</p>
+                    </a>
+                    <a href="#subjects" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-book-open"></i></div>
+                        <h3>教科別活用アイデア</h3>
+                        <p>国語、算数、理科、社会、図工、音楽、体育</p>
+                    </a>
+                    <a href="#teacher-support" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-user-cog"></i></div>
+                        <h3>教員向け初期設定サポート</h3>
+                        <p>アカウント設定、クラス作成、初回授業の準備</p>
+                    </a>
+                    <a href="#troubleshooting" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-wrench"></i></div>
+                        <h3>トラブルシューティング</h3>
+                        <p>よくある問題と解決策、サポート窓口情報</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 1. 授業支援システムとは -->
+            <section id="overview">
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> 1. 授業支援システムとは</h2>
+                
+                <div class="info-card">
+                    <h3>授業支援システムの定義</h3>
+                    <p>授業支援システムとは、1人1台端末環境において、教員と児童生徒、児童生徒同士のインタラクションを支援し、効果的な授業運営を実現するためのソフトウェアツールです。</p>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-star"></i> 主な機能</h3>
+                    <ul class="feature-list">
+                        <li><strong>画面配信・共有</strong>: 教員の画面を児童生徒の端末に表示、または児童生徒の画面を教員が確認</li>
+                        <li><strong>課題配布・回収</strong>: デジタル教材の配布、課題の提出、採点、フィードバック</li>
+                        <li><strong>協働学習支援</strong>: グループワーク、相互評価、リアルタイム共同編集</li>
+                        <li><strong>思考ツール</strong>: マインドマップ、フィッシュボーン、ベン図などの提供</li>
+                        <li><strong>学習履歴管理</strong>: 提出状況、学習進度、ポートフォリオの蓄積</li>
+                        <li><strong>コミュニケーション</strong>: チャット、ビデオ会議、掲示板機能</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-graduation-cap"></i> 授業支援システムの重要性</h3>
+                    <div class="note-box">
+                        <p><strong>GIGAスクール構想における役割</strong></p>
+                        <ul>
+                            <li>1人1台端末を「文房具」として日常的に活用するための基盤</li>
+                            <li>「個別最適な学び」と「協働的な学び」の実現を支援</li>
+                            <li>教員の授業準備・評価業務の効率化</li>
+                            <li>児童生徒の学習履歴（スタディログ）の蓄積と活用</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. 主要システム比較表 -->
+            <section id="comparison">
+                <h2 class="section-title"><i class="fas fa-balance-scale"></i> 2. 主要授業支援システム比較表</h2>
+                
+                <div class="table-responsive">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>システム名</th>
+                                <th>開発元</th>
+                                <th>主な特徴</th>
+                                <th>対応OS</th>
+                                <th>価格帯</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>ロイロノート・スクール</strong></td>
+                                <td>LoiLo</td>
+                                <td>直感的な操作、思考ツール、カード型インターフェース</td>
+                                <td>iOS, Android, Chrome OS, Windows</td>
+                                <td>年間1,000円/台前後</td>
+                            </tr>
+                            <tr>
+                                <td><strong>SKYMENU Cloud</strong></td>
+                                <td>Sky</td>
+                                <td>画面配信、学習履歴、発表ノート、モニタリング</td>
+                                <td>Chrome OS, Windows</td>
+                                <td>年間1,500円/台前後</td>
+                            </tr>
+                            <tr>
+                                <td><strong>MetaMoJi ClassRoom</strong></td>
+                                <td>MetaMoJi</td>
+                                <td>手書き入力、リアルタイム協働、PDF書き込み</td>
+                                <td>iOS, Android, Chrome OS, Windows</td>
+                                <td>年間1,200円/台前後</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Google Classroom</strong></td>
+                                <td>Google</td>
+                                <td>課題管理、Google Workspace統合、シンプルUI</td>
+                                <td>全OS（ブラウザ）</td>
+                                <td>無料（Education版）</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Microsoft Teams</strong></td>
+                                <td>Microsoft</td>
+                                <td>チャット、会議、課題、Microsoft 365統合</td>
+                                <td>全OS（ブラウザ・アプリ）</td>
+                                <td>無料（A1 Education版）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-tasks"></i> 機能別比較</h3>
+                    <div class="table-responsive">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>機能</th>
+                                    <th>ロイロ</th>
+                                    <th>SKYMENU</th>
+                                    <th>MetaMoJi</th>
+                                    <th>Classroom</th>
+                                    <th>Teams</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>画面配信</td>
+                                    <td>○</td>
+                                    <td>◎</td>
+                                    <td>△</td>
+                                    <td>×</td>
+                                    <td>○</td>
+                                </tr>
+                                <tr>
+                                    <td>思考ツール</td>
+                                    <td>◎</td>
+                                    <td>○</td>
+                                    <td>○</td>
+                                    <td>×</td>
+                                    <td>△</td>
+                                </tr>
+                                <tr>
+                                    <td>手書き入力</td>
+                                    <td>○</td>
+                                    <td>△</td>
+                                    <td>◎</td>
+                                    <td>×</td>
+                                    <td>○</td>
+                                </tr>
+                                <tr>
+                                    <td>協働編集</td>
+                                    <td>○</td>
+                                    <td>○</td>
+                                    <td>◎</td>
+                                    <td>◎</td>
+                                    <td>◎</td>
+                                </tr>
+                                <tr>
+                                    <td>課題管理</td>
+                                    <td>◎</td>
+                                    <td>○</td>
+                                    <td>○</td>
+                                    <td>◎</td>
+                                    <td>◎</td>
+                                </tr>
+                                <tr>
+                                    <td>ビデオ会議</td>
+                                    <td>×</td>
+                                    <td>×</td>
+                                    <td>×</td>
+                                    <td>○(Meet)</td>
+                                    <td>◎</td>
+                                </tr>
+                                <tr>
+                                    <td>学習履歴</td>
+                                    <td>◎</td>
+                                    <td>◎</td>
+                                    <td>○</td>
+                                    <td>○</td>
+                                    <td>○</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="note">◎=非常に優れている、○=対応している、△=限定的、×=非対応</p>
+                </div>
+            </section>
+
+            <!-- 3. ロイロノート完全活用ガイド -->
+            <section id="loilonote">
+                <h2 class="section-title"><i class="fas fa-layer-group"></i> 3. ロイロノート・スクール完全活用ガイド</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-star"></i> ロイロノートの特徴</h3>
+                    <p>ロイロノートは「カード」を「つなげる」ことで思考を可視化する、直感的な操作が特徴の授業支援システムです。</p>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4><i class="fas fa-folder"></i> カード型インターフェース</h4>
+                            <p>テキスト、写真、動画、PDF、Webカードなど、多様なカードを作成</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-project-diagram"></i> カードをつなげる</h4>
+                            <p>カード同士を線でつなぎ、思考の流れや関係性を表現</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-inbox"></i> 提出箱</h4>
+                            <p>課題の配布・回収がワンタッチ、リアルタイムで提出状況を確認</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-users"></i> 共有ノート</h4>
+                            <p>グループでリアルタイムに共同編集、協働学習を支援</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-lightbulb"></i> 基本操作</h3>
+                    
+                    <h4>1. カードの作成</h4>
+                    <ul class="step-list">
+                        <li><strong>テキストカード</strong>: 画面下部の「T」ボタンをタップ→文字を入力</li>
+                        <li><strong>写真カード</strong>: カメラボタンをタップ→撮影または写真選択</li>
+                        <li><strong>手書きカード</strong>: ペンボタンをタップ→描画</li>
+                        <li><strong>録音カード</strong>: マイクボタンをタップ→録音開始</li>
+                        <li><strong>Webカード</strong>: 地球ボタンをタップ→URL入力</li>
+                    </ul>
+
+                    <h4>2. カードをつなげる</h4>
+                    <ol class="instruction-list">
+                        <li>カードを長押し</li>
+                        <li>別のカードまでドラッグ</li>
+                        <li>線でつながる（矢印の向きで関係性を表現）</li>
+                    </ol>
+
+                    <h4>3. 提出箱の使い方</h4>
+                    <ul class="step-list">
+                        <li><strong>教員側</strong>: 提出箱を作成→児童生徒に送信</li>
+                        <li><strong>児童生徒側</strong>: カードを提出箱にドラッグ&ドロップ</li>
+                        <li><strong>教員側</strong>: 提出されたカードを確認、コメント、返却</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-brain"></i> 思考ツール（シンキングツール）</h3>
+                    <p>ロイロノートには、思考を整理・深化させるための10種類以上のシンキングツールが搭載されています。</p>
+
+                    <div class="tool-grid">
+                        <div class="tool-card">
+                            <h4>X-Chart（X図）</h4>
+                            <p><strong>用途</strong>: 2つの物事の比較、共通点と相違点の整理</p>
+                            <p><strong>活用例</strong>: 国語（物語の登場人物比較）、社会（2つの地域の比較）</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4>フィッシュボーン</h4>
+                            <p><strong>用途</strong>: 原因と結果の分析、問題解決</p>
+                            <p><strong>活用例</strong>: 理科（実験結果の考察）、総合（地域課題の分析）</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4>座標軸（XYチャート）</h4>
+                            <p><strong>用途</strong>: 2つの軸で物事を分類、優先順位付け</p>
+                            <p><strong>活用例</strong>: 国語（登場人物の性格分析）、総合（SDGs目標の整理）</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4>ベン図</h4>
+                            <p><strong>用途</strong>: 複数の物事の共通点と相違点を視覚化</p>
+                            <p><strong>活用例</strong>: 算数（集合の学習）、国語（作品の比較）</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4>ピラミッドチャート</h4>
+                            <p><strong>用途</strong>: 階層構造、重要度の整理</p>
+                            <p><strong>活用例</strong>: 社会（身分制度）、総合（情報の優先順位）</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4>KWLチャート</h4>
+                            <p><strong>用途</strong>: 学習の振り返り（知っていること、知りたいこと、学んだこと）</p>
+                            <p><strong>活用例</strong>: 全教科（単元の導入と振り返り）</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-users-cog"></i> 共有ノート活用（グループワーク）</h3>
+                    
+                    <h4>共有ノートの作成手順</h4>
+                    <ol class="instruction-list">
+                        <li>教員がグループを作成（児童生徒を割り当て）</li>
+                        <li>共有ノートを作成し、グループに配布</li>
+                        <li>児童生徒がリアルタイムで同じノートに書き込み</li>
+                        <li>教員が各グループの進捗を一覧で確認</li>
+                    </ol>
+
+                    <h4>効果的な活用シーン</h4>
+                    <ul class="benefit-list">
+                        <li><strong>ブレインストーミング</strong>: グループでアイデアを出し合い、カードを整理</li>
+                        <li><strong>KJ法</strong>: 意見をカードに書き、グルーピングして整理</li>
+                        <li><strong>調べ学習</strong>: 各自が調べた情報を共有ノートに集約</li>
+                        <li><strong>プレゼン作成</strong>: グループでスライドを協働作成</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-clipboard-check"></i> テスト機能</h3>
+                    <p>ロイロノートのテスト機能では、選択式・記述式の問題を作成し、自動採点が可能です。</p>
+
+                    <h4>テスト作成手順</h4>
+                    <ol class="instruction-list">
+                        <li>教員画面で「テスト」を選択</li>
+                        <li>問題を作成（選択式4択、○×、記述式）</li>
+                        <li>正解と配点を設定</li>
+                        <li>解説動画やヒントを追加（オプション）</li>
+                        <li>児童生徒に配信</li>
+                        <li>自動採点結果を確認、個別フィードバック</li>
+                    </ol>
+
+                    <h4>活用のポイント</h4>
+                    <div class="tip-box">
+                        <ul>
+                            <li>小テストで理解度を即座にチェック</li>
+                            <li>解説動画で個別最適な学びを実現</li>
+                            <li>提出状況をリアルタイムで把握</li>
+                            <li>結果をグラフで可視化、学級全体の理解度を分析</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-folder-open"></i> ポートフォリオ機能</h3>
+                    <p>児童生徒の学習履歴を時系列で保存し、成長を可視化できます。</p>
+                    
+                    <ul class="benefit-list">
+                        <li>提出した全てのカードが自動的に保存される</li>
+                        <li>学期ごと、単元ごとにフォルダ分け可能</li>
+                        <li>振り返りカードを追加して、メタ認知を促進</li>
+                        <li>保護者面談で学習成果を共有</li>
+                        <li>指導要録作成時の資料として活用</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-comments"></i> 保護者連絡機能</h3>
+                    <p>ロイロノートは授業だけでなく、保護者とのコミュニケーションツールとしても活用できます。</p>
+
+                    <h4>主な機能</h4>
+                    <ul class="feature-list">
+                        <li><strong>お知らせ配信</strong>: 学級通信、行事連絡を一斉配信</li>
+                        <li><strong>欠席連絡</strong>: 保護者からの欠席・遅刻連絡を受付</li>
+                        <li><strong>アンケート</strong>: 保護者アンケートを実施、自動集計</li>
+                        <li><strong>個別連絡</strong>: 教員と保護者の1対1メッセージ</li>
+                    </ul>
+
+                    <div class="note-box">
+                        <p><strong>注意点</strong></p>
+                        <ul>
+                            <li>学校の連絡体制と整合性を確認</li>
+                            <li>個人情報保護に配慮</li>
+                            <li>保護者向け操作説明会の実施を推奨</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. SKYMENU Cloud実践活用 -->
+            <section id="skymenu">
+                <h2 class="section-title"><i class="fas fa-cloud"></i> 4. SKYMENU Cloud実践活用</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-star"></i> SKYMENU Cloudの特徴</h3>
+                    <p>SKYMENU Cloudは、教員の授業支援と児童生徒の学習活動を総合的にサポートするクラウド型授業支援システムです。</p>
+
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4><i class="fas fa-desktop"></i> 画面配信・転送</h4>
+                            <p>教員の画面を一斉配信、児童の画面を教員機で確認・大型提示装置に表示</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-eye"></i> モニタリング</h4>
+                            <p>全児童の画面をサムネイル表示、学習状況をリアルタイムで把握</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-edit"></i> 発表ノート</h4>
+                            <p>スライド作成、プレゼンテーション、相互評価機能</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-history"></i> 学習履歴</h4>
+                            <p>児童の活動ログを自動記録、ポートフォリオ管理</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-tv"></i> 画面配信・画面転送の効果的な使い方</h3>
+                    
+                    <h4>1. 教員画面の一斉配信</h4>
+                    <p><strong>活用シーン</strong>: 授業の導入、操作説明、デモンストレーション</p>
+                    <ol class="instruction-list">
+                        <li>教員機で「画面配信」を選択</li>
+                        <li>配信先を選択（全員 or 特定のグループ）</li>
+                        <li>配信開始→児童生徒の端末に教員画面が表示</li>
+                        <li>配信中は児童生徒の端末操作をロック可能</li>
+                    </ol>
+
+                    <h4>2. 児童画面の転送（発表）</h4>
+                    <p><strong>活用シーン</strong>: 児童の作品発表、考えの共有、比較</p>
+                    <ol class="instruction-list">
+                        <li>発表する児童を選択</li>
+                        <li>「画面転送」をクリック</li>
+                        <li>大型提示装置に児童の画面を表示</li>
+                        <li>複数の児童画面を並べて比較表示も可能</li>
+                    </ol>
+
+                    <div class="tip-box">
+                        <h4><i class="fas fa-lightbulb"></i> 効果的な活用のコツ</h4>
+                        <ul>
+                            <li>配信時間は短く（5分以内）、児童の集中力を維持</li>
+                            <li>配信後はすぐに児童の活動時間を確保</li>
+                            <li>モニタリングで理解度を確認しながら配信</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-chart-line"></i> モニタリング機能</h3>
+                    <p>全児童の端末画面をサムネイル表示し、学習状況をリアルタイムで把握できます。</p>
+
+                    <h4>モニタリングでできること</h4>
+                    <ul class="feature-list">
+                        <li><strong>画面確認</strong>: 全員の画面を一覧表示、つまずいている児童を発見</li>
+                        <li><strong>進捗把握</strong>: 誰がどこまで進んでいるか確認</li>
+                        <li><strong>個別支援</strong>: 支援が必要な児童を早期発見</li>
+                        <li><strong>不適切利用の防止</strong>: 学習と関係ないサイトの閲覧を検知</li>
+                    </ul>
+
+                    <h4>モニタリングの注意点</h4>
+                    <div class="warning-box">
+                        <ul>
+                            <li>常時監視ではなく、適切なタイミングでの確認</li>
+                            <li>児童のプライバシーへの配慮</li>
+                            <li>児童に「見守り」であることを説明</li>
+                            <li>過度な監視は児童の主体性を損なう</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-file-powerpoint"></i> 発表ノート</h3>
+                    <p>児童生徒がプレゼンテーション資料を作成し、発表・共有できる機能です。</p>
+
+                    <h4>発表ノートの作成手順</h4>
+                    <ol class="instruction-list">
+                        <li>テンプレートを選択（白紙、方眼紙、原稿用紙など）</li>
+                        <li>テキスト、写真、手書き、図形を追加</li>
+                        <li>ページを追加してスライド形式で構成</li>
+                        <li>ペンツールで説明を書き込み</li>
+                        <li>完成したら提出または発表</li>
+                    </ol>
+
+                    <h4>相互評価機能</h4>
+                    <p>他の児童の発表ノートにコメントやスタンプで評価を送ることができます。</p>
+                    <ul class="benefit-list">
+                        <li>良いところを見つける力を育成</li>
+                        <li>多様な視点や表現方法を学ぶ</li>
+                        <li>コミュニケーション能力の向上</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-filter"></i> Webフィルター EX</h3>
+                    <p>学習に適さないWebサイトへのアクセスを制限し、安全な学習環境を提供します。</p>
+
+                    <h4>フィルタリングレベルの設定</h4>
+                    <ul class="step-list">
+                        <li><strong>小学校低学年</strong>: 厳しめ（教員が許可したサイトのみ）</li>
+                        <li><strong>小学校高学年</strong>: 標準（有害サイトをブロック）</li>
+                        <li><strong>中学校</strong>: 緩め（主に違法・有害サイトのみブロック）</li>
+                        <li><strong>授業時のみ厳しく</strong>: 授業中は厳格、休み時間は緩和</li>
+                    </ul>
+
+                    <h4>ホワイトリスト・ブラックリスト</h4>
+                    <ul class="feature-list">
+                        <li><strong>ホワイトリスト</strong>: 指定したサイトのみアクセス可能（授業で使用するサイトを登録）</li>
+                        <li><strong>ブラックリスト</strong>: 特定サイトをブロック（学校独自の基準で追加）</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-headset"></i> 遠隔サポート機能</h3>
+                    <p>教員が児童生徒の端末を遠隔操作し、トラブル対応や操作支援を行えます。</p>
+
+                    <h4>遠隔サポートでできること</h4>
+                    <ul class="feature-list">
+                        <li>児童の画面を遠隔で確認</li>
+                        <li>教員機から操作のデモンストレーション</li>
+                        <li>ファイルやURLを送信</li>
+                        <li>音声通話で説明</li>
+                    </ul>
+
+                    <p><strong>活用例</strong>: 「ログインできない」「操作がわからない」といったトラブル時に、座席を離れずに支援が可能です。</p>
+                </div>
+            </section>
+
+            <!-- 5. MetaMoJi ClassRoom活用法 -->
+            <section id="metamoji">
+                <h2 class="section-title"><i class="fas fa-pen-fancy"></i> 5. MetaMoJi ClassRoom活用法</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-star"></i> MetaMoJi ClassRoomの特徴</h3>
+                    <p>MetaMoJi ClassRoomは、手書き入力とリアルタイム協働編集に優れた授業支援アプリです。</p>
+
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4><i class="fas fa-pencil-alt"></i> 高度な手書き機能</h4>
+                            <p>Apple Pencilやスタイラスペンでの滑らかな書き心地、手書き文字の検索も可能</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-sync-alt"></i> リアルタイム協働</h4>
+                            <p>複数人が同時に1つのノートに書き込み、変更が瞬時に反映</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-file-pdf"></i> PDF書き込み</h4>
+                            <p>PDFファイルに直接書き込み、ワークシート配布に最適</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-th"></i> ノート一覧表示</h4>
+                            <p>全児童のノートを一覧で確認、学習状況を一目で把握</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-edit"></i> 手書き入力の活用</h3>
+                    <p>MetaMoJiの最大の特徴は、手書き入力の快適さです。</p>
+
+                    <h4>手書き入力が効果的な教科・場面</h4>
+                    <ul class="benefit-list">
+                        <li><strong>算数・数学</strong>: 図形の作図、筆算、グラフ、式の途中計算</li>
+                        <li><strong>国語</strong>: 漢字の書き順、作文の推敲、古文の書き下し</li>
+                        <li><strong>理科</strong>: 実験スケッチ、観察記録、図の書き込み</li>
+                        <li><strong>社会</strong>: 地図への書き込み、年表作成</li>
+                        <li><strong>図工・美術</strong>: デジタルスケッチ、デザイン制作</li>
+                    </ul>
+
+                    <h4>手書きツールの種類</h4>
+                    <ul class="feature-list">
+                        <li><strong>ペン</strong>: 細〜太まで調整可能、色も豊富</li>
+                        <li><strong>マーカー</strong>: 半透明、重要箇所のハイライト</li>
+                        <li><strong>消しゴム</strong>: 部分消去、全消去</li>
+                        <li><strong>投げなわツール</strong>: 手書き部分を選択して移動・拡大縮小</li>
+                        <li><strong>図形ツール</strong>: 直線、円、四角形を綺麗に描画</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-users"></i> リアルタイム協働学習</h3>
+                    <p>複数の児童生徒が同じノートに同時に書き込み、リアルタイムで共有できます。</p>
+
+                    <h4>協働学習の設定</h4>
+                    <ol class="instruction-list">
+                        <li>教員が「共有ノート」を作成</li>
+                        <li>編集権限を設定（全員編集可 or 閲覧のみ）</li>
+                        <li>児童生徒に配布</li>
+                        <li>同時編集開始（誰がどこを書いているか色で識別）</li>
+                    </ol>
+
+                    <h4>効果的な活用シーン</h4>
+                    <ul class="activity-list">
+                        <li><strong>ブレインストーミング</strong>: 付箋機能で意見を出し合い、グルーピング</li>
+                        <li><strong>共同作図</strong>: グループで1つの図を完成させる（理科の実験図など）</li>
+                        <li><strong>相互添削</strong>: お互いの作文を読み、コメントを書き込む</li>
+                        <li><strong>議論の可視化</strong>: 賛成・反対の意見を書き込み、整理</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-file-pdf"></i> PDFワークシートの活用</h3>
+                    <p>既存のワークシートや教材をPDFで配布し、直接書き込んで提出できます。</p>
+
+                    <h4>PDFワークシートの配布手順</h4>
+                    <ol class="instruction-list">
+                        <li>紙のワークシートをスキャンしてPDF化（またはデジタル教材のPDF）</li>
+                        <li>MetaMoJiで新規ページとして読み込み</li>
+                        <li>児童生徒に配布</li>
+                        <li>児童がPDF上に手書きで解答</li>
+                        <li>教員が回収、採点、コメント記入</li>
+                        <li>返却</li>
+                    </ol>
+
+                    <h4>メリット</h4>
+                    <ul class="benefit-list">
+                        <li>紙のプリント配布・回収の手間を削減</li>
+                        <li>印刷コスト削減</li>
+                        <li>提出状況がリアルタイムで把握可能</li>
+                        <li>過去のワークシートがデジタルで保存される</li>
+                        <li>紛失の心配がない</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-star-half-alt"></i> 生徒間相互評価</h3>
+                    <p>児童生徒同士で作品を評価し合い、学び合いを促進します。</p>
+
+                    <h4>相互評価の設定方法</h4>
+                    <ol class="instruction-list">
+                        <li>作品を他の児童に公開設定</li>
+                        <li>評価シート（ルーブリック）を配布</li>
+                        <li>児童が他の児童の作品を閲覧</li>
+                        <li>良いところ、改善点をコメント</li>
+                        <li>教員が評価コメントをモデレーション</li>
+                    </ol>
+
+                    <h4>相互評価の教育効果</h4>
+                    <ul class="benefit-list">
+                        <li>多様な視点や表現方法を学ぶ</li>
+                        <li>良い点を見つける力（評価力）の育成</li>
+                        <li>建設的なフィードバックの仕方を学ぶ</li>
+                        <li>自分の作品を客観視する力の向上</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-th-large"></i> ノート一覧表示機能</h3>
+                    <p>全児童のノートを一画面にサムネイル表示し、学習状況を一目で把握できます。</p>
+
+                    <h4>活用方法</h4>
+                    <ul class="feature-list">
+                        <li><strong>進捗確認</strong>: 誰がどこまで進んでいるか確認</li>
+                        <li><strong>つまずき発見</strong>: 白紙のままのノートを見つけて個別支援</li>
+                        <li><strong>優れた作品の発見</strong>: 発表させたい児童を選定</li>
+                        <li><strong>共通のミスの発見</strong>: 多くの児童がつまずいている箇所を全体指導</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 6. Google Classroom運用術 -->
+            <section id="google-classroom">
+                <h2 class="section-title"><i class="fas fa-google"></i> 6. Google Classroom運用術</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-star"></i> Google Classroomの特徴</h3>
+                    <p>Google Classroomは、Google Workspace for Educationの中核となる課題管理プラットフォームです。</p>
+
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4><i class="fas fa-tasks"></i> シンプルな課題管理</h4>
+                            <p>課題の作成、配布、回収、採点、返却が一元管理</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-link"></i> Google Workspace統合</h4>
+                            <p>Docs、Slides、Forms、Meetとシームレスに連携</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-mobile-alt"></i> マルチデバイス対応</h4>
+                            <p>PCでもタブレットでもスマホでも同じように使える</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-dollar-sign"></i> 無料</h4>
+                            <p>Education版は無料、容量も十分</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-plus-circle"></i> クラスの作成と管理</h3>
+                    
+                    <h4>クラス作成手順</h4>
+                    <ol class="instruction-list">
+                        <li>Classroomにアクセス（classroom.google.com）</li>
+                        <li>「+」→「クラスを作成」</li>
+                        <li>クラス名、セクション、件名、教室を入力</li>
+                        <li>児童生徒を招待（メールアドレスまたはクラスコード）</li>
+                    </ol>
+
+                    <h4>クラス設定のポイント</h4>
+                    <ul class="step-list">
+                        <li><strong>クラス名</strong>: 「〇年〇組 〇〇科」など明確に</li>
+                        <li><strong>成績カテゴリ</strong>: 「定期テスト」「小テスト」「提出物」など設定</li>
+                        <li><strong>通知設定</strong>: 児童生徒への通知頻度を調整</li>
+                        <li><strong>コメント設定</strong>: 生徒間のコメント可否を設定</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-clipboard-list"></i> 課題の作成・配布・回収</h3>
+                    
+                    <h4>課題作成の基本手順</h4>
+                    <ol class="instruction-list">
+                        <li>「課題」タブ→「作成」→「課題」</li>
+                        <li>タイトル、説明、配点を入力</li>
+                        <li>資料を添付（Googleドキュメント、PDF、動画など）</li>
+                        <li>提出期限を設定</li>
+                        <li>配布先を選択（全員 or 特定の生徒）</li>
+                        <li>「課題を作成」で配布</li>
+                    </ol>
+
+                    <h4>課題の種類</h4>
+                    <ul class="feature-list">
+                        <li><strong>課題</strong>: 提出が必要な通常の課題</li>
+                        <li><strong>テスト付き課題</strong>: Google Formsと連携した小テスト</li>
+                        <li><strong>質問</strong>: 簡単な質問（記述式・選択式）</li>
+                        <li><strong>資料</strong>: 提出不要の参考資料配布</li>
+                    </ul>
+
+                    <h4>Google ドキュメント配布の3パターン</h4>
+                    <ul class="step-list">
+                        <li><strong>生徒はファイルを閲覧可能</strong>: 読み取り専用、編集不可</li>
+                        <li><strong>生徒はファイルを編集可能</strong>: 全員が同じドキュメントを編集（協働学習）</li>
+                        <li><strong>各生徒にコピーを作成</strong>: 生徒ごとに個別のコピーを配布（個人課題）</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-check-double"></i> 採点とフィードバック</h3>
+                    
+                    <h4>採点手順</h4>
+                    <ol class="instruction-list">
+                        <li>課題を開き、「生徒の提出物」を確認</li>
+                        <li>提出されたファイルを開いて内容確認</li>
+                        <li>点数を入力（配点範囲内で採点）</li>
+                        <li>限定公開コメントでフィードバック</li>
+                        <li>「返却」で生徒に通知</li>
+                    </ol>
+
+                    <h4>効果的なフィードバックのコツ</h4>
+                    <ul class="benefit-list">
+                        <li><strong>具体的に</strong>: 「良い」ではなく「〇〇の部分が良かった」</li>
+                        <li><strong>ポジティブから</strong>: まず良い点を伝えてから改善点を指摘</li>
+                        <li><strong>次への繋がり</strong>: 「次は〇〇に挑戦してみよう」</li>
+                        <li><strong>音声コメント</strong>: 長いフィードバックは音声で（Mote拡張機能）</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-chart-bar"></i> ルーブリック評価との連携</h3>
+                    <p>Classroomにルーブリック（評価基準表）を設定し、透明性の高い評価ができます。</p>
+
+                    <h4>ルーブリック作成手順</h4>
+                    <ol class="instruction-list">
+                        <li>課題作成時に「ルーブリック」を選択</li>
+                        <li>評価観点（例: 内容、構成、表現）を追加</li>
+                        <li>各観点のレベル（優、良、可など）と説明を記載</li>
+                        <li>配点を設定</li>
+                        <li>課題と一緒に公開</li>
+                    </ol>
+
+                    <h4>ルーブリックのメリット</h4>
+                    <ul class="benefit-list">
+                        <li>評価基準が明確で、生徒が目標を理解しやすい</li>
+                        <li>教員の採点時間が短縮される</li>
+                        <li>評価の一貫性が保たれる</li>
+                        <li>自己評価・相互評価にも活用可能</li>
+                    </ul>
+
+                    <p class="note"><strong>関連ページ</strong>: 詳細は「<a href="rubric.html">ルーブリック評価完全ガイド</a>」を参照してください。</p>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-video"></i> Google Meetとの統合</h3>
+                    <p>ClassroomからワンクリックでMeet会議を開始でき、オンライン授業やハイブリッド授業に対応します。</p>
+
+                    <h4>Meet会議の開催方法</h4>
+                    <ol class="instruction-list">
+                        <li>Classroomの「授業」タブを開く</li>
+                        <li>「Meetリンクを生成」をクリック</li>
+                        <li>生徒に会議リンクが自動共有される</li>
+                        <li>会議開始時刻に「参加」</li>
+                    </ol>
+
+                    <h4>Meet活用のポイント</h4>
+                    <ul class="feature-list">
+                        <li>画面共有で教材提示</li>
+                        <li>ブレイクアウトルームでグループ活動</li>
+                        <li>挙手機能で発言希望を確認</li>
+                        <li>録画機能で欠席者へのフォロー</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-users"></i> 保護者への要約メール</h3>
+                    <p>保護者を「保護者」として招待すると、子どもの学習状況が定期的にメールで通知されます。</p>
+
+                    <h4>保護者招待の手順</h4>
+                    <ol class="instruction-list">
+                        <li>「メンバー」タブ→「保護者」セクション</li>
+                        <li>「保護者を招待」</li>
+                        <li>保護者のメールアドレスを入力</li>
+                        <li>保護者が招待を承諾</li>
+                    </ol>
+
+                    <h4>保護者に通知される内容</h4>
+                    <ul class="feature-list">
+                        <li>未提出の課題</li>
+                        <li>今後の課題</li>
+                        <li>クラスの活動状況</li>
+                    </ul>
+
+                    <p class="note"><strong>注意</strong>: 保護者は課題の内容や成績は閲覧できません（要約のみ）。</p>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-chart-line"></i> 成績管理とエクスポート</h3>
+                    <p>Classroomで記録した成績をCSVでエクスポートし、通知表作成に活用できます。</p>
+
+                    <h4>成績エクスポート手順</h4>
+                    <ol class="instruction-list">
+                        <li>「成績」タブを開く</li>
+                        <li>右上の「⚙設定」→「成績をダウンロード」</li>
+                        <li>CSVファイルがダウンロードされる</li>
+                        <li>ExcelやGoogleスプレッドシートで開いて集計</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- 7. Microsoft Teams for Education活用 -->
+            <section id="teams">
+                <h2 class="section-title"><i class="fas fa-users"></i> 7. Microsoft Teams for Education活用</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-star"></i> Microsoft Teamsの特徴</h3>
+                    <p>Microsoft Teams for Educationは、チャット、会議、課題管理を統合したコラボレーションプラットフォームです。</p>
+
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4><i class="fas fa-comments"></i> チャット</h4>
+                            <p>クラス全体、グループ、個別でのリアルタイムコミュニケーション</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-video"></i> 会議機能</h4>
+                            <p>高品質なビデオ会議、画面共有、録画、ブレイクアウトルーム</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-tasks"></i> 課題機能</h4>
+                            <p>課題の作成、提出、採点、フィードバックを一元管理</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-link"></i> Microsoft 365統合</h4>
+                            <p>Word、PowerPoint、OneNote、Formsとシームレス連携</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-graduation-cap"></i> チームとチャネルの構造</h3>
+                    
+                    <h4>Teamsの基本構造</h4>
+                    <ul class="feature-list">
+                        <li><strong>チーム</strong>: クラス単位（例: 5年1組 国語）</li>
+                        <li><strong>チャネル</strong>: トピック単位（例: 一般、単元1、グループA）</li>
+                        <li><strong>タブ</strong>: チャネル内に配置する機能（ファイル、課題、OneNote）</li>
+                    </ul>
+
+                    <h4>クラスチーム作成手順</h4>
+                    <ol class="instruction-list">
+                        <li>Teamsを開き、「チームに参加、またはチームを作成」</li>
+                        <li>「チームを作成」→「クラス」を選択</li>
+                        <li>チーム名、説明を入力</li>
+                        <li>児童生徒、教員を追加</li>
+                        <li>必要に応じてチャネルを追加</li>
+                    </ol>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-clipboard-list"></i> 課題機能</h3>
+                    
+                    <h4>課題作成手順</h4>
+                    <ol class="instruction-list">
+                        <li>チームの「課題」タブを開く</li>
+                        <li>「作成」→「課題」</li>
+                        <li>タイトル、説明、配点、期限を入力</li>
+                        <li>添付ファイル（Word、PowerPoint、PDF等）を追加</li>
+                        <li>提出先（クラス全体 or 特定の生徒）を選択</li>
+                        <li>「割り当て」で配布</li>
+                    </ol>
+
+                    <h4>Teams課題の特徴</h4>
+                    <ul class="benefit-list">
+                        <li>WordやPowerPointファイルを課題として配布、各生徒に自動コピー</li>
+                        <li>提出後も教員が編集を加えることが可能（赤ペン添削のように）</li>
+                        <li>ルーブリック評価に対応</li>
+                        <li>成績はGradebookで一元管理</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-edit"></i> OneNote Class Notebookとの連携</h3>
+                    <p>OneNote Class Notebookは、デジタルノートとして生徒一人ひとりに専用スペースを提供します。</p>
+
+                    <h4>Class Notebookの構造</h4>
+                    <ul class="feature-list">
+                        <li><strong>生徒用ノートブック</strong>: 各生徒専用の個人スペース（教員は閲覧・編集可）</li>
+                        <li><strong>コンテンツライブラリ</strong>: 教員が教材を配布する読み取り専用スペース</li>
+                        <li><strong>コラボレーションスペース</strong>: クラス全員が編集できる共有スペース</li>
+                    </ul>
+
+                    <h4>OneNote活用例</h4>
+                    <ul class="activity-list">
+                        <li>デジタルノートとして日々の学習記録</li>
+                        <li>ワークシートをOneNoteで配布、手書きで解答</li>
+                        <li>ポートフォリオとして作品を蓄積</li>
+                        <li>グループでの協働編集</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-video"></i> Teams会議（オンライン授業）</h3>
+                    
+                    <h4>会議開始方法</h4>
+                    <ol class="instruction-list">
+                        <li>チャネルの「投稿」タブで「会議」をクリック</li>
+                        <li>会議タイトル、日時を設定</li>
+                        <li>「今すぐ会議」で即座に開始、または予約</li>
+                    </ol>
+
+                    <h4>Teams会議の便利機能</h4>
+                    <ul class="feature-list">
+                        <li><strong>背景ぼかし・バーチャル背景</strong>: プライバシー保護</li>
+                        <li><strong>挙手機能</strong>: 発言希望を通知</li>
+                        <li><strong>ブレイクアウトルーム</strong>: 小グループに分かれて議論</li>
+                        <li><strong>ホワイトボード</strong>: 会議中にリアルタイムで描画・共有</li>
+                        <li><strong>録画</strong>: 会議を録画して後で復習（欠席者対応）</li>
+                        <li><strong>ライブキャプション</strong>: 音声を自動で字幕表示（聴覚支援）</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-poll"></i> Microsoft Formsとの連携</h3>
+                    <p>Formsで小テストやアンケートを作成し、Teamsから配布できます。</p>
+
+                    <h4>Formsを使った小テスト作成</h4>
+                    <ol class="instruction-list">
+                        <li>Teamsの「課題」タブ→「作成」→「クイズ」</li>
+                        <li>Formsが起動、問題を作成（選択式、記述式、評価など）</li>
+                        <li>正解と配点を設定</li>
+                        <li>Teamsの課題として配布</li>
+                        <li>自動採点、結果はTeamsに反映</li>
+                    </ol>
+
+                    <h4>Formsのメリット</h4>
+                    <ul class="benefit-list">
+                        <li>自動採点で教員の負担軽減</li>
+                        <li>結果をExcelでエクスポート、詳細分析が可能</li>
+                        <li>間違えた問題を可視化、復習に活用</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-shield-alt"></i> 安全な学習環境の設定</h3>
+                    
+                    <h4>教員が設定すべき項目</h4>
+                    <ul class="step-list">
+                        <li><strong>チャネルのモデレーション</strong>: 生徒の投稿を承認制にする</li>
+                        <li><strong>プライベートチャット制限</strong>: 生徒間のプライベートチャットを制限</li>
+                        <li><strong>外部アクセス制限</strong>: 学校外の人との通信を遮断</li>
+                        <li><strong>ファイル共有設定</strong>: 不適切なファイル共有を防止</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 8. 授業シーン別活用例 -->
+            <section id="lesson-scenes">
+                <h2 class="section-title"><i class="fas fa-clock"></i> 8. 授業シーン別活用例</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-play-circle"></i> 導入（5-10分）</h3>
+                    
+                    <h4>授業の始まりで使える機能</h4>
+                    <ul class="activity-list">
+                        <li><strong>前時の振り返り</strong>
+                            <ul>
+                                <li>ロイロ: 前回の提出物を大型提示装置で共有</li>
+                                <li>SKYMENU: 学習履歴から前回の活動を表示</li>
+                            </ul>
+                        </li>
+                        <li><strong>本時の目標提示</strong>
+                            <ul>
+                                <li>Classroom: 本時の課題と資料を配布</li>
+                                <li>Teams: 会議で目標を画面共有</li>
+                            </ul>
+                        </li>
+                        <li><strong>事前アンケート</strong>
+                            <ul>
+                                <li>Google Forms: 「〇〇について知っていることは？」</li>
+                                <li>ロイロ: 簡単な質問カードで意見収集</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-running"></i> 展開（25-30分）</h3>
+                    
+                    <h4>個別学習での活用</h4>
+                    <ul class="activity-list">
+                        <li><strong>デジタルワークシート</strong>
+                            <ul>
+                                <li>MetaMoJi: PDF教材に手書きで解答</li>
+                                <li>Google Docs: 各自がドキュメントに入力</li>
+                            </ul>
+                        </li>
+                        <li><strong>自分のペースで学習</strong>
+                            <ul>
+                                <li>Classroom: 段階別課題を用意（基礎・標準・発展）</li>
+                                <li>SKYMENU: 学習履歴から個別最適な課題を推薦</li>
+                            </ul>
+                        </li>
+                        <li><strong>進捗確認</strong>
+                            <ul>
+                                <li>SKYMENU: モニタリングでつまずいている児童を発見</li>
+                                <li>ロイロ: 提出状況をリアルタイムで確認</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4>グループワークでの活用</h4>
+                    <ul class="activity-list">
+                        <li><strong>協働編集</strong>
+                            <ul>
+                                <li>ロイロ: 共有ノートでブレインストーミング</li>
+                                <li>MetaMoJi: リアルタイムで共同作図</li>
+                                <li>Google Slides: グループでプレゼン資料作成</li>
+                            </ul>
+                        </li>
+                        <li><strong>議論の可視化</strong>
+                            <ul>
+                                <li>ロイロ: 意見カードをつなげて関係性を整理</li>
+                                <li>Jamboard: 付箋で意見を出し合い、グルーピング</li>
+                            </ul>
+                        </li>
+                        <li><strong>役割分担</strong>
+                            <ul>
+                                <li>Teams: チャネルでタスクを分担、進捗共有</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4>発表・共有での活用</h4>
+                    <ul class="activity-list">
+                        <li><strong>画面転送</strong>
+                            <ul>
+                                <li>SKYMENU: 児童の画面を大型提示装置に表示</li>
+                                <li>ロイロ: 提出箱から優れた作品を選んで共有</li>
+                            </ul>
+                        </li>
+                        <li><strong>比較提示</strong>
+                            <ul>
+                                <li>SKYMENU: 複数の児童の画面を並べて比較</li>
+                                <li>MetaMoJi: ノート一覧で多様な表現方法を確認</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-flag-checkered"></i> まとめ（5-10分）</h3>
+                    
+                    <h4>振り返り活動</h4>
+                    <ul class="activity-list">
+                        <li><strong>振り返りシート</strong>
+                            <ul>
+                                <li>Google Forms: 「今日の授業で分かったこと」をアンケート</li>
+                                <li>ロイロ: 振り返りカードを提出箱に提出</li>
+                            </ul>
+                        </li>
+                        <li><strong>理解度チェック</strong>
+                            <ul>
+                                <li>ロイロ: テスト機能で簡単な確認問題</li>
+                                <li>Kahoot!: ゲーム形式でクイズ大会</li>
+                            </ul>
+                        </li>
+                        <li><strong>次時の予告</strong>
+                            <ul>
+                                <li>Classroom: 次回までの課題を配布</li>
+                                <li>Teams: チャネルに予習資料を投稿</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 9. 教科別活用アイデア -->
+            <section id="subjects">
+                <h2 class="section-title"><i class="fas fa-book-reader"></i> 9. 教科別活用アイデア</h2>
+                
+                <div class="subject-grid">
+                    <div class="subject-card">
+                        <h3><i class="fas fa-language"></i> 国語</h3>
+                        <ul class="idea-list">
+                            <li><strong>作文相互評価</strong>: Classroomで作文を提出→生徒同士でコメント</li>
+                            <li><strong>登場人物比較</strong>: ロイロのX-Chartで2人の登場人物を比較</li>
+                            <li><strong>音読録音</strong>: ロイロで音読を録音→提出→教員がフィードバック</li>
+                            <li><strong>漢字練習</strong>: MetaMoJiで手書き練習、書き順アニメーション</li>
+                            <li><strong>読解シート共有</strong>: Google Docsで読解ワークシート→リアルタイム共同編集</li>
+                        </ul>
+                    </div>
+
+                    <div class="subject-card">
+                        <h3><i class="fas fa-calculator"></i> 算数・数学</h3>
+                        <ul class="idea-list">
+                            <li><strong>途中式の共有</strong>: MetaMoJiで手書きの計算過程を共有、間違い探し</li>
+                            <li><strong>図形作図</strong>: GeoGebraで動的な図形作成</li>
+                            <li><strong>間違い分析</strong>: ロイロで間違いパターンを分類、クラスで共有</li>
+                            <li><strong>解き方比較</strong>: SKYMENU画面転送で複数の解法を提示</li>
+                            <li><strong>計算ドリル</strong>: Classroomでデジタルドリル配布、自動採点</li>
+                        </ul>
+                    </div>
+
+                    <div class="subject-card">
+                        <h3><i class="fas fa-flask"></i> 理科</h3>
+                        <ul class="idea-list">
+                            <li><strong>実験レポート</strong>: ロイロで写真+観察記録→提出箱</li>
+                            <li><strong>実験動画撮影</strong>: タブレットで実験を撮影→スロー再生で分析</li>
+                            <li><strong>観察スケッチ</strong>: MetaMoJiで手書きスケッチ、拡大観察</li>
+                            <li><strong>仮説検証</strong>: Jamboardで仮説→実験→結果→考察を整理</li>
+                            <li><strong>グラフ作成</strong>: Googleスプレッドシートで実験データをグラフ化</li>
+                        </ul>
+                    </div>
+
+                    <div class="subject-card">
+                        <h3><i class="fas fa-globe"></i> 社会</h3>
+                        <ul class="idea-list">
+                            <li><strong>調べ学習</strong>: Classroomで調査課題→各自がスライドにまとめる</li>
+                            <li><strong>地図への書き込み</strong>: MetaMoJiで地図PDFに情報を追加</li>
+                            <li><strong>年表作成</strong>: Google Slidesで時代ごとのスライド作成</li>
+                            <li><strong>比較表</strong>: ロイロのX-Chartで2つの地域・時代を比較</li>
+                            <li><strong>ディベート</strong>: Teams会議でブレイクアウトルーム→賛成・反対に分かれて議論</li>
+                        </ul>
+                    </div>
+
+                    <div class="subject-card">
+                        <h3><i class="fas fa-music"></i> 英語</h3>
+                        <ul class="idea-list">
+                            <li><strong>音声録音</strong>: ロイロで発音練習→録音→提出→フィードバック</li>
+                            <li><strong>会話練習</strong>: Teams会議でペアワーク、録画して振り返り</li>
+                            <li><strong>単語学習</strong>: Quizletで単語カード作成、クラスで共有</li>
+                            <li><strong>ALTとの交流</strong>: Teams会議で海外の学校と国際交流</li>
+                            <li><strong>ライティング</strong>: Google Docsで英作文→ピアレビュー</li>
+                        </ul>
+                    </div>
+
+                    <div class="subject-card">
+                        <h3><i class="fas fa-palette"></i> 図工・美術</h3>
+                        <ul class="idea-list">
+                            <li><strong>作品撮影</strong>: タブレットで作品を撮影→ポートフォリオに保存</li>
+                            <li><strong>鑑賞活動</strong>: ロイロで作品を共有→相互鑑賞→コメント交換</li>
+                            <li><strong>デジタルスケッチ</strong>: MetaMoJiで下絵作成、色塗り</li>
+                            <li><strong>デザイン制作</strong>: Canvaでポスター、ロゴ、チラシ作成</li>
+                            <li><strong>アートギャラリー</strong>: Google Sitesでクラスのオンライン美術館</li>
+                        </ul>
+                    </div>
+
+                    <div class="subject-card">
+                        <h3><i class="fas fa-running"></i> 体育</h3>
+                        <ul class="idea-list">
+                            <li><strong>動画撮影・分析</strong>: 跳び箱、マット運動を撮影→スロー再生で改善点発見</li>
+                            <li><strong>フォーム比較</strong>: SKYMENU画面転送で上手な児童と自分を比較</li>
+                            <li><strong>振り返り動画</strong>: ロイロで自分の動きを録画→カードに振り返り記入</li>
+                            <li><strong>戦術ボード</strong>: MetaMoJiでサッカー・バスケの作戦図作成</li>
+                        </ul>
+                    </div>
+
+                    <div class="subject-card">
+                        <h3><i class="fas fa-lightbulb"></i> 総合的な学習</h3>
+                        <ul class="idea-list">
+                            <li><strong>探究学習</strong>: Classroomで課題設定→調査→まとめ→発表の全工程管理</li>
+                            <li><strong>プロジェクト管理</strong>: Teamsでグループごとにチャネル作成、進捗共有</li>
+                            <li><strong>プレゼン作成</strong>: Google Slides/PowerPointで協働編集</li>
+                            <li><strong>地域連携</strong>: Teams会議で地域の方へインタビュー</li>
+                            <li><strong>ポートフォリオ</strong>: ロイロで探究の全過程を記録、成長を可視化</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. 教員向け初期設定サポート -->
+            <section id="teacher-support">
+                <h2 class="section-title"><i class="fas fa-user-cog"></i> 10. 教員向け初期設定サポート</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-tasks"></i> ICT支援員が行うべき初期設定支援</h3>
+                    
+                    <h4>1. アカウント登録支援</h4>
+                    <ul class="step-list">
+                        <li><strong>教員アカウント</strong>: 管理者権限で教員用アカウントを作成</li>
+                        <li><strong>児童生徒アカウント</strong>: CSVで一括登録、またはクラスコード配布</li>
+                        <li><strong>ログイン方法</strong>: 初回ログイン手順書を配布、実演</li>
+                    </ul>
+
+                    <h4>2. クラス作成・児童生徒登録</h4>
+                    <ul class="step-list">
+                        <li>教員と一緒にクラスを作成</li>
+                        <li>児童生徒リストをインポート（CSVまたは手動）</li>
+                        <li>グループ分け（必要に応じて）</li>
+                    </ul>
+
+                    <h4>3. 初回授業での使い方指導案</h4>
+                    <ul class="instruction-list">
+                        <li><strong>導入（10分）</strong>: システムの目的、メリットを説明</li>
+                        <li><strong>デモ（10分）</strong>: 教員が実際に操作を見せる</li>
+                        <li><strong>体験（20分）</strong>: 児童が簡単な課題で操作体験</li>
+                        <li><strong>Q&A（5分）</strong>: 質問対応、トラブルシューティング</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-exclamation-triangle"></i> つまずきポイントと対処法</h3>
+                    
+                    <div class="troubleshoot-grid">
+                        <div class="troubleshoot-card">
+                            <h4>教員側のつまずき</h4>
+                            <ul class="problem-list">
+                                <li><strong>問題</strong>: 「操作が複雑で覚えられない」
+                                    <ul><li><strong>対処</strong>: 1回の研修で全てを教えない。まず「課題配布・回収」だけに絞る</li></ul>
+                                </li>
+                                <li><strong>問題</strong>: 「準備に時間がかかる」
+                                    <ul><li><strong>対処</strong>: テンプレート教材を用意、コピーして使えるようにする</li></ul>
+                                </li>
+                                <li><strong>問題</strong>: 「授業中にトラブルが起きたらどうしよう」
+                                    <ul><li><strong>対処</strong>: 「困ったときのフローチャート」を掲示、ICT支援員の連絡先を共有</li></ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="troubleshoot-card">
+                            <h4>児童生徒側のつまずき</h4>
+                            <ul class="problem-list">
+                                <li><strong>問題</strong>: 「ログインできない」
+                                    <ul><li><strong>対処</strong>: アカウント・パスワードカードを配布、貼り付け場所を指定</li></ul>
+                                </li>
+                                <li><strong>問題</strong>: 「提出方法がわからない」
+                                    <ul><li><strong>対処</strong>: 大型提示装置で手順を表示、ペア学習で教え合い</li></ul>
+                                </li>
+                                <li><strong>問題</strong>: 「間違えて提出してしまった」
+                                    <ul><li><strong>対処</strong>: 「提出前に確認ボタン」を追加、取り消し方法を指導</li></ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-chalkboard-teacher"></i> 教員研修プログラム例</h3>
+                    
+                    <h4>初級研修（60分）</h4>
+                    <ol class="instruction-list">
+                        <li><strong>イントロダクション（5分）</strong>: 授業支援システムの必要性</li>
+                        <li><strong>基本操作（20分）</strong>: ログイン、クラス作成、課題配布</li>
+                        <li><strong>ハンズオン（30分）</strong>: 実際に課題を作成して提出</li>
+                        <li><strong>Q&A（5分）</strong>: 質疑応答</li>
+                    </ol>
+
+                    <h4>中級研修（90分）</h4>
+                    <ol class="instruction-list">
+                        <li><strong>復習（10分）</strong>: 前回の振り返り</li>
+                        <li><strong>応用機能（30分）</strong>: ルーブリック評価、共同編集、発表機能</li>
+                        <li><strong>教科別活用例（30分）</strong>: 国語、算数での具体例紹介</li>
+                        <li><strong>実践計画（15分）</strong>: 次の授業でどう使うか計画</li>
+                        <li><strong>Q&A（5分）</strong></li>
+                    </ol>
+
+                    <h4>上級研修（90分）</h4>
+                    <ol class="instruction-list">
+                        <li><strong>学習履歴活用（30分）</strong>: データ分析、個別最適化</li>
+                        <li><strong>保護者連携（20分）</strong>: 保護者向け機能の活用</li>
+                        <li><strong>トラブル対応（20分）</strong>: よくあるトラブルとその対処法</li>
+                        <li><strong>実践共有（15分）</strong>: 教員同士の事例共有</li>
+                        <li><strong>Q&A（5分）</strong></li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- 11. トラブルシューティング -->
+            <section id="troubleshooting">
+                <h2 class="section-title"><i class="fas fa-wrench"></i> 11. トラブルシューティング</h2>
+                
+                <div class="content-section">
+                    <h3><i class="fas fa-exclamation-circle"></i> よくあるトラブルと解決方法</h3>
+                    
+                    <div class="trouble-grid">
+                        <div class="trouble-card">
+                            <h4><i class="fas fa-sign-in-alt"></i> ログインできない</h4>
+                            <p><strong>原因</strong></p>
+                            <ul class="cause-list">
+                                <li>ID・パスワードの入力ミス</li>
+                                <li>大文字・小文字の間違い</li>
+                                <li>全角・半角の間違い</li>
+                                <li>アカウントロック（パスワード連続失敗）</li>
+                            </ul>
+                            <p><strong>対処法</strong></p>
+                            <ul class="solution-list">
+                                <li>正しいID・パスワードを再確認</li>
+                                <li>コピー&ペーストで入力</li>
+                                <li>管理者にアカウントロック解除を依頼</li>
+                                <li>パスワードリセット</li>
+                            </ul>
+                        </div>
+
+                        <div class="trouble-card">
+                            <h4><i class="fas fa-upload"></i> 提出できない</h4>
+                            <p><strong>原因</strong></p>
+                            <ul class="cause-list">
+                                <li>ネットワークエラー（Wi-Fi切断）</li>
+                                <li>ファイルサイズが大きすぎる</li>
+                                <li>アップロード権限がない</li>
+                                <li>提出期限切れ</li>
+                            </ul>
+                            <p><strong>対処法</strong></p>
+                            <ul class="solution-list">
+                                <li>Wi-Fi接続を確認、再接続</li>
+                                <li>ファイルを圧縮、または分割</li>
+                                <li>教員に権限設定を確認</li>
+                                <li>教員に期限延長を依頼</li>
+                            </ul>
+                        </div>
+
+                        <div class="trouble-card">
+                            <h4><i class="fas fa-desktop"></i> 画面が映らない（SKYMENU）</h4>
+                            <p><strong>原因</strong></p>
+                            <ul class="cause-list">
+                                <li>画面配信の権限設定ミス</li>
+                                <li>デバイスが認識されていない</li>
+                                <li>別のアプリが全画面表示中</li>
+                            </ul>
+                            <p><strong>対処法</strong></p>
+                            <ul class="solution-list">
+                                <li>配信設定を確認（全員 or 特定グループ）</li>
+                                <li>端末を再起動</li>
+                                <li>全画面アプリを終了</li>
+                                <li>SKYMENUを再起動</li>
+                            </ul>
+                        </div>
+
+                        <div class="trouble-card">
+                            <h4><i class="fas fa-sync-alt"></i> 同期されない（リアルタイム編集）</h4>
+                            <p><strong>原因</strong></p>
+                            <ul class="cause-list">
+                                <li>ネットワーク接続不良</li>
+                                <li>古いアプリバージョン</li>
+                                <li>ブラウザのキャッシュ問題</li>
+                            </ul>
+                            <p><strong>対処法</strong></p>
+                            <ul class="solution-list">
+                                <li>Wi-Fi再接続</li>
+                                <li>アプリを最新版にアップデート</li>
+                                <li>ブラウザのキャッシュをクリア</li>
+                                <li>ページをリロード（F5キー）</li>
+                            </ul>
+                        </div>
+
+                        <div class="trouble-card">
+                            <h4><i class="fas fa-file-excel"></i> ファイルが開けない</h4>
+                            <p><strong>原因</strong></p>
+                            <ul class="cause-list">
+                                <li>対応していないファイル形式</li>
+                                <li>ファイルが破損している</li>
+                                <li>必要なアプリがインストールされていない</li>
+                            </ul>
+                            <p><strong>対処法</strong></p>
+                            <ul class="solution-list">
+                                <li>対応形式に変換（PDF化など）</li>
+                                <li>再アップロードを依頼</li>
+                                <li>必要なアプリをインストール（Office、PDF閲覧アプリ）</li>
+                            </ul>
+                        </div>
+
+                        <div class="trouble-card">
+                            <h4><i class="fas fa-hourglass-half"></i> 動作が重い</h4>
+                            <p><strong>原因</strong></p>
+                            <ul class="cause-list">
+                                <li>同時接続数が多い</li>
+                                <li>端末のスペック不足</li>
+                                <li>不要なアプリが起動中</li>
+                                <li>ストレージ容量不足</li>
+                            </ul>
+                            <p><strong>対処法</strong></p>
+                            <ul class="solution-list">
+                                <li>他のアプリを閉じる</li>
+                                <li>端末を再起動</li>
+                                <li>不要なファイルを削除</li>
+                                <li>時間帯をずらす（全校一斉利用を避ける）</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h3><i class="fas fa-phone-volume"></i> サポート体制の構築</h3>
+                    
+                    <h4>3段階サポート体制</h4>
+                    <ul class="support-list">
+                        <li><strong>Level 1: 児童生徒同士</strong>
+                            <ul>
+                                <li>ペアサポート（隣同士で教え合い）</li>
+                                <li>ICT係（クラスのICT得意な児童）</li>
+                            </ul>
+                        </li>
+                        <li><strong>Level 2: 教員</strong>
+                            <ul>
+                                <li>簡単なトラブル対応</li>
+                                <li>「困ったときのフローチャート」を参照</li>
+                            </ul>
+                        </li>
+                        <li><strong>Level 3: ICT支援員</strong>
+                            <ul>
+                                <li>専門的なトラブル対応</li>
+                                <li>システム設定の変更</li>
+                                <li>ベンダーへのエスカレーション</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 参考文献 -->
+            <section class="references">
+                <h2 class="section-title"><i class="fas fa-book-open"></i> 参考文献・引用元</h2>
+                
+                <div class="reference-list">
+                    <div class="reference-item">
+                        <h4>文部科学省 - GIGAスクール構想</h4>
+                        <p>1人1台端末環境における授業支援システムの重要性</p>
+                        <a href="https://www.mext.go.jp/a_menu/other/index_00001.htm" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> サイトを見る
+                        </a>
+                    </div>
+                    
+                    <div class="reference-item">
+                        <h4>LoiLo - ロイロノート・スクール公式サイト</h4>
+                        <p>機能紹介、活用事例、サポート情報</p>
+                        <a href="https://loilonote.app/" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> サイトを見る
+                        </a>
+                    </div>
+                    
+                    <div class="reference-item">
+                        <h4>Sky - SKYMENU Cloud公式サイト</h4>
+                        <p>製品情報、導入事例、マニュアル</p>
+                        <a href="https://www.sky-school-ict.net/" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> サイトを見る
+                        </a>
+                    </div>
+                    
+                    <div class="reference-item">
+                        <h4>MetaMoJi - MetaMoJi ClassRoom公式サイト</h4>
+                        <p>製品情報、活用ガイド、サポート</p>
+                        <a href="https://product.metamoji.com/education/" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> サイトを見る
+                        </a>
+                    </div>
+                    
+                    <div class="reference-item">
+                        <h4>Google for Education - Classroom ヘルプセンター</h4>
+                        <p>Classroomの使い方、トラブルシューティング</p>
+                        <a href="https://support.google.com/edu/classroom/" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> サイトを見る
+                        </a>
+                    </div>
+                    
+                    <div class="reference-item">
+                        <h4>Microsoft Education - Teams for Education</h4>
+                        <p>Teams活用ガイド、研修資料</p>
+                        <a href="https://www.microsoft.com/ja-jp/education/products/teams" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> サイトを見る
+                        </a>
+                    </div>
+                </div>
+
+                <div class="disclaimer">
+                    <h3><i class="fas fa-info-circle"></i> 免責事項</h3>
+                    <p>本ガイドは、各授業支援システムの公式情報、文部科学省の資料、および学校現場での実践経験をもとに作成しています。システムの仕様や価格は変更される場合がありますので、導入時は必ず各ベンダーの最新情報をご確認ください。</p>
+                </div>
+            </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p class="last-updated">最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
