@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>広告ポリシー - ICT支援員総合ポータルサイト</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .policy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .policy-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+        .policy-header h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .policy-header .last-updated {
+            color: #666;
+            font-size: 14px;
+        }
+        .policy-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .policy-section h2 {
+            font-size: 24px;
+            color: #667eea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f4ff;
+        }
+        .policy-section h2 i {
+            margin-right: 12px;
+            font-size: 28px;
+        }
+        .policy-section h3 {
+            font-size: 20px;
+            color: #333;
+            margin: 25px 0 15px;
+            display: flex;
+            align-items: center;
+        }
+        .policy-section h3 i {
+            margin-right: 10px;
+            font-size: 18px;
+            color: #667eea;
+        }
+        .policy-section p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .policy-section ul, .policy-section ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        .policy-section li {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+        .highlight-box strong {
+            color: #667eea;
+        }
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+        .warning-box strong {
+            color: #ff9800;
+        }
+        .prohibited-list {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+        .prohibited-list h4 {
+            color: #f44336;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .prohibited-list h4 i {
+            margin-right: 10px;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 500;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .contact-box h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .contact-box p {
+            font-size: 16px;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        @media (max-width: 768px) {
+            .policy-container {
+                padding: 20px 15px;
+            }
+            .policy-header h1 {
+                font-size: 24px;
+            }
+            .policy-section {
+                padding: 20px;
+            }
+            .policy-section h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索...">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                <li><a href="site-guide.html"><i class="fas fa-map"></i> サイトガイド</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="policy-container">
+        <div class="policy-header">
+            <h1><i class="fas fa-ad"></i> 広告ポリシー</h1>
+            <p class="last-updated">最終更新日: 2025年12月20日</p>
+        </div>
+
+        <!-- 基本方針 -->
+        <section class="policy-section">
+            <h2><i class="fas fa-info-circle"></i> 基本方針</h2>
+            <p>ICT支援員総合ポータルサイト（以下「当サイト」といいます）は、サイト運営の一部を広告収益により賄っています。</p>
+            <p>当サイトは、<strong>ユーザー体験を最優先</strong>に考え、以下の方針で広告を運用します。</p>
+            
+            <div class="highlight-box">
+                <strong><i class="fas fa-check-circle"></i> 広告掲載の3原則</strong>
+                <ul style="margin-top: 10px;">
+                    <li><strong>ユーザー体験を損なわない:</strong> コンテンツの視認性を最優先し、広告が邪魔にならないよう配置</li>
+                    <li><strong>関連性の高い広告のみ:</strong> 教育ICT関連の製品・サービスに限定</li>
+                    <li><strong>透明性の確保:</strong> 広告であることを明確に表示（「Sponsored」「PR」「広告」等のラベル）</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 広告の種類 -->
+        <section class="policy-section">
+            <h2><i class="fas fa-th-large"></i> 掲載する広告の種類</h2>
+            
+            <h3><i class="fas fa-rectangle-landscape"></i> 1. ディスプレイ広告</h3>
+            <p>バナー形式の画像広告です。以下の場所に掲載されます：</p>
+            <ul>
+                <li><strong>サイドバー:</strong> コンテンツページの右側（PC版のみ）</li>
+                <li><strong>記事下:</strong> コンテンツの最後、フッター直前</li>
+                <li><strong>記事内:</strong> 長文コンテンツページの見出し間（一部ページのみ）</li>
+            </ul>
+
+            <h3><i class="fas fa-align-left"></i> 2. テキスト広告</h3>
+            <p>テキスト形式の広告です。コンテンツと区別しやすいよう、明確にラベル表示します。</p>
+
+            <h3><i class="fas fa-th"></i> 3. インフィード広告</h3>
+            <p>トップページのコンテンツカード群に溶け込む形式の広告です。通常のカードと同じデザインで表示されますが、「Sponsored」ラベルを明示します。</p>
+        </section>
+
+        <!-- 使用する広告サービス -->
+        <section class="policy-section">
+            <h2><i class="fas fa-network-wired"></i> 使用する広告サービス</h2>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>サービス名</th>
+                            <th>提供会社</th>
+                            <th>種類</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>A8.net</strong></td>
+                            <td>株式会社ファンコミュニケーションズ</td>
+                            <td>アフィリエイト広告（ASP）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>バリューコマース</strong></td>
+                            <td>バリューコマース株式会社</td>
+                            <td>アフィリエイト広告（ASP）</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>各サービスのプライバシーポリシー：</p>
+            <ul>
+                <li><a href="https://www.a8.net/privacypolicy.html" target="_blank" rel="noopener" style="color: #667eea;">A8.net プライバシーポリシー</a></li>
+                <li><a href="https://www.valuecommerce.ne.jp/privacy/" target="_blank" rel="noopener" style="color: #667eea;">バリューコマース プライバシーポリシー</a></li>
+            </ul>
+        </section>
+
+        <!-- 広告掲載の基準 -->
+        <section class="policy-section">
+            <h2><i class="fas fa-check-square"></i> 広告掲載の基準</h2>
+            
+            <h3><i class="fas fa-thumbs-up"></i> 掲載する広告</h3>
+            <p>当サイトでは、以下のジャンルの広告を積極的に掲載します：</p>
+            <ul>
+                <li><strong>教育ICT製品:</strong> タブレット端末、PC、大型提示装置、周辺機器</li>
+                <li><strong>ソフトウェア:</strong> MDM、授業支援システム、学習支援アプリ</li>
+                <li><strong>教材・書籍:</strong> プログラミング教材、ICT関連書籍、教育書</li>
+                <li><strong>研修・資格:</strong> ICT支援員認定試験、教員向け研修、オンライン講座</li>
+                <li><strong>教育サービス:</strong> Google Workspace、Microsoft 365、学習プラットフォーム</li>
+                <li><strong>イベント:</strong> 教育ICTカンファレンス、セミナー、展示会</li>
+            </ul>
+
+            <div class="prohibited-list">
+                <h4><i class="fas fa-ban"></i> 掲載しない広告（禁止事項）</h4>
+                <p>以下のジャンル・内容の広告は、一切掲載しません：</p>
+                <ul>
+                    <li>❌ アダルトコンテンツ</li>
+                    <li>❌ ギャンブル・カジノ</li>
+                    <li>❌ 出会い系・マッチングアプリ</li>
+                    <li>❌ アルコール・タバコ</li>
+                    <li>❌ 違法薬物・危険ドラッグ</li>
+                    <li>❌ 暴力的・差別的なコンテンツ</li>
+                    <li>❌ 詐欺・悪質商法</li>
+                    <li>❌ マルチ商法・ネットワークビジネス</li>
+                    <li>❌ 虚偽・誇大広告</li>
+                    <li>❌ 個人情報の不正取得を目的とするもの</li>
+                    <li>❌ 子供に不適切なコンテンツ</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 広告の配置方針 -->
+        <section class="policy-section">
+            <h2><i class="fas fa-map-marked-alt"></i> 広告の配置方針</h2>
+            
+            <h3><i class="fas fa-balance-scale"></i> ユーザー体験と収益のバランス</h3>
+            <p>当サイトでは、<strong>「プランA: 控えめ配置」</strong>を採用し、ユーザー体験を最優先します。</p>
+
+            <div class="highlight-box">
+                <strong><i class="fas fa-ruler-combined"></i> 広告配置の具体的なルール</strong>
+                <ul style="margin-top: 10px;">
+                    <li><strong>広告数の制限:</strong> 1ページあたり最大3〜4枠まで</li>
+                    <li><strong>コンテンツとの距離:</strong> 十分な余白を確保（最低30px）</li>
+                    <li><strong>最初の見出し前には配置しない:</strong> ユーザーが即座にコンテンツにアクセスできるよう配慮</li>
+                    <li><strong>モバイルでは広告数を削減:</strong> サイドバー広告は非表示</li>
+                    <li><strong>記事内広告は最小限:</strong> 長文ページ（100KB以上）のみ、見出し2つごとに最大2枠</li>
+                </ul>
+            </div>
+
+            <h3><i class="fas fa-mobile-alt"></i> レスポンシブ対応</h3>
+            <p>デバイスごとに最適な広告表示を行います：</p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>デバイス</th>
+                            <th>サイドバー広告</th>
+                            <th>記事下広告</th>
+                            <th>記事内広告</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>PC（1024px以上）</strong></td>
+                            <td>✅ 表示</td>
+                            <td>✅ 表示（728×90）</td>
+                            <td>✅ 表示（長文のみ）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>タブレット（768〜1023px）</strong></td>
+                            <td>❌ 非表示</td>
+                            <td>✅ 表示</td>
+                            <td>✅ 表示（長文のみ）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>スマートフォン（767px以下）</strong></td>
+                            <td>❌ 非表示</td>
+                            <td>✅ 表示（320×100）</td>
+                            <td>✅ 表示（300×250）</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 広告の表示方法 -->
+        <section class="policy-section">
+            <h2><i class="fas fa-eye"></i> 広告の表示方法</h2>
+            
+            <h3><i class="fas fa-tags"></i> 広告ラベルの明示</h3>
+            <p>すべての広告には、以下のいずれかのラベルを明示します：</p>
+            <ul>
+                <li>「Sponsored」</li>
+                <li>「PR」</li>
+                <li>「広告」</li>
+                <li>「スポンサー」</li>
+            </ul>
+            <p>ラベルは広告の直前または直上に、明確に識別できる形で表示します。</p>
+
+            <h3><i class="fas fa-mouse-pointer"></i> クリック・タップの明確化</h3>
+            <p>広告リンクには、以下の属性を付与します：</p>
+            <ul>
+                <li><code>target="_blank"</code> - 新しいタブで開く</li>
+                <li><code>rel="nofollow"</code> - 検索エンジンへの影響を避ける</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong><i class="fas fa-exclamation-triangle"></i> やってはいけないこと</strong>
+                <ul style="margin-top: 10px;">
+                    <li>❌ ポップアップ広告・オーバーレイ広告</li>
+                    <li>❌ 自動再生動画広告</li>
+                    <li>❌ 音声付き広告</li>
+                    <li>❌ コンテンツと紛らわしい広告（ネイティブ広告でもラベルは必須）</li>
+                    <li>❌ 閉じるボタンのない広告</li>
+                    <li>❌ ユーザーの意図しないクリックを誘発する配置</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- アフィリエイト広告について -->
+        <section class="policy-section">
+            <h2><i class="fas fa-handshake"></i> アフィリエイト広告について</h2>
+            
+            <h3><i class="fas fa-question-circle"></i> アフィリエイトとは</h3>
+            <p>アフィリエイトとは、当サイトに掲載された広告を経由して商品・サービスが購入された場合、広告主から当サイトに成果報酬が支払われる仕組みです。</p>
+
+            <h3><i class="fas fa-yen-sign"></i> 報酬の開示</h3>
+            <p>当サイトは、A8.net およびバリューコマースのアフィリエイトプログラムに参加しています。</p>
+            <p>広告リンクをクリックして商品・サービスを購入された場合、当サイトに報酬が支払われる場合があります。</p>
+
+            <div class="highlight-box">
+                <strong><i class="fas fa-balance-scale"></i> 公平性の保証</strong>
+                <p style="margin-top: 10px;">アフィリエイト報酬の有無にかかわらず、当サイトは公平な情報提供を行います。広告であることを明示し、ユーザーの判断を尊重します。</p>
+            </div>
+
+            <h3><i class="fas fa-money-bill-wave"></i> ユーザーの負担</h3>
+            <p>広告を経由して商品・サービスを購入されても、<strong>ユーザーに追加費用は一切発生しません。</strong></p>
+            <p>価格は広告主の通常価格と同じです。</p>
+        </section>
+
+        <!-- Cookie・トラッキング -->
+        <section class="policy-section">
+            <h2><i class="fas fa-cookie-bite"></i> Cookie・トラッキング</h2>
+            
+            <h3><i class="fas fa-info-circle"></i> 広告配信のためのCookie使用</h3>
+            <p>広告配信事業者（A8.net、バリューコマース）は、ユーザーの興味に応じた広告を表示するためにCookieを使用します。</p>
+
+            <h3><i class="fas fa-chart-line"></i> 効果測定</h3>
+            <p>広告のクリック数、コンバージョン数等を測定するため、Cookieやトラッキング技術を使用します。</p>
+            <p>これらの情報は、広告の効果測定とサイト改善のためにのみ使用され、個人を特定する情報は含まれません。</p>
+
+            <h3><i class="fas fa-user-shield"></i> ユーザーの選択</h3>
+            <p>ブラウザの設定により、Cookieを無効にすることができます。詳細は <a href="privacy-policy.html" style="color: #667eea; font-weight: bold;">プライバシーポリシー</a> をご覧ください。</p>
+        </section>
+
+        <!-- 広告審査・品質管理 -->
+        <section class="policy-section">
+            <h2><i class="fas fa-clipboard-check"></i> 広告審査・品質管理</h2>
+            
+            <h3><i class="fas fa-search"></i> 掲載前審査</h3>
+            <p>新規に掲載する広告については、以下の点を審査します：</p>
+            <ul>
+                <li>広告内容が教育ICT分野に関連しているか</li>
+                <li>広告主の信頼性・実績</li>
+                <li>広告の表現が適切か（虚偽・誇大広告でないか）</li>
+                <li>リンク先のサイトが安全か</li>
+            </ul>
+
+            <h3><i class="fas fa-sync-alt"></i> 定期的な見直し</h3>
+            <p>掲載中の広告についても、定期的に以下を確認します：</p>
+            <ul>
+                <li>ユーザーからのフィードバック</li>
+                <li>クリック率・コンバージョン率</li>
+                <li>広告内容の変更の有無</li>
+                <li>リンク切れの有無</li>
+            </ul>
+
+            <h3><i class="fas fa-times-circle"></i> 広告の削除</h3>
+            <p>以下の場合、広告を即座に削除します：</p>
+            <ul>
+                <li>当ポリシーに違反することが判明した場合</li>
+                <li>広告主が違法行為や不正行為を行った場合</li>
+                <li>ユーザーから重大な苦情があった場合</li>
+                <li>広告内容が大きく変更され、不適切になった場合</li>
+            </ul>
+        </section>
+
+        <!-- ユーザーの皆様へ -->
+        <section class="policy-section">
+            <h2><i class="fas fa-users"></i> ユーザーの皆様へ</h2>
+            
+            <h3><i class="fas fa-heart"></i> 感謝</h3>
+            <p>当サイトをご利用いただき、誠にありがとうございます。広告収益により、無料で質の高いコンテンツを提供し続けることができます。</p>
+
+            <h3><i class="fas fa-comment-dots"></i> フィードバックの歓迎</h3>
+            <p>広告に関するご意見・ご要望がございましたら、お気軽にお知らせください：</p>
+            <ul>
+                <li>不適切な広告を発見した場合</li>
+                <li>広告の配置が邪魔に感じる場合</li>
+                <li>掲載してほしい広告のジャンル</li>
+                <li>その他、広告に関するご意見</li>
+            </ul>
+            <p>いただいたフィードバックは、サイト改善に活用させていただきます。</p>
+
+            <h3><i class="fas fa-shield-alt"></i> 広告ブロッカーについて</h3>
+            <p>広告ブロッカー（AdBlock等）のご使用は自由です。</p>
+            <p>ただし、広告収益がサイト運営の支えとなっていることをご理解いただければ幸いです。可能であれば、当サイトを広告ブロッカーのホワイトリストに追加していただけますと大変助かります。</p>
+        </section>
+
+        <!-- ポリシーの変更 -->
+        <section class="policy-section">
+            <h2><i class="fas fa-edit"></i> 広告ポリシーの変更</h2>
+            <p>当サイトは、必要に応じて本広告ポリシーを変更することがあります。</p>
+            <p>重要な変更がある場合は、サイト上で適切に告知します。</p>
+            <p>変更後のポリシーは、当サイトに掲載した時点から効力を生じるものとします。</p>
+        </section>
+
+        <!-- お問い合わせ -->
+        <div class="contact-box">
+            <h3><i class="fas fa-envelope"></i> お問い合わせ</h3>
+            <p>本広告ポリシーに関するご質問、不適切な広告の報告は、<br>以下の連絡先までお願いいたします。</p>
+            <p style="margin-top: 20px;"><strong>サイト運営者:</strong> ICT支援員総合ポータルサイト<br>
+            <strong>お問い合わせ:</strong> サイト内のお問い合わせフォーム（今後設置予定）</p>
+        </div>
+
+        <!-- 関連ポリシー -->
+        <section class="policy-section" style="margin-top: 40px;">
+            <h2><i class="fas fa-link"></i> 関連ポリシー</h2>
+            <ul>
+                <li><a href="privacy-policy.html" style="color: #667eea; font-weight: bold;"><i class="fas fa-shield-alt"></i> プライバシーポリシー</a> - 個人情報の取り扱いについて</li>
+                <li><a href="terms-of-service.html" style="color: #667eea; font-weight: bold;"><i class="fas fa-file-contract"></i> 利用規約</a> - 当サイトの利用に関する規約（今後作成予定）</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト. All rights reserved.</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p style="margin-top: 15px;">
+                <a href="privacy-policy.html" style="color: white; margin: 0 10px;">プライバシーポリシー</a> | 
+                <a href="ad-policy.html" style="color: white; margin: 0 10px;">広告ポリシー</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>端末管理・MDM運用実践ガイド（広告実装サンプル） - ICT支援員総合ポータルサイト</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ads.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索...">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="device-management.html" class="active"><i class="fas fa-tablet-alt"></i> 端末管理・MDM</a></li>
+                        <li><a href="wifi-troubleshooting.html"><i class="fas fa-wifi"></i> Wi-Fiトラブル対応</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         2カラムレイアウト（メインコンテンツ + サイドバー広告）
+         ========================================== -->
+    <div class="content-with-sidebar">
+        <!-- メインコンテンツ -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1><i class="fas fa-tablet-alt"></i> 端末管理・MDM運用実践ガイド</h1>
+                <p class="lead">GIGAスクール端末の配布・回収・故障対応・充電管理からMDM（モバイルデバイス管理）の基礎知識まで、ICT支援員が現場で必要な端末管理のすべてを網羅した実践ガイドです。</p>
+            </div>
+
+            <!-- 目次セクション -->
+            <section class="toc-section">
+                <h2 class="section-title"><i class="fas fa-list"></i> 目次</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="card-icon"><i class="fas fa-info-circle"></i></div>
+                        <h3><a href="#basics">1. 端末管理の基礎知識</a></h3>
+                        <p>GIGAスクール端末の種類、管理の重要性</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon"><i class="fas fa-box-open"></i></div>
+                        <h3><a href="#distribution">2. 端末配布・回収</a></h3>
+                        <p>配布手順、チェックリスト、回収フロー</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon"><i class="fas fa-tools"></i></div>
+                        <h3><a href="#troubleshooting">3. 故障対応</a></h3>
+                        <p>故障診断、修理依頼、代替機対応</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3><a href="#mdm">4. MDMの基礎知識</a></h3>
+                        <p>MDMとは、主要製品、運用のポイント</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- コンテンツセクション1 -->
+            <section id="basics">
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> 1. 端末管理の基礎知識</h2>
+                
+                <h3><i class="fas fa-laptop"></i> GIGAスクール端末の種類</h3>
+                <p>文部科学省のGIGAスクール構想により、全国の小中学校に1人1台の端末が整備されました。主な端末の種類は以下の通りです：</p>
+                
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>端末タイプ</th>
+                                <th>OS</th>
+                                <th>特徴</th>
+                                <th>シェア</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Chromebook</strong></td>
+                                <td>Chrome OS</td>
+                                <td>軽量・高速起動・低価格</td>
+                                <td>約40%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>iPad</strong></td>
+                                <td>iPadOS</td>
+                                <td>直感的操作・豊富なアプリ</td>
+                                <td>約30%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Windows PC</strong></td>
+                                <td>Windows 11</td>
+                                <td>汎用性高い・Office互換</td>
+                                <td>約30%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3><i class="fas fa-exclamation-triangle"></i> 端末管理の重要性</h3>
+                <ul class="checklist">
+                    <li><i class="fas fa-check"></i> 授業の円滑な実施（故障・トラブルの最小化）</li>
+                    <li><i class="fas fa-check"></i> 個人情報の保護（セキュリティ管理）</li>
+                    <li><i class="fas fa-check"></i> 公的資産の適切な管理（税金で購入）</li>
+                    <li><i class="fas fa-check"></i> 長期的なコスト削減（適切なメンテナンス）</li>
+                </ul>
+            </section>
+
+            <!-- コンテンツセクション2 -->
+            <section id="distribution">
+                <h2 class="section-title"><i class="fas fa-box-open"></i> 2. 端末配布・回収</h2>
+                
+                <h3><i class="fas fa-clipboard-list"></i> 年度初めの端末配布手順</h3>
+                <div class="step-guide">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>事前準備</h4>
+                            <ul>
+                                <li>配布リストの作成（クラス・出席番号順）</li>
+                                <li>端末の動作確認（充電・起動・Wi-Fi接続）</li>
+                                <li>シールラベルの準備（名前・管理番号）</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>配布当日</h4>
+                            <ul>
+                                <li>使用ルールの説明（5分程度）</li>
+                                <li>1台ずつ手渡し（管理番号と名前を照合）</li>
+                                <li>受領サインの取得</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>配布後フォロー</h4>
+                            <ul>
+                                <li>トラブル報告窓口の周知</li>
+                                <li>保護者向け説明資料の配布</li>
+                                <li>配布記録の保管</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <h4><i class="fas fa-lightbulb"></i> ポイント</h4>
+                    <p>配布時に「端末管理カード」を作成し、各生徒に管理番号・パスワード・Wi-Fi情報を記載したカードを渡すと、トラブル時の問い合わせがスムーズになります。</p>
+                </div>
+            </section>
+
+            <!-- コンテンツセクション3 -->
+            <section id="troubleshooting">
+                <h2 class="section-title"><i class="fas fa-tools"></i> 3. 故障対応</h2>
+                
+                <h3><i class="fas fa-stethoscope"></i> 故障診断フローチャート</h3>
+                <p>端末の故障が報告された場合、以下のフローで診断します：</p>
+
+                <div class="flowchart">
+                    <div class="flow-item">
+                        <div class="flow-box start">故障報告受付</div>
+                        <div class="flow-arrow">↓</div>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-box">症状のヒアリング</div>
+                        <div class="flow-arrow">↓</div>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-box decision">起動するか？</div>
+                        <div class="flow-split">
+                            <div class="flow-branch">
+                                <span>YES</span>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-box">ソフトウェアトラブル<br>再起動・設定確認</div>
+                            </div>
+                            <div class="flow-branch">
+                                <span>NO</span>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-box">ハードウェア故障<br>修理依頼</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-wrench"></i> よくある故障と対応</h3>
+                <div class="qa-list">
+                    <div class="qa-item">
+                        <div class="question"><i class="fas fa-question-circle"></i> 画面が割れた</div>
+                        <div class="answer">
+                            <p><strong>対応:</strong> 即座に使用中止→修理依頼→代替機貸出</p>
+                            <p><strong>注意:</strong> 怪我の危険性があるため、ビニールテープで保護</p>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question"><i class="fas fa-question-circle"></i> 充電できない</div>
+                        <div class="answer">
+                            <p><strong>診断:</strong> 充電ケーブルを交換して確認</p>
+                            <p><strong>対応:</strong> ケーブル不良なら交換、端末不良なら修理依頼</p>
+                        </div>
+                    </div>
+                    <div class="qa-item">
+                        <div class="question"><i class="fas fa-question-circle"></i> キーボードが反応しない</div>
+                        <div class="answer">
+                            <p><strong>診断:</strong> 外部キーボード接続で確認（Chromebook/Windows）</p>
+                            <p><strong>対応:</strong> ソフトウェアなら再起動、ハードなら修理依頼</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- コンテンツセクション4 -->
+            <section id="mdm">
+                <h2 class="section-title"><i class="fas fa-shield-alt"></i> 4. MDMの基礎知識</h2>
+                
+                <h3><i class="fas fa-info-circle"></i> MDM（Mobile Device Management）とは</h3>
+                <p>MDMは、学校が配布した端末を一元管理するためのシステムです。以下のことができます：</p>
+
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <i class="fas fa-cogs"></i>
+                        <strong>一括設定</strong>
+                        <p>Wi-Fi設定、アプリインストールを一斉配信</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-lock"></i>
+                        <strong>利用制限</strong>
+                        <p>特定のWebサイトやアプリの使用制限</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <strong>位置情報管理</strong>
+                        <p>紛失時の端末位置特定</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-eraser"></i>
+                        <strong>リモートワイプ</strong>
+                        <p>紛失時のデータ遠隔消去</p>
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-list-ul"></i> 主要MDM製品</h3>
+                <div class="product-list">
+                    <div class="product-card">
+                        <h4><i class="fas fa-apple-alt"></i> Jamf School（iPad向け）</h4>
+                        <p>Apple製品に特化したMDM。直感的な管理画面が特徴。</p>
+                    </div>
+                    <div class="product-card">
+                        <h4><i class="fas fa-chrome"></i> Google管理コンソール（Chromebook向け）</h4>
+                        <p>Chrome OS標準のMDM。Google Workspace連携が強力。</p>
+                    </div>
+                    <div class="product-card">
+                        <h4><i class="fas fa-shield-alt"></i> MobiConnect（全OS対応）</h4>
+                        <p>国内シェアNo.1。iPad/Chromebook/Windows対応。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 記事下広告（全ページ共通）
+                 ========================================== -->
+            <div class="article-bottom-ad">
+                <div class="ad-label">Sponsored</div>
+                <div class="ad-content ad-728x90">
+                    <!-- ここにA8.net / バリューコマースの広告コードを貼り付け -->
+                    <!-- 推奨: MDMソフト、端末保険、管理ツール等 -->
+                    
+                    <!-- 広告プレースホルダー（実際の運用時は削除） -->
+                    <div style="width: 100%; height: 90px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white;">
+                        <div style="text-align: center;">
+                            <i class="fas fa-shield-alt" style="font-size: 32px; margin-bottom: 5px;"></i>
+                            <p style="font-size: 16px; font-weight: bold;">【例】MDMソリューション「MobiConnect」無料トライアル実施中</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ==========================================
+             サイドバー広告（PC版のみ表示）
+             ========================================== -->
+        <aside class="sidebar">
+            <!-- サイドバー広告 -->
+            <div class="sidebar-ad">
+                <div class="ad-label">Sponsored</div>
+                <div class="ad-content ad-300x250">
+                    <!-- ここにA8.net / バリューコマースの広告コードを貼り付け -->
+                    <!-- 推奨: MDMソフト、端末保険、管理ツール、ICT機器等 -->
+                    
+                    <!-- 広告プレースホルダー（実際の運用時は削除） -->
+                    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; flex-direction: column; padding: 20px; text-align: center;">
+                        <i class="fas fa-tablet-alt" style="font-size: 48px; margin-bottom: 15px;"></i>
+                        <p style="font-size: 16px; font-weight: bold; margin-bottom: 10px;">【例】学校向け端末保険</p>
+                        <p style="font-size: 13px; line-height: 1.6;">故障・破損・盗難を完全カバー。月額500円〜</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 関連ページリンク -->
+            <div style="background: white; border-radius: 12px; padding: 20px; margin-top: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h3 style="font-size: 16px; margin-bottom: 15px; color: #333;"><i class="fas fa-link"></i> 関連ページ</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;"><a href="wifi-troubleshooting.html" style="color: #667eea; text-decoration: none;"><i class="fas fa-wifi"></i> Wi-Fiトラブル対応</a></li>
+                    <li style="margin-bottom: 10px;"><a href="account-management.html" style="color: #667eea; text-decoration: none;"><i class="fas fa-user-shield"></i> アカウント管理</a></li>
+                    <li style="margin-bottom: 10px;"><a href="troubleshooting.html" style="color: #667eea; text-decoration: none;"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト. All rights reserved.</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

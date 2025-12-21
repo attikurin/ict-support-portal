@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - ICT支援員総合ポータルサイト</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+        .contact-header h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .contact-header p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .info-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .info-card i {
+            font-size: 48px;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        .info-card h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .info-card p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+        .form-section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .form-section h2 {
+            font-size: 24px;
+            color: #667eea;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+        .form-section h2 i {
+            margin-right: 12px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        .form-group label .required {
+            color: #f44336;
+            margin-left: 5px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: 'Noto Sans JP', sans-serif;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .form-group textarea {
+            min-height: 200px;
+            resize: vertical;
+        }
+        .form-help {
+            font-size: 13px;
+            color: #999;
+            margin-top: 5px;
+        }
+        .form-group input[type="email"]::placeholder,
+        .form-group textarea::placeholder {
+            color: #bbb;
+        }
+        .privacy-checkbox {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        .privacy-checkbox input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+        .privacy-checkbox label {
+            margin-bottom: 0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .privacy-checkbox a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .privacy-checkbox a:hover {
+            text-decoration: underline;
+        }
+        .submit-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .submit-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        .submit-button i {
+            margin-left: 10px;
+        }
+        .notice-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 6px;
+        }
+        .notice-box h3 {
+            color: #667eea;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .notice-box h3 i {
+            margin-right: 10px;
+        }
+        .notice-box ul {
+            margin: 10px 0 0 20px;
+            padding: 0;
+        }
+        .notice-box li {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+        .success-message {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            border-radius: 6px;
+            display: none;
+            margin-bottom: 20px;
+        }
+        .success-message.show {
+            display: block;
+        }
+        .success-message h3 {
+            color: #4caf50;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .success-message h3 i {
+            margin-right: 10px;
+        }
+        .error-message {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 20px;
+            border-radius: 6px;
+            display: none;
+            margin-bottom: 20px;
+        }
+        .error-message.show {
+            display: block;
+        }
+        .error-message h3 {
+            color: #f44336;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .error-message h3 i {
+            margin-right: 10px;
+        }
+        .faq-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .faq-section h2 {
+            font-size: 24px;
+            color: #667eea;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+        .faq-section h2 i {
+            margin-right: 12px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .faq-question i {
+            color: #667eea;
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        .faq-answer {
+            color: #666;
+            line-height: 1.8;
+            padding-left: 30px;
+        }
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 20px 15px;
+            }
+            .contact-header h1 {
+                font-size: 24px;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .form-section {
+                padding: 25px 20px;
+            }
+            .form-section h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索...">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                <li><a href="site-guide.html"><i class="fas fa-map"></i> サイトガイド</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1><i class="fas fa-envelope"></i> お問い合わせ</h1>
+            <p>サイトに関するご質問、ご意見、不適切な広告の報告など、お気軽にお問い合わせください。<br>通常、3営業日以内にご返信いたします。</p>
+        </div>
+
+        <!-- お問い合わせ情報カード -->
+        <div class="contact-grid">
+            <div class="info-card">
+                <i class="fas fa-clock"></i>
+                <h3>受付時間</h3>
+                <p>24時間365日受付<br>（ご返信は営業日のみ）</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-reply"></i>
+                <h3>返信目安</h3>
+                <p>3営業日以内<br>（土日祝日を除く）</p>
+            </div>
+        </div>
+
+        <!-- 注意事項 -->
+        <div class="notice-box">
+            <h3><i class="fas fa-info-circle"></i> お問い合わせ前にご確認ください</h3>
+            <ul>
+                <li>よくある質問（FAQ）で解決できる場合があります。下記のFAQセクションをご確認ください。</li>
+                <li>サイトコンテンツに関する質問は、各ページのコメント欄もご活用いただけます。</li>
+                <li>技術的なトラブルの場合、ご使用のブラウザ、OS、デバイス情報をお知らせください。</li>
+                <li>広告に関するお問い合わせは、<a href="ad-policy.html" style="color: #667eea;">広告ポリシー</a>もご参照ください。</li>
+            </ul>
+        </div>
+
+        <!-- フォームセクション -->
+        <div class="form-section">
+            <h2><i class="fas fa-paper-plane"></i> お問い合わせフォーム</h2>
+
+            <!-- 成功メッセージ -->
+            <div id="successMessage" class="success-message">
+                <h3><i class="fas fa-check-circle"></i> 送信完了</h3>
+                <p>お問い合わせいただきありがとうございます。<br>内容を確認の上、3営業日以内にご返信いたします。</p>
+            </div>
+
+            <!-- エラーメッセージ -->
+            <div id="errorMessage" class="error-message">
+                <h3><i class="fas fa-exclamation-triangle"></i> 送信エラー</h3>
+                <p>申し訳ございません。送信中にエラーが発生しました。<br>しばらく時間をおいて再度お試しください。</p>
+            </div>
+
+            <!-- お問い合わせフォーム -->
+            <form id="contactForm" action="https://formspree.io/f/xnjadwda" method="POST">
+                
+                <!-- お名前 -->
+                <div class="form-group">
+                    <label for="name">お名前<span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="山田 太郎">
+                </div>
+
+                <!-- メールアドレス -->
+                <div class="form-group">
+                    <label for="email">メールアドレス<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="example@example.com">
+                    <p class="form-help">ご返信先のメールアドレスをご入力ください</p>
+                </div>
+
+                <!-- 所属 -->
+                <div class="form-group">
+                    <label for="affiliation">所属（任意）</label>
+                    <input type="text" id="affiliation" name="affiliation" placeholder="○○市教育委員会 / ○○小学校 / ○○株式会社 など">
+                </div>
+
+                <!-- お問い合わせ種類 -->
+                <div class="form-group">
+                    <label for="category">お問い合わせ種類<span class="required">*</span></label>
+                    <select id="category" name="category" required>
+                        <option value="">選択してください</option>
+                        <option value="content">サイトコンテンツに関する質問</option>
+                        <option value="technical">技術的なトラブル・不具合報告</option>
+                        <option value="ad-complaint">不適切な広告の報告</option>
+                        <option value="privacy">プライバシー・個人情報に関する問い合わせ</option>
+                        <option value="cooperation">コンテンツ提供・協力の提案</option>
+                        <option value="link">リンク掲載の依頼</option>
+                        <option value="feedback">ご意見・ご要望</option>
+                        <option value="other">その他</option>
+                    </select>
+                </div>
+
+                <!-- お問い合わせ内容 -->
+                <div class="form-group">
+                    <label for="message">お問い合わせ内容<span class="required">*</span></label>
+                    <textarea id="message" name="message" required placeholder="お問い合わせ内容を詳しくご記入ください。&#10;&#10;【技術的トラブルの場合】&#10;- ご使用のブラウザ（Chrome、Safari等）&#10;- OS（Windows、Mac、iOS、Android等）&#10;- 発生している問題の詳細&#10;&#10;をご記入いただけるとスムーズです。"></textarea>
+                </div>
+
+                <!-- プライバシーポリシー同意 -->
+                <div class="privacy-checkbox">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">
+                        <a href="privacy-policy.html" target="_blank">プライバシーポリシー</a>に同意します<span class="required">*</span>
+                    </label>
+                </div>
+
+                <!-- 送信ボタン -->
+                <button type="submit" class="submit-button" id="submitButton">
+                    送信する
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- よくある質問 -->
+        <div class="faq-section">
+            <h2><i class="fas fa-question-circle"></i> よくある質問（FAQ）</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question"></i>
+                    <span>サイトの利用は無料ですか？</span>
+                </div>
+                <div class="faq-answer">
+                    はい、当サイトのすべてのコンテンツは完全無料でご利用いただけます。会員登録も不要です。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question"></i>
+                    <span>コンテンツを印刷・配布してもいいですか？</span>
+                </div>
+                <div class="faq-answer">
+                    教育目的での印刷・配布は問題ありません。ただし、商用利用や大量配布の場合は事前にご相談ください。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question"></i>
+                    <span>サイト内の情報を引用してもいいですか？</span>
+                </div>
+                <div class="faq-answer">
+                    はい。出典を明記（サイト名とURL）していただければ、ブログや資料等での引用は自由です。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question"></i>
+                    <span>リンクを貼ってもいいですか？</span>
+                </div>
+                <div class="faq-answer">
+                    はい、リンクは自由です。トップページ、各コンテンツページどちらへのリンクも歓迎します。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question"></i>
+                    <span>不適切な広告が表示されました</span>
+                </div>
+                <div class="faq-answer">
+                    大変申し訳ございません。上記のお問い合わせフォームで「不適切な広告の報告」を選択し、広告の内容（スクリーンショット推奨）、表示されたページURL、日時をお知らせください。速やかに対応いたします。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question"></i>
+                    <span>コンテンツの追加リクエストはできますか？</span>
+                </div>
+                <div class="faq-answer">
+                    はい。お問い合わせフォームで「ご意見・ご要望」を選択し、追加してほしいコンテンツの内容をお知らせください。可能な限り対応させていただきます。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question"></i>
+                    <span>モバイルで見づらいページがあります</span>
+                </div>
+                <div class="faq-answer">
+                    お問い合わせフォームで「技術的なトラブル・不具合報告」を選択し、該当ページのURL、ご使用のデバイス・ブラウザ、問題の詳細をお知らせください。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question"></i>
+                    <span>個人情報は収集されますか？</span>
+                </div>
+                <div class="faq-answer">
+                    お問い合わせフォーム以外では、個人を特定できる情報は収集しておりません。詳細は<a href="privacy-policy.html" style="color: #667eea;">プライバシーポリシー</a>をご覧ください。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト. All rights reserved.</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p style="margin-top: 15px;">
+                <a href="privacy-policy.html" style="color: white; margin: 0 10px;">プライバシーポリシー</a> | 
+                <a href="ad-policy.html" style="color: white; margin: 0 10px;">広告ポリシー</a> | 
+                <a href="contact.html" style="color: white; margin: 0 10px;">お問い合わせ</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+        // フォーム送信処理
+        const contactForm = document.getElementById('contactForm');
+        const submitButton = document.getElementById('submitButton');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // ボタンを無効化
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 送信中...';
+
+            // メッセージをリセット
+            successMessage.classList.remove('show');
+            errorMessage.classList.remove('show');
+
+            try {
+                const formData = new FormData(contactForm);
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // 送信成功
+                    successMessage.classList.add('show');
+                    contactForm.reset();
+                    
+                    // 成功メッセージまでスクロール
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    // 送信失敗
+                    errorMessage.classList.add('show');
+                    errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            } catch (error) {
+                // ネットワークエラー等
+                errorMessage.classList.add('show');
+                errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } finally {
+                // ボタンを有効化
+                submitButton.disabled = false;
+                submitButton.innerHTML = '送信する <i class="fas fa-paper-plane"></i>';
+            }
+        });
+
+        // フォームバリデーション（リアルタイム）
+        const emailInput = document.getElementById('email');
+        emailInput.addEventListener('blur', () => {
+            if (emailInput.value && !emailInput.validity.valid) {
+                emailInput.style.borderColor = '#f44336';
+            } else {
+                emailInput.style.borderColor = '#e0e0e0';
+            }
+        });
+
+        emailInput.addEventListener('input', () => {
+            if (emailInput.validity.valid) {
+                emailInput.style.borderColor = '#4caf50';
+            }
+        });
+    </script>
+</body>
+</html>

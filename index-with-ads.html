@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT支援員総合ポータルサイト - 広告実装サンプル</title>
+    <meta name="description" content="ICT支援員の業務に役立つ情報を総合的に提供するポータルサイト。基礎知識、支援ガイドライン、最新動向、活用事例、トラブルシューティング、リンク集など。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ads.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="programming-education.html"><i class="fas fa-code"></i> プログラミング教育</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h2>ICT支援員のための総合ポータルサイト</h2>
+            <p>実践的な情報とリソースを包括的に提供します</p>
+            <div class="cta-buttons">
+                <a href="site-guide.html" class="btn-primary"><i class="fas fa-map"></i> サイトガイドを見る</a>
+                <a href="basics.html" class="btn-secondary"><i class="fas fa-book"></i> 基礎知識から始める</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2 class="section-title"><i class="fas fa-star"></i> 主なコンテンツ</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-info-circle"></i></div>
+                    <h3>基礎知識</h3>
+                    <p>ICT支援員の役割と業務内容、法的位置づけ、専門用語集など</p>
+                    <a href="basics.html" class="btn-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>教育入門講座</h3>
+                    <p>教育未経験者向けの体系的な入門講座（全8回）</p>
+                    <a href="education-basics.html" class="btn-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>支援ガイドライン</h3>
+                    <p>効果的な支援方法とコミュニケーションのポイント</p>
+                    <a href="guidelines.html" class="btn-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>授業提案ガイド</h3>
+                    <p>教員への効果的な授業提案の7ステップ</p>
+                    <a href="lesson-proposal.html" class="btn-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-pencil-ruler"></i></div>
+                    <h3>授業づくりマニュアル</h3>
+                    <p>小中学校教員向けの実践的な授業設計マニュアル</p>
+                    <a href="lesson-design.html" class="btn-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>GIGA最新動向</h3>
+                    <p>GIGAスクール第2期、教育DX、デジタル教科書の最新情報</p>
+                    <a href="giga-update.html" class="btn-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- ==========================================
+                     インフィード広告（トップページ専用）
+                     6枚目と7枚目のカードの間に配置
+                     ========================================== -->
+                <div class="infeed-ad">
+                    <div class="ad-label"><i class="fas fa-ad"></i> Sponsored</div>
+                    <div class="ad-content">
+                        <!-- ここにA8.net / バリューコマースの広告コードを貼り付け -->
+                        <!-- 例: ICT支援員認定試験、教育系イベント、EdTechサービス等 -->
+                        
+                        <!-- 広告プレースホルダー（実際の運用時は削除） -->
+                        <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+                            <div style="text-align: center; color: white;">
+                                <i class="fas fa-certificate" style="font-size: 48px; margin-bottom: 10px;"></i>
+                                <p style="font-size: 18px; font-weight: bold;">広告スペース</p>
+                            </div>
+                        </div>
+                        <h3 style="color: #333; font-size: 18px; margin-bottom: 10px;">【例】ICT支援員能力認定試験 対策講座</h3>
+                        <p style="color: #666; font-size: 14px; line-height: 1.6;">オンライン学習で効率的に合格を目指せます。過去問題・模擬試験・解説動画が充実。</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-star"></i></div>
+                    <h3>成功事例集</h3>
+                    <p>全国の学校現場での成功事例とベストプラクティス</p>
+                    <a href="case-studies.html" class="btn-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>トラブルシューティング</h3>
+                    <p>よくあるトラブルと解決方法（13カテゴリ、100+のQ&A）</p>
+                    <a href="troubleshooting.html" class="btn-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tablet-alt"></i></div>
+                    <h3>端末管理・MDM</h3>
+                    <p>端末配布・回収、故障対応、MDMの基礎知識</p>
+                    <a href="device-management.html" class="btn-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-wifi"></i></div>
+                    <h3>Wi-Fiトラブル対応</h3>
+                    <p>授業中の緊急対応マニュアルと5分以内の応急処置</p>
+                    <a href="wifi-troubleshooting.html" class="btn-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-code"></i></div>
+                    <h3>プログラミング教育</h3>
+                    <p>Scratch、micro:bit、学年別カリキュラムの完全ガイド</p>
+                    <a href="programming-education.html" class="btn-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-link"></i></div>
+                    <h3>リンク集</h3>
+                    <p>教育ICT関連の厳選リンク集（12カテゴリ、180+リンク）</p>
+                    <a href="resources-links.html" class="btn-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <h2 class="section-title"><i class="fas fa-bolt"></i> クイックリンク</h2>
+            <div class="quick-links-grid">
+                <a href="troubleshooting.html" class="quick-link-card emergency">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>緊急トラブル対応</span>
+                </a>
+                <a href="glossary.html" class="quick-link-card">
+                    <i class="fas fa-book-medical"></i>
+                    <span>用語集を引く</span>
+                </a>
+                <a href="downloads.html" class="quick-link-card">
+                    <i class="fas fa-download"></i>
+                    <span>資料ダウンロード</span>
+                </a>
+                <a href="site-guide.html" class="quick-link-card">
+                    <i class="fas fa-map"></i>
+                    <span>サイトガイド</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト. All rights reserved.</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p>最終更新: 2025年12月</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

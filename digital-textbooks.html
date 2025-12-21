@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デジタル教科書導入・活用ガイド - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="デジタル教科書の導入から活用まで、ICT支援員が知るべき基礎知識、導入準備、活用方法、トラブル対応を網羅した実践ガイド">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: GIGA, オンライン授業, トラブル)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                        <li><a href="rubric.html"><i class="fas fa-clipboard-check"></i> ルーブリック評価</a></li>
+                        <li><a href="learning-support-systems.html"><i class="fas fa-chalkboard"></i> 授業支援システム</a></li>
+                        <li><a href="programming-education.html"><i class="fas fa-code"></i> プログラミング教育</a></li>
+                        <li><a href="digital-citizenship.html"><i class="fas fa-shield-alt"></i> 情報モラル教育</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI利用ガイド</a></li>
+                        <li><a href="ai-apps-education.html"><i class="fas fa-brain"></i> AI教育アプリ</a></li>
+                        <li><a href="digital-textbooks.html" class="active"><i class="fas fa-tablet-alt"></i> デジタル教科書</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-star"></i> 成功事例</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-heart"></i> 特別支援ICT</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="device-management.html"><i class="fas fa-tablet-alt"></i> 端末管理・MDM</a></li>
+                        <li><a href="wifi-troubleshooting.html"><i class="fas fa-wifi"></i> Wi-Fiトラブル対応</a></li>
+                        <li><a href="account-management.html"><i class="fas fa-user-shield"></i> アカウント管理</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> セキュリティ</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="edtech-comparison.html"><i class="fas fa-balance-scale"></i> EdTech比較</a></li>
+                        <li><a href="edtech-tools.html"><i class="fas fa-tools"></i> EdTechツール</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                        <li><a href="online-learning.html"><i class="fas fa-video"></i> オンライン授業</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-search"></i> 検索・参照</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="site-guide.html"><i class="fas fa-map"></i> サイトガイド</a></li>
+                        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> 参考リンク集</a></li>
+                        <li><a href="downloads.html"><i class="fas fa-download"></i> ダウンロード資料</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book"></i> 用語集</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> お問い合わせ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container main-content">
+        <article>
+            <header class="content-header">
+                <h1><i class="fas fa-tablet-alt"></i> デジタル教科書導入・活用ガイド</h1>
+                <p class="lead">2024年度から本格導入が進むデジタル教科書の基礎知識から実践活用まで、ICT支援員が知るべきすべてを網羅</p>
+                <div class="meta-info">
+                    <span><i class="fas fa-clock"></i> 最終更新: 2025年12月</span>
+                    <span><i class="fas fa-check-circle"></i> ファクトチェック実施: 2025年12月21日</span>
+                    <span><i class="fas fa-tag"></i> GIGA・最新動向</span>
+                    <span><i class="fas fa-signal"></i> レベル: 初級〜中級</span>
+                </div>
+            </header>
+
+            <!-- 目次 -->
+            <section class="toc-section">
+                <h2><i class="fas fa-list"></i> 目次</h2>
+                <div class="info-grid">
+                    <a href="#overview" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-info-circle"></i></div>
+                        <h3>デジタル教科書とは</h3>
+                        <p>基本定義、3つの特徴、紙との比較</p>
+                    </a>
+                    <a href="#policy" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h3>政策動向と導入スケジュール</h3>
+                        <p>2019年制度化〜2027年以降の展開</p>
+                    </a>
+                    <a href="#types" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-layer-group"></i></div>
+                        <h3>デジタル教科書の種類</h3>
+                        <p>配信方式、対応プラットフォーム</p>
+                    </a>
+                    <a href="#preparation" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-clipboard-list"></i></div>
+                        <h3>導入準備のポイント</h3>
+                        <p>5カテゴリのチェックリスト</p>
+                    </a>
+                    <a href="#utilization" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>効果的な活用方法</h3>
+                        <p>教科別・特別支援教育での活用</p>
+                    </a>
+                    <a href="#support-role" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-user-cog"></i></div>
+                        <h3>ICT支援員の役割</h3>
+                        <p>技術支援・活用支援・年間スケジュール</p>
+                    </a>
+                    <a href="#troubleshooting" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-tools"></i></div>
+                        <h3>トラブルと対処法</h3>
+                        <p>6つの主要トラブルへの対処</p>
+                    </a>
+                    <a href="#comparison" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-balance-scale"></i></div>
+                        <h3>教科書会社の比較</h3>
+                        <p>主要6社の機能比較マトリックス</p>
+                    </a>
+                    <a href="#case-studies" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-school"></i></div>
+                        <h3>導入事例集</h3>
+                        <p>3校の詳細な実践事例</p>
+                    </a>
+                    <a href="#future" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-rocket"></i></div>
+                        <h3>今後の展望</h3>
+                        <p>AI活用、VR/AR、学習分析</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- セクション1: デジタル教科書とは -->
+            <section id="overview">
+                <h2><i class="fas fa-info-circle"></i> 1. デジタル教科書とは</h2>
+                
+                <div class="info-box">
+                    <h3><i class="fas fa-lightbulb"></i> 基本定義</h3>
+                    <p><strong>デジタル教科書</strong>とは、紙の教科書の内容を電子化し、タブレット端末やパソコンで使用できるようにしたものです。学校教育法に基づく「教科用図書」に位置づけられ、文部科学省の検定を受けた正式な教材です。</p>
+                    <p class="note"><i class="fas fa-info-circle"></i> <strong>情報の信頼性について</strong>: このページの内容は、文部科学省の公式資料、学校教育法、各教科書会社の公式情報に基づいています（2025年12月時点）。政策や制度は変更される場合がありますので、最新情報は文部科学省の公式サイトでご確認ください。</p>
+                </div>
+
+                <h3><i class="fas fa-check-circle"></i> デジタル教科書の3つの特徴</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-font"></i></div>
+                        <h4>アクセシビリティ</h4>
+                        <ul>
+                            <li>文字サイズ・色の変更</li>
+                            <li>読み上げ機能（音声合成）</li>
+                            <li>ふりがな表示</li>
+                            <li>白黒反転・ハイコントラスト</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-play-circle"></i></div>
+                        <h4>マルチメディア対応</h4>
+                        <ul>
+                            <li>動画・音声コンテンツ</li>
+                            <li>3Dモデル・シミュレーション</li>
+                            <li>拡大表示機能</li>
+                            <li>リンクジャンプ機能</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-pencil-alt"></i></div>
+                        <h4>学習支援機能</h4>
+                        <ul>
+                            <li>書き込み・マーカー機能</li>
+                            <li>ブックマーク機能</li>
+                            <li>検索機能</li>
+                            <li>個別学習履歴の記録</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="comparison-table">
+                    <h3><i class="fas fa-balance-scale"></i> 紙の教科書 vs デジタル教科書</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>比較項目</th>
+                                <th>紙の教科書</th>
+                                <th>デジタル教科書</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>携帯性</strong></td>
+                                <td>教科ごとに持ち運び必要</td>
+                                <td>1台の端末で全教科対応</td>
+                            </tr>
+                            <tr>
+                                <td><strong>アクセシビリティ</strong></td>
+                                <td>固定された文字サイズ</td>
+                                <td>個別にカスタマイズ可能</td>
+                            </tr>
+                            <tr>
+                                <td><strong>コンテンツ</strong></td>
+                                <td>静止画・文字のみ</td>
+                                <td>動画・音声・インタラクティブ</td>
+                            </tr>
+                            <tr>
+                                <td><strong>書き込み</strong></td>
+                                <td>消すのが困難</td>
+                                <td>何度でも書き直し可能</td>
+                            </tr>
+                            <tr>
+                                <td><strong>検索</strong></td>
+                                <td>目次・索引のみ</td>
+                                <td>全文検索が可能</td>
+                            </tr>
+                            <tr>
+                                <td><strong>更新</strong></td>
+                                <td>年度単位での差し替え</td>
+                                <td>随時コンテンツ更新可能</td>
+                            </tr>
+                            <tr>
+                                <td><strong>コスト</strong></td>
+                                <td>無償給与</td>
+                                <td>2024年度は無償（2025年度以降は予算措置による）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- セクション2: 政策動向と導入スケジュール -->
+            <section id="policy">
+                <h2><i class="fas fa-calendar-alt"></i> 2. 政策動向と導入スケジュール</h2>
+                
+                <div class="timeline">
+                    <h3><i class="fas fa-history"></i> デジタル教科書の歩み</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2019年</div>
+                        <div class="timeline-content">
+                            <h4>制度化</h4>
+                            <p>学校教育法の改正により、紙の教科書に代えてデジタル教科書を使用することが可能に</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021年</div>
+                        <div class="timeline-content">
+                            <h4>GIGAスクール構想</h4>
+                            <p>1人1台端末環境の実現により、デジタル教科書活用の基盤が整備</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024年</div>
+                        <div class="timeline-content">
+                            <h4>本格導入開始</h4>
+                            <p>小学校5・6年生と中学校全学年の「英語」でデジタル教科書を先行導入（無償提供）</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025年</div>
+                        <div class="timeline-content">
+                            <h4>拡大予定</h4>
+                            <p>算数・数学へのデジタル教科書導入拡大を検討中</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2027年以降</div>
+                        <div class="timeline-content">
+                            <h4>全教科展開に向けた取組</h4>
+                            <p>段階的に主要教科から全教科への拡大を目指す（文部科学省の方針）</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <h3><i class="fas fa-exclamation-triangle"></i> 2024年度の重要ポイント</h3>
+                    <ul>
+                        <li><strong>対象教科</strong>: 小学校5・6年生および中学校全学年の「英語」</li>
+                        <li><strong>費用負担</strong>: 2024年度は国の予算措置により無償提供。2025年度以降は予算編成により決定</li>
+                        <li><strong>使用義務</strong>: 各学校の判断で導入可否を決定（強制ではない）</li>
+                        <li><strong>紙との併用</strong>: 紙の教科書も引き続き配布され、併用可能</li>
+                        <li><strong>通信環境</strong>: オンライン型が中心（一部オフライン対応あり）</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- セクション3: デジタル教科書の種類と特徴 -->
+            <section id="types">
+                <h2><i class="fas fa-layer-group"></i> 3. デジタル教科書の種類と特徴</h2>
+                
+                <h3><i class="fas fa-code-branch"></i> 3種類の配信方式</h3>
+                
+                <div class="type-cards">
+                    <div class="type-card">
+                        <h4><i class="fas fa-cloud"></i> クラウド配信型</h4>
+                        <div class="type-badge recommended">推奨</div>
+                        <p class="type-desc">インターネット経由でコンテンツを配信</p>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h5><i class="fas fa-plus-circle"></i> メリット</h5>
+                                <ul>
+                                    <li>端末ストレージ不要</li>
+                                    <li>コンテンツの自動更新</li>
+                                    <li>複数端末での利用可能</li>
+                                    <li>初期設定が簡単</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h5><i class="fas fa-minus-circle"></i> デメリット</h5>
+                                <ul>
+                                    <li>常時ネット接続が必要</li>
+                                    <li>通信環境に依存</li>
+                                    <li>同時アクセス時の負荷</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="type-example"><strong>採用例</strong>: 東京書籍「Lentrance」、光村図書「デジタル教科書」</p>
+                    </div>
+
+                    <div class="type-card">
+                        <h4><i class="fas fa-download"></i> インストール型</h4>
+                        <p class="type-desc">端末にアプリとコンテンツを事前インストール</p>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h5><i class="fas fa-plus-circle"></i> メリット</h5>
+                                <ul>
+                                    <li>オフラインで使用可能</li>
+                                    <li>動作が安定・高速</li>
+                                    <li>通信障害の影響なし</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h5><i class="fas fa-minus-circle"></i> デメリット</h5>
+                                <ul>
+                                    <li>大容量ストレージ必要</li>
+                                    <li>初期設定に時間がかかる</li>
+                                    <li>更新作業が必要</li>
+                                    <li>端末ごとにライセンス管理</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="type-example"><strong>採用例</strong>: 教育出版「デジタル教科書」（一部）</p>
+                    </div>
+
+                    <div class="type-card">
+                        <h4><i class="fas fa-sync-alt"></i> ハイブリッド型</h4>
+                        <div class="type-badge">新方式</div>
+                        <p class="type-desc">クラウドとローカルの両方を活用</p>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h5><i class="fas fa-plus-circle"></i> メリット</h5>
+                                <ul>
+                                    <li>オンライン・オフライン両対応</li>
+                                    <li>最新コンテンツを自動同期</li>
+                                    <li>柔軟な運用が可能</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h5><i class="fas fa-minus-circle"></i> デメリット</h5>
+                                <ul>
+                                    <li>仕組みが複雑</li>
+                                    <li>同期タイミングの管理必要</li>
+                                    <li>一定のストレージ必要</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="type-example"><strong>採用例</strong>: 一部の出版社が開発中</p>
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-desktop"></i> 対応プラットフォーム</h3>
+                <div class="platform-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>OS/端末</th>
+                                <th>対応状況</th>
+                                <th>推奨スペック</th>
+                                <th>備考</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fab fa-chrome"></i> <strong>Chromebook</strong></td>
+                                <td><span class="badge-success">完全対応</span></td>
+                                <td>メモリ4GB以上、ストレージ32GB以上</td>
+                                <td>GIGA端末として最も普及</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fab fa-windows"></i> <strong>Windows</strong></td>
+                                <td><span class="badge-success">完全対応</span></td>
+                                <td>Windows 10以降、メモリ8GB以上</td>
+                                <td>従来のPC環境で利用可能</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fab fa-apple"></i> <strong>iPad</strong></td>
+                                <td><span class="badge-success">完全対応</span></td>
+                                <td>iPadOS 14以降、第6世代以降</td>
+                                <td>タッチ操作に最適</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fab fa-android"></i> <strong>Android</strong></td>
+                                <td><span class="badge-warning">一部対応</span></td>
+                                <td>Android 10以降、メモリ4GB以上</td>
+                                <td>出版社によって対応状況が異なる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- セクション4: 導入準備のポイント -->
+            <section id="preparation">
+                <h2><i class="fas fa-clipboard-list"></i> 4. 導入準備のポイント</h2>
+                
+                <div class="preparation-checklist">
+                    <h3><i class="fas fa-check-double"></i> 導入前チェックリスト</h3>
+                    
+                    <div class="checklist-category">
+                        <h4><i class="fas fa-network-wired"></i> インフラ環境の確認</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> 校内Wi-Fi環境の整備状況（全教室でアクセス可能か）</li>
+                            <li><input type="checkbox"> インターネット回線の帯域幅（推奨: 1Gbps以上）</li>
+                            <li><input type="checkbox"> 同時接続時の負荷テスト実施</li>
+                            <li><input type="checkbox"> バックアップ回線の有無</li>
+                            <li><input type="checkbox"> ファイアウォール設定の確認（教科書サイトへのアクセス許可）</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h4><i class="fas fa-tablet-alt"></i> 端末環境の確認</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> 全児童生徒分の端末準備</li>
+                            <li><input type="checkbox"> 端末のスペック確認（メモリ、ストレージ）</li>
+                            <li><input type="checkbox"> OSバージョンの統一・更新</li>
+                            <li><input type="checkbox"> ブラウザの動作確認（Chrome推奨）</li>
+                            <li><input type="checkbox"> 充電環境の整備</li>
+                            <li><input type="checkbox"> 予備端末の確保（故障・紛失時対応）</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h4><i class="fas fa-user-shield"></i> アカウント管理</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> 教科書提供プラットフォームへの学校登録</li>
+                            <li><input type="checkbox"> 児童生徒用アカウントの一括作成</li>
+                            <li><input type="checkbox"> 教員用管理アカウントの設定</li>
+                            <li><input type="checkbox"> ライセンスキーの管理体制構築</li>
+                            <li><input type="checkbox"> パスワードポリシーの策定</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h4><i class="fas fa-chalkboard-teacher"></i> 教員研修</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> デジタル教科書の基本操作研修（全教員対象）</li>
+                            <li><input type="checkbox"> 授業での活用方法研修</li>
+                            <li><input type="checkbox"> トラブル対応マニュアルの配布</li>
+                            <li><input type="checkbox"> サポート体制の周知</li>
+                            <li><input type="checkbox"> 模擬授業の実施</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h4><i class="fas fa-users"></i> 保護者・児童生徒への説明</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> 保護者説明会の実施</li>
+                            <li><input type="checkbox"> 家庭での端末利用ルール策定</li>
+                            <li><input type="checkbox"> 持ち帰り時の注意事項周知</li>
+                            <li><input type="checkbox"> 健康面への配慮（目の疲れ対策等）</li>
+                            <li><input type="checkbox"> 児童生徒向け操作ガイドの配布</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <h3><i class="fas fa-lightbulb"></i> 導入をスムーズに進めるコツ</h3>
+                    <ol>
+                        <li><strong>段階的導入</strong>: いきなり全教科ではなく、まずは1教科から始める</li>
+                        <li><strong>先行実施クラス</strong>: 一部のクラスで試行し、課題を洗い出してから全校展開</li>
+                        <li><strong>サポート体制</strong>: ICT支援員の配置スケジュールを導入初期に重点化</li>
+                        <li><strong>教員間の情報共有</strong>: 活用好事例や困りごとを共有する場を定期的に設ける</li>
+                        <li><strong>紙との併用期間</strong>: 最初から完全デジタル化せず、紙と併用しながら慣れていく</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- セクション5: 効果的な活用方法 -->
+            <section id="utilization">
+                <h2><i class="fas fa-graduation-cap"></i> 5. 効果的な活用方法</h2>
+                
+                <h3><i class="fas fa-star"></i> 教科別活用のポイント</h3>
+                
+                <div class="subject-utilization">
+                    <div class="subject-card">
+                        <h4><i class="fas fa-language"></i> 英語（2024年度導入教科）</h4>
+                        <div class="utilization-points">
+                            <h5><i class="fas fa-check"></i> 特に有効な機能</h5>
+                            <ul>
+                                <li><strong>ネイティブ音声再生</strong>: 正確な発音を繰り返し聞ける</li>
+                                <li><strong>読み上げ速度調整</strong>: 学習者のレベルに合わせた速度変更</li>
+                                <li><strong>音声録音機能</strong>: 自分の発音を録音・再生して確認</li>
+                                <li><strong>動画コンテンツ</strong>: 実際のコミュニケーション場面を視覚的に学習</li>
+                            </ul>
+                            <h5><i class="fas fa-lightbulb"></i> 実践例</h5>
+                            <ul>
+                                <li>リスニング練習: 各自のペースで音声を繰り返し再生</li>
+                                <li>発音練習: 録音機能で自己評価・相互評価</li>
+                                <li>個別学習: 習熟度に応じて音声速度を調整</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="subject-card">
+                        <h4><i class="fas fa-calculator"></i> 算数・数学（今後導入予定）</h4>
+                        <div class="utilization-points">
+                            <h5><i class="fas fa-check"></i> 特に有効な機能</h5>
+                            <ul>
+                                <li><strong>動的図形操作</strong>: 図形を動かして性質を理解</li>
+                                <li><strong>シミュレーション</strong>: グラフの変化を視覚的に確認</li>
+                                <li><strong>ステップ表示</strong>: 計算過程を段階的に表示</li>
+                                <li><strong>練習問題自動採点</strong>: 即座にフィードバック</li>
+                            </ul>
+                            <h5><i class="fas fa-lightbulb"></i> 実践例（予想）</h5>
+                            <ul>
+                                <li>関数のグラフ: パラメータを変えながらグラフの変化を観察</li>
+                                <li>図形の性質: 実際に図形を動かして定理を発見</li>
+                                <li>個別ドリル: 自動採点機能で苦手分野を集中学習</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="subject-card">
+                        <h4><i class="fas fa-flask"></i> 理科</h4>
+                        <div class="utilization-points">
+                            <h5><i class="fas fa-check"></i> 特に有効な機能</h5>
+                            <ul>
+                                <li><strong>実験動画</strong>: 危険な実験や大規模実験を視覚的に学習</li>
+                                <li><strong>3Dモデル</strong>: 分子構造や天体を立体的に観察</li>
+                                <li><strong>タイムラプス</strong>: 長時間の変化を短時間で確認</li>
+                                <li><strong>拡大機能</strong>: ミクロの世界を詳細に観察</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="subject-card">
+                        <h4><i class="fas fa-globe"></i> 社会</h4>
+                        <div class="utilization-points">
+                            <h5><i class="fas fa-check"></i> 特に有効な機能</h5>
+                            <ul>
+                                <li><strong>インタラクティブ地図</strong>: 拡大・縮小・レイヤー切り替え</li>
+                                <li><strong>歴史動画</strong>: 時代背景を動画で理解</li>
+                                <li><strong>統計データ更新</strong>: 最新の統計情報を常に参照</li>
+                                <li><strong>リンク機能</strong>: 関連する資料に即座にアクセス</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-universal-access"></i> 特別支援教育での活用</h3>
+                <div class="special-needs-section">
+                    <div class="needs-card">
+                        <h4><i class="fas fa-eye"></i> 視覚的な困難がある児童生徒</h4>
+                        <ul>
+                            <li>文字サイズの拡大（通常の2〜5倍まで可能）</li>
+                            <li>白黒反転・ハイコントラスト表示</li>
+                            <li>読み上げ機能（音声合成）の活用</li>
+                            <li>行間・文字間隔の調整</li>
+                        </ul>
+                    </div>
+                    <div class="needs-card">
+                        <h4><i class="fas fa-book-reader"></i> 読字障害（ディスレクシア）</h4>
+                        <ul>
+                            <li>読み上げ機能で聴覚的に情報取得</li>
+                            <li>ふりがな表示機能</li>
+                            <li>フォント変更（UDフォント等）</li>
+                            <li>読むスピードを自分で調整</li>
+                        </ul>
+                    </div>
+                    <div class="needs-card">
+                        <h4><i class="fas fa-hand-paper"></i> 書字・運動面の困難</h4>
+                        <ul>
+                            <li>デジタルでの書き込み（消し直しが容易）</li>
+                            <li>音声入力機能の活用</li>
+                            <li>教科書の持ち運び負担軽減</li>
+                            <li>タッチ・クリック操作で学習参加</li>
+                        </ul>
+                    </div>
+                    <div class="needs-card">
+                        <h4><i class="fas fa-brain"></i> 注意・集中の困難（ADHD等）</h4>
+                        <ul>
+                            <li>必要な箇所のみ表示（周囲の情報を削減）</li>
+                            <li>ブックマーク機能で学習箇所を管理</li>
+                            <li>マーカー機能で重要箇所を強調</li>
+                            <li>短時間で区切って学習（端末の記録機能活用）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="success-box">
+                    <h3><i class="fas fa-trophy"></i> 導入成功のカギ</h3>
+                    <p>デジタル教科書は<strong>「全員が同じように使う」のではなく、「一人ひとりが自分に合った使い方をする」</strong>ことで真価を発揮します。教員がさまざまな機能を紹介し、児童生徒が自分に合った学習スタイルを見つけられるよう支援することが重要です。</p>
+                </div>
+            </section>
+
+            <!-- セクション6: ICT支援員の役割 -->
+            <section id="support-role">
+                <h2><i class="fas fa-user-cog"></i> 6. ICT支援員の役割</h2>
+                
+                <div class="role-overview">
+                    <p>デジタル教科書の導入・運用において、ICT支援員は<strong>技術支援</strong>と<strong>活用支援</strong>の両面で重要な役割を担います。</p>
+                </div>
+
+                <div class="role-cards">
+                    <div class="role-card">
+                        <h3><i class="fas fa-cog"></i> 技術支援の役割</h3>
+                        <h4>導入準備段階</h4>
+                        <ul>
+                            <li>ネットワーク環境の負荷テスト実施</li>
+                            <li>端末のスペック確認とOS更新</li>
+                            <li>アカウント一括作成とライセンス配布</li>
+                            <li>教科書アプリのインストール・初期設定</li>
+                            <li>アクセステスト実施</li>
+                        </ul>
+                        <h4>運用段階</h4>
+                        <ul>
+                            <li>ログインできない児童生徒への個別対応</li>
+                            <li>端末トラブルの初期対応</li>
+                            <li>ネットワーク接続トラブルの解決</li>
+                            <li>アプリ・OS更新の管理</li>
+                            <li>定期的な動作確認</li>
+                        </ul>
+                    </div>
+
+                    <div class="role-card">
+                        <h3><i class="fas fa-chalkboard-teacher"></i> 活用支援の役割</h3>
+                        <h4>教員への支援</h4>
+                        <ul>
+                            <li>基本操作研修の実施（操作デモ）</li>
+                            <li>授業での効果的な活用方法の提案</li>
+                            <li>授業支援（機器準備、操作サポート）</li>
+                            <li>活用好事例の収集・共有</li>
+                            <li>質問対応とFAQ作成</li>
+                        </ul>
+                        <h4>児童生徒への支援</h4>
+                        <ul>
+                            <li>基本操作説明（ログイン、ページめくり等）</li>
+                            <li>便利機能の紹介（マーカー、検索等）</li>
+                            <li>個別の操作サポート</li>
+                            <li>トラブル時の初期対応</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-calendar-week"></i> 年間スケジュール例</h3>
+                <div class="annual-schedule">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>時期</th>
+                                <th>主な業務</th>
+                                <th>ポイント</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>3月</strong></td>
+                                <td>新年度準備<br>・アカウント作成<br>・ライセンス配布準備</td>
+                                <td>新入生・転入生分も考慮</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4月</strong></td>
+                                <td>初期設定・動作確認<br>教員研修実施<br>児童生徒への操作説明</td>
+                                <td>最も支援が必要な時期。重点配置を検討</td>
+                            </tr>
+                            <tr>
+                                <td><strong>5〜7月</strong></td>
+                                <td>日常的な技術サポート<br>授業内での操作支援<br>トラブル対応</td>
+                                <td>教員・児童生徒の困りごとを記録し、FAQ化</td>
+                            </tr>
+                            <tr>
+                                <td><strong>8月</strong></td>
+                                <td>夏季研修実施<br>1学期の課題整理<br>環境改善</td>
+                                <td>教員が落ち着いて学べる好機</td>
+                            </tr>
+                            <tr>
+                                <td><strong>9〜12月</strong></td>
+                                <td>応用的な活用支援<br>好事例の収集・共有<br>定期メンテナンス</td>
+                                <td>活用レベルを段階的に向上</td>
+                            </tr>
+                            <tr>
+                                <td><strong>1〜2月</strong></td>
+                                <td>年間振り返り<br>次年度に向けた改善提案<br>新規アカウント準備</td>
+                                <td>成果と課題をまとめて次年度に活かす</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tip-box">
+                    <h3><i class="fas fa-heart"></i> ICT支援員の心構え</h3>
+                    <ul>
+                        <li><strong>先生の味方</strong>: 「できない」を責めず、「一緒に解決」する姿勢で</li>
+                        <li><strong>児童生徒の安心</strong>: 分からないことを気軽に聞ける雰囲気づくり</li>
+                        <li><strong>情報収集</strong>: 他校の事例や最新情報を常にアップデート</li>
+                        <li><strong>記録と共有</strong>: トラブルや好事例を記録し、学校全体で共有</li>
+                        <li><strong>段階的支援</strong>: 一度に全てを教えず、必要に応じて段階的に</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- セクション7: よくあるトラブルと対処法 -->
+            <section id="troubleshooting">
+                <h2><i class="fas fa-tools"></i> 7. よくあるトラブルと対処法</h2>
+                
+                <div class="troubleshooting-list">
+                    <div class="trouble-item">
+                        <h3><i class="fas fa-exclamation-circle"></i> ログインできない</h3>
+                        <div class="trouble-content">
+                            <h4><i class="fas fa-search"></i> 主な原因</h4>
+                            <ul>
+                                <li>ID・パスワードの入力ミス</li>
+                                <li>アカウントが有効化されていない</li>
+                                <li>ライセンスが割り当てられていない</li>
+                                <li>ブラウザのキャッシュ問題</li>
+                            </ul>
+                            <h4><i class="fas fa-wrench"></i> 対処法</h4>
+                            <ol>
+                                <li>ID・パスワードを正確に入力しているか確認（大文字小文字に注意）</li>
+                                <li>管理画面でアカウントの有効化状態を確認</li>
+                                <li>ライセンスが正しく割り当てられているか確認</li>
+                                <li>ブラウザのキャッシュをクリアして再試行</li>
+                                <li>別のブラウザで試してみる</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="trouble-item">
+                        <h3><i class="fas fa-hourglass-half"></i> ページの読み込みが遅い・止まる</h3>
+                        <div class="trouble-content">
+                            <h4><i class="fas fa-search"></i> 主な原因</h4>
+                            <ul>
+                                <li>ネットワーク接続が不安定</li>
+                                <li>同時アクセス数が多い</li>
+                                <li>端末のメモリ不足</li>
+                                <li>動画などの重いコンテンツ</li>
+                            </ul>
+                            <h4><i class="fas fa-wrench"></i> 対処法</h4>
+                            <ol>
+                                <li>Wi-Fi接続状況を確認（電波強度、接続台数）</li>
+                                <li>不要なアプリ・タブを閉じる</li>
+                                <li>端末を再起動してメモリをリフレッシュ</li>
+                                <li>時間帯を分散してアクセス（全学年同時を避ける）</li>
+                                <li>軽量版コンテンツがあれば切り替える</li>
+                                <li>オフライン対応版があれば事前ダウンロード</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="trouble-item">
+                        <h3><i class="fas fa-volume-mute"></i> 音声が出ない</h3>
+                        <div class="trouble-content">
+                            <h4><i class="fas fa-search"></i> 主な原因</h4>
+                            <ul>
+                                <li>端末の音量がミュートまたは最小</li>
+                                <li>イヤホンが接続されている</li>
+                                <li>ブラウザの音声許可設定</li>
+                                <li>音声ファイルの読み込みエラー</li>
+                            </ul>
+                            <h4><i class="fas fa-wrench"></i> 対処法</h4>
+                            <ol>
+                                <li>端末の音量ボタンで音量を上げる</li>
+                                <li>ミュート設定を解除</li>
+                                <li>イヤホンが接続されていないか確認</li>
+                                <li>ブラウザの音声許可設定を確認</li>
+                                <li>ページをリロードして音声を再読み込み</li>
+                                <li>別の音声コンテンツで動作確認（端末の問題か教科書の問題か切り分け）</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="trouble-item">
+                        <h3><i class="fas fa-save"></i> 書き込みが保存されない</h3>
+                        <div class="trouble-content">
+                            <h4><i class="fas fa-search"></i> 主な原因</h4>
+                            <ul>
+                                <li>自動保存が正常に動作していない</li>
+                                <li>ネットワーク切断時に書き込んだ</li>
+                                <li>ブラウザのCookie・ストレージ制限</li>
+                                <li>複数端末での同時ログイン</li>
+                            </ul>
+                            <h4><i class="fas fa-wrench"></i> 対処法</h4>
+                            <ol>
+                                <li>書き込み後、保存完了のマークを確認する習慣をつける</li>
+                                <li>ネットワーク接続を確認してから書き込む</li>
+                                <li>ブラウザのCookie・ストレージ設定を許可</li>
+                                <li>前の端末からログアウトしてから新しい端末で使用</li>
+                                <li>定期的に手動保存を実施（機能があれば）</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="trouble-item">
+                        <h3><i class="fas fa-ban"></i> 教科書が開けない・エラー画面が表示される</h3>
+                        <div class="trouble-content">
+                            <h4><i class="fas fa-search"></i> 主な原因</h4>
+                            <ul>
+                                <li>ライセンスの有効期限切れ</li>
+                                <li>サーバー側のメンテナンス</li>
+                                <li>ブラウザのバージョンが古い</li>
+                                <li>セキュリティソフトによるブロック</li>
+                            </ul>
+                            <h4><i class="fas fa-wrench"></i> 対処法</h4>
+                            <ol>
+                                <li>管理画面でライセンスの有効期限を確認</li>
+                                <li>教科書会社のサイトでメンテナンス情報を確認</li>
+                                <li>ブラウザを最新版にアップデート</li>
+                                <li>セキュリティソフトの設定で教科書サイトを許可</li>
+                                <li>ファイアウォール設定を確認</li>
+                                <li>教科書会社のサポートに問い合わせ</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="trouble-item">
+                        <h3><i class="fas fa-battery-quarter"></i> 授業中にバッテリーが切れる</h3>
+                        <div class="trouble-content">
+                            <h4><i class="fas fa-search"></i> 主な原因</h4>
+                            <ul>
+                                <li>充電不足</li>
+                                <li>バッテリーの劣化</li>
+                                <li>動画再生など電力消費の多い使用</li>
+                                <li>画面の明るさが高すぎる</li>
+                            </ul>
+                            <h4><i class="fas fa-wrench"></i> 対処法</h4>
+                            <ol>
+                                <li><strong>予防策</strong>: 前日または朝の充電を徹底</li>
+                                <li>画面の明るさを適切なレベルに調整</li>
+                                <li>不要なアプリを終了して電力消費を抑える</li>
+                                <li>教室に充電環境を準備（モバイルバッテリー等）</li>
+                                <li>バッテリー劣化が疑われる端末は交換を検討</li>
+                                <li>バッテリー残量20%以下で警告する運用ルール設定</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="emergency-contact">
+                    <h3><i class="fas fa-phone-alt"></i> 緊急連絡先の整備</h3>
+                    <p>トラブル発生時にすぐに対応できるよう、以下の連絡先を整備しておきましょう：</p>
+                    <ul>
+                        <li>各教科書会社のサポート窓口（電話・メール・チャット）</li>
+                        <li>自治体教育委員会の担当者</li>
+                        <li>学校内のICT担当教員</li>
+                        <li>ICT支援員の連絡先（複数配置の場合）</li>
+                        <li>システム管理業者（MDM等）</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- セクション8: 主要教科書会社の比較 -->
+            <section id="comparison">
+                <h2><i class="fas fa-balance-scale"></i> 8. 主要教科書会社の比較</h2>
+                
+                <div class="info-box">
+                    <p><i class="fas fa-info-circle"></i> <strong>2024年度の英語デジタル教科書を提供する主要6社</strong>を比較します。各社で機能や使い勝手が異なるため、学校での選定の参考にしてください。</p>
+                </div>
+
+                <div class="publisher-comparison">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>出版社</th>
+                                <th>プラットフォーム名</th>
+                                <th>配信方式</th>
+                                <th>特徴的な機能</th>
+                                <th>対応OS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>東京書籍</strong></td>
+                                <td>Lentrance（レントランス）</td>
+                                <td>クラウド型</td>
+                                <td>・学習履歴の記録<br>・協働学習機能<br>・豊富な音声コンテンツ</td>
+                                <td>全OS対応</td>
+                            </tr>
+                            <tr>
+                                <td><strong>開隆堂</strong></td>
+                                <td>Kairyudo Digital Textbook</td>
+                                <td>クラウド型</td>
+                                <td>・シンプルな操作性<br>・軽快な動作<br>・オフライン対応（一部）</td>
+                                <td>全OS対応</td>
+                            </tr>
+                            <tr>
+                                <td><strong>三省堂</strong></td>
+                                <td>デジタル教科書</td>
+                                <td>クラウド型</td>
+                                <td>・辞書連携機能<br>・発音判定機能<br>・多様な動画教材</td>
+                                <td>全OS対応</td>
+                            </tr>
+                            <tr>
+                                <td><strong>教育出版</strong></td>
+                                <td>デジタル教科書</td>
+                                <td>ハイブリッド型</td>
+                                <td>・オン/オフ両対応<br>・カスタマイズ機能<br>・教員用管理ツール</td>
+                                <td>全OS対応</td>
+                            </tr>
+                            <tr>
+                                <td><strong>光村図書</strong></td>
+                                <td>デジタル教科書</td>
+                                <td>クラウド型</td>
+                                <td>・直感的UI<br>・充実した音声機能<br>・国語教科書との連携</td>
+                                <td>全OS対応</td>
+                            </tr>
+                            <tr>
+                                <td><strong>啓林館</strong></td>
+                                <td>デジタル教科書</td>
+                                <td>クラウド型</td>
+                                <td>・理解度チェック機能<br>・段階的学習サポート<br>・視覚的な補助教材</td>
+                                <td>全OS対応</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3><i class="fas fa-clipboard-list"></i> 機能比較マトリックス</h3>
+                <div class="feature-matrix">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>機能</th>
+                                <th>東京書籍</th>
+                                <th>開隆堂</th>
+                                <th>三省堂</th>
+                                <th>教育出版</th>
+                                <th>光村図書</th>
+                                <th>啓林館</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>音声再生</td>
+                                <td>◎</td>
+                                <td>○</td>
+                                <td>◎</td>
+                                <td>○</td>
+                                <td>◎</td>
+                                <td>○</td>
+                            </tr>
+                            <tr>
+                                <td>速度調整</td>
+                                <td>○</td>
+                                <td>○</td>
+                                <td>◎</td>
+                                <td>○</td>
+                                <td>○</td>
+                                <td>△</td>
+                            </tr>
+                            <tr>
+                                <td>録音機能</td>
+                                <td>○</td>
+                                <td>△</td>
+                                <td>◎</td>
+                                <td>○</td>
+                                <td>○</td>
+                                <td>○</td>
+                            </tr>
+                            <tr>
+                                <td>動画教材</td>
+                                <td>◎</td>
+                                <td>○</td>
+                                <td>◎</td>
+                                <td>○</td>
+                                <td>○</td>
+                                <td>◎</td>
+                            </tr>
+                            <tr>
+                                <td>書き込み</td>
+                                <td>◎</td>
+                                <td>○</td>
+                                <td>○</td>
+                                <td>◎</td>
+                                <td>○</td>
+                                <td>○</td>
+                            </tr>
+                            <tr>
+                                <td>オフライン対応</td>
+                                <td>△</td>
+                                <td>○</td>
+                                <td>△</td>
+                                <td>◎</td>
+                                <td>△</td>
+                                <td>△</td>
+                            </tr>
+                            <tr>
+                                <td>学習履歴</td>
+                                <td>◎</td>
+                                <td>△</td>
+                                <td>○</td>
+                                <td>○</td>
+                                <td>○</td>
+                                <td>◎</td>
+                            </tr>
+                            <tr>
+                                <td>協働学習</td>
+                                <td>◎</td>
+                                <td>△</td>
+                                <td>○</td>
+                                <td>○</td>
+                                <td>○</td>
+                                <td>△</td>
+                            </tr>
+                            <tr>
+                                <td>操作性</td>
+                                <td>○</td>
+                                <td>◎</td>
+                                <td>○</td>
+                                <td>○</td>
+                                <td>◎</td>
+                                <td>○</td>
+                            </tr>
+                            <tr>
+                                <td>動作速度</td>
+                                <td>○</td>
+                                <td>◎</td>
+                                <td>○</td>
+                                <td>◎</td>
+                                <td>○</td>
+                                <td>○</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="note">◎: 非常に優れている、○: 標準的、△: やや限定的</p>
+                    <p class="note"><i class="fas fa-info-circle"></i> <strong>注</strong>: 上記は2024年度時点の情報です。各社の機能は年度やバージョンにより変化します。最新情報は各教科書会社の公式サイトでご確認ください。</p>
+                </div>
+
+                <div class="tip-box">
+                    <h3><i class="fas fa-lightbulb"></i> 選定のポイント</h3>
+                    <ul>
+                        <li><strong>既存の紙教科書との連携</strong>: 現在使用している紙の教科書と同じ出版社を選ぶと、内容の整合性が高い</li>
+                        <li><strong>ネットワーク環境</strong>: オフライン対応が必要な場合は教育出版がおすすめ</li>
+                        <li><strong>操作のしやすさ</strong>: ICTに不慣れな教員・児童生徒が多い場合は、開隆堂や光村図書のシンプルなUIが有利</li>
+                        <li><strong>英語教育の重点</strong>: 発音・リスニング重視なら三省堂、協働学習重視なら東京書籍</li>
+                        <li><strong>サポート体制</strong>: 各社のサポート窓口の対応時間・質も重要な選定基準</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- セクション9: 導入事例集 -->
+            <section id="case-studies">
+                <h2><i class="fas fa-school"></i> 9. 導入事例集</h2>
+                
+                <div class="case-study">
+                    <h3><i class="fas fa-map-marker-alt"></i> 事例1: A市立B小学校（全校導入）</h3>
+                    <div class="case-content">
+                        <h4>学校概要</h4>
+                        <ul>
+                            <li>児童数: 約500名</li>
+                            <li>学級数: 18学級</li>
+                            <li>GIGA端末: iPad（全児童）</li>
+                        </ul>
+                        <h4>導入内容</h4>
+                        <ul>
+                            <li>2024年4月より5・6年生の英語でデジタル教科書導入</li>
+                            <li>出版社: 光村図書</li>
+                            <li>配信方式: クラウド型</li>
+                        </ul>
+                        <h4>導入プロセス</h4>
+                        <ol>
+                            <li>3月: ICT支援員による事前準備（アカウント作成、動作確認）</li>
+                            <li>4月初旬: 教員研修実施（2時間×2回）</li>
+                            <li>4月中旬: 児童への操作説明（各クラス1時間）</li>
+                            <li>5月〜: 本格運用開始</li>
+                        </ol>
+                        <h4>成果</h4>
+                        <ul>
+                            <li>音声機能により、家庭でも繰り返しリスニング練習が可能に</li>
+                            <li>録音機能で自分の発音を客観的に確認できるようになった</li>
+                            <li>特別支援学級の児童が文字サイズ拡大機能で学習しやすくなった</li>
+                        </ul>
+                        <h4>課題と対策</h4>
+                        <ul>
+                            <li><strong>課題</strong>: 1学期は教員がデジタル教科書の活用に消極的だった</li>
+                            <li><strong>対策</strong>: 夏季休業中に活用好事例共有会を開催。実際の授業動画を視聴し、具体的な活用イメージを共有</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <h3><i class="fas fa-map-marker-alt"></i> 事例2: C県立D中学校（段階的導入）</h3>
+                    <div class="case-content">
+                        <h4>学校概要</h4>
+                        <ul>
+                            <li>生徒数: 約300名</li>
+                            <li>学級数: 9学級</li>
+                            <li>GIGA端末: Chromebook（全生徒）</li>
+                        </ul>
+                        <h4>導入内容</h4>
+                        <ul>
+                            <li>2024年4月より全学年の英語でデジタル教科書導入</li>
+                            <li>出版社: 東京書籍（Lentrance）</li>
+                            <li>配信方式: クラウド型</li>
+                        </ul>
+                        <h4>導入プロセス（段階的アプローチ）</h4>
+                        <ol>
+                            <li>4月: まずは1年生のみで試行導入</li>
+                            <li>5月: 1年生での課題を洗い出し、改善策を実施</li>
+                            <li>6月: 2・3年生に展開</li>
+                        </ol>
+                        <h4>成果</h4>
+                        <ul>
+                            <li>学習履歴機能により、生徒の学習状況を教員が把握しやすくなった</li>
+                            <li>協働学習機能で、グループでの音読練習がスムーズに</li>
+                            <li>デジタル教科書への書き込みで、ノート代わりに活用する生徒も</li>
+                        </ul>
+                        <h4>課題と対策</h4>
+                        <ul>
+                            <li><strong>課題</strong>: 同時接続時にページ読み込みが遅くなる</li>
+                            <li><strong>対策</strong>: 学年ごとに使用時間帯をずらす運用ルールを設定。ネットワーク帯域の増強も検討中</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <h3><i class="fas fa-map-marker-alt"></i> 事例3: E市立F小学校（特別支援学級での活用）</h3>
+                    <div class="case-content">
+                        <h4>学校概要</h4>
+                        <ul>
+                            <li>児童数: 約400名</li>
+                            <li>特別支援学級: 3学級（12名）</li>
+                            <li>GIGA端末: Windows タブレット</li>
+                        </ul>
+                        <h4>導入内容</h4>
+                        <ul>
+                            <li>2024年4月より通常学級および特別支援学級でデジタル教科書導入</li>
+                            <li>出版社: 三省堂</li>
+                        </ul>
+                        <h4>特別支援での活用ポイント</h4>
+                        <ul>
+                            <li><strong>読字困難のある児童</strong>: 読み上げ機能で音声と文字を同時に確認</li>
+                            <li><strong>視覚過敏の児童</strong>: 白黒反転表示で読みやすく</li>
+                            <li><strong>集中力に課題のある児童</strong>: 表示範囲を限定して注意を集中</li>
+                        </ul>
+                        <h4>成果</h4>
+                        <ul>
+                            <li>読字困難のある児童が、読み上げ機能で自力で教科書を読めるようになった</li>
+                            <li>文字サイズ拡大により、弱視の児童が通常学級で一緒に学習できるように</li>
+                            <li>デジタル教科書により、特別支援学級と通常学級の教材が統一され、交流学習がスムーズに</li>
+                        </ul>
+                        <h4>教員の声</h4>
+                        <blockquote>
+                            「紙の教科書では支援が難しかった児童が、デジタル教科書の機能により自立して学習できるようになりました。一人ひとりに合わせたカスタマイズができる点が素晴らしいです。」
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <h3><i class="fas fa-star"></i> 成功事例に共通するポイント</h3>
+                    <ul>
+                        <li><strong>十分な準備期間</strong>: 導入1〜2ヶ月前から準備開始</li>
+                        <li><strong>段階的導入</strong>: いきなり全校ではなく、試行→展開のステップを踏む</li>
+                        <li><strong>教員研修の充実</strong>: 操作だけでなく、活用方法まで研修</li>
+                        <li><strong>ICT支援員の配置</strong>: 導入初期は重点的に配置</li>
+                        <li><strong>情報共有の場</strong>: 定期的に好事例や困りごとを共有する機会を設定</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- セクション10: 今後の展望 -->
+            <section id="future">
+                <h2><i class="fas fa-rocket"></i> 10. 今後の展望</h2>
+                
+                <h3><i class="fas fa-calendar-alt"></i> 今後の展開予測</h3>
+                <div class="future-timeline">
+                    <div class="future-item">
+                        <h4>2025年度</h4>
+                        <ul>
+                            <li>算数・数学へのデジタル教科書導入拡大</li>
+                            <li>理科・社会への導入検討開始</li>
+                            <li>AI機能の実装（学習サポート、自動採点等）</li>
+                        </ul>
+                    </div>
+                    <div class="future-item">
+                        <h4>2026年度</h4>
+                        <ul>
+                            <li>主要5教科でのデジタル教科書本格運用</li>
+                            <li>学習データの蓄積・分析機能の強化</li>
+                            <li>個別最適化学習への対応</li>
+                        </ul>
+                    </div>
+                    <div class="future-item">
+                        <h4>2027年度〜</h4>
+                        <ul>
+                            <li>段階的な全教科への拡大（文部科学省の方針）</li>
+                            <li>紙との併用またはデジタル中心への移行</li>
+                            <li>メタバース・VR/AR技術の活用</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-brain"></i> 技術的な進化</h3>
+                <div class="tech-evolution">
+                    <div class="tech-card">
+                        <h4><i class="fas fa-robot"></i> AI活用</h4>
+                        <ul>
+                            <li>学習内容の理解度に応じた問題の自動出題</li>
+                            <li>つまずきポイントの自動検出とサポート</li>
+                            <li>音声認識による発音評価（英語）</li>
+                            <li>自然言語処理による作文添削支援</li>
+                        </ul>
+                    </div>
+                    <div class="tech-card">
+                        <h4><i class="fas fa-vr-cardboard"></i> VR/AR技術</h4>
+                        <ul>
+                            <li>理科: 実験のバーチャル体験</li>
+                            <li>社会: 歴史的建造物の3D見学</li>
+                            <li>図工: 立体作品の制作シミュレーション</li>
+                            <li>英語: 海外の街並みでの会話練習</li>
+                        </ul>
+                    </div>
+                    <div class="tech-card">
+                        <h4><i class="fas fa-chart-line"></i> 学習分析</h4>
+                        <ul>
+                            <li>個々の学習履歴の可視化</li>
+                            <li>クラス全体の理解度分析</li>
+                            <li>教員への指導改善提案</li>
+                            <li>保護者への学習状況共有</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-exclamation-triangle"></i> 今後の課題</h3>
+                <div class="challenge-list">
+                    <div class="challenge-item">
+                        <h4><i class="fas fa-yen-sign"></i> 費用負担</h4>
+                        <p>2025年度以降の費用負担について、国・自治体・家庭のいずれが負担するかは予算編成により決定。無償提供の継続または公費負担の枠組み構築が課題。</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h4><i class="fas fa-eye"></i> 健康面への配慮</h4>
+                        <p>長時間の画面使用による視力低下や疲労への対策。適切な使用時間の設定、ブルーライトカット機能の活用、定期的な休憩の徹底が必要。</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h4><i class="fas fa-network-wired"></i> デジタルデバイド</h4>
+                        <p>家庭のネット環境格差、ICTスキル格差への対応。学校でのサポート体制強化と、全児童生徒が平等に学べる環境整備が課題。</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h4><i class="fas fa-pencil-alt"></i> 手書き学習との両立</h4>
+                        <p>デジタル化により失われる「手で書く」学習の価値。デジタルと手書きのバランスの取れた学習方法の確立が必要。</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h4><i class="fas fa-user-graduate"></i> 教員のICTスキル向上</h4>
+                        <p>教員によるICTスキル格差の解消。継続的な研修機会の提供と、校内でのスキル共有の仕組みづくりが重要。</p>
+                    </div>
+                </div>
+
+                <div class="success-box">
+                    <h3><i class="fas fa-heart"></i> デジタル教科書が目指すもの</h3>
+                    <p>デジタル教科書は単なる「紙の電子化」ではありません。<strong>一人ひとりの学び方に合わせた個別最適化</strong>、<strong>学びの質の向上</strong>、そして<strong>全ての子どもが学びやすい環境づくり</strong>を目指しています。</p>
+                    <p>ICT支援員として、この新しい学びの形を技術と心の両面から支えていきましょう。</p>
+                </div>
+            </section>
+
+            <!-- 関連ページへのリンク -->
+            <section class="related-links">
+                <h2><i class="fas fa-link"></i> 関連ページ</h2>
+                <div class="link-grid">
+                    <a href="giga-update.html" class="link-card">
+                        <i class="fas fa-rocket"></i>
+                        <h3>GIGA最新動向</h3>
+                        <p>GIGAスクール構想の最新情報</p>
+                    </a>
+                    <a href="device-management.html" class="link-card">
+                        <i class="fas fa-tablet-alt"></i>
+                        <h3>端末管理・MDM</h3>
+                        <p>デバイス管理の実践ガイド</p>
+                    </a>
+                    <a href="learning-support-systems.html" class="link-card">
+                        <i class="fas fa-chalkboard"></i>
+                        <h3>授業支援システム</h3>
+                        <p>授業支援システムの活用方法</p>
+                    </a>
+                    <a href="special-needs-ict.html" class="link-card">
+                        <i class="fas fa-universal-access"></i>
+                        <h3>特別支援ICT</h3>
+                        <p>特別支援教育でのICT活用</p>
+                    </a>
+                    <a href="troubleshooting.html" class="link-card">
+                        <i class="fas fa-wrench"></i>
+                        <h3>トラブルシューティング</h3>
+                        <p>100+のトラブル対処法</p>
+                    </a>
+                    <a href="glossary.html" class="link-card">
+                        <i class="fas fa-book"></i>
+                        <h3>ICT用語集</h3>
+                        <p>100+の専門用語を解説</p>
+                    </a>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト. All rights reserved.</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p style="margin-top: 15px;">
+                <a href="privacy-policy.html" style="color: white; margin: 0 10px;">プライバシーポリシー</a> | 
+                <a href="ad-policy.html" style="color: white; margin: 0 10px;">広告ポリシー</a> | 
+                <a href="contact.html" style="color: white; margin: 0 10px;">お問い合わせ</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
