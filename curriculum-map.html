@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教科・単元系統図完全ガイド - ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="小学校・中学校の5教科（国語・算数/数学・理科・社会・英語）の学習系統を可視化。教育未経験のICT支援員が授業支援に活用できる完全ガイド。">
+    <meta name="keywords" content="教科系統図,単元系統,学習指導要領,カリキュラムマップ,国語,算数,数学,理科,社会,英語,ICT支援員,授業支援,学習系統">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- 構造化データ（JSON-LD） -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "教科・単元系統図完全ガイド",
+      "description": "小中学校5教科の学習系統を可視化し、ICT支援員の授業支援に活用する方法を解説",
+      "author": {
+        "@type": "Organization",
+        "name": "ICT支援員総合ポータルサイト"
+      },
+      "datePublished": "2025-12-21",
+      "dateModified": "2025-12-21"
+    }
+    </script>
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: 系統図, カリキュラム, 学習指導要領)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-observation.html"><i class="fas fa-eye"></i> 授業観察</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="curriculum-map.html" class="active"><i class="fas fa-project-diagram"></i> 教科・単元系統図</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                        <li><a href="rubric.html"><i class="fas fa-clipboard-check"></i> ルーブリック評価</a></li>
+                        <li><a href="learning-support-systems.html"><i class="fas fa-chalkboard"></i> 授業支援システム</a></li>
+                        <li><a href="programming-education.html"><i class="fas fa-code"></i> プログラミング教育</a></li>
+                        <li><a href="digital-citizenship.html"><i class="fas fa-shield-alt"></i> 情報モラル教育</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI利用ガイド</a></li>
+                        <li><a href="ai-apps-education.html"><i class="fas fa-brain"></i> AI教育アプリ</a></li>
+                        <li><a href="digital-textbooks.html"><i class="fas fa-tablet-alt"></i> デジタル教科書</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-star"></i> 成功事例</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-heart"></i> 特別支援ICT</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="device-management.html"><i class="fas fa-tablet-alt"></i> 端末管理・MDM</a></li>
+                        <li><a href="wifi-troubleshooting.html"><i class="fas fa-wifi"></i> Wi-Fiトラブル対応</a></li>
+                        <li><a href="account-management.html"><i class="fas fa-user-shield"></i> アカウント管理</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> セキュリティ</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="edtech-comparison.html"><i class="fas fa-balance-scale"></i> EdTech比較</a></li>
+                        <li><a href="edtech-tools.html"><i class="fas fa-tools"></i> EdTechツール</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                        <li><a href="online-learning.html"><i class="fas fa-video"></i> オンライン授業</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-search"></i> 検索・参照</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="site-guide.html"><i class="fas fa-map"></i> サイトガイド</a></li>
+                        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> 参考リンク集</a></li>
+                        <li><a href="downloads.html"><i class="fas fa-download"></i> ダウンロード資料</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book"></i> 用語集</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> お問い合わせ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container main-content">
+        <article>
+            <header class="content-header">
+                <h1><i class="fas fa-project-diagram"></i> 教科・単元系統図完全ガイド</h1>
+                <p class="lead">小学校・中学校の5教科（国語・算数/数学・理科・社会・英語）の学習内容がどのように繋がっているかを可視化。教育未経験のICT支援員が授業の位置づけを理解し、効果的な支援を行うための完全ガイド</p>
+                <div class="meta-info">
+                    <span><i class="fas fa-clock"></i> 最終更新: 2025年12月</span>
+                    <span><i class="fas fa-tag"></i> 支援・指導</span>
+                    <span><i class="fas fa-signal"></i> レベル: 初級〜中級</span>
+                </div>
+            </header>
+
+            <!-- 目次 -->
+            <section class="toc-section">
+                <h2><i class="fas fa-list"></i> 目次</h2>
+                <div class="info-grid">
+                    <a href="#overview" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-info-circle"></i></div>
+                        <h3>1. 系統図とは</h3>
+                        <p>系統図の意義、ICT支援員にとっての重要性</p>
+                    </a>
+                    <a href="#japanese" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-book-reader"></i></div>
+                        <h3>2. 国語の学習系統</h3>
+                        <p>話す・聞く、書く、読むの系統的発展</p>
+                    </a>
+                    <a href="#math" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-calculator"></i></div>
+                        <h3>3. 算数・数学の学習系統</h3>
+                        <p>数と計算、図形、測定、データ活用の系統</p>
+                    </a>
+                    <a href="#science" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-flask"></i></div>
+                        <h3>4. 理科の学習系統</h3>
+                        <p>エネルギー、粒子、生命、地球の4領域</p>
+                    </a>
+                    <a href="#social" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-globe"></i></div>
+                        <h3>5. 社会の学習系統</h3>
+                        <p>地理、歴史、公民の系統的学習</p>
+                    </a>
+                    <a href="#english" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-language"></i></div>
+                        <h3>6. 英語の学習系統</h3>
+                        <p>聞く、読む、話す、書くの4技能の発展</p>
+                    </a>
+                    <a href="#ict-support" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-hands-helping"></i></div>
+                        <h3>7. ICT支援への活用方法</h3>
+                        <p>系統図を使った効果的な授業支援</p>
+                    </a>
+                    <a href="#publishers" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-building"></i></div>
+                        <h3>8. 教科書会社別の系統図</h3>
+                        <p>東京書籍、光村図書、啓林館等の特徴とICT活用</p>
+                    </a>
+                    <a href="#references" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-book-open"></i></div>
+                        <h3>9. 参考資料・引用元</h3>
+                        <p>文部科学省、教科書会社等の信頼できる情報源</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 1. 系統図とは -->
+            <section id="overview" class="content-section">
+                <h2><i class="fas fa-info-circle"></i> 1. 系統図とは</h2>
+
+                <div class="info-box">
+                    <h3><i class="fas fa-question-circle"></i> 教科・単元系統図とは</h3>
+                    <p><strong>系統図（カリキュラムマップ）</strong>とは、小学校から中学校、高校まで、各教科の学習内容がどのように繋がり、発展していくかを可視化したものです。</p>
+                    <p>学習指導要領に基づいて、各学年で学ぶ内容とその繋がりを体系的に示しています。</p>
+                </div>
+
+                <h3>系統図の3つの役割</h3>
+                <div class="role-grid">
+                    <div class="role-card">
+                        <h4><i class="fas fa-link"></i> 1. 学習の繋がりを可視化</h4>
+                        <p>「前の学年で何を学んだか」「次の学年で何を学ぶか」が一目で分かります。</p>
+                        <div class="example-box">
+                            <p><strong>例：算数・数学</strong></p>
+                            <p>小1「10までの数」→ 小2「100までの数」→ 小3「1000までの数」→ 小4「億・兆」</p>
+                        </div>
+                    </div>
+                    <div class="role-card">
+                        <h4><i class="fas fa-graduation-cap"></i> 2. 学習の系統性を理解</h4>
+                        <p>なぜこの順番で学ぶのか、基礎から応用への発展が理解できます。</p>
+                        <div class="example-box">
+                            <p><strong>例：理科</strong></p>
+                            <p>小3「昆虫の体のつくり」→ 小6「人の体のつくり」→ 中2「動物の体の仕組み」</p>
+                        </div>
+                    </div>
+                    <div class="role-card">
+                        <h4><i class="fas fa-compass"></i> 3. 授業の位置づけを把握</h4>
+                        <p>今日の授業が、長期的な学習のどこに位置するかが分かります。</p>
+                        <div class="example-box">
+                            <p><strong>例：国語</strong></p>
+                            <p>小1「ひらがな」→ 小2「カタカナ・漢字80字」→ 小3「漢字200字」→ ...段階的習得</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>ICT支援員にとっての重要性</h3>
+                <div class="importance-box">
+                    <h4><i class="fas fa-user-tie"></i> 教育未経験でも授業を理解できる</h4>
+                    <ul>
+                        <li><strong>授業の目的が分かる</strong>：今日の授業が何を目指しているか理解できる</li>
+                        <li><strong>適切な支援ができる</strong>：児童生徒のつまずきポイントが予測できる</li>
+                        <li><strong>教員との対話がスムーズ</strong>：「前の学年では〇〇を学習したので...」と会話できる</li>
+                        <li><strong>長期的な視点で提案できる</strong>：次の単元で使えるツールやアプリを提案できる</li>
+                    </ul>
+                </div>
+
+                <div class="reference-box">
+                    <h4><i class="fas fa-book"></i> 参考</h4>
+                    <p>学習指導要領は、文部科学省が定める「学校教育における教育課程の基準」です。全国の学校で共通して学ぶ内容と目標が示されており、系統図はこれに基づいて作成されます。</p>
+                    <p class="citation">出典: <a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1384661.htm" target="_blank" rel="noopener">文部科学省「学習指導要領」</a></p>
+                </div>
+            </section>
+
+            <!-- 2. 国語の学習系統 -->
+            <section id="japanese" class="content-section">
+                <h2><i class="fas fa-book-reader"></i> 2. 国語の学習系統</h2>
+
+                <div class="info-box">
+                    <p>国語は、<strong>「話すこと・聞くこと」「書くこと」「読むこと」</strong>の3つの領域で構成されています。これに加えて、語彙力や文法の知識が系統的に積み上げられます。</p>
+                </div>
+
+                <h3>国語の3つの領域と学習の発展</h3>
+
+                <div class="subject-development">
+                    <div class="dev-column">
+                        <h4><i class="fas fa-comments"></i> 話すこと・聞くこと</h4>
+                        <div class="grade-progression">
+                            <div class="grade-box grade-1">
+                                <h5>小学校低学年（1〜2年）</h5>
+                                <ul>
+                                    <li>相手に応じて話す</li>
+                                    <li>丁寧な言葉遣い</li>
+                                    <li>順序立てて話す</li>
+                                    <li>相手の話を最後まで聞く</li>
+                                </ul>
+                            </div>
+                            <div class="grade-box grade-2">
+                                <h5>小学校中学年（3〜4年）</h5>
+                                <ul>
+                                    <li>要点を聞き取る</li>
+                                    <li>理由を明確にして話す</li>
+                                    <li>話し合いの進め方</li>
+                                    <li>質問と応答</li>
+                                </ul>
+                            </div>
+                            <div class="grade-box grade-3">
+                                <h5>小学校高学年（5〜6年）</h5>
+                                <ul>
+                                    <li>意見と根拠を明確にして話す</li>
+                                    <li>討論・議論の仕方</li>
+                                    <li>目的に応じた話し方</li>
+                                    <li>聞き手を意識したスピーチ</li>
+                                </ul>
+                            </div>
+                            <div class="grade-box grade-4">
+                                <h5>中学校（1〜3年）</h5>
+                                <ul>
+                                    <li>論理的な話し方</li>
+                                    <li>多様な考えを比較・検討</li>
+                                    <li>議論の組み立て</li>
+                                    <li>プレゼンテーション</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dev-column">
+                        <h4><i class="fas fa-pen"></i> 書くこと</h4>
+                        <div class="grade-progression">
+                            <div class="grade-box grade-1">
+                                <h5>小学校低学年（1〜2年）</h5>
+                                <ul>
+                                    <li>ひらがな・カタカナ</li>
+                                    <li>漢字80字（1年）、160字（2年）</li>
+                                    <li>簡単な文を書く</li>
+                                    <li>日記、手紙</li>
+                                </ul>
+                            </div>
+                            <div class="grade-box grade-2">
+                                <h5>小学校中学年（3〜4年）</h5>
+                                <ul>
+                                    <li>漢字200字（3年）、200字（4年）</li>
+                                    <li>段落を意識した文章</li>
+                                    <li>調べたことを報告する文章</li>
+                                    <li>意見文</li>
+                                </ul>
+                            </div>
+                            <div class="grade-box grade-3">
+                                <h5>小学校高学年（5〜6年）</h5>
+                                <ul>
+                                    <li>漢字185字（5年）、181字（6年）</li>
+                                    <li>構成を考えた文章</li>
+                                    <li>意見と根拠を明確にした文章</li>
+                                    <li>要約、レポート</li>
+                                </ul>
+                            </div>
+                            <div class="grade-box grade-4">
+                                <h5>中学校（1〜3年）</h5>
+                                <ul>
+                                    <li>常用漢字の読み書き</li>
+                                    <li>論理的な文章</li>
+                                    <li>根拠を明確にした論文</li>
+                                    <li>批評文、小論文</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dev-column">
+                        <h4><i class="fas fa-book-open"></i> 読むこと</h4>
+                        <div class="grade-progression">
+                            <div class="grade-box grade-1">
+                                <h5>小学校低学年（1〜2年）</h5>
+                                <ul>
+                                    <li>音読</li>
+                                    <li>場面の様子を想像</li>
+                                    <li>登場人物の行動</li>
+                                    <li>物語を楽しむ</li>
+                                </ul>
+                            </div>
+                            <div class="grade-box grade-2">
+                                <h5>小学校中学年（3〜4年）</h5>
+                                <ul>
+                                    <li>登場人物の気持ちの変化</li>
+                                    <li>段落相互の関係</li>
+                                    <li>要点の把握</li>
+                                    <li>説明文の構造理解</li>
+                                </ul>
+                            </div>
+                            <div class="grade-box grade-3">
+                                <h5>小学校高学年（5〜6年）</h5>
+                                <ul>
+                                    <li>文章の構成や展開</li>
+                                    <li>筆者の意図や主張</li>
+                                    <li>要約</li>
+                                    <li>批判的読み</li>
+                                </ul>
+                            </div>
+                            <div class="grade-box grade-4">
+                                <h5>中学校（1〜3年）</h5>
+                                <ul>
+                                    <li>論理的な文章の読解</li>
+                                    <li>文学作品の鑑賞</li>
+                                    <li>古典入門</li>
+                                    <li>複数の文章の比較</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>国語の系統的学習のポイント</h3>
+                <div class="point-grid">
+                    <div class="point-card">
+                        <h4>📌 語彙の拡充</h4>
+                        <p>小1〜小6で約1,000字の漢字を学習。中学校で常用漢字（約2,000字）の読み書きを習得します。</p>
+                    </div>
+                    <div class="point-card">
+                        <h4>📌 文章構造の理解</h4>
+                        <p>文→段落→文章全体という階層的な理解が進みます。</p>
+                    </div>
+                    <div class="point-card">
+                        <h4>📌 表現力の向上</h4>
+                        <p>「思ったこと」から「根拠を明確にした意見」へと発展します。</p>
+                    </div>
+                </div>
+
+                <div class="ict-support-box">
+                    <h4><i class="fas fa-laptop"></i> ICT支援のポイント</h4>
+                    <ul>
+                        <li><strong>デジタル教科書</strong>：音声読み上げ機能（光村図書「Mナビ」等）で、読みが苦手な児童も学習できる</li>
+                        <li><strong>協働編集ツール</strong>：Google Docs、Microsoft Word Onlineで作文を共同で推敲・コメント機能で相互評価</li>
+                        <li><strong>プレゼンツール</strong>：Google スライド、PowerPoint、Canvaでスピーチ資料作成</li>
+                        <li><strong>デジタルポートフォリオ</strong>：Googleクラスルーム、ロイロノート・スクールで作文の成長過程を蓄積・振り返り</li>
+                        <li><strong>漢字学習アプリ</strong>：「小学生手書き漢字ドリル」「漢字検定」アプリで反復練習</li>
+                        <li><strong>読書記録</strong>：読書メーターアプリ、Googleフォームで読書感想の共有</li>
+                    </ul>
+                </div>
+
+                <div class="reference-box">
+                    <h4><i class="fas fa-book"></i> 参考</h4>
+                    <p>国語の学習内容は、文部科学省「小学校学習指導要領（平成29年告示）解説 国語編」および教科書会社（光村図書、東京書籍等）の系統表に基づいています。</p>
+                    <p class="citation">出典: <a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1387014.htm" target="_blank" rel="noopener">文部科学省「学習指導要領解説 国語編」</a></p>
+                </div>
+            </section>
+
+            <!-- 3. 算数・数学の学習系統 -->
+            <section id="math" class="content-section">
+                <h2><i class="fas fa-calculator"></i> 3. 算数・数学の学習系統</h2>
+
+                <div class="info-box">
+                    <p>算数・数学は、<strong>「数と計算」「図形」「測定」「変化と関係」「データの活用」</strong>の5つの領域で構成されています。各領域が螺旋的に発展し、抽象化・一般化が進みます。</p>
+                </div>
+
+                <h3>算数・数学の5つの領域</h3>
+
+                <div class="math-domain-grid">
+                    <div class="domain-card">
+                        <h4><i class="fas fa-sort-numeric-up"></i> A：数と計算</h4>
+                        <div class="domain-content">
+                            <p><strong>小学校低学年</strong></p>
+                            <ul>
+                                <li>10までの数、20までの数</li>
+                                <li>たし算・ひき算（1位数）</li>
+                                <li>九九（かけ算）</li>
+                            </ul>
+                            <p><strong>小学校中学年</strong></p>
+                            <ul>
+                                <li>大きな数（億、兆）</li>
+                                <li>わり算</li>
+                                <li>小数、分数の計算</li>
+                            </ul>
+                            <p><strong>小学校高学年</strong></p>
+                            <ul>
+                                <li>分数の乗除</li>
+                                <li>四則混合</li>
+                                <li>概数と見積もり</li>
+                            </ul>
+                            <p><strong>中学校</strong></p>
+                            <ul>
+                                <li>正負の数</li>
+                                <li>文字式</li>
+                                <li>方程式、連立方程式</li>
+                                <li>平方根</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="domain-card">
+                        <h4><i class="fas fa-shapes"></i> B：図形</h4>
+                        <div class="domain-content">
+                            <p><strong>小学校低学年</strong></p>
+                            <ul>
+                                <li>三角形、四角形、円</li>
+                                <li>箱の形（立体）</li>
+                            </ul>
+                            <p><strong>小学校中学年</strong></p>
+                            <ul>
+                                <li>正方形、長方形、直角三角形</li>
+                                <li>角の大きさ</li>
+                                <li>面積</li>
+                            </ul>
+                            <p><strong>小学校高学年</strong></p>
+                            <ul>
+                                <li>合同、対称</li>
+                                <li>体積</li>
+                                <li>角柱、円柱</li>
+                            </ul>
+                            <p><strong>中学校</strong></p>
+                            <ul>
+                                <li>平面図形の性質（合同、相似）</li>
+                                <li>三平方の定理</li>
+                                <li>空間図形（球、錐）</li>
+                                <li>証明</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="domain-card">
+                        <h4><i class="fas fa-ruler"></i> C：測定</h4>
+                        <div class="domain-content">
+                            <p><strong>小学校低学年</strong></p>
+                            <ul>
+                                <li>長さ（cm、m）</li>
+                                <li>かさ（L、dL、mL）</li>
+                                <li>時刻と時間</li>
+                            </ul>
+                            <p><strong>小学校中学年</strong></p>
+                            <ul>
+                                <li>長さ（km、mm）</li>
+                                <li>重さ（kg、g、t）</li>
+                                <li>面積（㎡、c㎡、k㎡）</li>
+                            </ul>
+                            <p><strong>小学校高学年</strong></p>
+                            <ul>
+                                <li>体積（㎤、㎥）</li>
+                                <li>速さ</li>
+                                <li>単位量あたりの大きさ</li>
+                            </ul>
+                            <p><strong>中学校</strong></p>
+                            <ul>
+                                <li>（測定は図形領域に統合）</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="domain-card">
+                        <h4><i class="fas fa-chart-line"></i> D：変化と関係</h4>
+                        <div class="domain-content">
+                            <p><strong>小学校低学年</strong></p>
+                            <ul>
+                                <li>簡単な表とグラフ</li>
+                            </ul>
+                            <p><strong>小学校中学年</strong></p>
+                            <ul>
+                                <li>□を使った式</li>
+                                <li>2量の関係（表）</li>
+                                <li>折れ線グラフ</li>
+                            </ul>
+                            <p><strong>小学校高学年</strong></p>
+                            <ul>
+                                <li>比例</li>
+                                <li>割合、百分率</li>
+                            </ul>
+                            <p><strong>中学校</strong></p>
+                            <ul>
+                                <li>比例、反比例</li>
+                                <li>1次関数</li>
+                                <li>y = ax²（2次関数入門）</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="domain-card">
+                        <h4><i class="fas fa-chart-bar"></i> E：データの活用</h4>
+                        <div class="domain-content">
+                            <p><strong>小学校低学年</strong></p>
+                            <ul>
+                                <li>簡単な表、○△グラフ</li>
+                            </ul>
+                            <p><strong>小学校中学年</strong></p>
+                            <ul>
+                                <li>棒グラフ、折れ線グラフ</li>
+                                <li>二次元の表</li>
+                            </ul>
+                            <p><strong>小学校高学年</strong></p>
+                            <ul>
+                                <li>平均値</li>
+                                <li>円グラフ、帯グラフ</li>
+                            </ul>
+                            <p><strong>中学校</strong></p>
+                            <ul>
+                                <li>ヒストグラム</li>
+                                <li>代表値（中央値、最頻値）</li>
+                                <li>確率</li>
+                                <li>標本調査</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>算数・数学の系統的学習の特徴</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🔄 螺旋的カリキュラム</h4>
+                        <p>同じテーマを学年ごとに深化・発展させます。</p>
+                        <div class="example-box">
+                            <p><strong>例：図形の面積</strong></p>
+                            <p>小4「長方形・正方形」→ 小5「三角形・平行四辺形」→ 小6「円」→ 中3「相似を使った面積」</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📊 具体から抽象へ</h4>
+                        <p>具体物の操作から、数式による抽象的な表現へ移行します。</p>
+                        <div class="example-box">
+                            <p><strong>例：数の理解</strong></p>
+                            <p>おはじき（具体物）→ 数字（記号）→ 文字式（抽象）</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🎯 つまずきポイント</h4>
+                        <ul>
+                            <li>繰り上がり・繰り下がり（小1〜2）</li>
+                            <li>九九の定着（小2）</li>
+                            <li>小数・分数の理解（小3〜5）</li>
+                            <li>文字式の理解（中1）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ict-support-box">
+                    <h4><i class="fas fa-laptop"></i> ICT支援のポイント</h4>
+                    <ul>
+                        <li><strong>図形ツール</strong>：GeoGebra（動的幾何）、Desmos（グラフ作成）、Polypad（パターンブロック）で図形を動的に操作</li>
+                        <li><strong>計算ドリルアプリ</strong>：AIドリル（Qubena、スタディサプリ、RISU算数、タブレットドリル）で個別最適化学習</li>
+                        <li><strong>プログラミング教材</strong>：Scratch（ビジュアルプログラミング）、Viscuit（低学年向け）で論理的思考力を育成</li>
+                        <li><strong>データ可視化</strong>：Google スプレッドシート、Microsoft Excelでグラフ作成・統計処理</li>
+                        <li><strong>数学学習動画</strong>：NHK for School「さんすう犬ワン」「マテマティカ」で概念理解をサポート</li>
+                        <li><strong>電卓アプリ</strong>：Wolfram Alpha（計算エンジン）で複雑な計算の検証</li>
+                    </ul>
+                </div>
+
+                <div class="reference-box">
+                    <h4><i class="fas fa-book"></i> 参考</h4>
+                    <p>算数・数学の系統は、文部科学省「学習指導要領」および教科書会社（東京書籍、啓林館、大日本図書等）の系統表に基づいています。</p>
+                    <p class="citation">出典: <a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1387016.htm" target="_blank" rel="noopener">文部科学省「学習指導要領解説 算数編・数学編」</a></p>
+                </div>
+            </section>
+
+            <!-- 4. 理科の学習系統 -->
+            <section id="science" class="content-section">
+                <h2><i class="fas fa-flask"></i> 4. 理科の学習系統</h2>
+
+                <div class="info-box">
+                    <p>理科は、<strong>「エネルギー」「粒子」「生命」「地球」</strong>の4つの領域で構成されています。観察・実験を通じて、科学的な見方・考え方を育成します。</p>
+                </div>
+
+                <h3>理科の4つの領域</h3>
+
+                <div class="science-domain-grid">
+                    <div class="science-card">
+                        <h4><i class="fas fa-bolt"></i> エネルギー領域（物理）</h4>
+                        <div class="domain-progression">
+                            <div class="sci-box">
+                                <h5>小3</h5>
+                                <ul>
+                                    <li>光の性質</li>
+                                    <li>磁石の性質</li>
+                                    <li>電気の通り道</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>小4</h5>
+                                <ul>
+                                    <li>電気の働き</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>小5</h5>
+                                <ul>
+                                    <li>振り子の運動</li>
+                                    <li>電流がつくる磁力</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>小6</h5>
+                                <ul>
+                                    <li>てこの規則性</li>
+                                    <li>電気の利用</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>中1</h5>
+                                <ul>
+                                    <li>光と音</li>
+                                    <li>力の働き</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>中2</h5>
+                                <ul>
+                                    <li>電流とその利用</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>中3</h5>
+                                <ul>
+                                    <li>運動とエネルギー</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="science-card">
+                        <h4><i class="fas fa-atom"></i> 粒子領域（化学）</h4>
+                        <div class="domain-progression">
+                            <div class="sci-box">
+                                <h5>小3</h5>
+                                <ul>
+                                    <li>物と重さ</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>小4</h5>
+                                <ul>
+                                    <li>金属、水、空気と温度</li>
+                                    <li>物の溶け方</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>小5</h5>
+                                <ul>
+                                    <li>物の溶け方</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>小6</h5>
+                                <ul>
+                                    <li>燃焼の仕組み</li>
+                                    <li>水溶液の性質</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>中1</h5>
+                                <ul>
+                                    <li>物質のすがた</li>
+                                    <li>水溶液</li>
+                                    <li>状態変化</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>中2</h5>
+                                <ul>
+                                    <li>化学変化と原子・分子</li>
+                                    <li>化学変化とイオン</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>中3</h5>
+                                <ul>
+                                    <li>化学変化とイオン</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="science-card">
+                        <h4><i class="fas fa-seedling"></i> 生命領域（生物）</h4>
+                        <div class="domain-progression">
+                            <div class="sci-box">
+                                <h5>小3</h5>
+                                <ul>
+                                    <li>身の回りの生物</li>
+                                    <li>昆虫と植物</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>小4</h5>
+                                <ul>
+                                    <li>人の体のつくりと運動</li>
+                                    <li>季節と生物</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>小5</h5>
+                                <ul>
+                                    <li>植物の発芽、成長、結実</li>
+                                    <li>動物の誕生</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>小6</h5>
+                                <ul>
+                                    <li>人の体のつくりと働き</li>
+                                    <li>植物の養分と水の通り道</li>
+                                    <li>生物と環境</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>中1</h5>
+                                <ul>
+                                    <li>生物の観察と分類</li>
+                                    <li>植物の体のつくりと働き</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>中2</h5>
+                                <ul>
+                                    <li>動物の体のつくりと働き</li>
+                                    <li>生物の体のつくりと働き</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>中3</h5>
+                                <ul>
+                                    <li>生命の連続性</li>
+                                    <li>自然と人間</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="science-card">
+                        <h4><i class="fas fa-globe-americas"></i> 地球領域（地学）</h4>
+                        <div class="domain-progression">
+                            <div class="sci-box">
+                                <h5>小3</h5>
+                                <ul>
+                                    <li>太陽と地面の様子</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>小4</h5>
+                                <ul>
+                                    <li>月と星</li>
+                                    <li>天気の様子</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>小5</h5>
+                                <ul>
+                                    <li>天気の変化</li>
+                                    <li>流れる水の働き</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>小6</h5>
+                                <ul>
+                                    <li>月と太陽</li>
+                                    <li>土地のつくりと変化</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>中1</h5>
+                                <ul>
+                                    <li>大地の成り立ちと変化</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>中2</h5>
+                                <ul>
+                                    <li>気象とその変化</li>
+                                </ul>
+                            </div>
+                            <div class="sci-box">
+                                <h5>中3</h5>
+                                <ul>
+                                    <li>地球と宇宙</li>
+                                    <li>自然と人間</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>理科学習の系統的特徴</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🔬 観察・実験の重視</h4>
+                        <p>「見る→予想する→実験する→考察する」という科学的探究プロセスを繰り返し経験します。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🌐 4領域の統合</h4>
+                        <p>各領域は独立しているのではなく、相互に関連しています。例：光合成（生命）には光（エネルギー）が必要。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📈 ミクロからマクロへ</h4>
+                        <p>身近な現象から始まり、原子・分子、宇宙へと視野が広がります。</p>
+                    </div>
+                </div>
+
+                <div class="ict-support-box">
+                    <h4><i class="fas fa-laptop"></i> ICT支援のポイント</h4>
+                    <ul>
+                        <li><strong>実験動画</strong>：NHK for School「ふしぎエンドレス」「考えるカラス」、理科ねっとわーく（独立行政法人）、啓林館デジタル教科書で実験の様子を確認</li>
+                        <li><strong>観察記録</strong>：タブレットのカメラ、タイムラプス機能で植物の成長を記録、Googleフォトで整理・共有</li>
+                        <li><strong>天体観測アプリ</strong>：Star Walk 2、Stellarium Mobile（ステラリウム）、Sky Guide、星座表で星座・惑星を学習</li>
+                        <li><strong>シミュレーション</strong>：PhET Interactive Simulations（物理・化学・生物）、Google Earth（地形観察）で実験が難しい現象を可視化</li>
+                        <li><strong>センサー活用</strong>：温度センサー、照度センサーとタブレットを連携してデータ収集・グラフ化</li>
+                        <li><strong>顕微鏡カメラ</strong>：デジタル顕微鏡、スマホ顕微鏡アダプタで観察画像を記録・拡大表示</li>
+                    </ul>
+                </div>
+
+                <div class="reference-box">
+                    <h4><i class="fas fa-book"></i> 参考</h4>
+                    <p>理科の系統は、文部科学省「学習指導要領」および教科書会社（啓林館、東京書籍、大日本図書等）の系統表に基づいています。</p>
+                    <p class="citation">出典: <a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1387017.htm" target="_blank" rel="noopener">文部科学省「学習指導要領解説 理科編」</a></p>
+                </div>
+            </section>
+
+            <!-- 5. 社会の学習系統 -->
+            <section id="social" class="content-section">
+                <h2><i class="fas fa-globe"></i> 5. 社会の学習系統</h2>
+
+                <div class="info-box">
+                    <p>社会科は、小学校では<strong>「地域」→「日本」→「世界」</strong>と視野を広げ、中学校では<strong>「地理」「歴史」「公民」</strong>の3分野を学習します。</p>
+                </div>
+
+                <h3>社会科の学習の広がり</h3>
+
+                <div class="social-progression">
+                    <div class="social-stage">
+                        <h4><i class="fas fa-school"></i> 小学校3年</h4>
+                        <div class="social-content">
+                            <h5>身近な地域の学習</h5>
+                            <ul>
+                                <li>学校の周りの様子</li>
+                                <li>市（区・町・村）の様子</li>
+                                <li>地域に見られる生産や販売の仕事</li>
+                                <li>地域の安全を守る働き（消防・警察）</li>
+                                <li>地域の移り変わり</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="social-stage">
+                        <h4><i class="fas fa-map-marked-alt"></i> 小学校4年</h4>
+                        <div class="social-content">
+                            <h5>都道府県の学習</h5>
+                            <ul>
+                                <li>都道府県の地理的環境</li>
+                                <li>自然災害から人々を守る活動</li>
+                                <li>県内の特色ある地域</li>
+                                <li>伝統や文化、先人の働き</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="social-stage">
+                        <h4><i class="fas fa-flag"></i> 小学校5年</h4>
+                        <div class="social-content">
+                            <h5>日本の国土と産業</h5>
+                            <ul>
+                                <li>国土の地形や気候</li>
+                                <li>農業・水産業・工業</li>
+                                <li>情報化した社会と産業の発展</li>
+                                <li>環境を守る取り組み</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="social-stage">
+                        <h4><i class="fas fa-landmark"></i> 小学校6年</h4>
+                        <div class="social-content">
+                            <h5>日本の歴史・政治・国際理解</h5>
+                            <ul>
+                                <li>縄文時代〜現代までの歴史</li>
+                                <li>政治の働き（国会、内閣、裁判所）</li>
+                                <li>日本国憲法の三大原則</li>
+                                <li>世界の中の日本</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="social-stage">
+                        <h4><i class="fas fa-globe-asia"></i> 中学校 地理的分野</h4>
+                        <div class="social-content">
+                            <ul>
+                                <li>世界の地域構成と地理的特色</li>
+                                <li>日本の地域的特色と地域区分</li>
+                                <li>世界と日本の結びつき</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="social-stage">
+                        <h4><i class="fas fa-book-open"></i> 中学校 歴史的分野</h4>
+                        <div class="social-content">
+                            <ul>
+                                <li>古代〜中世の日本と世界</li>
+                                <li>近世〜近代の日本と世界</li>
+                                <li>現代の日本と世界</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="social-stage">
+                        <h4><i class="fas fa-balance-scale"></i> 中学校 公民的分野</h4>
+                        <div class="social-content">
+                            <ul>
+                                <li>個人の尊重と日本国憲法</li>
+                                <li>民主政治と政治参加</li>
+                                <li>市場経済と金融</li>
+                                <li>国際社会と平和</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>社会科学習の系統的特徴</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🔍 同心円的拡大</h4>
+                        <p>自分の身近な地域から出発し、視野を日本、世界へと広げていきます。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📜 時間軸の学習</h4>
+                        <p>現在の社会を理解するために、歴史を学びます。過去→現在→未来という時間の流れを意識します。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🤝 社会参画意識</h4>
+                        <p>知識を得るだけでなく、「社会の一員としてどう行動するか」を考える力を育成します。</p>
+                    </div>
+                </div>
+
+                <div class="ict-support-box">
+                    <h4><i class="fas fa-laptop"></i> ICT支援のポイント</h4>
+                    <ul>
+                        <li><strong>デジタル地図</strong>：Google Earth、Google マップ、国土地理院「地理院地図」で地形や都市を立体的に観察、ストリートビューで現地の様子を確認</li>
+                        <li><strong>統計データ</strong>：e-Stat（政府統計の総合窓口）、総務省統計局、国土交通省データでグラフ作成・データ分析</li>
+                        <li><strong>歴史資料</strong>：国立国会図書館デジタルコレクション、文化庁「文化遺産オンライン」で一次資料（古文書、写真等）にアクセス</li>
+                        <li><strong>プレゼンテーション</strong>：Google スライド、PowerPoint、Canvaで調べ学習の成果をまとめて発表</li>
+                        <li><strong>年表作成</strong>：TimeGraphics（オンライン年表ツール）、Google スプレッドシートで歴史年表を作成</li>
+                        <li><strong>バーチャル見学</strong>：博物館・美術館の公式サイトでバーチャルツアー（国立博物館、江戸東京博物館等）</li>
+                    </ul>
+                </div>
+
+                <div class="reference-box">
+                    <h4><i class="fas fa-book"></i> 参考</h4>
+                    <p>社会科の系統は、文部科学省「学習指導要領」および教科書会社（東京書籍、日本文教出版、教育出版等）の系統表に基づいています。</p>
+                    <p class="citation">出典: <a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1387015.htm" target="_blank" rel="noopener">文部科学省「学習指導要領解説 社会編」</a></p>
+                </div>
+            </section>
+
+            <!-- 6. 英語の学習系統 -->
+            <section id="english" class="content-section">
+                <h2><i class="fas fa-language"></i> 6. 英語の学習系統</h2>
+
+                <div class="info-box">
+                    <p>英語は、<strong>「聞くこと」「読むこと」「話すこと［やり取り］」「話すこと［発表］」「書くこと」</strong>の5つの領域で構成されています。小学校3年生から学習が始まり、4技能5領域をバランスよく育成します。</p>
+                </div>
+
+                <h3>英語の学習の発展</h3>
+
+                <div class="english-progression">
+                    <div class="english-stage">
+                        <h4><i class="fas fa-child"></i> 小学校3〜4年（外国語活動）</h4>
+                        <div class="english-content">
+                            <h5>目標：英語に慣れ親しむ</h5>
+                            <div class="skill-grid">
+                                <div class="skill-box">
+                                    <strong>聞くこと</strong>
+                                    <ul>
+                                        <li>挨拶、身の回りの物の名前</li>
+                                        <li>簡単な指示や質問</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-box">
+                                    <strong>話すこと</strong>
+                                    <ul>
+                                        <li>挨拶、自己紹介</li>
+                                        <li>好きなもの、できること</li>
+                                        <li>ジェスチャーを使った表現</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="note">※文字の読み書きは本格的には扱わない</p>
+                        </div>
+                    </div>
+
+                    <div class="english-stage">
+                        <h4><i class="fas fa-user-graduate"></i> 小学校5〜6年（外国語科）</h4>
+                        <div class="english-content">
+                            <h5>目標：基本的な英語を使えるようになる</h5>
+                            <div class="skill-grid">
+                                <div class="skill-box">
+                                    <strong>聞くこと</strong>
+                                    <ul>
+                                        <li>日常的な話題についての簡単な語句や表現</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-box">
+                                    <strong>読むこと</strong>
+                                    <ul>
+                                        <li>アルファベットの大文字・小文字</li>
+                                        <li>身近な語句や簡単な文</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-box">
+                                    <strong>話すこと［やり取り］</strong>
+                                    <ul>
+                                        <li>身近な話題での簡単な会話</li>
+                                        <li>質問と応答</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-box">
+                                    <strong>話すこと［発表］</strong>
+                                    <ul>
+                                        <li>自分のことや身近なことの紹介</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-box">
+                                    <strong>書くこと</strong>
+                                    <ul>
+                                        <li>アルファベットや簡単な語句</li>
+                                        <li>例文を参考にした短い文</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="note">※小学校で学習する語彙：600〜700語程度</p>
+                        </div>
+                    </div>
+
+                    <div class="english-stage">
+                        <h4><i class="fas fa-school"></i> 中学校</h4>
+                        <div class="english-content">
+                            <h5>目標：身近な話題について理解し、表現できる</h5>
+                            <div class="skill-grid">
+                                <div class="skill-box">
+                                    <strong>聞くこと</strong>
+                                    <ul>
+                                        <li>日常的な話題や社会的な話題</li>
+                                        <li>話の概要や要点の理解</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-box">
+                                    <strong>読むこと</strong>
+                                    <ul>
+                                        <li>日常的な話題の短い文章</li>
+                                        <li>簡単な物語や説明文</li>
+                                        <li>概要や要点の把握</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-box">
+                                    <strong>話すこと［やり取り］</strong>
+                                    <ul>
+                                        <li>関心のある事柄について会話</li>
+                                        <li>意見や考えの交換</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-box">
+                                    <strong>話すこと［発表］</strong>
+                                    <ul>
+                                        <li>関心のある事柄の発表</li>
+                                        <li>意見や理由を述べる</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-box">
+                                    <strong>書くこと</strong>
+                                    <ul>
+                                        <li>身近な話題についての文章</li>
+                                        <li>意見や感想、理由を書く</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="note">※中学校で学習する語彙：1,600〜1,800語程度（小学校600〜700語を含む）</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>英語学習の系統的特徴</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🗣️ 音声中心から文字へ</h4>
+                        <p>小3〜4は音声中心。小5〜6で文字（読み書き）を本格的に学習します。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🌐 4技能5領域のバランス</h4>
+                        <p>「話すこと」を「やり取り」と「発表」に分け、コミュニケーション能力を総合的に育成します。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📚 語彙の段階的拡充</h4>
+                        <p>小学校600〜700語 + 中学校1,600〜1,800語 = 計2,200〜2,500語を学習します。</p>
+                    </div>
+                </div>
+
+                <div class="ict-support-box">
+                    <h4><i class="fas fa-laptop"></i> ICT支援のポイント</h4>
+                    <ul>
+                        <li><strong>デジタル教科書</strong>：音声機能（東京書籍「まなビューア」、開隆堂デジタル教科書）でネイティブの発音を繰り返し聞ける</li>
+                        <li><strong>オンライン辞書</strong>：Weblio、英辞郎、Google 翻訳で語彙・例文を調べる</li>
+                        <li><strong>発音練習アプリ</strong>：ELSA Speak、英語発音アプリ、Siri・Google アシスタントの音声認識で発音をチェック</li>
+                        <li><strong>オンライン交流</strong>：Zoom、Google Meet、Microsoft Teamsで海外の学校とのビデオ通話・実践的コミュニケーション</li>
+                        <li><strong>英語学習アプリ</strong>：Duolingo、Quizlet（単語カード）、Kahoot!（クイズ）で楽しく学習</li>
+                        <li><strong>英作文サポート</strong>：Grammarly（文法チェック）、DeepL（翻訳補助）で英作文を推敲</li>
+                    </ul>
+                </div>
+
+                <div class="reference-box">
+                    <h4><i class="fas fa-book"></i> 参考</h4>
+                    <p>英語の系統は、文部科学省「学習指導要領」および教科書会社（東京書籍、開隆堂、三省堂等）の系統表に基づいています。</p>
+                    <p class="citation">出典: <a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1387018.htm" target="_blank" rel="noopener">文部科学省「学習指導要領解説 外国語活動・外国語編」</a></p>
+                </div>
+            </section>
+
+            <!-- 7. ICT支援への活用方法 -->
+            <section id="ict-support" class="content-section">
+                <h2><i class="fas fa-hands-helping"></i> 7. ICT支援への活用方法</h2>
+
+                <div class="info-box">
+                    <p>系統図を理解することで、<strong>効果的で的確なICT支援</strong>ができるようになります。ここでは、系統図を使った具体的な支援方法を紹介します。</p>
+                </div>
+
+                <h3>系統図を使った支援の5つの場面</h3>
+
+                <div class="support-scene-grid">
+                    <div class="scene-card">
+                        <h4><i class="fas fa-eye"></i> 場面1：授業観察時</h4>
+                        <div class="scene-content">
+                            <h5>系統図で授業の位置づけを把握</h5>
+                            <p><strong>授業前に確認すること</strong></p>
+                            <ul>
+                                <li>前の学年で何を学習したか</li>
+                                <li>今日の学習内容</li>
+                                <li>次の学年で何を学ぶか</li>
+                            </ul>
+                            <div class="example-box">
+                                <p><strong>例：小4算数「わり算」の授業</strong></p>
+                                <p>✅ 系統図で確認：</p>
+                                <ul>
+                                    <li>小3で「わり算の意味」を学習済み</li>
+                                    <li>今回は「2桁÷1桁」の筆算</li>
+                                    <li>小5で「小数÷整数」に発展</li>
+                                </ul>
+                                <p>→ 九九が定着していない児童へのフォローが重要と分かる</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <h4><i class="fas fa-lightbulb"></i> 場面2：授業提案時</h4>
+                        <div class="scene-content">
+                            <h5>次の単元を見据えた提案</h5>
+                            <p><strong>系統図を使った提案例</strong></p>
+                            <div class="example-box">
+                                <p><strong>例：小5理科「天気の変化」</strong></p>
+                                <p>✅ 系統図で確認：</p>
+                                <ul>
+                                    <li>小4で「天気の観測」を学習済み</li>
+                                    <li>今回は「天気の変化の規則性」</li>
+                                    <li>中2で「気象とその変化」に発展</li>
+                                </ul>
+                                <p>💡 提案：</p>
+                                <p>「気象庁のウェブサイトで天気図を見ることで、雲の動きを視覚的に理解できます。中学校でも使うツールなので、今から慣れておくと良いと思います」</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <h4><i class="fas fa-question-circle"></i> 場面3：教員からの相談時</h4>
+                        <div class="scene-content">
+                            <h5>つまずきポイントの予測と対策</h5>
+                            <p><strong>教員：</strong>「今度、分数のかけ算をやるんですが、何か良い教材はありますか？」</p>
+                            <p><strong>支援員（系統図で確認）：</strong></p>
+                            <ul>
+                                <li>小3で「分数の意味」学習</li>
+                                <li>小4で「同分母分数の加減」学習</li>
+                                <li>小5で「分数のかけ算」（新出）</li>
+                            </ul>
+                            <p>💡 提案：</p>
+                            <p>「分数の意味が理解できていないと、かけ算も難しいです。まず、図を使って視覚的に理解できるデジタル教材（例：GeoGebra）はいかがでしょうか？」</p>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <h4><i class="fas fa-tools"></i> 場面4：教材・ツール選定時</h4>
+                        <div class="scene-content">
+                            <h5>学年に適した教材の選択</h5>
+                            <p><strong>系統図を使った教材選び</strong></p>
+                            <div class="example-box">
+                                <p><strong>例：「AIドリル」の導入</strong></p>
+                                <p>✅ 系統図で各学年の学習内容を確認：</p>
+                                <ul>
+                                    <li>小1〜2：基礎的な計算（九九まで）</li>
+                                    <li>小3〜4：大きな数、小数、分数の導入</li>
+                                    <li>小5〜6：小数・分数の四則演算</li>
+                                </ul>
+                                <p>💡 判断：</p>
+                                <p>「このAIドリルは、小3以降の内容に対応しているので、小3〜6年生向けです。小1〜2年生には別の教材が必要です」</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scene-card">
+                        <h4><i class="fas fa-users"></i> 場面5：児童生徒への個別支援時</h4>
+                        <div class="scene-content">
+                            <h5>つまずきの原因を遡って特定</h5>
+                            <p><strong>系統図で「どこでつまずいたか」を特定</strong></p>
+                            <div class="example-box">
+                                <p><strong>例：小5児童が「分数のわり算」が分からない</strong></p>
+                                <p>✅ 系統図で遡る：</p>
+                                <ul>
+                                    <li>小5「分数のわり算」（現在）</li>
+                                    <li>↑ 小5「分数のかけ算」は理解している？</li>
+                                    <li>↑ 小4「分数の加減」は理解している？</li>
+                                    <li>↑ 小3「分数の意味」は理解している？</li>
+                                </ul>
+                                <p>💡 支援：</p>
+                                <p>「分数の意味から理解できていないようです。小3の内容から、図を使って復習しましょう」</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>系統図を使った支援の実践ステップ</h3>
+                <div class="step-grid">
+                    <div class="step-card">
+                        <h4>ステップ1：授業の単元を確認</h4>
+                        <p>今日の授業が、どの教科のどの単元かを確認します。</p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step-card">
+                        <h4>ステップ2：系統図で位置を確認</h4>
+                        <p>系統図で、その単元が学習系統のどこに位置するかを確認します。</p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step-card">
+                        <h4>ステップ3：前後の学習内容を把握</h4>
+                        <p>前の学年で何を学び、次の学年で何を学ぶかを把握します。</p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step-card">
+                        <h4>ステップ4：支援ポイントを考える</h4>
+                        <p>つまずきやすいポイント、ICTで効果的に支援できる場面を考えます。</p>
+                    </div>
+                </div>
+
+                <h3>系統図を使った支援の注意点</h3>
+                <div class="warning-box">
+                    <h4><i class="fas fa-exclamation-triangle"></i> 注意すべきこと</h4>
+                    <ul>
+                        <li><strong>系統図は「理想」</strong>：実際の授業では、児童生徒の理解度に応じて柔軟に対応します</li>
+                        <li><strong>個人差が大きい</strong>：同じクラスでも、理解度は様々。系統図はあくまで目安です</li>
+                        <li><strong>教員の判断を尊重</strong>：系統図を根拠に提案しても、最終判断は教員が行います</li>
+                        <li><strong>学習指導要領の改訂</strong>：約10年ごとに改訂されるため、最新の情報を確認しましょう</li>
+                    </ul>
+                </div>
+
+                <div class="tips-box">
+                    <h4><i class="fas fa-lightbulb"></i> 効果的に活用するコツ</h4>
+                    <ul>
+                        <li><strong>系統図を印刷して手元に</strong>：職員室や準備室に掲示し、いつでも確認できるようにする</li>
+                        <li><strong>教員と一緒に確認</strong>：「この単元は、系統図でいうとここですね」と共通認識を持つ</li>
+                        <li><strong>教科書の目次と照合</strong>：系統図と教科書の単元を対応させて理解を深める</li>
+                        <li><strong>定期的に見返す</strong>：年度初めや学期初めに、系統図を確認する習慣をつける</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 8. 教科書会社別の系統図の特徴 -->
+            <section id="publishers" class="content-section">
+                <h2><i class="fas fa-building"></i> 8. 教科書会社別の系統図の特徴</h2>
+
+                <div class="info-box">
+                    <p>各教科書会社は、学習指導要領に基づきながらも、独自の編集方針や系統性を持っています。ICT支援員として、学校で採用されている教科書会社の特徴を理解することで、より効果的な支援が可能になります。</p>
+                </div>
+
+                <h3>主要教科書会社の特徴</h3>
+
+                <!-- 国語：光村図書 -->
+                <div class="publisher-card">
+                    <h4><i class="fas fa-book-reader"></i> 国語：光村図書出版</h4>
+                    <div class="publisher-content">
+                        <div class="publisher-info">
+                            <p><strong>シェア：</strong>小学校国語で約70%のシェア（国内No.1）</p>
+                            <p><strong>公式サイト：</strong><a href="https://www.mitsumura-tosho.co.jp/" target="_blank" rel="noopener">https://www.mitsumura-tosho.co.jp/</a></p>
+                        </div>
+                        <div class="features-box">
+                            <h5>系統図の特徴</h5>
+                            <ul>
+                                <li><strong>「言葉の力」の系統表</strong>：各学年で育成する言語能力を明確化</li>
+                                <li><strong>単元配列の工夫</strong>：「読むこと」と「書くこと」を関連付けた単元構成</li>
+                                <li><strong>デジタル教材との連携</strong>：「Mナビ」（デジタル教科書）で系統的な学習をサポート</li>
+                                <li><strong>文学教材の充実</strong>：定番教材（ごんぎつね、モチモチの木など）を系統的に配置</li>
+                            </ul>
+                        </div>
+                        <div class="ict-tips">
+                            <h5><i class="fas fa-laptop"></i> ICT支援のポイント</h5>
+                            <ul>
+                                <li>光村図書のデジタル教科書「Mナビ」は音声読み上げ機能が充実</li>
+                                <li>単元ごとの「言葉の力」を意識したICT活用（例：作文→協働編集ツール）</li>
+                                <li>「学習用語集」機能を活用した語彙指導のサポート</li>
+                            </ul>
+                        </div>
+                        <div class="reference-box">
+                            <p class="citation">参考: <a href="https://www.mitsumura-tosho.co.jp/kyokasho/" target="_blank" rel="noopener">光村図書「教科書・教材」</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 算数・数学：東京書籍 -->
+                <div class="publisher-card">
+                    <h4><i class="fas fa-calculator"></i> 算数・数学：東京書籍</h4>
+                    <div class="publisher-content">
+                        <div class="publisher-info">
+                            <p><strong>シェア：</strong>算数・数学で約50%のシェア（国内No.1）</p>
+                            <p><strong>公式サイト：</strong><a href="https://www.tokyo-shoseki.co.jp/" target="_blank" rel="noopener">https://www.tokyo-shoseki.co.jp/</a></p>
+                        </div>
+                        <div class="features-box">
+                            <h5>系統図の特徴</h5>
+                            <ul>
+                                <li><strong>「スパイラル（螺旋的）学習」</strong>：同じ概念を学年を超えて繰り返し学ぶ</li>
+                                <li><strong>5つの領域の明確化</strong>：数と計算、図形、測定、変化と関係、データの活用</li>
+                                <li><strong>「数学的活動」の系統表</strong>：問題解決のプロセスを可視化</li>
+                                <li><strong>小中接続の明示</strong>：小学校算数と中学校数学の接続を意識した構成</li>
+                            </ul>
+                        </div>
+                        <div class="ict-tips">
+                            <h5><i class="fas fa-laptop"></i> ICT支援のポイント</h5>
+                            <ul>
+                                <li>東京書籍のデジタル教科書には「まなビューア」アプリが付属</li>
+                                <li>図形領域：GeoGebra、Desmos等の動的幾何ソフトが効果的</li>
+                                <li>データ活用：Google スプレッドシート、Excelでグラフ作成を支援</li>
+                                <li>「問題解決の授業」：タブレットでの協働学習（考えの共有）をサポート</li>
+                            </ul>
+                        </div>
+                        <div class="reference-box">
+                            <p class="citation">参考: <a href="https://www.tokyo-shoseki.co.jp/subject/sansu/" target="_blank" rel="noopener">東京書籍「算数・数学」</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 理科：啓林館 -->
+                <div class="publisher-card">
+                    <h4><i class="fas fa-flask"></i> 理科：啓林館（新興出版社啓林館）</h4>
+                    <div class="publisher-content">
+                        <div class="publisher-info">
+                            <p><strong>シェア：</strong>理科で約40%のシェア（国内No.1）</p>
+                            <p><strong>公式サイト：</strong><a href="https://www.shinko-keirin.co.jp/" target="_blank" rel="noopener">https://www.shinko-keirin.co.jp/</a></p>
+                        </div>
+                        <div class="features-box">
+                            <h5>系統図の特徴</h5>
+                            <ul>
+                                <li><strong>「4つの領域」の系統表</strong>：エネルギー、粒子、生命、地球の4領域</li>
+                                <li><strong>「問題解決の力」の育成</strong>：観察・実験の技能を段階的に習得</li>
+                                <li><strong>「見方・考え方」の系統</strong>：理科の見方・考え方を学年ごとに深化</li>
+                                <li><strong>SDGsとの関連</strong>：持続可能な社会を意識した単元構成</li>
+                            </ul>
+                        </div>
+                        <div class="ict-tips">
+                            <h5><i class="fas fa-laptop"></i> ICT支援のポイント</h5>
+                            <ul>
+                                <li>啓林館のデジタル教科書には実験動画が豊富に収録</li>
+                                <li>観察記録：タブレットのカメラ機能で写真・動画撮影をサポート</li>
+                                <li>天体観測：星座アプリ（Star Walk 2等）を活用した学習支援</li>
+                                <li>データ収集：センサー（温度、照度等）とタブレットを連携した実験</li>
+                                <li>「理科ねっとわーく」（独立行政法人教育研究所）の動画教材を活用</li>
+                            </ul>
+                        </div>
+                        <div class="reference-box">
+                            <p class="citation">参考: <a href="https://www.shinko-keirin.co.jp/keirinkan/sho/rika/" target="_blank" rel="noopener">啓林館「小学校理科」</a> / <a href="https://www.shinko-keirin.co.jp/keirinkan/chu/rika/" target="_blank" rel="noopener">「中学校理科」</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 社会：東京書籍 -->
+                <div class="publisher-card">
+                    <h4><i class="fas fa-globe"></i> 社会：東京書籍</h4>
+                    <div class="publisher-content">
+                        <div class="publisher-info">
+                            <p><strong>シェア：</strong>社会科で約50%のシェア（国内No.1）</p>
+                            <p><strong>公式サイト：</strong><a href="https://www.tokyo-shoseki.co.jp/" target="_blank" rel="noopener">https://www.tokyo-shoseki.co.jp/</a></p>
+                        </div>
+                        <div class="features-box">
+                            <h5>系統図の特徴</h5>
+                            <ul>
+                                <li><strong>「同心円的拡大」の系統</strong>：身近な地域→日本→世界へと視野を拡大</li>
+                                <li><strong>「社会的な見方・考え方」の育成</strong>：位置や空間、時期、相互関係等の視点</li>
+                                <li><strong>地理・歴史・公民の接続</strong>：中学校社会の3分野を意識した構成</li>
+                                <li><strong>「問いを立てる学習」</strong>：児童生徒が自ら問いを設定し探究</li>
+                            </ul>
+                        </div>
+                        <div class="ict-tips">
+                            <h5><i class="fas fa-laptop"></i> ICT支援のポイント</h5>
+                            <ul>
+                                <li>東京書籍のデジタル教科書には豊富な資料（写真、動画、地図）が収録</li>
+                                <li>地理：Google Earth、国土地理院の地図で地形や都市を立体的に観察</li>
+                                <li>歴史：国立国会図書館デジタルコレクションで一次資料にアクセス</li>
+                                <li>公民：e-Stat（政府統計）でリアルタイムデータを活用</li>
+                                <li>調べ学習：プレゼンテーションツール（Google スライド、PowerPoint）で発表</li>
+                            </ul>
+                        </div>
+                        <div class="reference-box">
+                            <p class="citation">参考: <a href="https://www.tokyo-shoseki.co.jp/subject/shakai/" target="_blank" rel="noopener">東京書籍「社会科」</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 英語：東京書籍・開隆堂 -->
+                <div class="publisher-card">
+                    <h4><i class="fas fa-language"></i> 英語：東京書籍・開隆堂出版</h4>
+                    <div class="publisher-content">
+                        <div class="publisher-info">
+                            <p><strong>シェア：</strong>東京書籍（約40%）、開隆堂（約30%）</p>
+                            <p><strong>公式サイト：</strong></p>
+                            <ul>
+                                <li><a href="https://www.tokyo-shoseki.co.jp/" target="_blank" rel="noopener">東京書籍</a></li>
+                                <li><a href="https://www.kairyudo.co.jp/" target="_blank" rel="noopener">開隆堂出版</a></li>
+                            </ul>
+                        </div>
+                        <div class="features-box">
+                            <h5>系統図の特徴</h5>
+                            <ul>
+                                <li><strong>「5つの領域」の系統</strong>：聞くこと、読むこと、話すこと[やり取り]、話すこと[発表]、書くこと</li>
+                                <li><strong>小中接続の明示</strong>：小学校外国語活動→外国語→中学校英語の系統性</li>
+                                <li><strong>CAN-DOリスト</strong>：各学年で「できること」を明確化</li>
+                                <li><strong>文法事項の系統</strong>：文法を段階的に積み上げ（現在形→過去形→未来形等）</li>
+                            </ul>
+                        </div>
+                        <div class="ict-tips">
+                            <h5><i class="fas fa-laptop"></i> ICT支援のポイント</h5>
+                            <ul>
+                                <li>デジタル教科書の音声機能：ネイティブの発音を繰り返し聞ける</li>
+                                <li>オンライン辞書：Weblio、英辞郎等で語彙を調べる</li>
+                                <li>発音練習：音声認識アプリ（Google 翻訳等）で発音チェック</li>
+                                <li>プレゼンテーション：英語でのスライド作成・発表</li>
+                                <li>オンライン交流：海外の学校とのビデオ通話（Zoom、Google Meet）</li>
+                            </ul>
+                        </div>
+                        <div class="reference-box">
+                            <p class="citation">参考: <a href="https://www.tokyo-shoseki.co.jp/subject/eigo/" target="_blank" rel="noopener">東京書籍「英語」</a> / <a href="https://www.kairyudo.co.jp/contents/02_chu/eigo/index.htm" target="_blank" rel="noopener">開隆堂「英語」</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>教科書会社の系統図・指導資料の入手方法</h3>
+                <div class="info-box">
+                    <h4><i class="fas fa-info-circle"></i> 系統図を入手するには</h4>
+                    <ol>
+                        <li><strong>学校に確認</strong>：多くの学校では、教科書会社から提供される「指導書」に系統表が掲載されています</li>
+                        <li><strong>教科書会社の公式サイト</strong>：一部の系統表はWebサイトからダウンロード可能です</li>
+                        <li><strong>教科書会社への問い合わせ</strong>：教育関係者向けに系統表を提供している場合があります</li>
+                        <li><strong>研修会・説明会</strong>：教科書会社が開催する研修会で資料が配布されることがあります</li>
+                    </ol>
+                </div>
+
+                <div class="tips-box">
+                    <h4><i class="fas fa-lightbulb"></i> 複数の教科書会社を扱う場合</h4>
+                    <p>学校によっては、教科ごとに異なる教科書会社を採用している場合があります。その場合は、各教科書の系統図を把握しておくと、スムーズな支援ができます。</p>
+                    <ul>
+                        <li><strong>共通点を把握</strong>：学習指導要領に基づいているため、大きな系統は共通です</li>
+                        <li><strong>単元名の違いに注意</strong>：同じ内容でも、教科書会社によって単元名が異なる場合があります</li>
+                        <li><strong>教科書を手元に</strong>：各学年の教科書を実際に見て、内容を確認しましょう</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 9. 参考資料・引用元 -->
+            <section id="references" class="content-section">
+                <h2><i class="fas fa-book-open"></i> 9. 参考資料・引用元</h2>
+
+                <h3>文部科学省</h3>
+                <div class="reference-list">
+                    <ul>
+                        <li><a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1384661.htm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 学習指導要領（平成29年・30年告示）</a></li>
+                        <li><a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1387014.htm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 学習指導要領解説 国語編</a></li>
+                        <li><a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1387016.htm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 学習指導要領解説 算数編・数学編</a></li>
+                        <li><a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1387017.htm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 学習指導要領解説 理科編</a></li>
+                        <li><a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1387015.htm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 学習指導要領解説 社会編</a></li>
+                        <li><a href="https://www.mext.go.jp/a_menu/shotou/new-cs/1387018.htm" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 学習指導要領解説 外国語活動・外国語編</a></li>
+                    </ul>
+                </div>
+
+                <h3>教科書会社（系統表・指導資料）</h3>
+                <div class="reference-list">
+                    <h4>国語</h4>
+                    <ul>
+                        <li><a href="https://www.mitsumura-tosho.co.jp/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 光村図書出版</a> - 国語教科書シェアNo.1</li>
+                        <li><a href="https://www.tokyo-shoseki.co.jp/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 東京書籍</a></li>
+                    </ul>
+
+                    <h4>算数・数学</h4>
+                    <ul>
+                        <li><a href="https://www.tokyo-shoseki.co.jp/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 東京書籍</a> - 算数・数学教科書シェアNo.1</li>
+                        <li><a href="https://www.shinko-keirin.co.jp/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 啓林館（新興出版社啓林館）</a></li>
+                        <li><a href="https://www.dainippon-tosho.co.jp/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 大日本図書</a></li>
+                    </ul>
+
+                    <h4>理科</h4>
+                    <ul>
+                        <li><a href="https://www.shinko-keirin.co.jp/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 啓林館（新興出版社啓林館）</a> - 理科教科書シェアNo.1</li>
+                        <li><a href="https://www.tokyo-shoseki.co.jp/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 東京書籍</a></li>
+                        <li><a href="https://www.dainippon-tosho.co.jp/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 大日本図書</a></li>
+                    </ul>
+
+                    <h4>社会</h4>
+                    <ul>
+                        <li><a href="https://www.tokyo-shoseki.co.jp/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 東京書籍</a> - 社会科教科書シェアNo.1</li>
+                        <li><a href="https://www.nichibun-g.co.jp/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 日本文教出版</a></li>
+                        <li><a href="https://www.kyoiku-shuppan.co.jp/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 教育出版</a></li>
+                    </ul>
+
+                    <h4>英語</h4>
+                    <ul>
+                        <li><a href="https://www.tokyo-shoseki.co.jp/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 東京書籍</a> - 英語教科書シェアNo.1</li>
+                        <li><a href="https://www.kairyudo.co.jp/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 開隆堂出版</a></li>
+                        <li><a href="https://www.sanseido-publ.co.jp/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 三省堂</a></li>
+                    </ul>
+                </div>
+
+                <h3>国立教育政策研究所（NIER）</h3>
+                <div class="reference-list">
+                    <ul>
+                        <li><a href="https://www.nier.go.jp/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 国立教育政策研究所</a></li>
+                        <li><a href="https://www.nier.go.jp/kaihatsu/shidousiryou.html" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 指導資料・事例集</a></li>
+                        <li><a href="https://www.nier.go.jp/kaihatsu/pdf_index.html" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 教科等の指導改善に関する資料</a></li>
+                    </ul>
+                </div>
+
+                <h3>教育研究機関・学習コンテンツ</h3>
+                <div class="reference-list">
+                    <ul>
+                        <li><a href="https://www.nhk.or.jp/school/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> NHK for School</a> - 各教科の学習動画</li>
+                        <li><a href="https://rika-net.com/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 理科ねっとわーく</a> - 理科学習デジタル教材</li>
+                        <li><a href="https://phet.colorado.edu/ja/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> PhET Interactive Simulations</a> - 科学シミュレーション（コロラド大学）</li>
+                        <li><a href="https://www.geogebra.org/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> GeoGebra</a> - 数学・科学学習ツール</li>
+                        <li><a href="https://www.desmos.com/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Desmos</a> - グラフ計算機</li>
+                    </ul>
+                </div>
+
+                <h3>関連ページ</h3>
+                <div class="related-pages">
+                    <a href="education-basics.html" class="related-link"><i class="fas fa-graduation-cap"></i> 教育入門講座</a>
+                    <a href="lesson-observation.html" class="related-link"><i class="fas fa-eye"></i> 授業観察</a>
+                    <a href="lesson-proposal.html" class="related-link"><i class="fas fa-lightbulb"></i> 授業提案</a>
+                    <a href="lesson-design.html" class="related-link"><i class="fas fa-pencil-ruler"></i> 授業づくり</a>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト. All rights reserved.</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p style="margin-top: 15px;">
+                <a href="privacy-policy.html" style="color: white; margin: 0 10px;">プライバシーポリシー</a> | 
+                <a href="ad-policy.html" style="color: white; margin: 0 10px;">広告ポリシー</a> | 
+                <a href="contact.html" style="color: white; margin: 0 10px;">お問い合わせ</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
