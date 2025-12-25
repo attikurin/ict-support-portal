@@ -1,0 +1,39 @@
+# robots.txt for ICT支援員総合ポータルサイト
+
+User-agent: *
+Allow: /
+
+# 主要ページ
+Allow: /index.html
+Allow: /digital-textbooks.html
+Allow: /giga-update.html
+Allow: /ai-education.html
+Allow: /programming-education.html
+Allow: /troubleshooting.html
+Allow: /device-management.html
+Allow: /glossary.html
+Allow: /resources-links.html
+
+# CSSとJavaScript
+Allow: /css/
+Allow: /js/
+
+# 画像フォルダ（存在する場合）
+Allow: /images/
+
+# クローリング除外（必要に応じて）
+# Disallow: /private/
+# Disallow: /temp/
+
+# サイトマップの場所
+Sitemap: https://your-domain.com/sitemap.xml
+
+# クローリング速度の調整（必要に応じて）
+# Crawl-delay: 1
+
+# 特定のボットの制御（必要に応じて）
+# User-agent: Googlebot
+# Allow: /
+
+# User-agent: Bingbot
+# Allow: /

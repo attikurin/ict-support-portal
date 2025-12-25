@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<!-- トップページ -->
+<url>
+  <loc>https://your-domain.com/</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+
+<!-- GIGA・最新動向カテゴリ -->
+<url>
+  <loc>https://your-domain.com/giga-update.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/digital-textbooks.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/ai-education.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/ai-apps-education.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/case-studies.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- 基礎・入門カテゴリ -->
+<url>
+  <loc>https://your-domain.com/basics.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/education-basics.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/glossary.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/daily-work.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/planner.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/business-manners.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<!-- 支援・指導カテゴリ -->
+<url>
+  <loc>https://your-domain.com/guidelines.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/lesson-proposal.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/skills.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/psychology.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/lesson-design.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/communication-skills.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/special-needs-ict.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/rubric.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/learning-support-systems.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/programming-education.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/digital-citizenship.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- 機器・ツールカテゴリ -->
+<url>
+  <loc>https://your-domain.com/tools.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/device-management.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/wifi-troubleshooting.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/account-management.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/troubleshooting.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/security.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/network-basics.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/edtech-comparison.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/edtech-tools.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<!-- 運用・管理カテゴリ -->
+<url>
+  <loc>https://your-domain.com/school-dx.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/training.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/data-analytics.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/project-management.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/budget-procurement.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<!-- データ・資料カテゴリ -->
+<url>
+  <loc>https://your-domain.com/statistics.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/certifications.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/board-education.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/resources-links.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/downloads.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<!-- 実践・応用カテゴリ -->
+<url>
+  <loc>https://your-domain.com/online-learning.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/time-task-management.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/crisis-management.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/parent-communication.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/school-events-ict.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/career-path.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/self-learning.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/business-improvement.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/mental-health.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<!-- サイトガイド -->
+<url>
+  <loc>https://your-domain.com/site-guide.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- ポリシーページ -->
+<url>
+  <loc>https://your-domain.com/privacy-policy.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>https://your-domain.com/contact.html</loc>
+  <lastmod>2025-12-21</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+</urlset>
