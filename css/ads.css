@@ -1,5 +1,9 @@
 /* ======================================
    広告スタイル - A8.net / バリューコマース対応
+   
+   【重要】広告は固定配置（position: static）を使用し、
+   スクロールに追従しません。コンテンツの邪魔にならない
+   ように設計されています。
    ====================================== */
 
 /* 共通広告コンテナ */
@@ -27,44 +31,7 @@
     max-width: 100%;
 }
 
-/* サイドバー広告（PC版のみ） */
-.sidebar-ad {
-    position: sticky;
-    top: 100px;
-    max-width: 300px;
-    margin: 20px 0;
-    background: #f8f9fa;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 15px;
-}
-
-.sidebar-ad .ad-label {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.sidebar-ad .ad-content {
-    width: 100%;
-    min-height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    border-radius: 6px;
-}
-
-/* 300x250サイズ */
-.ad-300x250 {
-    width: 300px;
-    height: 250px;
-}
-
-/* 300x600サイズ（ハーフページ） */
-.ad-300x600 {
-    width: 300px;
-    height: 600px;
-}
+/* サイドバー広告は廃止（メインコンテンツの幅を確保するため） */
 
 /* 記事下広告 */
 .article-bottom-ad {
@@ -138,38 +105,7 @@
     text-align: left;
 }
 
-/* 2カラムレイアウト（コンテンツ + サイドバー広告） */
-.content-with-sidebar {
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.main-content {
-    min-width: 0;
-}
-
-.sidebar {
-    position: relative;
-}
-
-/* モバイル対応 */
-@media (max-width: 1024px) {
-    .content-with-sidebar {
-        grid-template-columns: 1fr;
-    }
-
-    .sidebar {
-        display: none;
-    }
-
-    .sidebar-ad {
-        display: none;
-    }
-}
+/* 2カラムレイアウトは廃止（シンプルな1カラムレイアウトに統一） */
 
 @media (max-width: 768px) {
     /* 記事下広告 - モバイル版 */
