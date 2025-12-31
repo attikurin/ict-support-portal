@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>実践テンプレート集 - ICT支援員の業務を効率化 | ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="ICT支援員の日常業務で即使える実践テンプレート集。業務報告書、授業提案書、研修資料、トラブル対応記録、機器貸出管理表など、コピー＆ペーストで使えるテンプレートを多数収録。">
+    <meta name="keywords" content="ICT支援員,テンプレート,業務報告書,授業提案書,研修資料,トラブル対応,機器管理,Excel,Word,Google,効率化">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- 構造化データ（JSON-LD） -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "実践テンプレート集",
+      "description": "ICT支援員の日常業務で即使える実践テンプレート集。業務報告書、授業提案書、研修資料、トラブル対応記録、機器貸出管理表",
+      "author": {
+        "@type": "Organization",
+        "name": "ICT支援員総合ポータルサイト"
+      },
+      "datePublished": "2025-12-31",
+      "dateModified": "2025-12-31"
+    }
+    </script>
+    
+    <style>
+        /* テンプレート専用スタイル */
+        .template-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 12px;
+            padding: 0;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .template-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+        
+        .template-header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .template-header h4 {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .copy-btn {
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            padding: 0.5rem 1.25rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+            border-color: white;
+            transform: scale(1.05);
+        }
+        
+        .copy-btn i {
+            margin-right: 0.5rem;
+        }
+        
+        .template-content {
+            background: white;
+            padding: 2rem;
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: #2d3748;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border: none;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        
+        .template-content::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        .template-content::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 10px;
+        }
+        
+        .template-content::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 10px;
+        }
+        
+        .template-content::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #3b8fd9 0%, #00d2de 100%);
+        }
+        
+        /* テンプレートタイプ別のヘッダーカラー */
+        .template-box.type-report .template-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .template-box.type-proposal .template-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .template-box.type-training .template-header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .template-box.type-trouble .template-header {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        .template-box.type-device .template-header {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+        }
+        
+        .template-box.type-checklist .template-header {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+        
+        .template-box.type-meeting .template-header {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+        }
+        
+        /* セクション見出しの強調 */
+        .template-content strong {
+            color: #2563eb;
+            font-weight: 700;
+        }
+        
+        /* テーブルスタイリング改善 */
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        
+        .comparison-table thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .comparison-table th {
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .comparison-table tbody tr:hover {
+            background: #f8fafc;
+        }
+        
+        .comparison-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* info-boxスタイリング改善 */
+        .info-box {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+            border-left: 5px solid #0ea5e9;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(14, 165, 233, 0.1);
+        }
+        
+        .info-box h3 {
+            color: #0369a1;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+        
+        .info-box p {
+            margin: 0;
+            color: #0c4a6e;
+            line-height: 1.7;
+        }
+        
+        /* tips-boxスタイリング改善 */
+        .tips-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fef9e7 100%);
+            border-left: 5px solid #f59e0b;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);
+        }
+        
+        .tips-box ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        
+        .tips-box li {
+            color: #78350f;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tips-box strong {
+            color: #b45309;
+        }
+        
+        /* role-cardスタイリング改善 */
+        .role-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #4facfe;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .role-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+        
+        .role-card h4 {
+            color: #1e40af;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .role-card h4 i {
+            color: #4facfe;
+            margin-right: 0.5rem;
+        }
+        
+        .role-card p {
+            color: #475569;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        /* 印刷用スタイル */
+        @media print {
+            .template-box {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+            
+            .copy-btn {
+                display: none;
+            }
+            
+            .template-header {
+                background: #4facfe !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .template-content {
+                max-height: none;
+                font-size: 10pt;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: テンプレート, 報告書, 研修)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-observation.html"><i class="fas fa-eye"></i> 授業観察</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="curriculum-map.html"><i class="fas fa-project-diagram"></i> 教科・単元系統図</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                        <li><a href="rubric.html"><i class="fas fa-clipboard-check"></i> ルーブリック評価</a></li>
+                        <li><a href="learning-support-systems.html"><i class="fas fa-chalkboard"></i> 授業支援システム</a></li>
+                        <li><a href="programming-education.html"><i class="fas fa-code"></i> プログラミング教育</a></li>
+                        <li><a href="digital-citizenship.html"><i class="fas fa-shield-alt"></i> 情報モラル教育</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI利用ガイド</a></li>
+                        <li><a href="ai-apps-education.html"><i class="fas fa-brain"></i> AI教育アプリ</a></li>
+                        <li><a href="digital-textbooks.html"><i class="fas fa-tablet-alt"></i> デジタル教科書</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-star"></i> 成功事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="device-management.html"><i class="fas fa-tablet-alt"></i> 端末管理・MDM</a></li>
+                        <li><a href="wifi-troubleshooting.html"><i class="fas fa-wifi"></i> Wi-Fiトラブル対応</a></li>
+                        <li><a href="account-management.html"><i class="fas fa-user-shield"></i> アカウント管理</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> セキュリティ</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="edtech-comparison.html"><i class="fas fa-balance-scale"></i> EdTech比較</a></li>
+                        <li><a href="edtech-tools.html"><i class="fas fa-tools"></i> EdTechツール</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                        <li><a href="online-learning.html"><i class="fas fa-video"></i> オンライン授業</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-search"></i> 検索・参照</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="site-guide.html"><i class="fas fa-map"></i> サイトガイド</a></li>
+                        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> 参考リンク集</a></li>
+                        <li><a href="templates.html" class="active"><i class="fas fa-file-alt"></i> テンプレート集</a></li>
+                        <li><a href="downloads.html"><i class="fas fa-download"></i> ダウンロード資料</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book"></i> 用語集</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> お問い合わせ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container main-content">
+        <article>
+            <header class="content-header">
+                <h1><i class="fas fa-file-alt"></i> 実践テンプレート集</h1>
+                <p class="lead">ICT支援員の日常業務で即使えるテンプレート集。コピー＆ペーストで業務を効率化</p>
+                <div class="meta-info">
+                    <span><i class="fas fa-clock"></i> 最終更新: 2025年12月</span>
+                    <span><i class="fas fa-tag"></i> 実務ツール・効率化</span>
+                    <span><i class="fas fa-signal"></i> レベル: 全レベル対象</span>
+                </div>
+            </header>
+
+            <!-- 目次 -->
+            <section class="toc-section">
+                <h2><i class="fas fa-list"></i> 目次</h2>
+                <div class="info-grid">
+                    <a href="#overview" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-info-circle"></i></div>
+                        <h3>1. テンプレート活用ガイド</h3>
+                        <p>テンプレートの使い方、カスタマイズ方法</p>
+                    </a>
+                    <a href="#daily-report" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-file-alt"></i></div>
+                        <h3>2. 業務報告書</h3>
+                        <p>日報・週報・月報のテンプレート</p>
+                    </a>
+                    <a href="#lesson-proposal" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h3>3. 授業提案書</h3>
+                        <p>教員への授業提案テンプレート</p>
+                    </a>
+                    <a href="#training-materials" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-presentation"></i></div>
+                        <h3>4. 研修資料</h3>
+                        <p>教員研修用のスライド・ハンドアウト</p>
+                    </a>
+                    <a href="#trouble-log" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-wrench"></i></div>
+                        <h3>5. トラブル対応記録</h3>
+                        <p>障害・問い合わせ管理テンプレート</p>
+                    </a>
+                    <a href="#device-management" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-laptop"></i></div>
+                        <h3>6. 機器貸出管理表</h3>
+                        <p>端末・周辺機器の貸出管理</p>
+                    </a>
+                    <a href="#maintenance-checklist" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <h3>7. 保守点検チェックリスト</h3>
+                        <p>定期点検・棚卸し用チェックリスト</p>
+                    </a>
+                    <a href="#meeting-minutes" class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-users"></i></div>
+                        <h3>8. 会議議事録</h3>
+                        <p>ICT委員会・打ち合わせ記録</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 1. テンプレート活用ガイド -->
+            <section id="overview" class="content-section">
+                <h2><i class="fas fa-info-circle"></i> 1. テンプレート活用ガイド</h2>
+
+                <div class="info-box">
+                    <h3>このページの使い方</h3>
+                    <p>各テンプレートは、Microsoft Word、Excel、Google ドキュメント、Google スプレッドシート等で使用できます。コピー&ペーストして、自分の業務に合わせてカスタマイズしてください。</p>
+                </div>
+
+                <h3>テンプレート活用の3つのメリット</h3>
+                <div class="role-grid">
+                    <div class="role-card">
+                        <h4><i class="fas fa-clock"></i> 1. 時間短縮</h4>
+                        <p>ゼロから作成する必要がなく、記入するだけで完成します。</p>
+                    </div>
+                    <div class="role-card">
+                        <h4><i class="fas fa-check-circle"></i> 2. 品質向上</h4>
+                        <p>必要な項目が漏れなく整理され、プロフェッショナルな仕上がりになります。</p>
+                    </div>
+                    <div class="role-card">
+                        <h4><i class="fas fa-users"></i> 3. 標準化</h4>
+                        <p>複数の支援員で同じフォーマットを使用でき、情報共有がスムーズになります。</p>
+                    </div>
+                </div>
+
+                <h3>カスタマイズのポイント</h3>
+                <div class="tips-box">
+                    <ul>
+                        <li><strong>学校名・日付等を置換</strong>：「○○学校」「YYYY/MM/DD」等のプレースホルダーを実際の情報に置き換える</li>
+                        <li><strong>不要な項目は削除</strong>：自分の業務に不要な項目は削除してOK</li>
+                        <li><strong>必要な項目を追加</strong>：学校独自の項目があれば追加する</li>
+                        <li><strong>フォーマットを保存</strong>：カスタマイズ後のフォーマットを保存して再利用</li>
+                    </ul>
+                </div>
+
+                <h3>ファイル形式の選び方</h3>
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ツール</th>
+                                <th>メリット</th>
+                                <th>デメリット</th>
+                                <th>おすすめ用途</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Microsoft Word/Excel</strong></td>
+                                <td>オフラインで使用可能、高機能</td>
+                                <td>ライセンス費用が必要</td>
+                                <td>印刷物、公式文書</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Google ドキュメント/スプレッドシート</strong></td>
+                                <td>無料、共同編集可能、自動保存</td>
+                                <td>インターネット接続が必要</td>
+                                <td>チームでの共有、リアルタイム更新</td>
+                            </tr>
+                            <tr>
+                                <td><strong>テキストエディタ（メモ帳等）</strong></td>
+                                <td>軽量、シンプル</td>
+                                <td>装飾ができない</td>
+                                <td>簡易メモ、下書き</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 2. 業務報告書テンプレート -->
+            <section id="daily-report" class="content-section">
+                <h2><i class="fas fa-file-alt"></i> 2. 業務報告書テンプレート</h2>
+
+                <div class="info-box">
+                    <p>日報、週報、月報の3種類のテンプレートを提供します。勤務形態（常駐型・巡回型）に応じて選択してください。</p>
+                </div>
+
+                <!-- 日報テンプレート -->
+                <h3>日報テンプレート（常駐型）</h3>
+                <div class="template-box type-report">
+                    <div class="template-header">
+                        <h4>ICT支援員 業務日報</h4>
+                        <button class="copy-btn" onclick="copyTemplate('daily-report-1')"><i class="fas fa-copy"></i> コピー</button>
+                    </div>
+                    <pre id="daily-report-1" class="template-content">
+【業務日報】
+報告者：○○○○（ICT支援員）
+報告日：YYYY年MM月DD日（曜日）
+勤務校：○○小学校 / ○○中学校
+勤務時間：○○:○○～○○:○○
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 1. 本日の主な業務内容
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【授業支援】（時間：○○分）
+・学年/クラス：
+・教科：
+・支援内容：
+・使用機器/ツール：
+・成果/課題：
+
+【機器トラブル対応】（時間：○○分）
+・発生場所：
+・トラブル内容：
+・対応内容：
+・解決状況：□解決 □継続対応 □エスカレーション
+
+【環境整備】（時間：○○分）
+・作業内容：
+  □ 端末の充電確認
+  □ Wi-Fi動作確認
+  □ ソフトウェア更新
+  □ その他（　　　　　　　　）
+
+【相談対応】（時間：○○分）
+・相談者：
+・相談内容：
+・対応内容：
+
+【その他の業務】（時間：○○分）
+・内容：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 2. 明日以降の予定
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+・
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 3. 報告事項・連絡事項
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+・
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 4. 課題・要望
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+・
+
+【業務時間内訳】
+授業支援：　　　　○○分
+トラブル対応：　　○○分
+環境整備：　　　　○○分
+相談対応：　　　　○○分
+その他：　　　　　○○分
+合計：　　　　　　○○分
+
+以上
+                    </pre>
+                </div>
+
+                <!-- 週報テンプレート -->
+                <h3>週報テンプレート（巡回型）</h3>
+                <div class="template-box type-report">
+                    <div class="template-header">
+                        <h4>ICT支援員 業務週報</h4>
+                        <button class="copy-btn" onclick="copyTemplate('weekly-report-1')"><i class="fas fa-copy"></i> コピー</button>
+                    </div>
+                    <pre id="weekly-report-1" class="template-content">
+【業務週報】
+報告者：○○○○（ICT支援員）
+報告期間：YYYY年MM月DD日（月）～ YYYY年MM月DD日（金）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 1. 今週の訪問実績
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【MM/DD（月）】○○小学校（訪問時間：○○:○○～○○:○○）
+・主な業務：
+・特記事項：
+
+【MM/DD（火）】○○中学校（訪問時間：○○:○○～○○:○○）
+・主な業務：
+・特記事項：
+
+【MM/DD（水）】○○小学校（訪問時間：○○:○○～○○:○○）
+・主な業務：
+・特記事項：
+
+【MM/DD（木）】○○中学校（訪問時間：○○:○○～○○:○○）
+・主な業務：
+・特記事項：
+
+【MM/DD（金）】事務作業・研修等
+・主な業務：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 2. 今週の主な支援内容（サマリー）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【授業支援】
+・総支援回数：　○回
+・主な支援内容：
+
+【トラブル対応】
+・総対応件数：　○件
+・主なトラブル：
+
+【教員研修・相談】
+・総件数：　○件
+・主な内容：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 3. 今週の成果・課題
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【成果】
+・
+
+【課題・改善点】
+・
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 4. 来週の予定・重点項目
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+・
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 5. 要検討・要対応事項
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+・
+
+以上
+                    </pre>
+                </div>
+
+                <!-- 月報テンプレート -->
+                <h3>月報テンプレート</h3>
+                <div class="template-box">
+                    <div class="template-header">
+                        <h4>ICT支援員 業務月報</h4>
+                        <button class="copy-btn" onclick="copyTemplate('monthly-report-1')"><i class="fas fa-copy"></i> コピー</button>
+                    </div>
+                    <pre id="monthly-report-1" class="template-content">
+【業務月報】
+報告者：○○○○（ICT支援員）
+報告期間：YYYY年MM月
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 1. 今月の業務実績（数値サマリー）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+訪問校数：　　　　　○校
+総勤務時間：　　　　○時間
+授業支援回数：　　　○回（延べ○時間）
+トラブル対応件数：　○件（延べ○時間）
+教員相談対応：　　　○件（延べ○時間）
+研修実施回数：　　　○回（参加者延べ○名）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 2. 主な支援内容・活動
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【授業支援】
+・主な支援教科：
+・活用されたICTツール：
+・特筆すべき実践事例：
+
+【トラブル対応】
+・主なトラブル内容（TOP3）：
+  1. 
+  2. 
+  3. 
+・対応状況：
+
+【教員研修】
+・実施した研修テーマ：
+・参加人数・反応：
+
+【環境整備】
+・実施した主な作業：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 3. 今月の成果
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+・
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 4. 今月の課題・問題点
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+・
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 5. 来月の重点目標・予定
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+・
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 6. 提案・要望事項
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+・
+
+以上
+                    </pre>
+                </div>
+            </section>
+
+            <!-- 3. 授業提案書テンプレート -->
+            <section id="lesson-proposal" class="content-section">
+                <h2><i class="fas fa-chalkboard-teacher"></i> 3. 授業提案書テンプレート</h2>
+
+                <div class="info-box">
+                    <p>教員に授業でのICT活用を提案する際のテンプレートです。具体的でわかりやすい提案書を作成できます。</p>
+                </div>
+
+                <div class="template-box type-proposal">
+                    <div class="template-header">
+                        <h4>授業提案書</h4>
+                        <button class="copy-btn" onclick="copyTemplate('lesson-proposal-template')"><i class="fas fa-copy"></i> コピー</button>
+                    </div>
+                    <pre id="lesson-proposal-template" class="template-content">
+【授業提案書】
+
+提案日：YYYY年MM月DD日
+提案者：○○○○（ICT支援員）
+提案先：○○先生
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 1. 授業の基本情報
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+対象学年・クラス：　○年○組
+教科：　　　　　　　○○
+単元名：　　　　　　「○○○○」
+実施予定時期：　　　○月○日頃（第○週）
+授業時数：　　　　　○時間扱い
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 2. 提案の背景・きっかけ
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+（なぜこの提案をするのか）
+
+・
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 3. 活用するICTツール・機器
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ Chromebook / iPad / Windows端末
+□ Google Classroom / Microsoft Teams
+□ Google スライド / PowerPoint
+□ Jamboard / Padlet
+□ ロイロノート・スクール / MetaMoJi ClassRoom
+□ その他（　　　　　　　　　　　　）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 4. 具体的な活用方法（授業の流れ）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【導入】（○分）
+・
+
+【展開】（○分）
+・ICTの活用場面：
+
+・期待される児童生徒の活動：
+
+【まとめ】（○分）
+・
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 5. 期待される効果
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【児童生徒にとって】
+・
+
+【先生にとって】
+・
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 6. 準備が必要なもの
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【ICT支援員が準備】
+・
+
+【先生に準備していただくもの】
+・
+
+【当日のサポート体制】
+・授業前（○分前集合）：機器の動作確認、アカウント配布等
+・授業中：トラブル対応、操作サポート
+・授業後：片付け、振り返り
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 7. 参考資料・事例
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+・他校での実践事例：
+・参考URL：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 8. ご検討のお願い
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+この提案について、ご検討いただけますと幸いです。
+ご質問やご要望がございましたら、お気軽にお声がけください。
+
+連絡先：○○（内線：○○○○ / メール：xxxxx@example.com）
+
+以上
+                    </pre>
+                </div>
+            </section>
+
+            <!-- 4. 研修資料テンプレート -->
+            <section id="training-materials" class="content-section">
+                <h2><i class="fas fa-presentation"></i> 4. 研修資料テンプレート</h2>
+
+                <div class="info-box">
+                    <p>教員向けICT研修のスライド構成案とハンドアウトのテンプレートです。</p>
+                </div>
+
+                <!-- スライド構成案 -->
+                <h3>研修スライド構成案</h3>
+                <div class="template-box type-training">
+                    <div class="template-header">
+                        <h4>ICT研修スライド構成（60分研修）</h4>
+                        <button class="copy-btn" onclick="copyTemplate('training-slide-structure')"><i class="fas fa-copy"></i> コピー</button>
+                    </div>
+                    <pre id="training-slide-structure" class="template-content">
+【ICT研修スライド構成案】
+テーマ：「○○○○」
+対象：○○小学校/中学校 教職員
+時間：60分
+講師：○○○○（ICT支援員）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ スライド構成
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【スライド1】タイトル
+・研修タイトル
+・日時、講師名
+
+【スライド2】本日のアジェンダ
+1. 研修の目的
+2. ○○の基本操作
+3. 授業での活用事例
+4. 実践演習
+5. Q&A
+
+【スライド3-4】研修の目的・ゴール（5分）
+・なぜこの研修を行うのか
+・本日のゴール：「○○ができるようになる」
+
+【スライド5-10】基本操作の説明（15分）
+・ログイン方法
+・画面の見方
+・基本的な機能の紹介
+・デモンストレーション
+
+【スライド11-15】授業での活用事例（10分）
+・事例1：○年○組での実践
+・事例2：他校での成功事例
+・活用のポイント
+
+【スライド16】実践演習の説明（5分）
+・演習の内容
+・グループ分け
+・時間配分
+
+【スライド17】演習タイム（20分）
+・実際に操作してみる
+・サポート巡回
+
+【スライド18-20】振り返り・まとめ（5分）
+・本日のポイント振り返り
+・次のステップ
+・質問受付
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ スライド作成のポイント
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+・1スライド1メッセージを心がける
+・文字は少なく、図やスクリーンショットを多用
+・操作手順は番号を振って明確に
+・フォントサイズは最低24pt以上（後方からも見えるように）
+・色は3色以内に抑える
+・アニメーションは必要最小限に
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 準備物チェックリスト
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ プロジェクター・スクリーン
+□ 講師用PC・タブレット
+□ 参加者用端末（1人1台）
+□ Wi-Fi環境の確認
+□ ハンドアウト（印刷物）
+□ アンケート用紙
+□ 予備のケーブル・充電器
+
+以上
+                    </pre>
+                </div>
+
+                <!-- ハンドアウトテンプレート -->
+                <h3>研修ハンドアウトテンプレート</h3>
+                <div class="template-box type-training">
+                    <div class="template-header">
+                        <h4>研修ハンドアウト</h4>
+                        <button class="copy-btn" onclick="copyTemplate('training-handout')"><i class="fas fa-copy"></i> コピー</button>
+                    </div>
+                    <pre id="training-handout" class="template-content">
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+　　　　　　ICT研修ハンドアウト
+　　　　　「○○○○」
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+日時：YYYY年MM月DD日（曜日）○○:○○～○○:○○
+会場：○○小学校/中学校　○○室
+講師：○○○○（ICT支援員）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 1. 本日の目標
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+・○○を使って、○○ができるようになる
+・授業での活用イメージを持つ
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 2. 基本操作の流れ
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【ステップ1】ログイン
+1. ブラウザを開く
+2. URL：https://
+3. ID：　　　　　　　　PW：　　　　　　　　
+
+【ステップ2】基本画面の確認
+・
+
+【ステップ3】○○の作成
+1. 
+2. 
+3. 
+
+【ステップ4】共有設定
+1. 
+2. 
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 3. 授業での活用例
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【例1】○年 ○○科
+・活用場面：
+・期待される効果：
+
+【例2】○年 ○○科
+・活用場面：
+・期待される効果：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 4. よくあるトラブルと対処法
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Q1. ログインできない
+A. 
+
+Q2. 保存したはずのファイルが見つからない
+A. 
+
+Q3. 共有がうまくいかない
+A. 
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 5. 参考資料・リンク
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+・公式ヘルプ：
+・活用事例：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 6. 困ったときは
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ICT支援員　○○○○
+連絡先：内線○○○○ / メール：xxxxx@example.com
+訪問日：毎週○曜日
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ メモ欄
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+
+
+
+
+
+
+                    </pre>
+                </div>
+            </section>
+
+            <!-- 5. トラブル対応記録テンプレート -->
+            <section id="trouble-log" class="content-section">
+                <h2><i class="fas fa-wrench"></i> 5. トラブル対応記録テンプレート</h2>
+
+                <div class="info-box">
+                    <p>トラブルや問い合わせの内容を記録し、ナレッジとして蓄積するためのテンプレートです。Excel/Google スプレッドシートでの管理を推奨します。</p>
+                </div>
+
+                <div class="template-box type-trouble">
+                    <div class="template-header">
+                        <h4>トラブル対応記録フォーマット</h4>
+                        <button class="copy-btn" onclick="copyTemplate('trouble-log-template')"><i class="fas fa-copy"></i> コピー</button>
+                    </div>
+                    <pre id="trouble-log-template" class="template-content">
+【トラブル対応記録】
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 基本情報
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+受付日時：　　YYYY/MM/DD　HH:MM
+対応者：　　　○○○○（ICT支援員）
+発生場所：　　○○小学校/中学校　○年○組 / ○○室
+連絡者：　　　○○先生 / ○○さん
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ トラブル内容
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【カテゴリ】
+□ ネットワーク（Wi-Fi接続）
+□ 端末（Chromebook/iPad/Windows）
+□ アプリケーション
+□ アカウント・パスワード
+□ 周辺機器（プロジェクター、プリンター等）
+□ その他（　　　　　　　　）
+
+【症状】
+・
+
+【発生状況】
+・いつから：
+・頻度：□ 常に　□ 時々　□ 初めて
+・影響範囲：□ 1台のみ　□ 複数台　□ 全体
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 対応内容
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【実施した対応】
+1. 
+2. 
+3. 
+
+【対応時間】　約○○分
+
+【結果】
+□ 解決（その場で対応完了）
+□ 解決（後日対応完了）
+□ 一時的に解決（再発の可能性あり）
+□ 未解決（エスカレーション）
+□ 未解決（継続調査中）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 原因分析
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【推定原因】
+・
+
+【根本原因】
+・
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 今後の対応
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【再発防止策】
+・
+
+【エスカレーション先】
+□ システム管理者
+□ ベンダー
+□ 教育委員会
+□ その他（　　　　　　　　）
+
+【フォローアップ予定】
+・日時：
+・内容：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 備考・特記事項
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+・
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+記録日時：YYYY/MM/DD　HH:MM
+記録者：○○○○
+
+以上
+                    </pre>
+                </div>
+
+                <h3>トラブル管理台帳（Excel/スプレッドシート）</h3>
+                <div class="comparison-table">
+                    <p><strong>推奨列構成：</strong></p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>列名</th>
+                                <th>内容例</th>
+                                <th>データ型</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>受付No</td>
+                                <td>連番（2025-001等）</td>
+                                <td>テキスト</td>
+                            </tr>
+                            <tr>
+                                <td>受付日</td>
+                                <td>2025/12/25</td>
+                                <td>日付</td>
+                            </tr>
+                            <tr>
+                                <td>学校名</td>
+                                <td>○○小学校</td>
+                                <td>テキスト</td>
+                            </tr>
+                            <tr>
+                                <td>カテゴリ</td>
+                                <td>ネットワーク</td>
+                                <td>プルダウン</td>
+                            </tr>
+                            <tr>
+                                <td>症状</td>
+                                <td>Wi-Fiに接続できない</td>
+                                <td>テキスト</td>
+                            </tr>
+                            <tr>
+                                <td>対応者</td>
+                                <td>○○</td>
+                                <td>テキスト</td>
+                            </tr>
+                            <tr>
+                                <td>ステータス</td>
+                                <td>解決済/対応中/未着手</td>
+                                <td>プルダウン</td>
+                            </tr>
+                            <tr>
+                                <td>対応完了日</td>
+                                <td>2025/12/25</td>
+                                <td>日付</td>
+                            </tr>
+                            <tr>
+                                <td>対応時間（分）</td>
+                                <td>30</td>
+                                <td>数値</td>
+                            </tr>
+                            <tr>
+                                <td>備考</td>
+                                <td>ルーター再起動で解決</td>
+                                <td>テキスト</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 6. 機器貸出管理表 -->
+            <section id="device-management" class="content-section">
+                <h2><i class="fas fa-laptop"></i> 6. 機器貸出管理表テンプレート</h2>
+
+                <div class="info-box">
+                    <p>端末や周辺機器の貸出・返却を管理するためのテンプレートです。Excel/Google スプレッドシートでの運用を推奨します。</p>
+                </div>
+
+                <div class="template-box type-device">
+                    <div class="template-header">
+                        <h4>機器貸出管理表</h4>
+                        <button class="copy-btn" onclick="copyTemplate('device-lending-log')"><i class="fas fa-copy"></i> コピー</button>
+                    </div>
+                    <pre id="device-lending-log" class="template-content">
+【機器貸出管理表】
+学校名：○○小学校 / ○○中学校
+管理者：○○○○（ICT支援員）
+対象年月：YYYY年MM月
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+貸出日 | 返却日 | 機器名 | 管理番号 | 貸出先 | 使用目的 | 状態 | 備考
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MM/DD  |        | iPad   | IP-001   | 3年1組  | 社会科   | 貸出中 |
+MM/DD  | MM/DD  | Chromebook | CB-015 | 5年2組 | 国語科 | 返却済 | 充電切れあり
+MM/DD  |        | プロジェクター | PJ-003 | 音楽室 | 学年集会 | 貸出中 |
+       |        |        |          |         |          |        |
+       |        |        |          |         |          |        |
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【貸出ルール】
+・貸出期間：原則1週間以内
+・延長：事前に連絡があれば1回のみ可能
+・返却時確認項目：
+  □ 本体に破損・汚れがないか
+  □ 充電状態（80%以上を推奨）
+  □ 付属品（ケーブル、ケース等）の返却確認
+  □ アカウントログアウト確認
+
+【ステータス】
+・貸出中：現在貸出中
+・返却済：返却完了
+・点検中：故障・不具合で点検中
+・修理中：修理依頼中
+・廃棄：使用不可（廃棄予定）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 月次サマリー
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+総貸出件数：　　○件
+現在貸出中：　　○件
+返却済：　　　　○件
+トラブル発生：　○件
+　└ 破損：　　　○件
+　└ 紛失：　　　○件
+　└ その他：　　○件
+
+以上
+                    </pre>
+                </div>
+
+                <h3>機器台帳（Excel/スプレッドシート用）</h3>
+                <div class="comparison-table">
+                    <p><strong>推奨列構成：</strong></p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>列名</th>
+                                <th>内容例</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>管理番号</td>
+                                <td>CB-001, IP-015, PJ-003</td>
+                            </tr>
+                            <tr>
+                                <td>機器種別</td>
+                                <td>Chromebook, iPad, プロジェクター</td>
+                            </tr>
+                            <tr>
+                                <td>メーカー</td>
+                                <td>HP, Apple, EPSON</td>
+                            </tr>
+                            <tr>
+                                <td>型番</td>
+                                <td>HP Chromebook x360 14</td>
+                            </tr>
+                            <tr>
+                                <td>シリアル番号</td>
+                                <td>ABC123456789</td>
+                            </tr>
+                            <tr>
+                                <td>購入日</td>
+                                <td>2023/04/01</td>
+                            </tr>
+                            <tr>
+                                <td>保管場所</td>
+                                <td>ICT準備室、充電保管庫A</td>
+                            </tr>
+                            <tr>
+                                <td>状態</td>
+                                <td>正常/要修理/廃棄予定</td>
+                            </tr>
+                            <tr>
+                                <td>最終点検日</td>
+                                <td>2025/12/20</td>
+                            </tr>
+                            <tr>
+                                <td>備考</td>
+                                <td>バッテリー劣化あり</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 7. 保守点検チェックリスト -->
+            <section id="maintenance-checklist" class="content-section">
+                <h2><i class="fas fa-clipboard-check"></i> 7. 保守点検チェックリストテンプレート</h2>
+
+                <div class="info-box">
+                    <p>定期的な機器点検や棚卸しの際に使用するチェックリストです。</p>
+                </div>
+
+                <!-- 日次点検 -->
+                <h3>日次点検チェックリスト</h3>
+                <div class="template-box type-checklist">
+                    <div class="template-header">
+                        <h4>ICT機器 日次点検チェックリスト</h4>
+                        <button class="copy-btn" onclick="copyTemplate('daily-maintenance')"><i class="fas fa-copy"></i> コピー</button>
+                    </div>
+                    <pre id="daily-maintenance" class="template-content">
+【ICT機器 日次点検チェックリスト】
+点検日：YYYY年MM月DD日（曜日）
+点検者：○○○○
+対象：○○小学校 / ○○中学校
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 1. 学習者用端末
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ 充電保管庫の電源が入っているか
+□ 全端末が正しく充電されているか（緑ランプ点灯確認）
+□ 端末の破損・汚れがないか（目視確認）
+□ 充電ケーブルに損傷がないか
+□ 保管庫の扉が正しく閉まるか
+
+【不具合があった場合】
+端末番号：　　　　　　　症状：
+対応：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 2. Wi-Fi・ネットワーク
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ アクセスポイントのランプが正常（緑点灯）
+□ 端末からWi-Fiに接続できるか（各階で1台ずつ確認）
+□ インターネット接続が正常か（Webページが開けるか）
+
+【接続テスト結果】
+1階：　□ OK　□ NG
+2階：　□ OK　□ NG
+3階：　□ OK　□ NG
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 3. 大型提示装置（プロジェクター・電子黒板）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ 各教室の提示装置が正常に起動するか（目視確認）
+□ リモコンの電池残量は十分か
+□ 画面に映像が正しく表示されるか
+□ 音声が正常に出力されるか
+
+【不具合があった場所】
+教室名：　　　　　　　　症状：
+対応：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 4. 周辺機器
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ プリンターの用紙残量は十分か
+□ プリンターのトナー・インク残量は十分か
+□ 実物投影機が正常に動作するか
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 5. 環境確認
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ ICT準備室の施錠確認
+□ 空調（温度・湿度）が適切か
+□ 整理整頓されているか
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 総合所見
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ 異常なし
+□ 軽微な不具合あり（業務に支障なし）
+□ 重大な不具合あり（早急な対応が必要）
+
+【特記事項】
+
+
+点検完了時刻：　　:　　
+点検者サイン：　　　　　　
+
+以上
+                    </pre>
+                </div>
+
+                <!-- 月次点検 -->
+                <h3>月次点検チェックリスト</h3>
+                <div class="template-box type-checklist">
+                    <div class="template-header">
+                        <h4>ICT機器 月次点検チェックリスト</h4>
+                        <button class="copy-btn" onclick="copyTemplate('monthly-maintenance')"><i class="fas fa-copy"></i> コピー</button>
+                    </div>
+                    <pre id="monthly-maintenance" class="template-content">
+【ICT機器 月次点検チェックリスト】
+点検年月：YYYY年MM月
+点検者：○○○○
+対象：○○小学校 / ○○中学校
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 1. 学習者用端末（詳細点検）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ 全端末の起動確認（全台数：　　台）
+□ OS・アプリの更新状況確認
+□ ストレージ容量確認（空き容量が少ない端末をリストアップ）
+□ バッテリー劣化確認（充電が80%未満の端末を確認）
+□ 外観チェック（画面割れ、キーボード破損等）
+□ 清掃（キーボード、画面の拭き取り）
+
+【要対応端末】
+管理番号：　　　　　　症状：　　　　　　対応：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 2. ネットワーク機器
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ ルーター・スイッチのファームウェア確認
+□ アクセスポイントの設置状況確認（落下・損傷なし）
+□ 通信速度テスト（各階で計測）
+  1階：　　Mbps
+  2階：　　Mbps
+  3階：　　Mbps
+□ ケーブル配線の整理
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 3. 大型提示装置
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ フィルター清掃（プロジェクター）
+□ ランプ使用時間確認（交換時期が近い機器をリストアップ）
+□ リモコン電池交換（必要に応じて）
+□ HDMI/VGAケーブルの接続確認
+□ 音声出力の確認
+
+【ランプ交換が必要な機器】
+場所：　　　　　　　　使用時間：　　　時間
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 4. 周辺機器・消耗品
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ プリンター清掃
+□ トナー・インク在庫確認
+□ 用紙在庫確認
+□ マウス・キーボード動作確認
+□ 実物投影機のレンズ清掃
+□ 延長ケーブル・変換アダプタの在庫確認
+
+【発注が必要な消耗品】
+品目：　　　　　　　　数量：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 5. ソフトウェア・アカウント
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ 使用していないアカウントの確認・削除
+□ ライセンス期限の確認
+□ セキュリティアップデートの適用状況
+□ MDMの動作確認
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 6. 環境・設備
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+□ ICT準備室の整理整頓
+□ 充電保管庫の清掃
+□ 配線の整理
+□ 防災設備（消火器等）の確認
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 総合所見
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【今月の主な対応】
+
+
+【来月の予定・要対応事項】
+
+
+点検完了日：YYYY/MM/DD
+点検者サイン：　　　　　　
+
+以上
+                    </pre>
+                </div>
+            </section>
+
+            <!-- 8. 会議議事録 -->
+            <section id="meeting-minutes" class="content-section">
+                <h2><i class="fas fa-users"></i> 8. 会議議事録テンプレート</h2>
+
+                <div class="info-box">
+                    <p>ICT委員会や打ち合わせの記録を残すためのテンプレートです。</p>
+                </div>
+
+                <div class="template-box type-meeting">
+                    <div class="template-header">
+                        <h4>会議議事録</h4>
+                        <button class="copy-btn" onclick="copyTemplate('meeting-minutes-template')"><i class="fas fa-copy"></i> コピー</button>
+                    </div>
+                    <pre id="meeting-minutes-template" class="template-content">
+【会議議事録】
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 会議情報
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+会議名：　　　第○回 ICT委員会 / ○○打ち合わせ
+開催日時：　　YYYY年MM月DD日（曜日）HH:MM～HH:MM
+開催場所：　　○○小学校/中学校　○○室
+議長：　　　　○○先生
+記録者：　　　○○○○（ICT支援員）
+
+【出席者】（敬称略）
+・○○（校長）
+・○○（教頭）
+・○○（ICT担当）
+・○○（学年主任）
+・○○（ICT支援員）
+【欠席者】
+・○○
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 議題・協議事項
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【議題1】○○○○について
+＜説明者：○○＞
+・
+
+＜質疑応答・意見＞
+・○○：
+・○○：
+
+＜決定事項＞
+・
+
+＜保留・継続協議事項＞
+・
+
+
+【議題2】○○○○について
+＜説明者：○○＞
+・
+
+＜質疑応答・意見＞
+・
+
+＜決定事項＞
+・
+
+
+【議題3】その他
+・
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 決定事項まとめ
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. 
+
+2. 
+
+3. 
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ アクションアイテム（TODO）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+No. | タスク内容 | 担当者 | 期限 | ステータス
+─────────────────────────────
+1   |            | ○○   | MM/DD | 未着手
+2   |            | ○○   | MM/DD | 未着手
+3   |            | ○○   | MM/DD | 未着手
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+■ 次回予定
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+日時：　　YYYY年MM月DD日（曜日）HH:MM～
+場所：　　○○室
+議題：　　・
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+記録作成日：YYYY/MM/DD
+記録者：○○○○（ICT支援員）
+確認者：○○（議長）　　　　　　　　印
+
+以上
+                    </pre>
+                </div>
+            </section>
+
+            <!-- 関連ページ -->
+            <section class="references">
+                <h3>関連ページ</h3>
+                <div class="related-pages">
+                    <a href="downloads.html" class="related-link"><i class="fas fa-download"></i> ダウンロード資料</a>
+                    <a href="daily-work.html" class="related-link"><i class="fas fa-calendar-day"></i> 日常業務</a>
+                    <a href="lesson-proposal.html" class="related-link"><i class="fas fa-chalkboard-teacher"></i> 授業提案ガイド</a>
+                    <a href="training.html" class="related-link"><i class="fas fa-presentation"></i> 研修・育成</a>
+                    <a href="troubleshooting.html" class="related-link"><i class="fas fa-wrench"></i> トラブルシューティング</a>
+                    <a href="device-management.html" class="related-link"><i class="fas fa-laptop"></i> 端末管理・MDM</a>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト. All rights reserved.</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p style="margin-top: 15px;">
+                <a href="privacy-policy.html" style="color: white; margin: 0 10px;">プライバシーポリシー</a> | 
+                <a href="ad-policy.html" style="color: white; margin: 0 10px;">広告ポリシー</a> | 
+                <a href="contact.html" style="color: white; margin: 0 10px;">お問い合わせ</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+        // テンプレートコピー機能
+        function copyTemplate(templateId) {
+            const template = document.getElementById(templateId);
+            const textArea = document.createElement('textarea');
+            textArea.value = template.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            
+            // コピー完了メッセージ
+            const btn = event.target.closest('.copy-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> コピーしました！';
+            btn.style.background = '#10b981';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
