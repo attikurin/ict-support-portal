@@ -1,0 +1,2226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自発的な支援・能動的な支援とは | ICT支援員総合ポータルサイト</title>
+    <meta name="description" content="ICT支援員における自発的・能動的支援の定義、実践方法、具体例を詳しく解説。インタラクティブなチェックリストと自己評価シートで、あなたの支援スキルを診断・向上させます。">
+    <meta name="keywords" content="ICT支援員,能動的支援,自発的支援,先読み支援,予測支援,提案力,教育パートナー,チェックリスト,自己評価">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 能動的支援ページ専用スタイル */
+        .proactive-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .proactive-hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .proactive-hero p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* タブナビゲーション */
+        .tab-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .tab-button {
+            padding: 12px 24px;
+            background: #f0f0f0;
+            border: none;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .tab-button:hover {
+            background: #e0e0e0;
+        }
+        
+        .tab-button.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* 比較表 */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-table tr:hover {
+            background: #f9f9f9;
+        }
+        
+        .comparison-table .reactive {
+            background: #fff3e0;
+        }
+        
+        .comparison-table .proactive {
+            background: #e8f5e9;
+        }
+        
+        /* 具体例ボックス */
+        .example-box {
+            background: #f5f5f5;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .example-box.success {
+            border-left-color: #4caf50;
+            background: #e8f5e9;
+        }
+        
+        .example-box.warning {
+            border-left-color: #ff9800;
+            background: #fff3e0;
+        }
+        
+        .example-box.info {
+            border-left-color: #2196f3;
+            background: #e3f2fd;
+        }
+        
+        .example-box h4 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        /* 対話形式 */
+        .dialogue {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .dialogue-item {
+            margin: 15px 0;
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+        
+        .dialogue-teacher {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .dialogue-supporter {
+            background: #f3e5f5;
+            border-left: 4px solid #9c27b0;
+        }
+        
+        .dialogue-result {
+            background: #fff9c4;
+            border-left: 4px solid #fbc02d;
+            font-weight: bold;
+        }
+        
+        /* ステップ表示 */
+        .step-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .step-card {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        /* レベル表示 */
+        .level-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .level-beginner {
+            background: #81c784;
+            color: white;
+        }
+        
+        .level-intermediate {
+            background: #64b5f6;
+            color: white;
+        }
+        
+        .level-advanced {
+            background: #ba68c8;
+            color: white;
+        }
+        
+        /* チェックリスト */
+        .checklist-container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        
+        .checklist-level {
+            margin-bottom: 40px;
+        }
+        
+        .checklist-level h3 {
+            background: #667eea;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        
+        .checklist-item:hover {
+            background: #f0f0f0;
+        }
+        
+        .checklist-item input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        
+        .checklist-item label {
+            cursor: pointer;
+            flex: 1;
+            font-size: 1.05em;
+        }
+        
+        .checklist-result {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .checklist-result h4 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .checklist-result .score {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .checklist-result .feedback {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        
+        /* 自己評価シート */
+        .evaluation-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        
+        .evaluation-question {
+            margin: 25px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .evaluation-question h4 {
+            margin-top: 0;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .radio-option {
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .radio-option input[type="radio"] {
+            margin-right: 8px;
+        }
+        
+        .radio-option label {
+            cursor: pointer;
+            padding: 10px;
+            display: block;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .radio-option:hover label {
+            background: #e0e0e0;
+        }
+        
+        .evaluation-result {
+            display: none;
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .evaluation-result.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        /* 行動計画シート */
+        .action-plan-sheet {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        
+        .action-plan-group {
+            margin: 25px 0;
+        }
+        
+        .action-plan-group h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .action-plan-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-bottom: 10px;
+            transition: border-color 0.3s;
+        }
+        
+        .action-plan-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        textarea.action-plan-input {
+            min-height: 100px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        
+        .action-plan-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #95a5a6;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: #7f8c8d;
+        }
+        
+        /* ワークシート */
+        .worksheet-container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        
+        .daily-plan {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .daily-plan h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .time-slot {
+            display: flex;
+            gap: 15px;
+            margin: 10px 0;
+            align-items: center;
+        }
+        
+        .time-slot label {
+            min-width: 80px;
+            font-weight: bold;
+        }
+        
+        .time-slot input {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+        }
+        
+        /* 印刷用スタイル */
+        @media print {
+            .tab-navigation,
+            .btn-primary,
+            .btn-secondary,
+            header,
+            footer {
+                display: none;
+            }
+            
+            .tab-content {
+                display: block !important;
+            }
+            
+            .checklist-result,
+            .evaluation-result,
+            .action-plan-sheet {
+                page-break-inside: avoid;
+            }
+        }
+        
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            .proactive-hero h1 {
+                font-size: 1.8em;
+            }
+            
+            .tab-button {
+                flex: 1 1 45%;
+                min-width: 150px;
+            }
+            
+            .comparison-table {
+                font-size: 0.9em;
+            }
+            
+            .step-container {
+                flex-direction: column;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+            }
+            
+            .action-plan-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-banner">
+        <div class="container">
+            <h1><i class="fas fa-book-open"></i> ICT支援員総合ポータルサイト</h1>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+        </div>
+    </div>
+
+    <!-- Site-wide Search -->
+    <div class="search-container">
+        <div class="container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="siteSearch" placeholder="サイト内を検索... (例: 能動的支援, チェックリスト, 自己評価)">
+                <div id="searchResults" class="search-results" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> トップ</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-book"></i> 基礎・入門</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="basics.html"><i class="fas fa-info-circle"></i> 基礎知識</a></li>
+                        <li><a href="education-basics.html"><i class="fas fa-graduation-cap"></i> 教育入門講座</a></li>
+                        <li><a href="glossary.html"><i class="fas fa-book-medical"></i> 用語集</a></li>
+                        <li><a href="daily-work.html"><i class="fas fa-calendar-day"></i> 日常業務</a></li>
+                        <li><a href="planner.html"><i class="fas fa-user-tie"></i> 企画員(SV)</a></li>
+                        <li><a href="business-manners.html"><i class="fas fa-user-check"></i> ビジネスマナー</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-hands-helping"></i> 支援・指導</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guidelines.html"><i class="fas fa-hands-helping"></i> 支援ガイドライン</a></li>
+                        <li><a href="lesson-observation.html"><i class="fas fa-eye"></i> 授業観察</a></li>
+                        <li><a href="lesson-proposal.html"><i class="fas fa-chalkboard-teacher"></i> 授業提案</a></li>
+                        <li><a href="proactive-support.html" class="active"><i class="fas fa-rocket"></i> 能動的支援</a></li>
+                        <li><a href="skills.html"><i class="fas fa-user-cog"></i> スキル</a></li>
+                        <li><a href="psychology.html"><i class="fas fa-brain"></i> 心理学</a></li>
+                        <li><a href="lesson-design.html"><i class="fas fa-pencil-ruler"></i> 授業づくり</a></li>
+                        <li><a href="curriculum-map.html"><i class="fas fa-project-diagram"></i> 教科・単元系統図</a></li>
+                        <li><a href="communication-skills.html"><i class="fas fa-comments"></i> コミュニケーション</a></li>
+                        <li><a href="special-needs-ict.html"><i class="fas fa-universal-access"></i> 特別支援ICT</a></li>
+                        <li><a href="rubric.html"><i class="fas fa-clipboard-check"></i> ルーブリック評価</a></li>
+                        <li><a href="learning-support-systems.html"><i class="fas fa-chalkboard"></i> 授業支援システム</a></li>
+                        <li><a href="programming-education.html"><i class="fas fa-code"></i> プログラミング教育</a></li>
+                        <li><a href="digital-citizenship.html"><i class="fas fa-shield-alt"></i> 情報モラル教育</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-rocket"></i> GIGA・最新動向</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giga-update.html"><i class="fas fa-rocket"></i> GIGA最新動向</a></li>
+                        <li><a href="ai-education.html"><i class="fas fa-robot"></i> AI利用ガイド</a></li>
+                        <li><a href="ai-apps-education.html"><i class="fas fa-brain"></i> AI教育アプリ</a></li>
+                        <li><a href="digital-textbooks.html"><i class="fas fa-tablet-alt"></i> デジタル教科書</a></li>
+                        <li><a href="case-studies.html"><i class="fas fa-star"></i> 成功事例</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-laptop"></i> 機器・ツール</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tools.html"><i class="fas fa-laptop"></i> ICT機器一覧</a></li>
+                        <li><a href="device-management.html"><i class="fas fa-tablet-alt"></i> 端末管理・MDM</a></li>
+                        <li><a href="wifi-troubleshooting.html"><i class="fas fa-wifi"></i> Wi-Fiトラブル対応</a></li>
+                        <li><a href="account-management.html"><i class="fas fa-user-shield"></i> アカウント管理</a></li>
+                        <li><a href="troubleshooting.html"><i class="fas fa-wrench"></i> トラブルシューティング</a></li>
+                        <li><a href="security.html"><i class="fas fa-shield-alt"></i> セキュリティ</a></li>
+                        <li><a href="network-basics.html"><i class="fas fa-network-wired"></i> ネットワーク基礎</a></li>
+                        <li><a href="edtech-comparison.html"><i class="fas fa-balance-scale"></i> EdTech比較</a></li>
+                        <li><a href="edtech-tools.html"><i class="fas fa-tools"></i> EdTechツール</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-cogs"></i> 運用・管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-dx.html"><i class="fas fa-digital-tachograph"></i> 校務DX</a></li>
+                        <li><a href="training.html"><i class="fas fa-chalkboard-teacher"></i> 研修・育成</a></li>
+                        <li><a href="data-analytics.html"><i class="fas fa-chart-line"></i> データ分析</a></li>
+                        <li><a href="project-management.html"><i class="fas fa-tasks"></i> プロジェクト管理</a></li>
+                        <li><a href="budget-procurement.html"><i class="fas fa-yen-sign"></i> 予算・調達</a></li>
+                        <li><a href="online-learning.html"><i class="fas fa-video"></i> オンライン授業</a></li>
+                        <li><a href="time-task-management.html"><i class="fas fa-clock"></i> 時間・タスク管理</a></li>
+                        <li><a href="crisis-management.html"><i class="fas fa-shield-alt"></i> 危機管理</a></li>
+                        <li><a href="parent-communication.html"><i class="fas fa-users"></i> 保護者連携</a></li>
+                        <li><a href="school-events-ict.html"><i class="fas fa-calendar-check"></i> 学校行事ICT</a></li>
+                        <li><a href="career-path.html"><i class="fas fa-graduation-cap"></i> キャリアパス</a></li>
+                        <li><a href="self-learning.html"><i class="fas fa-book-reader"></i> 自己学習</a></li>
+                        <li><a href="business-improvement.html"><i class="fas fa-lightbulb"></i> 業務改善</a></li>
+                        <li><a href="mental-health.html"><i class="fas fa-heart"></i> メンタルヘルス</a></li>
+                    </ul>
+                </li>
+                
+                <li class="has-dropdown">
+                    <a href="#"><i class="fas fa-chart-line"></i> データ・資料</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="statistics.html"><i class="fas fa-chart-bar"></i> 配置・統計</a></li>
+                        <li><a href="certifications.html"><i class="fas fa-certificate"></i> 資格・検定</a></li>
+                        <li><a href="board-education.html"><i class="fas fa-building"></i> 教育委員会</a></li>
+                        <li><a href="resources-links.html"><i class="fas fa-link"></i> リンク集</a></li>
+                        <li><a href="templates.html"><i class="fas fa-file-alt"></i> 実践テンプレート集</a></li>
+                        <li><a href="downloads.html"><i class="fas fa-download"></i> ダウンロード</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- ヒーローセクション -->
+        <div class="proactive-hero">
+            <h1>自発的な支援・能動的な支援とは</h1>
+            <p>「困ったら呼ぶ人」から「一緒に授業を作るパートナー」へ。<br>
+            ICT支援員として、より効果的な支援を実現するための考え方と実践方法を、<br>
+            インタラクティブなチェックリストとともに学びましょう。</p>
+        </div>
+
+        <!-- タブナビゲーション -->
+        <div class="tab-navigation">
+            <button class="tab-button active" onclick="switchTab('definition')">定義と違い</button>
+            <button class="tab-button" onclick="switchTab('examples')">具体例</button>
+            <button class="tab-button" onclick="switchTab('importance')">なぜ重要か</button>
+            <button class="tab-button" onclick="switchTab('methods')">実践方法</button>
+            <button class="tab-button" onclick="switchTab('stages')">段階別アプローチ</button>
+            <button class="tab-button" onclick="switchTab('cases')">事例</button>
+            <button class="tab-button" onclick="switchTab('mistakes')">失敗と対策</button>
+            <button class="tab-button" onclick="switchTab('checklist')">チェックリスト</button>
+            <button class="tab-button" onclick="switchTab('evaluation')">自己評価</button>
+            <button class="tab-button" onclick="switchTab('action-plan')">行動計画</button>
+        </div>
+
+        <!-- タブコンテンツ1: 定義と違い -->
+        <div id="definition" class="tab-content active">
+            <h2>1. 自発的・能動的支援の定義</h2>
+            
+            <h3>基本的な定義</h3>
+            <div class="step-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h4>自発的な支援</h4>
+                    <p><strong>自分から進んで</strong>支援を提供すること</p>
+                    <ul>
+                        <li>依頼される前に行動を起こす</li>
+                        <li>問題を予測し、事前に対応する</li>
+                    </ul>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h4>能動的な支援</h4>
+                    <p><strong>積極的に</strong>働きかける支援</p>
+                    <ul>
+                        <li>待つのではなく、自ら動く</li>
+                        <li>継続的な改善を提案・実行する</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>受動的支援との違い</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>観点</th>
+                        <th>受動的支援</th>
+                        <th>能動的支援</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>姿勢</strong></td>
+                        <td class="reactive">待つ・依頼されたら対応・指示待ち</td>
+                        <td class="proactive">動く・自ら提案実行・先読み行動</td>
+                    </tr>
+                    <tr>
+                        <td><strong>タイミング</strong></td>
+                        <td class="reactive">問題発生後・トラブル対応・緊急対応</td>
+                        <td class="proactive">問題発生前・トラブル予防・計画的対応</td>
+                    </tr>
+                    <tr>
+                        <td><strong>範囲</strong></td>
+                        <td class="reactive">依頼された内容のみ・個別対応・短期的</td>
+                        <td class="proactive">関連事項も含めて・全体最適・長期的</td>
+                    </tr>
+                    <tr>
+                        <td><strong>関係性</strong></td>
+                        <td class="reactive">「困ったら呼ぶ人」・サービス提供者</td>
+                        <td class="proactive">「一緒に考える人」・パートナー</td>
+                    </tr>
+                    <tr>
+                        <td><strong>成果</strong></td>
+                        <td class="reactive">その場しのぎ・同じ問題が再発</td>
+                        <td class="proactive">根本解決・再発防止</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>具体的なシーン比較</h3>
+            
+            <h4>シーン1: 授業支援の場合</h4>
+            <div class="dialogue">
+                <div class="example-box warning">
+                    <h4>❌ 受動的支援</h4>
+                    <div class="dialogue-item dialogue-teacher">
+                        <strong>先生：</strong>「今日Google Classroomを使いたいんですが、やり方が…」<br>
+                        <small>（授業開始5分前）</small>
+                    </div>
+                    <div class="dialogue-item dialogue-supporter">
+                        <strong>支援員：</strong>「今から説明しますね」
+                    </div>
+                    <div class="dialogue-item dialogue-result">
+                        <strong>結果：</strong>授業開始が遅れる、先生も焦る、子どもたちも待つ
+                    </div>
+                </div>
+
+                <div class="example-box success">
+                    <h4>✅ 能動的支援</h4>
+                    <div class="dialogue-item dialogue-supporter">
+                        <strong>支援員：</strong>「来週の授業予定を拝見したのですが、Google Classroomを使う予定はありますか？事前に使い方をご説明しましょうか？」<br>
+                        <small>（前日または数日前）</small>
+                    </div>
+                    <div class="dialogue-item dialogue-teacher">
+                        <strong>先生：</strong>「実は使ってみたいと思っていたんです！」
+                    </div>
+                    <div class="dialogue-item dialogue-result">
+                        <strong>結果：</strong>余裕を持って準備、先生も自信を持って授業に臨める
+                    </div>
+                </div>
+            </div>
+
+            <h4>シーン2: トラブル対応の場合</h4>
+            <div class="dialogue">
+                <div class="example-box warning">
+                    <h4>❌ 受動的支援</h4>
+                    <div class="dialogue-item dialogue-teacher">
+                        <strong>先生：</strong>「端末が起動しない子が5人もいます！」<br>
+                        <small>（授業中）</small>
+                    </div>
+                    <div class="dialogue-item dialogue-supporter">
+                        <strong>支援員：</strong>「今すぐ見に行きます」
+                    </div>
+                    <div class="dialogue-item dialogue-result">
+                        <strong>結果：</strong>授業が中断、他の子どもたちも待つ、授業計画が狂う
+                    </div>
+                </div>
+
+                <div class="example-box success">
+                    <h4>✅ 能動的支援</h4>
+                    <div class="dialogue-item dialogue-supporter">
+                        <strong>支援員：</strong>「明日の授業で端末を使うとのことで、全端末の充電と動作確認をしておきました。2台バッテリーが劣化していたので交換しておきます」<br>
+                        <small>（授業前日）</small>
+                    </div>
+                    <div class="dialogue-item dialogue-teacher">
+                        <strong>先生：</strong>「いつもありがとうございます！」
+                    </div>
+                    <div class="dialogue-item dialogue-result">
+                        <strong>結果：</strong>トラブル未然防止、授業がスムーズ
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- タブコンテンツ2: 具体例 -->
+        <div id="examples" class="tab-content">
+            <h2>3. 自発的・能動的支援の具体例</h2>
+            
+            <h3>レベル別具体例</h3>
+            
+            <div class="example-box info">
+                <span class="level-badge level-beginner">初級</span>
+                <h4>気づきと声かけ</h4>
+                <ul>
+                    <li>廊下で会ったら「何かお困りのことはありませんか？」</li>
+                    <li>職員室で「今週の授業予定、拝見しました」</li>
+                    <li>授業前に「準備、お手伝いできることはありますか？」</li>
+                </ul>
+            </div>
+
+            <div class="example-box info">
+                <span class="level-badge level-intermediate">中級</span>
+                <h4>予測と準備</h4>
+                <ul>
+                    <li>年間行事予定を確認し、ICT機器が必要な行事を事前リストアップ</li>
+                    <li>学期末に次学期の授業で使えるツール情報を提供</li>
+                    <li>各教室の機器配置図を作成・更新</li>
+                </ul>
+            </div>
+
+            <div class="example-box info">
+                <span class="level-badge level-advanced">上級</span>
+                <h4>提案と改善</h4>
+                <ul>
+                    <li>校内ICT活用状況を分析し、課題と改善案を提示</li>
+                    <li>他校の優良事例を収集・紹介</li>
+                    <li>先生方向けの簡単なマニュアルや動画を自主制作</li>
+                </ul>
+            </div>
+
+            <h3>業務別具体例</h3>
+            
+            <h4>A. 日常業務での能動的支援</h4>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>業務</th>
+                        <th>受動的</th>
+                        <th>能動的</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>朝の巡回</strong></td>
+                        <td class="reactive">職員室で待機</td>
+                        <td class="proactive">各教室を巡回し機器の状態確認、充電忘れの端末を発見→充電開始、黒板に書かれた授業予定をチェック</td>
+                    </tr>
+                    <tr>
+                        <td><strong>授業準備</strong></td>
+                        <td class="reactive">呼ばれたら準備を手伝う</td>
+                        <td class="proactive">週案や時間割を確認しICT活用予定授業をリストアップ、必要な機器を事前に教室に配置、先生に「準備完了」と報告</td>
+                    </tr>
+                    <tr>
+                        <td><strong>授業支援</strong></td>
+                        <td class="reactive">授業中に呼ばれたら駆けつける</td>
+                        <td class="proactive">授業開始前に教室へ訪問、「何かあればすぐ来ますので」と声かけ、授業中は近くで待機、トラブルの予兆を察知→事前に対処</td>
+                    </tr>
+                    <tr>
+                        <td><strong>授業後フォロー</strong></td>
+                        <td class="reactive">授業が終わったら機器を片付ける</td>
+                        <td class="proactive">授業の振り返りを一緒に実施、「今日の授業、こんな工夫ができるかも」と提案、次回の授業に向けた改善提案</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>B. 計画的な能動的支援</h4>
+            <div class="step-container">
+                <div class="step-card">
+                    <h4>月次レベル</h4>
+                    <ul>
+                        <li>翌月の行事予定を確認</li>
+                        <li>必要な機器・準備のリストを作成</li>
+                        <li>校内研修の企画・提案</li>
+                        <li>ICT活用状況の簡単な集計と共有</li>
+                    </ul>
+                </div>
+                <div class="step-card">
+                    <h4>学期レベル</h4>
+                    <ul>
+                        <li>次学期の単元計画を確認</li>
+                        <li>新しい教材・ツールの情報収集</li>
+                        <li>長期休暇中の機器メンテナンス計画</li>
+                        <li>研修資料の作成・更新</li>
+                    </ul>
+                </div>
+                <div class="step-card">
+                    <h4>年間レベル</h4>
+                    <ul>
+                        <li>年間のICT活用計画を支援</li>
+                        <li>機器更新計画への提言</li>
+                        <li>校内ICT環境の改善提案</li>
+                        <li>成果報告書の作成支援</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- タブコンテンツ3: なぜ重要か -->
+        <div id="importance" class="tab-content">
+            <h2>4. なぜ自発的・能動的支援が重要なのか</h2>
+            
+            <h3>先生方にとってのメリット</h3>
+            <div class="example-box success">
+                <h4>メリット1: 安心感が生まれる</h4>
+                <p style="text-align: center; font-size: 1.2em; line-height: 2;">
+                    「困った時に助けてくれる人」<br>
+                    ⬇️<br>
+                    「困る前に支えてくれる人」<br>
+                    ⬇️<br>
+                    「一緒に授業を作ってくれるパートナー」
+                </p>
+                <ul>
+                    <li>トラブルへの不安が減る</li>
+                    <li>新しいことに挑戦しやすくなる</li>
+                    <li>ICT活用が日常化する</li>
+                </ul>
+            </div>
+
+            <div class="example-box success">
+                <h4>メリット2: 時間が節約できる</h4>
+                <table class="comparison-table">
+                    <tr>
+                        <td class="reactive"><strong>受動的支援の場合</strong><br>問題発生 → 支援員を探す → 説明 → 対応待ち → 解決<br><strong>（20分）</strong></td>
+                        <td class="proactive"><strong>能動的支援の場合</strong><br>問題が起きない → すぐに授業開始<br><strong>（0分）</strong></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="example-box success">
+                <h4>メリット3: 授業の質が向上する</h4>
+                <ul>
+                    <li>技術的な不安がなくなる</li>
+                    <li>ICTの効果的な活用方法が分かる</li>
+                    <li>子どもたちの学びに集中できる</li>
+                </ul>
+            </div>
+
+            <h3>ICT支援員自身にとってのメリット</h3>
+            <div class="step-container">
+                <div class="step-card">
+                    <h4>信頼関係が構築される</h4>
+                    <p>「困った時だけ呼ばれる人」から「いつも気にかけてくれる人」、そして「学校になくてはならない存在」へ</p>
+                </div>
+                <div class="step-card">
+                    <h4>やりがいが増す</h4>
+                    <ul>
+                        <li>感謝される機会が増える</li>
+                        <li>目に見える成果が出る</li>
+                        <li>自分の存在価値を実感できる</li>
+                    </ul>
+                </div>
+                <div class="step-card">
+                    <h4>スキルアップにつながる</h4>
+                    <ul>
+                        <li>予測力が身につく</li>
+                        <li>提案力が磨かれる</li>
+                        <li>問題解決力が向上する</li>
+                        <li>コミュニケーション力が伸びる</li>
+                    </ul>
+                </div>
+                <div class="step-card">
+                    <h4>仕事が効率化される</h4>
+                    <ul>
+                        <li>緊急対応が減る</li>
+                        <li>計画的に動ける</li>
+                        <li>同じトラブルが減る</li>
+                        <li>余裕を持って業務に取り組める</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- タブコンテンツ4: 実践方法 -->
+        <div id="methods" class="tab-content">
+            <h2>5. 自発的・能動的支援を実践する方法</h2>
+            
+            <h3>マインドセット（考え方）の転換</h3>
+            
+            <div class="dialogue">
+                <h4>転換1: 「依頼待ち」から「先読み」へ</h4>
+                <div class="example-box warning">
+                    <strong>❌ Before:</strong>
+                    <p>「今日は依頼がないから暇だな」</p>
+                </div>
+                <div class="example-box success">
+                    <strong>✅ After:</strong>
+                    <p>「今日は余裕があるから、来週の準備をしよう」</p>
+                    <p>「各教室を回って、困っていることがないか聞いてみよう」</p>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <h4>転換2: 「個別対応」から「全体最適」へ</h4>
+                <div class="example-box warning">
+                    <strong>❌ Before:</strong>
+                    <p>A先生の問題を解決して終わり</p>
+                </div>
+                <div class="example-box success">
+                    <strong>✅ After:</strong>
+                    <p>A先生の問題 → 他の先生も同じ問題を抱えているかも<br>
+                    → 全体に情報共有 → マニュアル作成 → 研修実施</p>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <h4>転換3: 「技術者」から「教育パートナー」へ</h4>
+                <div class="example-box warning">
+                    <strong>❌ Before:</strong>
+                    <p>「私は機械の専門家」</p>
+                </div>
+                <div class="example-box success">
+                    <strong>✅ After:</strong>
+                    <p>「私は、ICTを使って先生方の授業をサポートする教育チームの一員」</p>
+                </div>
+            </div>
+
+            <h3>具体的な実践ステップ</h3>
+            
+            <div class="step-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h4>情報収集の習慣化</h4>
+                    <p><strong>毎日やること</strong></p>
+                    <ul>
+                        <li>朝礼・職員会議への参加</li>
+                        <li>週案・時間割の確認</li>
+                        <li>先生方との雑談（情報収集）</li>
+                        <li>校内巡回（機器の状態確認）</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h4>予測力を磨く</h4>
+                    <p><strong>パターン認識</strong></p>
+                    <ul>
+                        <li>運動会の前：ビデオカメラ準備依頼増</li>
+                        <li>学期末：成績処理サポート依頼増</li>
+                        <li>新学期：アカウント関連質問増</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h4>声かけの工夫</h4>
+                    <p><strong>良いタイミング</strong></p>
+                    <ul>
+                        <li>授業の前後</li>
+                        <li>空き時間</li>
+                        <li>昼休み</li>
+                    </ul>
+                    <p><strong>避けるべき</strong></p>
+                    <ul>
+                        <li>授業中（緊急時以外）</li>
+                        <li>会議中</li>
+                        <li>明らかに忙しそうな時</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h4>提案力を高める</h4>
+                    <p><strong>提案の3原則</strong></p>
+                    <ul>
+                        <li><strong>具体的に:</strong> 「この単元なら、Google Earthで実際の地形を見せると分かりやすいです」</li>
+                        <li><strong>メリットを明確に:</strong> 「この方法なら、準備時間が5分短縮できます」</li>
+                        <li><strong>選択肢を示す:</strong> 「AとBの方法があります。いかがでしょうか？」</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h4>ドキュメント化</h4>
+                    <p><strong>作るべきドキュメント</strong></p>
+                    <ul>
+                        <li>授業支援記録シート</li>
+                        <li>よくある質問FAQ</li>
+                        <li>機器トラブル対応マニュアル</li>
+                        <li>活用事例集</li>
+                        <li>年間サポートカレンダー</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>実践的なテクニック</h3>
+            
+            <div class="example-box info">
+                <h4>テクニック1: 「3分ルール」</h4>
+                <p>先生と会った時、3分以内で価値を提供する</p>
+                <p><strong>例：</strong></p>
+                <p>「先生、おはようございます。来週の理科の授業、タブレットで実験動画を撮ると振り返りに使えますよ（30秒）。設定は簡単で、このボタンだけです（1分）。必要なら事前に練習しましょうか？（30秒）。では、良い1日を！」</p>
+                <p><strong>→ 短時間で有益、負担にならない</strong></p>
+            </div>
+
+            <div class="example-box info">
+                <h4>テクニック2: 「プラス1提案」</h4>
+                <p>依頼された内容 + 関連する提案</p>
+                <p><strong>例：</strong></p>
+                <p><strong>先生：</strong>「プロジェクターの使い方教えて」</p>
+                <p><strong>支援員：</strong>「かしこまりました。（依頼対応）ところで、このアプリを使うと子どもたちの端末から画像をプロジェクターに直接送れますよ。（プラス1提案）授業で使えそうなら、また説明しますね」</p>
+            </div>
+
+            <div class="example-box info">
+                <h4>テクニック3: 「見える化」</h4>
+                <p>自分の支援を可視化する</p>
+                <ul>
+                    <li><strong>月次レポート作成:</strong> 「今月の支援実績：授業支援○回、トラブル対応○件」</li>
+                    <li><strong>活用事例の掲示:</strong> 「今月のICT活用ベストプラクティス」を写真付きで掲示</li>
+                    <li><strong>Before/After:</strong> 「この改善で、準備時間が15分→5分に短縮」</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- タブコンテンツ5: 段階別アプローチ -->
+        <div id="stages" class="tab-content">
+            <h2>6. 段階別アプローチ</h2>
+            
+            <div class="example-box success">
+                <span class="level-badge level-beginner">初心者</span>
+                <h3>【初心者レベル】関係構築と基礎固め（1-3ヶ月）</h3>
+                
+                <h4>目標</h4>
+                <ul>
+                    <li>先生方に顔と名前を覚えてもらう</li>
+                    <li>基本的な機器操作をマスターする</li>
+                    <li>学校の1日の流れを理解する</li>
+                </ul>
+
+                <h4>やるべきこと</h4>
+                <p><strong>毎日：</strong></p>
+                <ul>
+                    <li>朝の挨拶回り（職員室・各フロア）</li>
+                    <li>昼休みに職員室で雑談</li>
+                    <li>困っている先生がいないか観察</li>
+                    <li>「何かお手伝いできることはありませんか？」の声かけ</li>
+                </ul>
+
+                <p><strong>週1回：</strong></p>
+                <ul>
+                    <li>全教室の機器配置を確認</li>
+                    <li>よくある質問をメモ</li>
+                    <li>簡単な情報提供（1枚ペーパー）</li>
+                </ul>
+
+                <h4>この段階での能動的支援例</h4>
+                <ul>
+                    <li><strong>レベル1:</strong> 「○○先生、プロジェクターの調子が悪そうですね。確認しましょうか？」</li>
+                    <li><strong>レベル2:</strong> 「明日の授業で端末を使うんですね。充電は大丈夫ですか？」</li>
+                    <li><strong>レベル3:</strong> 「この前質問があった件、調べてきました」</li>
+                </ul>
+            </div>
+
+            <div class="example-box info">
+                <span class="level-badge level-intermediate">中級者</span>
+                <h3>【中級者レベル】予測と提案（4-12ヶ月）</h3>
+                
+                <h4>目標</h4>
+                <ul>
+                    <li>先生方のニーズを先読みできる</li>
+                    <li>適切な提案ができる</li>
+                    <li>授業デザインに関われる</li>
+                </ul>
+
+                <h4>やるべきこと</h4>
+                <p><strong>毎日：</strong></p>
+                <ul>
+                    <li>週案・時間割の確認（翌日以降の予測）</li>
+                    <li>授業前の巡回と準備確認</li>
+                    <li>授業後の振り返り</li>
+                    <li>その日の気づきをメモ</li>
+                </ul>
+
+                <p><strong>週1回：</strong></p>
+                <ul>
+                    <li>翌週のICT活用予定を確認</li>
+                    <li>必要な準備のリストアップと実施</li>
+                    <li>情報提供資料の作成</li>
+                    <li>先生方との面談時間の確保</li>
+                </ul>
+
+                <p><strong>月1回：</strong></p>
+                <ul>
+                    <li>校内ICT活用状況の簡易分析</li>
+                    <li>他校の事例収集</li>
+                    <li>ミニ研修の企画・実施</li>
+                    <li>月次レポート作成</li>
+                </ul>
+
+                <h4>この段階での能動的支援例</h4>
+                <ul>
+                    <li><strong>レベル4:</strong> 「来週の理科の授業、顕微鏡の映像をプロジェクターに映すと効果的ですね。必要な機器を準備しておきました」</li>
+                    <li><strong>レベル5:</strong> 「この単元、タブレットで調べ学習をすると子どもたちが主体的に学べます。他校のワークシートがあるのでご覧ください」</li>
+                    <li><strong>レベル6:</strong> 「前回の授業、子どもたちの反応が良かったですね。次回はこんな発展的な活動もできますよ」</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <span class="level-badge level-advanced">上級者</span>
+                <h3>【上級者レベル】学校全体の最適化（1年以上）</h3>
+                
+                <h4>目標</h4>
+                <ul>
+                    <li>学校全体のICT環境を俯瞰できる</li>
+                    <li>中長期的な改善計画を立案できる</li>
+                    <li>他の支援員の育成ができる</li>
+                </ul>
+
+                <h4>やるべきこと</h4>
+                <p><strong>毎日：</strong></p>
+                <ul>
+                    <li>学校全体の状況把握</li>
+                    <li>若手教員への重点サポート</li>
+                    <li>管理職への情報共有</li>
+                    <li>継続的なPDCAサイクル</li>
+                </ul>
+
+                <p><strong>週1回：</strong></p>
+                <ul>
+                    <li>校内研修の企画・運営</li>
+                    <li>活用事例の収集と共有</li>
+                    <li>課題の分析と対策立案</li>
+                </ul>
+
+                <p><strong>月1回：</strong></p>
+                <ul>
+                    <li>月次報告書の作成（データ分析含む）</li>
+                    <li>中長期計画の進捗確認</li>
+                    <li>地域の研究会・勉強会への参加</li>
+                    <li>他校との情報交換</li>
+                </ul>
+
+                <h4>この段階での能動的支援例</h4>
+                <ul>
+                    <li><strong>レベル7:</strong> 「校内のICT活用状況を分析したところ、低学年での活用が少ない傾向にあります。低学年向けのミニ研修を企画しました」</li>
+                    <li><strong>レベル8:</strong> 「毎回同じ質問が多いので、動画マニュアルを作成しました。これで先生方が自己解決できます」</li>
+                    <li><strong>レベル9:</strong> 「校長先生が目指す『個別最適な学び』を実現するために、こんなICT活用計画を作ってみました。ご検討ください」</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- タブコンテンツ6: 事例 -->
+        <div id="cases" class="tab-content">
+            <h2>7. 実践事例・成功事例</h2>
+            
+            <div class="example-box success">
+                <h3>事例1: 新人支援員Aさんのケース</h3>
+                <p><strong>背景:</strong> ICT支援員1年目、教育現場未経験、最初は何をすれば良いか分からなかった</p>
+                
+                <h4>実践した能動的支援</h4>
+                <p><strong>1ヶ月目: 観察と記録</strong></p>
+                <ul>
+                    <li>毎朝全教室を巡回し、機器の状態をチェック</li>
+                    <li>先生方の端末利用状況を観察</li>
+                    <li>「よく聞かれる質問」リストを作成</li>
+                </ul>
+
+                <p><strong>2ヶ月目: 小さな提案</strong></p>
+                <ul>
+                    <li>よく聞かれる質問TOP5を1枚にまとめて配布</li>
+                    <li>「今週のICT活用Tips」を毎週金曜日に掲示</li>
+                    <li>先生方から「助かる」「分かりやすい」と好評</li>
+                </ul>
+
+                <p><strong>3ヶ月目: 先読み行動</strong></p>
+                <ul>
+                    <li>週案を確認し、ICT使用予定授業をリストアップ</li>
+                    <li>事前に「準備しておきましょうか？」と声かけ</li>
+                    <li>トラブルが激減、先生方の信頼を獲得</li>
+                </ul>
+
+                <h4>6ヶ月後の成果</h4>
+                <ul>
+                    <li>授業支援依頼が前月比150%増加（信頼されている証拠）</li>
+                    <li>トラブル対応は前月比40%減少（予防が効いている証拠）</li>
+                    <li>「Aさんがいると安心」と言われるようになった</li>
+                </ul>
+
+                <p><strong>Aさんのコメント:</strong></p>
+                <p>「最初は『呼ばれたら対応する』だけでしたが、それだと緊急対応ばかりで疲弊していました。能動的に動くようになってから、先生方との関係も良くなり、仕事も計画的に進められるようになりました」</p>
+            </div>
+
+            <div class="example-box success">
+                <h3>事例2: ベテラン支援員Bさんのケース</h3>
+                <p><strong>背景:</strong> ICT支援員5年目、複数校を担当、より効果的な支援方法を模索</p>
+                
+                <h4>実践した能動的支援</h4>
+                <p><strong>学期初めの取り組み</strong></p>
+                <ul>
+                    <li>全先生方に「今学期やりたいこと」アンケート</li>
+                    <li>回答を分析し、個別サポート計画を作成</li>
+                    <li>計画的に各先生を訪問</li>
+                </ul>
+
+                <p><strong>授業デザイン支援</strong></p>
+                <ul>
+                    <li>単元計画を見て「ここでICTが使えそう」と提案</li>
+                    <li>具体的な授業案と必要な準備を提示</li>
+                    <li>授業後に振り返りと改善提案</li>
+                </ul>
+
+                <p><strong>組織的アプローチ</strong></p>
+                <ul>
+                    <li>月1回「ICT活用情報交換会」を企画</li>
+                    <li>先生方同士の学び合いの場を創出</li>
+                    <li>自分は黒子に徹し、先生方が主役</li>
+                </ul>
+
+                <h4>年間を通じた成果</h4>
+                <ul>
+                    <li>校内ICT活用率が前年比230%向上</li>
+                    <li>他校から視察が来るレベルの実践校に</li>
+                    <li>教育委員会から表彰</li>
+                </ul>
+
+                <p><strong>Bさんのコメント:</strong></p>
+                <p>「個別対応だけでは限界があります。先生方が自走できる仕組みを作ることが真の能動的支援だと気づきました。今は先生方が自発的にICTを活用し、私はそれをサポートする形です」</p>
+            </div>
+
+            <div class="example-box success">
+                <h3>事例3: トラブル予防の成功例</h3>
+                <p><strong>背景:</strong> E小学校、全校児童600名、タブレット600台を管理、以前は頻繁にトラブル発生</p>
+                
+                <h4>支援員Fさんの取り組み</h4>
+                <p><strong>問題分析</strong></p>
+                <ul>
+                    <li>トラブル記録を3ヶ月分析</li>
+                    <li>「充電忘れ」が全体の40%</li>
+                    <li>「起動しない」が30%</li>
+                    <li>「接続トラブル」が20%</li>
+                </ul>
+
+                <p><strong>能動的対策の実施</strong></p>
+                <ul>
+                    <li><strong>対策1:</strong> 各クラスに充電チェックリスト配布、毎週金曜日に全台充電確認 → 充電トラブル90%減少</li>
+                    <li><strong>対策2:</strong> 月1回、全端末の動作確認、問題のある端末を事前に修理・交換 → 「起動しない」トラブル80%減少</li>
+                    <li><strong>対策3:</strong> 各教室のWi-Fi強度を測定、アクセスポイントの配置を最適化 → 接続トラブル70%減少</li>
+                </ul>
+
+                <h4>年間成果</h4>
+                <ul>
+                    <li>トラブル対応時間: 週15時間 → 週3時間（80%削減）</li>
+                    <li>授業中断: 月20回 → 月2回（90%削減）</li>
+                    <li>先生方の満足度: 65% → 95%</li>
+                    <li>空いた時間で授業支援・研修に注力</li>
+                </ul>
+
+                <p><strong>Fさんのコメント:</strong></p>
+                <p>「トラブル対応に追われる日々から脱却できました。予防に時間を使うことで、結果的に全体の業務効率が格段に向上しました」</p>
+            </div>
+        </div>
+
+        <!-- タブコンテンツ7: 失敗と対策 -->
+        <div id="mistakes" class="tab-content">
+            <h2>8. よくある失敗と対策</h2>
+            
+            <div class="example-box warning">
+                <h3>失敗1: 「押し付け」になってしまう</h3>
+                <p><strong>❌ 失敗例</strong></p>
+                <p><strong>支援員:</strong> 「この方法が絶対良いです！やりましょう！」<br>
+                <strong>先生:</strong> 「（うーん、今は忙しいんだけど…）」<br>
+                → 先生が避けるようになる</p>
+
+                <p><strong>原因:</strong></p>
+                <ul>
+                    <li>相手の状況を考えていない</li>
+                    <li>一方的な提案</li>
+                    <li>タイミングが悪い</li>
+                </ul>
+
+                <p><strong>✅ 対策</strong></p>
+                <ul>
+                    <li><strong>相手の状況を確認:</strong> 「今、お時間よろしいですか？」「お忙しいと思いますが…」</li>
+                    <li><strong>提案は選択肢形式で:</strong> 「○○という方法もありますが、いかがですか？」</li>
+                    <li><strong>断られても引き下がる:</strong> 「分かりました。また何かあればお声がけください」</li>
+                </ul>
+            </div>
+
+            <div class="example-box warning">
+                <h3>失敗2: 「やりすぎ」で疲弊する</h3>
+                <p><strong>❌ 失敗例</strong></p>
+                <p><strong>支援員:</strong> 「全部自分でやらなきゃ！」<br>
+                → 毎日残業、休日出勤<br>
+                → 燃え尽き症候群</p>
+
+                <p><strong>原因:</strong></p>
+                <ul>
+                    <li>完璧主義</li>
+                    <li>断れない性格</li>
+                    <li>優先順位がつけられない</li>
+                </ul>
+
+                <p><strong>✅ 対策</strong></p>
+                <ul>
+                    <li><strong>「重要度×緊急度」で優先順位をつける</strong></li>
+                    <li><strong>最優先:</strong> 授業に直結すること、安全に関わること、複数人に影響すること</li>
+                    <li><strong>後回し:</strong> 緊急性の低い依頼、個人的な趣味レベルの質問</li>
+                    <li><strong>できないことは正直に伝える:</strong> 「申し訳ございませんが、この件は対応できません」</li>
+                    <li><strong>先生方にも「自走」してもらう:</strong> 「マニュアルがあるので、まず試してみてください」</li>
+                </ul>
+            </div>
+
+            <div class="example-box warning">
+                <h3>失敗3: 「空回り」する</h3>
+                <p><strong>❌ 失敗例</strong></p>
+                <p><strong>支援員:</strong> 「この資料、役立つと思って作ったのに…」<br>
+                → 誰も読んでくれない、使われない<br>
+                → 「自己満足だったのか…」</p>
+
+                <p><strong>原因:</strong></p>
+                <ul>
+                    <li>ニーズを把握していない</li>
+                    <li>難易度が合っていない</li>
+                    <li>伝え方が悪い</li>
+                </ul>
+
+                <p><strong>✅ 対策</strong></p>
+                <ul>
+                    <li><strong>事前にニーズ確認:</strong> 「こんな資料があったら便利ですか？」</li>
+                    <li><strong>小さく試す:</strong> いきなり大量の資料を作らない、まず1枚、試しに配ってみる</li>
+                    <li><strong>フィードバックをもらう:</strong> 「この資料、分かりやすかったですか？」</li>
+                </ul>
+            </div>
+
+            <div class="example-box warning">
+                <h3>失敗4: 「遠慮しすぎ」で存在感が薄い</h3>
+                <p><strong>❌ 失敗例</strong></p>
+                <p><strong>支援員:</strong> 「自分なんかが提案していいのかな…」<br>
+                → 何も言わず、じっと待つ<br>
+                → 「あの人、何してるの？」と思われる</p>
+
+                <p><strong>原因:</strong></p>
+                <ul>
+                    <li>自信がない</li>
+                    <li>遠慮しすぎ</li>
+                    <li>受け身の姿勢</li>
+                </ul>
+
+                <p><strong>✅ 対策</strong></p>
+                <ul>
+                    <li><strong>小さなことから始める:</strong> 「おはようございます」の挨拶から</li>
+                    <li><strong>実績を積む:</strong> 小さな支援でも確実に成果を出す → 自信につながる</li>
+                    <li><strong>「謙虚だが卑屈にならない」:</strong> ×「私なんかが…」 ○「もし良ければ…」</li>
+                </ul>
+            </div>
+
+            <div class="example-box warning">
+                <h3>失敗5: 「技術偏重」になる</h3>
+                <p><strong>❌ 失敗例</strong></p>
+                <p><strong>支援員:</strong> 「この機能はこうで、こうすれば…」<br>
+                <strong>先生:</strong> 「（難しすぎて分からない…）」<br>
+                → 先生がICTを敬遠するようになる</p>
+
+                <p><strong>原因:</strong></p>
+                <ul>
+                    <li>技術的な説明が多すぎる</li>
+                    <li>相手のレベルに合わせていない</li>
+                    <li>目的を伝えていない</li>
+                </ul>
+
+                <p><strong>✅ 対策</strong></p>
+                <ul>
+                    <li><strong>「何ができるか」から説明:</strong> ×「このアプリはクラウドベースで…」 ○「このアプリを使うと、子どもたちの意見がリアルタイムで見られます」</li>
+                    <li><strong>相手のレベルに合わせる:</strong> 初心者：シンプルに、1つずつ</li>
+                    <li><strong>「教育効果」を強調:</strong> 技術<教育 「これを使うと○○が学べます」</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- タブコンテンツ8: チェックリスト -->
+        <div id="checklist" class="tab-content">
+            <h2>9. 能動的支援度チェックリスト</h2>
+            
+            <p style="font-size: 1.1em; margin-bottom: 30px;">
+                以下の項目にチェックを入れて、あなたの能動的支援度を確認しましょう。<br>
+                各レベルで<strong>7個以上</strong>にチェックがつけば合格です！
+            </p>
+
+            <div class="checklist-container">
+                <!-- レベル1: 基礎 -->
+                <div class="checklist-level">
+                    <h3>📊 レベル1: 基礎（10項目）</h3>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1-1" onchange="updateChecklistScore()">
+                        <label for="check1-1">毎日、先生方に挨拶をしている</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1-2" onchange="updateChecklistScore()">
+                        <label for="check1-2">「何かお手伝いできることはありませんか？」と声をかけている</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1-3" onchange="updateChecklistScore()">
+                        <label for="check1-3">週案や時間割を確認している</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1-4" onchange="updateChecklistScore()">
+                        <label for="check1-4">職員室にいる時間を作っている</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1-5" onchange="updateChecklistScore()">
+                        <label for="check1-5">困っている先生がいないか観察している</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1-6" onchange="updateChecklistScore()">
+                        <label for="check1-6">依頼にはすぐに対応している</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1-7" onchange="updateChecklistScore()">
+                        <label for="check1-7">対応した内容を記録している</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1-8" onchange="updateChecklistScore()">
+                        <label for="check1-8">分からないことは調べている</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1-9" onchange="updateChecklistScore()">
+                        <label for="check1-9">先生方の顔と名前を覚えている</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1-10" onchange="updateChecklistScore()">
+                        <label for="check1-10">学校の年間スケジュールを把握している</label>
+                    </div>
+                </div>
+
+                <!-- レベル2: 発展 -->
+                <div class="checklist-level">
+                    <h3>📈 レベル2: 発展（10項目）</h3>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2-1" onchange="updateChecklistScore()">
+                        <label for="check2-1">授業前に教室を巡回している</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2-2" onchange="updateChecklistScore()">
+                        <label for="check2-2">翌週の授業予定を確認し、必要な準備をしている</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2-3" onchange="updateChecklistScore()">
+                        <label for="check2-3">トラブルが起きる前に機器の点検をしている</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2-4" onchange="updateChecklistScore()">
+                        <label for="check2-4">先生方に情報提供資料を配布している</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2-5" onchange="updateChecklistScore()">
+                        <label for="check2-5">「こんな方法もあります」と提案している</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2-6" onchange="updateChecklistScore()">
+                        <label for="check2-6">授業支援後に振り返りをしている</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2-7" onchange="updateChecklistScore()">
+                        <label for="check2-7">よくある質問をまとめている</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2-8" onchange="updateChecklistScore()">
+                        <label for="check2-8">他校の事例を収集・紹介している</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2-9" onchange="updateChecklistScore()">
+                        <label for="check2-9">ミニ研修を企画・実施している</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2-10" onchange="updateChecklistScore()">
+                        <label for="check2-10">月次で活動報告をしている</label>
+                    </div>
+                </div>
+
+                <!-- レベル3: 応用 -->
+                <div class="checklist-level">
+                    <h3>🚀 レベル3: 応用（10項目）</h3>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3-1" onchange="updateChecklistScore()">
+                        <label for="check3-1">授業デザインの段階から関わっている</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3-2" onchange="updateChecklistScore()">
+                        <label for="check3-2">先生方のニーズを先読みして準備している</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3-3" onchange="updateChecklistScore()">
+                        <label for="check3-3">学校全体のICT活用状況を分析している</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3-4" onchange="updateChecklistScore()">
+                        <label for="check3-4">中長期的な改善計画を立てている</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3-5" onchange="updateChecklistScore()">
+                        <label for="check3-5">管理職に提案・報告をしている</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3-6" onchange="updateChecklistScore()">
+                        <label for="check3-6">先生方同士の学び合いの場を作っている</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3-7" onchange="updateChecklistScore()">
+                        <label for="check3-7">データに基づいた改善提案をしている</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3-8" onchange="updateChecklistScore()">
+                        <label for="check3-8">他の支援員や地域と情報交換している</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3-9" onchange="updateChecklistScore()">
+                        <label for="check3-9">継続的なPDCAサイクルを回している</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3-10" onchange="updateChecklistScore()">
+                        <label for="check3-10">学校のビジョン実現に貢献している</label>
+                    </div>
+                </div>
+
+                <!-- 結果表示 -->
+                <div class="checklist-result" id="checklistResult" style="display: none;">
+                    <h4>📊 あなたの能動的支援度</h4>
+                    <div class="score" id="totalScore">0 / 30</div>
+                    <div class="feedback" id="checklistFeedback"></div>
+                    <button class="btn-primary" onclick="printChecklist()" style="margin-top: 20px;">結果を印刷</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- タブコンテンツ9: 自己評価 -->
+        <div id="evaluation" class="tab-content">
+            <h2>9-2. 自己評価シート</h2>
+            
+            <p style="font-size: 1.1em; margin-bottom: 30px;">
+                以下の15項目について、あなたの現状を評価してください。<br>
+                評価が完了すると、あなたに合ったアドバイスが表示されます。
+            </p>
+
+            <form id="evaluationForm" class="evaluation-section">
+                <!-- A. マインドセット -->
+                <h3>A. マインドセット</h3>
+                
+                <div class="evaluation-question">
+                    <h4>1. 「依頼待ち」ではなく「先読み」の姿勢で動いている</h4>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="q1-3" name="q1" value="3">
+                            <label for="q1-3">できている</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q1-2" name="q1" value="2">
+                            <label for="q1-2">だいたい</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q1-1" name="q1" value="1">
+                            <label for="q1-1">まだまだ</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-question">
+                    <h4>2. 個別対応だけでなく全体最適を考えている</h4>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="q2-3" name="q2" value="3">
+                            <label for="q2-3">できている</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q2-2" name="q2" value="2">
+                            <label for="q2-2">だいたい</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q2-1" name="q2" value="1">
+                            <label for="q2-1">まだまだ</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-question">
+                    <h4>3. 技術者ではなく教育パートナーとして動いている</h4>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="q3-3" name="q3" value="3">
+                            <label for="q3-3">できている</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q3-2" name="q3" value="2">
+                            <label for="q3-2">だいたい</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q3-1" name="q3" value="1">
+                            <label for="q3-1">まだまだ</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- B. 情報収集 -->
+                <h3>B. 情報収集</h3>
+                
+                <div class="evaluation-question">
+                    <h4>4. 週案・時間割を定期的に確認している</h4>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="q4-4" name="q4" value="4">
+                            <label for="q4-4">毎日</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q4-3" name="q4" value="3">
+                            <label for="q4-3">週数回</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q4-2" name="q4" value="2">
+                            <label for="q4-2">たまに</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q4-1" name="q4" value="1">
+                            <label for="q4-1">ほとんどしない</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-question">
+                    <h4>5. 先生方との雑談で情報収集している</h4>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="q5-3" name="q5" value="3">
+                            <label for="q5-3">よくする</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q5-2" name="q5" value="2">
+                            <label for="q5-2">たまに</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q5-1" name="q5" value="1">
+                            <label for="q5-1">ほとんどしない</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-question">
+                    <h4>6. 他校の事例や新しい情報を収集している</h4>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="q6-3" name="q6" value="3">
+                            <label for="q6-3">定期的</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q6-2" name="q6" value="2">
+                            <label for="q6-2">たまに</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q6-1" name="q6" value="1">
+                            <label for="q6-1">ほとんどしない</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C. 実践行動 -->
+                <h3>C. 実践行動</h3>
+                
+                <div class="evaluation-question">
+                    <h4>7. 授業前の巡回・準備確認をしている</h4>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="q7-4" name="q7" value="4">
+                            <label for="q7-4">毎日</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q7-3" name="q7" value="3">
+                            <label for="q7-3">週数回</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q7-2" name="q7" value="2">
+                            <label for="q7-2">たまに</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q7-1" name="q7" value="1">
+                            <label for="q7-1">ほとんどしない</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-question">
+                    <h4>8. トラブル予防のための点検をしている</h4>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="q8-3" name="q8" value="3">
+                            <label for="q8-3">定期的</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q8-2" name="q8" value="2">
+                            <label for="q8-2">たまに</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q8-1" name="q8" value="1">
+                            <label for="q8-1">ほとんどしない</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-question">
+                    <h4>9. 先生方に情報提供や提案をしている</h4>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="q9-4" name="q9" value="4">
+                            <label for="q9-4">週1回以上</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q9-3" name="q9" value="3">
+                            <label for="q9-3">月数回</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q9-2" name="q9" value="2">
+                            <label for="q9-2">たまに</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q9-1" name="q9" value="1">
+                            <label for="q9-1">ほとんどしない</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- D. コミュニケーション -->
+                <h3>D. コミュニケーション</h3>
+                
+                <div class="evaluation-question">
+                    <h4>10. 先生方に積極的に声をかけている</h4>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="q10-3" name="q10" value="3">
+                            <label for="q10-3">よくする</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q10-2" name="q10" value="2">
+                            <label for="q10-2">たまに</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q10-1" name="q10" value="1">
+                            <label for="q10-1">ほとんどしない</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-question">
+                    <h4>11. 提案する際、相手の状況を考慮している</h4>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="q11-3" name="q11" value="3">
+                            <label for="q11-3">常に</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q11-2" name="q11" value="2">
+                            <label for="q11-2">だいたい</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q11-1" name="q11" value="1">
+                            <label for="q11-1">あまり</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-question">
+                    <h4>12. 先生方からのフィードバックをもらっている</h4>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="q12-3" name="q12" value="3">
+                            <label for="q12-3">よくもらう</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q12-2" name="q12" value="2">
+                            <label for="q12-2">たまに</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q12-1" name="q12" value="1">
+                            <label for="q12-1">ほとんどない</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E. 成果の実感 -->
+                <h3>E. 成果の実感</h3>
+                
+                <div class="evaluation-question">
+                    <h4>13. 先生方から信頼されていると感じる</h4>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="q13-3" name="q13" value="3">
+                            <label for="q13-3">強く感じる</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q13-2" name="q13" value="2">
+                            <label for="q13-2">まあまあ</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q13-1" name="q13" value="1">
+                            <label for="q13-1">あまり感じない</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-question">
+                    <h4>14. トラブルが減ったと感じる</h4>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="q14-3" name="q14" value="3">
+                            <label for="q14-3">明らかに減った</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q14-2" name="q14" value="2">
+                            <label for="q14-2">少し減った</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q14-1" name="q14" value="1">
+                            <label for="q14-1">変わらない</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="evaluation-question">
+                    <h4>15. 自分の存在価値を実感できている</h4>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="q15-3" name="q15" value="3">
+                            <label for="q15-3">できている</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q15-2" name="q15" value="2">
+                            <label for="q15-2">まあまあ</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="q15-1" name="q15" value="1">
+                            <label for="q15-1">あまりできていない</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn-primary" onclick="calculateEvaluation()" style="margin-top: 30px;">評価結果を見る</button>
+            </form>
+
+            <!-- 評価結果 -->
+            <div class="evaluation-result" id="evaluationResult">
+                <h3>📊 あなたの評価結果</h3>
+                <div id="evaluationScore" style="font-size: 2em; font-weight: bold; margin: 20px 0;"></div>
+                <div id="evaluationFeedback" style="font-size: 1.1em; line-height: 1.8;"></div>
+                <button class="btn-primary" onclick="printEvaluation()" style="margin-top: 20px;">結果を印刷</button>
+            </div>
+        </div>
+
+        <!-- タブコンテンツ10: 行動計画 -->
+        <div id="action-plan" class="tab-content">
+            <h2>9-3. 行動計画シート</h2>
+            
+            <p style="font-size: 1.1em; margin-bottom: 30px;">
+                評価結果を踏まえて、あなたの行動計画を立てましょう。<br>
+                入力した内容はブラウザに保存され、次回訪問時にも表示されます。
+            </p>
+
+            <div class="action-plan-sheet">
+                <div class="action-plan-group">
+                    <h4>📝 今月の目標（3つ）</h4>
+                    <input type="text" class="action-plan-input" id="goal1" placeholder="目標1">
+                    <input type="text" class="action-plan-input" id="goal2" placeholder="目標2">
+                    <input type="text" class="action-plan-input" id="goal3" placeholder="目標3">
+                </div>
+
+                <div class="action-plan-group">
+                    <h4>📅 具体的な行動</h4>
+                    <h5>毎日やること</h5>
+                    <textarea class="action-plan-input" id="dailyActions" placeholder="例：朝の挨拶回り、週案の確認"></textarea>
+                    
+                    <h5>週1回やること</h5>
+                    <textarea class="action-plan-input" id="weeklyActions" placeholder="例：全教室の機器確認、情報提供資料の作成"></textarea>
+                    
+                    <h5>月1回やること</h5>
+                    <textarea class="action-plan-input" id="monthlyActions" placeholder="例：翌月の行事確認、ミニ研修の企画"></textarea>
+                </div>
+
+                <div class="action-plan-group">
+                    <h4>🎯 達成したい成果</h4>
+                    <h5>1ヶ月後</h5>
+                    <textarea class="action-plan-input" id="outcome1month" placeholder="1ヶ月後に達成したいこと"></textarea>
+                    
+                    <h5>3ヶ月後</h5>
+                    <textarea class="action-plan-input" id="outcome3months" placeholder="3ヶ月後に達成したいこと"></textarea>
+                    
+                    <h5>半年後</h5>
+                    <textarea class="action-plan-input" id="outcome6months" placeholder="半年後に達成したいこと"></textarea>
+                </div>
+
+                <div class="action-plan-buttons">
+                    <button class="btn-primary" onclick="saveActionPlan()">💾 保存</button>
+                    <button class="btn-secondary" onclick="loadActionPlan()">📂 読み込み</button>
+                    <button class="btn-secondary" onclick="printActionPlan()">🖨️ 印刷</button>
+                    <button class="btn-secondary" onclick="clearActionPlan()">🗑️ クリア</button>
+                </div>
+            </div>
+
+            <!-- 実践ワークシート -->
+            <h2 style="margin-top: 60px;">付録: 実践ワークシート</h2>
+            
+            <div class="worksheet-container">
+                <h3>📅 今週の能動的支援計画</h3>
+                
+                <div class="daily-plan">
+                    <h4>今週の目標</h4>
+                    <input type="text" class="action-plan-input" id="weekGoal" placeholder="今週の目標を入力">
+                </div>
+
+                <div class="daily-plan">
+                    <h4>月曜日</h4>
+                    <div class="time-slot">
+                        <label>朝:</label>
+                        <input type="text" id="mon-morning" placeholder="朝の活動">
+                    </div>
+                    <div class="time-slot">
+                        <label>日中:</label>
+                        <input type="text" id="mon-day" placeholder="日中の活動">
+                    </div>
+                    <div class="time-slot">
+                        <label>終業前:</label>
+                        <input type="text" id="mon-evening" placeholder="終業前の活動">
+                    </div>
+                </div>
+
+                <div class="daily-plan">
+                    <h4>火曜日</h4>
+                    <div class="time-slot">
+                        <label>朝:</label>
+                        <input type="text" id="tue-morning" placeholder="朝の活動">
+                    </div>
+                    <div class="time-slot">
+                        <label>日中:</label>
+                        <input type="text" id="tue-day" placeholder="日中の活動">
+                    </div>
+                    <div class="time-slot">
+                        <label>終業前:</label>
+                        <input type="text" id="tue-evening" placeholder="終業前の活動">
+                    </div>
+                </div>
+
+                <div class="daily-plan">
+                    <h4>水曜日</h4>
+                    <div class="time-slot">
+                        <label>朝:</label>
+                        <input type="text" id="wed-morning" placeholder="朝の活動">
+                    </div>
+                    <div class="time-slot">
+                        <label>日中:</label>
+                        <input type="text" id="wed-day" placeholder="日中の活動">
+                    </div>
+                    <div class="time-slot">
+                        <label>終業前:</label>
+                        <input type="text" id="wed-evening" placeholder="終業前の活動">
+                    </div>
+                </div>
+
+                <div class="daily-plan">
+                    <h4>木曜日</h4>
+                    <div class="time-slot">
+                        <label>朝:</label>
+                        <input type="text" id="thu-morning" placeholder="朝の活動">
+                    </div>
+                    <div class="time-slot">
+                        <label>日中:</label>
+                        <input type="text" id="thu-day" placeholder="日中の活動">
+                    </div>
+                    <div class="time-slot">
+                        <label>終業前:</label>
+                        <input type="text" id="thu-evening" placeholder="終業前の活動">
+                    </div>
+                </div>
+
+                <div class="daily-plan">
+                    <h4>金曜日</h4>
+                    <div class="time-slot">
+                        <label>朝:</label>
+                        <input type="text" id="fri-morning" placeholder="朝の活動">
+                    </div>
+                    <div class="time-slot">
+                        <label>日中:</label>
+                        <input type="text" id="fri-day" placeholder="日中の活動">
+                    </div>
+                    <div class="time-slot">
+                        <label>終業前:</label>
+                        <input type="text" id="fri-evening" placeholder="終業前の活動">
+                    </div>
+                </div>
+
+                <div class="action-plan-buttons">
+                    <button class="btn-primary" onclick="saveWeeklyPlan()">💾 保存</button>
+                    <button class="btn-secondary" onclick="loadWeeklyPlan()">📂 読み込み</button>
+                    <button class="btn-secondary" onclick="printWeeklyPlan()">🖨️ 印刷</button>
+                    <button class="btn-secondary" onclick="clearWeeklyPlan()">🗑️ クリア</button>
+                </div>
+            </div>
+
+            <!-- 振り返りシート -->
+            <div class="worksheet-container" style="margin-top: 40px;">
+                <h3>📝 振り返りシート</h3>
+                
+                <div class="action-plan-group">
+                    <h4>今日の能動的支援</h4>
+                    <textarea class="action-plan-input" id="todaySupport" placeholder="今日実施した能動的支援を3つ書き出してみましょう"></textarea>
+                </div>
+
+                <div class="action-plan-group">
+                    <h4>うまくいったこと</h4>
+                    <textarea class="action-plan-input" id="whatWorked" placeholder="今日うまくいったことは何ですか？"></textarea>
+                </div>
+
+                <div class="action-plan-group">
+                    <h4>改善できること</h4>
+                    <textarea class="action-plan-input" id="whatImprove" placeholder="次回はどう改善できるでしょうか？"></textarea>
+                </div>
+
+                <div class="action-plan-group">
+                    <h4>明日への行動</h4>
+                    <textarea class="action-plan-input" id="tomorrowAction" placeholder="明日やること、試してみたいことは？"></textarea>
+                </div>
+
+                <div class="action-plan-buttons">
+                    <button class="btn-primary" onclick="saveReflection()">💾 保存</button>
+                    <button class="btn-secondary" onclick="loadReflection()">📂 読み込み</button>
+                    <button class="btn-secondary" onclick="printReflection()">🖨️ 印刷</button>
+                    <button class="btn-secondary" onclick="clearReflection()">🗑️ クリア</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- まとめセクション -->
+        <div class="example-box" style="margin-top: 60px;">
+            <h2>10. まとめ</h2>
+            
+            <h3>能動的支援の本質</h3>
+            <p style="font-size: 1.2em; text-align: center; margin: 30px 0;">
+                能動的支援とは、単に「先回りして動く」ことではありません。<br>
+                <strong>本質は「共に学校を良くしていくパートナーになること」</strong>
+            </p>
+
+            <h3>能動的支援の3つの柱</h3>
+            <div class="step-container">
+                <div class="step-card">
+                    <h4>1. 予測する力</h4>
+                    <ul>
+                        <li>先を見通す</li>
+                        <li>パターンを見つける</li>
+                        <li>リスクを察知する</li>
+                    </ul>
+                </div>
+                <div class="step-card">
+                    <h4>2. 提案する力</h4>
+                    <ul>
+                        <li>適切なタイミング</li>
+                        <li>相手に合わせた内容</li>
+                        <li>実現可能な方法</li>
+                    </ul>
+                </div>
+                <div class="step-card">
+                    <h4>3. 継続する力</h4>
+                    <ul>
+                        <li>一度で終わらない</li>
+                        <li>PDCAを回す</li>
+                        <li>改善し続ける</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>最も大切なこと</h3>
+            <p style="font-size: 1.2em; line-height: 1.8;">
+                技術や知識よりも大切なのは、<br>
+                <strong>「先生方と子どもたちの役に立ちたい」という気持ち</strong><br><br>
+                その気持ちがあれば、
+            </p>
+            <ul style="font-size: 1.1em;">
+                <li>自然と行動が能動的になります</li>
+                <li>先生方との関係が深まります</li>
+                <li>やりがいを感じられます</li>
+            </ul>
+
+            <h3>今日から始める一歩</h3>
+            <div class="example-box info">
+                <h4>今日、今すぐできること：</h4>
+                <ul style="font-size: 1.1em;">
+                    <li>☑ 先生方に「何かお手伝いできることはありませんか？」と声をかける</li>
+                    <li>☑ 明日の授業予定を確認する</li>
+                    <li>☑ 教室を巡回し、機器の状態を確認する</li>
+                    <li>☑ 1つでいいので、情報提供する</li>
+                </ul>
+                <p style="font-size: 1.2em; text-align: center; margin-top: 20px;">
+                    <strong>小さな一歩が、大きな変化につながります。</strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <div class="back-to-top">
+            <a href="#" id="backToTopBtn"><i class="fas fa-chevron-up"></i></a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 ICT支援員総合ポータルサイト. All rights reserved.</p>
+            <p>教育現場のICT活用を支援する総合情報サイト</p>
+            <p style="margin-top: 15px;">
+                <a href="privacy-policy.html" style="color: white; margin: 0 10px;">プライバシーポリシー</a> | 
+                <a href="ad-policy.html" style="color: white; margin: 0 10px;">広告ポリシー</a> | 
+                <a href="contact.html" style="color: white; margin: 0 10px;">お問い合わせ</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/proactive-support.js"></script>
+</body>
+</html>
